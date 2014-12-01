@@ -1,0 +1,1 @@
+PODS_LCKCOREDATA_OTHER_LDFLAGS = -framework "CoreData" -framework "UIKit"
