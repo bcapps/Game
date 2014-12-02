@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/Foundation/NSHTTPURLResponse+LCKAdditions.h

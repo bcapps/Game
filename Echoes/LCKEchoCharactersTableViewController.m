@@ -7,6 +7,9 @@
 //
 
 #import "LCKEchoCharactersTableViewController.h"
+#import "Character.h"
+
+#import <LCKCategories/NSManagedObject+LCKAdditions.h>
 
 @interface LCKEchoCharactersTableViewController ()
 
@@ -17,9 +20,20 @@
 #pragma mark - LCKCoreDataTableViewController
 
 - (NSFetchRequest *)fetchRequest {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@""];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[Character entityName]];
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
     
     return fetchRequest;
+}
+
+#pragma mark - LCKEchoCharactersTableViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.tableView.tableFooterView = [UIView new];
 }
 
 @end

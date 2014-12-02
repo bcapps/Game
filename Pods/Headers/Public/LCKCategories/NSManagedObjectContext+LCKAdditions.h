@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/CoreData/NSManagedObjectContext+LCKAdditions.h

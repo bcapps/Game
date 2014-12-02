@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/Foundation/NSString+LCKAdditions.h

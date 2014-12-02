@@ -18,6 +18,40 @@
 		F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2206B031A2D2C0D006E44B0 /* LaunchScreen.xib */; };
 		F2206B111A2D2C0D006E44B0 /* EchoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B101A2D2C0D006E44B0 /* EchoesTests.m */; };
 		F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */; };
+		F2206B211A2D3021006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B201A2D3021006E44B0 /* Character.m */; };
+		F2206B221A2D3021006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B201A2D3021006E44B0 /* Character.m */; };
+		F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */; };
+		F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */; };
+		F2206B381A2D428F006E44B0 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B371A2D428F006E44B0 /* Warrior.m */; };
+		F2206B391A2D428F006E44B0 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B371A2D428F006E44B0 /* Warrior.m */; };
+		F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterClass.m */; };
+		F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterClass.m */; };
+		F2206B401A2D428F006E44B0 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3F1A2D428F006E44B0 /* Knight.m */; };
+		F2206B411A2D428F006E44B0 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3F1A2D428F006E44B0 /* Knight.m */; };
+		F2206B441A2D4290006E44B0 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B431A2D4290006E44B0 /* Hunter.m */; };
+		F2206B451A2D4290006E44B0 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B431A2D4290006E44B0 /* Hunter.m */; };
+		F2206B481A2D4290006E44B0 /* Bandit.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B471A2D4290006E44B0 /* Bandit.m */; };
+		F2206B491A2D4290006E44B0 /* Bandit.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B471A2D4290006E44B0 /* Bandit.m */; };
+		F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B4B1A2D4290006E44B0 /* Sorcerer.m */; };
+		F2206B4D1A2D4290006E44B0 /* Sorcerer.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B4B1A2D4290006E44B0 /* Sorcerer.m */; };
+		F2206B501A2D4290006E44B0 /* Cleric.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B4F1A2D4290006E44B0 /* Cleric.m */; };
+		F2206B511A2D4290006E44B0 /* Cleric.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B4F1A2D4290006E44B0 /* Cleric.m */; };
+		F2206B541A2D4290006E44B0 /* Thief.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B531A2D4290006E44B0 /* Thief.m */; };
+		F2206B551A2D4290006E44B0 /* Thief.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B531A2D4290006E44B0 /* Thief.m */; };
+		F2206B641A2D43FE006E44B0 /* BanditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */; };
+		F2206B651A2D43FE006E44B0 /* BanditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */; };
+		F2206B661A2D43FE006E44B0 /* ClericIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */; };
+		F2206B671A2D43FE006E44B0 /* ClericIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */; };
+		F2206B681A2D43FE006E44B0 /* HunterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */; };
+		F2206B691A2D43FE006E44B0 /* HunterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */; };
+		F2206B6A1A2D43FE006E44B0 /* KnightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon.png */; };
+		F2206B6B1A2D43FE006E44B0 /* KnightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon.png */; };
+		F2206B6C1A2D43FE006E44B0 /* SorcererIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon.png */; };
+		F2206B6D1A2D43FE006E44B0 /* SorcererIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon.png */; };
+		F2206B6E1A2D43FE006E44B0 /* ThiefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon.png */; };
+		F2206B6F1A2D43FE006E44B0 /* ThiefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon.png */; };
+		F2206B701A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
+		F2206B711A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +84,36 @@
 		F2206B101A2D2C0D006E44B0 /* EchoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EchoesTests.m; sourceTree = "<group>"; };
 		F2206B1B1A2D2EA6006E44B0 /* LCKEchoCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEchoCoreDataController.h; sourceTree = "<group>"; };
 		F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEchoCoreDataController.m; sourceTree = "<group>"; };
+		F2206B1F1A2D3021006E44B0 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F2206B201A2D3021006E44B0 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEchoNewCharacterViewController.h; sourceTree = "<group>"; };
+		F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEchoNewCharacterViewController.m; sourceTree = "<group>"; };
+		F2206B281A2D3703006E44B0 /* LCKDismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKDismissSegue.h; sourceTree = "<group>"; };
+		F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDismissSegue.m; sourceTree = "<group>"; };
+		F2206B361A2D428F006E44B0 /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warrior.h; sourceTree = "<group>"; };
+		F2206B371A2D428F006E44B0 /* Warrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warrior.m; sourceTree = "<group>"; };
+		F2206B3A1A2D428F006E44B0 /* CharacterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterClass.h; sourceTree = "<group>"; };
+		F2206B3B1A2D428F006E44B0 /* CharacterClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterClass.m; sourceTree = "<group>"; };
+		F2206B3E1A2D428F006E44B0 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
+		F2206B3F1A2D428F006E44B0 /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
+		F2206B421A2D4290006E44B0 /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
+		F2206B431A2D4290006E44B0 /* Hunter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hunter.m; sourceTree = "<group>"; };
+		F2206B461A2D4290006E44B0 /* Bandit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bandit.h; sourceTree = "<group>"; };
+		F2206B471A2D4290006E44B0 /* Bandit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bandit.m; sourceTree = "<group>"; };
+		F2206B4A1A2D4290006E44B0 /* Sorcerer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sorcerer.h; sourceTree = "<group>"; };
+		F2206B4B1A2D4290006E44B0 /* Sorcerer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sorcerer.m; sourceTree = "<group>"; };
+		F2206B4E1A2D4290006E44B0 /* Cleric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cleric.h; sourceTree = "<group>"; };
+		F2206B4F1A2D4290006E44B0 /* Cleric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cleric.m; sourceTree = "<group>"; };
+		F2206B521A2D4290006E44B0 /* Thief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thief.h; sourceTree = "<group>"; };
+		F2206B531A2D4290006E44B0 /* Thief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thief.m; sourceTree = "<group>"; };
+		F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BanditIcon.png; sourceTree = "<group>"; };
+		F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClericIcon.png; sourceTree = "<group>"; };
+		F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HunterIcon.png; sourceTree = "<group>"; };
+		F2206B601A2D43FE006E44B0 /* KnightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnightIcon.png; sourceTree = "<group>"; };
+		F2206B611A2D43FE006E44B0 /* SorcererIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SorcererIcon.png; sourceTree = "<group>"; };
+		F2206B621A2D43FE006E44B0 /* ThiefIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThiefIcon.png; sourceTree = "<group>"; };
+		F2206B631A2D43FE006E44B0 /* WarriorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarriorIcon.png; sourceTree = "<group>"; };
+		F2206B721A2D445A006E44B0 /* CharacterClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterClasses.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +180,8 @@
 				F2206B1A1A2D2E91006E44B0 /* Core Data */,
 				F2206AF51A2D2C0D006E44B0 /* LCKEchoAppDelegate.h */,
 				F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */,
+				F2206B281A2D3703006E44B0 /* LCKDismissSegue.h */,
+				F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */,
 				F2206AFE1A2D2C0D006E44B0 /* Main.storyboard */,
 				F2206B011A2D2C0D006E44B0 /* Images.xcassets */,
 				F2206B031A2D2C0D006E44B0 /* LaunchScreen.xib */,
@@ -154,8 +220,9 @@
 		F2206B1A1A2D2E91006E44B0 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				F2206B1B1A2D2EA6006E44B0 /* LCKEchoCoreDataController.h */,
-				F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */,
+				F2206B561A2D431A006E44B0 /* Class Art */,
+				F2206B241A2D3034006E44B0 /* Controller */,
+				F2206B231A2D3029006E44B0 /* Model */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -165,8 +232,59 @@
 			children = (
 				F2206AFB1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.h */,
 				F2206AFC1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m */,
+				F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */,
+				F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */,
 			);
 			name = Characters;
+			sourceTree = "<group>";
+		};
+		F2206B231A2D3029006E44B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2206B1F1A2D3021006E44B0 /* Character.h */,
+				F2206B201A2D3021006E44B0 /* Character.m */,
+				F2206B521A2D4290006E44B0 /* Thief.h */,
+				F2206B531A2D4290006E44B0 /* Thief.m */,
+				F2206B4E1A2D4290006E44B0 /* Cleric.h */,
+				F2206B4F1A2D4290006E44B0 /* Cleric.m */,
+				F2206B4A1A2D4290006E44B0 /* Sorcerer.h */,
+				F2206B4B1A2D4290006E44B0 /* Sorcerer.m */,
+				F2206B461A2D4290006E44B0 /* Bandit.h */,
+				F2206B471A2D4290006E44B0 /* Bandit.m */,
+				F2206B421A2D4290006E44B0 /* Hunter.h */,
+				F2206B431A2D4290006E44B0 /* Hunter.m */,
+				F2206B3E1A2D428F006E44B0 /* Knight.h */,
+				F2206B3F1A2D428F006E44B0 /* Knight.m */,
+				F2206B3A1A2D428F006E44B0 /* CharacterClass.h */,
+				F2206B3B1A2D428F006E44B0 /* CharacterClass.m */,
+				F2206B361A2D428F006E44B0 /* Warrior.h */,
+				F2206B371A2D428F006E44B0 /* Warrior.m */,
+				F2206B721A2D445A006E44B0 /* CharacterClasses.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2206B241A2D3034006E44B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2206B1B1A2D2EA6006E44B0 /* LCKEchoCoreDataController.h */,
+				F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F2206B561A2D431A006E44B0 /* Class Art */ = {
+			isa = PBXGroup;
+			children = (
+				F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */,
+				F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */,
+				F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */,
+				F2206B601A2D43FE006E44B0 /* KnightIcon.png */,
+				F2206B611A2D43FE006E44B0 /* SorcererIcon.png */,
+				F2206B621A2D43FE006E44B0 /* ThiefIcon.png */,
+				F2206B631A2D43FE006E44B0 /* WarriorIcon.png */,
+			);
+			name = "Class Art";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,8 +371,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2206B6A1A2D43FE006E44B0 /* KnightIcon.png in Resources */,
+				F2206B701A2D43FE006E44B0 /* WarriorIcon.png in Resources */,
+				F2206B6C1A2D43FE006E44B0 /* SorcererIcon.png in Resources */,
+				F2206B6E1A2D43FE006E44B0 /* ThiefIcon.png in Resources */,
+				F2206B641A2D43FE006E44B0 /* BanditIcon.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
+				F2206B661A2D43FE006E44B0 /* ClericIcon.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
+				F2206B681A2D43FE006E44B0 /* HunterIcon.png in Resources */,
 				F2206B021A2D2C0D006E44B0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +388,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2206B6D1A2D43FE006E44B0 /* SorcererIcon.png in Resources */,
+				F2206B711A2D43FE006E44B0 /* WarriorIcon.png in Resources */,
+				F2206B671A2D43FE006E44B0 /* ClericIcon.png in Resources */,
+				F2206B691A2D43FE006E44B0 /* HunterIcon.png in Resources */,
+				F2206B651A2D43FE006E44B0 /* BanditIcon.png in Resources */,
+				F2206B6B1A2D43FE006E44B0 /* KnightIcon.png in Resources */,
+				F2206B6F1A2D43FE006E44B0 /* ThiefIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,11 +468,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
+				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
+				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */,
+				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
+				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
+				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
+				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
+				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
+				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
+				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
+				F2206B211A2D3021006E44B0 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +491,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2206B391A2D428F006E44B0 /* Warrior.m in Sources */,
+				F2206B451A2D4290006E44B0 /* Hunter.m in Sources */,
+				F2206B511A2D4290006E44B0 /* Cleric.m in Sources */,
+				F2206B4D1A2D4290006E44B0 /* Sorcerer.m in Sources */,
+				F2206B551A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206B111A2D2C0D006E44B0 /* EchoesTests.m in Sources */,
+				F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */,
+				F2206B491A2D4290006E44B0 /* Bandit.m in Sources */,
+				F2206B411A2D428F006E44B0 /* Knight.m in Sources */,
+				F2206B221A2D3021006E44B0 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
