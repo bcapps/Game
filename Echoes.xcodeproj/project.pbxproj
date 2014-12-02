@@ -52,6 +52,10 @@
 		F2206B6F1A2D43FE006E44B0 /* ThiefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon.png */; };
 		F2206B701A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
 		F2206B711A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
+		F2206B761A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
+		F2206B771A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
+		F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
+		F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		F2206B621A2D43FE006E44B0 /* ThiefIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThiefIcon.png; sourceTree = "<group>"; };
 		F2206B631A2D43FE006E44B0 /* WarriorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarriorIcon.png; sourceTree = "<group>"; };
 		F2206B721A2D445A006E44B0 /* CharacterClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterClasses.h; sourceTree = "<group>"; };
+		F2206B741A2D7E7E006E44B0 /* UIFont+FontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontStyle.h"; sourceTree = "<group>"; };
+		F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontStyle.m"; sourceTree = "<group>"; };
+		F2206B781A2D7E8D006E44B0 /* UIColor+ColorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorStyle.h"; sourceTree = "<group>"; };
+		F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 		F2206AF01A2D2C0D006E44B0 /* Echoes */ = {
 			isa = PBXGroup;
 			children = (
+				F2206B731A2D7E65006E44B0 /* Style */,
 				F2206B1E1A2D2FAB006E44B0 /* Characters */,
 				F2206B1A1A2D2E91006E44B0 /* Core Data */,
 				F2206AF51A2D2C0D006E44B0 /* LCKEchoAppDelegate.h */,
@@ -285,6 +294,17 @@
 				F2206B631A2D43FE006E44B0 /* WarriorIcon.png */,
 			);
 			name = "Class Art";
+			sourceTree = "<group>";
+		};
+		F2206B731A2D7E65006E44B0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				F2206B741A2D7E7E006E44B0 /* UIFont+FontStyle.h */,
+				F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */,
+				F2206B781A2D7E8D006E44B0 /* UIColor+ColorStyle.h */,
+				F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */,
+			);
+			name = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +492,7 @@
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */,
+				F2206B761A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */,
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
 				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
@@ -480,6 +501,7 @@
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
+				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
@@ -494,9 +516,11 @@
 				F2206B391A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2206B451A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B511A2D4290006E44B0 /* Cleric.m in Sources */,
+				F2206B771A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */,
 				F2206B4D1A2D4290006E44B0 /* Sorcerer.m in Sources */,
 				F2206B551A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206B111A2D2C0D006E44B0 /* EchoesTests.m in Sources */,
+				F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */,
 				F2206B491A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B411A2D428F006E44B0 /* Knight.m in Sources */,

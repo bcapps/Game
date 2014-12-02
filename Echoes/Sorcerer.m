@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"SorcererIcon"];
 }
 
+- (NSString *)className {
+    return @"Sorcerer";
+}
+
+- (NSString *)classDescription {
+    return @"Uses magic as his primary offensive tool. Limited to small weapons due to low starting strength.";
+}
+
 @end

@@ -20,4 +20,8 @@
 @dynamic endurance;
 @dynamic resistance;
 
+@synthesize classImage;
+@synthesize classDescription;
+@synthesize className;
+
 @end

@@ -18,4 +18,8 @@
     return @"Warrior";
 }
 
+- (NSString *)classDescription {
+    return @"High initial strength and dexterity, as well as respectable intelligence and faith stats.";
+}
+
 @end

@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"ThiefIcon"];
 }
 
+- (NSString *)className {
+    return @"Thief";
+}
+
+- (NSString *)classDescription {
+    return @"High critical hit rate and very fast. They aren’t built very solidly, however, with low vitality, strength and endurance.";
+}
+
 @end

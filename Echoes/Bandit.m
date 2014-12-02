@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"BanditIcon"];
 }
 
+- (NSString *)className {
+    return @"Bandit";
+}
+
+- (NSString *)classDescription {
+    return @"Specializes in hard-hitting physical attacks, and is great with weapons such as axes and straight swords.";
+}
+
 @end

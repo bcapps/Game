@@ -10,13 +10,16 @@
 #import "LCKEchoCoreDataController.h"
 #import "CharacterClasses.h"
 
+#import "UIFont+FontStyle.h"
+#import "UIColor+ColorStyle.h"
+
 #import <iCarousel/iCarousel.h>
 
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
-CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 140.0;
+CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 135.0;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 @interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource>
@@ -25,6 +28,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 @property (nonatomic, readonly) NSArray *classes;
 @property (weak, nonatomic) IBOutlet UILabel *classNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *classDescriptionLabel;
 
 @end
 
@@ -36,24 +40,30 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classPicker.type = iCarouselTypeWheel;
     self.classPicker.contentOffset = CGSizeMake(0, LCKEchoNewCharacterViewControllerClassPickerVerticalOffset);
     
-    self.view.backgroundColor = [UIColor blackColor];
-    self.classPicker.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor backgroundColor];
+    self.classPicker.backgroundColor = [UIColor backgroundColor];
     
-    self.classNameLabel.textColor = [UIColor whiteColor];
+    self.classNameLabel.textColor = [UIColor titleTextColor];
+    self.classDescriptionLabel.textColor = [UIColor descriptiveTextColor];
+    
+    self.classNameLabel.font = [UIFont titleTextFontOfSize:13.0];
+    self.classDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    
+    [self carouselCurrentItemIndexDidChange:self.classPicker];
 }
 
 - (NSArray *)classes {
     NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newWorkerContext];
     
+    Knight *knight = [[Knight alloc] initWithContext:context];
     Thief *thief = [[Thief alloc] initWithContext:context];
     Cleric *cleric = [[Cleric alloc] initWithContext:context];
     Warrior *warrior = [[Warrior alloc] initWithContext:context];
     Sorcerer *sorcerer = [[Sorcerer alloc] initWithContext:context];
     Bandit *bandit = [[Bandit alloc] initWithContext:context];
     Hunter *hunter = [[Hunter alloc] initWithContext:context];
-    Knight *knight = [[Knight alloc] initWithContext:context];
     
-    return @[thief, cleric, warrior, sorcerer, bandit, hunter, knight];
+    return @[knight, thief, cleric, warrior, sorcerer, bandit, hunter];
 }
 
 #pragma mark - iCarouselDelegate
@@ -66,10 +76,18 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     return value;
 }
 
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-    CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
+//- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
+//    CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
+//
+//    self.classNameLabel.text = characterClass.className;
+//    self.classDescriptionLabel.text = characterClass.classDescription;
+//}
 
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
+    CharacterClass *characterClass = [self.classes safeObjectAtIndex:carousel.currentItemIndex];
+    
     self.classNameLabel.text = characterClass.className;
+    self.classDescriptionLabel.text = characterClass.classDescription;
 }
 
 #pragma mark - iCarouselDataSource

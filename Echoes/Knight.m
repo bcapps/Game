@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"KnightIcon"];
 }
 
+- (NSString *)className {
+    return @"Knight";
+}
+
+- (NSString *)classDescription {
+    return @"A tank class, starting with the highest vitality value of all classes, as well as the most robust equipment.";
+}
+
 @end

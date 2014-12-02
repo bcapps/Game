@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"ClericIcon"];
 }
 
+- (NSString *)className {
+    return @"Cleric";
+}
+
+- (NSString *)classDescription {
+    return @"Can use Miracles to heal thanks to their high starting Faith stat. Low starting dexterity limits weapon choice.";
+}
+
 @end

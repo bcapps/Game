@@ -14,4 +14,12 @@
     return [UIImage imageNamed:@"HunterIcon"];
 }
 
+- (NSString *)className {
+    return @"Hunter";
+}
+
+- (NSString *)classDescription {
+    return @"Specializes in bows, due to their high initial dexterity stat. Favors high dexterity weapons such as Spears and Rapiers";
+}
+
 @end

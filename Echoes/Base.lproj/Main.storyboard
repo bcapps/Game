@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Character List-->
         <scene sceneID="XHV-fI-Uoa">
             <objects>
                 <tableViewController id="g36-ta-CKQ" customClass="LCKEchoCharactersTableViewController" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                             <outlet property="delegate" destination="g36-ta-CKQ" id="wAT-T4-3Eb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FCJ-X3-2He">
+                    <navigationItem key="navigationItem" title="Character List" id="FCJ-X3-2He">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mJZ-n3-gv9">
                             <connections>
                                 <segue destination="Dho-i4-GDw" kind="presentation" id="pSD-EI-hXB"/>
@@ -57,6 +57,7 @@
         <!--New Character View Controller-->
         <scene sceneID="KS3-HA-ila">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlI-va-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="New Character View Controller" id="qSY-Ot-GtE" customClass="LCKEchoNewCharacterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hN7-j2-aOH"/>
@@ -77,8 +78,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
                                 <rect key="frame" x="36" y="152" width="528" height="408"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
-                                        <rect key="frame" x="243" y="194" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="pns-PM-wSE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -86,7 +94,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="g9g-5N-MCR" secondAttribute="centerY" constant="-0.5" id="E5h-rO-sUB"/>
+                                    <constraint firstAttribute="centerX" secondItem="bWO-5p-wh5" secondAttribute="centerX" id="7Om-oS-IDP"/>
+                                    <constraint firstAttribute="centerY" secondItem="g9g-5N-MCR" secondAttribute="centerY" constant="25" id="E5h-rO-sUB"/>
+                                    <constraint firstItem="bWO-5p-wh5" firstAttribute="top" secondItem="g9g-5N-MCR" secondAttribute="bottom" constant="5" id="VNC-k0-fhd"/>
                                     <constraint firstAttribute="centerX" secondItem="g9g-5N-MCR" secondAttribute="centerX" id="ipK-32-JXz"/>
                                 </constraints>
                                 <connections>
@@ -116,11 +126,11 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="tcJ-Q4-Xki"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="classDescriptionLabel" destination="bWO-5p-wh5" id="572-Dt-xXp"/>
                         <outlet property="classNameLabel" destination="g9g-5N-MCR" id="bAr-zF-ioi"/>
                         <outlet property="classPicker" destination="M9g-87-Wtv" id="DgF-VY-8VY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IlI-va-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073" y="-427"/>
         </scene>
