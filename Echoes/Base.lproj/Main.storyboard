@@ -124,7 +124,11 @@
                                 <segue destination="g36-ta-CKQ" kind="custom" customClass="LCKDismissSegue" id="9Os-uu-hNJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="tcJ-Q4-Xki"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="tcJ-Q4-Xki">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="qSY-Ot-GtE" id="9BQ-nG-wKi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="characterNameTextField" destination="ffg-ia-HDt" id="jLg-Y7-sbh"/>

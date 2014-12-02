@@ -21,4 +21,8 @@
 @synthesize classDescription;
 @synthesize className;
 
++ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
+    return nil;
+}
+
 @end

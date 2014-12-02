@@ -8,15 +8,50 @@
 
 #import "LCKEchoCharactersTableViewController.h"
 #import "Character.h"
+#import "CharacterClass.h"
+
 #import "UIColor+ColorStyle.h"
+#import "UIFont+FontStyle.h"
 
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
+#import <LCKCategories/NSFetchedResultsController+LCKAdditions.h>
 
 @interface LCKEchoCharactersTableViewController ()
 
 @end
 
 @implementation LCKEchoCharactersTableViewController
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.tableView.backgroundColor = [UIColor backgroundColor];
+    self.tableView.tableFooterView = [UIView new];
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+}
+
+#pragma mark - UITableViewController
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.fetchedResultsController.fetchedObjects.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    
+    Character *character = [self.fetchedResultsController safeObjectAtIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor backgroundColor];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Level %@ %@", character.name, character.level, character.characterClass.className];
+    cell.textLabel.textColor = [UIColor titleTextColor];
+    cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
+    
+    return cell;
+}
 
 #pragma mark - LCKCoreDataTableViewController
 
@@ -27,15 +62,6 @@
     fetchRequest.sortDescriptors = @[sortDescriptor];
     
     return fetchRequest;
-}
-
-#pragma mark - LCKEchoCharactersTableViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.tableView.backgroundColor = [UIColor backgroundColor];
-    self.tableView.tableFooterView = [UIView new];
 }
 
 @end

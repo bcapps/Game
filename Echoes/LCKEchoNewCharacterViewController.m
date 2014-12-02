@@ -9,6 +9,7 @@
 #import "LCKEchoNewCharacterViewController.h"
 #import "LCKEchoCoreDataController.h"
 #import "CharacterClasses.h"
+#import "Character.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -69,6 +70,20 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     Hunter *hunter = [[Hunter alloc] initWithContext:context];
     
     return @[knight, thief, cleric, warrior, sorcerer, bandit, hunter];
+}
+
+- (IBAction)doneButtonTapped:(UIBarButtonItem *)button {
+    NSManagedObjectContext *context = [LCKEchoCoreDataController sharedController].mainQueueContext;
+
+    CharacterClass *selectedClass = [self.classes safeObjectAtIndex:self.classPicker.currentItemIndex];
+
+    Character *newCharacter = [[Character alloc] initWithContext:context];
+    newCharacter.name = self.characterNameTextField.text;
+    newCharacter.characterClass = [[selectedClass class] newCharacterClassInContext:context];
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:context];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - iCarouselDelegate

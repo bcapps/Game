@@ -18,8 +18,6 @@
 		F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2206B031A2D2C0D006E44B0 /* LaunchScreen.xib */; };
 		F2206B111A2D2C0D006E44B0 /* EchoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B101A2D2C0D006E44B0 /* EchoesTests.m */; };
 		F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */; };
-		F2206B211A2D3021006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B201A2D3021006E44B0 /* Character.m */; };
-		F2206B221A2D3021006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B201A2D3021006E44B0 /* Character.m */; };
 		F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */; };
 		F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */; };
 		F2206B381A2D428F006E44B0 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B371A2D428F006E44B0 /* Warrior.m */; };
@@ -56,6 +54,8 @@
 		F2206B771A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
 		F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
 		F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
+		F2206B7E1A2D8994006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B7D1A2D8994006E44B0 /* Character.m */; };
+		F2206B7F1A2D8994006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B7D1A2D8994006E44B0 /* Character.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +88,6 @@
 		F2206B101A2D2C0D006E44B0 /* EchoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EchoesTests.m; sourceTree = "<group>"; };
 		F2206B1B1A2D2EA6006E44B0 /* LCKEchoCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEchoCoreDataController.h; sourceTree = "<group>"; };
 		F2206B1C1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEchoCoreDataController.m; sourceTree = "<group>"; };
-		F2206B1F1A2D3021006E44B0 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		F2206B201A2D3021006E44B0 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEchoNewCharacterViewController.h; sourceTree = "<group>"; };
 		F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEchoNewCharacterViewController.m; sourceTree = "<group>"; };
 		F2206B281A2D3703006E44B0 /* LCKDismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKDismissSegue.h; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontStyle.m"; sourceTree = "<group>"; };
 		F2206B781A2D7E8D006E44B0 /* UIColor+ColorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorStyle.h"; sourceTree = "<group>"; };
 		F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorStyle.m"; sourceTree = "<group>"; };
+		F2206B7C1A2D8994006E44B0 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F2206B7D1A2D8994006E44B0 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,8 +250,8 @@
 		F2206B231A2D3029006E44B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F2206B1F1A2D3021006E44B0 /* Character.h */,
-				F2206B201A2D3021006E44B0 /* Character.m */,
+				F2206B7C1A2D8994006E44B0 /* Character.h */,
+				F2206B7D1A2D8994006E44B0 /* Character.m */,
 				F2206B521A2D4290006E44B0 /* Thief.h */,
 				F2206B531A2D4290006E44B0 /* Thief.m */,
 				F2206B4E1A2D4290006E44B0 /* Cleric.h */,
@@ -505,7 +505,7 @@
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
-				F2206B211A2D3021006E44B0 /* Character.m in Sources */,
+				F2206B7E1A2D8994006E44B0 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +524,7 @@
 				F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */,
 				F2206B491A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B411A2D428F006E44B0 /* Knight.m in Sources */,
-				F2206B221A2D3021006E44B0 /* Character.m in Sources */,
+				F2206B7F1A2D8994006E44B0 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
