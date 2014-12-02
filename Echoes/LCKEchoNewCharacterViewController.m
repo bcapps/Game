@@ -15,6 +15,10 @@
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
+CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
+CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 140.0;
+CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
+
 @interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource>
 
 @property (weak, nonatomic) IBOutlet iCarousel *classPicker;
@@ -30,7 +34,7 @@
     [super viewDidLoad];
     
     self.classPicker.type = iCarouselTypeWheel;
-    self.classPicker.contentOffset = CGSizeMake(0, -100);
+    self.classPicker.contentOffset = CGSizeMake(0, LCKEchoNewCharacterViewControllerClassPickerVerticalOffset);
     
     self.view.backgroundColor = [UIColor blackColor];
     self.classPicker.backgroundColor = [UIColor blackColor];
@@ -56,7 +60,7 @@
 
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
     if (option == iCarouselOptionRadius) {
-        return 140.0;
+        return LCKEchoNewCharacterViewControllerCarouselRadius;
     }
     
     return value;
@@ -75,26 +79,24 @@
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
-    CGFloat size = 90.0;
-
-    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size, size)];
-    v.layer.masksToBounds = NO;
-    v.clipsToBounds = YES;
-    v.layer.borderWidth = 1.0;
-    v.layer.borderColor = [UIColor whiteColor].CGColor;
-    v.layer.cornerRadius = CGRectGetHeight(v.frame) / 2.0;
+    UIView *itemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LCKEchoNewCharacterViewControllerCarouselItemSize, LCKEchoNewCharacterViewControllerCarouselItemSize)];
+    itemView.layer.masksToBounds = NO;
+    itemView.clipsToBounds = YES;
+    itemView.layer.borderWidth = 1.0;
+    itemView.layer.borderColor = [UIColor whiteColor].CGColor;
+    itemView.layer.cornerRadius = CGRectGetHeight(itemView.frame) / 2.0;
     
     CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
     
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:characterClass.classImage];
-    imgView.frame = v.frame;
-    imgView.contentMode = UIViewContentModeScaleToFill;
-    imgView.backgroundColor = [UIColor clearColor];
-    imgView.center = v.center;
+    UIImageView *classImageView = [[UIImageView alloc] initWithImage:characterClass.classImage];
+    classImageView.frame = itemView.frame;
+    classImageView.contentMode = UIViewContentModeScaleToFill;
+    classImageView.backgroundColor = [UIColor clearColor];
+    classImageView.center = itemView.center;
     
-    [v addSubview:imgView];
+    [itemView addSubview:classImageView];
     
-    return v;
+    return itemView;
 }
 
 @end
