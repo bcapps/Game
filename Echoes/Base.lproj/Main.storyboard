@@ -67,16 +67,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
                                 <rect key="frame" x="36" y="84" width="529" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GXM-Ka-zYk"/>
                                 </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
-                                <rect key="frame" x="36" y="152" width="528" height="408"/>
+                                <rect key="frame" x="36" y="128" width="528" height="432"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -114,7 +115,7 @@
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="top" secondItem="hN7-j2-aOH" secondAttribute="bottom" constant="20" id="TF4-Ei-NEy"/>
                             <constraint firstAttribute="centerX" secondItem="M9g-87-Wtv" secondAttribute="centerX" id="ftl-Hh-EqJ"/>
                             <constraint firstAttribute="centerX" secondItem="ffg-ia-HDt" secondAttribute="centerX" id="l9K-td-R8T"/>
-                            <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" constant="24" id="yLx-fc-NiP"/>
+                            <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" id="yLx-fc-NiP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Character" id="iY1-kL-Oiu">
@@ -126,6 +127,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="tcJ-Q4-Xki"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="characterNameTextField" destination="ffg-ia-HDt" id="jLg-Y7-sbh"/>
                         <outlet property="classDescriptionLabel" destination="bWO-5p-wh5" id="572-Dt-xXp"/>
                         <outlet property="classNameLabel" destination="g9g-5N-MCR" id="bAr-zF-ioi"/>
                         <outlet property="classPicker" destination="M9g-87-Wtv" id="DgF-VY-8VY"/>

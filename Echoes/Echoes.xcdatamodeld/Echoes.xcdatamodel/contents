@@ -7,11 +7,8 @@
     </entity>
     <entity name="CharacterClass" representedClassName="CharacterClass" syncable="YES">
         <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="endurance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="faith" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intelligence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="resistance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="vitality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -23,7 +20,7 @@
     <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterClass" syncable="YES"/>
     <elements>
         <element name="Character" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="CharacterClass" positionX="-54" positionY="9" width="128" height="163"/>
+        <element name="CharacterClass" positionX="-54" positionY="9" width="128" height="118"/>
         <element name="Knight" positionX="-36" positionY="18" width="128" height="43"/>
         <element name="Warrior" positionX="-9" positionY="36" width="128" height="43"/>
         <element name="Hunter" positionX="9" positionY="54" width="128" height="43"/>

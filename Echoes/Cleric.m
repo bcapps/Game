@@ -22,4 +22,16 @@
     return @"Can use Miracles to heal thanks to their high starting Faith stat. Low starting dexterity limits weapon choice.";
 }
 
++ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
+    Cleric *cleric = [[self alloc] initWithContext:context];
+    
+    cleric.vitality = @(11);
+    cleric.strength = @(12);
+    cleric.dexterity = @(8);
+    cleric.intelligence = @(8);
+    cleric.faith = @(14);
+    
+    return cleric;
+}
+
 @end

@@ -11,14 +11,11 @@
 
 @implementation CharacterClass
 
-@dynamic name;
 @dynamic strength;
 @dynamic intelligence;
 @dynamic faith;
 @dynamic vitality;
 @dynamic dexterity;
-@dynamic endurance;
-@dynamic resistance;
 
 @synthesize classImage;
 @synthesize classDescription;

@@ -22,4 +22,16 @@
     return @"Specializes in hard-hitting physical attacks, and is great with weapons such as axes and straight swords.";
 }
 
++ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
+    Bandit *bandit = [[self alloc] initWithContext:context];
+    
+    bandit.vitality = @(12);
+    bandit.strength = @(14);
+    bandit.dexterity = @(9);
+    bandit.intelligence = @(8);
+    bandit.faith = @(10);
+    
+    return bandit;
+}
+
 @end

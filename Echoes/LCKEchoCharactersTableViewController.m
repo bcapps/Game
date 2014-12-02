@@ -8,6 +8,7 @@
 
 #import "LCKEchoCharactersTableViewController.h"
 #import "Character.h"
+#import "UIColor+ColorStyle.h"
 
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 
@@ -33,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.tableFooterView = [UIView new];
 }
 

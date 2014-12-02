@@ -17,6 +17,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [LCKEchoCoreDataController registerSubclass:[LCKEchoCoreDataController class]];
     
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    
     return YES;
 }
 

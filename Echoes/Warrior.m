@@ -22,4 +22,16 @@
     return @"High initial strength and dexterity, as well as respectable intelligence and faith stats.";
 }
 
++ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
+    Warrior *warrior = [[self alloc] initWithContext:context];
+    
+    warrior.vitality = @(11);
+    warrior.strength = @(13);
+    warrior.dexterity = @(13);
+    warrior.intelligence = @(9);
+    warrior.faith = @(9);
+    
+    return warrior;
+}
+
 @end

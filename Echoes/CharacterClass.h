@@ -9,21 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import <LCKCategories/NSManagedObject+LCKAdditions.h>
+
 @import UIKit;
 
 @interface CharacterClass : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * strength;
 @property (nonatomic, retain) NSNumber * intelligence;
 @property (nonatomic, retain) NSNumber * faith;
 @property (nonatomic, retain) NSNumber * vitality;
 @property (nonatomic, retain) NSNumber * dexterity;
-@property (nonatomic, retain) NSNumber * endurance;
-@property (nonatomic, retain) NSNumber * resistance;
 
 @property (nonatomic, readonly) UIImage *classImage;
 @property (nonatomic, readonly) NSString *className;
 @property (nonatomic, readonly) NSString *classDescription;
+
++ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context;
 
 @end

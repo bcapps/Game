@@ -29,6 +29,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (nonatomic, readonly) NSArray *classes;
 @property (weak, nonatomic) IBOutlet UILabel *classNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *classDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *characterNameTextField;
 
 @end
 
@@ -40,6 +41,10 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classPicker.type = iCarouselTypeWheel;
     self.classPicker.contentOffset = CGSizeMake(0, LCKEchoNewCharacterViewControllerClassPickerVerticalOffset);
     
+    self.characterNameTextField.textColor = [UIColor titleTextColor];
+    self.characterNameTextField.font = [UIFont titleTextFontOfSize:16.0];
+    self.characterNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Character Name" attributes:@{NSForegroundColorAttributeName: [UIColor lightTextColor], NSFontAttributeName: self.characterNameTextField.font}];
+
     self.view.backgroundColor = [UIColor backgroundColor];
     self.classPicker.backgroundColor = [UIColor backgroundColor];
     
@@ -48,7 +53,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     self.classNameLabel.font = [UIFont titleTextFontOfSize:13.0];
     self.classDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
-    
+
     [self carouselCurrentItemIndexDidChange:self.classPicker];
 }
 
