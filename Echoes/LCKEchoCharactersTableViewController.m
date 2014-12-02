@@ -7,6 +7,7 @@
 //
 
 #import "LCKEchoCharactersTableViewController.h"
+#import "LCKEchoCoreDataController.h"
 #import "Character.h"
 #import "CharacterClass.h"
 
@@ -51,6 +52,25 @@
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showCharacterViewController" sender:self];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Character *character = [self.fetchedResultsController safeObjectAtIndexPath:indexPath];
+        
+        NSManagedObjectContext *context = character.managedObjectContext;
+
+        [context deleteObject:character];
+        [[LCKEchoCoreDataController sharedController] saveContext:context];
+    }
 }
 
 #pragma mark - LCKCoreDataTableViewController

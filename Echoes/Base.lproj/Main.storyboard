@@ -19,6 +19,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RMq-Xh-PbB" id="m9V-vn-fvk">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3rc-7A-iZC" kind="show" identifier="showCharacterViewController" id="cBR-LW-gJC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,6 +56,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uk-Uc-vkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="370" y="-427"/>
+        </scene>
+        <!--Character View Controller-->
+        <scene sceneID="PqX-T9-sIp">
+            <objects>
+                <viewController id="3rc-7A-iZC" customClass="LCKCharacterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZJR-JV-MpM"/>
+                        <viewControllerLayoutGuide type="bottom" id="kOx-KH-9Dv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="buv-6s-AS3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvk-BM-J5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="344"/>
         </scene>
         <!--New Character View Controller-->
         <scene sceneID="KS3-HA-ila">

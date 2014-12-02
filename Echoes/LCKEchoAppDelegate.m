@@ -19,6 +19,8 @@
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     
+    self.window.tintColor = [UIColor whiteColor];
+    
     return YES;
 }
 
