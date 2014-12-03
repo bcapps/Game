@@ -17,6 +17,10 @@
 		F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */; };
 		F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */; };
 		F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */; };
+		F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */ = {isa = PBXBuildFile; fileRef = F21F433A1A2FCDA800FEA417 /* Items.plist */; };
+		F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F433D1A2FCF4C00FEA417 /* LCKItemViewController.m */; };
+		F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */; };
+		F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43431A2FD28000FEA417 /* LCKItem.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -93,6 +97,13 @@
 		F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DownArrow@2x.png"; sourceTree = "<group>"; };
 		F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UpArrow@2x.png"; sourceTree = "<group>"; };
+		F21F433A1A2FCDA800FEA417 /* Items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Items.plist; sourceTree = "<group>"; };
+		F21F433C1A2FCF4C00FEA417 /* LCKItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemViewController.h; sourceTree = "<group>"; };
+		F21F433D1A2FCF4C00FEA417 /* LCKItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemViewController.m; sourceTree = "<group>"; };
+		F21F433F1A2FD26D00FEA417 /* LCKItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemProvider.h; sourceTree = "<group>"; };
+		F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemProvider.m; sourceTree = "<group>"; };
+		F21F43421A2FD28000FEA417 /* LCKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItem.h; sourceTree = "<group>"; };
+		F21F43431A2FD28000FEA417 /* LCKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItem.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +195,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F21F43391A2FCD9900FEA417 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				F21F433A1A2FCDA800FEA417 /* Items.plist */,
+				F21F433F1A2FD26D00FEA417 /* LCKItemProvider.h */,
+				F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */,
+				F21F43421A2FD28000FEA417 /* LCKItem.h */,
+				F21F43431A2FD28000FEA417 /* LCKItem.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		F2206AE51A2D2C0D006E44B0 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +230,7 @@
 		F2206AF01A2D2C0D006E44B0 /* Echoes */ = {
 			isa = PBXGroup;
 			children = (
+				F21F43391A2FCD9900FEA417 /* Items */,
 				F2206B731A2D7E65006E44B0 /* Style */,
 				F2206B1E1A2D2FAB006E44B0 /* Characters */,
 				F2206B1A1A2D2E91006E44B0 /* Core Data */,
@@ -270,6 +294,8 @@
 				F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */,
 				F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */,
 				F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */,
+				F21F433C1A2FCF4C00FEA417 /* LCKItemViewController.h */,
+				F21F433D1A2FCF4C00FEA417 /* LCKItemViewController.m */,
 				F21F43261A2F813800FEA417 /* LCKItemButton.h */,
 				F21F43271A2F813800FEA417 /* LCKItemButton.m */,
 				F21F432C1A2F851100FEA417 /* LCKStatCell.h */,
@@ -434,6 +460,7 @@
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
+				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
@@ -529,6 +556,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */,
+				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
@@ -541,6 +570,7 @@
 				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
+				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Broadsword</string>
+		<key>actionText</key>
+		<string>Attack for 1d6</string>
+		<key>descriptiveText</key>
+		<string>A common iron sword.</string>
+		<key>flavorText</key>
+		<string>A slick blade used for killing undead.</string>
+		<key>imageName</key>
+		<string>broadsword</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 1</string>
+		</array>
+	</dict>
+</array>
+</plist>
