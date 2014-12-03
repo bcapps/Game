@@ -9,6 +9,7 @@
 #import "LCKCharacterViewController.h"
 #import "LCKStatCell.h"
 #import "CharacterStats.h"
+#import "LCKEchoCoreDataController.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
@@ -59,13 +60,18 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
     [self setupSilhouetteGender];
     self.healthLabel.textColor = [UIColor colorWithRed:220.0/255.0 green:0 blue:10.0/255.0 alpha:1.0];
     self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
-    self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
+    
+    [self updateHealthText];
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
 }
 
 #pragma mark - LCKCharacterViewController
+
+- (void)updateHealthText {
+    self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
+}
 
 #pragma mark - Silhoutte
 
@@ -109,10 +115,27 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
+    if (self.character.currentHealth.integerValue + 1 > self.character.maximumHealth.integerValue) {
+        return;
+    }
     
+    self.character.currentHealth = @(self.character.currentHealth.integerValue + 1);
+    
+    [self updateHealthText];
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
+
 - (IBAction)decreaseHealthButtonTapped:(UIButton *)sender {
+    if (self.character.currentHealth.integerValue - 1 < 0) {
+        return;
+    }
     
+    self.character.currentHealth = @(self.character.currentHealth.integerValue - 1);
+    
+    [self updateHealthText];
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
 
 #pragma mark - UICollectionViewDataSource
