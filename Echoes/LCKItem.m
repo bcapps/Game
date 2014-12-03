@@ -10,7 +10,7 @@
 
 NSString * const LCKItemNameKey = @"name";
 NSString * const LCKItemActionKey = @"actionText";
-NSString * const LCKItemDescriptionKey = @"descriptionText";
+NSString * const LCKItemDescriptionKey = @"descriptiveText";
 NSString * const LCKItemFlavorKey = @"flavorText";
 NSString * const LCKItemImageKey = @"imageName";
 NSString * const LCKItemAttributeRequirementsKey = @"attributeRequirements";

@@ -14,6 +14,10 @@
     return [UIFont fontWithName:@"Avenir-Medium" size:size];
 }
 
++ (UIFont *)italicDescriptiveTextFontOfSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Avenir-MediumOblique" size:size];
+}
+
 + (UIFont *)titleTextFontOfSize:(CGFloat)size {
     return [UIFont fontWithName:@"Avenir-Heavy" size:size];
 }

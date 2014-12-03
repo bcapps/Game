@@ -21,6 +21,7 @@
 		F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F433D1A2FCF4C00FEA417 /* LCKItemViewController.m */; };
 		F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */; };
 		F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43431A2FD28000FEA417 /* LCKItem.m */; };
+		F21F43471A2FD7DF00FEA417 /* broadsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -104,6 +105,7 @@
 		F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemProvider.m; sourceTree = "<group>"; };
 		F21F43421A2FD28000FEA417 /* LCKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItem.h; sourceTree = "<group>"; };
 		F21F43431A2FD28000FEA417 /* LCKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItem.m; sourceTree = "<group>"; };
+		F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadsword@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		F21F43391A2FCD9900FEA417 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				F21F43451A2FD7D400FEA417 /* Item Art */,
 				F21F433A1A2FCDA800FEA417 /* Items.plist */,
 				F21F433F1A2FD26D00FEA417 /* LCKItemProvider.h */,
 				F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */,
@@ -205,6 +208,14 @@
 				F21F43431A2FD28000FEA417 /* LCKItem.m */,
 			);
 			name = Items;
+			sourceTree = "<group>";
+		};
+		F21F43451A2FD7D400FEA417 /* Item Art */ = {
+			isa = PBXGroup;
+			children = (
+				F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */,
+			);
+			name = "Item Art";
 			sourceTree = "<group>";
 		};
 		F2206AE51A2D2C0D006E44B0 = {
@@ -453,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21F43471A2FD7DF00FEA417 /* broadsword@2x.png in Resources */,
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,

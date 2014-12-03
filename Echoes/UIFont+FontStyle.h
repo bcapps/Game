@@ -11,6 +11,8 @@
 @interface UIFont (FontStyle)
 
 + (UIFont *)descriptiveTextFontOfSize:(CGFloat)size;
++ (UIFont *)italicDescriptiveTextFontOfSize:(CGFloat)size;
+
 + (UIFont *)titleTextFontOfSize:(CGFloat)size;
 
 @end

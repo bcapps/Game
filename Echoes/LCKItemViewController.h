@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+#import "LCKItem.h"
 
 @interface LCKItemViewController : UIViewController
+
+- (instancetype)initWithItem:(LCKItem *)item;
 
 @end

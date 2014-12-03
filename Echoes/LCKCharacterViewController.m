@@ -11,6 +11,10 @@
 #import "CharacterStats.h"
 #import "LCKEchoCoreDataController.h"
 
+#import "LCKItemViewController.h"
+#import "LCKItemProvider.h"
+#import "LCKItem.h"
+
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
@@ -86,8 +90,19 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 
 #pragma mark - Equipment Buttons
 
-- (IBAction)leftHandButtonTapped:(UIButton *)sender {
+- (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
+    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item];
     
+    return itemViewController;
+}
+
+- (IBAction)leftHandButtonTapped:(UIButton *)sender {
+    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:[[LCKItemProvider allItems] firstObject]];
+    itemViewController.view.frame = CGRectMake(50, 100, CGRectGetWidth(self.view.frame) - 100.0, CGRectGetHeight(self.view.frame) - 200.0);
+
+    [self addChildViewController:itemViewController];
+    [self.view addSubview:itemViewController.view];
+    [itemViewController didMoveToParentViewController:self];
 }
 
 - (IBAction)rightHandbuttonTapped:(UIButton *)sender {
