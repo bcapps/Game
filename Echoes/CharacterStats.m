@@ -18,15 +18,20 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
 @dynamic faith;
 @dynamic vitality;
 @dynamic dexterity;
-@dynamic maximumHealth;
-@dynamic currentHealth;
 
 @synthesize classImage;
 @synthesize classDescription;
 @synthesize className;
+@synthesize startingHealthModification;
 
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     return nil;
+}
+
+- (NSNumber *)statHealth {
+    NSUInteger health = CharacterStatsInitialHealth + self.startingHealthModification + (CharacterStatsVitalityModifier * self.vitality.integerValue);
+    
+    return @(health);
 }
 
 @end

@@ -22,6 +22,10 @@
     return @"High critical hit rate and very fast. They aren’t built very solidly, however, with low vitality, strength and endurance.";
 }
 
+- (NSUInteger)startingHealthModification {
+    return 1;
+}
+
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Thief *thief = [[self alloc] initWithContext:context];
     
@@ -30,8 +34,6 @@
     thief.dexterity = @(3);
     thief.intelligence = @(1);
     thief.faith = @(1);
-    thief.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * thief.vitality.integerValue));
-    thief.currentHealth = thief.maximumHealth;
     
     return thief;
 }

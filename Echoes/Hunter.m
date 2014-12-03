@@ -22,6 +22,10 @@
     return @"Specializes in bows, due to their high initial dexterity stat. Favors high dexterity weapons such as Spears and Rapiers";
 }
 
+- (NSUInteger)startingHealthModification {
+    return 1;
+}
+
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Hunter *hunter = [[self alloc] initWithContext:context];
     
@@ -30,8 +34,6 @@
     hunter.dexterity = @(3);
     hunter.intelligence = @(0);
     hunter.faith = @(-1);
-    hunter.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * hunter.vitality.integerValue));
-    hunter.currentHealth = hunter.maximumHealth;
 
     return hunter;
 }

@@ -16,6 +16,7 @@
 @dynamic level;
 @dynamic characterStats;
 @dynamic gender;
+@dynamic currentHealth;
 
 - (CharacterGender)characterGender {
     if ([self.gender isEqualToNumber:@(0)]) {
@@ -23,6 +24,11 @@
     }
     
     return CharacterGenderFemale;
+}
+
+- (NSNumber *)maximumHealth {
+    //TODO: Add gear health.
+    return self.characterStats.statHealth;
 }
 
 @end

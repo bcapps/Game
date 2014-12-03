@@ -46,7 +46,7 @@ NSString * const LCKStatCellReuseIdentifier = @"LCKStatCellReuseIdentifier";
         _statNameLabel = [[UILabel alloc] init];
         _statNameLabel.textColor = [UIColor titleTextColor];
         _statNameLabel.textAlignment = NSTextAlignmentCenter;
-        _statNameLabel.font = [UIFont titleTextFontOfSize:11.0];
+        _statNameLabel.font = [UIFont titleTextFontOfSize:14.0];
     }
     
     return _statNameLabel;

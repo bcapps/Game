@@ -23,12 +23,13 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 @property (nonatomic, retain) NSNumber * faith;
 @property (nonatomic, retain) NSNumber * vitality;
 @property (nonatomic, retain) NSNumber * dexterity;
-@property (nonatomic, retain) NSNumber * maximumHealth;
-@property (nonatomic, retain) NSNumber * currentHealth;
 
 @property (nonatomic, readonly) UIImage *classImage;
 @property (nonatomic, readonly) NSString *className;
 @property (nonatomic, readonly) NSString *classDescription;
+
+@property (nonatomic, readonly) NSNumber *statHealth;
+@property (nonatomic, readonly) NSUInteger startingHealthModification;
 
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context;
 

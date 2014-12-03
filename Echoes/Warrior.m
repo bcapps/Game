@@ -22,6 +22,10 @@
     return @"High initial strength and dexterity, as well as respectable intelligence and faith stats.";
 }
 
+- (NSUInteger)startingHealthModification {
+    return 1;
+}
+
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Warrior *warrior = [[self alloc] initWithContext:context];
     
@@ -30,8 +34,6 @@
     warrior.dexterity = @(1);
     warrior.intelligence = @(0);
     warrior.faith = @(0);
-    warrior.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * warrior.vitality.integerValue) + 1);
-    warrior.currentHealth = warrior.maximumHealth;
 
     return warrior;
 }

@@ -11,11 +11,11 @@
 @implementation UIFont (FontStyle)
 
 + (UIFont *)descriptiveTextFontOfSize:(CGFloat)size {
-    return [UIFont fontWithName:@"Avenir" size:size];
+    return [UIFont fontWithName:@"Avenir-Medium" size:size];
 }
 
 + (UIFont *)titleTextFontOfSize:(CGFloat)size {
-    return [UIFont fontWithName:@"Avenir-Bold" size:size];
+    return [UIFont fontWithName:@"Avenir-Heavy" size:size];
 }
 
 @end

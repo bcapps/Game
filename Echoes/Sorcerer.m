@@ -22,6 +22,10 @@
     return @"Uses magic as his primary offensive tool. Limited to small weapons due to low starting strength.";
 }
 
+- (NSUInteger)startingHealthModification {
+    return 1;
+}
+
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Sorcerer *sorcerer = [[self alloc] initWithContext:context];
     
@@ -30,8 +34,6 @@
     sorcerer.dexterity = @(1);
     sorcerer.intelligence = @(4);
     sorcerer.faith = @(-1);
-    sorcerer.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * sorcerer.vitality.integerValue));
-    sorcerer.currentHealth = sorcerer.maximumHealth;
 
     return sorcerer;
 }

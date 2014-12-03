@@ -81,6 +81,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     Character *newCharacter = [[Character alloc] initWithContext:context];
     newCharacter.name = self.characterNameTextField.text;
     newCharacter.characterStats = [[selectedClass class] newCharacterStatsInContext:context];
+    newCharacter.currentHealth = newCharacter.maximumHealth;
     
     [[LCKEchoCoreDataController sharedController] saveContext:context];
     

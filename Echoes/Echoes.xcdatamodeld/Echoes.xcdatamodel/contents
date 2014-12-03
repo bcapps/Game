@@ -2,17 +2,16 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bandit" representedClassName="Bandit" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Character" representedClassName="Character" syncable="YES">
+        <attribute name="currentHealth" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" syncable="YES"/>
     </entity>
-    <entity name="CharacterStats" representedClassName="CharacterStats" syncable="YES">
-        <attribute name="currentHealth" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    <entity name="CharacterStats" representedClassName="CharacterClass" syncable="YES">
         <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="faith" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intelligence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="maximumHealth" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="vitality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -24,8 +23,8 @@
     <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterStats" syncable="YES"/>
     <elements>
         <element name="Bandit" positionX="0" positionY="0" width="128" height="45"/>
-        <element name="Character" positionX="0" positionY="0" width="128" height="105"/>
-        <element name="CharacterStats" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Character" positionX="0" positionY="0" width="128" height="118"/>
+        <element name="CharacterStats" positionX="0" positionY="0" width="128" height="118"/>
         <element name="Cleric" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Hunter" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Knight" positionX="0" positionY="0" width="128" height="45"/>

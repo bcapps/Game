@@ -14,7 +14,9 @@
 		F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43271A2F813800FEA417 /* LCKItemButton.m */; };
 		F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */; };
 		F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F432D1A2F851100FEA417 /* LCKStatCell.m */; };
-		F21F43301A2FB7C900FEA417 /* heartIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F432F1A2FB7C900FEA417 /* heartIcon@2x.png */; };
+		F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */; };
+		F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */; };
+		F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -88,7 +90,9 @@
 		F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterPortrait.m; sourceTree = "<group>"; };
 		F21F432C1A2F851100FEA417 /* LCKStatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatCell.h; sourceTree = "<group>"; };
 		F21F432D1A2F851100FEA417 /* LCKStatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatCell.m; sourceTree = "<group>"; };
-		F21F432F1A2FB7C900FEA417 /* heartIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DownArrow@2x.png"; sourceTree = "<group>"; };
+		F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UpArrow@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -312,7 +316,9 @@
 		F2206B561A2D431A006E44B0 /* Class Art */ = {
 			isa = PBXGroup;
 			children = (
-				F21F432F1A2FB7C900FEA417 /* heartIcon@2x.png */,
+				F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */,
+				F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */,
+				F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */,
 				F21F43241A2EA52500FEA417 /* SilhoutteFemale@2x.png */,
 				F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */,
 				F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */,
@@ -421,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
@@ -429,11 +436,12 @@
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
+				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
+				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
 				F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,
 				F2206B021A2D2C0D006E44B0 /* Images.xcassets in Resources */,
-				F21F43301A2FB7C900FEA417 /* heartIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

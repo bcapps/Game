@@ -22,6 +22,10 @@
     return @"Can use Miracles to heal thanks to their high starting Faith stat. Low starting dexterity limits weapon choice.";
 }
 
+- (NSUInteger)startingHealthModification {
+    return -1;
+}
+
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Cleric *cleric = [[self alloc] initWithContext:context];
     
@@ -30,8 +34,6 @@
     cleric.dexterity = @(-1);
     cleric.intelligence = @(-1);
     cleric.faith = @(4);
-    cleric.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * cleric.vitality.integerValue) - 1);
-    cleric.currentHealth = cleric.maximumHealth;
 
     return cleric;
 }

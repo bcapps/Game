@@ -11,6 +11,7 @@
 #import "CharacterStats.h"
 
 #import "UIColor+ColorStyle.h"
+#import "UIFont+FontStyle.h"
 
 typedef NS_ENUM(NSUInteger, LCKStatType) {
     LCKStatTypeVitality,
@@ -31,6 +32,8 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 @property (weak, nonatomic) IBOutlet UIButton *leftHandButton;
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
+@property (weak, nonatomic) IBOutlet UILabel *healthLabel;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
 
@@ -54,7 +57,11 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
     self.title = self.character.name;
     
     [self setupSilhouetteGender];
+    self.healthLabel.textColor = [UIColor colorWithRed:220.0/255.0 green:0 blue:10.0/255.0 alpha:1.0];
+    self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
+    self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
     
+    self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
 }
 
@@ -98,6 +105,13 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 }
 
 - (IBAction)bootsButtonTapped:(UIButton *)sender {
+    
+}
+
+- (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
+    
+}
+- (IBAction)decreaseHealthButtonTapped:(UIButton *)sender {
     
 }
 
