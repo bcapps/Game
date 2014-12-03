@@ -31,7 +31,7 @@
     
     knight.vitality = @(3);
     knight.strength = @(1);
-    knight.dexterity = @(0);
+    knight.dexterity = @(-1);
     knight.intelligence = @(0);
     knight.faith = @(1);
 
