@@ -10,6 +10,7 @@
 #import "LCKEchoCoreDataController.h"
 #import "CharacterClasses.h"
 #import "Character.h"
+#import "LCKCharacterPortrait.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -110,24 +111,12 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
-    UIView *itemView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LCKEchoNewCharacterViewControllerCarouselItemSize, LCKEchoNewCharacterViewControllerCarouselItemSize)];
-    itemView.layer.masksToBounds = NO;
-    itemView.clipsToBounds = YES;
-    itemView.layer.borderWidth = 1.0;
-    itemView.layer.borderColor = [UIColor whiteColor].CGColor;
-    itemView.layer.cornerRadius = CGRectGetHeight(itemView.frame) / 2.0;
-    
     CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
+
+    LCKCharacterPortrait *portraitView = [[LCKCharacterPortrait alloc] initWithFrame:CGRectMake(0, 0, LCKEchoNewCharacterViewControllerCarouselItemSize, LCKEchoNewCharacterViewControllerCarouselItemSize)];
+    portraitView.portraitImage = characterClass.classImage;
     
-    UIImageView *classImageView = [[UIImageView alloc] initWithImage:characterClass.classImage];
-    classImageView.frame = itemView.frame;
-    classImageView.contentMode = UIViewContentModeScaleToFill;
-    classImageView.backgroundColor = [UIColor clearColor];
-    classImageView.center = itemView.center;
-    
-    [itemView addSubview:classImageView];
-    
-    return itemView;
+    return portraitView;
 }
 
 @end

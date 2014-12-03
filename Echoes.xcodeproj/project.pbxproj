@@ -12,6 +12,7 @@
 		F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */; };
 		F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43241A2EA52500FEA417 /* SilhoutteFemale@2x.png */; };
 		F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43271A2F813800FEA417 /* LCKItemButton.m */; };
+		F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -81,6 +82,8 @@
 		F21F43241A2EA52500FEA417 /* SilhoutteFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SilhoutteFemale@2x.png"; sourceTree = "<group>"; };
 		F21F43261A2F813800FEA417 /* LCKItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemButton.h; sourceTree = "<group>"; };
 		F21F43271A2F813800FEA417 /* LCKItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemButton.m; sourceTree = "<group>"; };
+		F21F43291A2F824000FEA417 /* LCKCharacterPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCharacterPortrait.h; sourceTree = "<group>"; };
+		F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterPortrait.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				F2206AFC1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m */,
 				F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */,
 				F2206B261A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m */,
+				F21F43291A2F824000FEA417 /* LCKCharacterPortrait.h */,
+				F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */,
 				F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */,
 				F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */,
 				F21F43261A2F813800FEA417 /* LCKItemButton.h */,
@@ -524,6 +529,7 @@
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
+				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
 				F2206B7E1A2D8994006E44B0 /* Character.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
