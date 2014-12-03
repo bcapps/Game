@@ -53,7 +53,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classNameLabel.textColor = [UIColor titleTextColor];
     self.classDescriptionLabel.textColor = [UIColor descriptiveTextColor];
     
-    self.classNameLabel.font = [UIFont titleTextFontOfSize:13.0];
+    self.classNameLabel.font = [UIFont titleTextFontOfSize:14.0];
     self.classDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
 
     [self carouselCurrentItemIndexDidChange:self.classPicker];
