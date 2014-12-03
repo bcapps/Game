@@ -32,6 +32,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (weak, nonatomic) IBOutlet UILabel *classNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *classDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UITextField *characterNameTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 
 @end
 
@@ -82,6 +83,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     newCharacter.name = self.characterNameTextField.text;
     newCharacter.characterStats = [[selectedClass class] newCharacterStatsInContext:context];
     newCharacter.currentHealth = newCharacter.maximumHealth;
+    newCharacter.gender = @(self.genderSegmentedControl.selectedSegmentIndex);
     
     [[LCKEchoCoreDataController sharedController] saveContext:context];
     
