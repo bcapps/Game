@@ -7,14 +7,14 @@
 //
 
 #import "Character.h"
-#import "CharacterClass.h"
+#import "CharacterStats.h"
 
 
 @implementation Character
 
 @dynamic name;
 @dynamic level;
-@dynamic characterClass;
+@dynamic characterStats;
 @dynamic gender;
 
 - (CharacterGender)characterGender {

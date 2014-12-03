@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "CharacterClass.h"
+#import "CharacterStats.h"
 
 
-@interface Knight : CharacterClass
+@interface Knight : CharacterStats
 
 
 @end

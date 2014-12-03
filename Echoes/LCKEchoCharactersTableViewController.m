@@ -9,7 +9,7 @@
 #import "LCKEchoCharactersTableViewController.h"
 #import "LCKEchoCoreDataController.h"
 #import "Character.h"
-#import "CharacterClass.h"
+#import "CharacterStats.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
@@ -59,7 +59,7 @@
     
     cell.backgroundColor = [UIColor backgroundColor];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Level %@ %@", character.name, character.level, character.characterClass.className];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Level %@ %@", character.name, character.level, character.characterStats.className];
     cell.textLabel.textColor = [UIColor titleTextColor];
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     

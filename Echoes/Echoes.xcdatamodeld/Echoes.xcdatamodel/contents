@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Bandit" representedClassName="Bandit" parentEntity="CharacterClass" syncable="YES"/>
+    <entity name="Bandit" representedClassName="Bandit" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Character" representedClassName="Character" syncable="YES">
         <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="characterClass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterClass" syncable="YES"/>
+        <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" syncable="YES"/>
     </entity>
-    <entity name="CharacterClass" representedClassName="CharacterClass" syncable="YES">
+    <entity name="CharacterStats" representedClassName="CharacterClass" syncable="YES">
+        <attribute name="currentHealth" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="faith" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intelligence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maximumHealth" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="vitality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Cleric" representedClassName="Cleric" parentEntity="CharacterClass" syncable="YES"/>
-    <entity name="Hunter" representedClassName="Hunter" parentEntity="CharacterClass" syncable="YES"/>
-    <entity name="Knight" representedClassName="Knight" parentEntity="CharacterClass" syncable="YES"/>
-    <entity name="Sorcerer" representedClassName="Sorcerer" parentEntity="CharacterClass" syncable="YES"/>
-    <entity name="Thief" representedClassName="Thief" parentEntity="CharacterClass" syncable="YES"/>
-    <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterClass" syncable="YES"/>
+    <entity name="Cleric" representedClassName="Cleric" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Hunter" representedClassName="Hunter" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Knight" representedClassName="Knight" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Sorcerer" representedClassName="Sorcerer" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Thief" representedClassName="Thief" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterStats" syncable="YES"/>
     <elements>
-        <element name="Bandit" positionX="-9" positionY="36" width="128" height="45"/>
-        <element name="Character" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="CharacterClass" positionX="-54" positionY="9" width="128" height="118"/>
-        <element name="Cleric" positionX="-18" positionY="27" width="128" height="45"/>
-        <element name="Hunter" positionX="9" positionY="54" width="128" height="45"/>
-        <element name="Knight" positionX="-36" positionY="18" width="128" height="45"/>
-        <element name="Sorcerer" positionX="27" positionY="72" width="128" height="45"/>
-        <element name="Thief" positionX="0" positionY="45" width="128" height="45"/>
-        <element name="Warrior" positionX="-9" positionY="36" width="128" height="45"/>
+        <element name="Bandit" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Character" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="CharacterStats" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Cleric" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Hunter" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Knight" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Sorcerer" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Thief" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Warrior" positionX="0" positionY="0" width="128" height="45"/>
     </elements>
 </model>

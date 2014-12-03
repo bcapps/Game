@@ -13,4 +13,4 @@
 #import "Hunter.h"
 #import "Knight.h"
 #import "Warrior.h"
-#import "CharacterClass.h"
+#import "CharacterStats.h"

@@ -6,22 +6,26 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import "CharacterClass.h"
+#import "CharacterStats.h"
 
+NSUInteger const CharacterStatsInitialHealth = 10;
+NSUInteger const CharacterStatsVitalityModifier = 3;
 
-@implementation CharacterClass
+@implementation CharacterStats
 
 @dynamic strength;
 @dynamic intelligence;
 @dynamic faith;
 @dynamic vitality;
 @dynamic dexterity;
+@dynamic maximumHealth;
+@dynamic currentHealth;
 
 @synthesize classImage;
 @synthesize classDescription;
 @synthesize className;
 
-+ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
++ (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     return nil;
 }
 

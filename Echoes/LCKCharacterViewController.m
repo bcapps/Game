@@ -8,7 +8,7 @@
 
 #import "LCKCharacterViewController.h"
 #import "LCKStatCell.h"
-#import "CharacterClass.h"
+#import "CharacterStats.h"
 
 #import "UIColor+ColorStyle.h"
 
@@ -113,23 +113,23 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
     switch (indexPath.row) {
         case LCKStatTypeVitality:
             cell.statNameLabel.text = @"VIT";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterClass.vitality];
+            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.vitality];
             break;
         case LCKStatTypeStrength:
             cell.statNameLabel.text = @"STR";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterClass.strength];
+            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.strength];
             break;
         case LCKStatTypeDexterity:
             cell.statNameLabel.text = @"DEX";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterClass.dexterity];
+            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.dexterity];
             break;
         case LCKStatTypeIntelligence:
             cell.statNameLabel.text = @"INT";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterClass.intelligence];
+            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.intelligence];
             break;
         case LCKStatTypeFaith:
             cell.statNameLabel.text = @"FAI";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterClass.faith];
+            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.faith];
     }
 
     return cell;

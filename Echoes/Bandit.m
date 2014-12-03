@@ -22,7 +22,7 @@
     return @"Specializes in hard-hitting physical attacks, and is great with weapons such as axes and straight swords.";
 }
 
-+ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
++ (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Bandit *bandit = [[self alloc] initWithContext:context];
     
     bandit.vitality = @(1);
@@ -30,7 +30,9 @@
     bandit.dexterity = @(2);
     bandit.intelligence = @(-1);
     bandit.faith = @(0);
-    
+    bandit.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * bandit.vitality.integerValue) - 1);
+    bandit.currentHealth = bandit.maximumHealth;
+
     return bandit;
 }
 

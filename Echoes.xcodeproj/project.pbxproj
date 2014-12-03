@@ -27,8 +27,8 @@
 		F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */; };
 		F2206B381A2D428F006E44B0 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B371A2D428F006E44B0 /* Warrior.m */; };
 		F2206B391A2D428F006E44B0 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B371A2D428F006E44B0 /* Warrior.m */; };
-		F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterClass.m */; };
-		F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterClass.m */; };
+		F2206B3C1A2D428F006E44B0 /* CharacterStats.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterStats.m */; };
+		F2206B3D1A2D428F006E44B0 /* CharacterStats.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3B1A2D428F006E44B0 /* CharacterStats.m */; };
 		F2206B401A2D428F006E44B0 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3F1A2D428F006E44B0 /* Knight.m */; };
 		F2206B411A2D428F006E44B0 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B3F1A2D428F006E44B0 /* Knight.m */; };
 		F2206B441A2D4290006E44B0 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B431A2D4290006E44B0 /* Hunter.m */; };
@@ -109,8 +109,8 @@
 		F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDismissSegue.m; sourceTree = "<group>"; };
 		F2206B361A2D428F006E44B0 /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warrior.h; sourceTree = "<group>"; };
 		F2206B371A2D428F006E44B0 /* Warrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warrior.m; sourceTree = "<group>"; };
-		F2206B3A1A2D428F006E44B0 /* CharacterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterClass.h; sourceTree = "<group>"; };
-		F2206B3B1A2D428F006E44B0 /* CharacterClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterClass.m; sourceTree = "<group>"; };
+		F2206B3A1A2D428F006E44B0 /* CharacterStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterStats.h; sourceTree = "<group>"; };
+		F2206B3B1A2D428F006E44B0 /* CharacterStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterStats.m; sourceTree = "<group>"; };
 		F2206B3E1A2D428F006E44B0 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
 		F2206B3F1A2D428F006E44B0 /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
 		F2206B421A2D4290006E44B0 /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
@@ -289,8 +289,8 @@
 				F2206B431A2D4290006E44B0 /* Hunter.m */,
 				F2206B3E1A2D428F006E44B0 /* Knight.h */,
 				F2206B3F1A2D428F006E44B0 /* Knight.m */,
-				F2206B3A1A2D428F006E44B0 /* CharacterClass.h */,
-				F2206B3B1A2D428F006E44B0 /* CharacterClass.m */,
+				F2206B3A1A2D428F006E44B0 /* CharacterStats.h */,
+				F2206B3B1A2D428F006E44B0 /* CharacterStats.m */,
 				F2206B361A2D428F006E44B0 /* Warrior.h */,
 				F2206B371A2D428F006E44B0 /* Warrior.m */,
 				F2206B721A2D445A006E44B0 /* CharacterClasses.h */,
@@ -536,7 +536,7 @@
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
 				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,
-				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
+				F2206B3C1A2D428F006E44B0 /* CharacterStats.m in Sources */,
 				F2206B7E1A2D8994006E44B0 /* Character.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
 			);
@@ -554,7 +554,7 @@
 				F2206B551A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206B111A2D2C0D006E44B0 /* EchoesTests.m in Sources */,
 				F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
-				F2206B3D1A2D428F006E44B0 /* CharacterClass.m in Sources */,
+				F2206B3D1A2D428F006E44B0 /* CharacterStats.m in Sources */,
 				F2206B491A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B831A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */,
 				F2206B411A2D428F006E44B0 /* Knight.m in Sources */,

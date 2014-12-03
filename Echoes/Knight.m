@@ -22,7 +22,7 @@
     return @"A tank class, starting with the highest vitality value of all classes, as well as the most robust equipment.";
 }
 
-+ (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
++ (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
     Knight *knight = [[self alloc] initWithContext:context];
     
     knight.vitality = @(3);
@@ -30,7 +30,9 @@
     knight.dexterity = @(0);
     knight.intelligence = @(0);
     knight.faith = @(1);
-    
+    knight.maximumHealth = @(CharacterStatsInitialHealth + (CharacterStatsVitalityModifier * knight.vitality.integerValue));
+    knight.currentHealth = knight.maximumHealth;
+
     return knight;
 }
 

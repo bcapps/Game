@@ -76,11 +76,11 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 - (IBAction)doneButtonTapped:(UIBarButtonItem *)button {
     NSManagedObjectContext *context = [LCKEchoCoreDataController sharedController].mainQueueContext;
 
-    CharacterClass *selectedClass = [self.classes safeObjectAtIndex:self.classPicker.currentItemIndex];
+    CharacterStats *selectedClass = [self.classes safeObjectAtIndex:self.classPicker.currentItemIndex];
 
     Character *newCharacter = [[Character alloc] initWithContext:context];
     newCharacter.name = self.characterNameTextField.text;
-    newCharacter.characterClass = [[selectedClass class] newCharacterClassInContext:context];
+    newCharacter.characterStats = [[selectedClass class] newCharacterStatsInContext:context];
     
     [[LCKEchoCoreDataController sharedController] saveContext:context];
     
@@ -98,10 +98,10 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 }
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
-    CharacterClass *characterClass = [self.classes safeObjectAtIndex:carousel.currentItemIndex];
+    CharacterStats *characterStats = [self.classes safeObjectAtIndex:carousel.currentItemIndex];
     
-    self.classNameLabel.text = characterClass.className;
-    self.classDescriptionLabel.text = characterClass.classDescription;
+    self.classNameLabel.text = characterStats.className;
+    self.classDescriptionLabel.text = characterStats.classDescription;
 }
 
 #pragma mark - iCarouselDataSource
@@ -111,10 +111,10 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
-    CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
+    CharacterStats *characterStats = [self.classes safeObjectAtIndex:index];
 
     LCKCharacterPortrait *portraitView = [[LCKCharacterPortrait alloc] initWithFrame:CGRectMake(0, 0, LCKEchoNewCharacterViewControllerCarouselItemSize, LCKEchoNewCharacterViewControllerCarouselItemSize)];
-    portraitView.portraitImage = characterClass.classImage;
+    portraitView.portraitImage = characterStats.classImage;
     
     return portraitView;
 }
