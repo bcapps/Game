@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *secondAccessoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *bootsButton;
 @property (weak, nonatomic) IBOutlet UIButton *leftHandButton;
-@property (weak, nonatomic) IBOutlet UIImageView *silhoutteImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
 
@@ -35,7 +35,7 @@
     
     self.view.backgroundColor = [UIColor backgroundColor];
     
-    [self setupSilhoutteGender];
+    [self setupSilhouetteGender];
     [self setupEquipmentButtons];
 }
 
@@ -53,12 +53,12 @@
 
 #pragma mark - Silhoutte
 
-- (void)setupSilhoutteGender {
+- (void)setupSilhouetteGender {
     if (self.character.characterGender == CharacterGenderMale) {
-        self.silhoutteImageView.image = [UIImage imageNamed:@"SilhoutteMale"];
+        self.silhouetteImageView.image = [UIImage imageNamed:@"SilhoutteMale"];
     }
     else {
-        self.silhoutteImageView.image = [UIImage imageNamed:@"SilhoutteFemale"];
+        self.silhouetteImageView.image = [UIImage imageNamed:@"SilhoutteFemale"];
     }
 }
 
