@@ -174,23 +174,50 @@
                                     <constraint firstAttribute="height" constant="1" id="5Hn-Vs-iFi"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EmM-eE-XlB">
+                                <rect key="frame" x="0.0" y="451" width="600" height="149"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gld-cz-cN6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3zr-zv-iCb">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="3rc-7A-iZC" id="wdD-QX-1g6"/>
+                                    <outlet property="delegate" destination="3rc-7A-iZC" id="0Fy-42-r0j"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z5l-dZ-bU0" firstAttribute="top" secondItem="ar4-85-oMt" secondAttribute="bottom" constant="13" id="2EY-W0-mw5"/>
+                            <constraint firstItem="EmM-eE-XlB" firstAttribute="width" secondItem="buv-6s-AS3" secondAttribute="width" id="2kl-dA-S2O"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="centerX" secondItem="7D5-tH-Ejn" secondAttribute="centerX" id="4LY-CZ-oGP"/>
                             <constraint firstItem="oab-Ny-zTp" firstAttribute="top" secondItem="U3k-ex-baV" secondAttribute="bottom" constant="20" id="67d-qY-hUO"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="ar4-85-oMt" secondAttribute="top" id="7XB-2j-1sR"/>
                             <constraint firstItem="Tfq-jD-en0" firstAttribute="centerX" secondItem="U3k-ex-baV" secondAttribute="centerX" id="9D2-ZC-alt"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="yya-Wz-xsE" secondAttribute="trailing" constant="10" id="BrD-32-aHq"/>
+                            <constraint firstItem="kOx-KH-9Dv" firstAttribute="top" secondItem="EmM-eE-XlB" secondAttribute="bottom" id="Ejn-og-3k6"/>
+                            <constraint firstItem="EmM-eE-XlB" firstAttribute="top" secondItem="oab-Ny-zTp" secondAttribute="bottom" constant="10" id="G2t-yb-TQW"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="z5l-dZ-bU0" secondAttribute="trailing" constant="10" id="GTa-dd-j30"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="675-xe-31g" secondAttribute="bottom" constant="-220" id="Grb-sQ-DQc"/>
                             <constraint firstAttribute="centerX" secondItem="oab-Ny-zTp" secondAttribute="centerX" id="HvU-LF-uNl"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="7D5-tH-Ejn" secondAttribute="top" constant="-70" id="PJy-6M-2lL"/>
-                            <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="z5l-dZ-bU0" secondAttribute="bottom" constant="-78" id="QgD-js-BR9"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="IHP-mI-kKS" secondAttribute="top" id="WTX-yI-MNR"/>
                             <constraint firstAttribute="centerX" secondItem="U3k-ex-baV" secondAttribute="centerX" id="Xhv-Z6-L8Z"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="ar4-85-oMt" secondAttribute="trailing" constant="10" id="Zqw-yg-0JJ"/>
+                            <constraint firstAttribute="centerX" secondItem="EmM-eE-XlB" secondAttribute="centerX" id="bx9-ma-b99"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="ZJR-JV-MpM" secondAttribute="bottom" constant="30" id="daE-mh-91Z"/>
                             <constraint firstItem="Tfq-jD-en0" firstAttribute="bottom" secondItem="U3k-ex-baV" secondAttribute="bottom" id="fRG-y5-ScW"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="yya-Wz-xsE" secondAttribute="bottom" constant="-220" id="pS7-0R-4Xp"/>
@@ -198,15 +225,11 @@
                             <constraint firstAttribute="width" secondItem="oab-Ny-zTp" secondAttribute="width" id="sdS-dV-Z2J"/>
                             <constraint firstItem="IHP-mI-kKS" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="-20" id="zN9-Iu-kUw"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="QgD-js-BR9"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="bootsButton" destination="Tfq-jD-en0" id="mKN-A5-Jk7"/>
                         <outlet property="chestButton" destination="7D5-tH-Ejn" id="7fD-W7-cQw"/>
+                        <outlet property="collectionView" destination="EmM-eE-XlB" id="VWx-pB-YbB"/>
                         <outlet property="firstAccessoryButton" destination="ar4-85-oMt" id="5bg-CA-udU"/>
                         <outlet property="helmetButton" destination="IHP-mI-kKS" id="tWD-K3-lXy"/>
                         <outlet property="leftHandButton" destination="675-xe-31g" id="WwL-B3-Rir"/>

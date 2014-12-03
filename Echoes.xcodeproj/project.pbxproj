@@ -13,6 +13,7 @@
 		F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43241A2EA52500FEA417 /* SilhoutteFemale@2x.png */; };
 		F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43271A2F813800FEA417 /* LCKItemButton.m */; };
 		F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */; };
+		F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F432D1A2F851100FEA417 /* LCKStatCell.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -84,6 +85,8 @@
 		F21F43271A2F813800FEA417 /* LCKItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemButton.m; sourceTree = "<group>"; };
 		F21F43291A2F824000FEA417 /* LCKCharacterPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCharacterPortrait.h; sourceTree = "<group>"; };
 		F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterPortrait.m; sourceTree = "<group>"; };
+		F21F432C1A2F851100FEA417 /* LCKStatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatCell.h; sourceTree = "<group>"; };
+		F21F432D1A2F851100FEA417 /* LCKStatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatCell.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */,
 				F21F43261A2F813800FEA417 /* LCKItemButton.h */,
 				F21F43271A2F813800FEA417 /* LCKItemButton.m */,
+				F21F432C1A2F851100FEA417 /* LCKStatCell.h */,
+				F21F432D1A2F851100FEA417 /* LCKStatCell.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
+				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterClass.m in Sources */,
 				F2206B7E1A2D8994006E44B0 /* Character.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
