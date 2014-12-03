@@ -14,10 +14,14 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
+#import "LCKCharacterViewController.h"
+
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSFetchedResultsController+LCKAdditions.h>
 
 @interface LCKEchoCharactersTableViewController ()
+
+@property (nonatomic) Character *selectedCharacter;
 
 @end
 
@@ -32,6 +36,14 @@
     self.tableView.tableFooterView = [UIView new];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showCharacterViewController"]) {
+        LCKCharacterViewController *characterViewController = segue.destinationViewController;
+        
+        characterViewController.character = self.selectedCharacter;
+    }
 }
 
 #pragma mark - UITableViewController
@@ -55,6 +67,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedCharacter = [self.fetchedResultsController safeObjectAtIndexPath:indexPath];
+
     [self performSegueWithIdentifier:@"showCharacterViewController" sender:self];
 }
 

@@ -22,8 +22,6 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
 
-@property (nonatomic) Character *character;
-
 @end
 
 @implementation LCKCharacterViewController
@@ -34,22 +32,13 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor backgroundColor];
+    self.title = self.character.name;
     
     [self setupSilhouetteGender];
     [self setupEquipmentButtons];
 }
 
 #pragma mark - LCKCharacterViewController
-
-- (instancetype)initWithCharacter:(Character *)character {
-    self = [super init];
-    
-    if (self) {
-        _character = character;
-    }
-    
-    return self;
-}
 
 #pragma mark - Silhoutte
 

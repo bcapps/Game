@@ -12,6 +12,6 @@
 
 @interface LCKCharacterViewController : UIViewController
 
-- (instancetype)initWithCharacter:(Character *)character;
+@property (nonatomic) Character *character;
 
 @end
