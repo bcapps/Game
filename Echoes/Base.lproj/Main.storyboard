@@ -212,6 +212,7 @@
                         <outlet property="leftHandButton" destination="675-xe-31g" id="WwL-B3-Rir"/>
                         <outlet property="rightHandButton" destination="yya-Wz-xsE" id="eB8-it-Dxw"/>
                         <outlet property="secondAccessoryButton" destination="z5l-dZ-bU0" id="wYI-1E-OPq"/>
+                        <outlet property="silhoutteImageView" destination="U3k-ex-baV" id="3R7-YJ-E2S"/>
                         <outletCollection property="equipmentButtons" destination="IHP-mI-kKS" id="gjf-bR-axH"/>
                         <outletCollection property="equipmentButtons" destination="7D5-tH-Ejn" id="ifd-YF-BXr"/>
                         <outletCollection property="equipmentButtons" destination="yya-Wz-xsE" id="pDP-hl-UCA"/>

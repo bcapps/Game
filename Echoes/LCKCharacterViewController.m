@@ -10,6 +10,7 @@
 #import "UIColor+ColorStyle.h"
 
 @interface LCKCharacterViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *helmetButton;
 @property (weak, nonatomic) IBOutlet UIButton *chestButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightHandButton;
@@ -17,8 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *secondAccessoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *bootsButton;
 @property (weak, nonatomic) IBOutlet UIButton *leftHandButton;
+@property (weak, nonatomic) IBOutlet UIImageView *silhoutteImageView;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
+
+@property (nonatomic) Character *character;
 
 @end
 
@@ -31,10 +35,32 @@
     
     self.view.backgroundColor = [UIColor backgroundColor];
     
+    [self setupSilhoutteGender];
     [self setupEquipmentButtons];
 }
 
 #pragma mark - LCKCharacterViewController
+
+- (instancetype)initWithCharacter:(Character *)character {
+    self = [super init];
+    
+    if (self) {
+        _character = character;
+    }
+    
+    return self;
+}
+
+#pragma mark - Silhoutte
+
+- (void)setupSilhoutteGender {
+    if (self.character.characterGender == CharacterGenderMale) {
+        self.silhoutteImageView.image = [UIImage imageNamed:@"SilhoutteMale"];
+    }
+    else {
+        self.silhoutteImageView.image = [UIImage imageNamed:@"SilhoutteFemale"];
+    }
+}
 
 #pragma mark - Equipment Buttons
 

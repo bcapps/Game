@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+#import "Character.h"
 
 @interface LCKCharacterViewController : UIViewController
+
+- (instancetype)initWithCharacter:(Character *)character;
 
 @end
