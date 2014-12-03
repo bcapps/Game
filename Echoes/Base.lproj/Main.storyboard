@@ -78,7 +78,6 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet">
                                 <rect key="frame" x="350" y="50" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MzF-zN-CcS"/>
                                     <constraint firstAttribute="width" constant="50" id="hYS-2f-oBk"/>
@@ -86,10 +85,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="helmetButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="pR5-au-ZFV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest">
                                 <rect key="frame" x="275" y="120" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8dG-tT-J27"/>
                                     <constraint firstAttribute="width" constant="50" id="ilS-DA-IIs"/>
@@ -97,10 +98,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chestButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="AIe-SU-71h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand">
                                 <rect key="frame" x="170" y="220" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Im8-au-mwd"/>
                                     <constraint firstAttribute="width" constant="50" id="LOx-5C-E1F"/>
@@ -108,10 +111,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightHandbuttonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Y1I-qj-uBd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1">
                                 <rect key="frame" x="170" y="50" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HT7-MD-qpk"/>
                                     <constraint firstAttribute="width" constant="50" id="z0h-2b-vvU"/>
@@ -119,10 +124,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="firstAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="OwU-WL-GFA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2">
                                 <rect key="frame" x="170" y="113" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="F5F-5a-KBu"/>
                                     <constraint firstAttribute="height" constant="50" id="FS9-pD-2YI"/>
@@ -130,10 +137,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="secondAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="PYS-dJ-aQb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots">
                                 <rect key="frame" x="275" y="370" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="02s-7Q-cF6"/>
                                     <constraint firstAttribute="height" constant="50" id="5uO-YR-jMP"/>
@@ -141,10 +150,12 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="bootsButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dzt-c5-d5b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand">
                                 <rect key="frame" x="380" y="220" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="PA5-OQ-vRO"/>
                                     <constraint firstAttribute="height" constant="50" id="bO1-mi-Fil"/>
@@ -152,12 +163,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-bj-2b8">
-                                <rect key="frame" x="390" y="230" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="leftHandButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="ffF-dm-ZCB"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
                                 <rect key="frame" x="0.0" y="440" width="600" height="1"/>
@@ -196,6 +204,22 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bootsButton" destination="Tfq-jD-en0" id="mKN-A5-Jk7"/>
+                        <outlet property="chestButton" destination="7D5-tH-Ejn" id="7fD-W7-cQw"/>
+                        <outlet property="firstAccessoryButton" destination="ar4-85-oMt" id="5bg-CA-udU"/>
+                        <outlet property="helmetButton" destination="IHP-mI-kKS" id="tWD-K3-lXy"/>
+                        <outlet property="leftHandButton" destination="675-xe-31g" id="WwL-B3-Rir"/>
+                        <outlet property="rightHandButton" destination="yya-Wz-xsE" id="eB8-it-Dxw"/>
+                        <outlet property="secondAccessoryButton" destination="z5l-dZ-bU0" id="wYI-1E-OPq"/>
+                        <outletCollection property="equipmentButtons" destination="IHP-mI-kKS" id="gjf-bR-axH"/>
+                        <outletCollection property="equipmentButtons" destination="7D5-tH-Ejn" id="ifd-YF-BXr"/>
+                        <outletCollection property="equipmentButtons" destination="yya-Wz-xsE" id="pDP-hl-UCA"/>
+                        <outletCollection property="equipmentButtons" destination="ar4-85-oMt" id="xrf-o1-JY0"/>
+                        <outletCollection property="equipmentButtons" destination="z5l-dZ-bU0" id="EkO-oi-KwD"/>
+                        <outletCollection property="equipmentButtons" destination="Tfq-jD-en0" id="Zg9-5Z-UT3"/>
+                        <outletCollection property="equipmentButtons" destination="675-xe-31g" id="gYV-XC-uuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvk-BM-J5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
