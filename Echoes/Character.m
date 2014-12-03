@@ -15,5 +15,14 @@
 @dynamic name;
 @dynamic level;
 @dynamic characterClass;
+@dynamic gender;
+
+- (CharacterGender)characterGender {
+    if ([self.gender isEqualToNumber:@(0)]) {
+        return CharacterGenderMale;
+    }
+    
+    return CharacterGenderFemale;
+}
 
 @end
