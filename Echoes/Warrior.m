@@ -23,7 +23,7 @@
 }
 
 - (NSUInteger)startingHealthModification {
-    return 1;
+    return 2;
 }
 
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context {
