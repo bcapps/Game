@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="width" constant="140" id="g8d-a6-c1M"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet" customClass="LCKItemButton">
                                 <rect key="frame" x="350" y="50" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MzF-zN-CcS"/>
@@ -89,7 +89,7 @@
                                     <action selector="helmetButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="pR5-au-ZFV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
                                 <rect key="frame" x="275" y="120" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8dG-tT-J27"/>
@@ -102,7 +102,7 @@
                                     <action selector="chestButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="AIe-SU-71h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="220" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Im8-au-mwd"/>
@@ -115,7 +115,7 @@
                                     <action selector="rightHandbuttonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Y1I-qj-uBd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="50" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HT7-MD-qpk"/>
@@ -128,7 +128,7 @@
                                     <action selector="firstAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="OwU-WL-GFA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="113" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="F5F-5a-KBu"/>
@@ -141,7 +141,7 @@
                                     <action selector="secondAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="PYS-dJ-aQb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
                                 <rect key="frame" x="275" y="370" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="02s-7Q-cF6"/>
@@ -154,7 +154,7 @@
                                     <action selector="bootsButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dzt-c5-d5b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
                                 <rect key="frame" x="380" y="220" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="PA5-OQ-vRO"/>

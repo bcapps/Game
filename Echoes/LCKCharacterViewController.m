@@ -35,7 +35,6 @@
     self.title = self.character.name;
     
     [self setupSilhouetteGender];
-    [self setupEquipmentButtons];
 }
 
 #pragma mark - LCKCharacterViewController
@@ -52,17 +51,6 @@
 }
 
 #pragma mark - Equipment Buttons
-
-- (void)setupEquipmentButtons {
-    for (UIButton *equipmentButton in self.equipmentButtons) {
-        equipmentButton.layer.masksToBounds = NO;
-        equipmentButton.layer.cornerRadius = 8.0;
-        equipmentButton.layer.borderColor = [UIColor darkGrayColor].CGColor;
-        equipmentButton.layer.borderWidth = 1.0;
-        
-        equipmentButton.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.5];
-    }
-}
 
 - (IBAction)leftHandButtonTapped:(UIButton *)sender {
     
