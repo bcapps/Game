@@ -20,4 +20,11 @@
     return self;
 }
 
+- (NSManagedObjectContext *)newMainQueueContext {
+    NSManagedObjectContext *mainQueueContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    mainQueueContext.parentContext = self.mainQueueContext;
+    
+    return mainQueueContext;
+}
+
 @end

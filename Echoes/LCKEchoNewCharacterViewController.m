@@ -59,7 +59,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 }
 
 - (NSArray *)classes {
-    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newWorkerContext];
+    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
     
     Knight *knight = [[Knight alloc] initWithContext:context];
     Thief *thief = [[Thief alloc] initWithContext:context];

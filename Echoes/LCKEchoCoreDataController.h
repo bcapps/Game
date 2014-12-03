@@ -10,4 +10,6 @@
 
 @interface LCKEchoCoreDataController : LCKCoreDataController
 
+- (NSManagedObjectContext *)newMainQueueContext;
+
 @end
