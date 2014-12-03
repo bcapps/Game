@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F4A166BEF605095FD1E04E2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A236C0721C9FB47F7F05917 /* libPods.a */; };
 		9C1C91C344AE2402C778905A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A236C0721C9FB47F7F05917 /* libPods.a */; };
+		F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -36,20 +37,20 @@
 		F2206B511A2D4290006E44B0 /* Cleric.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B4F1A2D4290006E44B0 /* Cleric.m */; };
 		F2206B541A2D4290006E44B0 /* Thief.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B531A2D4290006E44B0 /* Thief.m */; };
 		F2206B551A2D4290006E44B0 /* Thief.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B531A2D4290006E44B0 /* Thief.m */; };
-		F2206B641A2D43FE006E44B0 /* BanditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */; };
-		F2206B651A2D43FE006E44B0 /* BanditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */; };
-		F2206B661A2D43FE006E44B0 /* ClericIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */; };
-		F2206B671A2D43FE006E44B0 /* ClericIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */; };
-		F2206B681A2D43FE006E44B0 /* HunterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */; };
-		F2206B691A2D43FE006E44B0 /* HunterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */; };
-		F2206B6A1A2D43FE006E44B0 /* KnightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon.png */; };
-		F2206B6B1A2D43FE006E44B0 /* KnightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon.png */; };
-		F2206B6C1A2D43FE006E44B0 /* SorcererIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon.png */; };
-		F2206B6D1A2D43FE006E44B0 /* SorcererIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon.png */; };
-		F2206B6E1A2D43FE006E44B0 /* ThiefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon.png */; };
-		F2206B6F1A2D43FE006E44B0 /* ThiefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon.png */; };
-		F2206B701A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
-		F2206B711A2D43FE006E44B0 /* WarriorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon.png */; };
+		F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */; };
+		F2206B651A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */; };
+		F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon@2x.png */; };
+		F2206B671A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5E1A2D43FE006E44B0 /* ClericIcon@2x.png */; };
+		F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon@2x.png */; };
+		F2206B691A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B5F1A2D43FE006E44B0 /* HunterIcon@2x.png */; };
+		F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon@2x.png */; };
+		F2206B6B1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B601A2D43FE006E44B0 /* KnightIcon@2x.png */; };
+		F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon@2x.png */; };
+		F2206B6D1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B611A2D43FE006E44B0 /* SorcererIcon@2x.png */; };
+		F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon@2x.png */; };
+		F2206B6F1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B621A2D43FE006E44B0 /* ThiefIcon@2x.png */; };
+		F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon@2x.png */; };
+		F2206B711A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2206B631A2D43FE006E44B0 /* WarriorIcon@2x.png */; };
 		F2206B761A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
 		F2206B771A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
 		F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
@@ -74,6 +75,7 @@
 		023C27F956B686D5089A3418 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		23B12920D7E84FE6F534C0E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9A236C0721C9FB47F7F05917 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SilhoutteMale@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,13 +112,13 @@
 		F2206B4F1A2D4290006E44B0 /* Cleric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cleric.m; sourceTree = "<group>"; };
 		F2206B521A2D4290006E44B0 /* Thief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thief.h; sourceTree = "<group>"; };
 		F2206B531A2D4290006E44B0 /* Thief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thief.m; sourceTree = "<group>"; };
-		F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BanditIcon.png; sourceTree = "<group>"; };
-		F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClericIcon.png; sourceTree = "<group>"; };
-		F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HunterIcon.png; sourceTree = "<group>"; };
-		F2206B601A2D43FE006E44B0 /* KnightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnightIcon.png; sourceTree = "<group>"; };
-		F2206B611A2D43FE006E44B0 /* SorcererIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SorcererIcon.png; sourceTree = "<group>"; };
-		F2206B621A2D43FE006E44B0 /* ThiefIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThiefIcon.png; sourceTree = "<group>"; };
-		F2206B631A2D43FE006E44B0 /* WarriorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WarriorIcon.png; sourceTree = "<group>"; };
+		F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BanditIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B5E1A2D43FE006E44B0 /* ClericIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClericIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B5F1A2D43FE006E44B0 /* HunterIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HunterIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B601A2D43FE006E44B0 /* KnightIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KnightIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B611A2D43FE006E44B0 /* SorcererIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SorcererIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B621A2D43FE006E44B0 /* ThiefIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThiefIcon@2x.png"; sourceTree = "<group>"; };
+		F2206B631A2D43FE006E44B0 /* WarriorIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WarriorIcon@2x.png"; sourceTree = "<group>"; };
 		F2206B721A2D445A006E44B0 /* CharacterClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterClasses.h; sourceTree = "<group>"; };
 		F2206B741A2D7E7E006E44B0 /* UIFont+FontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontStyle.h"; sourceTree = "<group>"; };
 		F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontStyle.m"; sourceTree = "<group>"; };
@@ -291,13 +293,14 @@
 		F2206B561A2D431A006E44B0 /* Class Art */ = {
 			isa = PBXGroup;
 			children = (
-				F2206B5D1A2D43FE006E44B0 /* BanditIcon.png */,
-				F2206B5E1A2D43FE006E44B0 /* ClericIcon.png */,
-				F2206B5F1A2D43FE006E44B0 /* HunterIcon.png */,
-				F2206B601A2D43FE006E44B0 /* KnightIcon.png */,
-				F2206B611A2D43FE006E44B0 /* SorcererIcon.png */,
-				F2206B621A2D43FE006E44B0 /* ThiefIcon.png */,
-				F2206B631A2D43FE006E44B0 /* WarriorIcon.png */,
+				F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */,
+				F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */,
+				F2206B5E1A2D43FE006E44B0 /* ClericIcon@2x.png */,
+				F2206B5F1A2D43FE006E44B0 /* HunterIcon@2x.png */,
+				F2206B601A2D43FE006E44B0 /* KnightIcon@2x.png */,
+				F2206B611A2D43FE006E44B0 /* SorcererIcon@2x.png */,
+				F2206B621A2D43FE006E44B0 /* ThiefIcon@2x.png */,
+				F2206B631A2D43FE006E44B0 /* WarriorIcon@2x.png */,
 			);
 			name = "Class Art";
 			sourceTree = "<group>";
@@ -397,15 +400,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2206B6A1A2D43FE006E44B0 /* KnightIcon.png in Resources */,
-				F2206B701A2D43FE006E44B0 /* WarriorIcon.png in Resources */,
-				F2206B6C1A2D43FE006E44B0 /* SorcererIcon.png in Resources */,
-				F2206B6E1A2D43FE006E44B0 /* ThiefIcon.png in Resources */,
-				F2206B641A2D43FE006E44B0 /* BanditIcon.png in Resources */,
+				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
+				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
+				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
+				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
+				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
+				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
-				F2206B661A2D43FE006E44B0 /* ClericIcon.png in Resources */,
+				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
-				F2206B681A2D43FE006E44B0 /* HunterIcon.png in Resources */,
+				F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,
 				F2206B021A2D2C0D006E44B0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,13 +418,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2206B6D1A2D43FE006E44B0 /* SorcererIcon.png in Resources */,
-				F2206B711A2D43FE006E44B0 /* WarriorIcon.png in Resources */,
-				F2206B671A2D43FE006E44B0 /* ClericIcon.png in Resources */,
-				F2206B691A2D43FE006E44B0 /* HunterIcon.png in Resources */,
-				F2206B651A2D43FE006E44B0 /* BanditIcon.png in Resources */,
-				F2206B6B1A2D43FE006E44B0 /* KnightIcon.png in Resources */,
-				F2206B6F1A2D43FE006E44B0 /* ThiefIcon.png in Resources */,
+				F2206B6D1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
+				F2206B711A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
+				F2206B671A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
+				F2206B691A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,
+				F2206B651A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
+				F2206B6B1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
+				F2206B6F1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

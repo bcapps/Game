@@ -96,13 +96,6 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     return value;
 }
 
-//- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-//    CharacterClass *characterClass = [self.classes safeObjectAtIndex:index];
-//
-//    self.classNameLabel.text = characterClass.className;
-//    self.classDescriptionLabel.text = characterClass.classDescription;
-//}
-
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
     CharacterClass *characterClass = [self.classes safeObjectAtIndex:carousel.currentItemIndex];
     
