@@ -1,5 +1,5 @@
 //
-//  CharacterClass.m
+//  CharacterStats.m
 //  Echoes
 //
 //  Created by Andrew Harrison on 12/1/14.

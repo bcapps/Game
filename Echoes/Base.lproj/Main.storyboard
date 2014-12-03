@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Characters-->
+        <!--Character List-->
         <scene sceneID="XHV-fI-Uoa">
             <objects>
                 <tableViewController id="g36-ta-CKQ" customClass="LCKEchoCharactersTableViewController" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="g36-ta-CKQ" id="wAT-T4-3Eb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Characters" id="FCJ-X3-2He">
+                    <navigationItem key="navigationItem" title="Character List" id="FCJ-X3-2He">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mJZ-n3-gv9">
                             <connections>
                                 <segue destination="Dho-i4-GDw" kind="presentation" id="pSD-EI-hXB"/>

@@ -1,5 +1,5 @@
 //
-//  CharacterClass.h
+//  CharacterStats.h
 //  Echoes
 //
 //  Created by Andrew Harrison on 12/1/14.
