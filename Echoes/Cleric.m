@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Cleric *cleric = [[self alloc] initWithContext:context];
     
-    cleric.vitality = @(11);
-    cleric.strength = @(12);
-    cleric.dexterity = @(8);
-    cleric.intelligence = @(8);
-    cleric.faith = @(14);
+    cleric.vitality = @(1);
+    cleric.strength = @(0);
+    cleric.dexterity = @(-1);
+    cleric.intelligence = @(-1);
+    cleric.faith = @(4);
     
     return cleric;
 }

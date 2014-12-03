@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Sorcerer *sorcerer = [[self alloc] initWithContext:context];
     
-    sorcerer.vitality = @(8);
-    sorcerer.strength = @(9);
-    sorcerer.dexterity = @(11);
-    sorcerer.intelligence = @(15);
-    sorcerer.faith = @(8);
+    sorcerer.vitality = @(-1);
+    sorcerer.strength = @(0);
+    sorcerer.dexterity = @(1);
+    sorcerer.intelligence = @(4);
+    sorcerer.faith = @(-1);
     
     return sorcerer;
 }

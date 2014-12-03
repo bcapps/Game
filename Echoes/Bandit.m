@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Bandit *bandit = [[self alloc] initWithContext:context];
     
-    bandit.vitality = @(12);
-    bandit.strength = @(14);
-    bandit.dexterity = @(9);
-    bandit.intelligence = @(8);
-    bandit.faith = @(10);
+    bandit.vitality = @(1);
+    bandit.strength = @(2);
+    bandit.dexterity = @(2);
+    bandit.intelligence = @(-1);
+    bandit.faith = @(0);
     
     return bandit;
 }

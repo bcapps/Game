@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Warrior *warrior = [[self alloc] initWithContext:context];
     
-    warrior.vitality = @(11);
-    warrior.strength = @(13);
-    warrior.dexterity = @(13);
-    warrior.intelligence = @(9);
-    warrior.faith = @(9);
+    warrior.vitality = @(1);
+    warrior.strength = @(3);
+    warrior.dexterity = @(1);
+    warrior.intelligence = @(0);
+    warrior.faith = @(0);
     
     return warrior;
 }

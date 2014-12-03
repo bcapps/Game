@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Knight *knight = [[self alloc] initWithContext:context];
     
-    knight.vitality = @(14);
-    knight.strength = @(11);
-    knight.dexterity = @(11);
-    knight.intelligence = @(9);
-    knight.faith = @(11);
+    knight.vitality = @(3);
+    knight.strength = @(1);
+    knight.dexterity = @(0);
+    knight.intelligence = @(0);
+    knight.faith = @(1);
     
     return knight;
 }

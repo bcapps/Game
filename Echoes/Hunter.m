@@ -25,11 +25,11 @@
 + (instancetype)newCharacterClassInContext:(NSManagedObjectContext *)context {
     Hunter *hunter = [[self alloc] initWithContext:context];
     
-    hunter.vitality = @(11);
-    hunter.strength = @(12);
-    hunter.dexterity = @(14);
-    hunter.intelligence = @(9);
-    hunter.faith = @(9);
+    hunter.vitality = @(1);
+    hunter.strength = @(2);
+    hunter.dexterity = @(3);
+    hunter.intelligence = @(0);
+    hunter.faith = @(-1);
     
     return hunter;
 }
