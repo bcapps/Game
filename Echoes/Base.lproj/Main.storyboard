@@ -271,6 +271,13 @@
                             <constraint firstItem="IHP-mI-kKS" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="-20" id="zN9-Iu-kUw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dtT-lT-OF2">
+                        <barButtonItem key="rightBarButtonItem" image="inventoryIcon.png" id="ieS-zi-AAO" userLabel="Inventory Button">
+                            <connections>
+                                <segue destination="nnE-vh-u3f" kind="show" identifier="showInventoryViewController" id="i9g-Dg-eeT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bootsButton" destination="Tfq-jD-en0" id="mKN-A5-Jk7"/>
                         <outlet property="chestButton" destination="7D5-tH-Ejn" id="7fD-W7-cQw"/>
@@ -402,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uF-GI-kgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="344"/>
+            <point key="canvasLocation" x="390" y="1054"/>
         </scene>
         <!--New Character View Controller-->
         <scene sceneID="KS3-HA-ila">
@@ -416,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
                                 <rect key="frame" x="36" y="84" width="529" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GXM-Ka-zYk"/>
@@ -425,15 +432,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="128" width="600" height="432"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="pns-PM-wSE"/>
                                         </constraints>
@@ -454,7 +461,7 @@
                                     <outlet property="delegate" destination="qSY-Ot-GtE" id="uYe-Hi-mxY"/>
                                 </connections>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="En8-ha-hzX">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="En8-ha-hzX">
                                 <rect key="frame" x="35" y="133" width="529" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
@@ -501,6 +508,32 @@
             </objects>
             <point key="canvasLocation" x="1073" y="-427"/>
         </scene>
+        <!--Inventory-->
+        <scene sceneID="apN-AD-IRN">
+            <objects>
+                <tableViewController title="Inventory" id="nnE-vh-u3f" customClass="LCKInventoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jhP-Ob-fBS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EOA-VR-5xJ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EOA-VR-5xJ" id="1lM-Ab-B1H">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nnE-vh-u3f" id="QMA-43-UBk"/>
+                            <outlet property="delegate" destination="nnE-vh-u3f" id="CAE-Dx-WVU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7B-Q6-J2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="344"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yuY-MP-lYL">
             <objects>
@@ -523,6 +556,7 @@
         <image name="SilhoutteFemale.png" width="161" height="331"/>
         <image name="UpArrow.png" width="21" height="12"/>
         <image name="heartIcon.png" width="150" height="150"/>
+        <image name="inventoryIcon.png" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Os-uu-hNJ"/>

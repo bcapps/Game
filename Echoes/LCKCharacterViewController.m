@@ -11,6 +11,7 @@
 #import "CharacterStats.h"
 #import "LCKEchoCoreDataController.h"
 
+#import "LCKInventoryTableViewController.h"
 #import "LCKItemViewController.h"
 #import "LCKItemProvider.h"
 #import "LCKItemButton.h"
@@ -80,6 +81,15 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     
     LCKItem *item = [[LCKItemProvider allItems] firstObject];
     self.leftHandButton.itemImage = [UIImage imageNamed:item.imageName];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showInventoryViewController"]) {
+        LCKInventoryTableViewController *inventoryViewController = segue.destinationViewController;
+        
+        inventoryViewController.itemNames = self.character.items;
+        inventoryViewController.equippedItemNames = self.character.equippedItems;
+    }
 }
 
 #pragma mark - LCKCharacterViewController
