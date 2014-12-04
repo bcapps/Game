@@ -26,6 +26,10 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
     LCKStatTypeFaith
 };
 
+const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
+const CGFloat LCKItemViewControllerHorizontalMargin = 50.0;
+const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
+
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *helmetButton;
@@ -41,6 +45,9 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 @property (weak, nonatomic) IBOutlet UILabel *healthLabel;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
+
+@property (nonatomic) LCKItemViewController *currentlyPresentedItemViewController;
+@property (nonatomic) UIView *overlayView;
 
 @end
 
@@ -77,6 +84,23 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
     self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
 }
 
+- (UIView *)overlayView {
+    if (!_overlayView) {
+        _overlayView = [[UIView alloc] initWithFrame:self.view.frame];
+        _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        
+        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissCurrentlyPresentedViewController)];
+        
+        [_overlayView addGestureRecognizer:dismissGesture];
+    }
+    
+    return _overlayView;
+}
+
+- (CGRect)itemControllerFrame {
+    return CGRectMake(LCKItemViewControllerHorizontalMargin, LCKItemViewControllerVerticalMargin, CGRectGetWidth(self.view.frame) - LCKItemViewControllerHorizontalMargin * 2, CGRectGetHeight(self.view.frame) - LCKItemViewControllerVerticalMargin * 2);
+}
+
 #pragma mark - Silhoutte
 
 - (void)setupSilhouetteGender {
@@ -92,17 +116,44 @@ typedef NS_ENUM(NSUInteger, LCKStatType) {
 
 - (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
     LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item];
+    itemViewController.view.clipsToBounds = YES;
     
     return itemViewController;
 }
 
-- (IBAction)leftHandButtonTapped:(UIButton *)sender {
-    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:[[LCKItemProvider allItems] firstObject]];
-    itemViewController.view.frame = CGRectMake(50, 100, CGRectGetWidth(self.view.frame) - 100.0, CGRectGetHeight(self.view.frame) - 200.0);
-
+- (void)presentItemViewControllerForItem:(LCKItem *)item fromButton:(UIButton *)button {
+    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
+    itemViewController.presentationFrame = button.frame;
+    itemViewController.view.frame = [self itemControllerFrame];
+    itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+    
+    self.overlayView.alpha = 0.0;
+    [self.view addSubview:self.overlayView];
     [self addChildViewController:itemViewController];
     [self.view addSubview:itemViewController.view];
     [itemViewController didMoveToParentViewController:self];
+    
+    [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+        itemViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        self.overlayView.alpha = 1.0;
+    }];
+    
+    self.currentlyPresentedItemViewController = itemViewController;
+}
+
+- (void)dismissCurrentlyPresentedViewController {
+    [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+        self.overlayView.alpha = 0.0;
+        self.currentlyPresentedItemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+    } completion:^(BOOL finished) {
+        [self.currentlyPresentedItemViewController willMoveToParentViewController:nil];
+        [self.currentlyPresentedItemViewController.view removeFromSuperview];
+        [self.currentlyPresentedItemViewController removeFromParentViewController];
+    }];
+}
+
+- (IBAction)leftHandButtonTapped:(UIButton *)sender {
+    [self presentItemViewControllerForItem:[[LCKItemProvider allItems] firstObject] fromButton:self.leftHandButton];
 }
 
 - (IBAction)rightHandbuttonTapped:(UIButton *)sender {

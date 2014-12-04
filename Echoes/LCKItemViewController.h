@@ -12,6 +12,8 @@
 
 @interface LCKItemViewController : UIViewController
 
+@property (nonatomic) CGRect presentationFrame;
+
 - (instancetype)initWithItem:(LCKItem *)item;
 
 @end

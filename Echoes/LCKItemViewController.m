@@ -37,7 +37,7 @@
     
     self.itemImageView.image = [UIImage imageNamed:self.item.imageName];
     
-    self.itemActionLabel.text = self.item.actionText;
+    self.itemActionLabel.text = [NSString stringWithFormat:@"Action: %@", self.item.actionText];
     self.itemActionLabel.textColor = [UIColor titleTextColor];
     self.itemActionLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     
@@ -49,9 +49,16 @@
     self.itemFlavorTextLabel.textColor = [UIColor descriptiveTextColor];
     self.itemFlavorTextLabel.font = [UIFont italicDescriptiveTextFontOfSize:12.0];
 
+    NSString *requirementsText = [self.item.attributeRequirements componentsJoinedByString:@", "];
+    self.itemRequirementsLabel.text = requirementsText;
+    self.itemRequirementsLabel.textColor = [UIColor titleTextColor];
+    self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    
     self.view.backgroundColor = [UIColor backgroundColor];
     self.view.layer.masksToBounds = NO;
     self.view.layer.cornerRadius = 8.0;
+    self.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.view.layer.borderWidth = 1.0;
     // Do any additional setup after loading the view.
 }
 
