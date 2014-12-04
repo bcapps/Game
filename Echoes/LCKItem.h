@@ -15,7 +15,8 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotFirstAccessory,
     LCKItemSlotSecondAccessory,
     LCKItemSlotLeftHand,
-    LCKItemSlotRightHand
+    LCKItemSlotRightHand,
+    LCKItemSlotTwoHand
 };
 
 @interface LCKItem : NSObject

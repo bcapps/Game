@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.view.backgroundColor = [UIColor backgroundColor];
+    self.tableView.backgroundColor = [UIColor backgroundColor];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];

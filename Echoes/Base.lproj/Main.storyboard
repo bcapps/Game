@@ -529,10 +529,66 @@
                             <outlet property="delegate" destination="nnE-vh-u3f" id="CAE-Dx-WVU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Inventory" id="isz-te-9lf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XRk-nq-RcT">
+                            <connections>
+                                <segue destination="KNT-Da-eRx" kind="presentation" id="ejj-Mp-6uD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7B-Q6-J2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1098" y="344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YsS-0L-UPj">
+            <objects>
+                <navigationController id="KNT-Da-eRx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="En2-Sf-Sg0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nL3-iX-OVW" kind="relationship" relationship="rootViewController" id="nsC-qe-lkn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkl-aW-X5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="344"/>
+        </scene>
+        <!--All Items-->
+        <scene sceneID="zxY-hB-zop">
+            <objects>
+                <tableViewController title="All Items" id="nL3-iX-OVW" customClass="LCKAllItemsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VM4-au-STZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rex-9M-dlB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rex-9M-dlB" id="Jal-6w-iu1">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nL3-iX-OVW" id="30G-cI-wip"/>
+                            <outlet property="delegate" destination="nL3-iX-OVW" id="bAE-SM-78Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Items" id="G7w-h9-v3d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9ZS-LA-PTa">
+                            <connections>
+                                <segue destination="nnE-vh-u3f" kind="custom" customClass="LCKDismissSegue" id="sZz-S2-f6V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-y8-saJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2440" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yuY-MP-lYL">
@@ -560,5 +616,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Os-uu-hNJ"/>
+        <segue reference="sZz-S2-f6V"/>
     </inferredMetricsTieBreakers>
 </document>

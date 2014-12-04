@@ -18,6 +18,7 @@ NSString * const LCKItemItemSlotsKey = @"itemSlots";
 
 NSString * const LCKItemLeftHandKey = @"lefthand";
 NSString * const LCKItemRightHandKey = @"righthand";
+NSString * const LCKItemTwoHandKey = @"twohand";
 NSString * const LCKItemHelmetKey = @"helmet";
 NSString * const LCKItemChestKey = @"chest";
 NSString * const LCKItemBootsKey = @"boots";
@@ -71,6 +72,9 @@ NSString * const LCKItemSecondAccessory = @"secondAccessory";
     }
     else if ([slotString isEqualToString:LCKItemSecondAccessory]) {
         return LCKItemSlotSecondAccessory;
+    }
+    else if ([slotString isEqualToString:LCKItemTwoHandKey]) {
+        return LCKItemSlotTwoHand;
     }
     
     return 0;
