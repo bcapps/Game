@@ -6,8 +6,18 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+@class LCKItem;
+
+@protocol LCKAllItemsDelegate <NSObject>
+
+- (void)didSelectItem:(LCKItem *)item;
+
+@end
 
 @interface LCKAllItemsTableViewController : UITableViewController
+
+@property (nonatomic, weak) IBOutlet id <LCKAllItemsDelegate> itemDelegate;
 
 @end

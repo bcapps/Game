@@ -7,6 +7,8 @@
 //
 
 #import "LCKInventoryTableViewController.h"
+#import "LCKAllItemsTableViewController.h"
+#import "LCKEchoCoreDataController.h"
 #import "LCKItem.h"
 
 #import "UIFont+FontStyle.h"
@@ -14,7 +16,7 @@
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
-@interface LCKInventoryTableViewController ()
+@interface LCKInventoryTableViewController () <LCKAllItemsDelegate>
 
 @end
 
@@ -27,6 +29,29 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showAllItemsViewController"]) {
+        UINavigationController *navController = segue.destinationViewController;
+        LCKAllItemsTableViewController *allItemsViewController = [navController.viewControllers firstObject];
+        allItemsViewController.itemDelegate = self;
+    }
+}
+
+#pragma mark - LCKAllItemsDelegate
+
+- (void)didSelectItem:(LCKItem *)item {
+    if (!self.character.items) {
+        self.character.items = @[item.name];
+    }
+    else {
+        self.character.items = [self.character.items arrayByAddingObject:item.name];
+    }
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -44,6 +69,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.textLabel.text = itemName;
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
+    cell.textLabel.textColor = [UIColor titleTextColor];
     
     if ([self.character.equippedItems containsObject:itemName]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -58,11 +84,14 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSString *itemName = [self.character.items safeObjectAtIndex:indexPath.row];
-        
         NSMutableArray *itemNames = [self.character.items mutableCopy];
-        [itemNames removeObject:itemName];
+        [itemNames removeObjectAtIndex:indexPath.row];
         self.character.items = [itemNames copy];
+        
+        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:indexPath.section];
+        [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

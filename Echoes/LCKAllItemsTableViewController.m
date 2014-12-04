@@ -86,6 +86,13 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     return @[LCKAllItemsTypeNameOneHanded, LCKAllItemsTypeNameTwoHanded, LCKAllItemsTypeNameAccessory,LCKAllItemsTypeNameChest, LCKAllItemsTypeNameHelmet, LCKAllItemsTypeNameBoots];
 }
 
+- (LCKItem *)itemForIndexPath:(NSIndexPath *)indexPath {
+    NSString *keyName = [self.itemTypeNames safeObjectAtIndex:indexPath.section];
+    NSArray *items = [self.allItems objectForKey:keyName];
+    
+    return [items safeObjectAtIndex:indexPath.row];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -108,16 +115,25 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     cell.backgroundColor = [UIColor backgroundColor];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
-    NSString *keyName = [self.itemTypeNames safeObjectAtIndex:indexPath.section];
-    NSArray *items = [self.allItems objectForKey:keyName];
-
-    LCKItem *item = [items safeObjectAtIndex:indexPath.row];
+    LCKItem *item = [self itemForIndexPath:indexPath];
     
     cell.textLabel.text = item.name;
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     cell.textLabel.textColor = [UIColor titleTextColor];
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    LCKItem *item = [self itemForIndexPath:indexPath];
+    
+    [self.itemDelegate didSelectItem:item];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

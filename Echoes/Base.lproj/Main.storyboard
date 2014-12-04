@@ -532,7 +532,7 @@
                     <navigationItem key="navigationItem" title="Inventory" id="isz-te-9lf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XRk-nq-RcT">
                             <connections>
-                                <segue destination="KNT-Da-eRx" kind="presentation" id="ejj-Mp-6uD"/>
+                                <segue destination="KNT-Da-eRx" kind="presentation" identifier="showAllItemsViewController" id="ejj-Mp-6uD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
