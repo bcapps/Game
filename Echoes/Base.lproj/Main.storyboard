@@ -363,23 +363,16 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="4qd-La-zrm" secondAttribute="trailing" constant="10" id="004-nW-iJd"/>
                             <constraint firstItem="oTE-yr-HDC" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="1LD-WM-xQw"/>
-                            <constraint firstAttribute="centerX" secondItem="3er-uf-Vpe" secondAttribute="centerX" id="4Ru-2m-5zI"/>
                             <constraint firstItem="JPB-pK-g1L" firstAttribute="top" secondItem="JAY-ii-Xif" secondAttribute="bottom" constant="5" id="8nM-7u-nkJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3er-uf-Vpe" secondAttribute="trailing" constant="10" id="9oM-0B-MpJ"/>
                             <constraint firstItem="fFy-TS-wEj" firstAttribute="top" secondItem="b4G-c9-AFd" secondAttribute="bottom" constant="10" id="Cgy-if-Xo1"/>
-                            <constraint firstAttribute="centerX" secondItem="4qd-La-zrm" secondAttribute="centerX" id="IbM-Nh-CEx"/>
                             <constraint firstItem="lEb-UE-1FJ" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="JuB-W4-9mG"/>
                             <constraint firstItem="oTE-yr-HDC" firstAttribute="top" secondItem="3er-uf-Vpe" secondAttribute="bottom" constant="10" id="KZg-bW-Y8O"/>
-                            <constraint firstItem="4qd-La-zrm" firstAttribute="width" secondItem="JFu-mu-DH0" secondAttribute="width" id="LK1-to-MDr"/>
-                            <constraint firstItem="lEb-UE-1FJ" firstAttribute="width" secondItem="JFu-mu-DH0" secondAttribute="width" id="M3l-Jq-hmZ"/>
                             <constraint firstAttribute="centerX" secondItem="fFy-TS-wEj" secondAttribute="centerX" id="N8j-Up-ahg"/>
                             <constraint firstItem="JPB-pK-g1L" firstAttribute="width" secondItem="JFu-mu-DH0" secondAttribute="width" id="NNK-ig-djK"/>
-                            <constraint firstAttribute="centerX" secondItem="lEb-UE-1FJ" secondAttribute="centerX" id="OeV-qC-hGX"/>
                             <constraint firstAttribute="width" secondItem="fFy-TS-wEj" secondAttribute="width" id="QqS-es-quA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lEb-UE-1FJ" secondAttribute="trailing" constant="10" id="SHX-RR-Md3"/>
                             <constraint firstItem="lEb-UE-1FJ" firstAttribute="top" secondItem="4qd-La-zrm" secondAttribute="bottom" constant="20" id="Tdv-9F-tn2"/>
-                            <constraint firstItem="4qd-La-zrm" firstAttribute="top" secondItem="oTE-yr-HDC" secondAttribute="bottom" constant="20" id="UZO-YB-l6M"/>
-                            <constraint firstAttribute="centerX" secondItem="oTE-yr-HDC" secondAttribute="centerX" id="b2N-6m-x3Z"/>
                             <constraint firstItem="k9C-Ky-Ncj" firstAttribute="top" secondItem="lEb-UE-1FJ" secondAttribute="bottom" constant="10" id="cZJ-Of-Req"/>
                             <constraint firstItem="b4G-c9-AFd" firstAttribute="width" secondItem="JPB-pK-g1L" secondAttribute="width" id="dQ3-fy-VeI"/>
                             <constraint firstItem="4qd-La-zrm" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="db5-5R-fgK"/>
@@ -390,13 +383,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="oTE-yr-HDC" secondAttribute="trailing" constant="10" id="usn-vy-O2N"/>
                             <constraint firstItem="3er-uf-Vpe" firstAttribute="top" secondItem="fFy-TS-wEj" secondAttribute="bottom" constant="25" id="yKY-mm-Kga"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="LK1-to-MDr"/>
-                                <exclude reference="UZO-YB-l6M"/>
-                                <exclude reference="M3l-Jq-hmZ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="itemActionLabel" destination="3er-uf-Vpe" id="YCn-2T-K0A"/>
@@ -423,8 +409,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
-                                <rect key="frame" x="36" y="84" width="529" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
+                                <rect key="frame" x="36" y="40" width="529" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GXM-Ka-zYk"/>
                                 </constraints>
@@ -432,15 +418,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="128" width="600" height="432"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="84" width="600" height="476"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="pns-PM-wSE"/>
                                         </constraints>
@@ -461,8 +447,8 @@
                                     <outlet property="delegate" destination="qSY-Ot-GtE" id="uYe-Hi-mxY"/>
                                 </connections>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="En8-ha-hzX">
-                                <rect key="frame" x="35" y="133" width="529" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="En8-ha-hzX">
+                                <rect key="frame" x="35" y="89" width="529" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
