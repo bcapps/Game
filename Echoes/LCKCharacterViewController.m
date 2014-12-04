@@ -13,6 +13,7 @@
 
 #import "LCKItemViewController.h"
 #import "LCKItemProvider.h"
+#import "LCKItemButton.h"
 #import "LCKItem.h"
 
 #import "UIColor+ColorStyle.h"
@@ -32,19 +33,19 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *helmetButton;
-@property (weak, nonatomic) IBOutlet UIButton *chestButton;
-@property (weak, nonatomic) IBOutlet UIButton *rightHandButton;
-@property (weak, nonatomic) IBOutlet UIButton *firstAccessoryButton;
-@property (weak, nonatomic) IBOutlet UIButton *secondAccessoryButton;
-@property (weak, nonatomic) IBOutlet UIButton *bootsButton;
-@property (weak, nonatomic) IBOutlet UIButton *leftHandButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *rightHandButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *firstAccessoryButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *secondAccessoryButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *bootsButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *leftHandButton;
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
 @property (weak, nonatomic) IBOutlet UILabel *healthLabel;
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *equipmentButtons;
+@property (strong, nonatomic) IBOutletCollection(LCKItemButton) NSArray *equipmentButtons;
 
 @property (nonatomic) LCKItemViewController *currentlyPresentedItemViewController;
 @property (nonatomic) UIView *overlayView;
@@ -76,6 +77,9 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
+    
+    LCKItem *item = [[LCKItemProvider allItems] firstObject];
+    self.leftHandButton.itemImage = [UIImage imageNamed:item.imageName];
 }
 
 #pragma mark - LCKCharacterViewController

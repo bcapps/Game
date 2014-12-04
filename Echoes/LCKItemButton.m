@@ -30,6 +30,11 @@
 
 #pragma mark - LCKItemButton
 
+- (void)setItemImage:(UIImage *)itemImage {
+    [self setImage:itemImage forState:UIControlStateNormal];
+    self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+}
+
 - (void)commonInitialization {
     self.layer.masksToBounds = NO;
     self.layer.cornerRadius = 8.0;

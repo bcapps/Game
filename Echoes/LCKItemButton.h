@@ -10,4 +10,6 @@
 
 @interface LCKItemButton : UIButton
 
+@property (nonatomic) UIImage *itemImage;
+
 @end

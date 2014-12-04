@@ -70,14 +70,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SilhoutteFemale.png" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-ex-baV">
-                                <rect key="frame" x="230" y="94" width="140" height="370"/>
+                                <rect key="frame" x="230" y="50" width="140" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="avw-uY-2OZ"/>
                                     <constraint firstAttribute="width" constant="140" id="g8d-a6-c1M"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet" customClass="LCKItemButton">
-                                <rect key="frame" x="350" y="94" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet" customClass="LCKItemButton">
+                                <rect key="frame" x="350" y="50" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MzF-zN-CcS"/>
                                     <constraint firstAttribute="width" constant="50" id="hYS-2f-oBk"/>
@@ -89,8 +89,8 @@
                                     <action selector="helmetButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="pR5-au-ZFV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
-                                <rect key="frame" x="275" y="164" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
+                                <rect key="frame" x="275" y="120" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8dG-tT-J27"/>
                                     <constraint firstAttribute="width" constant="50" id="ilS-DA-IIs"/>
@@ -102,8 +102,8 @@
                                     <action selector="chestButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="AIe-SU-71h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
-                                <rect key="frame" x="170" y="264" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
+                                <rect key="frame" x="170" y="220" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Im8-au-mwd"/>
                                     <constraint firstAttribute="width" constant="50" id="LOx-5C-E1F"/>
@@ -115,8 +115,8 @@
                                     <action selector="rightHandbuttonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Y1I-qj-uBd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
-                                <rect key="frame" x="170" y="94" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
+                                <rect key="frame" x="170" y="50" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HT7-MD-qpk"/>
                                     <constraint firstAttribute="width" constant="50" id="z0h-2b-vvU"/>
@@ -128,8 +128,8 @@
                                     <action selector="firstAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="OwU-WL-GFA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
-                                <rect key="frame" x="170" y="157" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
+                                <rect key="frame" x="170" y="113" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="F5F-5a-KBu"/>
                                     <constraint firstAttribute="height" constant="50" id="FS9-pD-2YI"/>
@@ -141,8 +141,8 @@
                                     <action selector="secondAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="PYS-dJ-aQb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
-                                <rect key="frame" x="275" y="414" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
+                                <rect key="frame" x="275" y="370" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="02s-7Q-cF6"/>
                                     <constraint firstAttribute="height" constant="50" id="5uO-YR-jMP"/>
@@ -154,8 +154,8 @@
                                     <action selector="bootsButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dzt-c5-d5b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
-                                <rect key="frame" x="380" y="264" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
+                                <rect key="frame" x="380" y="220" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="PA5-OQ-vRO"/>
                                     <constraint firstAttribute="height" constant="50" id="bO1-mi-Fil"/>
@@ -168,14 +168,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
-                                <rect key="frame" x="0.0" y="484" width="600" height="1"/>
+                                <rect key="frame" x="0.0" y="440" width="600" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5Hn-Vs-iFi"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EmM-eE-XlB">
-                                <rect key="frame" x="0.0" y="495" width="600" height="105"/>
+                                <rect key="frame" x="0.0" y="451" width="600" height="149"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gld-cz-cN6">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -199,20 +199,20 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELO-qo-6rC" userLabel="Heart Image Icon">
-                                <rect key="frame" x="372" y="374" width="65" height="65"/>
+                                <rect key="frame" x="372" y="330" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="HJV-mp-PEl"/>
                                     <constraint firstAttribute="height" constant="65" id="soW-MV-Rbn"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-iC-meJ" userLabel="HealthLabel">
-                                <rect key="frame" x="384" y="371" width="42" height="65"/>
+                                <rect key="frame" x="384" y="327" width="42" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is3-ZS-0SK" userLabel="Increase Health Button">
-                                <rect key="frame" x="382" y="340" width="44" height="44"/>
+                                <rect key="frame" x="382" y="296" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="Lia-5M-3rK"/>
                                     <constraint firstAttribute="height" constant="44" id="mh9-pe-hUN"/>
@@ -223,7 +223,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-I5-mWV" userLabel="Decrease Health Button">
-                                <rect key="frame" x="382" y="429" width="44" height="44"/>
+                                <rect key="frame" x="382" y="385" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0kq-wt-H3j"/>
                                     <constraint firstAttribute="width" constant="44" id="Tz4-Al-U2Y"/>
