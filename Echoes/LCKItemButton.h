@@ -8,8 +8,10 @@
 
 @import UIKit;
 
+@class LCKItem;
+
 @interface LCKItemButton : UIButton
 
-@property (nonatomic) UIImage *itemImage;
+@property (nonatomic) LCKItem *item;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LCKItemButton.h"
+#import "LCKItem.h"
 
 @implementation LCKItemButton
 
@@ -29,6 +30,13 @@
 }
 
 #pragma mark - LCKItemButton
+
+- (void)setItem:(LCKItem *)item {
+    _item = item;
+    
+    [self setImage:item.image forState:UIControlStateNormal];
+    self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+}
 
 - (void)setItemImage:(UIImage *)itemImage {
     [self setImage:itemImage forState:UIControlStateNormal];

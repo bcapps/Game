@@ -124,13 +124,13 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
         }
     }
     
-    self.leftHandButton.itemImage = leftHandItem.image;
-    self.rightHandButton.itemImage = rightHandItem.image;
-    self.helmetButton.itemImage = helmetItem.image;
-    self.chestButton.itemImage = chestItem.image;
-    self.bootsButton.itemImage = bootsItem.image;
-    self.firstAccessoryButton.itemImage = firstAccessoryItem.image;
-    self.firstAccessoryButton.itemImage = secondAccessoryItem.image;
+    self.leftHandButton.item = leftHandItem;
+    self.rightHandButton.item = rightHandItem;
+    self.helmetButton.item = helmetItem;
+    self.chestButton.item = chestItem;
+    self.bootsButton.item = bootsItem;
+    self.firstAccessoryButton.item = firstAccessoryItem;
+    self.firstAccessoryButton.item = secondAccessoryItem;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -184,8 +184,12 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     return itemViewController;
 }
 
-- (void)presentItemViewControllerForItem:(LCKItem *)item fromButton:(UIButton *)button {
-    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
+- (void)presentItemViewControllerForItemButton:(LCKItemButton *)button {
+    if (!button.item) {
+        return;
+    }
+    
+    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:button.item];
     itemViewController.presentationFrame = button.frame;
     itemViewController.view.frame = [self itemControllerFrame];
     itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
@@ -215,8 +219,8 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     }];
 }
 
-- (IBAction)leftHandButtonTapped:(UIButton *)sender {
-    [self presentItemViewControllerForItem:[[LCKItemProvider allItems] firstObject] fromButton:self.leftHandButton];
+- (IBAction)leftHandButtonTapped:(LCKItemButton *)sender {
+    [self presentItemViewControllerForItemButton:sender];
 }
 
 - (IBAction)rightHandbuttonTapped:(UIButton *)sender {
