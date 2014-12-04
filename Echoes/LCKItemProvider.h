@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class LCKItem;
+
 @interface LCKItemProvider : NSObject
 
 + (NSArray *)allItems;
+
++ (LCKItem *)itemForName:(NSString *)itemName;
 
 @end

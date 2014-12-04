@@ -22,6 +22,7 @@
 		F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */; };
 		F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43431A2FD28000FEA417 /* LCKItem.m */; };
 		F21F43471A2FD7DF00FEA417 /* broadsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */; };
+		F21F434A1A301A2500FEA417 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43491A301A2500FEA417 /* Character.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -67,8 +68,6 @@
 		F2206B771A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */; };
 		F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
 		F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
-		F2206B7E1A2D8994006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B7D1A2D8994006E44B0 /* Character.m */; };
-		F2206B7F1A2D8994006E44B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B7D1A2D8994006E44B0 /* Character.m */; };
 		F2206B821A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
 		F2206B831A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
 /* End PBXBuildFile section */
@@ -106,6 +105,8 @@
 		F21F43421A2FD28000FEA417 /* LCKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItem.h; sourceTree = "<group>"; };
 		F21F43431A2FD28000FEA417 /* LCKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItem.m; sourceTree = "<group>"; };
 		F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadsword@2x.png"; sourceTree = "<group>"; };
+		F21F43481A301A2500FEA417 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F21F43491A301A2500FEA417 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,8 +155,6 @@
 		F2206B751A2D7E7E006E44B0 /* UIFont+FontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontStyle.m"; sourceTree = "<group>"; };
 		F2206B781A2D7E8D006E44B0 /* UIColor+ColorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorStyle.h"; sourceTree = "<group>"; };
 		F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorStyle.m"; sourceTree = "<group>"; };
-		F2206B7C1A2D8994006E44B0 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		F2206B7D1A2D8994006E44B0 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCharacterViewController.h; sourceTree = "<group>"; };
 		F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,8 +317,8 @@
 		F2206B231A2D3029006E44B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F2206B7C1A2D8994006E44B0 /* Character.h */,
-				F2206B7D1A2D8994006E44B0 /* Character.m */,
+				F21F43481A301A2500FEA417 /* Character.h */,
+				F21F43491A301A2500FEA417 /* Character.m */,
 				F2206B521A2D4290006E44B0 /* Thief.h */,
 				F2206B531A2D4290006E44B0 /* Thief.m */,
 				F2206B4E1A2D4290006E44B0 /* Cleric.h */,
@@ -589,9 +588,9 @@
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
+				F21F434A1A301A2500FEA417 /* Character.m in Sources */,
 				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterStats.m in Sources */,
-				F2206B7E1A2D8994006E44B0 /* Character.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +611,6 @@
 				F2206B491A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B831A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */,
 				F2206B411A2D428F006E44B0 /* Knight.m in Sources */,
-				F2206B7F1A2D8994006E44B0 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

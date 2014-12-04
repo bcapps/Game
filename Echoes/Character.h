@@ -2,7 +2,7 @@
 //  Character.h
 //  Echoes
 //
-//  Created by Andrew Harrison on 12/2/14.
+//  Created by Andrew Harrison on 12/3/14.
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
@@ -18,10 +18,12 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 
 @interface Character : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSNumber * gender;
+@property (nonatomic, retain) NSNumber * level;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * currentHealth;
+@property (nonatomic, retain) id items;
+@property (nonatomic, retain) id equippedItems;
 @property (nonatomic, retain) CharacterStats *characterStats;
 
 @property (nonatomic, readonly) NSNumber * maximumHealth;

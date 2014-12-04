@@ -36,4 +36,14 @@
     return items;
 }
 
++ (LCKItem *)itemForName:(NSString *)itemName {
+    for (LCKItem *item in [self allItems]) {
+        if ([item.name isEqualToString:itemName]) {
+            return item;
+        }
+    }
+    
+    return nil;
+}
+
 @end
