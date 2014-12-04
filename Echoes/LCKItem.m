@@ -51,6 +51,10 @@ NSString * const LCKItemSecondAccessory = @"secondAccessory";
     return self;
 }
 
+- (UIImage *)image {
+    return [UIImage imageNamed:self.imageName];
+}
+
 - (LCKItemSlot)itemSlotForSlotString:(NSString *)slotString {
     if ([slotString isEqualToString:LCKItemLeftHandKey]) {
         return LCKItemSlotLeftHand;

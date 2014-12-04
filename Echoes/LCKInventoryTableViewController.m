@@ -70,7 +70,7 @@
         if (!self.character.equippedItems) {
             self.character.equippedItems = @[itemName];
         }
-        else {
+        else if (![self.character.equippedItems containsObject:itemName]) {
             self.character.equippedItems = [self.character.equippedItems arrayByAddingObject:itemName];
         }
     }
@@ -123,8 +123,14 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSMutableArray *itemNames = [self.character.items mutableCopy];
+        NSString *itemName = [itemNames safeObjectAtIndex:indexPath.row];
+
         [itemNames removeObjectAtIndex:indexPath.row];
         self.character.items = [itemNames copy];
+        
+        NSMutableArray *equipped = [self.character.equippedItems mutableCopy];
+        [equipped removeObject:itemName];
+        self.character.equippedItems = [equipped copy];
         
         [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 

@@ -78,9 +78,59 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    LCKItem *item = [[LCKItemProvider allItems] firstObject];
-    self.leftHandButton.itemImage = [UIImage imageNamed:item.imageName];
+    LCKItem *leftHandItem;
+    LCKItem *rightHandItem;
+    LCKItem *helmetItem;
+    LCKItem *chestItem;
+    LCKItem *bootsItem;
+    LCKItem *firstAccessoryItem;
+    LCKItem *secondAccessoryItem;
+    
+    for (NSString *itemName in self.character.equippedItems) {
+        LCKItem *item = [LCKItemProvider itemForName:itemName];
+        
+        if ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand]) {
+            if (!leftHandItem) {
+                leftHandItem = item;
+            }
+            else {
+                rightHandItem = item;
+            }
+        }
+        else if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
+            leftHandItem = item;
+        }
+        else if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
+            helmetItem = item;
+        }
+        else if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
+            chestItem = item;
+        }
+        else if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
+            bootsItem = item;
+        }
+        else if ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory]) {
+            if (!firstAccessoryItem) {
+                firstAccessoryItem = item;
+            }
+            else {
+                secondAccessoryItem = item;
+            }
+        }
+    }
+    
+    self.leftHandButton.itemImage = leftHandItem.image;
+    self.rightHandButton.itemImage = rightHandItem.image;
+    self.helmetButton.itemImage = helmetItem.image;
+    self.chestButton.itemImage = chestItem.image;
+    self.bootsButton.itemImage = bootsItem.image;
+    self.firstAccessoryButton.itemImage = firstAccessoryItem.image;
+    self.firstAccessoryButton.itemImage = secondAccessoryItem.image;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

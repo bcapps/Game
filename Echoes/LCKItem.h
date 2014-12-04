@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotHelmet,
@@ -26,6 +27,7 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
 @property (nonatomic, readonly) NSString *descriptionText;
 @property (nonatomic, readonly) NSString *flavorText;
 @property (nonatomic, readonly) NSString *imageName;
+@property (nonatomic, readonly) UIImage *image;
 @property (nonatomic, readonly) NSArray *attributeRequirements;
 @property (nonatomic, readonly) NSArray *itemSlots;
 
