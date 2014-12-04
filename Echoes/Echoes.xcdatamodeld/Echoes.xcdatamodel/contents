@@ -10,7 +10,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" inverseName="character" inverseEntity="CharacterStats" syncable="YES"/>
     </entity>
-    <entity name="CharacterStats" representedClassName="CharacterClass" syncable="YES">
+    <entity name="CharacterStats" representedClassName="CharacterStats" syncable="YES">
         <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="faith" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intelligence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
