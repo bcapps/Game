@@ -86,7 +86,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="helmetButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="pR5-au-ZFV"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="czD-dC-4ee"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
@@ -99,7 +99,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chestButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="AIe-SU-71h"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dgg-Nd-mY6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
@@ -112,7 +112,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rightHandbuttonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Y1I-qj-uBd"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Gqi-9T-0rm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
@@ -125,7 +125,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="firstAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="OwU-WL-GFA"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="1GR-tE-JH1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
@@ -138,7 +138,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="secondAccessoryButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="PYS-dJ-aQb"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="7gO-Dq-gYV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
@@ -151,7 +151,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="bootsButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dzt-c5-d5b"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="8fw-qk-JMZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
@@ -164,7 +164,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="leftHandButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="ffF-dm-ZCB"/>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="fVp-Po-dGf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">

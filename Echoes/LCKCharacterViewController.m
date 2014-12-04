@@ -219,32 +219,8 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     }];
 }
 
-- (IBAction)leftHandButtonTapped:(LCKItemButton *)sender {
-    [self presentItemViewControllerForItemButton:sender];
-}
-
-- (IBAction)rightHandbuttonTapped:(UIButton *)sender {
-    
-}
-
-- (IBAction)helmetButtonTapped:(UIButton *)sender {
-    
-}
-
-- (IBAction)chestButtonTapped:(UIButton *)sender {
-    
-}
-
-- (IBAction)firstAccessoryButtonTapped:(UIButton *)sender {
-    
-}
-
-- (IBAction)secondAccessoryButtonTapped:(UIButton *)sender {
-    
-}
-
-- (IBAction)bootsButtonTapped:(UIButton *)sender {
-    
+- (IBAction)equipmentButtonTapped:(LCKItemButton *)button {
+    [self presentItemViewControllerForItemButton:button];
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
