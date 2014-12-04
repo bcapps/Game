@@ -17,6 +17,11 @@
 		<array>
 			<string>STR 1</string>
 		</array>
+		<key>itemSlots</key>
+		<array>
+			<string>lefthand</string>
+			<string>righthand</string>
+		</array>
 	</dict>
 </array>
 </plist>
