@@ -26,6 +26,7 @@
 		F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F434F1A301CD100FEA417 /* inventoryIcon@2x.png */; };
 		F21F43531A301D1B00FEA417 /* LCKInventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43521A301D1B00FEA417 /* LCKInventoryTableViewController.m */; };
 		F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */; };
+		F21F435C1A302C7900FEA417 /* LCKInventoryItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F435B1A302C7900FEA417 /* LCKInventoryItemCell.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -115,6 +116,8 @@
 		F21F43521A301D1B00FEA417 /* LCKInventoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKInventoryTableViewController.m; sourceTree = "<group>"; };
 		F21F43571A3020FA00FEA417 /* LCKAllItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKAllItemsTableViewController.h; sourceTree = "<group>"; };
 		F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKAllItemsTableViewController.m; sourceTree = "<group>"; };
+		F21F435A1A302C7900FEA417 /* LCKInventoryItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKInventoryItemCell.h; sourceTree = "<group>"; };
+		F21F435B1A302C7900FEA417 /* LCKInventoryItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKInventoryItemCell.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -322,6 +325,8 @@
 				F21F43271A2F813800FEA417 /* LCKItemButton.m */,
 				F21F432C1A2F851100FEA417 /* LCKStatCell.h */,
 				F21F432D1A2F851100FEA417 /* LCKStatCell.m */,
+				F21F435A1A302C7900FEA417 /* LCKInventoryItemCell.h */,
+				F21F435B1A302C7900FEA417 /* LCKInventoryItemCell.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
 				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
+				F21F435C1A302C7900FEA417 /* LCKInventoryItemCell.m in Sources */,
 				F21F43531A301D1B00FEA417 /* LCKInventoryTableViewController.m in Sources */,
 				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
