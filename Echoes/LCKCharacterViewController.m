@@ -87,8 +87,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     if ([segue.identifier isEqualToString:@"showInventoryViewController"]) {
         LCKInventoryTableViewController *inventoryViewController = segue.destinationViewController;
         
-        inventoryViewController.itemNames = self.character.items;
-        inventoryViewController.equippedItemNames = self.character.equippedItems;
+        inventoryViewController.character = self.character;
     }
 }
 

@@ -6,11 +6,12 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+#import "Character.h"
 
 @interface LCKInventoryTableViewController : UITableViewController
 
-@property (nonatomic) NSArray *itemNames;
-@property (nonatomic) NSArray *equippedItemNames;
+@property (nonatomic) Character *character;
 
 @end
