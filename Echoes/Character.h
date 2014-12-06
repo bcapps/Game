@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 @class CharacterStats;
+@class LCKItem;
 
 typedef NS_ENUM(NSUInteger, CharacterGender) {
     CharacterGenderMale,
@@ -23,10 +24,12 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * currentHealth;
 @property (nonatomic, retain) id items;
-@property (nonatomic, retain) id equippedItems;
 @property (nonatomic, retain) CharacterStats *characterStats;
 
 @property (nonatomic, readonly) NSNumber * maximumHealth;
 @property (nonatomic, readonly) CharacterGender characterGender;
+
+- (void)equipItem:(LCKItem *)item;
+- (void)unequipItem:(LCKItem *)item;
 
 @end

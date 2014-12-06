@@ -9,6 +9,8 @@
 #import "Character.h"
 #import "CharacterStats.h"
 
+#import "LCKItem.h"
+
 @implementation Character
 
 @dynamic gender;
@@ -16,7 +18,6 @@
 @dynamic name;
 @dynamic currentHealth;
 @dynamic items;
-@dynamic equippedItems;
 @dynamic characterStats;
 
 - (CharacterGender)characterGender {
@@ -30,6 +31,27 @@
 - (NSNumber *)maximumHealth {
     //TODO: Add gear health.
     return self.characterStats.statHealth;
+}
+
+- (void)equipItem:(LCKItem *)item {
+    [self setItem:item equippedStatus:YES];
+}
+
+- (void)unequipItem:(LCKItem *)item {
+    [self setItem:item equippedStatus:NO];
+}
+
+- (void)setItem:(LCKItem *)item equippedStatus:(BOOL)equippedStatus {
+    if ([self.items containsObject:item]) {
+        NSMutableArray *items = [self.items mutableCopy];
+        [items removeObject:item];
+        
+        LCKItem *copyItem = [item copy];
+        copyItem.equipped = equippedStatus;
+        [items addObject:copyItem];
+        
+        self.items = [items copy];
+    }
 }
 
 @end

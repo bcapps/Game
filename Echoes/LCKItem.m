@@ -25,7 +25,79 @@ NSString * const LCKItemBootsKey = @"boots";
 NSString * const LCKItemFirstAccessory = @"firstaccessory";
 NSString * const LCKItemSecondAccessory = @"secondAccessory";
 
+NSString * const LCKItemCodingNameKey = @"LCKItemCodingNameKey";
+NSString * const LCKItemCodingActionKey = @"LCKItemCodingActionKey";
+NSString * const LCKItemCodingDescriptionKey = @"LCKItemCodingDescriptionKey";
+NSString * const LCKItemCodingFlavorKey = @"LCKItemCodingFlavorKey";
+NSString * const LCKItemCodingImageKey = @"LCKItemCodingImageKey";
+NSString * const LCKItemCodingAttributeKey = @"LCKItemCodingAttributeKey";
+NSString * const LCKItemCodingItemSlotsKey = @"LCKItemCodingItemSlotsKey";
+NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
+
+@interface LCKItem ()
+
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *actionText;
+@property (nonatomic) NSString *descriptionText;
+@property (nonatomic) NSString *flavorText;
+@property (nonatomic) NSString *imageName;
+@property (nonatomic) NSArray *attributeRequirements;
+@property (nonatomic) NSArray *itemSlots;
+
+@end
+
 @implementation LCKItem
+
+#pragma mark - NSCoding
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    
+    if (self) {
+        _name = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingNameKey];
+        _actionText = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingActionKey];
+        _descriptionText = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingDescriptionKey];
+        _flavorText = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingFlavorKey];
+        _imageName = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingImageKey];
+        _attributeRequirements = [aDecoder decodeObjectOfClass:[NSArray class] forKey:LCKItemCodingAttributeKey];
+        _itemSlots = [aDecoder decodeObjectOfClass:[NSArray class] forKey:LCKItemCodingItemSlotsKey];
+        _equipped = [aDecoder decodeBoolForKey:LCKItemCodingEquippedKey];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:_name forKey:LCKItemCodingNameKey];
+    [aCoder encodeObject:_actionText forKey:LCKItemCodingActionKey];
+    [aCoder encodeObject:_descriptionText forKey:LCKItemCodingDescriptionKey];
+    [aCoder encodeObject:_flavorText forKey:LCKItemCodingFlavorKey];
+    [aCoder encodeObject:_imageName forKey:LCKItemCodingImageKey];
+    [aCoder encodeObject:_attributeRequirements forKey:LCKItemCodingAttributeKey];
+    [aCoder encodeObject:_itemSlots forKey:LCKItemCodingItemSlotsKey];
+    [aCoder encodeBool:_equipped forKey:LCKItemCodingEquippedKey];
+}
+
+#pragma mark - NSCopying
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    LCKItem *copy = [[[self class] allocWithZone:zone] init];
+    
+    if (copy) {
+        copy.name = [self.name copyWithZone:zone];
+        copy.actionText = [self.actionText copyWithZone:zone];
+        copy.descriptionText = [self.descriptionText copyWithZone:zone];
+        copy.flavorText = [self.flavorText copyWithZone:zone];
+        copy.imageName = [self.imageName copyWithZone:zone];
+        copy.attributeRequirements = [self.attributeRequirements copyWithZone:zone];
+        copy.itemSlots = [self.itemSlots copyWithZone:zone];
+        copy.equipped = copy.isEquipped;
+    }
+    
+    return copy;
+}
+
+#pragma mark - LCKItem
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
@@ -37,6 +109,7 @@ NSString * const LCKItemSecondAccessory = @"secondAccessory";
         _flavorText = [dictionary objectForKey:LCKItemFlavorKey];
         _imageName = [dictionary objectForKey:LCKItemImageKey];
         _attributeRequirements = [dictionary objectForKey:LCKItemAttributeRequirementsKey];
+        _equipped = NO;
         
         NSMutableArray *appropriateSlots = [NSMutableArray array];
         for (NSString *slotString in [dictionary objectForKey:LCKItemItemSlotsKey]) {

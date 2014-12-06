@@ -20,16 +20,19 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotTwoHand
 };
 
-@interface LCKItem : NSObject
+@interface LCKItem : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *actionText;
 @property (nonatomic, readonly) NSString *descriptionText;
 @property (nonatomic, readonly) NSString *flavorText;
 @property (nonatomic, readonly) NSString *imageName;
-@property (nonatomic, readonly) UIImage *image;
 @property (nonatomic, readonly) NSArray *attributeRequirements;
 @property (nonatomic, readonly) NSArray *itemSlots;
+
+@property (nonatomic, readonly) UIImage *image;
+
+@property (nonatomic, getter=isEquipped) BOOL equipped;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

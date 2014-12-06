@@ -48,10 +48,10 @@
 
 - (void)didSelectItem:(LCKItem *)item {
     if (!self.character.items) {
-        self.character.items = @[item.name];
+        self.character.items = @[[item copy]];
     }
     else {
-        self.character.items = [self.character.items arrayByAddingObject:item.name];
+        self.character.items = [self.character.items arrayByAddingObject:[item copy]];
     }
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
@@ -64,17 +64,9 @@
 - (void)itemCellWasEquipped:(UITableViewCell *)cell {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     
-    NSString *itemName = [self.character.items safeObjectAtIndex:indexPath.row];
-    
-    if (itemName) {
-        if (!self.character.equippedItems) {
-            self.character.equippedItems = @[itemName];
-        }
-        else if (![self.character.equippedItems containsObject:itemName]) {
-            self.character.equippedItems = [self.character.equippedItems arrayByAddingObject:itemName];
-        }
-    }
-    
+    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
+    [self.character equipItem:item];
+
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     [self.tableView reloadData];
 }
@@ -89,15 +81,15 @@
     LCKInventoryItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKInventoryItemCell class]) forIndexPath:indexPath];
     cell.delegate = self;
     
-    NSString *itemName = [self.character.items safeObjectAtIndex:indexPath.row];
+    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
     
     cell.backgroundColor = self.tableView.backgroundColor;
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    cell.textLabel.text = itemName;
+    cell.textLabel.text = item.name;
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     cell.textLabel.textColor = [UIColor titleTextColor];
     
-    if ([self.character.equippedItems containsObject:itemName]) {
+    if (item.isEquipped) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     
@@ -122,15 +114,11 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSMutableArray *itemNames = [self.character.items mutableCopy];
-        NSString *itemName = [itemNames safeObjectAtIndex:indexPath.row];
-
-        [itemNames removeObjectAtIndex:indexPath.row];
-        self.character.items = [itemNames copy];
+        LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
         
-        NSMutableArray *equipped = [self.character.equippedItems mutableCopy];
-        [equipped removeObject:itemName];
-        self.character.equippedItems = [equipped copy];
+        NSMutableArray *items = [self.character.items mutableCopy];
+        [items removeObject:item];
+        self.character.items = [items copy];
         
         [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 

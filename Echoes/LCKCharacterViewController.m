@@ -87,35 +87,35 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     LCKItem *firstAccessoryItem;
     LCKItem *secondAccessoryItem;
     
-    for (NSString *itemName in self.character.equippedItems) {
-        LCKItem *item = [LCKItemProvider itemForName:itemName];
-        
-        if ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand]) {
-            if (!leftHandItem) {
+    for (LCKItem *item in self.character.items) {
+        if (item.isEquipped) {
+            if ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand]) {
+                if (!leftHandItem) {
+                    leftHandItem = item;
+                }
+                else {
+                    rightHandItem = item;
+                }
+            }
+            else if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
                 leftHandItem = item;
             }
-            else {
-                rightHandItem = item;
+            else if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
+                helmetItem = item;
             }
-        }
-        else if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
-            leftHandItem = item;
-        }
-        else if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
-            helmetItem = item;
-        }
-        else if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
-            chestItem = item;
-        }
-        else if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
-            bootsItem = item;
-        }
-        else if ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory]) {
-            if (!firstAccessoryItem) {
-                firstAccessoryItem = item;
+            else if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
+                chestItem = item;
             }
-            else {
-                secondAccessoryItem = item;
+            else if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
+                bootsItem = item;
+            }
+            else if ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory]) {
+                if (!firstAccessoryItem) {
+                    firstAccessoryItem = item;
+                }
+                else {
+                    secondAccessoryItem = item;
+                }
             }
         }
     }
@@ -264,9 +264,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 #pragma mark - LCKItemViewControllerDelegate
 
 - (void)unequipButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
-    NSMutableArray *equippedItems = [self.character.equippedItems mutableCopy];
-    [equippedItems removeObject:itemViewController.item.name];
-    self.character.equippedItems = [equippedItems copy];
+    [self.character unequipItem:itemViewController.item];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
