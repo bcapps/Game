@@ -74,7 +74,9 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.character.items count];
+    return [self.character.items objectsPassingTest:^BOOL(LCKItem *item, BOOL *stop) {
+        return !item.isEquipped;
+    }].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,11 +90,7 @@
     cell.textLabel.text = item.name;
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     cell.textLabel.textColor = [UIColor titleTextColor];
-    
-    if (item.isEquipped) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    
+        
     return cell;
 }
 
