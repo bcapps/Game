@@ -34,28 +34,29 @@
     
     self.itemNameLabel.text = self.item.name;
     self.itemNameLabel.textColor = [UIColor titleTextColor];
-    self.itemNameLabel.font = [UIFont titleTextFontOfSize:14.0];
+    self.itemNameLabel.font = [UIFont titleTextFontOfSize:16.0];
     
     self.itemImageView.image = [UIImage imageNamed:self.item.imageName];
     
     self.itemActionLabel.text = self.item.actionText;
     self.itemActionLabel.textColor = [UIColor titleTextColor];
-    self.itemActionLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
+    self.itemActionLabel.font = [UIFont descriptiveTextFontOfSize:15.0];
     
     self.itemDescriptionLabel.text = self.item.descriptionText;
     self.itemDescriptionLabel.textColor = [UIColor descriptiveTextColor];
-    self.itemDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    self.itemDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     
     self.itemFlavorTextLabel.text = self.item.flavorText;
-    self.itemFlavorTextLabel.textColor = [UIColor descriptiveTextColor];
-    self.itemFlavorTextLabel.font = [UIFont italicDescriptiveTextFontOfSize:12.0];
+    self.itemFlavorTextLabel.textColor = [UIColor flavorTextColor];
+    self.itemFlavorTextLabel.font = [UIFont italicDescriptiveTextFontOfSize:14.0];
 
     NSString *requirementsText = [self.item.attributeRequirements componentsJoinedByString:@", "];
     self.itemRequirementsLabel.text = requirementsText;
-    self.itemRequirementsLabel.textColor = [UIColor titleTextColor];
-    self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    self.itemRequirementsLabel.textColor = [UIColor descriptiveTextColor];
+    self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     
-    self.unequipButton.titleLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    self.unequipButton.titleLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
+    [self.unequipButton setTitleColor:[UIColor removeColor] forState:UIControlStateNormal];
     
     self.view.backgroundColor = [UIColor backgroundColor];
     self.view.layer.masksToBounds = NO;

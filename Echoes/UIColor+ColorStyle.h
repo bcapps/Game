@@ -13,5 +13,7 @@
 + (UIColor *)descriptiveTextColor;
 + (UIColor *)titleTextColor;
 + (UIColor *)backgroundColor;
++ (UIColor *)removeColor;
++ (UIColor *)flavorTextColor;
 
 @end

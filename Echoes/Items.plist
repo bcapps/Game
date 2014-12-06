@@ -10,7 +10,7 @@
 		<key>descriptiveText</key>
 		<string>A straight sword useful for slashing at enemies.</string>
 		<key>flavorText</key>
-		<string></string>
+		<string>The flavor text of the item. Lots of flavor goes here. But never Banana. Banana sucks.</string>
 		<key>imageName</key>
 		<string>broadsword</string>
 		<key>attributeRequirements</key>
