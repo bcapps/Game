@@ -16,6 +16,8 @@
 
 #import "LCKCharacterViewController.h"
 
+#import "LCKAllItemsTableViewController.h"
+
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSFetchedResultsController+LCKAdditions.h>
 

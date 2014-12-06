@@ -6,11 +6,14 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import MultipeerConnectivity;
 
 extern NSString * const LCKMultipeerItemReceivedNotification;
 
 @interface LCKMultipeerManager : NSObject
+
+@property (nonatomic, readonly) MCSession *session;
 
 - (instancetype)initWithCharacterName:(NSString *)characterName;
 

@@ -15,6 +15,9 @@
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
+#import "LCKMultipeerManager.h"
+#import "LCKAllPeersViewController.h"
+
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
@@ -38,6 +41,8 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
 @property (nonatomic, readonly) NSDictionary *allItems;
 @property (nonatomic, readonly) NSArray *itemTypeNames;
 
+@property (nonatomic) LCKMultipeerManager *multipeerManager;
+
 @end
 
 @implementation LCKAllItemsTableViewController
@@ -50,6 +55,9 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     self.tableView.backgroundColor = [UIColor backgroundColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:@"DM"];
+    [self.multipeerManager startMonitoring];
 }
 
 #pragma mark - LCKAllItemsTableViewController
@@ -133,9 +141,10 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     
     LCKItem *item = [self itemForIndexPath:indexPath];
     
-    [self.itemDelegate didSelectItem:item];
+    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithSession:self.multipeerManager.session];
+    peersViewController.item = item;
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController pushViewController:peersViewController animated:YES];
 }
 
 @end

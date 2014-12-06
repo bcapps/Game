@@ -29,13 +29,21 @@
                             <outlet property="delegate" destination="g36-ta-CKQ" id="wAT-T4-3Eb"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Characters" id="FCJ-X3-2He">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="jWT-sr-iHO" userLabel="DM Items Button">
+                            <connections>
+                                <segue destination="KNT-Da-eRx" kind="presentation" id="JQJ-ts-Pi4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mJZ-n3-gv9">
                             <connections>
                                 <segue destination="Dho-i4-GDw" kind="presentation" id="pSD-EI-hXB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z73-Zh-MwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -534,13 +542,7 @@
                             <outlet property="delegate" destination="nnE-vh-u3f" id="CAE-Dx-WVU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Inventory" id="isz-te-9lf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XRk-nq-RcT">
-                            <connections>
-                                <segue destination="KNT-Da-eRx" kind="presentation" identifier="showAllItemsViewController" id="ejj-Mp-6uD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Inventory" id="isz-te-9lf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7B-Q6-J2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -560,7 +562,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkl-aW-X5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="344"/>
+            <point key="canvasLocation" x="-1204" y="-552"/>
         </scene>
         <!--All Items-->
         <scene sceneID="zxY-hB-zop">
@@ -586,14 +588,14 @@
                     <navigationItem key="navigationItem" title="All Items" id="G7w-h9-v3d">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9ZS-LA-PTa">
                             <connections>
-                                <segue destination="nnE-vh-u3f" kind="custom" customClass="LCKDismissSegue" id="sZz-S2-f6V"/>
+                                <segue destination="KNT-Da-eRx" kind="custom" customClass="LCKDismissSegue" id="yxC-a4-4HD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-y8-saJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440" y="345"/>
+            <point key="canvasLocation" x="-513" y="-552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yuY-MP-lYL">
@@ -621,6 +623,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Os-uu-hNJ"/>
-        <segue reference="sZz-S2-f6V"/>
+        <segue reference="JQJ-ts-Pi4"/>
     </inferredMetricsTieBreakers>
 </document>

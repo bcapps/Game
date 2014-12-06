@@ -8,16 +8,6 @@
 
 @import UIKit;
 
-@class LCKItem;
-
-@protocol LCKAllItemsDelegate <NSObject>
-
-- (void)didSelectItem:(LCKItem *)item;
-
-@end
-
 @interface LCKAllItemsTableViewController : UITableViewController
-
-@property (nonatomic, weak) IBOutlet id <LCKAllItemsDelegate> itemDelegate;
 
 @end

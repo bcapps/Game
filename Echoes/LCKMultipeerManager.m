@@ -10,8 +10,6 @@
 
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
 
-@import MultipeerConnectivity;
-
 @interface LCKMultipeerManager () <MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate>
 
 @property (nonatomic) NSString *characterName;

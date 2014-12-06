@@ -17,7 +17,7 @@
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
-@interface LCKInventoryTableViewController () <LCKAllItemsDelegate, LCKInventoryItemCellDelegate>
+@interface LCKInventoryTableViewController () <LCKInventoryItemCellDelegate>
 
 @end
 
@@ -34,29 +34,6 @@
     UIMenuItem *equipItem = [[UIMenuItem alloc] initWithTitle:@"Equip" action:NSSelectorFromString(@"equipItem")];
     [[UIMenuController sharedMenuController] setMenuItems: @[equipItem]];
     [[UIMenuController sharedMenuController] update];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showAllItemsViewController"]) {
-        UINavigationController *navController = segue.destinationViewController;
-        LCKAllItemsTableViewController *allItemsViewController = [navController.viewControllers firstObject];
-        allItemsViewController.itemDelegate = self;
-    }
-}
-
-#pragma mark - LCKAllItemsDelegate
-
-- (void)didSelectItem:(LCKItem *)item {
-    if (!self.character.items) {
-        self.character.items = @[[item copy]];
-    }
-    else {
-        self.character.items = [self.character.items arrayByAddingObject:[item copy]];
-    }
-    
-    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
-    
-    [self.tableView reloadData];
 }
 
 #pragma mark - LCKInventoryItemCellDelegate
