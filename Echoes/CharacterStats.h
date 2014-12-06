@@ -11,6 +11,14 @@
 
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 
+typedef NS_ENUM(NSUInteger, LCKStatType) {
+    LCKStatTypeVitality,
+    LCKStatTypeStrength,
+    LCKStatTypeDexterity,
+    LCKStatTypeIntelligence,
+    LCKStatTypeFaith
+};
+
 extern NSUInteger const CharacterStatsInitialHealth;
 extern NSUInteger const CharacterStatsVitalityModifier;
 
@@ -32,5 +40,8 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 @property (nonatomic, readonly) NSUInteger startingHealthModification;
 
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context;
++ (NSString *)statNameForStatType:(LCKStatType)statType;
+
+- (NSString *)statAsStringForStatType:(LCKStatType)statType;
 
 @end

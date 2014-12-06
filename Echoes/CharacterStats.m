@@ -34,4 +34,34 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     return @(health);
 }
 
+- (NSString *)statAsStringForStatType:(LCKStatType)statType {
+    switch (statType) {
+        case LCKStatTypeVitality:
+            return [NSString stringWithFormat:@"%@", self.vitality];
+        case LCKStatTypeStrength:
+            return [NSString stringWithFormat:@"%@", self.strength];
+        case LCKStatTypeDexterity:
+            return [NSString stringWithFormat:@"%@", self.dexterity];
+        case LCKStatTypeIntelligence:
+            return [NSString stringWithFormat:@"%@", self.intelligence];
+        case LCKStatTypeFaith:
+            return [NSString stringWithFormat:@"%@", self.faith];
+    }
+}
+
++ (NSString *)statNameForStatType:(LCKStatType)statType {
+    switch (statType) {
+        case LCKStatTypeVitality:
+            return @"VIT";
+        case LCKStatTypeStrength:
+            return @"STR";
+        case LCKStatTypeDexterity:
+            return @"DEX";
+        case LCKStatTypeIntelligence:
+            return @"INT";
+        case LCKStatTypeFaith:
+            return @"FAI";
+    }
+}
+
 @end

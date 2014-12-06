@@ -20,14 +20,6 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
-typedef NS_ENUM(NSUInteger, LCKStatType) {
-    LCKStatTypeVitality,
-    LCKStatTypeStrength,
-    LCKStatTypeDexterity,
-    LCKStatTypeIntelligence,
-    LCKStatTypeFaith
-};
-
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 50.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
@@ -261,27 +253,8 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LCKStatCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LCKStatCellReuseIdentifier forIndexPath:indexPath];
     
-    switch (indexPath.row) {
-        case LCKStatTypeVitality:
-            cell.statNameLabel.text = @"VIT";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.vitality];
-            break;
-        case LCKStatTypeStrength:
-            cell.statNameLabel.text = @"STR";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.strength];
-            break;
-        case LCKStatTypeDexterity:
-            cell.statNameLabel.text = @"DEX";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.dexterity];
-            break;
-        case LCKStatTypeIntelligence:
-            cell.statNameLabel.text = @"INT";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.intelligence];
-            break;
-        case LCKStatTypeFaith:
-            cell.statNameLabel.text = @"FAI";
-            cell.statValueLabel.text = [NSString stringWithFormat:@"%@", self.character.characterStats.faith];
-    }
+    cell.statNameLabel.text = [CharacterStats statNameForStatType:(LCKStatType)indexPath.row];
+    cell.statValueLabel.text = [self.character.characterStats statAsStringForStatType:(LCKStatType)indexPath.row];
 
     return cell;
 }
