@@ -17,12 +17,14 @@
 #import "LCKItemButton.h"
 #import "LCKItem.h"
 
+#import "LCKMultipeerManager.h"
+
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
-const CGFloat LCKItemViewControllerHorizontalMargin = 50.0;
-const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
+const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
+const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
 
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate>
 
@@ -43,6 +45,8 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 @property (nonatomic) LCKItemViewController *currentlyPresentedItemViewController;
 @property (nonatomic) UIView *overlayView;
 
+@property (nonatomic) LCKMultipeerManager *multipeerManager;
+
 @end
 
 @implementation LCKCharacterViewController
@@ -52,6 +56,8 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 - (void)dealloc {
     self.collectionView.dataSource = nil;
     self.collectionView.delegate = nil;
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UIViewController
@@ -70,6 +76,11 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
+    
+    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:self.character.name];
+    [self.multipeerManager startMonitoring];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -181,12 +192,12 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     return itemViewController;
 }
 
-- (void)presentItemViewControllerForItemButton:(LCKItemButton *)button {
-    if (!button.item) {
+- (void)presentItemViewControllerForItem:(LCKItem *)item fromButton:(LCKItemButton *)button {
+    if (!item) {
         return;
     }
     
-    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:button.item];
+    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
     itemViewController.presentationFrame = button.frame;
     itemViewController.view.frame = [self itemControllerFrame];
     itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
@@ -217,7 +228,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {
-    [self presentItemViewControllerForItemButton:button];
+    [self presentItemViewControllerForItem:button.item fromButton:button];
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
@@ -242,6 +253,16 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
     [self updateHealthText];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+}
+
+#pragma mark - Multipeer
+
+- (void)itemReceived:(NSNotification *)notification {
+    NSString *itemName = [notification.userInfo objectForKey:@"itemName"];
+    
+    LCKItem *item = [LCKItemProvider itemForName:itemName];
+    
+    [self presentItemViewControllerForItem:item fromButton:nil];
 }
 
 #pragma mark - UICollectionViewDataSource

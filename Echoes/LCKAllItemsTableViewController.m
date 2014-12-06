@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
+@import MultipeerConnectivity;
+
 #import "LCKAllItemsTableViewController.h"
 #import "LCKItemProvider.h"
 #import "LCKItem.h"

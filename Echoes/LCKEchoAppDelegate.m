@@ -10,6 +10,10 @@
 
 #import "LCKEchoCoreDataController.h"
 
+@interface LCKEchoAppDelegate ()
+
+@end
+
 @implementation LCKEchoAppDelegate
 
 #pragma mark - UIApplicationDelegate
@@ -22,10 +26,6 @@
     self.window.tintColor = [UIColor whiteColor];
     
     return YES;
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[LCKEchoCoreDataController sharedController] saveContext:[LCKEchoCoreDataController sharedController].mainQueueContext];
 }
 
 @end
