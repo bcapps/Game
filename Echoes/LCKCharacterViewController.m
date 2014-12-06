@@ -32,7 +32,7 @@ const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 50.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -83,6 +83,10 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self updateItemButtons];
+}
+
+- (void)updateItemButtons {
     LCKItem *leftHandItem;
     LCKItem *rightHandItem;
     LCKItem *helmetItem;
@@ -179,6 +183,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
 - (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
     LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item];
+    itemViewController.delegate = self;
     itemViewController.view.clipsToBounds = YES;
     
     return itemViewController;
@@ -282,5 +287,18 @@ const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 }
 
 #pragma mark - UICollectionViewDelegate
+
+#pragma mark - LCKItemViewControllerDelegate
+
+- (void)unequipButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
+    NSMutableArray *equippedItems = [self.character.equippedItems mutableCopy];
+    [equippedItems removeObject:itemViewController.item.name];
+    self.character.equippedItems = [equippedItems copy];
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    
+    [self updateItemButtons];
+    [self dismissCurrentlyPresentedViewController];
+}
 
 @end

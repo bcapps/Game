@@ -68,7 +68,7 @@
 #pragma mark - LCKItemViewController
 
 - (IBAction)unequipButtonTapped:(UIButton *)sender {
-    
+    [self.delegate unequipButtonTappedForItemViewController:self];
 }
 
 - (instancetype)initWithItem:(LCKItem *)item {
