@@ -322,42 +322,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-c9-AFd" userLabel="Name Separator Line">
-                                <rect key="frame" x="0.0" y="50.5" width="600" height="1"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="EJ6-G1-mIm"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-TS-wEj" userLabel="Item Image">
-                                <rect key="frame" x="0.0" y="61.5" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="61" width="600" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="wSq-gb-erG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3er-uf-Vpe" userLabel="Action Label">
-                                <rect key="frame" x="26" y="186.5" width="548" height="20.5"/>
+                                <rect key="frame" x="26" y="186" width="548" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTE-yr-HDC" userLabel="Description Label">
-                                <rect key="frame" x="26" y="216.5" width="548" height="20.5"/>
+                                <rect key="frame" x="26" y="216" width="548" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qd-La-zrm" userLabel="Flavor Text Label">
-                                <rect key="frame" x="26" y="529" width="548" height="20.5"/>
+                                <rect key="frame" x="26" y="525" width="548" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirements Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEb-UE-1FJ" userLabel="Requirements Label">
-                                <rect key="frame" x="26" y="569.5" width="548" height="20.5"/>
+                                <rect key="frame" x="420.5" y="565" width="153.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJr-MS-l58">
+                                <rect key="frame" x="26" y="565" width="58" height="30"/>
+                                <state key="normal" title="Unequip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="unequipButtonTapped:" destination="rat-Uo-uIn" eventType="touchUpInside" id="Iui-hl-tPf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -365,24 +374,33 @@
                             <constraint firstItem="oTE-yr-HDC" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="1LD-WM-xQw"/>
                             <constraint firstItem="JPB-pK-g1L" firstAttribute="top" secondItem="JAY-ii-Xif" secondAttribute="bottom" constant="5" id="8nM-7u-nkJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3er-uf-Vpe" secondAttribute="trailing" constant="10" id="9oM-0B-MpJ"/>
+                            <constraint firstItem="WJr-MS-l58" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="9qq-vK-Xml"/>
                             <constraint firstItem="fFy-TS-wEj" firstAttribute="top" secondItem="b4G-c9-AFd" secondAttribute="bottom" constant="10" id="Cgy-if-Xo1"/>
-                            <constraint firstItem="lEb-UE-1FJ" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="JuB-W4-9mG"/>
                             <constraint firstItem="oTE-yr-HDC" firstAttribute="top" secondItem="3er-uf-Vpe" secondAttribute="bottom" constant="10" id="KZg-bW-Y8O"/>
                             <constraint firstAttribute="centerX" secondItem="fFy-TS-wEj" secondAttribute="centerX" id="N8j-Up-ahg"/>
                             <constraint firstItem="JPB-pK-g1L" firstAttribute="width" secondItem="JFu-mu-DH0" secondAttribute="width" id="NNK-ig-djK"/>
+                            <constraint firstItem="lEb-UE-1FJ" firstAttribute="height" secondItem="WJr-MS-l58" secondAttribute="height" id="NtC-IK-ZUF"/>
                             <constraint firstAttribute="width" secondItem="fFy-TS-wEj" secondAttribute="width" id="QqS-es-quA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lEb-UE-1FJ" secondAttribute="trailing" constant="10" id="SHX-RR-Md3"/>
                             <constraint firstItem="lEb-UE-1FJ" firstAttribute="top" secondItem="4qd-La-zrm" secondAttribute="bottom" constant="20" id="Tdv-9F-tn2"/>
-                            <constraint firstItem="k9C-Ky-Ncj" firstAttribute="top" secondItem="lEb-UE-1FJ" secondAttribute="bottom" constant="10" id="cZJ-Of-Req"/>
+                            <constraint firstItem="WJr-MS-l58" firstAttribute="height" secondItem="lEb-UE-1FJ" secondAttribute="height" id="VCk-r1-lcm"/>
+                            <constraint firstItem="lEb-UE-1FJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WJr-MS-l58" secondAttribute="trailing" constant="10" id="XJT-kJ-S2X"/>
+                            <constraint firstItem="k9C-Ky-Ncj" firstAttribute="top" secondItem="lEb-UE-1FJ" secondAttribute="bottom" constant="5" id="cZJ-Of-Req"/>
                             <constraint firstItem="b4G-c9-AFd" firstAttribute="width" secondItem="JPB-pK-g1L" secondAttribute="width" id="dQ3-fy-VeI"/>
                             <constraint firstItem="4qd-La-zrm" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="db5-5R-fgK"/>
                             <constraint firstAttribute="centerX" secondItem="b4G-c9-AFd" secondAttribute="centerX" id="ggu-o6-0lU"/>
                             <constraint firstAttribute="centerX" secondItem="JPB-pK-g1L" secondAttribute="centerX" id="jqf-po-fuW"/>
                             <constraint firstItem="b4G-c9-AFd" firstAttribute="top" secondItem="JPB-pK-g1L" secondAttribute="bottom" constant="5" id="ky5-jD-cFu"/>
                             <constraint firstItem="3er-uf-Vpe" firstAttribute="leading" secondItem="JFu-mu-DH0" secondAttribute="leadingMargin" constant="10" id="oal-pC-pKf"/>
+                            <constraint firstItem="lEb-UE-1FJ" firstAttribute="top" secondItem="WJr-MS-l58" secondAttribute="top" id="u4F-qU-nJy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oTE-yr-HDC" secondAttribute="trailing" constant="10" id="usn-vy-O2N"/>
                             <constraint firstItem="3er-uf-Vpe" firstAttribute="top" secondItem="fFy-TS-wEj" secondAttribute="bottom" constant="25" id="yKY-mm-Kga"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VCk-r1-lcm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="itemActionLabel" destination="3er-uf-Vpe" id="YCn-2T-K0A"/>
@@ -391,6 +409,7 @@
                         <outlet property="itemImageView" destination="fFy-TS-wEj" id="cC6-MF-zCY"/>
                         <outlet property="itemNameLabel" destination="JPB-pK-g1L" id="Lz1-ou-SqL"/>
                         <outlet property="itemRequirementsLabel" destination="lEb-UE-1FJ" id="7bF-vg-j7W"/>
+                        <outlet property="unequipButton" destination="WJr-MS-l58" id="CqZ-Fq-wv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uF-GI-kgL" userLabel="First Responder" sceneMemberID="firstResponder"/>

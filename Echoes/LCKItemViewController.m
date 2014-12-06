@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemFlavorTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemRequirementsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *unequipButton;
 
 @property (nonatomic) LCKItem *item;
 
@@ -54,6 +55,8 @@
     self.itemRequirementsLabel.textColor = [UIColor titleTextColor];
     self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
     
+    self.unequipButton.titleLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
+    
     self.view.backgroundColor = [UIColor backgroundColor];
     self.view.layer.masksToBounds = NO;
     self.view.layer.cornerRadius = 8.0;
@@ -63,6 +66,10 @@
 }
 
 #pragma mark - LCKItemViewController
+
+- (IBAction)unequipButtonTapped:(UIButton *)sender {
+    
+}
 
 - (instancetype)initWithItem:(LCKItem *)item {
     self = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ItemViewController"];
