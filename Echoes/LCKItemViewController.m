@@ -38,7 +38,7 @@
     
     self.itemImageView.image = [UIImage imageNamed:self.item.imageName];
     
-    self.itemActionLabel.text = [NSString stringWithFormat:@"Action: %@", self.item.actionText];
+    self.itemActionLabel.text = self.item.actionText;
     self.itemActionLabel.textColor = [UIColor titleTextColor];
     self.itemActionLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     
@@ -63,6 +63,12 @@
     self.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.view.layer.borderWidth = 1.0;
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.unequipButton.hidden = !self.item.isEquipped;
 }
 
 #pragma mark - LCKItemViewController

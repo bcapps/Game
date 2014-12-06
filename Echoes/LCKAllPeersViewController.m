@@ -55,9 +55,11 @@
 
     NSData *itemData = [self.item.name dataUsingEncoding:NSUTF8StringEncoding];
     
-    [self.session sendData:itemData toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    if (peerID && itemData) {
+        [self.session sendData:itemData toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - UITableViewDataSource

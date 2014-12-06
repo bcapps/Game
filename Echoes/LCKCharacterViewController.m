@@ -26,6 +26,8 @@ const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
 
+typedef void(^LCKItemViewControllerDismissCompletion)();
+
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
@@ -159,7 +161,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
         _overlayView = [[UIView alloc] initWithFrame:self.view.frame];
         _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
         
-        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissCurrentlyPresentedViewController)];
+        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(overlayViewTapped)];
         
         [_overlayView addGestureRecognizer:dismissGesture];
     }
@@ -197,34 +199,53 @@ const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
         return;
     }
     
-    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
-    itemViewController.presentationFrame = button.frame;
-    itemViewController.view.frame = [self itemControllerFrame];
-    itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    
-    self.overlayView.alpha = 0.0;
-    [self.view addSubview:self.overlayView];
-    [self addChildViewController:itemViewController];
-    [self.view addSubview:itemViewController.view];
-    [itemViewController didMoveToParentViewController:self];
-    
-    [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
-        itemViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
-        self.overlayView.alpha = 1.0;
+    [self dismissCurrentlyPresentedViewController:^{
+        LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
+        itemViewController.presentationFrame = button.frame;
+        itemViewController.view.frame = [self itemControllerFrame];
+        itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+        
+        self.overlayView.alpha = 0.0;
+        [self.view addSubview:self.overlayView];
+        [self addChildViewController:itemViewController];
+        [self.view addSubview:itemViewController.view];
+        [itemViewController didMoveToParentViewController:self];
+        
+        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+            itemViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            self.overlayView.alpha = 1.0;
+        }];
+        
+        self.currentlyPresentedItemViewController = itemViewController;
     }];
-    
-    self.currentlyPresentedItemViewController = itemViewController;
 }
 
-- (void)dismissCurrentlyPresentedViewController {
-    [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
-        self.overlayView.alpha = 0.0;
-        self.currentlyPresentedItemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    } completion:^(BOOL finished) {
-        [self.currentlyPresentedItemViewController willMoveToParentViewController:nil];
-        [self.currentlyPresentedItemViewController.view removeFromSuperview];
-        [self.currentlyPresentedItemViewController removeFromParentViewController];
-    }];
+- (void)overlayViewTapped {
+    [self dismissCurrentlyPresentedViewController:nil];
+}
+
+- (void)dismissCurrentlyPresentedViewController:(LCKItemViewControllerDismissCompletion)completion {
+    if (!self.currentlyPresentedItemViewController) {
+        if (completion) {
+            completion();
+        }
+    }
+    else {
+        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+            self.overlayView.alpha = 0.0;
+            self.currentlyPresentedItemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+        } completion:^(BOOL finished) {
+            [self.currentlyPresentedItemViewController willMoveToParentViewController:nil];
+            [self.currentlyPresentedItemViewController.view removeFromSuperview];
+            [self.currentlyPresentedItemViewController removeFromParentViewController];
+            
+            self.currentlyPresentedItemViewController = nil;
+            
+            if (completion) {
+                completion();
+            }
+        }];
+    }
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {
@@ -290,7 +311,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self updateItemButtons];
-    [self dismissCurrentlyPresentedViewController];
+    [self dismissCurrentlyPresentedViewController:nil];
 }
 
 @end

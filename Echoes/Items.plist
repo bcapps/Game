@@ -6,16 +6,37 @@
 		<key>name</key>
 		<string>Broadsword</string>
 		<key>actionText</key>
-		<string>Attack for 1d6</string>
+		<string>Slash: Swing your sword in an arc dealing 1d6 damage to enemies in front of you.</string>
 		<key>descriptiveText</key>
-		<string>A common iron sword.</string>
+		<string>A straight sword useful for slashing at enemies.</string>
 		<key>flavorText</key>
-		<string>A slick blade used for killing undead.</string>
+		<string></string>
 		<key>imageName</key>
 		<string>broadsword</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 1</string>
+		</array>
+		<key>itemSlots</key>
+		<array>
+			<string>lefthand</string>
+			<string>righthand</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kite Shield</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>kiteshield</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
 		</array>
 		<key>itemSlots</key>
 		<array>
