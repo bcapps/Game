@@ -32,4 +32,7 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 - (void)equipItem:(LCKItem *)item;
 - (void)unequipItem:(LCKItem *)item;
 
+- (void)addItemToInventory:(LCKItem *)item;
+- (void)removeItemFromInventory:(LCKItem *)item;
+
 @end

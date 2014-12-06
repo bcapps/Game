@@ -54,4 +54,24 @@
     }
 }
 
+- (void)addItemToInventory:(LCKItem *)item {
+    if (!item) {
+        return;
+    }
+    
+    NSMutableArray *items = [self.items mutableCopy];
+    [items addObject:[item copy]];
+    self.items = [items copy];
+}
+
+- (void)removeItemFromInventory:(LCKItem *)item {
+    if (!item) {
+        return;
+    }
+    
+    NSMutableArray *items = [self.items mutableCopy];
+    [items removeObject:item];
+    self.items = [items copy];
+}
+
 @end

@@ -91,9 +91,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
         
-        NSMutableArray *items = [self.character.items mutableCopy];
-        [items removeObject:item];
-        self.character.items = [items copy];
+        [self.character removeItemFromInventory:item];
         
         [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 

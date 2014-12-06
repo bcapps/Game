@@ -33,18 +33,20 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 }
 
 - (void)startMonitoring {
-    MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:self.characterName];
-    
-    self.serviceBrowser = [[MCNearbyServiceBrowser alloc] initWithPeer:peerID serviceType:@"echoes"];
-    self.serviceBrowser.delegate = self;
-    [self.serviceBrowser startBrowsingForPeers];
-    
-    self.serviceAdvertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:peerID discoveryInfo:@{} serviceType:@"echoes"];
-    self.serviceAdvertiser.delegate = self;
-    [self.serviceAdvertiser startAdvertisingPeer];
-    
-    self.session = [[MCSession alloc] initWithPeer:peerID];
-    self.session.delegate = self;
+    if (self.characterName) {
+        MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:self.characterName];
+        
+        self.serviceBrowser = [[MCNearbyServiceBrowser alloc] initWithPeer:peerID serviceType:@"echoes"];
+        self.serviceBrowser.delegate = self;
+        [self.serviceBrowser startBrowsingForPeers];
+        
+        self.serviceAdvertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:peerID discoveryInfo:@{} serviceType:@"echoes"];
+        self.serviceAdvertiser.delegate = self;
+        [self.serviceAdvertiser startAdvertisingPeer];
+        
+        self.session = [[MCSession alloc] initWithPeer:peerID];
+        self.session.delegate = self;
+    }
 }
 
 - (void)sendItemName:(NSString *)itemName {

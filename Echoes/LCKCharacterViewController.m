@@ -283,6 +283,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     LCKItem *item = [LCKItemProvider itemForName:itemName];
     
+    [self.character addItemToInventory:item];
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    
     [self presentItemViewControllerForItem:item fromButton:nil];
 }
 
