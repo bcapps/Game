@@ -28,6 +28,7 @@ const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
 
 const CGFloat LCKCharacterViewControllerNumberOfStats = 5;
 const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
+const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
 
@@ -91,8 +92,13 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
     
+    
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
     self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
+    
+    if (self.character.characterGender == CharacterGenderFemale) {
+        self.silhouetteWidthConstraint.constant -= LCKCharacterViewControllerFemaleFix;
+    }
     
     [self.view updateConstraintsIfNeeded];
     
