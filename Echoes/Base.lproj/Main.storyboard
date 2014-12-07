@@ -176,14 +176,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
-                                <rect key="frame" x="0.0" y="440" width="600" height="1"/>
+                                <rect key="frame" x="0.0" y="539" width="600" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5Hn-Vs-iFi"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EmM-eE-XlB">
-                                <rect key="frame" x="0.0" y="451" width="600" height="149"/>
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Hbv-DX-o7Y"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gld-cz-cN6">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -276,8 +279,15 @@
                             <constraint firstItem="675-xe-31g" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="10" id="qAP-0L-jD0"/>
                             <constraint firstItem="Is3-ZS-0SK" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="sX3-pY-DDC"/>
                             <constraint firstAttribute="width" secondItem="oab-Ny-zTp" secondAttribute="width" id="sdS-dV-Z2J"/>
+                            <constraint firstItem="EmM-eE-XlB" firstAttribute="top" secondItem="oab-Ny-zTp" secondAttribute="bottom" constant="5" id="w7y-4M-MIb"/>
                             <constraint firstItem="IHP-mI-kKS" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="-20" id="zN9-Iu-kUw"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="67d-qY-hUO"/>
+                                <exclude reference="G2t-yb-TQW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dtT-lT-OF2">
                         <barButtonItem key="rightBarButtonItem" image="inventoryIcon.png" id="ieS-zi-AAO" userLabel="Inventory Button">
@@ -297,7 +307,10 @@
                         <outlet property="leftHandButton" destination="675-xe-31g" id="WwL-B3-Rir"/>
                         <outlet property="rightHandButton" destination="yya-Wz-xsE" id="eB8-it-Dxw"/>
                         <outlet property="secondAccessoryButton" destination="z5l-dZ-bU0" id="wYI-1E-OPq"/>
+                        <outlet property="silhouetteHeightConstraint" destination="avw-uY-2OZ" id="i4x-ye-cgg"/>
                         <outlet property="silhouetteImageView" destination="U3k-ex-baV" id="G7d-g9-oUa"/>
+                        <outlet property="silhouetteWidthConstraint" destination="g8d-a6-c1M" id="Wx8-CK-Dfb"/>
+                        <outlet property="statsFlowLayout" destination="gld-cz-cN6" id="bUB-xS-fJY"/>
                         <outletCollection property="equipmentButtons" destination="IHP-mI-kKS" id="gjf-bR-axH"/>
                         <outletCollection property="equipmentButtons" destination="7D5-tH-Ejn" id="ifd-YF-BXr"/>
                         <outletCollection property="equipmentButtons" destination="yya-Wz-xsE" id="pDP-hl-UCA"/>
@@ -448,12 +461,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="84" width="600" height="476"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="pns-PM-wSE"/>
                                         </constraints>

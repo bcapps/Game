@@ -26,6 +26,9 @@ const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
 
+const CGFloat LCKCharacterViewControllerNumberOfStats = 5;
+const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
+
 typedef void(^LCKItemViewControllerDismissCompletion)();
 
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate>
@@ -41,6 +44,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
 @property (weak, nonatomic) IBOutlet UILabel *healthLabel;
+
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *statsFlowLayout;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *silhouetteWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *silhouetteHeightConstraint;
 
 @property (strong, nonatomic) IBOutletCollection(LCKItemButton) NSArray *equipmentButtons;
 
@@ -83,6 +90,16 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     [self.multipeerManager startMonitoring];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
+    
+    self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
+    self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
+    
+    [self.view updateConstraintsIfNeeded];
+    
+    CGFloat itemSpacing = self.statsFlowLayout.minimumInteritemSpacing;
+    CGFloat numberOfItems = LCKCharacterViewControllerNumberOfStats;
+    
+    self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, LCKCharacterViewControllerStatHeight);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -292,7 +309,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return LCKCharacterViewControllerNumberOfStats;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
