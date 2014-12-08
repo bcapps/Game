@@ -16,4 +16,7 @@
 + (UIColor *)removeColor;
 + (UIColor *)flavorTextColor;
 
++ (UIColor *)greenHealthColor;
++ (UIColor *)yellowHealthColor;
+
 @end

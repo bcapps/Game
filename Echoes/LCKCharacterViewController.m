@@ -141,6 +141,18 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (void)updateHealthText {
     self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
+    
+    CGFloat healthPercentage = self.character.currentHealth.floatValue / self.character.maximumHealth.floatValue;
+    
+    if (healthPercentage > 0.66) {
+        self.healthLabel.textColor = [UIColor greenHealthColor];
+    }
+    else if (healthPercentage > 0.33) {
+        self.healthLabel.textColor = [UIColor yellowHealthColor];
+    }
+    else {
+        self.healthLabel.textColor = [UIColor redColor];
+    }
 }
 
 - (UIView *)overlayView {

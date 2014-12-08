@@ -30,4 +30,12 @@
     return [UIColor colorWithRed:0.85 green:0.05 blue:0.0 alpha:1.0];
 }
 
++ (UIColor *)greenHealthColor {
+    return [UIColor colorWithRed:0.1 green:0.85 blue:0.0 alpha:1.0];
+}
+
++ (UIColor *)yellowHealthColor {
+    return [UIColor colorWithRed:0.85 green:0.85 blue:0.05 alpha:1.0];
+}
+
 @end
