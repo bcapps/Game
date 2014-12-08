@@ -33,7 +33,7 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 }
 
 - (void)startMonitoring {
-    if (self.characterName) {
+    if (self.characterName.length > 0) {
         MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:self.characterName];
         
         self.serviceBrowser = [[MCNearbyServiceBrowser alloc] initWithPeer:peerID serviceType:@"echoes"];
