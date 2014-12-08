@@ -19,8 +19,7 @@
 		</array>
 		<key>itemSlots</key>
 		<array>
-			<string>lefthand</string>
-			<string>righthand</string>
+			<string>onehand</string>
 		</array>
 	</dict>
 	<dict>
@@ -40,8 +39,7 @@
 		</array>
 		<key>itemSlots</key>
 		<array>
-			<string>lefthand</string>
-			<string>righthand</string>
+			<string>onehand</string>
 		</array>
 	</dict>
 </array>

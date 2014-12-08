@@ -16,8 +16,7 @@ NSString * const LCKItemImageKey = @"imageName";
 NSString * const LCKItemAttributeRequirementsKey = @"attributeRequirements";
 NSString * const LCKItemItemSlotsKey = @"itemSlots";
 
-NSString * const LCKItemLeftHandKey = @"lefthand";
-NSString * const LCKItemRightHandKey = @"righthand";
+NSString * const LCKItemOneHandKey = @"onehand";
 NSString * const LCKItemTwoHandKey = @"twohand";
 NSString * const LCKItemHelmetKey = @"helmet";
 NSString * const LCKItemChestKey = @"chest";
@@ -129,11 +128,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 }
 
 - (LCKItemSlot)itemSlotForSlotString:(NSString *)slotString {
-    if ([slotString isEqualToString:LCKItemLeftHandKey]) {
-        return LCKItemSlotLeftHand;
-    }
-    else if ([slotString isEqualToString:LCKItemRightHandKey]) {
-        return LCKItemSlotRightHand;
+    if ([slotString isEqualToString:LCKItemOneHandKey]) {
+        return LCKItemSlotOneHand;
     }
     else if ([slotString isEqualToString:LCKItemHelmetKey]) {
         return LCKItemSlotHelmet;

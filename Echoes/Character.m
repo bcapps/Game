@@ -80,7 +80,7 @@
     NSMutableArray *weapons = [NSMutableArray array];
     
     for (LCKItem *item in self.items) {
-        if (item.isEquipped && ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand] || [item isAppropriateForItemSlot:LCKItemSlotTwoHand])) {
+        if (item.isEquipped && ([item isAppropriateForItemSlot:LCKItemSlotOneHand] || [item isAppropriateForItemSlot:LCKItemSlotTwoHand])) {
             [weapons addObject:item];
         }
     }

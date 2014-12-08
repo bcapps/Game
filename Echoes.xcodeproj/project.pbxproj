@@ -29,6 +29,7 @@
 		F21F435C1A302C7900FEA417 /* LCKInventoryItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F435B1A302C7900FEA417 /* LCKInventoryItemCell.m */; };
 		F21F43621A32CE0500FEA417 /* LCKMultipeerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */; };
 		F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */; };
+		F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -124,6 +125,8 @@
 		F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerManager.m; sourceTree = "<group>"; };
 		F21F43641A32D78000FEA417 /* LCKAllPeersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKAllPeersViewController.h; sourceTree = "<group>"; };
 		F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKAllPeersViewController.m; sourceTree = "<group>"; };
+		F21F43671A355E8400FEA417 /* LCKEquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEquipmentViewController.h; sourceTree = "<group>"; };
+		F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEquipmentViewController.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */,
 				F21F43511A301D1B00FEA417 /* LCKInventoryTableViewController.h */,
 				F21F43521A301D1B00FEA417 /* LCKInventoryTableViewController.m */,
+				F21F43671A355E8400FEA417 /* LCKEquipmentViewController.h */,
+				F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */,
 				F21F433C1A2FCF4C00FEA417 /* LCKItemViewController.h */,
 				F21F433D1A2FCF4C00FEA417 /* LCKItemViewController.m */,
 				F21F43261A2F813800FEA417 /* LCKItemButton.h */,
@@ -607,6 +612,7 @@
 				F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */,
 				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
+				F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,

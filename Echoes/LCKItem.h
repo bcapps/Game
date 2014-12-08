@@ -15,8 +15,7 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotBoots,
     LCKItemSlotFirstAccessory,
     LCKItemSlotSecondAccessory,
-    LCKItemSlotLeftHand,
-    LCKItemSlotRightHand,
+    LCKItemSlotOneHand,
     LCKItemSlotTwoHand
 };
 

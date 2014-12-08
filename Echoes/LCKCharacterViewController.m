@@ -17,6 +17,8 @@
 #import "LCKItemButton.h"
 #import "LCKItem.h"
 
+#import "LCKEquipmentViewController.h"
+
 #import "LCKMultipeerManager.h"
 
 #import "UIColor+ColorStyle.h"
@@ -54,7 +56,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 @property (strong, nonatomic) IBOutletCollection(LCKItemButton) NSArray *equipmentButtons;
 
-@property (nonatomic) LCKItemViewController *currentlyPresentedItemViewController;
+@property (nonatomic) UIViewController *currentlyPresentedItemViewController;
 @property (nonatomic) UIView *overlayView;
 
 @property (nonatomic) LCKMultipeerManager *multipeerManager;
@@ -179,29 +181,30 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     return itemViewController;
 }
 
-- (void)presentItemViewControllerForItem:(LCKItem *)item fromButton:(LCKItemButton *)button {
-    if (!item) {
-        return;
-    }
+- (LCKEquipmentViewController *)newEquipmentViewControllerForEquipmentTypes:(NSArray *)equipmentTypes {
+    LCKEquipmentViewController *equipmentViewController = [[LCKEquipmentViewController alloc] initWithCharacter:self.character equipmentTypes:equipmentTypes];
+    equipmentViewController.view.clipsToBounds = YES;
     
+    return equipmentViewController;
+}
+
+- (void)presentViewController:(UIViewController *)viewController fromButton:(LCKItemButton *)button {
     [self dismissCurrentlyPresentedViewController:^{
-        LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
-        itemViewController.presentationFrame = button.frame;
-        itemViewController.view.frame = [self itemControllerFrame];
-        itemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+        viewController.view.frame = [self itemControllerFrame];
+        viewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         
         self.overlayView.alpha = 0.0;
         [self.view addSubview:self.overlayView];
-        [self addChildViewController:itemViewController];
-        [self.view addSubview:itemViewController.view];
-        [itemViewController didMoveToParentViewController:self];
+        [self addChildViewController:viewController];
+        [self.view addSubview:viewController.view];
+        [viewController didMoveToParentViewController:self];
         
         [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
-            itemViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            viewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
             self.overlayView.alpha = 1.0;
         }];
         
-        self.currentlyPresentedItemViewController = itemViewController;
+        self.currentlyPresentedItemViewController = viewController;
     }];
 }
 
@@ -234,7 +237,21 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {
-    [self presentItemViewControllerForItem:button.item fromButton:button];
+    UIViewController *viewController;
+    
+    if (button.item) {
+        viewController = [self newItemViewControllerForItem:button.item];
+    }
+    else {
+        NSArray *equipmentTypes;
+        
+        if (button == self.leftHandButton || button == self.rightHandButton) {
+            equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
+        }
+        viewController = [self newEquipmentViewControllerForEquipmentTypes:nil];
+    }
+    
+    [self presentViewController:viewController fromButton:button];
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
@@ -271,7 +288,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     [self.character addItemToInventory:item];
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
-    [self presentItemViewControllerForItem:item fromButton:nil];
+    LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
+    
+    [self presentViewController:itemViewController fromButton:nil];
 }
 
 #pragma mark - UICollectionViewDataSource

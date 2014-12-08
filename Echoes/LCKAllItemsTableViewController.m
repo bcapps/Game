@@ -69,7 +69,7 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     }
     
     for (LCKItem *item in [LCKItemProvider allItems]) {
-        if ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand]) {
+        if ([item isAppropriateForItemSlot:LCKItemSlotOneHand]) {
             [[itemDictionary objectForKey:LCKAllItemsTypeNameOneHanded] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {

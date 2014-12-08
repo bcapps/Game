@@ -20,9 +20,7 @@
 
 @interface LCKItemViewController : UIViewController
 
-@property (nonatomic) CGRect presentationFrame;
 @property (nonatomic, weak) id <LCKItemViewControllerDelegate> delegate;
-
 @property (nonatomic, readonly) LCKItem *item;
 
 - (instancetype)initWithItem:(LCKItem *)item;
