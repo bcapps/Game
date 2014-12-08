@@ -13,6 +13,8 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
+#import "LCKItemCell.h"
+
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 @interface LCKEquipmentViewController ()
@@ -31,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
     
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.layer.masksToBounds = NO;
@@ -78,17 +80,13 @@
     return self.itemsToDisplay.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
     
     LCKItem *item = [self.itemsToDisplay safeObjectAtIndex:indexPath.row];
     
     cell.backgroundColor = self.tableView.backgroundColor;
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.textLabel.text = item.name;
-    cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
-    cell.textLabel.textColor = [UIColor titleTextColor];
     
     return cell;
 }

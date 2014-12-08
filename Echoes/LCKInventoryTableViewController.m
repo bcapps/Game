@@ -30,10 +30,6 @@
     
     [self.tableView registerClass:[LCKInventoryItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKInventoryItemCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
-    
-    UIMenuItem *equipItem = [[UIMenuItem alloc] initWithTitle:@"Equip" action:NSSelectorFromString(@"equipItem")];
-    [[UIMenuController sharedMenuController] setMenuItems: @[equipItem]];
-    [[UIMenuController sharedMenuController] update];
 }
 
 #pragma mark - LCKInventoryItemCellDelegate
@@ -63,28 +59,13 @@
     LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
     
     cell.backgroundColor = self.tableView.backgroundColor;
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.textLabel.text = item.name;
-    cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
-    cell.textLabel.textColor = [UIColor titleTextColor];
-        
+    
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
-}
-
-- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
--(BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-    return (action == @selector(copy:));
-}
-
-- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-    // required
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -15,6 +15,8 @@
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
+#import "LCKItemCell.h"
+
 #import "LCKMultipeerManager.h"
 #import "LCKAllPeersViewController.h"
 
@@ -53,7 +55,7 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     [super viewDidLoad];
     
     self.tableView.backgroundColor = [UIColor backgroundColor];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
     
     self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:@"DM"];
@@ -75,7 +77,7 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
         if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
             [[itemDictionary objectForKey:LCKAllItemsTypeNameTwoHanded] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory]) {
+        if ([item isAppropriateForItemSlot:LCKItemSlotAccessory]) {
             [[itemDictionary objectForKey:LCKAllItemsTypeNameAccessory] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
@@ -121,15 +123,12 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
     cell.backgroundColor = [UIColor backgroundColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     LCKItem *item = [self itemForIndexPath:indexPath];
     
     cell.textLabel.text = item.name;
-    cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
-    cell.textLabel.textColor = [UIColor titleTextColor];
     
     return cell;
 }

@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+#import "LCKItemCell.h"
 
 @protocol LCKInventoryItemCellDelegate <NSObject>
 
@@ -14,7 +16,7 @@
 
 @end
 
-@interface LCKInventoryItemCell : UITableViewCell
+@interface LCKInventoryItemCell : LCKItemCell;
 
 @property (nonatomic, weak) id <LCKInventoryItemCellDelegate> delegate;
 

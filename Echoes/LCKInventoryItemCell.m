@@ -10,20 +10,6 @@
 
 @implementation LCKInventoryItemCell
 
-#pragma mark - UIResponder
-
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    if (action == @selector(equipItem)) {
-        return YES;
-    }
-        
-    return NO;
-}
-
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
 #pragma mark - LCKInventoryItemCell
 
 - (void)equipItem {
