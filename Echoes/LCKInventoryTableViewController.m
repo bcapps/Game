@@ -10,14 +10,14 @@
 #import "LCKAllItemsTableViewController.h"
 #import "LCKEchoCoreDataController.h"
 #import "LCKItem.h"
-#import "LCKInventoryItemCell.h"
+#import "LCKItemCell.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
-@interface LCKInventoryTableViewController () <LCKInventoryItemCellDelegate>
+@interface LCKInventoryTableViewController ()
 
 @end
 
@@ -28,20 +28,8 @@
  
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.1 alpha:1.0];
     
-    [self.tableView registerClass:[LCKInventoryItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKInventoryItemCell class])];
+    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
-}
-
-#pragma mark - LCKInventoryItemCellDelegate
-
-- (void)itemCellWasEquipped:(UITableViewCell *)cell {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
-    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
-    [self.character equipItem:item];
-
-    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
-    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -53,8 +41,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKInventoryItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKInventoryItemCell class]) forIndexPath:indexPath];
-    cell.delegate = self;
+    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
     
     LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
     

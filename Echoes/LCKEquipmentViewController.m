@@ -15,6 +15,8 @@
 
 #import "LCKItemCell.h"
 
+#import "LCKEchoCoreDataController.h"
+
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 @interface LCKEquipmentViewController ()
@@ -61,12 +63,14 @@
     NSMutableArray *items = [NSMutableArray array];
     
     for (LCKItem *item in self.character.items) {
-        for (NSNumber *typeNumber in self.equipmentTypes) {
-            LCKItemSlot slot = [typeNumber integerValue];
-            
-            if ([item isAppropriateForItemSlot:slot]) {
-                [items addObject:item];
-                break;
+        if (!item.isEquipped) {
+            for (NSNumber *typeNumber in self.equipmentTypes) {
+                LCKItemSlot slot = [typeNumber integerValue];
+                
+                if ([item isAppropriateForItemSlot:slot]) {
+                    [items addObject:item];
+                    break;
+                }
             }
         }
     }
@@ -91,5 +95,12 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LCKItem *item = [self.itemsToDisplay safeObjectAtIndex:indexPath.row];
+
+    [self.delegate itemWasSelected:item];
+}
 
 @end

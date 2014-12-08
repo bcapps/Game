@@ -9,9 +9,18 @@
 @import UIKit;
 
 @class Character;
+@class LCKItem;
+
+@protocol LCKEquipmentViewControllerDelegate <NSObject>
+
+- (void)itemWasSelected:(LCKItem *)item;
+
+@end
 
 @interface LCKEquipmentViewController : UITableViewController
 
 - (instancetype)initWithCharacter:(Character *)character equipmentTypes:(NSArray *)equipmentTypes;
+
+@property (nonatomic) id <LCKEquipmentViewControllerDelegate> delegate;
 
 @end

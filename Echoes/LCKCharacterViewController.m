@@ -36,7 +36,7 @@ const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate>
+@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -183,6 +183,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (LCKEquipmentViewController *)newEquipmentViewControllerForEquipmentTypes:(NSArray *)equipmentTypes {
     LCKEquipmentViewController *equipmentViewController = [[LCKEquipmentViewController alloc] initWithCharacter:self.character equipmentTypes:equipmentTypes];
+    equipmentViewController.delegate = self;
     equipmentViewController.view.clipsToBounds = YES;
     
     return equipmentViewController;
@@ -327,6 +328,17 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (void)unequipButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
     [self.character unequipItem:itemViewController.item];
+    
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    
+    [self updateItemButtons];
+    [self dismissCurrentlyPresentedViewController:nil];
+}
+
+#pragma mark - LCKEquipmentViewControllerDelegate
+
+- (void)itemWasSelected:(LCKItem *)item {
+    [self.character equipItem:item];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
