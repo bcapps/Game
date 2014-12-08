@@ -21,6 +21,6 @@
 
 - (instancetype)initWithCharacter:(Character *)character equipmentTypes:(NSArray *)equipmentTypes;
 
-@property (nonatomic) id <LCKEquipmentViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <LCKEquipmentViewControllerDelegate> delegate;
 
 @end
