@@ -126,7 +126,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.bootsButton.item = self.character.equippedBoots;
     
     self.firstAccessoryButton.item = [self.character.equippedAccessories firstObject];
-    self.secondAccessoryButton.item = [self.character.equippedWeapons safeObjectAtIndex:1];
+    self.secondAccessoryButton.item = [self.character.equippedAccessories safeObjectAtIndex:1];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
