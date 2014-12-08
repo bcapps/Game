@@ -25,6 +25,7 @@
 @property (nonatomic) NSArray *equipmentTypes;
 
 @property (nonatomic, readonly) NSArray *itemsToDisplay;
+@property (nonatomic) UILabel *noItemsLabel;
 
 @end
 
@@ -44,6 +45,24 @@
     self.tableView.layer.borderWidth = 1.0;
 
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    if (self.itemsToDisplay.count == 0) {
+        self.noItemsLabel = [[UILabel alloc] init];
+        self.noItemsLabel.textAlignment = NSTextAlignmentCenter;
+        self.noItemsLabel.text = @"No Items";
+        self.noItemsLabel.textColor = [UIColor descriptiveTextColor];
+        self.noItemsLabel.font = [UIFont descriptiveTextFontOfSize:22.0];
+        
+        [self.tableView addSubview:self.noItemsLabel];
+    }
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    CGRect labelFrame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    
+    self.noItemsLabel.frame = labelFrame;
 }
 
 #pragma mark - LCKEquipmentViewController

@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+    self.tableView.backgroundColor = [UIColor backgroundColor];
     
     [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
