@@ -74,4 +74,60 @@
     self.items = [items copy];
 }
 
+#pragma mark - Equipment
+
+- (NSArray *)equippedWeapons {
+    NSMutableArray *weapons = [NSMutableArray array];
+    
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand] || [item isAppropriateForItemSlot:LCKItemSlotTwoHand])) {
+            [weapons addObject:item];
+        }
+    }
+    
+    return [weapons copy];
+}
+
+- (NSArray *)equippedAccessories {
+    NSMutableArray *accessories = [NSMutableArray array];
+    
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory])) {
+            [accessories addObject:item];
+        }
+    }
+    
+    return [accessories copy];
+}
+
+- (LCKItem *)equippedHelm {
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
+            return item;
+        }
+    }
+    
+    return nil;
+}
+
+- (LCKItem *)equippedChest {
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotChest]) {
+            return item;
+        }
+    }
+    
+    return nil;
+}
+
+- (LCKItem *)equippedBoots {
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotBoots]) {
+            return item;
+        }
+    }
+    
+    return nil;
+}
+
 @end

@@ -29,6 +29,12 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 @property (nonatomic, readonly) NSNumber * maximumHealth;
 @property (nonatomic, readonly) CharacterGender characterGender;
 
+@property (nonatomic, readonly) NSArray *equippedWeapons;
+@property (nonatomic, readonly) NSArray *equippedAccessories;
+@property (nonatomic, readonly) LCKItem *equippedHelm;
+@property (nonatomic, readonly) LCKItem *equippedChest;
+@property (nonatomic, readonly) LCKItem *equippedBoots;
+
 - (void)equipItem:(LCKItem *)item;
 - (void)unequipItem:(LCKItem *)item;
 

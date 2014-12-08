@@ -22,6 +22,8 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
+#import <LCKCategories/NSArray+LCKAdditions.h>
+
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
@@ -115,54 +117,14 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)updateItemButtons {
-    LCKItem *leftHandItem;
-    LCKItem *rightHandItem;
-    LCKItem *helmetItem;
-    LCKItem *chestItem;
-    LCKItem *bootsItem;
-    LCKItem *firstAccessoryItem;
-    LCKItem *secondAccessoryItem;
+    self.rightHandButton.item = [self.character.equippedWeapons firstObject];
+    self.leftHandButton.item = [self.character.equippedWeapons safeObjectAtIndex:1];
+    self.helmetButton.item = self.character.equippedHelm;
+    self.chestButton.item = self.character.equippedChest;
+    self.bootsButton.item = self.character.equippedBoots;
     
-    for (LCKItem *item in self.character.items) {
-        if (item.isEquipped) {
-            if ([item isAppropriateForItemSlot:LCKItemSlotLeftHand] || [item isAppropriateForItemSlot:LCKItemSlotRightHand]) {
-                if (!leftHandItem) {
-                    leftHandItem = item;
-                }
-                else {
-                    rightHandItem = item;
-                }
-            }
-            else if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
-                leftHandItem = item;
-            }
-            else if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
-                helmetItem = item;
-            }
-            else if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
-                chestItem = item;
-            }
-            else if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
-                bootsItem = item;
-            }
-            else if ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory]) {
-                if (!firstAccessoryItem) {
-                    firstAccessoryItem = item;
-                }
-                else {
-                    secondAccessoryItem = item;
-                }
-            }
-        }
-    }
-    
-    self.leftHandButton.item = leftHandItem;
-    self.rightHandButton.item = rightHandItem;
-    self.helmetButton.item = helmetItem;
-    self.chestButton.item = chestItem;
-    self.bootsButton.item = bootsItem;
-    self.firstAccessoryButton.item = firstAccessoryItem;
-    self.firstAccessoryButton.item = secondAccessoryItem;
+    self.firstAccessoryButton.item = [self.character.equippedAccessories firstObject];
+    self.secondAccessoryButton.item = [self.character.equippedWeapons safeObjectAtIndex:1];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
