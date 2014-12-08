@@ -249,9 +249,19 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
             equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
         }
         else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
-            //equipmentTypes = @[@(LCKItemSlotFirstAccessory)]
+            equipmentTypes = @[@(LCKItemSlotAccessory)];
         }
-        viewController = [self newEquipmentViewControllerForEquipmentTypes:nil];
+        else if (button == self.helmetButton) {
+            equipmentTypes = @[@(LCKItemSlotHelmet)];
+        }
+        else if (button == self.chestButton) {
+            equipmentTypes = @[@(LCKItemSlotChest)];
+        }
+        else if (button == self.bootsButton) {
+            equipmentTypes = @[@(LCKItemSlotBoots)];
+        }
+
+        viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes];
     }
     
     [self presentViewController:viewController fromButton:button];

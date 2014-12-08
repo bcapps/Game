@@ -11,6 +11,7 @@
 #import "LCKItem.h"
 
 #import "UIColor+ColorStyle.h"
+#import "UIFont+FontStyle.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
@@ -83,7 +84,11 @@
     
     LCKItem *item = [self.itemsToDisplay safeObjectAtIndex:indexPath.row];
     
+    cell.backgroundColor = self.tableView.backgroundColor;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.textLabel.text = item.name;
+    cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
+    cell.textLabel.textColor = [UIColor titleTextColor];
     
     return cell;
 }
