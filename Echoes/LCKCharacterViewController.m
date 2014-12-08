@@ -248,6 +248,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         if (button == self.leftHandButton || button == self.rightHandButton) {
             equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
         }
+        else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
+            //equipmentTypes = @[@(LCKItemSlotFirstAccessory)]
+        }
         viewController = [self newEquipmentViewControllerForEquipmentTypes:nil];
     }
     

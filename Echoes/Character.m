@@ -92,7 +92,7 @@
     NSMutableArray *accessories = [NSMutableArray array];
     
     for (LCKItem *item in self.items) {
-        if (item.isEquipped && ([item isAppropriateForItemSlot:LCKItemSlotFirstAccessory] || [item isAppropriateForItemSlot:LCKItemSlotSecondAccessory])) {
+        if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotAccessory]) {
             [accessories addObject:item];
         }
     }

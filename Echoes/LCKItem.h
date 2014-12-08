@@ -13,8 +13,7 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotHelmet,
     LCKItemSlotChest,
     LCKItemSlotBoots,
-    LCKItemSlotFirstAccessory,
-    LCKItemSlotSecondAccessory,
+    LCKItemSlotAccessory,
     LCKItemSlotOneHand,
     LCKItemSlotTwoHand
 };
