@@ -64,4 +64,24 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     }
 }
 
+- (NSNumber *)statValueForStatString:(NSString *)statString {
+    if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeVitality]]) {
+        return self.vitality;
+    }
+    else if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeStrength]]) {
+        return self.strength;
+    }
+    else if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeDexterity]]) {
+        return self.dexterity;
+    }
+    else if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeIntelligence]]) {
+        return self.intelligence;
+    }
+    else if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeFaith]]) {
+        return self.faith;
+    }
+    
+    return nil;
+}
+
 @end

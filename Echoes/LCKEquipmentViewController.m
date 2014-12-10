@@ -86,7 +86,7 @@
             for (NSNumber *typeNumber in self.equipmentTypes) {
                 LCKItemSlot slot = [typeNumber integerValue];
                 
-                if ([item isAppropriateForItemSlot:slot]) {
+                if ([item isAppropriateForItemSlot:slot] && [self.character meetsRequirementsForItem:item]) {
                     [items addObject:item];
                     break;
                 }

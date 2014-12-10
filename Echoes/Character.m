@@ -134,4 +134,20 @@
     return nil;
 }
 
+- (BOOL)meetsRequirementsForItem:(LCKItem *)item {
+    BOOL meetsRequirements = YES;
+    
+    for (NSString *requirement in item.attributeRequirements) {
+        NSString *statString = [[requirement componentsSeparatedByString:@" "] firstObject];
+        NSString *requirementString = [[requirement componentsSeparatedByString:@" "] lastObject];
+        
+        if ([[self.characterStats statValueForStatString:statString] integerValue] < [requirementString integerValue]) {
+            meetsRequirements = NO;
+            break;
+        }
+    }
+    
+    return meetsRequirements;
+}
+
 @end
