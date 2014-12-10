@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemRequirementsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *unequipButton;
 @property (weak, nonatomic) IBOutlet UIView *nameSeparatorLineView;
+@property (weak, nonatomic) IBOutlet UILabel *itemTypeLabel;
 
 @property (nonatomic) LCKItem *item;
 @property (nonatomic) LCKItemViewControllerDisplayStyle displayStyle;
@@ -56,6 +57,10 @@
     self.itemRequirementsLabel.text = requirementsText;
     self.itemRequirementsLabel.textColor = [UIColor descriptiveTextColor];
     self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
+    
+    self.itemTypeLabel.text = [LCKItem typeDisplayNameForItemSlot:self.item.itemSlot];
+    self.itemTypeLabel.textColor = [UIColor descriptiveTextColor];
+    self.itemTypeLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     
     self.unequipButton.titleLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     [self.unequipButton setTitleColor:[UIColor removeColor] forState:UIControlStateNormal];

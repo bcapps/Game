@@ -18,6 +18,13 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotTwoHand
 };
 
+extern NSString * const LCKItemTypeNameOneHanded;
+extern NSString * const LCKItemTypeNameTwoHanded ;
+extern NSString * const LCKItemTypeNameAccessory;
+extern NSString * const LCKItemTypeNameHelmet;
+extern NSString * const LCKItemTypeNameChest;
+extern NSString * const LCKItemTypeNameBoots;
+
 @interface LCKItem : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, readonly) NSString *name;
@@ -26,7 +33,7 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
 @property (nonatomic, readonly) NSString *flavorText;
 @property (nonatomic, readonly) NSString *imageName;
 @property (nonatomic, readonly) NSArray *attributeRequirements;
-@property (nonatomic, readonly) NSArray *itemSlots;
+@property (nonatomic, readonly) LCKItemSlot itemSlot;
 
 @property (nonatomic, readonly) UIImage *image;
 
@@ -35,5 +42,7 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 - (BOOL)isAppropriateForItemSlot:(LCKItemSlot)itemSlot;
+
++ (NSString *)typeDisplayNameForItemSlot:(LCKItemSlot)itemSlot;
 
 @end

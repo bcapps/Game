@@ -17,10 +17,8 @@
 		<array>
 			<string>STR 1</string>
 		</array>
-		<key>itemSlots</key>
-		<array>
-			<string>onehand</string>
-		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -37,10 +35,8 @@
 		<array>
 			<string>STR 2</string>
 		</array>
-		<key>itemSlots</key>
-		<array>
-			<string>onehand</string>
-		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
 	</dict>
 </array>
 </plist>

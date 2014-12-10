@@ -31,13 +31,6 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
     LCKAllItemsSectionBoots
 };
 
-NSString * const LCKAllItemsTypeNameOneHanded = @"One-Handed";
-NSString * const LCKAllItemsTypeNameTwoHanded = @"Two-Handed";
-NSString * const LCKAllItemsTypeNameAccessory = @"Accessory";
-NSString * const LCKAllItemsTypeNameHelmet = @"Helmet";
-NSString * const LCKAllItemsTypeNameChest = @"Chest";
-NSString * const LCKAllItemsTypeNameBoots = @"Boots";
-
 @interface LCKAllItemsTableViewController ()
 
 @property (nonatomic, readonly) NSDictionary *allItems;
@@ -72,22 +65,22 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     
     for (LCKItem *item in [LCKItemProvider allItems]) {
         if ([item isAppropriateForItemSlot:LCKItemSlotOneHand]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameOneHanded] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameOneHanded] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameTwoHanded] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameTwoHanded] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotAccessory]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameAccessory] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameAccessory] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameChest] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameChest] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameHelmet] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameHelmet] addObject:item];
         }
         if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
-            [[itemDictionary objectForKey:LCKAllItemsTypeNameBoots] addObject:item];
+            [[itemDictionary objectForKey:LCKItemTypeNameBoots] addObject:item];
         }
     }
     
@@ -95,7 +88,7 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
 }
 
 - (NSArray *)itemTypeNames {
-    return @[LCKAllItemsTypeNameOneHanded, LCKAllItemsTypeNameTwoHanded, LCKAllItemsTypeNameAccessory,LCKAllItemsTypeNameChest, LCKAllItemsTypeNameHelmet, LCKAllItemsTypeNameBoots];
+    return @[LCKItemTypeNameOneHanded, LCKItemTypeNameTwoHanded, LCKItemTypeNameAccessory, LCKItemTypeNameChest, LCKItemTypeNameHelmet, LCKItemTypeNameBoots];
 }
 
 - (LCKItem *)itemForIndexPath:(NSIndexPath *)indexPath {

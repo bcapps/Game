@@ -14,7 +14,7 @@ NSString * const LCKItemDescriptionKey = @"descriptiveText";
 NSString * const LCKItemFlavorKey = @"flavorText";
 NSString * const LCKItemImageKey = @"imageName";
 NSString * const LCKItemAttributeRequirementsKey = @"attributeRequirements";
-NSString * const LCKItemItemSlotsKey = @"itemSlots";
+NSString * const LCKItemItemSlotKey = @"itemSlot";
 
 NSString * const LCKItemOneHandKey = @"onehand";
 NSString * const LCKItemTwoHandKey = @"twohand";
@@ -23,13 +23,20 @@ NSString * const LCKItemChestKey = @"chest";
 NSString * const LCKItemBootsKey = @"boots";
 NSString * const LCKItemAccessory = @"accessory";
 
+NSString * const LCKItemTypeNameOneHanded = @"One-Handed";
+NSString * const LCKItemTypeNameTwoHanded = @"Two-Handed";
+NSString * const LCKItemTypeNameAccessory = @"Accessory";
+NSString * const LCKItemTypeNameHelmet = @"Helmet";
+NSString * const LCKItemTypeNameChest = @"Chest";
+NSString * const LCKItemTypeNameBoots = @"Boots";
+
 NSString * const LCKItemCodingNameKey = @"LCKItemCodingNameKey";
 NSString * const LCKItemCodingActionKey = @"LCKItemCodingActionKey";
 NSString * const LCKItemCodingDescriptionKey = @"LCKItemCodingDescriptionKey";
 NSString * const LCKItemCodingFlavorKey = @"LCKItemCodingFlavorKey";
 NSString * const LCKItemCodingImageKey = @"LCKItemCodingImageKey";
 NSString * const LCKItemCodingAttributeKey = @"LCKItemCodingAttributeKey";
-NSString * const LCKItemCodingItemSlotsKey = @"LCKItemCodingItemSlotsKey";
+NSString * const LCKItemCodingItemSlotKey = @"LCKItemCodingItemSlotKey";
 NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 
 @interface LCKItem ()
@@ -40,7 +47,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 @property (nonatomic) NSString *flavorText;
 @property (nonatomic) NSString *imageName;
 @property (nonatomic) NSArray *attributeRequirements;
-@property (nonatomic) NSArray *itemSlots;
+
+@property (nonatomic) NSNumber *itemSlotNumber;
 
 @end
 
@@ -58,7 +66,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _flavorText = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingFlavorKey];
         _imageName = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingImageKey];
         _attributeRequirements = [aDecoder decodeObjectOfClass:[NSArray class] forKey:LCKItemCodingAttributeKey];
-        _itemSlots = [aDecoder decodeObjectOfClass:[NSArray class] forKey:LCKItemCodingItemSlotsKey];
+        _itemSlotNumber = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:LCKItemCodingItemSlotKey];
         _equipped = [aDecoder decodeBoolForKey:LCKItemCodingEquippedKey];
     }
     
@@ -72,7 +80,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
     [aCoder encodeObject:_flavorText forKey:LCKItemCodingFlavorKey];
     [aCoder encodeObject:_imageName forKey:LCKItemCodingImageKey];
     [aCoder encodeObject:_attributeRequirements forKey:LCKItemCodingAttributeKey];
-    [aCoder encodeObject:_itemSlots forKey:LCKItemCodingItemSlotsKey];
+    [aCoder encodeObject:_itemSlotNumber forKey:LCKItemCodingItemSlotKey];
     [aCoder encodeBool:_equipped forKey:LCKItemCodingEquippedKey];
 }
 
@@ -88,7 +96,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         copy.flavorText = [self.flavorText copyWithZone:zone];
         copy.imageName = [self.imageName copyWithZone:zone];
         copy.attributeRequirements = [self.attributeRequirements copyWithZone:zone];
-        copy.itemSlots = [self.itemSlots copyWithZone:zone];
+        copy.itemSlotNumber = [self.itemSlotNumber copyWithZone:zone];
         copy.equipped = copy.isEquipped;
     }
     
@@ -108,15 +116,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _imageName = [dictionary objectForKey:LCKItemImageKey];
         _attributeRequirements = [dictionary objectForKey:LCKItemAttributeRequirementsKey];
         _equipped = NO;
-        
-        NSMutableArray *appropriateSlots = [NSMutableArray array];
-        for (NSString *slotString in [dictionary objectForKey:LCKItemItemSlotsKey]) {
-            NSNumber *slotNumber = @([self itemSlotForSlotString:slotString]);
-            
-            [appropriateSlots addObject:slotNumber];
-        }
-        
-        _itemSlots = appropriateSlots;
+        _itemSlotNumber = @([self itemSlotForSlotString:[dictionary objectForKey:LCKItemItemSlotKey]]);
     }
     
     return self;
@@ -124,6 +124,10 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 
 - (UIImage *)image {
     return [UIImage imageNamed:self.imageName];
+}
+
+- (LCKItemSlot)itemSlot {
+    return [self.itemSlotNumber integerValue];
 }
 
 - (LCKItemSlot)itemSlotForSlotString:(NSString *)slotString {
@@ -150,7 +154,24 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 }
 
 - (BOOL)isAppropriateForItemSlot:(LCKItemSlot)itemSlot {
-    return [self.itemSlots containsObject:@(itemSlot)];
+    return self.itemSlot == itemSlot;
+}
+
++ (NSString *)typeDisplayNameForItemSlot:(LCKItemSlot)itemSlot {
+    switch (itemSlot) {
+        case LCKItemSlotOneHand:
+            return LCKItemTypeNameOneHanded;
+        case LCKItemSlotTwoHand:
+            return LCKItemTypeNameTwoHanded;
+        case LCKItemSlotHelmet:
+            return LCKItemTypeNameHelmet;
+        case LCKItemSlotChest:
+            return LCKItemTypeNameChest;
+        case LCKItemSlotBoots:
+            return LCKItemTypeNameBoots;
+        case LCKItemSlotAccessory:
+            return LCKItemTypeNameAccessory;
+    }
 }
 
 @end
