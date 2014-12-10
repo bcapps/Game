@@ -64,9 +64,11 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 
 // Found a nearby advertising peer
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
-    NSLog(@"Found Peer");
+    NSLog(@"Found Peer %@", peerID.displayName);
     
-    [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
+    if (![peerID.displayName isEqualToString:self.characterName]) {
+        [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
+    }
 }
 
 // A nearby peer has stopped advertising

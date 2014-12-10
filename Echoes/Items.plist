@@ -38,5 +38,95 @@
 		<key>itemSlot</key>
 		<string>onehand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Estus Flask</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>estusflask</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>accessory</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Demon Great Hammer</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>demongreathammer</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>twohand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Drangleic Armor</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>demongreathammer</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Drangleic Boots</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>demongreathammer</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>boots</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Drangleic Helmet</string>
+		<key>actionText</key>
+		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<key>descriptiveText</key>
+		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>demongreathammer</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>helmet</string>
+	</dict>
 </array>
 </plist>
