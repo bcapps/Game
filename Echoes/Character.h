@@ -41,6 +41,7 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 - (void)addItemToInventory:(LCKItem *)item;
 - (void)removeItemFromInventory:(LCKItem *)item;
 
+- (BOOL)meetsRequirement:(NSString *)requirement forItem:(LCKItem *)item;
 - (BOOL)meetsRequirementsForItem:(LCKItem *)item;
 
 @end

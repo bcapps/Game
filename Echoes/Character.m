@@ -134,15 +134,20 @@
     return nil;
 }
 
+- (BOOL)meetsRequirement:(NSString *)requirement forItem:(LCKItem *)item {
+    NSString *statString = [[requirement componentsSeparatedByString:@" "] firstObject];
+    NSString *requirementString = [[requirement componentsSeparatedByString:@" "] lastObject];
+    
+    return [[self.characterStats statValueForStatString:statString] integerValue] >= [requirementString integerValue];
+}
+
 - (BOOL)meetsRequirementsForItem:(LCKItem *)item {
     BOOL meetsRequirements = YES;
     
     for (NSString *requirement in item.attributeRequirements) {
-        NSString *statString = [[requirement componentsSeparatedByString:@" "] firstObject];
-        NSString *requirementString = [[requirement componentsSeparatedByString:@" "] lastObject];
+        meetsRequirements = [self meetsRequirement:requirement forItem:item];
         
-        if ([[self.characterStats statValueForStatString:statString] integerValue] < [requirementString integerValue]) {
-            meetsRequirements = NO;
+        if (!meetsRequirements) {
             break;
         }
     }

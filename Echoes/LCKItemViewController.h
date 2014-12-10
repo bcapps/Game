@@ -10,6 +10,8 @@
 
 #import "LCKItem.h"
 
+@class Character;
+
 typedef NS_ENUM(NSUInteger, LCKItemViewControllerDisplayStyle) {
     LCKItemViewControllerDisplayStyleInventory,
     LCKItemViewControllerDisplayStylePopup
@@ -31,6 +33,7 @@ typedef NS_ENUM(NSUInteger, LCKItemViewControllerDisplayStyle) {
 @property (nonatomic, readonly) LCKItem *item;
 
 @property (nonatomic) BOOL displayInventoryOptions;
+@property (nonatomic) Character *character;
 
 - (instancetype)initWithItem:(LCKItem *)item displayStyle:(LCKItemViewControllerDisplayStyle)displayStyle;
 

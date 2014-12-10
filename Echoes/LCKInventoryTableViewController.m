@@ -77,6 +77,7 @@
     LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
     
     LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item displayStyle:LCKItemViewControllerDisplayStyleInventory];
+    itemViewController.character = self.character;
     itemViewController.delegate = self;
     
     [self.navigationController pushViewController:itemViewController animated:YES];

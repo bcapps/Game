@@ -190,6 +190,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 - (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
     LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item displayStyle:LCKItemViewControllerDisplayStylePopup];
     itemViewController.delegate = self;
+    itemViewController.character = self.character;
     itemViewController.view.clipsToBounds = YES;
     
     return itemViewController;

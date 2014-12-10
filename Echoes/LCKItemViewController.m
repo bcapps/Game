@@ -7,6 +7,8 @@
 //
 
 #import "LCKItemViewController.h"
+#import "Character.h"
+#import "CharacterStats.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -52,11 +54,27 @@
     self.itemFlavorTextLabel.text = self.item.flavorText;
     self.itemFlavorTextLabel.textColor = [UIColor flavorTextColor];
     self.itemFlavorTextLabel.font = [UIFont italicDescriptiveTextFontOfSize:14.0];
-
-    NSString *requirementsText = [self.item.attributeRequirements componentsJoinedByString:@", "];
-    self.itemRequirementsLabel.text = requirementsText;
-    self.itemRequirementsLabel.textColor = [UIColor descriptiveTextColor];
-    self.itemRequirementsLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
+    
+    for (NSString *requirement in self.item.attributeRequirements) {
+        NSAttributedString *attributedRequirement;
+        
+        if ([attributedText length]) {
+            [attributedText appendAttributedString:[[NSAttributedString alloc] initWithString:@", " attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:14.0], NSForegroundColorAttributeName: [UIColor descriptiveTextColor]}]];
+        }
+        
+        if (![self.character meetsRequirement:requirement forItem:self.item]) {
+            attributedRequirement = [[NSAttributedString alloc] initWithString:requirement attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:14.0], NSForegroundColorAttributeName: [UIColor removeColor]}];
+        }
+        else {
+            attributedRequirement = [[NSAttributedString alloc] initWithString:requirement attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:14.0], NSForegroundColorAttributeName: [UIColor descriptiveTextColor]}];
+        }
+        
+        [attributedText appendAttributedString:attributedRequirement];
+    }
+    
+    self.itemRequirementsLabel.attributedText = attributedText;
     
     self.itemTypeImageView.image = [[LCKItem imageForItemSlot:self.item.itemSlot] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
