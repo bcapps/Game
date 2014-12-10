@@ -44,5 +44,6 @@ extern NSString * const LCKItemTypeNameBoots;
 - (BOOL)isAppropriateForItemSlot:(LCKItemSlot)itemSlot;
 
 + (NSString *)typeDisplayNameForItemSlot:(LCKItemSlot)itemSlot;
++ (UIImage *)imageForItemSlot:(LCKItemSlot)itemSlot;
 
 @end

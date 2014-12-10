@@ -174,4 +174,21 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
     }
 }
 
++ (UIImage *)imageForItemSlot:(LCKItemSlot)itemSlot {
+    switch (itemSlot) {
+        case LCKItemSlotOneHand:
+            return [UIImage imageNamed:@"oneHandIcon"];
+        case LCKItemSlotTwoHand:
+            return [UIImage imageNamed:@"twoHandIcon"];;
+        case LCKItemSlotHelmet:
+            return [UIImage imageNamed:@"helmetIcon"];;
+        case LCKItemSlotChest:
+            return [UIImage imageNamed:@"chestIcon"];;
+        case LCKItemSlotBoots:
+            return [UIImage imageNamed:@"bootsIcon"];;
+        case LCKItemSlotAccessory:
+            return [UIImage imageNamed:@"accessoryIcon"];;
+    }
+}
+
 @end

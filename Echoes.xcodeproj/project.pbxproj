@@ -31,6 +31,12 @@
 		F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */; };
 		F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F436B1A3563C700FEA417 /* LCKItemCell.m */; };
 		F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F436D1A36872C00FEA417 /* giftIcon@2x.png */; };
+		F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F436F1A37F09D00FEA417 /* accessoryIcon@2x.png */; };
+		F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43701A37F09D00FEA417 /* bootsIcon@2x.png */; };
+		F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43711A37F09D00FEA417 /* chestIcon@2x.png */; };
+		F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */; };
+		F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */; };
+		F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -129,6 +135,12 @@
 		F21F436A1A3563C700FEA417 /* LCKItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemCell.h; sourceTree = "<group>"; };
 		F21F436B1A3563C700FEA417 /* LCKItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemCell.m; sourceTree = "<group>"; };
 		F21F436D1A36872C00FEA417 /* giftIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "giftIcon@2x.png"; sourceTree = "<group>"; };
+		F21F436F1A37F09D00FEA417 /* accessoryIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessoryIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43701A37F09D00FEA417 /* bootsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bootsIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43711A37F09D00FEA417 /* chestIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chestIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helmetIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneHandIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwoHandIcon@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -236,6 +248,7 @@
 		F21F43451A2FD7D400FEA417 /* Item Art */ = {
 			isa = PBXGroup;
 			children = (
+				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43461A2FD7DF00FEA417 /* broadsword@2x.png */,
 			);
 			name = "Item Art";
@@ -250,6 +263,19 @@
 				F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */,
 			);
 			name = "DM Tools";
+			sourceTree = "<group>";
+		};
+		F21F437B1A37F0A000FEA417 /* Default Icon Types */ = {
+			isa = PBXGroup;
+			children = (
+				F21F436F1A37F09D00FEA417 /* accessoryIcon@2x.png */,
+				F21F43701A37F09D00FEA417 /* bootsIcon@2x.png */,
+				F21F43711A37F09D00FEA417 /* chestIcon@2x.png */,
+				F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */,
+				F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */,
+				F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */,
+			);
+			name = "Default Icon Types";
 			sourceTree = "<group>";
 		};
 		F2206AE51A2D2C0D006E44B0 = {
@@ -507,20 +533,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */,
 				F21F43471A2FD7DF00FEA417 /* broadsword@2x.png in Resources */,
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
+				F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */,
+				F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
 				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
+				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
+				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
+				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
