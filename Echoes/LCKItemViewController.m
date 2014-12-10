@@ -20,8 +20,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemFlavorTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemRequirementsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *unequipButton;
+@property (weak, nonatomic) IBOutlet UIView *nameSeparatorLineView;
 
 @property (nonatomic) LCKItem *item;
+@property (nonatomic) LCKItemViewControllerDisplayStyle displayStyle;
 
 @end
 
@@ -59,11 +61,22 @@
     [self.unequipButton setTitleColor:[UIColor removeColor] forState:UIControlStateNormal];
     
     self.view.backgroundColor = [UIColor backgroundColor];
-    self.view.layer.masksToBounds = NO;
-    self.view.layer.cornerRadius = 8.0;
-    self.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
-    self.view.layer.borderWidth = 1.0;
-    // Do any additional setup after loading the view.
+    
+    if (self.displayStyle == LCKItemViewControllerDisplayStylePopup) {
+        self.view.layer.masksToBounds = NO;
+        self.view.layer.cornerRadius = 8.0;
+        self.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
+        self.view.layer.borderWidth = 1.0;
+    }
+    else {
+        self.title = self.item.name;
+        self.itemNameLabel.hidden = YES;
+        self.nameSeparatorLineView.hidden = YES;
+        
+        UIBarButtonItem *giftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"giftIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(giftItem)];
+        
+        self.navigationItem.rightBarButtonItem = giftButton;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -74,18 +87,27 @@
 
 #pragma mark - LCKItemViewController
 
-- (IBAction)unequipButtonTapped:(UIButton *)sender {
-    [self.delegate unequipButtonTappedForItemViewController:self];
-}
-
-- (instancetype)initWithItem:(LCKItem *)item {
+- (instancetype)initWithItem:(LCKItem *)item displayStyle:(LCKItemViewControllerDisplayStyle)displayStyle {
     self = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ItemViewController"];
     
     if (self) {
         _item = item;
+        _displayStyle = displayStyle;
     }
     
     return self;
+}
+
+- (IBAction)unequipButtonTapped:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(unequipButtonTappedForItemViewController:)]) {
+        [self.delegate unequipButtonTappedForItemViewController:self];
+    }
+}
+
+- (void)giftItem {
+    if ([self.delegate respondsToSelector:@selector(giftItemButtonTappedForItemViewController:)]) {
+        [self.delegate giftItemButtonTappedForItemViewController:self];
+    }
 }
 
 @end

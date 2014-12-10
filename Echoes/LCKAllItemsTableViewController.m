@@ -140,7 +140,7 @@ NSString * const LCKAllItemsTypeNameBoots = @"Boots";
     
     LCKItem *item = [self itemForIndexPath:indexPath];
     
-    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithSession:self.multipeerManager.session];
+    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
     peersViewController.item = item;
     
     [self.navigationController pushViewController:peersViewController animated:YES];

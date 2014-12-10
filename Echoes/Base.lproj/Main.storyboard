@@ -430,6 +430,7 @@
                         <outlet property="itemImageView" destination="fFy-TS-wEj" id="cC6-MF-zCY"/>
                         <outlet property="itemNameLabel" destination="JPB-pK-g1L" id="Lz1-ou-SqL"/>
                         <outlet property="itemRequirementsLabel" destination="lEb-UE-1FJ" id="7bF-vg-j7W"/>
+                        <outlet property="nameSeparatorLineView" destination="b4G-c9-AFd" id="e21-R9-AcY"/>
                         <outlet property="unequipButton" destination="WJr-MS-l58" id="CqZ-Fq-wv1"/>
                     </connections>
                 </viewController>

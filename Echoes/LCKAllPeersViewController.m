@@ -7,6 +7,7 @@
 //
 
 #import "LCKAllPeersViewController.h"
+#import "LCKMultipeerManager.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -17,7 +18,7 @@
 
 @interface LCKAllPeersViewController ()
 
-@property (nonatomic) MCSession *session;
+@property (nonatomic) LCKMultipeerManager *multipeerManager;
 
 @end
 
@@ -38,11 +39,11 @@
 
 #pragma mark - LCKAllPeersViewController
 
-- (instancetype)initWithSession:(MCSession *)session {
+- (instancetype)initWithMultipeerManager:(LCKMultipeerManager *)multipeerManager {
     self = [super init];
     
     if (self) {
-        _session = session;
+        _multipeerManager = multipeerManager;
     }
     
     return self;
@@ -51,21 +52,24 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MCPeerID *peerID = [self.session.connectedPeers safeObjectAtIndex:indexPath.row];
-
-    NSData *itemData = [self.item.name dataUsingEncoding:NSUTF8StringEncoding];
+    MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
     
-    if (peerID && itemData) {
-        [self.session sendData:itemData toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+    if (peerID) {
+        BOOL success = [self.multipeerManager sendItemName:self.item.name];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        if (self.dismissBlock) {
+            self.dismissBlock(success);
+        }
+        else {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.session.connectedPeers.count;
+    return self.multipeerManager.session.connectedPeers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,7 +77,7 @@
     cell.backgroundColor = [UIColor backgroundColor];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
-    MCPeerID *peerID = [self.session.connectedPeers safeObjectAtIndex:indexPath.row];
+    MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
     
     cell.textLabel.text = peerID.displayName;
     cell.textLabel.font = [UIFont titleTextFontOfSize:15.0];

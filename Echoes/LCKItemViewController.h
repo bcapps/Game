@@ -10,11 +10,18 @@
 
 #import "LCKItem.h"
 
+typedef NS_ENUM(NSUInteger, LCKItemViewControllerDisplayStyle) {
+    LCKItemViewControllerDisplayStyleInventory,
+    LCKItemViewControllerDisplayStylePopup
+};
+
 @class LCKItemViewController;
 
 @protocol LCKItemViewControllerDelegate <NSObject>
 
+@optional
 - (void)unequipButtonTappedForItemViewController:(LCKItemViewController *)itemViewController;
+- (void)giftItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController;
 
 @end
 
@@ -23,6 +30,8 @@
 @property (nonatomic, weak) id <LCKItemViewControllerDelegate> delegate;
 @property (nonatomic, readonly) LCKItem *item;
 
-- (instancetype)initWithItem:(LCKItem *)item;
+@property (nonatomic) BOOL displayInventoryOptions;
+
+- (instancetype)initWithItem:(LCKItem *)item displayStyle:(LCKItemViewControllerDisplayStyle)displayStyle;
 
 @end

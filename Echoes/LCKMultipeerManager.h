@@ -18,6 +18,6 @@ extern NSString * const LCKMultipeerItemReceivedNotification;
 - (instancetype)initWithCharacterName:(NSString *)characterName;
 
 - (void)startMonitoring;
-- (void)sendItemName:(NSString *)itemName;
+- (BOOL)sendItemName:(NSString *)itemName;
 
 @end

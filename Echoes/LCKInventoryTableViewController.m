@@ -11,13 +11,16 @@
 #import "LCKEchoCoreDataController.h"
 #import "LCKItem.h"
 #import "LCKItemCell.h"
+#import "LCKItemViewController.h"
+#import "LCKAllPeersViewController.h"
+#import "LCKMultipeerManager.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
-@interface LCKInventoryTableViewController ()
+@interface LCKInventoryTableViewController () <LCKItemViewControllerDelegate>
 
 @end
 
@@ -66,6 +69,35 @@
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:indexPath.section];
         [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
+    
+    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item displayStyle:LCKItemViewControllerDisplayStyleInventory];
+    itemViewController.delegate = self;
+    
+    [self.navigationController pushViewController:itemViewController animated:YES];
+}
+
+#pragma mark - LCKItemViewControllerDelegate
+
+- (void)giftItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
+    LCKAllPeersViewController *allPeersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    allPeersViewController.item = itemViewController.item;
+    
+    allPeersViewController.dismissBlock = ^(BOOL success) {
+        if (success) {
+            [self.delegate itemWasGiftedFromInventory:itemViewController.item];
+        }
+        else {
+            //TODO: Handle Error Case
+        }
+    };
+    
+    [self.navigationController pushViewController:allPeersViewController animated:YES];
 }
 
 @end

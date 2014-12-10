@@ -9,12 +9,16 @@
 @import UIKit;
 @import MultipeerConnectivity;
 
+typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
+
+@class LCKMultipeerManager;
 @class LCKItem;
 
 @interface LCKAllPeersViewController : UITableViewController
 
 @property (nonatomic) LCKItem *item;
+@property (nonatomic, copy) LCKAllPeersViewControllerDismissedBlock dismissBlock;
 
-- (instancetype)initWithSession:(MCSession *)session;
+- (instancetype)initWithMultipeerManager:(LCKMultipeerManager *)multipeerManager;
 
 @end

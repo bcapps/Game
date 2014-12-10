@@ -30,6 +30,7 @@
 		F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */; };
 		F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */; };
 		F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F436B1A3563C700FEA417 /* LCKItemCell.m */; };
+		F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F436D1A36872C00FEA417 /* giftIcon@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -127,6 +128,7 @@
 		F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEquipmentViewController.m; sourceTree = "<group>"; };
 		F21F436A1A3563C700FEA417 /* LCKItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemCell.h; sourceTree = "<group>"; };
 		F21F436B1A3563C700FEA417 /* LCKItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemCell.m; sourceTree = "<group>"; };
+		F21F436D1A36872C00FEA417 /* giftIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "giftIcon@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 		F2206B1E1A2D2FAB006E44B0 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				F21F436D1A36872C00FEA417 /* giftIcon@2x.png */,
 				F2206AFB1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.h */,
 				F2206AFC1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m */,
 				F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */,
@@ -509,6 +512,7 @@
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
+				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,

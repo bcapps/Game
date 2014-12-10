@@ -36,7 +36,7 @@ const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate>
+@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -132,6 +132,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showInventoryViewController"]) {
         LCKInventoryTableViewController *inventoryViewController = segue.destinationViewController;
+        inventoryViewController.delegate = self;
+        inventoryViewController.multipeerManager = self.multipeerManager;
         
         inventoryViewController.character = self.character;
     }
@@ -186,7 +188,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 #pragma mark - Equipment Buttons
 
 - (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
-    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item];
+    LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item displayStyle:LCKItemViewControllerDisplayStylePopup];
     itemViewController.delegate = self;
     itemViewController.view.clipsToBounds = YES;
     
@@ -356,6 +358,14 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     [self updateItemButtons];
     [self dismissCurrentlyPresentedViewController:nil];
+}
+
+#pragma mark - LCKInventoryTableViewControllerDelegate
+
+- (void)itemWasGiftedFromInventory:(LCKItem *)item {
+    [self.navigationController popToViewController:self animated:YES];
+    
+    [self.character removeItemFromInventory:item];
 }
 
 @end

@@ -20,6 +20,10 @@
 @dynamic items;
 @dynamic characterStats;
 
+- (void)awakeFromInsert {
+    self.items = @[];
+}
+
 - (CharacterGender)characterGender {
     if ([self.gender isEqualToNumber:@(0)]) {
         return CharacterGenderMale;

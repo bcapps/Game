@@ -22,6 +22,13 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 
 @implementation LCKMultipeerManager
 
+- (void)dealloc {
+    [self.serviceBrowser stopBrowsingForPeers];
+    [self.serviceAdvertiser stopAdvertisingPeer];
+    
+    [self.session disconnect];
+}
+
 - (instancetype)initWithCharacterName:(NSString *)characterName {
     self = [super init];
     
@@ -49,8 +56,8 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
     }
 }
 
-- (void)sendItemName:(NSString *)itemName {
-    [self.session sendData:[itemName dataUsingEncoding:NSUTF8StringEncoding] toPeers:self.session.connectedPeers withMode:MCSessionSendDataReliable error:nil];
+- (BOOL)sendItemName:(NSString *)itemName {
+    return [self.session sendData:[itemName dataUsingEncoding:NSUTF8StringEncoding] toPeers:self.session.connectedPeers withMode:MCSessionSendDataReliable error:nil];
 }
 
 #pragma mark - MCNearbyServiceBrowserDelegate
@@ -58,6 +65,7 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 // Found a nearby advertising peer
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
     NSLog(@"Found Peer");
+    
     [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
 }
 
@@ -78,6 +86,10 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
 }
 
 #pragma mark - MCSessionDelegate
+
+- (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void(^)(BOOL accept))certificateHandler {
+    certificateHandler(YES);
+}
 
 // Remote peer changed state
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
