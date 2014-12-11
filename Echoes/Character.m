@@ -34,6 +34,9 @@
         if (updatedItem) {
             [updatedItems addObject:[updatedItem copy]];
         }
+        else {
+            [updatedItems addObject:[item copy]];
+        }
     }
     
     self.items = [updatedItems copy];
