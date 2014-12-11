@@ -259,8 +259,6 @@
 			children = (
 				F21F43571A3020FA00FEA417 /* LCKAllItemsTableViewController.h */,
 				F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */,
-				F21F43641A32D78000FEA417 /* LCKAllPeersViewController.h */,
-				F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */,
 			);
 			name = "DM Tools";
 			sourceTree = "<group>";
@@ -276,6 +274,17 @@
 				F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */,
 			);
 			name = "Default Icon Types";
+			sourceTree = "<group>";
+		};
+		F21F437C1A3A25DC00FEA417 /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				F21F43641A32D78000FEA417 /* LCKAllPeersViewController.h */,
+				F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */,
+				F21F43601A32CE0500FEA417 /* LCKMultipeerManager.h */,
+				F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */,
+			);
+			name = Multipeer;
 			sourceTree = "<group>";
 		};
 		F2206AE51A2D2C0D006E44B0 = {
@@ -301,6 +310,7 @@
 		F2206AF01A2D2C0D006E44B0 /* Echoes */ = {
 			isa = PBXGroup;
 			children = (
+				F21F437C1A3A25DC00FEA417 /* Multipeer */,
 				F21F43631A32D75B00FEA417 /* DM Tools */,
 				F21F43391A2FCD9900FEA417 /* Items */,
 				F2206B731A2D7E65006E44B0 /* Style */,
@@ -377,8 +387,6 @@
 				F21F43271A2F813800FEA417 /* LCKItemButton.m */,
 				F21F432C1A2F851100FEA417 /* LCKStatCell.h */,
 				F21F432D1A2F851100FEA417 /* LCKStatCell.m */,
-				F21F43601A32CE0500FEA417 /* LCKMultipeerManager.h */,
-				F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
