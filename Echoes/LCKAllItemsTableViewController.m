@@ -82,13 +82,16 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
         if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
             [[itemDictionary objectForKey:LCKItemTypeNameBoots] addObject:item];
         }
+        if ([item isAppropriateForItemSlot:LCKItemSlotSpell]) {
+            [[itemDictionary objectForKey:LCKItemTypeNameSpell] addObject:item];
+        }
     }
     
     return itemDictionary;
 }
 
 - (NSArray *)itemTypeNames {
-    return @[LCKItemTypeNameOneHanded, LCKItemTypeNameTwoHanded, LCKItemTypeNameAccessory, LCKItemTypeNameChest, LCKItemTypeNameHelmet, LCKItemTypeNameBoots];
+    return @[LCKItemTypeNameOneHanded, LCKItemTypeNameTwoHanded, LCKItemTypeNameAccessory, LCKItemTypeNameChest, LCKItemTypeNameHelmet, LCKItemTypeNameBoots, LCKItemTypeNameSpell];
 }
 
 - (LCKItem *)itemForIndexPath:(NSIndexPath *)indexPath {
