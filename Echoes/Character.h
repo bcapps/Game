@@ -31,6 +31,7 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 
 @property (nonatomic, readonly) NSArray *equippedWeapons;
 @property (nonatomic, readonly) NSArray *equippedAccessories;
+@property (nonatomic, readonly) NSArray *equippedSpells;
 @property (nonatomic, readonly) LCKItem *equippedHelm;
 @property (nonatomic, readonly) LCKItem *equippedChest;
 @property (nonatomic, readonly) LCKItem *equippedBoots;

@@ -355,16 +355,20 @@
                         <outlet property="chestButton" destination="7D5-tH-Ejn" id="7fD-W7-cQw"/>
                         <outlet property="collectionView" destination="EmM-eE-XlB" id="VWx-pB-YbB"/>
                         <outlet property="firstAccessoryButton" destination="ar4-85-oMt" id="5bg-CA-udU"/>
+                        <outlet property="firstSpellButton" destination="n7P-e8-J8t" id="vMA-60-PPK"/>
+                        <outlet property="fourthSpellButton" destination="7Kb-wS-brh" id="eyv-pY-g14"/>
                         <outlet property="healthImageView" destination="ELO-qo-6rC" id="j9u-lD-n3f"/>
                         <outlet property="healthLabel" destination="cK2-iC-meJ" id="lGr-lq-BHR"/>
                         <outlet property="helmetButton" destination="IHP-mI-kKS" id="tWD-K3-lXy"/>
                         <outlet property="leftHandButton" destination="675-xe-31g" id="WwL-B3-Rir"/>
                         <outlet property="rightHandButton" destination="yya-Wz-xsE" id="eB8-it-Dxw"/>
                         <outlet property="secondAccessoryButton" destination="z5l-dZ-bU0" id="wYI-1E-OPq"/>
+                        <outlet property="secondSpellButton" destination="cjL-yb-kyb" id="cOw-u2-gB5"/>
                         <outlet property="silhouetteHeightConstraint" destination="avw-uY-2OZ" id="i4x-ye-cgg"/>
                         <outlet property="silhouetteImageView" destination="U3k-ex-baV" id="G7d-g9-oUa"/>
                         <outlet property="silhouetteWidthConstraint" destination="g8d-a6-c1M" id="Wx8-CK-Dfb"/>
                         <outlet property="statsFlowLayout" destination="gld-cz-cN6" id="bUB-xS-fJY"/>
+                        <outlet property="thirdSpellButton" destination="7UR-hi-74E" id="LIp-zn-B3o"/>
                         <outletCollection property="equipmentButtons" destination="IHP-mI-kKS" id="gjf-bR-axH"/>
                         <outletCollection property="equipmentButtons" destination="7D5-tH-Ejn" id="ifd-YF-BXr"/>
                         <outletCollection property="equipmentButtons" destination="yya-Wz-xsE" id="pDP-hl-UCA"/>

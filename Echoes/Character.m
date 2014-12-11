@@ -104,6 +104,18 @@
     return [accessories copy];
 }
 
+- (NSArray *)equippedSpells {
+    NSMutableArray *spells = [NSMutableArray array];
+    
+    for (LCKItem *item in self.items) {
+        if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotSpell]) {
+            [spells addObject:item];
+        }
+    }
+    
+    return [spells copy];
+}
+
 - (LCKItem *)equippedHelm {
     for (LCKItem *item in self.items) {
         if (item.isEquipped && [item isAppropriateForItemSlot:LCKItemSlotHelmet]) {

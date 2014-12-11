@@ -50,6 +50,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 @property (weak, nonatomic) IBOutlet LCKItemButton *secondAccessoryButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *bootsButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *leftHandButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *firstSpellButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *secondSpellButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *thirdSpellButton;
+@property (weak, nonatomic) IBOutlet LCKItemButton *fourthSpellButton;
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
@@ -130,6 +134,11 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.chestButton.item = self.character.equippedChest;
     self.bootsButton.item = self.character.equippedBoots;
     
+    self.firstSpellButton.item = self.character.equippedSpells.firstObject;
+    self.secondSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:1];
+    self.thirdSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:2];
+    self.fourthSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:3];
+
     self.firstAccessoryButton.item = [self.character.equippedAccessories firstObject];
     self.secondAccessoryButton.item = [self.character.equippedAccessories safeObjectAtIndex:1];
 }
@@ -294,6 +303,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         }
         else if (button == self.bootsButton) {
             equipmentTypes = @[@(LCKItemSlotBoots)];
+        }
+        else if (button == self.firstSpellButton || button == self.secondSpellButton || button == self.thirdSpellButton || button == self.fourthSpellButton) {
+            equipmentTypes = @[@(LCKItemSlotSpell)];
         }
 
         viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes];
