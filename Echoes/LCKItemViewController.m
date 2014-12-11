@@ -53,7 +53,7 @@
         
         [attributedAction appendAttributedString:action];
     }
-        
+    
     if ([actionComponents safeObjectAtIndex:1]) {
         NSAttributedString *actionText = [[NSAttributedString alloc] initWithString:[actionComponents safeObjectAtIndex:1] attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
         

@@ -212,7 +212,7 @@
 		<string>soularrow</string>
 		<key>attributeRequirements</key>
 		<array>
-			<string>INT 3</string>
+			<string>INT 2</string>
 		</array>
 		<key>itemSlot</key>
 		<string>spell</string>
