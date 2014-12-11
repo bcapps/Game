@@ -17,6 +17,7 @@
 #import "LCKItemButton.h"
 #import "LCKItem.h"
 
+#import "LCKStatInfoViewController.h"
 #import "LCKEquipmentViewController.h"
 
 #import "LCKMultipeerManager.h"
@@ -33,6 +34,10 @@ const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
 const CGFloat LCKCharacterViewControllerNumberOfStats = 5;
 const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
 const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
+
+const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
+const CGFloat LCKCharacterStatInfoViewHeight = 90.0;
+const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
 
@@ -185,6 +190,19 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     }
 }
 
+#pragma mark - Stats
+
+- (LCKStatInfoViewController *)newStatInfoViewControllerForStatType:(LCKStatType)statType {
+    LCKStatInfoViewController *infoViewController = [[LCKStatInfoViewController alloc] init];
+    infoViewController.view.clipsToBounds = YES;
+    
+    return infoViewController;
+}
+
+- (CGRect)statInfoViewFrameForCellFrame:(CGRect)cellFrame {
+    return CGRectMake(LCKCharacterStatInfoViewHorizontalMargin, CGRectGetMinY(cellFrame) - LCKCharacterStatInfoViewHeight - LCKCharacterStatInfoViewBottomMargin, CGRectGetWidth(self.view.frame) - LCKCharacterStatInfoViewHorizontalMargin * 2, LCKCharacterStatInfoViewHeight);
+}
+
 #pragma mark - Equipment Buttons
 
 - (LCKItemViewController *)newItemViewControllerForItem:(LCKItem *)item {
@@ -204,9 +222,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     return equipmentViewController;
 }
 
-- (void)presentViewController:(UIViewController *)viewController fromButton:(LCKItemButton *)button {
+- (void)presentViewController:(UIViewController *)viewController withFrame:(CGRect)frame fromView:(UIView *)button {
     [self dismissCurrentlyPresentedViewController:^{
-        viewController.view.frame = [self itemControllerFrame];
+        viewController.view.frame = frame;
         viewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         
         self.overlayView.alpha = 0.0;
@@ -280,7 +298,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes];
     }
     
-    [self presentViewController:viewController fromButton:button];
+    [self presentViewController:viewController withFrame:[self itemControllerFrame] fromView:button];
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
@@ -319,7 +337,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
     
-    [self presentViewController:itemViewController fromButton:nil];
+    [self presentViewController:itemViewController withFrame:[self itemControllerFrame] fromView:nil];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -338,6 +356,19 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 #pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    LCKStatInfoViewController *infoViewController = [self newStatInfoViewControllerForStatType:indexPath.row];
+    
+    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
+    CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:collectionView];
+    
+    CGRect presentationFrame = [self statInfoViewFrameForCellFrame:cellFrame];
+    
+    infoViewController.presentingRect = CGRectMake(cellFrame.origin.x - LCKCharacterStatInfoViewHorizontalMargin, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.width);
+    
+    [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
+}
 
 #pragma mark - LCKItemViewControllerDelegate
 
