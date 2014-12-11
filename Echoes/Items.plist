@@ -8,9 +8,9 @@
 		<key>actionText</key>
 		<string>Slash: Swing your sword in an arc dealing 1d6 damage to enemies in front of you.</string>
 		<key>descriptiveText</key>
-		<string>A straight sword useful for slashing at enemies.</string>
+		<string>The horizontal sweeping motion makes this sword effective against multiple enemies.</string>
 		<key>flavorText</key>
-		<string>The flavor text of the item. Lots of flavor goes here. But never Banana. Banana sucks.</string>
+		<string></string>
 		<key>imageName</key>
 		<string>broadsword</string>
 		<key>attributeRequirements</key>
@@ -33,6 +33,42 @@
 		<string>kiteshield</string>
 		<key>attributeRequirements</key>
 		<array>
+			<string>STR 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bandit&apos;s Knife</string>
+		<key>actionText</key>
+		<string>Stab: Thrust at your opponent dealing 1d6 damage to an enemy.</string>
+		<key>descriptiveText</key>
+		<string>Highly effective when attacking from behind. Roll an extra 1d4 if attacking from behind.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>banditknife</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Battle Axe</string>
+		<key>actionText</key>
+		<string>Cleave: Cleave an opponent dealing 1d10 damage to an enemy.</string>
+		<key>descriptiveText</key>
+		<string>Powerful attack due to its weight, but one wrong swing leaves the wielder wide open.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>battleaxe</string>
+		<key>attributeRequirements</key>
+		<array>
 			<string>STR 2</string>
 		</array>
 		<key>itemSlot</key>
@@ -40,94 +76,60 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Estus Flask</string>
+		<string>Short Bow</string>
 		<key>actionText</key>
-		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<string>Shoot: Fire an arrow at your opponent dealing 1d4 to an enemy.</string>
 		<key>descriptiveText</key>
-		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<string>Aiming is key.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
-		<string>estusflask</string>
+		<string>shortbow</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 2</string>
-		</array>
-		<key>itemSlot</key>
-		<string>accessory</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Demon Great Hammer</string>
-		<key>actionText</key>
-		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
-		<key>descriptiveText</key>
-		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
-		<key>flavorText</key>
-		<string></string>
-		<key>imageName</key>
-		<string>demongreathammer</string>
-		<key>attributeRequirements</key>
-		<array>
-			<string>STR 2</string>
+			<string>DEX 2</string>
 		</array>
 		<key>itemSlot</key>
 		<string>twohand</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Drangleic Armor</string>
+		<string>Sorcerer&apos;s Catalyst</string>
 		<key>actionText</key>
-		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<string>Smack: Hit one enemy for 1d4 damage.</string>
 		<key>descriptiveText</key>
-		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<string>Improves spell damage. Roll an additional 1d4 when casting a spell.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
-		<string>demongreathammer</string>
+		<string>sorcerercatalyst</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 2</string>
+			<string>DEX 2</string>
 		</array>
 		<key>itemSlot</key>
-		<string>chest</string>
+		<string>onehand</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Drangleic Boots</string>
+		<string>Canvas Talisman</string>
 		<key>actionText</key>
-		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
+		<string>Smack: Hit one enemy for 1d4 damage.</string>
 		<key>descriptiveText</key>
-		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
+		<string>Improves chance to hit with miracles. Add 1 to your dice rolls when casting miracles.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
-		<string>demongreathammer</string>
+		<string>canvastalisman</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 2</string>
-			<string>FAI 0</string>
+			<string>DEX 2</string>
 		</array>
 		<key>itemSlot</key>
-		<string>boots</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Drangleic Helmet</string>
-		<key>actionText</key>
-		<string>Block: Raise your shield to prevent 50% of the damage you would receive before your next turn.</string>
-		<key>descriptiveText</key>
-		<string>Medium metal shield. Decorated with a tower, the symbol of protection.</string>
-		<key>flavorText</key>
-		<string></string>
-		<key>imageName</key>
-		<string>demongreathammer</string>
-		<key>attributeRequirements</key>
-		<array>
-			<string>STR 2</string>
-		</array>
-		<key>itemSlot</key>
-		<string>helmet</string>
+		<string>onehand</string>
 	</dict>
 </array>
 </plist>

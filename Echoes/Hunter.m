@@ -32,7 +32,7 @@
     hunter.vitality = @(1);
     hunter.strength = @(2);
     hunter.dexterity = @(3);
-    hunter.intelligence = @(0);
+    hunter.intelligence = @(-1);
     hunter.faith = @(-1);
 
     return hunter;
