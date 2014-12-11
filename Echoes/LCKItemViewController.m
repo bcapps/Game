@@ -13,6 +13,8 @@
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
+#import <LCKCategories/NSArray+LCKAdditions.h>
+
 @interface LCKItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *itemNameLabel;
@@ -46,11 +48,17 @@
     NSMutableAttributedString *attributedAction = [[NSMutableAttributedString alloc] init];
     NSArray *actionComponents = [self.item.actionText componentsSeparatedByString:@":"];
     
-    NSAttributedString *action = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@: ", actionComponents.firstObject] attributes:@{NSFontAttributeName: [UIFont boldTitleTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
-    NSAttributedString *actionText = [[NSAttributedString alloc] initWithString:[actionComponents objectAtIndex:1] attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
-    
-    [attributedAction appendAttributedString:action];
-    [attributedAction appendAttributedString:actionText];
+    if (((NSString *)[actionComponents firstObject]).length) {
+        NSAttributedString *action = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@: ", actionComponents.firstObject] attributes:@{NSFontAttributeName: [UIFont boldTitleTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
+        
+        [attributedAction appendAttributedString:action];
+    }
+        
+    if ([actionComponents safeObjectAtIndex:1]) {
+        NSAttributedString *actionText = [[NSAttributedString alloc] initWithString:[actionComponents safeObjectAtIndex:1] attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
+        
+        [attributedAction appendAttributedString:actionText];
+    }
     
     self.itemActionLabel.attributedText = attributedAction;
     
