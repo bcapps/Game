@@ -8,8 +8,11 @@
 
 @import UIKit;
 
+#import "CharacterStats.h"
+
 @interface LCKStatInfoViewController : UIViewController
 
 @property (nonatomic) CGRect presentingRect;
+@property (nonatomic) LCKStatType statType;
 
 @end

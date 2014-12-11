@@ -24,14 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.infoTextView = [[UITextView alloc] initWithFrame:self.view.frame];
-    self.infoTextView.backgroundColor = [UIColor backgroundColor];
+    self.infoTextView = [[UITextView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame) - 10.0, CGRectGetHeight(self.view.frame))];
+    self.infoTextView.backgroundColor = [UIColor clearColor];
     self.infoTextView.editable = NO;
+    self.infoTextView.text = [CharacterStats statDescriptionForStatType:self.statType];
+    self.infoTextView.textColor = [UIColor titleTextColor];
+    self.infoTextView.font = [UIFont descriptiveTextFontOfSize:14.0];
     
     [self.view addSubview:self.infoTextView];
-    
-    self.view.clipsToBounds = NO;
-    self.view.layer.masksToBounds = NO;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -56,7 +56,7 @@
     [self.shapeLayer setBounds:self.view.bounds];
     [self.shapeLayer setAnchorPoint:CGPointMake(0.0f, 0.0f)];
     [self.shapeLayer setPosition:CGPointMake(0.0f, 0.0f)];
-    [[[self view] layer] addSublayer:self.shapeLayer];
+    [[[self view] layer] insertSublayer:self.shapeLayer atIndex:0];
 }
 
 @end

@@ -64,6 +64,21 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     }
 }
 
++ (NSString *)statDescriptionForStatType:(LCKStatType)statType {
+    switch (statType) {
+        case LCKStatTypeVitality:
+            return @"· Increases health by 3 per point.\n· Add to any resistance checks made against poison.\n· Add to any resistance checks made staggering.";
+        case LCKStatTypeStrength:
+            return @"· Add to damage and attack rolls made when using strength weapons.\n· Add to any resistance checks made against toxic.";
+        case LCKStatTypeDexterity:
+            return @"· Add to damage and attack rolls made when using dexterity weapons.\n· Add to any dodge checks made.";
+        case LCKStatTypeIntelligence:
+            return @"· Add to damage and attack rolls made when using intelligence weapons.\n· Add to any resistance checks made against bleeding.";
+        case LCKStatTypeFaith:
+            return @"· Add to damage and attack rolls made when using faith weapons.\n· Add to any resistance checks made against curses.";
+    }
+}
+
 - (NSNumber *)statValueForStatString:(NSString *)statString {
     if ([statString isEqualToString:[[self class] statNameForStatType:LCKStatTypeVitality]]) {
         return self.vitality;

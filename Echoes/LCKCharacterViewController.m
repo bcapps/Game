@@ -36,7 +36,7 @@ const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
 const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
-const CGFloat LCKCharacterStatInfoViewHeight = 90.0;
+const CGFloat LCKCharacterStatInfoViewHeight = 125.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
@@ -194,6 +194,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (LCKStatInfoViewController *)newStatInfoViewControllerForStatType:(LCKStatType)statType {
     LCKStatInfoViewController *infoViewController = [[LCKStatInfoViewController alloc] init];
+    infoViewController.statType = statType;
     infoViewController.view.clipsToBounds = YES;
     
     return infoViewController;
