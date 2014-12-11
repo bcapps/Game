@@ -183,21 +183,39 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Longsword</string>
+		<string>Heater Shield</string>
 		<key>actionText</key>
-		<string>Slice: Hit one target for 2d4 damage.</string>
+		<string>Block: Raise your shield to prevent 25% of the damage you would receive before your next turn.</string>
 		<key>descriptiveText</key>
-		<string>An accessible sword which inflicts consistent damage</string>
+		<string>A standard, widely-used shield.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
-		<string>longsword</string>
+		<string>heatershield</string>
 		<key>attributeRequirements</key>
 		<array>
-			<string>STR 2</string>
+			<string>STR 1</string>
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soul Arrow</string>
+		<key>actionText</key>
+		<string>Conjure: Fires an arrow shaped bolt of magic dealing 1d8 damage.</string>
+		<key>descriptiveText</key>
+		<string>Soul arrows inflict magic damage, making them effective against iron armor, tough scales, and other physically resilient materials.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>heatershield</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>spell</string>
 	</dict>
 </array>
 </plist>

@@ -21,7 +21,8 @@ NSString * const LCKItemTwoHandKey = @"twohand";
 NSString * const LCKItemHelmetKey = @"helmet";
 NSString * const LCKItemChestKey = @"chest";
 NSString * const LCKItemBootsKey = @"boots";
-NSString * const LCKItemAccessory = @"accessory";
+NSString * const LCKItemAccessoryKey = @"accessory";
+NSString * const LCKItemSpellKey = @"spell";
 
 NSString * const LCKItemTypeNameOneHanded = @"One-Handed";
 NSString * const LCKItemTypeNameTwoHanded = @"Two-Handed";
@@ -29,6 +30,7 @@ NSString * const LCKItemTypeNameAccessory = @"Accessory";
 NSString * const LCKItemTypeNameHelmet = @"Helmet";
 NSString * const LCKItemTypeNameChest = @"Chest";
 NSString * const LCKItemTypeNameBoots = @"Boots";
+NSString * const LCKItemTypeNameSpell = @"Boots";
 
 NSString * const LCKItemCodingNameKey = @"LCKItemCodingNameKey";
 NSString * const LCKItemCodingActionKey = @"LCKItemCodingActionKey";
@@ -143,11 +145,14 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
     else if ([slotString isEqualToString:LCKItemBootsKey]) {
         return LCKItemSlotBoots;
     }
-    else if ([slotString isEqualToString:LCKItemAccessory]) {
+    else if ([slotString isEqualToString:LCKItemAccessoryKey]) {
         return LCKItemSlotAccessory;
     }
     else if ([slotString isEqualToString:LCKItemTwoHandKey]) {
         return LCKItemSlotTwoHand;
+    }
+    else if ([slotString isEqualToString:LCKItemSpellKey]) {
+        return LCKItemSlotSpell;
     }
     
     return 0;
@@ -171,6 +176,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
             return LCKItemTypeNameBoots;
         case LCKItemSlotAccessory:
             return LCKItemTypeNameAccessory;
+        case LCKItemSlotSpell:
+            return LCKItemTypeNameSpell;
     }
 }
 
@@ -179,15 +186,17 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         case LCKItemSlotOneHand:
             return [UIImage imageNamed:@"oneHandIcon"];
         case LCKItemSlotTwoHand:
-            return [UIImage imageNamed:@"twoHandIcon"];;
+            return [UIImage imageNamed:@"twoHandIcon"];
         case LCKItemSlotHelmet:
-            return [UIImage imageNamed:@"helmetIcon"];;
+            return [UIImage imageNamed:@"helmetIcon"];
         case LCKItemSlotChest:
-            return [UIImage imageNamed:@"chestIcon"];;
+            return [UIImage imageNamed:@"chestIcon"];
         case LCKItemSlotBoots:
-            return [UIImage imageNamed:@"bootsIcon"];;
+            return [UIImage imageNamed:@"bootsIcon"];
         case LCKItemSlotAccessory:
-            return [UIImage imageNamed:@"accessoryIcon"];;
+            return [UIImage imageNamed:@"accessoryIcon"];
+        case LCKItemSlotSpell:
+            return [UIImage imageNamed:@"spellIcon"];
     }
 }
 

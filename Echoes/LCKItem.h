@@ -15,7 +15,8 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotBoots,
     LCKItemSlotAccessory,
     LCKItemSlotOneHand,
-    LCKItemSlotTwoHand
+    LCKItemSlotTwoHand,
+    LCKItemSlotSpell
 };
 
 extern NSString * const LCKItemTypeNameOneHanded;
