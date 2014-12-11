@@ -39,6 +39,21 @@
 
 - (void)equipItem:(LCKItem *)item {
     [self setItem:item equippedStatus:YES];
+    
+    if (item.itemSlot == LCKItemSlotOneHand) {
+        for (LCKItem *weapon in self.equippedWeapons) {
+            if (weapon.itemSlot == LCKItemSlotTwoHand) {
+                [self setItem:weapon equippedStatus:NO];
+            }
+        }
+    }
+    else if (item.itemSlot == LCKItemSlotTwoHand) {
+        for (LCKItem *weapon in self.equippedWeapons) {
+            if (weapon.itemSlot == LCKItemSlotOneHand) {
+                [self setItem:weapon equippedStatus:NO];
+            }
+        }
+    }
 }
 
 - (void)unequipItem:(LCKItem *)item {
