@@ -30,10 +30,10 @@
     Cleric *cleric = [[self alloc] initWithContext:context];
     
     cleric.vitality = @(1);
-    cleric.strength = @(0);
+    cleric.strength = @(1);
     cleric.dexterity = @(-1);
     cleric.intelligence = @(-1);
-    cleric.faith = @(4);
+    cleric.faith = @(3);
 
     return cleric;
 }

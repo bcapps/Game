@@ -106,8 +106,7 @@
 		<string>sorcerercatalyst</string>
 		<key>attributeRequirements</key>
 		<array>
-			<string>STR 2</string>
-			<string>DEX 2</string>
+			<string>INT 3</string>
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
@@ -125,8 +124,77 @@
 		<string>canvastalisman</string>
 		<key>attributeRequirements</key>
 		<array>
+			<string>FAI 3</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Thief Mask</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Lowers critical hit range by 1.</string>
+		<key>flavorText</key>
+		<string>Mask of sinners. They hide their faces, stifle their voices and hide in the shadows.</string>
+		<key>imageName</key>
+		<string>thiefmask</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string>helmet</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mace</string>
+		<key>actionText</key>
+		<string>Smash: Hit one target for 1d6 damage.</string>
+		<key>descriptiveText</key>
+		<string>Iron hammer with a protrusive pommel. Standard weapon for clerics.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>mace</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Longsword</string>
+		<key>actionText</key>
+		<string>Slice: Hit one target for 2d4 damage.</string>
+		<key>descriptiveText</key>
+		<string>An accessible sword which inflicts consistent damage</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>longsword</string>
+		<key>attributeRequirements</key>
+		<array>
 			<string>STR 2</string>
-			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Longsword</string>
+		<key>actionText</key>
+		<string>Slice: Hit one target for 2d4 damage.</string>
+		<key>descriptiveText</key>
+		<string>An accessible sword which inflicts consistent damage</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>longsword</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
