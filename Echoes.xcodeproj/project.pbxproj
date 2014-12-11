@@ -38,6 +38,7 @@
 		F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */; };
 		F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */; };
 		F21F437F1A3A271800FEA417 /* LCKStatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F437E1A3A271800FEA417 /* LCKStatInfoViewController.m */; };
+		F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -144,6 +145,7 @@
 		F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwoHandIcon@2x.png"; sourceTree = "<group>"; };
 		F21F437D1A3A271800FEA417 /* LCKStatInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatInfoViewController.h; sourceTree = "<group>"; };
 		F21F437E1A3A271800FEA417 /* LCKStatInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatInfoViewController.m; sourceTree = "<group>"; };
+		F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spellIcon@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */,
 				F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */,
 				F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */,
+				F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */,
 			);
 			name = "Default Icon Types";
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
 				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
+				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
