@@ -175,6 +175,46 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="fVp-Po-dGf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7P-e8-J8t" userLabel="EquipmentSpell1" customClass="LCKItemButton">
+                                <rect key="frame" x="152" y="280" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="eX6-R3-Deq"/>
+                                    <constraint firstAttribute="width" constant="36" id="ybn-cs-5BI"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="wXU-b1-lgD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-yb-kyb" userLabel="EquipmentSpell2" customClass="LCKItemButton">
+                                <rect key="frame" x="198" y="280" width="36" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="F65-bX-8gu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UR-hi-74E" userLabel="EquipmentSpell3" customClass="LCKItemButton">
+                                <rect key="frame" x="152" y="326" width="36" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="wp5-fF-vF4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kb-wS-brh" userLabel="EquipmentSpell4" customClass="LCKItemButton">
+                                <rect key="frame" x="198" y="326" width="36" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="klm-l9-J26"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
                                 <rect key="frame" x="0.0" y="539" width="600" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,32 +293,46 @@
                             <constraint firstItem="U3k-ex-baV" firstAttribute="centerX" secondItem="7D5-tH-Ejn" secondAttribute="centerX" id="4LY-CZ-oGP"/>
                             <constraint firstItem="oab-Ny-zTp" firstAttribute="top" secondItem="U3k-ex-baV" secondAttribute="bottom" constant="20" id="67d-qY-hUO"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="ar4-85-oMt" secondAttribute="top" constant="5" id="7XB-2j-1sR"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="top" secondItem="yya-Wz-xsE" secondAttribute="bottom" constant="40" id="8K2-FL-hkf"/>
+                            <constraint firstItem="7UR-hi-74E" firstAttribute="top" secondItem="7Kb-wS-brh" secondAttribute="top" id="8KA-Ga-edW"/>
                             <constraint firstItem="Tfq-jD-en0" firstAttribute="centerX" secondItem="U3k-ex-baV" secondAttribute="centerX" id="9D2-ZC-alt"/>
+                            <constraint firstItem="cjL-yb-kyb" firstAttribute="centerX" secondItem="7Kb-wS-brh" secondAttribute="centerX" id="Aeo-8a-9lV"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="yya-Wz-xsE" secondAttribute="trailing" constant="10" id="BrD-32-aHq"/>
                             <constraint firstItem="kOx-KH-9Dv" firstAttribute="top" secondItem="EmM-eE-XlB" secondAttribute="bottom" id="Ejn-og-3k6"/>
                             <constraint firstItem="EmM-eE-XlB" firstAttribute="top" secondItem="oab-Ny-zTp" secondAttribute="bottom" constant="10" id="G2t-yb-TQW"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="z5l-dZ-bU0" secondAttribute="trailing" constant="10" id="GTa-dd-j30"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="675-xe-31g" secondAttribute="bottom" constant="-200" id="Grb-sQ-DQc"/>
+                            <constraint firstItem="7UR-hi-74E" firstAttribute="height" secondItem="n7P-e8-J8t" secondAttribute="height" id="HeU-Jf-osm"/>
                             <constraint firstAttribute="centerX" secondItem="oab-Ny-zTp" secondAttribute="centerX" id="HvU-LF-uNl"/>
                             <constraint firstItem="675-xe-31g" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="K7u-3e-i0a"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="MYz-dF-S7y"/>
+                            <constraint firstItem="cjL-yb-kyb" firstAttribute="top" secondItem="n7P-e8-J8t" secondAttribute="top" id="N4r-yO-0Ii"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="7D5-tH-Ejn" secondAttribute="top" constant="-70" id="PJy-6M-2lL"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="height" secondItem="cjL-yb-kyb" secondAttribute="height" id="Rto-8p-Sql"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="height" secondItem="ELO-qo-6rC" secondAttribute="height" id="SYG-5L-liX"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="IHP-mI-kKS" secondAttribute="top" constant="5" id="WTX-yI-MNR"/>
+                            <constraint firstItem="7UR-hi-74E" firstAttribute="width" secondItem="n7P-e8-J8t" secondAttribute="width" id="XHq-HM-zKw"/>
                             <constraint firstAttribute="centerX" secondItem="U3k-ex-baV" secondAttribute="centerX" id="Xhv-Z6-L8Z"/>
+                            <constraint firstItem="cjL-yb-kyb" firstAttribute="leading" secondItem="n7P-e8-J8t" secondAttribute="trailing" constant="10" id="ZSS-hY-nHY"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="leading" secondItem="ar4-85-oMt" secondAttribute="trailing" constant="10" id="Zqw-yg-0JJ"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="centerX" secondItem="yya-Wz-xsE" secondAttribute="centerX" constant="-25" id="b65-ij-a6H"/>
                             <constraint firstAttribute="centerX" secondItem="EmM-eE-XlB" secondAttribute="centerX" id="bx9-ma-b99"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="centerY" secondItem="ELO-qo-6rC" secondAttribute="centerY" constant="-3" id="cGC-Yh-YPq"/>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="bottom" secondItem="IG2-I5-mWV" secondAttribute="top" constant="10" id="dJB-Re-7Uy"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="ZJR-JV-MpM" secondAttribute="bottom" constant="20" id="daE-mh-91Z"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="width" secondItem="cjL-yb-kyb" secondAttribute="width" id="e9r-pn-M74"/>
+                            <constraint firstItem="7UR-hi-74E" firstAttribute="centerX" secondItem="n7P-e8-J8t" secondAttribute="centerX" id="eNG-LW-zCI"/>
                             <constraint firstItem="Tfq-jD-en0" firstAttribute="bottom" secondItem="U3k-ex-baV" secondAttribute="bottom" id="fRG-y5-ScW"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="height" secondItem="ELO-qo-6rC" secondAttribute="height" id="j5N-bw-BYq"/>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="top" secondItem="Is3-ZS-0SK" secondAttribute="bottom" constant="-10" id="kOg-2X-7Q2"/>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="centerX" secondItem="IG2-I5-mWV" secondAttribute="centerX" id="lN8-8v-Sgm"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="height" secondItem="7Kb-wS-brh" secondAttribute="height" id="lcu-3Q-COg"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="yya-Wz-xsE" secondAttribute="bottom" constant="-200" id="pS7-0R-4Xp"/>
+                            <constraint firstItem="n7P-e8-J8t" firstAttribute="width" secondItem="7Kb-wS-brh" secondAttribute="width" id="ped-1t-Q1E"/>
                             <constraint firstItem="675-xe-31g" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="10" id="qAP-0L-jD0"/>
                             <constraint firstItem="Is3-ZS-0SK" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="sX3-pY-DDC"/>
                             <constraint firstAttribute="width" secondItem="oab-Ny-zTp" secondAttribute="width" id="sdS-dV-Z2J"/>
+                            <constraint firstItem="7UR-hi-74E" firstAttribute="top" secondItem="n7P-e8-J8t" secondAttribute="bottom" constant="10" id="vgz-Wp-rZc"/>
                             <constraint firstItem="EmM-eE-XlB" firstAttribute="top" secondItem="oab-Ny-zTp" secondAttribute="bottom" constant="5" id="w7y-4M-MIb"/>
                             <constraint firstItem="IHP-mI-kKS" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="-20" id="zN9-Iu-kUw"/>
                         </constraints>
@@ -318,6 +372,10 @@
                         <outletCollection property="equipmentButtons" destination="z5l-dZ-bU0" id="EkO-oi-KwD"/>
                         <outletCollection property="equipmentButtons" destination="Tfq-jD-en0" id="Zg9-5Z-UT3"/>
                         <outletCollection property="equipmentButtons" destination="675-xe-31g" id="gYV-XC-uuQ"/>
+                        <outletCollection property="equipmentButtons" destination="n7P-e8-J8t" id="MNJ-iW-dbg"/>
+                        <outletCollection property="equipmentButtons" destination="cjL-yb-kyb" id="Rar-Tn-vKP"/>
+                        <outletCollection property="equipmentButtons" destination="7UR-hi-74E" id="q3i-N9-cc0"/>
+                        <outletCollection property="equipmentButtons" destination="7Kb-wS-brh" id="gif-bQ-MKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvk-BM-J5m" userLabel="First Responder" sceneMemberID="firstResponder"/>

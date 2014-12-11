@@ -209,10 +209,10 @@
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
-		<string>heatershield</string>
+		<string>soularrow</string>
 		<key>attributeRequirements</key>
 		<array>
-			<string>STR 1</string>
+			<string>INT 3</string>
 		</array>
 		<key>itemSlot</key>
 		<string>spell</string>
