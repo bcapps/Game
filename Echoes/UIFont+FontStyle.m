@@ -22,4 +22,8 @@
     return [UIFont fontWithName:@"Avenir-Heavy" size:size];
 }
 
++ (UIFont *)boldTitleTextFontOfSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Avenir-Black" size:size];
+}
+
 @end

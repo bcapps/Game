@@ -43,9 +43,16 @@
     
     self.itemImageView.image = [UIImage imageNamed:self.item.imageName];
     
-    self.itemActionLabel.text = self.item.actionText;
-    self.itemActionLabel.textColor = [UIColor titleTextColor];
-    self.itemActionLabel.font = [UIFont descriptiveTextFontOfSize:15.0];
+    NSMutableAttributedString *attributedAction = [[NSMutableAttributedString alloc] init];
+    NSArray *actionComponents = [self.item.actionText componentsSeparatedByString:@":"];
+    
+    NSAttributedString *action = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@: ", actionComponents.firstObject] attributes:@{NSFontAttributeName: [UIFont boldTitleTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
+    NSAttributedString *actionText = [[NSAttributedString alloc] initWithString:[actionComponents objectAtIndex:1] attributes:@{NSFontAttributeName: [UIFont descriptiveTextFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor titleTextColor]}];
+    
+    [attributedAction appendAttributedString:action];
+    [attributedAction appendAttributedString:actionText];
+    
+    self.itemActionLabel.attributedText = attributedAction;
     
     self.itemDescriptionLabel.text = self.item.descriptionText;
     self.itemDescriptionLabel.textColor = [UIColor descriptiveTextColor];

@@ -14,5 +14,6 @@
 + (UIFont *)italicDescriptiveTextFontOfSize:(CGFloat)size;
 
 + (UIFont *)titleTextFontOfSize:(CGFloat)size;
++ (UIFont *)boldTitleTextFontOfSize:(CGFloat)size;
 
 @end
