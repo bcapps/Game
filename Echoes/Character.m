@@ -10,6 +10,7 @@
 #import "CharacterStats.h"
 
 #import "LCKItem.h"
+#import "LCKItemProvider.h"
 
 @implementation Character
 
@@ -22,6 +23,20 @@
 
 - (void)awakeFromInsert {
     self.items = @[];
+}
+
+- (void)awakeFromFetch {
+    NSMutableArray *updatedItems = [NSMutableArray array];
+    
+    for (LCKItem *item in self.items) {
+        LCKItem *updatedItem = [LCKItemProvider itemForName:item.name];
+        
+        if (updatedItem) {
+            [updatedItems addObject:[updatedItem copy]];
+        }
+    }
+    
+    self.items = [updatedItems copy];
 }
 
 - (CharacterGender)characterGender {
