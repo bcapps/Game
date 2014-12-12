@@ -39,6 +39,17 @@
     [self.titleLabel sizeToFit];
 }
 
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    
+    if (highlighted) {
+        self.titleLabel.alpha = 0.5;
+    }
+    else {
+        self.titleLabel.alpha = 1.0;
+    }
+}
+
 #pragma mark - LCKStatusButton
 
 - (void)commonInitialization {
