@@ -284,11 +284,27 @@
                                     <action selector="decreaseHealthButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Axu-lI-0Vf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOl-u6-uL3" userLabel="Souls Button" customClass="LCKStatusButton">
+                                <rect key="frame" x="392" y="40" width="182" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="46U-eE-Rzp"/>
+                                    <constraint firstAttribute="width" constant="112" id="jSB-rE-nC9"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jSB-rE-nC9"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="top" secondItem="675-xe-31g" secondAttribute="bottom" constant="40" id="1xw-Pt-Pkv"/>
                             <constraint firstItem="z5l-dZ-bU0" firstAttribute="top" secondItem="ar4-85-oMt" secondAttribute="bottom" constant="13" id="2EY-W0-mw5"/>
+                            <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="yOl-u6-uL3" secondAttribute="top" id="2KR-2m-t5Z"/>
                             <constraint firstItem="EmM-eE-XlB" firstAttribute="width" secondItem="buv-6s-AS3" secondAttribute="width" id="2kl-dA-S2O"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="centerX" secondItem="7D5-tH-Ejn" secondAttribute="centerX" id="4LY-CZ-oGP"/>
                             <constraint firstItem="oab-Ny-zTp" firstAttribute="top" secondItem="U3k-ex-baV" secondAttribute="bottom" constant="20" id="67d-qY-hUO"/>
@@ -305,6 +321,7 @@
                             <constraint firstItem="7UR-hi-74E" firstAttribute="height" secondItem="n7P-e8-J8t" secondAttribute="height" id="HeU-Jf-osm"/>
                             <constraint firstAttribute="centerX" secondItem="oab-Ny-zTp" secondAttribute="centerX" id="HvU-LF-uNl"/>
                             <constraint firstItem="675-xe-31g" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="K7u-3e-i0a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yOl-u6-uL3" secondAttribute="trailing" constant="10" id="LIK-Nm-bsC"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="MYz-dF-S7y"/>
                             <constraint firstItem="cjL-yb-kyb" firstAttribute="top" secondItem="n7P-e8-J8t" secondAttribute="top" id="N4r-yO-0Ii"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="7D5-tH-Ejn" secondAttribute="top" constant="-70" id="PJy-6M-2lL"/>
@@ -326,11 +343,13 @@
                             <constraint firstItem="Tfq-jD-en0" firstAttribute="bottom" secondItem="U3k-ex-baV" secondAttribute="bottom" id="fRG-y5-ScW"/>
                             <constraint firstItem="cK2-iC-meJ" firstAttribute="height" secondItem="ELO-qo-6rC" secondAttribute="height" id="j5N-bw-BYq"/>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="top" secondItem="Is3-ZS-0SK" secondAttribute="bottom" constant="-10" id="kOg-2X-7Q2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yOl-u6-uL3" secondAttribute="trailing" constant="10" id="l7o-Cs-J3H"/>
                             <constraint firstItem="ELO-qo-6rC" firstAttribute="centerX" secondItem="IG2-I5-mWV" secondAttribute="centerX" id="lN8-8v-Sgm"/>
                             <constraint firstItem="n7P-e8-J8t" firstAttribute="height" secondItem="7Kb-wS-brh" secondAttribute="height" id="lcu-3Q-COg"/>
                             <constraint firstItem="U3k-ex-baV" firstAttribute="top" secondItem="yya-Wz-xsE" secondAttribute="bottom" constant="-200" id="pS7-0R-4Xp"/>
                             <constraint firstItem="n7P-e8-J8t" firstAttribute="width" secondItem="7Kb-wS-brh" secondAttribute="width" id="ped-1t-Q1E"/>
                             <constraint firstItem="675-xe-31g" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="10" id="qAP-0L-jD0"/>
+                            <constraint firstItem="yOl-u6-uL3" firstAttribute="leading" secondItem="ELO-qo-6rC" secondAttribute="leading" constant="20" id="qZx-83-lAj"/>
                             <constraint firstItem="Is3-ZS-0SK" firstAttribute="centerX" secondItem="ELO-qo-6rC" secondAttribute="centerX" id="sX3-pY-DDC"/>
                             <constraint firstAttribute="width" secondItem="oab-Ny-zTp" secondAttribute="width" id="sdS-dV-Z2J"/>
                             <constraint firstItem="7UR-hi-74E" firstAttribute="top" secondItem="n7P-e8-J8t" secondAttribute="bottom" constant="10" id="vgz-Wp-rZc"/>
@@ -340,6 +359,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="zN9-Iu-kUw"/>
+                                <exclude reference="LIK-Nm-bsC"/>
                                 <exclude reference="67d-qY-hUO"/>
                                 <exclude reference="G2t-yb-TQW"/>
                             </mask>
@@ -369,6 +389,7 @@
                         <outlet property="silhouetteHeightConstraint" destination="avw-uY-2OZ" id="i4x-ye-cgg"/>
                         <outlet property="silhouetteImageView" destination="U3k-ex-baV" id="G7d-g9-oUa"/>
                         <outlet property="silhouetteWidthConstraint" destination="g8d-a6-c1M" id="Wx8-CK-Dfb"/>
+                        <outlet property="soulsButton" destination="yOl-u6-uL3" id="3R6-EK-ftS"/>
                         <outlet property="statsFlowLayout" destination="gld-cz-cN6" id="bUB-xS-fJY"/>
                         <outlet property="thirdSpellButton" destination="7UR-hi-74E" id="LIp-zn-B3o"/>
                         <outletCollection property="equipmentButtons" destination="IHP-mI-kKS" id="gjf-bR-axH"/>

@@ -16,6 +16,7 @@
 #import "LCKItemProvider.h"
 #import "LCKItemButton.h"
 #import "LCKItem.h"
+#import "LCKStatusButton.h"
 
 #import "LCKStatInfoViewController.h"
 #import "LCKEquipmentViewController.h"
@@ -54,6 +55,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 @property (weak, nonatomic) IBOutlet LCKItemButton *secondSpellButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *thirdSpellButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *fourthSpellButton;
+
+@property (weak, nonatomic) IBOutlet LCKStatusButton *soulsButton;
+
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
@@ -133,6 +137,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.secondSpellButton.itemSlot = LCKItemSlotSpell;
     self.thirdSpellButton.itemSlot = LCKItemSlotSpell;
     self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
+    
+    [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
+    [self.soulsButton setTitle:@"4000" forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

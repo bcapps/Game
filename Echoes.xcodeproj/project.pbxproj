@@ -51,6 +51,7 @@
 		F21F43981A3A57AC00FEA417 /* thiefmask.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43971A3A57AC00FEA417 /* thiefmask.png */; };
 		F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43991A3A57DF00FEA417 /* soularrow@2x.png */; };
 		F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */; };
+		F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -170,6 +171,8 @@
 		F21F43971A3A57AC00FEA417 /* thiefmask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thiefmask.png; sourceTree = "<group>"; };
 		F21F43991A3A57DF00FEA417 /* soularrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soularrow@2x.png"; sourceTree = "<group>"; };
 		F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soulsIcon@2x.png"; sourceTree = "<group>"; };
+		F21F439E1A3BB39400FEA417 /* LCKStatusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatusButton.h; sourceTree = "<group>"; };
+		F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatusButton.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				F21F43431A2FD28000FEA417 /* LCKItem.m */,
 				F21F436A1A3563C700FEA417 /* LCKItemCell.h */,
 				F21F436B1A3563C700FEA417 /* LCKItemCell.m */,
+				F21F439E1A3BB39400FEA417 /* LCKStatusButton.h */,
+				F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -714,6 +719,7 @@
 				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
 				F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */,
+				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
