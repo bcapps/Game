@@ -119,6 +119,20 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     CGFloat numberOfItems = LCKCharacterViewControllerNumberOfStats;
     
     self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, LCKCharacterViewControllerStatHeight);
+    
+    self.leftHandButton.itemSlot = LCKItemSlotOneHand;
+    self.rightHandButton.itemSlot = LCKItemSlotOneHand;
+    self.helmetButton.itemSlot = LCKItemSlotHelmet;
+    self.chestButton.itemSlot = LCKItemSlotChest;
+    self.bootsButton.itemSlot = LCKItemSlotBoots;
+    
+    self.firstAccessoryButton.itemSlot = LCKItemSlotAccessory;
+    self.secondAccessoryButton.itemSlot = LCKItemSlotAccessory;
+
+    self.firstSpellButton.itemSlot = LCKItemSlotSpell;
+    self.secondSpellButton.itemSlot = LCKItemSlotSpell;
+    self.thirdSpellButton.itemSlot = LCKItemSlotSpell;
+    self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

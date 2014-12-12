@@ -8,10 +8,11 @@
 
 @import UIKit;
 
-@class LCKItem;
+#import "LCKItem.h"
 
 @interface LCKItemButton : UIButton
 
 @property (nonatomic) LCKItem *item;
+@property (nonatomic) LCKItemSlot itemSlot;
 
 @end

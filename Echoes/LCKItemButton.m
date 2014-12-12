@@ -7,7 +7,6 @@
 //
 
 #import "LCKItemButton.h"
-#import "LCKItem.h"
 
 @implementation LCKItemButton
 
@@ -34,13 +33,46 @@
 - (void)setItem:(LCKItem *)item {
     _item = item;
     
-    [self setImage:item.image forState:UIControlStateNormal];
+    if (item) {
+        [self setImage:item.image forState:UIControlStateNormal];
+        self.imageView.tintColor = self.tintColor;
+    }
+    else {
+        [self setImage:[LCKItemButton placeholderItemImageForItemSlot:self.itemSlot] forState:UIControlStateNormal];
+        self.imageView.tintColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.2];
+    }
+    
     self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
 }
 
-- (void)setItemImage:(UIImage *)itemImage {
-    [self setImage:itemImage forState:UIControlStateNormal];
-    self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
++ (UIImage *)placeholderItemImageForItemSlot:(LCKItemSlot)itemSlot {
+    UIImage *placeholderImage;
+    
+    switch (itemSlot) {
+        case LCKItemSlotOneHand:
+            placeholderImage = [UIImage imageNamed:@"oneHandIcon"];
+            break;
+        case LCKItemSlotTwoHand:
+            placeholderImage = [UIImage imageNamed:@"twoHandIcon"];
+            break;
+        case LCKItemSlotHelmet:
+            placeholderImage = [UIImage imageNamed:@"helmetIcon"];
+            break;
+        case LCKItemSlotChest:
+            placeholderImage = [UIImage imageNamed:@"chestIcon"];
+            break;
+        case LCKItemSlotBoots:
+            placeholderImage = [UIImage imageNamed:@"bootsIcon"];
+            break;
+        case LCKItemSlotAccessory:
+            placeholderImage = [UIImage imageNamed:@"accessoryIcon"];
+            break;
+        case LCKItemSlotSpell:
+            placeholderImage = [UIImage imageNamed:@"spellIcon"];
+            break;
+    }
+    
+    return [placeholderImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
 - (void)commonInitialization {
