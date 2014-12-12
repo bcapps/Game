@@ -67,7 +67,7 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
 + (NSString *)statDescriptionForStatType:(LCKStatType)statType {
     switch (statType) {
         case LCKStatTypeVitality:
-            return @"· Increases health by 3 per point.\n· Add to any resistance checks made against poison.\n· Add to any resistance checks made staggering.";
+            return @"· Increases health by 3 per point.\n· Add to any resistance checks made against poison.\n· Add to any resistance checks made against staggering.";
         case LCKStatTypeStrength:
             return @"· Add to damage and attack rolls made when using strength weapons.\n· Add to any resistance checks made against toxic.";
         case LCKStatTypeDexterity:
