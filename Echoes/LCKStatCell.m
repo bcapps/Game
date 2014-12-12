@@ -39,6 +39,17 @@ NSString * const LCKStatCellReuseIdentifier = @"LCKStatCellReuseIdentifier";
     self.statValueLabel.frame = CGRectMake(0, CGRectGetHeight(self.frame)/2, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)/2);
 }
 
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    
+    if (highlighted) {
+        self.alpha = 0.5;
+    }
+    else {
+        self.alpha = 1.0;
+    }
+}
+
 #pragma mark - LCKStatCell
 
 - (UILabel *)statNameLabel {
