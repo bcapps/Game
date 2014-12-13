@@ -108,7 +108,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     [self.multipeerManager startMonitoring];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(soulsReceived:) name:LCKMultipeerSoulsReceivedNotification object:nil];
     
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
     self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
@@ -376,7 +376,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 #pragma mark - Multipeer
 
 - (void)itemReceived:(NSNotification *)notification {
-    NSString *itemName = [notification.userInfo objectForKey:@"itemName"];
+    NSString *itemName = [notification.userInfo objectForKey:LCKMultipeerItemKey];
     
     LCKItem *item = [LCKItemProvider itemForName:itemName];
     
@@ -386,6 +386,13 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     LCKItemViewController *itemViewController = [self newItemViewControllerForItem:item];
     
     [self presentViewController:itemViewController withFrame:[self itemControllerFrame] fromView:nil];
+}
+
+- (void)soulsReceived:(NSNotification *)notification {
+    NSNumber *souls = [notification.userInfo objectForKey:LCKMultipeerSoulsKey];
+    
+    self.character.souls = @(self.character.souls.integerValue + souls.integerValue);
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
 
 #pragma mark - UICollectionViewDataSource

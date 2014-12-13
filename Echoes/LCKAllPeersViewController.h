@@ -17,6 +17,8 @@ typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
 @interface LCKAllPeersViewController : UITableViewController
 
 @property (nonatomic) LCKItem *item;
+@property (nonatomic) NSNumber *soulsToGive;
+
 @property (nonatomic, copy) LCKAllPeersViewControllerDismissedBlock dismissBlock;
 
 - (instancetype)initWithMultipeerManager:(LCKMultipeerManager *)multipeerManager;

@@ -13,12 +13,14 @@
 #import "UIColor+ColorStyle.h"
 
 #import "LCKItem.h"
+#import "LCKDMManager.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 @interface LCKAllPeersViewController ()
 
 @property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) NSArray *peerIDs;
 
 @end
 
@@ -33,6 +35,12 @@
 
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    self.peerIDs = @[];
+    
+    if ([LCKDMManager isDMMode]) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(send)];
+    }
 }
 
 #pragma mark - UITableViewController
@@ -49,21 +57,46 @@
     return self;
 }
 
+- (void)send {
+    for (MCPeerID *peerID in self.peerIDs) {
+        if (self.item) {
+            [self.multipeerManager sendItemName:self.item.name toPeerID:peerID];
+        }
+        else if (self.soulsToGive) {
+            [self.multipeerManager sendSoulAmount:self.soulsToGive toPeerID:peerID];
+        }
+    }
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
     
     if (peerID) {
-        BOOL success = [self.multipeerManager sendItemName:self.item.name];
-        
-        if (self.dismissBlock) {
-            self.dismissBlock(success);
+        if ([LCKDMManager isDMMode]) {
+            if ([self.peerIDs containsObject:peerID]) {
+                NSMutableArray *peerIDsArray = [self.peerIDs mutableCopy];
+                [peerIDsArray removeObject:peerID];
+                self.peerIDs = [peerIDsArray copy];
+            }
+            else {
+                self.peerIDs = [self.peerIDs arrayByAddingObject:peerID];
+            }
         }
-        else {
-            [self.navigationController popViewControllerAnimated:YES];
+        else if (peerID) {
+            BOOL success = [self.multipeerManager sendItemName:self.item.name toPeerID:peerID];
+            
+            if (self.dismissBlock) {
+                self.dismissBlock(success);
+            }
+            else {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
         }
     }
+    
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - UITableViewDataSource
@@ -82,6 +115,10 @@
     cell.textLabel.text = peerID.displayName;
     cell.textLabel.font = [UIFont titleTextFontOfSize:15.0];
     cell.textLabel.textColor = [UIColor titleTextColor];
+    
+    if ([self.peerIDs containsObject:peerID]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     
     return cell;
 }

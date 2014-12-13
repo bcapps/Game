@@ -54,6 +54,9 @@
 		F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */; };
 		F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */; };
 		F21F43A91A3BBF6400FEA417 /* shortsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43A81A3BBF6400FEA417 /* shortsword@2x.png */; };
+		F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */; };
+		F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */; };
+		F21F43B21A3C126D00FEA417 /* LCKDMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43B11A3C126D00FEA417 /* LCKDMManager.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -177,6 +180,12 @@
 		F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canvastalisman@2x.png"; sourceTree = "<group>"; };
 		F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spidershield@2x.png"; sourceTree = "<group>"; };
 		F21F43A81A3BBF6400FEA417 /* shortsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortsword@2x.png"; sourceTree = "<group>"; };
+		F21F43AA1A3C0B6800FEA417 /* LCKSoulGiftingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKSoulGiftingViewController.h; sourceTree = "<group>"; };
+		F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKSoulGiftingViewController.m; sourceTree = "<group>"; };
+		F21F43AD1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKDMToolsTableViewController.h; sourceTree = "<group>"; };
+		F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDMToolsTableViewController.m; sourceTree = "<group>"; };
+		F21F43B01A3C126D00FEA417 /* LCKDMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKDMManager.h; sourceTree = "<group>"; };
+		F21F43B11A3C126D00FEA417 /* LCKDMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDMManager.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -308,8 +317,14 @@
 		F21F43631A32D75B00FEA417 /* DM Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F21F43AD1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.h */,
+				F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */,
 				F21F43571A3020FA00FEA417 /* LCKAllItemsTableViewController.h */,
 				F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */,
+				F21F43AA1A3C0B6800FEA417 /* LCKSoulGiftingViewController.h */,
+				F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */,
+				F21F43B01A3C126D00FEA417 /* LCKDMManager.h */,
+				F21F43B11A3C126D00FEA417 /* LCKDMManager.m */,
 			);
 			name = "DM Tools";
 			sourceTree = "<group>";
@@ -734,6 +749,7 @@
 				F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */,
 				F2206B761A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */,
 				F2206B821A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */,
+				F21F43B21A3C126D00FEA417 /* LCKDMManager.m in Sources */,
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
 				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
@@ -741,9 +757,11 @@
 				F21F43A31A3BB9A200FEA417 /* LCKInfoViewController.m in Sources */,
 				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
 				F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */,
+				F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */,
 				F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
+				F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */,
 				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,

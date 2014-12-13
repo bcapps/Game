@@ -9,6 +9,10 @@
 #import "LCKMultipeerManager.h"
 
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
+NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsReceivedNotification";
+
+NSString * const LCKMultipeerSoulsKey = @"soulAmount";
+NSString * const LCKMultipeerItemKey = @"itemName";
 
 @interface LCKMultipeerManager () <MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate>
 
@@ -56,8 +60,23 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
     }
 }
 
-- (BOOL)sendItemName:(NSString *)itemName {
-    return [self.session sendData:[itemName dataUsingEncoding:NSUTF8StringEncoding] toPeers:self.session.connectedPeers withMode:MCSessionSendDataReliable error:nil];
+- (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {
+    if (peerID) {
+        return [self.session sendData:[itemName dataUsingEncoding:NSUTF8StringEncoding] toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+    }
+    
+    return NO;
+}
+
+- (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID {
+    if (peerID) {
+        NSUInteger index = [souls integerValue];
+        NSData *payload = [NSData dataWithBytes:&index length:sizeof(index)];
+
+        return [self.session sendData:payload toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+    }
+    
+    return NO;
 }
 
 #pragma mark - MCNearbyServiceBrowserDelegate
@@ -103,10 +122,21 @@ NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceiv
     NSLog(@"Did Receive Data");
 
     NSString *itemName = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
+
     if (itemName) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerItemReceivedNotification object:nil userInfo:@{@"itemName": itemName}];
+        }];
+    }
+    
+    NSUInteger soulInteger = 0;
+    [data getBytes:&soulInteger length:sizeof(soulInteger)];
+
+    NSNumber *souls = [NSNumber numberWithInteger:soulInteger];
+    
+    if (souls) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerSoulsReceivedNotification object:nil userInfo:@{@"soulAmount": souls}];
         }];
     }
 }

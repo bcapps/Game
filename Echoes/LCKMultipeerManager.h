@@ -10,6 +10,10 @@
 @import MultipeerConnectivity;
 
 extern NSString * const LCKMultipeerItemReceivedNotification;
+extern NSString * const LCKMultipeerSoulsReceivedNotification;
+
+extern NSString * const LCKMultipeerSoulsKey;
+extern NSString * const LCKMultipeerItemKey;
 
 @interface LCKMultipeerManager : NSObject
 
@@ -18,6 +22,7 @@ extern NSString * const LCKMultipeerItemReceivedNotification;
 - (instancetype)initWithCharacterName:(NSString *)characterName;
 
 - (void)startMonitoring;
-- (BOOL)sendItemName:(NSString *)itemName;
+- (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID;
+- (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
 
 @end

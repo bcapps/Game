@@ -17,7 +17,6 @@
 
 #import "LCKItemCell.h"
 
-#import "LCKMultipeerManager.h"
 #import "LCKAllPeersViewController.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
@@ -36,8 +35,6 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
 @property (nonatomic, readonly) NSDictionary *allItems;
 @property (nonatomic, readonly) NSArray *itemTypeNames;
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
-
 @end
 
 @implementation LCKAllItemsTableViewController
@@ -49,10 +46,7 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
     
     self.tableView.backgroundColor = [UIColor backgroundColor];
     [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
-    self.tableView.tableFooterView = [[UIView alloc] init];
-    
-    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:@"DM"];
-    [self.multipeerManager startMonitoring];
+    self.tableView.tableFooterView = [[UIView alloc] init];    
 }
 
 #pragma mark - LCKAllItemsTableViewController

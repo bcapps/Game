@@ -677,7 +677,7 @@
         <!--All Items-->
         <scene sceneID="zxY-hB-zop">
             <objects>
-                <tableViewController title="All Items" id="nL3-iX-OVW" customClass="LCKAllItemsTableViewController" sceneMemberID="viewController">
+                <tableViewController title="All Items" id="nL3-iX-OVW" customClass="LCKDMToolsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VM4-au-STZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -687,7 +687,7 @@
                             <outlet property="delegate" destination="nL3-iX-OVW" id="bAE-SM-78Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="All Items" id="G7w-h9-v3d">
+                    <navigationItem key="navigationItem" title="DM Tools" id="G7w-h9-v3d">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9ZS-LA-PTa">
                             <connections>
                                 <segue destination="KNT-Da-eRx" kind="custom" customClass="LCKDismissSegue" id="yxC-a4-4HD"/>
@@ -697,7 +697,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-y8-saJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-513" y="-552"/>
+            <point key="canvasLocation" x="-369" y="-552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yuY-MP-lYL">
@@ -725,6 +725,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Os-uu-hNJ"/>
-        <segue reference="JQJ-ts-Pi4"/>
+        <segue reference="yxC-a4-4HD"/>
     </inferredMetricsTieBreakers>
 </document>
