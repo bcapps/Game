@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_LCKCoreData_UIKit 1
 #define COCOAPODS_VERSION_PATCH_LCKCoreData_UIKit 0
 
+// UICountingLabel
+#define COCOAPODS_POD_AVAILABLE_UICountingLabel
+#define COCOAPODS_VERSION_MAJOR_UICountingLabel 1
+#define COCOAPODS_VERSION_MINOR_UICountingLabel 2
+#define COCOAPODS_VERSION_PATCH_UICountingLabel 0
+
 // iCarousel
 #define COCOAPODS_POD_AVAILABLE_iCarousel
 #define COCOAPODS_VERSION_MAJOR_iCarousel 1

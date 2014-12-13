@@ -14,6 +14,11 @@ NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsRece
 NSString * const LCKMultipeerSoulsKey = @"soulAmount";
 NSString * const LCKMultipeerItemKey = @"itemName";
 
+typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
+    LCKMultipeerManagerSendTypeItem,
+    LCKMultipeerManagerSendTypeSouls
+};
+
 @interface LCKMultipeerManager () <MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate>
 
 @property (nonatomic) NSString *characterName;
@@ -62,7 +67,10 @@ NSString * const LCKMultipeerItemKey = @"itemName";
 
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {
     if (peerID) {
-        return [self.session sendData:[itemName dataUsingEncoding:NSUTF8StringEncoding] toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+        NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeItem), @"value": itemName};
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
+        
+        return [self.session sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
     }
     
     return NO;
@@ -70,10 +78,10 @@ NSString * const LCKMultipeerItemKey = @"itemName";
 
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID {
     if (peerID) {
-        NSUInteger index = [souls integerValue];
-        NSData *payload = [NSData dataWithBytes:&index length:sizeof(index)];
+        NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeSouls), @"value": souls};
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
 
-        return [self.session sendData:payload toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+        return [self.session sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
     }
     
     return NO;
@@ -109,7 +117,9 @@ NSString * const LCKMultipeerItemKey = @"itemName";
 #pragma mark - MCSessionDelegate
 
 - (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void(^)(BOOL accept))certificateHandler {
-    certificateHandler(YES);
+    if (certificateHandler) {
+        certificateHandler(YES);
+    }
 }
 
 // Remote peer changed state
@@ -121,23 +131,28 @@ NSString * const LCKMultipeerItemKey = @"itemName";
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
     NSLog(@"Did Receive Data");
 
-    NSString *itemName = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-    if (itemName) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerItemReceivedNotification object:nil userInfo:@{@"itemName": itemName}];
-        }];
-    }
-    
-    NSUInteger soulInteger = 0;
-    [data getBytes:&soulInteger length:sizeof(soulInteger)];
-
-    NSNumber *souls = [NSNumber numberWithInteger:soulInteger];
-    
-    if (souls) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerSoulsReceivedNotification object:nil userInfo:@{@"soulAmount": souls}];
-        }];
+    if (data) {
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
+        
+        if (type == LCKMultipeerManagerSendTypeItem) {
+            NSString *itemName = [dictionary objectForKey:@"value"];
+            
+            if (itemName) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerItemReceivedNotification object:nil userInfo:@{LCKMultipeerItemKey: itemName}];
+                }];
+            }
+        }
+        else if (type == LCKMultipeerManagerSendTypeSouls) {
+            NSNumber *souls = [dictionary objectForKey:@"value"];
+            
+            if (souls) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerSoulsReceivedNotification object:nil userInfo:@{LCKMultipeerSoulsKey: souls}];
+                }];
+            }
+        }
     }
 }
 

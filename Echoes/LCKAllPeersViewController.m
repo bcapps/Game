@@ -96,7 +96,9 @@
         }
     }
     
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (indexPath) {
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 #pragma mark - UITableViewDataSource

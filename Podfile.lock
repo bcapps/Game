@@ -14,11 +14,13 @@ PODS:
     - LCKCoreData/UIKit (= 2.1)
   - LCKCoreData/Core (2.1)
   - LCKCoreData/UIKit (2.1)
+  - UICountingLabel (HEAD based on 1.2.0)
 
 DEPENDENCIES:
   - iCarousel (HEAD)
   - LCKCategories (from `git@github.com:Lickability/LCKCategories.git`, commit `9b96d37e580c5ad16e51274c94cdd3d1d8765f13`)
   - LCKCoreData (from `git@github.com:Lickability/LCKCoreData.git`, commit `07d361d99602ecdeb94597d97de9c1cd4e6e17fe`)
+  - UICountingLabel (HEAD)
 
 EXTERNAL SOURCES:
   LCKCategories:
@@ -32,5 +34,6 @@ SPEC CHECKSUMS:
   iCarousel: 5acab560f10dc13da2440c89f35a0ad278b5147d
   LCKCategories: e99e66280b7ddb5ebe79f8791cd2fc665ce61035
   LCKCoreData: 2bd3f71f534e8e1150e7a44ceeb885c5e1f484b3
+  UICountingLabel: a55223a9357af71f833af76665164d2e3f3654b5
 
 COCOAPODS: 0.35.0.rc2

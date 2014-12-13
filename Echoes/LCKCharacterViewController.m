@@ -27,6 +27,7 @@
 #import "UIFont+FontStyle.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
+#import <UICountingLabel/UICountingLabel.h>
 
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
 const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
@@ -139,7 +140,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
     
     [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
-    [self.soulsButton setTitle:[NSString stringWithFormat:@"%@", self.character.souls] forState:UIControlStateNormal];
+    self.soulsButton.soulLabel.method = UILabelCountingMethodLinear;
+    self.soulsButton.soulLabel.format = @"%d";
+    [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:0.0];
+    
     [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -390,8 +394,11 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (void)soulsReceived:(NSNotification *)notification {
     NSNumber *souls = [notification.userInfo objectForKey:LCKMultipeerSoulsKey];
+    NSNumber *newAmount = @(self.character.souls.integerValue + souls.integerValue);
     
-    self.character.souls = @(self.character.souls.integerValue + souls.integerValue);
+    [self.soulsButton.soulLabel countFromCurrentValueTo:newAmount.floatValue withDuration:1.5];
+    self.character.souls = newAmount;
+    
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
 
