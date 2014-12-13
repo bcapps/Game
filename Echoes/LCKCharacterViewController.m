@@ -18,7 +18,7 @@
 #import "LCKItem.h"
 #import "LCKStatusButton.h"
 
-#import "LCKStatInfoViewController.h"
+#import "LCKInfoViewController.h"
 #import "LCKEquipmentViewController.h"
 
 #import "LCKMultipeerManager.h"
@@ -139,7 +139,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
     
     [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
-    [self.soulsButton setTitle:@"4000" forState:UIControlStateNormal];
+    [self.soulsButton setTitle:[NSString stringWithFormat:@"%@", self.character.souls] forState:UIControlStateNormal];
+    [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -222,9 +223,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 #pragma mark - Stats
 
-- (LCKStatInfoViewController *)newStatInfoViewControllerForStatType:(LCKStatType)statType {
-    LCKStatInfoViewController *infoViewController = [[LCKStatInfoViewController alloc] init];
-    infoViewController.statType = statType;
+- (LCKInfoViewController *)newInfoViewController {
+    LCKInfoViewController *infoViewController = [[LCKInfoViewController alloc] init];
     infoViewController.view.clipsToBounds = YES;
     
     return infoViewController;
@@ -299,6 +299,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
             }
         }];
     }
+}
+
+- (void)didSelectSoulsButton {
+    
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {
@@ -392,8 +396,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    LCKStatInfoViewController *infoViewController = [self newStatInfoViewControllerForStatType:indexPath.row];
-    
+    LCKInfoViewController *infoViewController = [self newInfoViewController];
+    infoViewController.arrowDirection = UIPopoverArrowDirectionDown;
+
     UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
     CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:collectionView];
     
@@ -402,6 +407,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     infoViewController.presentingRect = CGRectMake(cellFrame.origin.x - LCKCharacterStatInfoViewHorizontalMargin, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.width);
     
     [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
+    
+    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:indexPath.row];
 }
 
 #pragma mark - LCKItemViewControllerDelegate

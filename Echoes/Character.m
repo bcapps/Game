@@ -20,6 +20,7 @@
 @dynamic currentHealth;
 @dynamic items;
 @dynamic characterStats;
+@dynamic souls;
 
 - (void)awakeFromInsert {
     self.items = @[];

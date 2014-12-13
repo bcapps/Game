@@ -7,6 +7,7 @@
         <attribute name="items" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="souls" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" inverseName="character" inverseEntity="CharacterStats" syncable="YES"/>
     </entity>
     <entity name="CharacterStats" representedClassName="CharacterStats" syncable="YES">
@@ -25,7 +26,7 @@
     <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterStats" syncable="YES"/>
     <elements>
         <element name="Bandit" positionX="0" positionY="0" width="128" height="45"/>
-        <element name="Character" positionX="0" positionY="0" width="128" height="133"/>
+        <element name="Character" positionX="0" positionY="0" width="128" height="150"/>
         <element name="CharacterStats" positionX="0" positionY="0" width="128" height="133"/>
         <element name="Cleric" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Hunter" positionX="0" positionY="0" width="128" height="45"/>

@@ -23,6 +23,8 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 @property (nonatomic, retain) NSNumber * level;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * currentHealth;
+@property (nonatomic, retain) NSNumber * souls;
+
 @property (nonatomic, retain) id items;
 @property (nonatomic, retain) CharacterStats *characterStats;
 
