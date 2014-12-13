@@ -45,13 +45,13 @@
 		F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F438D1A3A55BF00FEA417 /* battleaxe@2x.png */; };
 		F21F43901A3A560000FEA417 /* sorcerercatalyst@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */; };
 		F21F43921A3A567900FEA417 /* mace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43911A3A567900FEA417 /* mace@2x.png */; };
-		F21F43941A3A573A00FEA417 /* canvastalisman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43931A3A573A00FEA417 /* canvastalisman@2x.png */; };
 		F21F43961A3A576300FEA417 /* heatershield.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43951A3A576300FEA417 /* heatershield.png */; };
 		F21F43981A3A57AC00FEA417 /* thiefmask.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43971A3A57AC00FEA417 /* thiefmask.png */; };
 		F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43991A3A57DF00FEA417 /* soularrow@2x.png */; };
 		F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */; };
 		F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */; };
 		F21F43A31A3BB9A200FEA417 /* LCKInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43A21A3BB9A200FEA417 /* LCKInfoViewController.m */; };
+		F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -164,7 +164,6 @@
 		F21F438D1A3A55BF00FEA417 /* battleaxe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battleaxe@2x.png"; sourceTree = "<group>"; };
 		F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorcerercatalyst@2x.png"; sourceTree = "<group>"; };
 		F21F43911A3A567900FEA417 /* mace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mace@2x.png"; sourceTree = "<group>"; };
-		F21F43931A3A573A00FEA417 /* canvastalisman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canvastalisman@2x.png"; sourceTree = "<group>"; };
 		F21F43951A3A576300FEA417 /* heatershield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heatershield.png; sourceTree = "<group>"; };
 		F21F43971A3A57AC00FEA417 /* thiefmask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thiefmask.png; sourceTree = "<group>"; };
 		F21F43991A3A57DF00FEA417 /* soularrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soularrow@2x.png"; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatusButton.m; sourceTree = "<group>"; };
 		F21F43A11A3BB9A200FEA417 /* LCKInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKInfoViewController.h; sourceTree = "<group>"; };
 		F21F43A21A3BB9A200FEA417 /* LCKInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKInfoViewController.m; sourceTree = "<group>"; };
+		F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canvastalisman@2x.png"; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -290,8 +290,8 @@
 				F21F43831A3A549600FEA417 /* longsword@2x.png */,
 				F21F438B1A3A557100FEA417 /* banditknife@2x.png */,
 				F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */,
+				F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */,
 				F21F438D1A3A55BF00FEA417 /* battleaxe@2x.png */,
-				F21F43931A3A573A00FEA417 /* canvastalisman@2x.png */,
 				F21F43951A3A576300FEA417 /* heatershield.png */,
 				F21F43991A3A57DF00FEA417 /* soularrow@2x.png */,
 				F21F43871A3A54C900FEA417 /* shortbow@2x.png */,
@@ -595,6 +595,7 @@
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
 				F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */,
+				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F21F43921A3A567900FEA417 /* mace@2x.png in Resources */,
 				F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
@@ -616,7 +617,6 @@
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
 				F21F43981A3A57AC00FEA417 /* thiefmask.png in Resources */,
-				F21F43941A3A573A00FEA417 /* canvastalisman@2x.png in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
 				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
 				F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */,
