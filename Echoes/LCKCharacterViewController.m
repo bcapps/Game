@@ -230,6 +230,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     return infoViewController;
 }
 
+- (CGRect)infoViewFrameForStatusFrame:(CGRect)statusFrame {
+    return CGRectMake(LCKCharacterStatInfoViewHorizontalMargin, CGRectGetMaxY(statusFrame), CGRectGetWidth(self.view.frame) - LCKCharacterStatInfoViewHorizontalMargin * 2, LCKCharacterStatInfoViewHeight);
+}
+
 - (CGRect)statInfoViewFrameForCellFrame:(CGRect)cellFrame {
     return CGRectMake(LCKCharacterStatInfoViewHorizontalMargin, CGRectGetMinY(cellFrame) - LCKCharacterStatInfoViewHeight - LCKCharacterStatInfoViewBottomMargin, CGRectGetWidth(self.view.frame) - LCKCharacterStatInfoViewHorizontalMargin * 2, LCKCharacterStatInfoViewHeight);
 }
@@ -302,7 +306,13 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)didSelectSoulsButton {
+    LCKInfoViewController *infoViewController = [self newInfoViewController];
+    infoViewController.presentingRect = self.soulsButton.frame;
+    infoViewController.arrowDirection = UIPopoverArrowDirectionUp;
     
+    [self presentViewController:infoViewController withFrame:[self infoViewFrameForStatusFrame:self.soulsButton.frame] fromView:self.soulsButton];
+
+    infoViewController.infoTextView.text = @"· Souls are gained by defeating powerful enemies and absorbing their souls.\n· Souls can be used to level up.\n· Souls can be used to purchase items.";
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {

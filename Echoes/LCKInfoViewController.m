@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.infoTextView = [[UITextView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame) - 10.0, CGRectGetHeight(self.view.frame))];
+    self.infoTextView = [[UITextView alloc] init];
     self.infoTextView.backgroundColor = [UIColor clearColor];
     self.infoTextView.editable = NO;
     self.infoTextView.textColor = [UIColor titleTextColor];
@@ -34,18 +34,37 @@
     [super viewWillLayoutSubviews];
     
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path,NULL, 0.0, 0.0);
-    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.view.frame), 0.0f);
     
     if (self.arrowDirection == UIPopoverArrowDirectionDown) {
+        self.infoTextView.frame = CGRectMake(5, 0, CGRectGetWidth(self.view.frame) - 10.0, CGRectGetHeight(self.view.frame));
+        CGPathMoveToPoint(path,NULL, 0.0, 0.0);
+
+        CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.view.frame), 0.0f);
         CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 10.0);
+        
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) + 10.0, CGRectGetHeight(self.view.frame) - 10.0);
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect), CGRectGetHeight(self.view.frame));
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) - 10.0, CGRectGetHeight(self.view.frame) - 10.0);
+        
+        CGPathAddLineToPoint(path, NULL, 0.0, CGRectGetHeight(self.view.frame) - 10.0);
+        CGPathAddLineToPoint(path, NULL, 0.0f, 0.0f);
     }
     
-    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) + 10.0, CGRectGetHeight(self.view.frame) - 10.0);
-    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect), CGRectGetHeight(self.view.frame));
-    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) - 10.0, CGRectGetHeight(self.view.frame) - 10.0);
-    CGPathAddLineToPoint(path, NULL, 0.0, CGRectGetHeight(self.view.frame) - 10.0);
-    CGPathAddLineToPoint(path, NULL, 0.0f, 0.0f);
+    if (self.arrowDirection == UIPopoverArrowDirectionUp) {
+        self.infoTextView.frame = CGRectMake(5, 10.0, CGRectGetWidth(self.view.frame) - 10.0, CGRectGetHeight(self.view.frame));
+        CGPathMoveToPoint(path,NULL, 0.0, 10.0);
+        
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) - 10.0, 10.0);
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect), 0.0);
+        CGPathAddLineToPoint(path, NULL, CGRectGetMidX(self.presentingRect) + 10.0, 10.0);
+        
+        CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.view.frame), 10.0f);
+        CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+        
+        CGPathAddLineToPoint(path, NULL, 0.0, CGRectGetHeight(self.view.frame));
+        CGPathAddLineToPoint(path, NULL, 0.0f, 10.0f);
+    }
+    
     
     [self.shapeLayer removeFromSuperlayer];
     
