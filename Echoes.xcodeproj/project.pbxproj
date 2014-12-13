@@ -57,6 +57,7 @@
 		F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */; };
 		F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */; };
 		F21F43B21A3C126D00FEA417 /* LCKDMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43B11A3C126D00FEA417 /* LCKDMManager.m */; };
+		F21F43B51A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */; };
 		F2206AF41A2D2C0D006E44B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF31A2D2C0D006E44B0 /* main.m */; };
 		F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */; };
 		F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2206AF81A2D2C0D006E44B0 /* Echoes.xcdatamodeld */; };
@@ -186,6 +187,8 @@
 		F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDMToolsTableViewController.m; sourceTree = "<group>"; };
 		F21F43B01A3C126D00FEA417 /* LCKDMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKDMManager.h; sourceTree = "<group>"; };
 		F21F43B11A3C126D00FEA417 /* LCKDMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKDMManager.m; sourceTree = "<group>"; };
+		F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterManualTableViewController.h; sourceTree = "<group>"; };
+		F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterManualTableViewController.m; sourceTree = "<group>"; };
 		F2206AEE1A2D2C0D006E44B0 /* Echoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2206AF21A2D2C0D006E44B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2206AF31A2D2C0D006E44B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */,
 				F21F43AA1A3C0B6800FEA417 /* LCKSoulGiftingViewController.h */,
 				F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */,
+				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
+				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
 				F21F43B01A3C126D00FEA417 /* LCKDMManager.h */,
 				F21F43B11A3C126D00FEA417 /* LCKDMManager.m */,
 			);
@@ -758,6 +763,7 @@
 				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
 				F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */,
 				F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */,
+				F21F43B51A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m in Sources */,
 				F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
