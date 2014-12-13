@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIView *nameSeparatorLineView;
 @property (weak, nonatomic) IBOutlet UIImageView *itemTypeImageView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *infoScrollView;
+
 @property (nonatomic) LCKItem *item;
 @property (nonatomic) LCKItemViewControllerDisplayStyle displayStyle;
 
@@ -112,7 +114,7 @@
         UIBarButtonItem *giftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"giftIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(giftItem)];
         
         self.navigationItem.rightBarButtonItem = giftButton;
-    }
+    }    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
