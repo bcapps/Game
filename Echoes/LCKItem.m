@@ -99,7 +99,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         copy.imageName = [self.imageName copyWithZone:zone];
         copy.attributeRequirements = [self.attributeRequirements copyWithZone:zone];
         copy.itemSlotNumber = [self.itemSlotNumber copyWithZone:zone];
-        copy.equipped = copy.isEquipped;
+        copy.equipped = self.isEquipped;
     }
     
     return copy;

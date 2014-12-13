@@ -31,6 +31,7 @@
     
     for (LCKItem *item in self.items) {
         LCKItem *updatedItem = [LCKItemProvider itemForName:item.name];
+        updatedItem.equipped = item.isEquipped;
         
         if (updatedItem) {
             [updatedItems addObject:[updatedItem copy]];
@@ -57,8 +58,6 @@
 }
 
 - (void)equipItem:(LCKItem *)item {
-    [self setItem:item equippedStatus:YES];
-    
     if (item.itemSlot == LCKItemSlotOneHand) {
         for (LCKItem *weapon in self.equippedWeapons) {
             if (weapon.itemSlot == LCKItemSlotTwoHand) {
@@ -73,6 +72,8 @@
             }
         }
     }
+    
+    [self setItem:item equippedStatus:YES];
 }
 
 - (void)unequipItem:(LCKItem *)item {
