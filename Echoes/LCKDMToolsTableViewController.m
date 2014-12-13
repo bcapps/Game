@@ -49,7 +49,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
         case LCKDMToolsRowAllItems:
             return @"All Items";
         case LCKDMToolsRowSoulGifting:
-            return @"Soul Gifting";
+            return @"Soul Modification";
         case LCKDMToolsRowCount:
             return @"";
     }

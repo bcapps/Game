@@ -32,7 +32,7 @@
     self.textField.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.textField.layer.borderWidth = 1.0;
     self.textField.keyboardAppearance = UIKeyboardAppearanceDark;
-    self.textField.keyboardType = UIKeyboardTypeNumberPad;
+    self.textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     
     [self.view addSubview:self.textField];
     
