@@ -10,6 +10,7 @@
 #import "LCKEchoCoreDataController.h"
 #import "Character.h"
 #import "CharacterStats.h"
+#import "LCKDMManager.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
@@ -38,6 +39,10 @@
     self.tableView.tableFooterView = [UIView new];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    
+    if (![LCKDMManager isDMMode]) {
+        self.navigationItem.leftBarButtonItem = nil;
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

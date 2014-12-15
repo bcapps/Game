@@ -9,6 +9,7 @@
 #import "LCKEchoAppDelegate.h"
 
 #import "LCKEchoCoreDataController.h"
+#import <HockeySDK/HockeySDK.h>
 
 @interface LCKEchoAppDelegate ()
 
@@ -19,6 +20,10 @@
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"2e1122a4b5aaea239b30e91d5c7983c7"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
+    
     [LCKEchoCoreDataController registerSubclass:[LCKEchoCoreDataController class]];
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];

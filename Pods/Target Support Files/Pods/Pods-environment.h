@@ -6,6 +6,12 @@
 // project.
 
 
+// HockeySDK
+#define COCOAPODS_POD_AVAILABLE_HockeySDK
+#define COCOAPODS_VERSION_MAJOR_HockeySDK 3
+#define COCOAPODS_VERSION_MINOR_HockeySDK 6
+#define COCOAPODS_VERSION_PATCH_HockeySDK 2
+
 // LCKCategories
 #define COCOAPODS_POD_AVAILABLE_LCKCategories
 #define COCOAPODS_VERSION_MAJOR_LCKCategories 0
