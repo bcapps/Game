@@ -170,22 +170,4 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     return cell;
 }
 
-#pragma mark - UICollectionViewDelegate
-
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    LCKInfoViewController *infoViewController = [[LCKInfoViewController alloc] init];
-//    infoViewController.arrowDirection = UIPopoverArrowDirectionDown;
-//    
-//    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
-//    CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:collectionView];
-//    
-//    CGRect presentationFrame = [self statInfoViewFrameForCellFrame:cellFrame];
-//    
-//    infoViewController.presentingRect = CGRectMake(cellFrame.origin.x - LCKCharacterStatInfoViewHorizontalMargin, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.width);
-//    
-//    [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
-//    
-//    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:indexPath.row];
-//}
-
 @end
