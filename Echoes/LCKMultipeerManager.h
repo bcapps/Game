@@ -12,6 +12,8 @@
 extern NSString * const LCKMultipeerItemReceivedNotification;
 extern NSString * const LCKMultipeerSoulsReceivedNotification;
 
+extern NSString * const LCKMultipeerPeerStateChangedNotification;
+
 extern NSString * const LCKMultipeerSoulsKey;
 extern NSString * const LCKMultipeerItemKey;
 

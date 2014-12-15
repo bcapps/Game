@@ -27,6 +27,12 @@
 
 @implementation LCKAllPeersViewController
 
+#pragma mark - NSObject
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
@@ -42,6 +48,8 @@
     if (self.peerType == LCKAllPeersTypeDM) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(send)];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(peerStateChanged) name:LCKMultipeerPeerStateChangedNotification object:nil];
 }
 
 #pragma mark - UITableViewController
@@ -74,6 +82,10 @@
             break;
         }
     }
+}
+
+- (void)peerStateChanged {
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate

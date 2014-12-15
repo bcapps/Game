@@ -11,6 +11,8 @@
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
 NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsReceivedNotification";
 
+NSString * const LCKMultipeerPeerStateChangedNotification = @"LCKMultipeerPeerStateChangedNotification";
+
 NSString * const LCKMultipeerSoulsKey = @"soulAmount";
 NSString * const LCKMultipeerItemKey = @"itemName";
 
@@ -125,6 +127,10 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 // Remote peer changed state
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
     NSLog(@"Peer State Changed");
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
+    }];
 }
 
 // Received data from remote peer
