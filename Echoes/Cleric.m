@@ -10,10 +10,6 @@
 
 @implementation Cleric
 
-- (UIImage *)classImage {
-    return [UIImage imageNamed:@"ClericIcon"];
-}
-
 - (NSString *)className {
     return @"Cleric";
 }

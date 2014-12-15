@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import "Character.h"
+
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 
 typedef NS_ENUM(NSUInteger, LCKStatType) {
@@ -32,7 +34,6 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 @property (nonatomic, retain) NSNumber * vitality;
 @property (nonatomic, retain) NSNumber * dexterity;
 
-@property (nonatomic, readonly) UIImage *classImage;
 @property (nonatomic, readonly) NSString *className;
 @property (nonatomic, readonly) NSString *classDescription;
 
@@ -42,6 +43,8 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 + (instancetype)newCharacterStatsInContext:(NSManagedObjectContext *)context;
 + (NSString *)statNameForStatType:(LCKStatType)statType;
 + (NSString *)statDescriptionForStatType:(LCKStatType)statType;
+
+- (UIImage *)classImageForGender:(CharacterGender)gender;
 
 - (NSString *)statAsStringForStatType:(LCKStatType)statType;
 

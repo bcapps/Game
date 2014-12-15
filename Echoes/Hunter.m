@@ -10,10 +10,6 @@
 
 @implementation Hunter
 
-- (UIImage *)classImage {
-    return [UIImage imageNamed:@"HunterIcon"];
-}
-
 - (NSString *)className {
     return @"Hunter";
 }

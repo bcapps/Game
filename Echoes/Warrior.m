@@ -10,10 +10,6 @@
 
 @implementation Warrior
 
-- (UIImage *)classImage {
-    return [UIImage imageNamed:@"WarriorIcon"];
-}
-
 - (NSString *)className {
     return @"Warrior";
 }

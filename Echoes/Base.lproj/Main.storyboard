@@ -577,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ia-HDt" userLabel="Name Field">
-                                <rect key="frame" x="36" y="40" width="529" height="44"/>
+                                <rect key="frame" x="36" y="30" width="529" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GXM-Ka-zYk"/>
                                 </constraints>
@@ -586,7 +586,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="84" width="600" height="476"/>
+                                <rect key="frame" x="0.0" y="74" width="600" height="486"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -615,7 +615,7 @@
                                 </connections>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="En8-ha-hzX">
-                                <rect key="frame" x="35" y="89" width="529" height="29"/>
+                                <rect key="frame" x="35" y="79" width="529" height="29"/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
@@ -629,7 +629,7 @@
                             <constraint firstItem="M9g-87-Wtv" firstAttribute="leading" secondItem="pJZ-K6-cQ3" secondAttribute="leading" id="LOH-R1-RlD"/>
                             <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="M9g-87-Wtv" secondAttribute="bottom" constant="40" id="MsP-Rm-5KW"/>
                             <constraint firstItem="En8-ha-hzX" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" constant="5" id="N9x-Sa-a8d"/>
-                            <constraint firstItem="ffg-ia-HDt" firstAttribute="top" secondItem="hN7-j2-aOH" secondAttribute="bottom" constant="20" id="TF4-Ei-NEy"/>
+                            <constraint firstItem="ffg-ia-HDt" firstAttribute="top" secondItem="hN7-j2-aOH" secondAttribute="bottom" constant="10" id="TF4-Ei-NEy"/>
                             <constraint firstAttribute="centerX" secondItem="En8-ha-hzX" secondAttribute="centerX" id="eTB-b7-nOU"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="width" secondItem="En8-ha-hzX" secondAttribute="width" id="eoF-ma-GFm"/>
                             <constraint firstAttribute="centerX" secondItem="M9g-87-Wtv" secondAttribute="centerX" id="ftl-Hh-EqJ"/>

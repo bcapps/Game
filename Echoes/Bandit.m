@@ -10,10 +10,6 @@
 
 @implementation Bandit
 
-- (UIImage *)classImage {
-    return [UIImage imageNamed:@"BanditIcon"];
-}
-
 - (NSString *)className {
     return @"Bandit";
 }

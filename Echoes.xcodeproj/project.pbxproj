@@ -105,6 +105,13 @@
 		F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
 		F2206B821A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
 		F2206B831A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
+		F26412F71A3F851600287EFA /* BanditIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412F61A3F851600287EFA /* BanditIconFemale@2x.png */; };
+		F26412F91A3F87D800287EFA /* ClericIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412F81A3F87D800287EFA /* ClericIconFemale@2x.png */; };
+		F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412FA1A3F87E100287EFA /* HunterIconFemale@2x.png */; };
+		F26412FD1A3F87EC00287EFA /* ThiefIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412FC1A3F87EC00287EFA /* ThiefIconFemale@2x.png */; };
+		F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412FE1A3F885900287EFA /* SorcererIconFemale@2x.png */; };
+		F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */; };
+		F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +246,13 @@
 		F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorStyle.m"; sourceTree = "<group>"; };
 		F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCharacterViewController.h; sourceTree = "<group>"; };
 		F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterViewController.m; sourceTree = "<group>"; };
+		F26412F61A3F851600287EFA /* BanditIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BanditIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26412F81A3F87D800287EFA /* ClericIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClericIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26412FA1A3F87E100287EFA /* HunterIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HunterIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26412FC1A3F87EC00287EFA /* ThiefIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThiefIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26412FE1A3F885900287EFA /* SorcererIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SorcererIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WarriorIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KnightIconFemale@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +454,10 @@
 		F2206B1E1A2D2FAB006E44B0 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				F21F434F1A301CD100FEA417 /* inventoryIcon@2x.png */,
+				F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */,
+				F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */,
+				F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */,
 				F21F436D1A36872C00FEA417 /* giftIcon@2x.png */,
 				F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */,
 				F2206AFB1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.h */,
@@ -504,19 +522,22 @@
 		F2206B561A2D431A006E44B0 /* Class Art */ = {
 			isa = PBXGroup;
 			children = (
-				F21F434F1A301CD100FEA417 /* inventoryIcon@2x.png */,
-				F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */,
-				F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */,
-				F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */,
 				F21F43241A2EA52500FEA417 /* SilhoutteFemale@2x.png */,
 				F21F43221A2E96C000FEA417 /* SilhoutteMale@2x.png */,
 				F2206B5D1A2D43FE006E44B0 /* BanditIcon@2x.png */,
+				F26412F61A3F851600287EFA /* BanditIconFemale@2x.png */,
 				F2206B5E1A2D43FE006E44B0 /* ClericIcon@2x.png */,
+				F26412F81A3F87D800287EFA /* ClericIconFemale@2x.png */,
 				F2206B5F1A2D43FE006E44B0 /* HunterIcon@2x.png */,
+				F26412FA1A3F87E100287EFA /* HunterIconFemale@2x.png */,
 				F2206B601A2D43FE006E44B0 /* KnightIcon@2x.png */,
+				F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */,
 				F2206B611A2D43FE006E44B0 /* SorcererIcon@2x.png */,
+				F26412FE1A3F885900287EFA /* SorcererIconFemale@2x.png */,
 				F2206B621A2D43FE006E44B0 /* ThiefIcon@2x.png */,
+				F26412FC1A3F87EC00287EFA /* ThiefIconFemale@2x.png */,
 				F2206B631A2D43FE006E44B0 /* WarriorIcon@2x.png */,
+				F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */,
 			);
 			name = "Class Art";
 			sourceTree = "<group>";
@@ -617,7 +638,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26412F71A3F851600287EFA /* BanditIconFemale@2x.png in Resources */,
 				F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */,
+				F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */,
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
@@ -638,14 +661,17 @@
 				F21F43961A3A576300FEA417 /* heatershield@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
+				F26412FD1A3F87EC00287EFA /* ThiefIconFemale@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
 				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
+				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
 				F21F43981A3A57AC00FEA417 /* thiefmask@2x.png in Resources */,
+				F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
 				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
 				F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */,
@@ -653,6 +679,8 @@
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
+				F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */,
+				F26412F91A3F87D800287EFA /* ClericIconFemale@2x.png in Resources */,
 				F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,
 				F21F43841A3A549600FEA417 /* longsword@2x.png in Resources */,
 				F21F43901A3A560000FEA417 /* sorcerercatalyst@2x.png in Resources */,

@@ -57,6 +57,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classNameLabel.font = [UIFont titleTextFontOfSize:14.0];
     self.classDescriptionLabel.font = [UIFont descriptiveTextFontOfSize:12.0];
 
+    [self.genderSegmentedControl addTarget:self action:@selector(genderSelected) forControlEvents:UIControlEventValueChanged];
+    
     [self carouselCurrentItemIndexDidChange:self.classPicker];
 }
 
@@ -90,6 +92,10 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)genderSelected {
+    [self.classPicker reloadData];
+}
+
 #pragma mark - iCarouselDelegate
 
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
@@ -117,7 +123,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     CharacterStats *characterStats = [self.classes safeObjectAtIndex:index];
 
     LCKCharacterPortrait *portraitView = [[LCKCharacterPortrait alloc] initWithFrame:CGRectMake(0, 0, LCKEchoNewCharacterViewControllerCarouselItemSize, LCKEchoNewCharacterViewControllerCarouselItemSize)];
-    portraitView.portraitImage = characterStats.classImage;
+    portraitView.portraitImage = [characterStats classImageForGender:self.genderSegmentedControl.selectedSegmentIndex];
     
     return portraitView;
 }

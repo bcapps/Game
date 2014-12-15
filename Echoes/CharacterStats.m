@@ -19,7 +19,6 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
 @dynamic vitality;
 @dynamic dexterity;
 
-@synthesize classImage;
 @synthesize classDescription;
 @synthesize className;
 @synthesize startingHealthModification;
@@ -97,6 +96,16 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     }
     
     return nil;
+}
+
+- (UIImage *)classImageForGender:(CharacterGender)gender {
+    NSString *imageName = [NSString stringWithFormat:@"%@Icon", self.className];
+    
+    if (gender == CharacterGenderFemale) {
+        imageName = [imageName stringByAppendingString:@"Female"];
+    }
+    
+    return [UIImage imageNamed:imageName];
 }
 
 @end
