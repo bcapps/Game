@@ -399,6 +399,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     NSNumber *newAmount = @(self.character.souls.integerValue + souls.integerValue);
     
     [self.soulsButton.soulLabel countFromCurrentValueTo:newAmount.floatValue withDuration:1.5];
+    
     self.character.souls = newAmount;
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];

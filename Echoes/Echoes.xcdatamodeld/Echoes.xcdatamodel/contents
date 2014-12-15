@@ -7,7 +7,7 @@
         <attribute name="items" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="souls" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="souls" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" inverseName="character" inverseEntity="CharacterStats" syncable="YES"/>
     </entity>
     <entity name="CharacterStats" representedClassName="CharacterStats" syncable="YES">

@@ -34,9 +34,13 @@
     [super layoutSubviews];
     
     self.imageView.frame = CGRectMake(0, 0.0, 20.0 , 20.0);
-    self.soulLabel.frame = CGRectMake(CGRectGetWidth(self.imageView.frame) + 5.0, 0, CGRectGetWidth(self.frame) - CGRectGetWidth(self.imageView.frame) - 5.0, CGRectGetHeight(self.frame));
     
-    [self.soulLabel sizeToFit];
+    CGRect soulLabelFrame = CGRectMake(CGRectGetWidth(self.imageView.frame) + 5.0, 0, CGRectGetWidth(self.frame) - CGRectGetWidth(self.imageView.frame) - 5.0, CGRectGetHeight(self.frame));
+    
+    CGFloat height = [self.soulLabel sizeThatFits:CGSizeMake(soulLabelFrame.size.width, soulLabelFrame.size.height)].height;
+    soulLabelFrame.size.height = height;
+    
+    self.soulLabel.frame = soulLabelFrame;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
