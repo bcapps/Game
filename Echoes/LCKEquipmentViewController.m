@@ -119,7 +119,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LCKItem *item = [self.itemsToDisplay safeObjectAtIndex:indexPath.row];
 
-    [self.delegate itemWasSelected:item];
+    [self.delegate itemWasSelected:item equipmentSlot:self.selectedEquipmentSlot];
 }
 
 @end

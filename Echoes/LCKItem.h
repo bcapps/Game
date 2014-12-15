@@ -9,7 +9,7 @@
 @import Foundation;
 @import UIKit;
 
-typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
+typedef NS_ENUM(NSUInteger, LCKItemSlot) {
     LCKItemSlotHelmet,
     LCKItemSlotChest,
     LCKItemSlotBoots,
@@ -17,6 +17,21 @@ typedef NS_OPTIONS(NSUInteger, LCKItemSlot) {
     LCKItemSlotOneHand,
     LCKItemSlotTwoHand,
     LCKItemSlotSpell
+};
+
+typedef NS_ENUM(NSUInteger, LCKEquipmentSlot) {
+    LCKEquipmentSlotUnequipped,
+    LCKEquipmentSlotHelmet,
+    LCKEquipmentSlotChest,
+    LCKEquipmentSlotBoots,
+    LCKEquipmentSlotFirstAccessory,
+    LCKEquipmentSlotSecondAccessory,
+    LCKEquipmentSlotLeftHand,
+    LCKEquipmentSlotRightHand,
+    LCKEquipmentSlotFirstSpell,
+    LCKEquipmentSlotSecondSpell,
+    LCKEquipmentSlotThirdSpell,
+    LCKEquipmentSlotFourthSpell
 };
 
 extern NSString * const LCKItemTypeNameOneHanded;
@@ -36,6 +51,7 @@ extern NSString * const LCKItemTypeNameSpell;
 @property (nonatomic, readonly) NSString *imageName;
 @property (nonatomic, readonly) NSArray *attributeRequirements;
 @property (nonatomic, readonly) LCKItemSlot itemSlot;
+@property (nonatomic) LCKEquipmentSlot equippedSlot;
 
 @property (nonatomic, readonly) UIImage *image;
 

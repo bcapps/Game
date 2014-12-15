@@ -154,19 +154,42 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)updateItemButtons {
-    self.rightHandButton.item = [self.character.equippedWeapons firstObject];
-    self.leftHandButton.item = [self.character.equippedWeapons safeObjectAtIndex:1];
+    for (LCKItem *weapon in self.character.equippedWeapons) {
+        if (weapon.equippedSlot == LCKEquipmentSlotLeftHand) {
+            self.leftHandButton.item = weapon;
+        }
+        else if (weapon.equippedSlot == LCKEquipmentSlotRightHand) {
+            self.rightHandButton.item = weapon;
+        }
+    }
+
     self.helmetButton.item = self.character.equippedHelm;
     self.chestButton.item = self.character.equippedChest;
     self.bootsButton.item = self.character.equippedBoots;
     
-    self.firstSpellButton.item = self.character.equippedSpells.firstObject;
-    self.secondSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:1];
-    self.thirdSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:2];
-    self.fourthSpellButton.item = [self.character.equippedSpells safeObjectAtIndex:3];
-
-    self.firstAccessoryButton.item = [self.character.equippedAccessories firstObject];
-    self.secondAccessoryButton.item = [self.character.equippedAccessories safeObjectAtIndex:1];
+    for (LCKItem *spell in self.character.equippedSpells) {
+        if (spell.equippedSlot == LCKEquipmentSlotFirstSpell) {
+            self.firstSpellButton.item = spell;
+        }
+        else if (spell.equippedSlot == LCKEquipmentSlotSecondSpell) {
+            self.secondSpellButton.item = spell;
+        }
+        else if (spell.equippedSlot == LCKEquipmentSlotThirdSpell) {
+            self.thirdSpellButton.item = spell;
+        }
+        else if (spell.equippedSlot == LCKEquipmentSlotFourthSpell) {
+            self.fourthSpellButton.item = spell;
+        }
+    }
+    
+    for (LCKItem *accessory in self.character.equippedAccessories) {
+        if (accessory.equippedSlot == LCKEquipmentSlotFirstAccessory) {
+            self.firstAccessoryButton.item = accessory;
+        }
+        else if (accessory.equippedSlot == LCKEquipmentSlotSecondAccessory) {
+            self.secondAccessoryButton.item = accessory;
+        }
+    }    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -252,10 +275,11 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     return itemViewController;
 }
 
-- (LCKEquipmentViewController *)newEquipmentViewControllerForEquipmentTypes:(NSArray *)equipmentTypes {
+- (LCKEquipmentViewController *)newEquipmentViewControllerForEquipmentTypes:(NSArray *)equipmentTypes equipmentSlot:(LCKEquipmentSlot)equipmentSlot {
     LCKEquipmentViewController *equipmentViewController = [[LCKEquipmentViewController alloc] initWithCharacter:self.character equipmentTypes:equipmentTypes];
     equipmentViewController.delegate = self;
     equipmentViewController.view.clipsToBounds = YES;
+    equipmentViewController.selectedEquipmentSlot = equipmentSlot;
     
     return equipmentViewController;
 }
@@ -329,27 +353,59 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     }
     else {
         NSArray *equipmentTypes;
+        LCKEquipmentSlot equipmentSlot = LCKEquipmentSlotUnequipped;
         
         if (button == self.leftHandButton || button == self.rightHandButton) {
+            if (button == self.leftHandButton) {
+                equipmentSlot = LCKEquipmentSlotLeftHand;
+            }
+            else {
+                equipmentSlot = LCKEquipmentSlotRightHand;
+            }
+            
             equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
         }
         else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
+            if (button == self.firstAccessoryButton) {
+                equipmentSlot = LCKEquipmentSlotFirstAccessory;
+            }
+            else {
+                equipmentSlot = LCKEquipmentSlotSecondAccessory;
+            }
+            
             equipmentTypes = @[@(LCKItemSlotAccessory)];
         }
         else if (button == self.helmetButton) {
+            equipmentSlot = LCKEquipmentSlotHelmet;
             equipmentTypes = @[@(LCKItemSlotHelmet)];
         }
         else if (button == self.chestButton) {
+            equipmentSlot = LCKEquipmentSlotChest;
             equipmentTypes = @[@(LCKItemSlotChest)];
         }
         else if (button == self.bootsButton) {
+            equipmentSlot = LCKEquipmentSlotBoots;
             equipmentTypes = @[@(LCKItemSlotBoots)];
         }
         else if (button == self.firstSpellButton || button == self.secondSpellButton || button == self.thirdSpellButton || button == self.fourthSpellButton) {
+            
+            if (button == self.firstSpellButton) {
+                equipmentSlot = LCKEquipmentSlotFirstSpell;
+            }
+            else if (button == self.secondSpellButton) {
+                equipmentSlot = LCKEquipmentSlotSecondSpell;
+            }
+            else if (button == self.thirdSpellButton) {
+                equipmentSlot = LCKEquipmentSlotThirdSpell;
+            }
+            else {
+                equipmentSlot = LCKEquipmentSlotFourthSpell;
+            }
+            
             equipmentTypes = @[@(LCKItemSlotSpell)];
         }
 
-        viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes];
+        viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes equipmentSlot:equipmentSlot];
     }
     
     [self presentViewController:viewController withFrame:[self itemControllerFrame] fromView:button];
@@ -451,7 +507,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 #pragma mark - LCKEquipmentViewControllerDelegate
 
-- (void)itemWasSelected:(LCKItem *)item {
+- (void)itemWasSelected:(LCKItem *)item equipmentSlot:(LCKEquipmentSlot)equipmentSlot {
+    item.equippedSlot = equipmentSlot;
     [self.character equipItem:item];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];

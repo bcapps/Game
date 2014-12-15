@@ -39,6 +39,7 @@ NSString * const LCKItemCodingFlavorKey = @"LCKItemCodingFlavorKey";
 NSString * const LCKItemCodingImageKey = @"LCKItemCodingImageKey";
 NSString * const LCKItemCodingAttributeKey = @"LCKItemCodingAttributeKey";
 NSString * const LCKItemCodingItemSlotKey = @"LCKItemCodingItemSlotKey";
+NSString * const LCKItemCodingEquipmentSlotKey = @"LCKItemCodingEquipmentSlotKey";
 NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 
 @interface LCKItem ()
@@ -51,6 +52,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 @property (nonatomic) NSArray *attributeRequirements;
 
 @property (nonatomic) NSNumber *itemSlotNumber;
+@property (nonatomic) NSNumber *equipmentSlotNumber;
 
 @end
 
@@ -69,6 +71,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _imageName = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingImageKey];
         _attributeRequirements = [aDecoder decodeObjectOfClass:[NSArray class] forKey:LCKItemCodingAttributeKey];
         _itemSlotNumber = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:LCKItemCodingItemSlotKey];
+        _equipmentSlotNumber = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:LCKItemCodingEquipmentSlotKey];
         _equipped = [aDecoder decodeBoolForKey:LCKItemCodingEquippedKey];
     }
     
@@ -83,6 +86,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
     [aCoder encodeObject:_imageName forKey:LCKItemCodingImageKey];
     [aCoder encodeObject:_attributeRequirements forKey:LCKItemCodingAttributeKey];
     [aCoder encodeObject:_itemSlotNumber forKey:LCKItemCodingItemSlotKey];
+    [aCoder encodeObject:_equipmentSlotNumber forKey:LCKItemCodingEquipmentSlotKey];
     [aCoder encodeBool:_equipped forKey:LCKItemCodingEquippedKey];
 }
 
@@ -99,6 +103,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         copy.imageName = [self.imageName copyWithZone:zone];
         copy.attributeRequirements = [self.attributeRequirements copyWithZone:zone];
         copy.itemSlotNumber = [self.itemSlotNumber copyWithZone:zone];
+        copy.equipmentSlotNumber = [self.equipmentSlotNumber copyWithZone:zone];
         copy.equipped = self.isEquipped;
     }
     
@@ -118,6 +123,7 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _imageName = [dictionary objectForKey:LCKItemImageKey];
         _attributeRequirements = [dictionary objectForKey:LCKItemAttributeRequirementsKey];
         _equipped = NO;
+        _equipmentSlotNumber = @(LCKEquipmentSlotUnequipped);
         _itemSlotNumber = @([self itemSlotForSlotString:[dictionary objectForKey:LCKItemItemSlotKey]]);
     }
     
@@ -130,6 +136,14 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 
 - (LCKItemSlot)itemSlot {
     return [self.itemSlotNumber integerValue];
+}
+
+- (LCKEquipmentSlot)equippedSlot {
+    return [self.equipmentSlotNumber integerValue];
+}
+
+- (void)setEquippedSlot:(LCKEquipmentSlot)equippedSlot {
+    self.equipmentSlotNumber = @(equippedSlot);
 }
 
 - (LCKItemSlot)itemSlotForSlotString:(NSString *)slotString {

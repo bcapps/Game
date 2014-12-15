@@ -11,9 +11,12 @@
 @class Character;
 @class LCKItem;
 
+#import "LCKItem.h"
+#import "CharacterStats.h"
+
 @protocol LCKEquipmentViewControllerDelegate <NSObject>
 
-- (void)itemWasSelected:(LCKItem *)item;
+- (void)itemWasSelected:(LCKItem *)item equipmentSlot:(LCKEquipmentSlot)equipmentSlot;
 
 @end
 
@@ -22,5 +25,6 @@
 - (instancetype)initWithCharacter:(Character *)character equipmentTypes:(NSArray *)equipmentTypes;
 
 @property (nonatomic, weak) id <LCKEquipmentViewControllerDelegate> delegate;
+@property (nonatomic) LCKEquipmentSlot selectedEquipmentSlot;
 
 @end

@@ -32,6 +32,7 @@
     for (LCKItem *item in self.items) {
         LCKItem *updatedItem = [LCKItemProvider itemForName:item.name];
         updatedItem.equipped = item.isEquipped;
+        updatedItem.equippedSlot = item.equippedSlot;
         
         if (updatedItem) {
             [updatedItems addObject:[updatedItem copy]];
@@ -77,6 +78,7 @@
 }
 
 - (void)unequipItem:(LCKItem *)item {
+    item.equippedSlot = LCKEquipmentSlotUnequipped;
     [self setItem:item equippedStatus:NO];
 }
 
@@ -87,6 +89,7 @@
         
         LCKItem *copyItem = [item copy];
         copyItem.equipped = equippedStatus;
+        copyItem.equippedSlot = item.equippedSlot;
         [items addObject:copyItem];
         
         self.items = [items copy];
