@@ -66,7 +66,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {
-    if (peerID) {
+    if (peerID && itemName) {
         NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeItem), @"value": itemName};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
         
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID {
-    if (peerID) {
+    if (peerID && souls) {
         NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeSouls), @"value": souls};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
 
