@@ -113,6 +113,10 @@
     self.items = [items copy];
 }
 
+- (NSString *)displayName {
+    return [NSString stringWithFormat:@"%@ - Level %@ %@", self.name, self.level, self.characterStats.className];
+}
+
 #pragma mark - Equipment
 
 - (NSArray *)equippedWeapons {

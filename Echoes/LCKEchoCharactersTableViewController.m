@@ -66,7 +66,7 @@
     
     cell.backgroundColor = [UIColor backgroundColor];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Level %@ %@", character.name, character.level, character.characterStats.className];
+    cell.textLabel.text = character.displayName;
     cell.textLabel.textColor = [UIColor titleTextColor];
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     

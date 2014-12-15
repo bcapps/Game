@@ -105,7 +105,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     
-    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:self.character.name];
+    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:self.character.displayName];
     [self.multipeerManager startMonitoring];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
