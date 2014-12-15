@@ -29,7 +29,7 @@
 #import <LCKCategories/NSArray+LCKAdditions.h>
 #import <UICountingLabel/UICountingLabel.h>
 
-const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
+const CGFloat LCKCharacterViewControllerAnimationDuration = 0.4;
 const CGFloat LCKItemViewControllerHorizontalMargin = 45.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
@@ -271,10 +271,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         [self.view addSubview:viewController.view];
         [viewController didMoveToParentViewController:self];
         
-        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             viewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
             self.overlayView.alpha = 1.0;
-        }];
+        } completion:nil];
         
         self.currentlyPresentedItemViewController = viewController;
         self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
@@ -294,7 +294,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         }
     }
     else {
-        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration animations:^{
+        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.overlayView.alpha = 0.0;
             self.currentlyPresentedItemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         } completion:^(BOOL finished) {
