@@ -30,8 +30,8 @@
 #import <UICountingLabel/UICountingLabel.h>
 
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.3;
-const CGFloat LCKItemViewControllerHorizontalMargin = 40.0;
-const CGFloat LCKItemViewControllerVerticalMargin = 90.0;
+const CGFloat LCKItemViewControllerHorizontalMargin = 45.0;
+const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
 const CGFloat LCKCharacterViewControllerNumberOfStats = 5;
 const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
@@ -200,7 +200,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 - (UIView *)overlayView {
     if (!_overlayView) {
         _overlayView = [[UIView alloc] initWithFrame:self.view.frame];
-        _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         
         UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(overlayViewTapped)];
         
@@ -278,6 +278,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         }];
         
         self.currentlyPresentedItemViewController = viewController;
+        self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
     }];
 }
 
@@ -286,6 +287,8 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)dismissCurrentlyPresentedViewController:(LCKItemViewControllerDismissCompletion)completion {
+    self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
+
     if (!self.currentlyPresentedItemViewController) {
         if (completion) {
             completion();
