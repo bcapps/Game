@@ -586,7 +586,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="117" width="600" height="443"/>
+                                <rect key="frame" x="0.0" y="122" width="600" height="270"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -606,6 +606,7 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="bWO-5p-wh5" secondAttribute="centerX" id="7Om-oS-IDP"/>
                                     <constraint firstAttribute="centerY" secondItem="g9g-5N-MCR" secondAttribute="centerY" constant="25" id="E5h-rO-sUB"/>
+                                    <constraint firstAttribute="height" constant="270" id="GHh-B7-jZe"/>
                                     <constraint firstItem="bWO-5p-wh5" firstAttribute="top" secondItem="g9g-5N-MCR" secondAttribute="bottom" constant="5" id="VNC-k0-fhd"/>
                                     <constraint firstAttribute="centerX" secondItem="g9g-5N-MCR" secondAttribute="centerX" id="ipK-32-JXz"/>
                                 </constraints>
@@ -653,12 +654,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="M9g-87-Wtv" secondAttribute="trailing" id="8eP-EF-6Yx"/>
                             <constraint firstAttribute="centerX" secondItem="KrK-tE-GzK" secondAttribute="centerX" id="Btc-Ko-INc"/>
-                            <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="En8-ha-hzX" secondAttribute="bottom" constant="20" id="Imi-qP-qq2"/>
+                            <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="En8-ha-hzX" secondAttribute="bottom" constant="25" id="Imi-qP-qq2"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="leading" secondItem="pJZ-K6-cQ3" secondAttribute="leadingMargin" constant="20" id="Kex-YT-rem"/>
                             <constraint firstItem="M9g-87-Wtv" firstAttribute="leading" secondItem="pJZ-K6-cQ3" secondAttribute="leading" id="LOH-R1-RlD"/>
-                            <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="M9g-87-Wtv" secondAttribute="bottom" constant="40" id="MsP-Rm-5KW"/>
+                            <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="M9g-87-Wtv" secondAttribute="bottom" priority="500" constant="40" id="MsP-Rm-5KW"/>
                             <constraint firstItem="En8-ha-hzX" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" constant="5" id="N9x-Sa-a8d"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="top" secondItem="hN7-j2-aOH" secondAttribute="bottom" id="TF4-Ei-NEy"/>
+                            <constraint firstItem="M9g-87-Wtv" firstAttribute="width" secondItem="pJZ-K6-cQ3" secondAttribute="width" id="aI4-r5-Pd7"/>
                             <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="KrK-tE-GzK" secondAttribute="bottom" id="bM1-JR-yFj"/>
                             <constraint firstAttribute="centerX" secondItem="En8-ha-hzX" secondAttribute="centerX" id="eTB-b7-nOU"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="width" secondItem="En8-ha-hzX" secondAttribute="width" id="eoF-ma-GFm"/>
@@ -669,7 +671,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8eP-EF-6Yx"/>
+                                <exclude reference="LOH-R1-RlD"/>
                                 <exclude reference="yLx-fc-NiP"/>
+                                <exclude reference="MsP-Rm-5KW"/>
                             </mask>
                         </variation>
                     </view>
