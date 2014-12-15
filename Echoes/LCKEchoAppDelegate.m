@@ -11,6 +11,9 @@
 #import "LCKEchoCoreDataController.h"
 #import <HockeySDK/HockeySDK.h>
 
+#import <HockeySDK/BITHockeyManager.h>
+#import <HockeySDK/BITCrashManager.h>
+
 @interface LCKEchoAppDelegate ()
 
 @end
@@ -21,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"2e1122a4b5aaea239b30e91d5c7983c7"];
+    [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
