@@ -69,6 +69,7 @@
     cell.textLabel.text = character.displayName;
     cell.textLabel.textColor = [UIColor titleTextColor];
     cell.textLabel.font = [UIFont titleTextFontOfSize:14.0];
+    cell.imageView.image = [character.characterStats classImageForGender:character.characterGender];
     
     return cell;
 }
