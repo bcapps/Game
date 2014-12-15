@@ -14,6 +14,7 @@
 
 #import "LCKItem.h"
 #import "LCKDMManager.h"
+#import "LCKDMToolsTableViewController.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
@@ -64,6 +65,13 @@
         }
         else if (self.soulsToGive) {
             [self.multipeerManager sendSoulAmount:self.soulsToGive toPeerID:peerID];
+        }
+    }
+    
+    for (UIViewController *viewController in self.navigationController.viewControllers) {
+        if ([viewController isKindOfClass:[LCKDMToolsTableViewController class]]) {
+            [self.navigationController popToViewController:viewController animated:YES];
+            break;
         }
     }
 }
