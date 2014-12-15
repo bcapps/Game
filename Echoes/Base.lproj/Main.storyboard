@@ -649,7 +649,7 @@
                                 <segue destination="g36-ta-CKQ" kind="custom" customClass="LCKDismissSegue" id="9Os-uu-hNJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="tcJ-Q4-Xki">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="tcJ-Q4-Xki">
                             <connections>
                                 <action selector="doneButtonTapped:" destination="qSY-Ot-GtE" id="9BQ-nG-wKi"/>
                             </connections>
@@ -749,7 +749,7 @@
         <image name="SilhoutteFemale.png" width="161" height="331"/>
         <image name="UpArrow.png" width="21" height="12"/>
         <image name="heartIcon.png" width="150" height="150"/>
-        <image name="inventoryIcon.png" width="26" height="26"/>
+        <image name="inventoryIcon.png" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Os-uu-hNJ"/>
