@@ -131,6 +131,7 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
     LCKItem *item = [self itemForIndexPath:indexPath];
     
     LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    peersViewController.peerType = LCKAllPeersTypeDM;
     peersViewController.item = item;
     
     [self.navigationController pushViewController:peersViewController animated:YES];

@@ -39,7 +39,7 @@
     
     self.peerIDs = @[];
     
-    if ([LCKDMManager isDMMode]) {
+    if (self.peerType == LCKAllPeersTypeDM) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(send)];
     }
 }
@@ -82,7 +82,7 @@
     MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
     
     if (peerID) {
-        if ([LCKDMManager isDMMode]) {
+        if (self.peerType == LCKAllPeersTypeDM) {
             if ([self.peerIDs containsObject:peerID]) {
                 NSMutableArray *peerIDsArray = [self.peerIDs mutableCopy];
                 [peerIDsArray removeObject:peerID];

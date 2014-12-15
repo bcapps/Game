@@ -9,6 +9,11 @@
 @import UIKit;
 @import MultipeerConnectivity;
 
+typedef NS_ENUM(NSUInteger, LCKAllPeersType) {
+    LCKAllPeersTypePlayer,
+    LCKAllPeersTypeDM
+};
+
 typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
 
 @class LCKMultipeerManager;
@@ -18,6 +23,7 @@ typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
 
 @property (nonatomic) LCKItem *item;
 @property (nonatomic) NSNumber *soulsToGive;
+@property (nonatomic) LCKAllPeersType peerType;
 
 @property (nonatomic, copy) LCKAllPeersViewControllerDismissedBlock dismissBlock;
 

@@ -22,9 +22,13 @@
 
 @interface LCKInventoryTableViewController () <LCKItemViewControllerDelegate>
 
+@property (nonatomic) NSArray *unequippedItems;
+
 @end
 
 @implementation LCKInventoryTableViewController
+
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,18 +39,38 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
+#pragma mark - LCKInventoryTableViewController
+
+- (NSArray *)unequippedItems {
+    if (!_unequippedItems) {
+        NSMutableArray *unequippedItems = [NSMutableArray array];
+        
+        for (LCKItem *item in self.character.items) {
+            if (!item.isEquipped) {
+                NSLog(@"Unequipped: %@", item.name);
+                [unequippedItems addObject:item];
+            }
+            else {
+                NSLog(@"Equipped: %@", item.name);
+            }
+        }
+        
+        _unequippedItems = [unequippedItems copy];
+    }
+    
+    return _unequippedItems;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.character.items objectsPassingTest:^BOOL(LCKItem *item, BOOL *stop) {
-        return !item.isEquipped;
-    }].count;
+    return self.unequippedItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
     
-    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
+    LCKItem *item = [self.unequippedItems safeObjectAtIndex:indexPath.row];
     
     cell.backgroundColor = self.tableView.backgroundColor;
     cell.textLabel.text = item.name;
@@ -60,7 +84,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
+        LCKItem *item = [self.unequippedItems safeObjectAtIndex:indexPath.row];
         
         [self.character removeItemFromInventory:item];
         
@@ -74,7 +98,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKItem *item = [self.character.items safeObjectAtIndex:indexPath.row];
+    LCKItem *item = [self.unequippedItems safeObjectAtIndex:indexPath.row];
     
     LCKItemViewController *itemViewController = [[LCKItemViewController alloc] initWithItem:item displayStyle:LCKItemViewControllerDisplayStyleInventory];
     itemViewController.character = self.character;
@@ -87,6 +111,7 @@
 
 - (void)giftItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
     LCKAllPeersViewController *allPeersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    allPeersViewController.peerType = LCKAllPeersTypePlayer;
     allPeersViewController.item = itemViewController.item;
     
     allPeersViewController.dismissBlock = ^(BOOL success) {

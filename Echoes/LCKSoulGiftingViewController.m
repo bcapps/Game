@@ -47,6 +47,7 @@
 
 - (void)giftSouls {
     LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    peersViewController.peerType = LCKAllPeersTypeDM;
     peersViewController.soulsToGive = @([self.textField.text integerValue]);
     [self.navigationController pushViewController:peersViewController animated:YES];
 }
