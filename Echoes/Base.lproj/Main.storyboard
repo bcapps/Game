@@ -621,19 +621,49 @@
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KrK-tE-GzK">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="TAa-nd-aWb"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7z-Ue-8TY">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StatCellIdentifier" id="Lxo-wL-46F">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qSY-Ot-GtE" id="hBG-gr-P6D"/>
+                                    <outlet property="delegate" destination="qSY-Ot-GtE" id="8Sh-T6-o1R"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="M9g-87-Wtv" secondAttribute="trailing" id="8eP-EF-6Yx"/>
+                            <constraint firstAttribute="centerX" secondItem="KrK-tE-GzK" secondAttribute="centerX" id="Btc-Ko-INc"/>
                             <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="En8-ha-hzX" secondAttribute="bottom" constant="20" id="Imi-qP-qq2"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="leading" secondItem="pJZ-K6-cQ3" secondAttribute="leadingMargin" constant="20" id="Kex-YT-rem"/>
                             <constraint firstItem="M9g-87-Wtv" firstAttribute="leading" secondItem="pJZ-K6-cQ3" secondAttribute="leading" id="LOH-R1-RlD"/>
                             <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="M9g-87-Wtv" secondAttribute="bottom" constant="40" id="MsP-Rm-5KW"/>
                             <constraint firstItem="En8-ha-hzX" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" constant="5" id="N9x-Sa-a8d"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="top" secondItem="hN7-j2-aOH" secondAttribute="bottom" id="TF4-Ei-NEy"/>
+                            <constraint firstItem="nMN-pO-Dx8" firstAttribute="top" secondItem="KrK-tE-GzK" secondAttribute="bottom" id="bM1-JR-yFj"/>
                             <constraint firstAttribute="centerX" secondItem="En8-ha-hzX" secondAttribute="centerX" id="eTB-b7-nOU"/>
                             <constraint firstItem="ffg-ia-HDt" firstAttribute="width" secondItem="En8-ha-hzX" secondAttribute="width" id="eoF-ma-GFm"/>
                             <constraint firstAttribute="centerX" secondItem="M9g-87-Wtv" secondAttribute="centerX" id="ftl-Hh-EqJ"/>
+                            <constraint firstItem="KrK-tE-GzK" firstAttribute="width" secondItem="pJZ-K6-cQ3" secondAttribute="width" id="hI7-aW-UwD"/>
                             <constraint firstAttribute="centerX" secondItem="ffg-ia-HDt" secondAttribute="centerX" id="l9K-td-R8T"/>
                             <constraint firstItem="M9g-87-Wtv" firstAttribute="top" secondItem="ffg-ia-HDt" secondAttribute="bottom" id="yLx-fc-NiP"/>
                         </constraints>
@@ -661,6 +691,7 @@
                         <outlet property="classNameLabel" destination="g9g-5N-MCR" id="bAr-zF-ioi"/>
                         <outlet property="classPicker" destination="M9g-87-Wtv" id="DgF-VY-8VY"/>
                         <outlet property="genderSegmentedControl" destination="En8-ha-hzX" id="cqX-D8-1U7"/>
+                        <outlet property="statsCollectionView" destination="KrK-tE-GzK" id="lv9-hd-Fll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlI-va-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>

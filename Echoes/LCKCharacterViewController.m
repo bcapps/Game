@@ -229,7 +229,6 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (LCKInfoViewController *)newInfoViewController {
     LCKInfoViewController *infoViewController = [[LCKInfoViewController alloc] init];
-    infoViewController.view.clipsToBounds = YES;
     
     return infoViewController;
 }

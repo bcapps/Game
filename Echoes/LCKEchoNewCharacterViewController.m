@@ -11,6 +11,8 @@
 #import "CharacterClasses.h"
 #import "Character.h"
 #import "LCKCharacterPortrait.h"
+#import "LCKStatCell.h"
+#import "LCKInfoViewController.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -20,6 +22,8 @@
 #import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
+const CGFloat LCKEchoNewCharacterViewControllerNumberOfStats = 5;
+
 CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 135.0;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
@@ -28,15 +32,25 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 @property (weak, nonatomic) IBOutlet iCarousel *classPicker;
 
-@property (nonatomic, readonly) NSArray *classes;
+@property (nonatomic) NSArray *classes;
 @property (weak, nonatomic) IBOutlet UILabel *classNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *classDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UITextField *characterNameTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
+@property (weak, nonatomic) IBOutlet UICollectionView *statsCollectionView;
 
 @end
 
 @implementation LCKEchoNewCharacterViewController
+
+#pragma mark - NSObject
+
+- (void)dealloc {
+    self.statsCollectionView.delegate = nil;
+    self.statsCollectionView.dataSource = nil;
+}
+
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,20 +74,27 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     [self.genderSegmentedControl addTarget:self action:@selector(genderSelected) forControlEvents:UIControlEventValueChanged];
     
     [self carouselCurrentItemIndexDidChange:self.classPicker];
+    
+    [self.statsCollectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
+    self.statsCollectionView.backgroundColor = [self.statsCollectionView.backgroundColor colorWithAlphaComponent:0.8];
 }
 
 - (NSArray *)classes {
-    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
+    if (!_classes) {
+        NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
+        
+        Knight *knight = [[Knight alloc] initWithContext:context];
+        Thief *thief = [[Thief alloc] initWithContext:context];
+        Cleric *cleric = [[Cleric alloc] initWithContext:context];
+        Warrior *warrior = [[Warrior alloc] initWithContext:context];
+        Sorcerer *sorcerer = [[Sorcerer alloc] initWithContext:context];
+        Bandit *bandit = [[Bandit alloc] initWithContext:context];
+        Hunter *hunter = [[Hunter alloc] initWithContext:context];
+        
+        _classes = @[knight, thief, cleric, warrior, sorcerer, bandit, hunter];
+    }
     
-    Knight *knight = [[Knight alloc] initWithContext:context];
-    Thief *thief = [[Thief alloc] initWithContext:context];
-    Cleric *cleric = [[Cleric alloc] initWithContext:context];
-    Warrior *warrior = [[Warrior alloc] initWithContext:context];
-    Sorcerer *sorcerer = [[Sorcerer alloc] initWithContext:context];
-    Bandit *bandit = [[Bandit alloc] initWithContext:context];
-    Hunter *hunter = [[Hunter alloc] initWithContext:context];
-    
-    return @[knight, thief, cleric, warrior, sorcerer, bandit, hunter];
+    return _classes;
 }
 
 - (IBAction)doneButtonTapped:(UIBarButtonItem *)button {
@@ -111,6 +132,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     self.classNameLabel.text = characterStats.className;
     self.classDescriptionLabel.text = characterStats.classDescription;
+    
+    [self.statsCollectionView reloadData];
 }
 
 #pragma mark - iCarouselDataSource
@@ -127,5 +150,42 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     return portraitView;
 }
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return LCKEchoNewCharacterViewControllerNumberOfStats;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    LCKStatCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LCKStatCellReuseIdentifier forIndexPath:indexPath];
+    
+    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
+    
+    CharacterStats *characterStats = [[[self.classes safeObjectAtIndex:self.classPicker.currentItemIndex] class] newCharacterStatsInContext:context];
+
+    cell.statNameLabel.text = [CharacterStats statNameForStatType:(LCKStatType)indexPath.row];
+    cell.statValueLabel.text = [characterStats statAsStringForStatType:(LCKStatType)indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    LCKInfoViewController *infoViewController = [[LCKInfoViewController alloc] init];
+//    infoViewController.arrowDirection = UIPopoverArrowDirectionDown;
+//    
+//    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
+//    CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:collectionView];
+//    
+//    CGRect presentationFrame = [self statInfoViewFrameForCellFrame:cellFrame];
+//    
+//    infoViewController.presentingRect = CGRectMake(cellFrame.origin.x - LCKCharacterStatInfoViewHorizontalMargin, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.width);
+//    
+//    [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
+//    
+//    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:indexPath.row];
+//}
 
 @end

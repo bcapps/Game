@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.clipsToBounds = YES;
     
     self.infoTextView = [[UITextView alloc] init];
     self.infoTextView.backgroundColor = [UIColor clearColor];
