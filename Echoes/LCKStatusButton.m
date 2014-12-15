@@ -33,7 +33,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.imageView.frame = CGRectMake(0, 2, 14.0 , 14.0);
+    self.imageView.frame = CGRectMake(0, 0.0, 20.0 , 20.0);
     self.soulLabel.frame = CGRectMake(CGRectGetWidth(self.imageView.frame) + 5.0, 0, CGRectGetWidth(self.frame) - CGRectGetWidth(self.imageView.frame) - 5.0, CGRectGetHeight(self.frame));
     
     [self.soulLabel sizeToFit];
@@ -55,7 +55,7 @@
 - (void)commonInitialization {
     self.soulLabel = [[UICountingLabel alloc] init];
     
-    self.soulLabel.font = [UIFont descriptiveTextFontOfSize:13.0];
+    self.soulLabel.font = [UIFont descriptiveTextFontOfSize:15.0];
     self.soulLabel.textColor = [UIColor descriptiveTextColor];
     
     [self addSubview:self.soulLabel];
