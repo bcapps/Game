@@ -61,7 +61,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
+@property (weak, nonatomic) IBOutlet UIButton *increaseHealthButton;
+@property (weak, nonatomic) IBOutlet UIButton *decreaseHealthButton;
 @property (weak, nonatomic) IBOutlet UILabel *healthLabel;
 
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *statsFlowLayout;
@@ -145,6 +148,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:0.0];
     
     [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+    self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -418,6 +424,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     self.character.currentHealth = @(self.character.currentHealth.integerValue + 1);
     
+    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+    self.decreaseHealthButton.enabled = YES;
+    
     [self updateHealthText];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
@@ -429,6 +438,9 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     }
     
     self.character.currentHealth = @(self.character.currentHealth.integerValue - 1);
+    
+    self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
+    self.increaseHealthButton.enabled = YES;
     
     [self updateHealthText];
     
