@@ -7,7 +7,7 @@
 		<key>AC</key>
 		<integer>10</integer>
 		<key>Health</key>
-		<integer>12</integer>
+		<integer>3</integer>
 		<key>To Hit</key>
 		<integer>10</integer>
 		<key>Soul Value</key>
@@ -41,7 +41,7 @@
 		<key>AC</key>
 		<integer>11</integer>
 		<key>Health</key>
-		<integer>20</integer>
+		<integer>5</integer>
 		<key>To Hit</key>
 		<integer>10</integer>
 		<key>Soul Value</key>
@@ -82,7 +82,7 @@
 		<key>AC</key>
 		<integer>12</integer>
 		<key>Health</key>
-		<integer>102</integer>
+		<integer>27</integer>
 		<key>To Hit</key>
 		<integer>8</integer>
 		<key>Soul Value</key>
@@ -143,6 +143,12 @@
 		</array>
 		<key>Attributes</key>
 		<array>
+			<dict>
+				<key>name</key>
+				<string>Death From Above</string>
+				<key>description</key>
+				<string>This enemy can be struck for an additional 10 * number of players damage once, if attacked from above.</string>
+			</dict>
 			<dict>
 				<key>name</key>
 				<string>Soft Under Belly</string>

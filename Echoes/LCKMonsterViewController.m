@@ -86,6 +86,7 @@
     
     [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"Health: "]];
     [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:self.monster.health.stringValue]];
+    [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:@" * players"]];
     
     return attributedString;
 }
@@ -128,6 +129,7 @@
             [attributedString appendAttributedString:[[self class] titleAttributedStringForString:attribute.name]];
             [attributedString appendAttributedString:[[self class] newlineAttributedString]];
             [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:attribute.attributeDescription]];
+            [attributedString appendAttributedString:[[self class] newlineAttributedString]];
         }
     }
     
