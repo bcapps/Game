@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hollow</key>
+	<dict>
+		<key>AC</key>
+		<integer>10</integer>
+		<key>Health</key>
+		<integer>12</integer>
+		<key>To Hit</key>
+		<integer>10</integer>
+		<key>Attacks</key>
+		<array>
+			<string>1-10 Swing: Swing his hand viciously for 1d4 damage.</string>
+			<string>11-20 Frenzy: Attacks everyone nearby for 1d4 damage.</string>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Defenses</key>
+		<array/>
+	</dict>
+	<key>Hollow Soldier</key>
+	<dict>
+		<key>AC</key>
+		<integer>11</integer>
+		<key>Health</key>
+		<integer>20</integer>
+		<key>To Hit</key>
+		<integer>10</integer>
+		<key>Attacks</key>
+		<array>
+			<string>1-10 Swing: Swing his sword in an arc hitting everyone in front of him for 1d6 damage.</string>
+			<string>11-20 Stab: Stab one target for 1d8 damage.</string>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Defenses</key>
+		<array>
+			<string>Shield: Reduces physical damage taken by 1.</string>
+		</array>
+	</dict>
+	<key>Asylum Demon</key>
+	<dict>
+		<key>AC</key>
+		<integer>12</integer>
+		<key>Health</key>
+		<integer>102</integer>
+		<key>To Hit</key>
+		<integer>8</integer>
+		<key>Attacks</key>
+		<array>
+			<string>1-6 Hammer Drive: Hits one target directly in front of him for 1d6 damage. Cannot be dodged.</string>
+			<string>7-14 Hammer Swing: Swings his hammer in an arc in front of him for 1d6 damage.</string>
+			<string>15-20 Hammer Smash: A downward smash hitting enemies at a long range in front of him for 2d4 damage.</string>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<string>1-7 Slam: Flies up into the air. Falls onto the enemies near him for 3d4 damage.</string>
+			<string>7-14 Leaping Hammer Smash: Flutters his wings. Leaps at the furthest enemy from him for 2d4 damage.</string>
+			<string>15-20 Double Hammer Swing: Cocks hammer back to his side. Swings twice at enemies in front of him for 2d6 damage.</string>
+		</array>
+		<key>Defenses</key>
+		<array>
+			<string>Soft Under Belly: Takes 1 additional physical damage from frontal attacks.</string>
+		</array>
+	</dict>
+</dict>
+</plist>

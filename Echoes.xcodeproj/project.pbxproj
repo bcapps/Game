@@ -112,6 +112,7 @@
 		F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412FE1A3F885900287EFA /* SorcererIconFemale@2x.png */; };
 		F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */; };
 		F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */; };
+		F26413051A40C8B700287EFA /* Monsters.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26413041A40C8B700287EFA /* Monsters.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +254,7 @@
 		F26412FE1A3F885900287EFA /* SorcererIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SorcererIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WarriorIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KnightIconFemale@2x.png"; sourceTree = "<group>"; };
+		F26413041A40C8B700287EFA /* Monsters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monsters.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +346,7 @@
 				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
 				F21F43B01A3C126D00FEA417 /* LCKDMManager.h */,
 				F21F43B11A3C126D00FEA417 /* LCKDMManager.m */,
+				F26413041A40C8B700287EFA /* Monsters.plist */,
 			);
 			name = "DM Tools";
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				F21F43861A3A54AB00FEA417 /* broadsword@2x.png in Resources */,
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
 				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
+				F26413051A40C8B700287EFA /* Monsters.plist in Resources */,
 				F21F438C1A3A557100FEA417 /* banditknife@2x.png in Resources */,
 				F21F43961A3A576300FEA417 /* heatershield@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
