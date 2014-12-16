@@ -80,7 +80,7 @@
     self.layer.cornerRadius = 8.0;
     self.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.layer.borderWidth = 1.0;
-    
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.5];
 }
 
