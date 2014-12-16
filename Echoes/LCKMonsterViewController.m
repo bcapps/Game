@@ -9,6 +9,7 @@
 #import "LCKMonsterViewController.h"
 #import "LCKMonster.h"
 #import "LCKMonsterAttack.h"
+#import "LCKMonsterAttribute.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -71,6 +72,10 @@
     
     [attributedString appendAttributedString:[[self class] newlineAttributedString]];
     [attributedString appendAttributedString:[[self class] newlineAttributedString]];
+    [attributedString appendAttributedString:[self monsterAttributesAttributedString]];
+    
+    [attributedString appendAttributedString:[[self class] newlineAttributedString]];
+    [attributedString appendAttributedString:[[self class] newlineAttributedString]];
     [attributedString appendAttributedString:[self monsterAttacksAttributedString]];
     
     return attributedString;
@@ -108,6 +113,23 @@
     
     [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"Soul Value: "]];
     [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:self.monster.soulValue.stringValue]];
+    
+    return attributedString;
+}
+
+- (NSAttributedString *)monsterAttributesAttributedString {
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
+    
+    if (self.monster.attributes.count) {
+        [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"Attributes"]];
+        [attributedString appendAttributedString:[[self class] newlineAttributedString]];
+        
+        for (LCKMonsterAttribute *attribute in self.monster.attributes) {
+            [attributedString appendAttributedString:[[self class] titleAttributedStringForString:attribute.name]];
+            [attributedString appendAttributedString:[[self class] newlineAttributedString]];
+            [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:attribute.attributeDescription]];
+        }
+    }
     
     return attributedString;
 }
