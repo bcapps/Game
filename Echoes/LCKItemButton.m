@@ -45,6 +45,17 @@
     self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
 }
 
+- (void)setItemSlot:(LCKItemSlot)itemSlot {
+    _itemSlot = itemSlot;
+    
+    if (!self.imageView.image) {
+        [self setImage:[LCKItemButton placeholderItemImageForItemSlot:self.itemSlot] forState:UIControlStateNormal];
+        self.imageView.tintColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.2];
+        
+        self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+    }
+}
+
 + (UIImage *)placeholderItemImageForItemSlot:(LCKItemSlot)itemSlot {
     UIImage *placeholderImage;
     
