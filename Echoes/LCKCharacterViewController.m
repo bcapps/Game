@@ -160,6 +160,15 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)updateItemButtons {
+    self.leftHandButton.item = nil;
+    self.rightHandButton.item = nil;
+    self.firstSpellButton.item = nil;
+    self.secondSpellButton.item = nil;
+    self.thirdSpellButton.item = nil;
+    self.fourthSpellButton.item = nil;
+    self.firstAccessoryButton.item = nil;
+    self.secondAccessoryButton.item = nil;
+    
     for (LCKItem *weapon in self.character.equippedWeapons) {
         if (weapon.equippedSlot == LCKEquipmentSlotLeftHand) {
             self.leftHandButton.item = weapon;
