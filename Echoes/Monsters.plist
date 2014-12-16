@@ -10,6 +10,8 @@
 		<integer>12</integer>
 		<key>To Hit</key>
 		<integer>10</integer>
+		<key>Soul Value</key>
+		<integer>20</integer>
 		<key>Attacks</key>
 		<array>
 			<string>1-10 Swing: Swing his hand viciously for 1d4 damage.</string>
@@ -28,6 +30,8 @@
 		<integer>20</integer>
 		<key>To Hit</key>
 		<integer>10</integer>
+		<key>Soul Value</key>
+		<integer>40</integer>
 		<key>Attacks</key>
 		<array>
 			<string>1-10 Swing: Swing his sword in an arc hitting everyone in front of him for 1d6 damage.</string>
@@ -48,6 +52,8 @@
 		<integer>102</integer>
 		<key>To Hit</key>
 		<integer>8</integer>
+		<key>Soul Value</key>
+		<integer>2000</integer>
 		<key>Attacks</key>
 		<array>
 			<string>1-6 Hammer Drive: Hits one target directly in front of him for 1d6 damage. Cannot be dodged.</string>

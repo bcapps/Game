@@ -28,7 +28,7 @@
 		F21F43621A32CE0500FEA417 /* LCKMultipeerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */; };
 		F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */; };
 		F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */; };
-		F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F436B1A3563C700FEA417 /* LCKItemCell.m */; };
+		F21F436C1A3563C700FEA417 /* LCKBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F436B1A3563C700FEA417 /* LCKBaseCell.m */; };
 		F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F436D1A36872C00FEA417 /* giftIcon@2x.png */; };
 		F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F436F1A37F09D00FEA417 /* accessoryIcon@2x.png */; };
 		F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43701A37F09D00FEA417 /* bootsIcon@2x.png */; };
@@ -115,6 +115,7 @@
 		F26413051A40C8B700287EFA /* Monsters.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26413041A40C8B700287EFA /* Monsters.plist */; };
 		F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413081A40CBCF00287EFA /* LCKMonster.m */; };
 		F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */; };
+		F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,8 +163,8 @@
 		F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKAllPeersViewController.m; sourceTree = "<group>"; };
 		F21F43671A355E8400FEA417 /* LCKEquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEquipmentViewController.h; sourceTree = "<group>"; };
 		F21F43681A355E8400FEA417 /* LCKEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEquipmentViewController.m; sourceTree = "<group>"; };
-		F21F436A1A3563C700FEA417 /* LCKItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemCell.h; sourceTree = "<group>"; };
-		F21F436B1A3563C700FEA417 /* LCKItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemCell.m; sourceTree = "<group>"; };
+		F21F436A1A3563C700FEA417 /* LCKBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKBaseCell.h; sourceTree = "<group>"; };
+		F21F436B1A3563C700FEA417 /* LCKBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKBaseCell.m; sourceTree = "<group>"; };
 		F21F436D1A36872C00FEA417 /* giftIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "giftIcon@2x.png"; sourceTree = "<group>"; };
 		F21F436F1A37F09D00FEA417 /* accessoryIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessoryIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43701A37F09D00FEA417 /* bootsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bootsIcon@2x.png"; sourceTree = "<group>"; };
@@ -261,6 +262,8 @@
 		F26413081A40CBCF00287EFA /* LCKMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonster.m; sourceTree = "<group>"; };
 		F264130A1A40CC5500287EFA /* LCKMonsterAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterAttack.h; sourceTree = "<group>"; };
 		F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterAttack.m; sourceTree = "<group>"; };
+		F264130D1A40CEBA00287EFA /* LCKMonsterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterProvider.h; sourceTree = "<group>"; };
+		F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,8 +312,8 @@
 				F21F43401A2FD26D00FEA417 /* LCKItemProvider.m */,
 				F21F43421A2FD28000FEA417 /* LCKItem.h */,
 				F21F43431A2FD28000FEA417 /* LCKItem.m */,
-				F21F436A1A3563C700FEA417 /* LCKItemCell.h */,
-				F21F436B1A3563C700FEA417 /* LCKItemCell.m */,
+				F21F436A1A3563C700FEA417 /* LCKBaseCell.h */,
+				F21F436B1A3563C700FEA417 /* LCKBaseCell.m */,
 				F21F439E1A3BB39400FEA417 /* LCKStatusButton.h */,
 				F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */,
 			);
@@ -563,13 +566,15 @@
 		F26413061A40CBBA00287EFA /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				F26413041A40C8B700287EFA /* Monsters.plist */,
 				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
 				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
-				F26413041A40C8B700287EFA /* Monsters.plist */,
 				F26413071A40CBCF00287EFA /* LCKMonster.h */,
 				F26413081A40CBCF00287EFA /* LCKMonster.m */,
 				F264130A1A40CC5500287EFA /* LCKMonsterAttack.h */,
 				F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */,
+				F264130D1A40CEBA00287EFA /* LCKMonsterProvider.h */,
+				F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */,
 			);
 			name = Monsters;
 			sourceTree = "<group>";
@@ -816,12 +821,13 @@
 				F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */,
 				F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */,
 				F21F43B51A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m in Sources */,
-				F21F436C1A3563C700FEA417 /* LCKItemCell.m in Sources */,
+				F21F436C1A3563C700FEA417 /* LCKBaseCell.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
 				F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */,
 				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
+				F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */,

@@ -13,7 +13,7 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
-#import "LCKItemCell.h"
+#import "LCKBaseCell.h"
 
 #import "LCKEchoCoreDataController.h"
 
@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
+    [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
     
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.layer.masksToBounds = NO;
@@ -104,11 +104,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
+    LCKBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKBaseCell class]) forIndexPath:indexPath];
     
     LCKItem *item = [self.itemsToDisplay safeObjectAtIndex:indexPath.row];
     
-    cell.backgroundColor = self.tableView.backgroundColor;
     cell.textLabel.text = item.name;
     
     return cell;

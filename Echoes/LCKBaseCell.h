@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface LCKItemCell : UITableViewCell
+@interface LCKBaseCell : UITableViewCell
 
 @end

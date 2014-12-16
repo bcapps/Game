@@ -10,11 +10,13 @@
 
 @interface LCKMonster : NSObject
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary name:(NSString *)name;
 
+@property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSNumber *AC;
 @property (nonatomic, readonly) NSNumber *health;
 @property (nonatomic, readonly) NSNumber *hitNumber;
+@property (nonatomic, readonly) NSNumber *soulValue;
 @property (nonatomic, readonly) NSArray *attacks;
 @property (nonatomic, readonly) NSArray *attributes;
 

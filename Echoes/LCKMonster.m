@@ -15,16 +15,19 @@ NSString * const LCKMonsterHitNumberKey = @"To Hit";
 NSString * const LCKMonsterAttacksKey = @"Attacks";
 NSString * const LCKMonsterSignaledAttacksKey = @"Signaled Attacks";
 NSString * const LCKMonsterAttributesKey = @"Attributes";
+NSString * const LCKMonsterSoulValueKey = @"Soul Value";
 
 @implementation LCKMonster
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary name:(NSString *)name {
     self = [super init];
     
     if (self) {
+        _name = name;
         _AC = [dictionary objectForKey:LCKMonsterACNumberKey];
         _health = [dictionary objectForKey:LCKMonsterHealthNumberKey];
         _hitNumber = [dictionary objectForKey:LCKMonsterHitNumberKey];
+        _soulValue = [dictionary objectForKey:LCKMonsterSoulValueKey];
         _attributes = [dictionary objectForKey:LCKMonsterAttributesKey];
 
         NSMutableArray *attacks = [NSMutableArray array];

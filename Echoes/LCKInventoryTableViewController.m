@@ -10,7 +10,7 @@
 #import "LCKAllItemsTableViewController.h"
 #import "LCKEchoCoreDataController.h"
 #import "LCKItem.h"
-#import "LCKItemCell.h"
+#import "LCKBaseCell.h"
 #import "LCKItemViewController.h"
 #import "LCKAllPeersViewController.h"
 #import "LCKMultipeerManager.h"
@@ -35,7 +35,7 @@
  
     self.tableView.backgroundColor = [UIColor backgroundColor];
     
-    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
+    [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
@@ -68,11 +68,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
+    LCKBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKBaseCell class]) forIndexPath:indexPath];
     
     LCKItem *item = [self.unequippedItems safeObjectAtIndex:indexPath.row];
     
-    cell.backgroundColor = self.tableView.backgroundColor;
     cell.textLabel.text = item.name;
     
     return cell;

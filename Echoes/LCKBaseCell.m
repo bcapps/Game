@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import "LCKItemCell.h"
+#import "LCKBaseCell.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 
-@implementation LCKItemCell
+@implementation LCKBaseCell
 
 #pragma mark - NSObject+UINibLoadingAdditions
 
@@ -37,6 +37,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleGray;
     self.textLabel.font = [UIFont titleTextFontOfSize:14.0];
     self.textLabel.textColor = [UIColor titleTextColor];
+    self.backgroundColor = [UIColor backgroundColor];
 }
 
 @end

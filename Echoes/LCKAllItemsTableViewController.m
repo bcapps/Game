@@ -15,7 +15,7 @@
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
-#import "LCKItemCell.h"
+#import "LCKBaseCell.h"
 
 #import "LCKAllPeersViewController.h"
 
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
     [super viewDidLoad];
     
     self.tableView.backgroundColor = [UIColor backgroundColor];
-    [self.tableView registerClass:[LCKItemCell class] forCellReuseIdentifier:NSStringFromClass([LCKItemCell class])];
+    [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];    
 }
 
@@ -113,8 +113,7 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKItemCell class]) forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor backgroundColor];
+    LCKBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKBaseCell class]) forIndexPath:indexPath];
     
     LCKItem *item = [self itemForIndexPath:indexPath];
     
