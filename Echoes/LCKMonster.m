@@ -8,6 +8,7 @@
 
 #import "LCKMonster.h"
 #import "LCKMonsterAttack.h"
+#import "LCKMonsterAttribute.h"
 
 NSString * const LCKMonsterACNumberKey = @"AC";
 NSString * const LCKMonsterHealthNumberKey = @"Health";
@@ -28,18 +29,25 @@ NSString * const LCKMonsterSoulValueKey = @"Soul Value";
         _health = [dictionary objectForKey:LCKMonsterHealthNumberKey];
         _hitNumber = [dictionary objectForKey:LCKMonsterHitNumberKey];
         _soulValue = [dictionary objectForKey:LCKMonsterSoulValueKey];
-        _attributes = [dictionary objectForKey:LCKMonsterAttributesKey];
 
-        NSMutableArray *attacks = [NSMutableArray array];
+        NSMutableArray *attributes = [NSMutableArray array];
+        for (NSDictionary *attributeDictionary in [dictionary objectForKey:LCKMonsterAttributesKey]) {
+            LCKMonsterAttribute *attribute = [[LCKMonsterAttribute alloc] initWithDictionary:attributeDictionary];
+            
+            [attributes addObject:attribute];
+        }
         
-        for (NSString *attackString in [dictionary objectForKey:LCKMonsterAttacksKey]) {
-            LCKMonsterAttack *attack = [[LCKMonsterAttack alloc] initWithAttackString:attackString];
+        _attributes = [attributes copy];
+        
+        NSMutableArray *attacks = [NSMutableArray array];
+        for (NSDictionary *attackDictionary in [dictionary objectForKey:LCKMonsterAttacksKey]) {
+            LCKMonsterAttack *attack = [[LCKMonsterAttack alloc] initWithDictionary:attackDictionary];
             
             [attacks addObject:attack];
         }
         
-        for (NSString *attackString in [dictionary objectForKey:LCKMonsterSignaledAttacksKey]) {
-            LCKMonsterAttack *attack = [[LCKMonsterAttack alloc] initWithAttackString:attackString];
+        for (NSDictionary *attackDictionary in [dictionary objectForKey:LCKMonsterSignaledAttacksKey]) {
+            LCKMonsterAttack *attack = [[LCKMonsterAttack alloc] initWithDictionary:attackDictionary];
             attack.signalAttack = YES;
             
             [attacks addObject:attack];
@@ -49,6 +57,20 @@ NSString * const LCKMonsterSoulValueKey = @"Soul Value";
     }
     
     return self;
+}
+
+- (UIImage *)image {
+    return [UIImage imageNamed:self.name];
+}
+
+- (BOOL)hasSignalAttacks {
+    for (LCKMonsterAttack *attack in self.attacks) {
+        if (attack.isSignalAttack) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 @end

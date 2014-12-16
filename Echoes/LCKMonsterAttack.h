@@ -10,7 +10,7 @@
 
 @interface LCKMonsterAttack : NSObject
 
-- (instancetype)initWithAttackString:(NSString *)attackString;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic, readonly) NSString *diceRoll;
 @property (nonatomic, readonly) NSString *attackName;

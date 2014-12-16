@@ -14,8 +14,22 @@
 		<integer>20</integer>
 		<key>Attacks</key>
 		<array>
-			<string>1-10 Swing: Swing his hand viciously for 1d4 damage.</string>
-			<string>11-20 Frenzy: Attacks everyone nearby for 1d4 damage.</string>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Swing his hand viciously for 1d4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Frenzy</string>
+				<key>description</key>
+				<string>Attacks everyone nearby for 1d4 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
 		</array>
 		<key>Signaled Attacks</key>
 		<array/>
@@ -34,14 +48,33 @@
 		<integer>40</integer>
 		<key>Attacks</key>
 		<array>
-			<string>1-10 Swing: Swing his sword in an arc hitting everyone in front of him for 1d6 damage.</string>
-			<string>11-20 Stab: Stab one target for 1d8 damage.</string>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Swing his sword in an arc hitting everyone in front of him for 1d6 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Stab</string>
+				<key>description</key>
+				<string>Stab one target for 1d8 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
 		</array>
 		<key>Signaled Attacks</key>
 		<array/>
 		<key>Attributes</key>
 		<array>
-			<string>Shield: Reduces physical damage taken by 1.</string>
+			<dict>
+				<key>name</key>
+				<string>Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 1.</string>
+			</dict>
 		</array>
 	</dict>
 	<key>Asylum Demon</key>
@@ -56,19 +89,66 @@
 		<integer>2000</integer>
 		<key>Attacks</key>
 		<array>
-			<string>1-6 Hammer Drive: Hits one target directly in front of him for 1d6 damage. Cannot be dodged.</string>
-			<string>7-14 Hammer Swing: Swings his hammer in an arc in front of him for 1d6 damage.</string>
-			<string>15-20 Hammer Smash: A downward smash hitting enemies at a long range in front of him for 2d4 damage.</string>
+			<dict>
+				<key>name</key>
+				<string>Hammer Drive</string>
+				<key>description</key>
+				<string>Hits one target directly in front of him for 1d6 damage. Cannot be dodged.</string>
+				<key>diceRoll</key>
+				<string>1-6</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Hammer Swing</string>
+				<key>description</key>
+				<string>Swings his hammer in an arc in front of him for 1d6 damage.</string>
+				<key>diceRoll</key>
+				<string>7-14</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Hammer Smash</string>
+				<key>description</key>
+				<string>A downward smash hitting enemies at a long range in front of him for 2d4 damage.</string>
+				<key>diceRoll</key>
+				<string>15-20</string>
+			</dict>
 		</array>
 		<key>Signaled Attacks</key>
 		<array>
-			<string>1-7 Slam: Flies up into the air. Falls onto the enemies near him for 3d4 damage.</string>
-			<string>7-14 Leaping Hammer Smash: Flutters his wings. Leaps at the furthest enemy from him for 2d4 damage.</string>
-			<string>15-20 Double Hammer Swing: Cocks hammer back to his side. Swings twice at enemies in front of him for 2d6 damage.</string>
+			<dict>
+				<key>name</key>
+				<string>Slam</string>
+				<key>description</key>
+				<string>Flies up into the air. Falls onto the enemies near him for 3d4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-7</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Leaping Hammer Smash</string>
+				<key>description</key>
+				<string>Flutters his wings. Leaps at the furthest enemy from him for 2d4 damage.</string>
+				<key>diceRoll</key>
+				<string>7-14</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Double Hammer Swing</string>
+				<key>description</key>
+				<string>Cocks hammer back to his side. Swings twice at enemies in front of him for 2d6 damage.</string>
+				<key>diceRoll</key>
+				<string>15-20</string>
+			</dict>
 		</array>
 		<key>Attributes</key>
 		<array>
-			<string>Soft Under Belly: Takes 1 additional physical damage from frontal attacks.</string>
+			<dict>
+				<key>name</key>
+				<string>Soft Under Belly</string>
+				<key>description</key>
+				<string>Takes 1 additional physical damage from frontal attacks.</string>
+			</dict>
 		</array>
 	</dict>
 </dict>

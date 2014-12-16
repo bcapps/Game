@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 @interface LCKMonster : NSObject
 
@@ -19,5 +20,8 @@
 @property (nonatomic, readonly) NSNumber *soulValue;
 @property (nonatomic, readonly) NSArray *attacks;
 @property (nonatomic, readonly) NSArray *attributes;
+
+@property (nonatomic, readonly) BOOL hasSignalAttacks;
+@property (nonatomic, readonly) UIImage *image;
 
 @end

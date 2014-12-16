@@ -116,6 +116,8 @@
 		F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413081A40CBCF00287EFA /* LCKMonster.m */; };
 		F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */; };
 		F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */; };
+		F26413121A40D1A400287EFA /* LCKMonsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413111A40D1A400287EFA /* LCKMonsterViewController.m */; };
+		F26413151A40DA7800287EFA /* LCKMonsterAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413141A40DA7800287EFA /* LCKMonsterAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +266,10 @@
 		F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterAttack.m; sourceTree = "<group>"; };
 		F264130D1A40CEBA00287EFA /* LCKMonsterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterProvider.h; sourceTree = "<group>"; };
 		F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterProvider.m; sourceTree = "<group>"; };
+		F26413101A40D1A400287EFA /* LCKMonsterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterViewController.h; sourceTree = "<group>"; };
+		F26413111A40D1A400287EFA /* LCKMonsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterViewController.m; sourceTree = "<group>"; };
+		F26413131A40DA7800287EFA /* LCKMonsterAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterAttribute.h; sourceTree = "<group>"; };
+		F26413141A40DA7800287EFA /* LCKMonsterAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterAttribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,10 +575,14 @@
 				F26413041A40C8B700287EFA /* Monsters.plist */,
 				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
 				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
+				F26413101A40D1A400287EFA /* LCKMonsterViewController.h */,
+				F26413111A40D1A400287EFA /* LCKMonsterViewController.m */,
 				F26413071A40CBCF00287EFA /* LCKMonster.h */,
 				F26413081A40CBCF00287EFA /* LCKMonster.m */,
 				F264130A1A40CC5500287EFA /* LCKMonsterAttack.h */,
 				F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */,
+				F26413131A40DA7800287EFA /* LCKMonsterAttribute.h */,
+				F26413141A40DA7800287EFA /* LCKMonsterAttribute.m */,
 				F264130D1A40CEBA00287EFA /* LCKMonsterProvider.h */,
 				F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */,
 			);
@@ -815,6 +825,7 @@
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
 				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
+				F26413151A40DA7800287EFA /* LCKMonsterAttribute.m in Sources */,
 				F21F43531A301D1B00FEA417 /* LCKInventoryTableViewController.m in Sources */,
 				F21F43A31A3BB9A200FEA417 /* LCKInfoViewController.m in Sources */,
 				F2206B4C1A2D4290006E44B0 /* Sorcerer.m in Sources */,
@@ -832,6 +843,7 @@
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */,
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
+				F26413121A40D1A400287EFA /* LCKMonsterViewController.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
 				F21F434A1A301A2500FEA417 /* Character.m in Sources */,

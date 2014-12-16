@@ -9,6 +9,7 @@
 #import "LCKMonsterManualTableViewController.h"
 #import "LCKMonsterProvider.h"
 #import "LCKMonster.h"
+#import "LCKMonsterViewController.h"
 
 #import "LCKBaseCell.h"
 #import "UIColor+ColorStyle.h"
@@ -30,7 +31,7 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [LCKMonsterProvider allMonsters].count;
@@ -46,5 +47,14 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LCKMonster *monster = [[LCKMonsterProvider allMonsters] safeObjectAtIndex:indexPath.row];
+
+    LCKMonsterViewController *monsterViewController = [[LCKMonsterViewController alloc] initWithMonster:monster];
+    
+    [self.navigationController pushViewController:monsterViewController animated:YES];
+}
 
 @end

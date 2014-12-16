@@ -9,16 +9,19 @@
 #import "LCKMonsterAttack.h"
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
+NSString * const LCKMonsterAttackName = @"name";
+NSString * const LCKMonsterAttackDescription = @"description";
+NSString * const LCKMonsterAttackDiceRoll = @"diceRoll";
+
 @implementation LCKMonsterAttack
 
-- (instancetype)initWithAttackString:(NSString *)attackString {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     
     if (self) {
-        NSArray *attackComponents = [attackString componentsSeparatedByString:@" "];
-        _diceRoll = [attackComponents firstObject];
-        _attackName = [attackComponents safeObjectAtIndex:1];
-        _attackDescription = [attackComponents safeObjectAtIndex:2];
+        _diceRoll = [dictionary objectForKey:LCKMonsterAttackDiceRoll];
+        _attackName = [dictionary objectForKey:LCKMonsterAttackName];
+        _attackDescription = [dictionary objectForKey:LCKMonsterAttackDescription];
     }
     
     return self;
