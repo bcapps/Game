@@ -137,7 +137,7 @@
 - (NSAttributedString *)monsterAttacksAttributedString {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    NSString *attacksDice = @"1-20";
+    NSString *attacksDice = @"";
     if (self.monster.hasSignalAttacks) {
         attacksDice = @"1-10";
     }
