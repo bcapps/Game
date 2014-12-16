@@ -118,6 +118,9 @@
 		F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */; };
 		F26413121A40D1A400287EFA /* LCKMonsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413111A40D1A400287EFA /* LCKMonsterViewController.m */; };
 		F26413151A40DA7800287EFA /* LCKMonsterAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413141A40DA7800287EFA /* LCKMonsterAttribute.m */; };
+		F26413181A40DD1100287EFA /* Asylum Demon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413171A40DD1100287EFA /* Asylum Demon@2x.png */; };
+		F264131C1A40DDB400287EFA /* Hollow Soldier@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F264131B1A40DDB400287EFA /* Hollow Soldier@2x.png */; };
+		F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F264131D1A40DF7D00287EFA /* Hollow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +273,9 @@
 		F26413111A40D1A400287EFA /* LCKMonsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterViewController.m; sourceTree = "<group>"; };
 		F26413131A40DA7800287EFA /* LCKMonsterAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterAttribute.h; sourceTree = "<group>"; };
 		F26413141A40DA7800287EFA /* LCKMonsterAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterAttribute.m; sourceTree = "<group>"; };
+		F26413171A40DD1100287EFA /* Asylum Demon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asylum Demon@2x.png"; sourceTree = "<group>"; };
+		F264131B1A40DDB400287EFA /* Hollow Soldier@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hollow Soldier@2x.png"; sourceTree = "<group>"; };
+		F264131D1A40DF7D00287EFA /* Hollow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hollow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,6 +578,7 @@
 		F26413061A40CBBA00287EFA /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				F26413161A40DD0500287EFA /* Monster Art */,
 				F26413041A40C8B700287EFA /* Monsters.plist */,
 				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
 				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
@@ -587,6 +594,16 @@
 				F264130E1A40CEBA00287EFA /* LCKMonsterProvider.m */,
 			);
 			name = Monsters;
+			sourceTree = "<group>";
+		};
+		F26413161A40DD0500287EFA /* Monster Art */ = {
+			isa = PBXGroup;
+			children = (
+				F26413171A40DD1100287EFA /* Asylum Demon@2x.png */,
+				F264131B1A40DDB400287EFA /* Hollow Soldier@2x.png */,
+				F264131D1A40DF7D00287EFA /* Hollow@2x.png */,
+			);
+			name = "Monster Art";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,6 +697,7 @@
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
 				F2206B6A1A2D43FE006E44B0 /* KnightIcon@2x.png in Resources */,
+				F264131C1A40DDB400287EFA /* Hollow Soldier@2x.png in Resources */,
 				F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */,
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
@@ -714,6 +732,7 @@
 				F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
+				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
 				F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
 				F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */,
@@ -722,6 +741,7 @@
 				F21F43841A3A549600FEA417 /* longsword@2x.png in Resources */,
 				F21F43901A3A560000FEA417 /* sorcerercatalyst@2x.png in Resources */,
 				F2206B021A2D2C0D006E44B0 /* Images.xcassets in Resources */,
+				F26413181A40DD1100287EFA /* Asylum Demon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

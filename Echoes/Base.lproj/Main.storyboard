@@ -576,27 +576,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monster Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5j-Wu-2dh" userLabel="Monster Name Label">
-                                <rect key="frame" x="243" y="25" width="113.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TW-HS-H0g" userLabel="Name Separator Line">
-                                <rect key="frame" x="0.0" y="50" width="600" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="BkN-rg-aL8"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ax-LY-pdQ" userLabel="Monster Image">
-                                <rect key="frame" x="0.0" y="61" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="30" width="600" height="175"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="f3C-Is-hJ3"/>
+                                    <constraint firstAttribute="height" constant="175" id="f3C-Is-hJ3"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-Mt-SCF" userLabel="Monster Description Text View">
-                                <rect key="frame" x="0.0" y="161" width="600" height="439"/>
+                                <rect key="frame" x="0.0" y="205" width="600" height="395"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -605,33 +592,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="0TW-HS-H0g" secondAttribute="centerX" id="A71-Pb-5U1"/>
+                            <constraint firstItem="mQD-Mt-SCF" firstAttribute="top" secondItem="8ax-LY-pdQ" secondAttribute="bottom" id="9Vx-gQ-4Kx"/>
                             <constraint firstItem="gRM-2m-a4I" firstAttribute="top" secondItem="mQD-Mt-SCF" secondAttribute="bottom" id="CIn-eQ-TvO"/>
-                            <constraint firstItem="0TW-HS-H0g" firstAttribute="top" secondItem="L5j-Wu-2dh" secondAttribute="bottom" constant="5" id="IAp-bW-t2p"/>
-                            <constraint firstItem="0TW-HS-H0g" firstAttribute="width" secondItem="KFA-zQ-BOr" secondAttribute="width" id="OlD-nZ-wgR"/>
+                            <constraint firstItem="8ax-LY-pdQ" firstAttribute="top" secondItem="Ycm-cs-YVQ" secondAttribute="bottom" constant="10" id="EKn-Nl-Zrs"/>
                             <constraint firstAttribute="width" secondItem="8ax-LY-pdQ" secondAttribute="width" id="cAa-QL-mAK"/>
-                            <constraint firstAttribute="centerX" secondItem="L5j-Wu-2dh" secondAttribute="centerX" id="cKL-zR-JCi"/>
                             <constraint firstAttribute="centerX" secondItem="mQD-Mt-SCF" secondAttribute="centerX" id="eAa-fR-AJ1"/>
                             <constraint firstAttribute="centerX" secondItem="8ax-LY-pdQ" secondAttribute="centerX" id="eBw-7i-AjU"/>
                             <constraint firstItem="mQD-Mt-SCF" firstAttribute="top" secondItem="8ax-LY-pdQ" secondAttribute="bottom" id="hv0-ax-wGb"/>
-                            <constraint firstItem="L5j-Wu-2dh" firstAttribute="top" secondItem="Ycm-cs-YVQ" secondAttribute="bottom" constant="5" id="k7q-U6-Ayl"/>
-                            <constraint firstItem="8ax-LY-pdQ" firstAttribute="top" secondItem="0TW-HS-H0g" secondAttribute="bottom" constant="10" id="nj1-7h-3Sg"/>
                             <constraint firstAttribute="width" secondItem="mQD-Mt-SCF" secondAttribute="width" id="qlo-Nl-iPu"/>
-                            <constraint firstItem="L5j-Wu-2dh" firstAttribute="width" secondItem="KFA-zQ-BOr" secondAttribute="width" id="tGM-3w-836"/>
-                            <constraint firstItem="0TW-HS-H0g" firstAttribute="width" secondItem="L5j-Wu-2dh" secondAttribute="width" id="vEo-UL-fPV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="vEo-UL-fPV"/>
-                                <exclude reference="tGM-3w-836"/>
+                                <exclude reference="hv0-ax-wGb"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="monsterImageView" destination="8ax-LY-pdQ" id="F0b-Fi-1Xb"/>
-                        <outlet property="monsterNameLabel" destination="L5j-Wu-2dh" id="TLC-gV-TR3"/>
                         <outlet property="monsterTextView" destination="mQD-Mt-SCF" id="l8d-OY-d9l"/>
-                        <outlet property="nameSeparatorLine" destination="0TW-HS-H0g" id="b0H-RQ-1oJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCh-jG-ZCH" userLabel="First Responder" sceneMemberID="firstResponder"/>

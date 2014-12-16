@@ -34,14 +34,14 @@
     
     self.view.backgroundColor = [UIColor backgroundColor];
     
-    self.monsterNameLabel.text = self.monster.name;
-    self.monsterNameLabel.textColor = [UIColor titleTextColor];
-    self.monsterNameLabel.font = [UIFont titleTextFontOfSize:15.0];
     self.monsterImageView.image = self.monster.image;
     
     self.monsterTextView.backgroundColor = [UIColor backgroundColor];
     self.monsterTextView.attributedText = [self monsterText];
     self.monsterTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    [self.monsterTextView scrollRangeToVisible:NSMakeRange(0, 0)];
+    
+    self.title = self.monster.name;
 }
 
 #pragma mark - LCKMonsterViewController
