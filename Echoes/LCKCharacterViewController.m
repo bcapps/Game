@@ -300,6 +300,10 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (void)presentViewController:(UIViewController *)viewController withFrame:(CGRect)frame fromView:(UIView *)button {
+    if (!viewController) {
+        return;
+    }
+    
     [self dismissCurrentlyPresentedViewController:^{
         viewController.view.frame = frame;
         viewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
@@ -328,21 +332,24 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
 
     if (!self.currentlyPresentedItemViewController) {
+        self.overlayView.alpha = 0.0;
+        
         if (completion) {
             completion();
         }
     }
     else {
+        UIViewController *presentedViewController = self.currentlyPresentedItemViewController;
+        self.currentlyPresentedItemViewController = nil;
+        
         [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.overlayView.alpha = 0.0;
-            self.currentlyPresentedItemViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
+            presentedViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         } completion:^(BOOL finished) {
-            [self.currentlyPresentedItemViewController willMoveToParentViewController:nil];
-            [self.currentlyPresentedItemViewController.view removeFromSuperview];
-            [self.currentlyPresentedItemViewController removeFromParentViewController];
-            
-            self.currentlyPresentedItemViewController = nil;
-            
+            [presentedViewController willMoveToParentViewController:nil];
+            [presentedViewController.view removeFromSuperview];
+            [presentedViewController removeFromParentViewController];
+                        
             if (completion) {
                 completion();
             }
