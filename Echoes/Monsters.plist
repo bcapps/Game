@@ -17,7 +17,7 @@
 		</array>
 		<key>Signaled Attacks</key>
 		<array/>
-		<key>Defenses</key>
+		<key>Attributes</key>
 		<array/>
 	</dict>
 	<key>Hollow Soldier</key>
@@ -35,7 +35,7 @@
 		</array>
 		<key>Signaled Attacks</key>
 		<array/>
-		<key>Defenses</key>
+		<key>Attributes</key>
 		<array>
 			<string>Shield: Reduces physical damage taken by 1.</string>
 		</array>
@@ -60,7 +60,7 @@
 			<string>7-14 Leaping Hammer Smash: Flutters his wings. Leaps at the furthest enemy from him for 2d4 damage.</string>
 			<string>15-20 Double Hammer Swing: Cocks hammer back to his side. Swings twice at enemies in front of him for 2d6 damage.</string>
 		</array>
-		<key>Defenses</key>
+		<key>Attributes</key>
 		<array>
 			<string>Soft Under Belly: Takes 1 additional physical damage from frontal attacks.</string>
 		</array>

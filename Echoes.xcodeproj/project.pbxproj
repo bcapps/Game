@@ -113,6 +113,8 @@
 		F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */; };
 		F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */; };
 		F26413051A40C8B700287EFA /* Monsters.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26413041A40C8B700287EFA /* Monsters.plist */; };
+		F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413081A40CBCF00287EFA /* LCKMonster.m */; };
+		F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +257,10 @@
 		F26413001A3F898700287EFA /* WarriorIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WarriorIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26413021A3F89EB00287EFA /* KnightIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KnightIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26413041A40C8B700287EFA /* Monsters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monsters.plist; sourceTree = "<group>"; };
+		F26413071A40CBCF00287EFA /* LCKMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonster.h; sourceTree = "<group>"; };
+		F26413081A40CBCF00287EFA /* LCKMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonster.m; sourceTree = "<group>"; };
+		F264130A1A40CC5500287EFA /* LCKMonsterAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMonsterAttack.h; sourceTree = "<group>"; };
+		F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMonsterAttack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,17 +342,15 @@
 		F21F43631A32D75B00FEA417 /* DM Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F26413061A40CBBA00287EFA /* Monsters */,
 				F21F43AD1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.h */,
 				F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */,
 				F21F43571A3020FA00FEA417 /* LCKAllItemsTableViewController.h */,
 				F21F43581A3020FA00FEA417 /* LCKAllItemsTableViewController.m */,
 				F21F43AA1A3C0B6800FEA417 /* LCKSoulGiftingViewController.h */,
 				F21F43AB1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m */,
-				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
-				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
 				F21F43B01A3C126D00FEA417 /* LCKDMManager.h */,
 				F21F43B11A3C126D00FEA417 /* LCKDMManager.m */,
-				F26413041A40C8B700287EFA /* Monsters.plist */,
 			);
 			name = "DM Tools";
 			sourceTree = "<group>";
@@ -554,6 +558,20 @@
 				F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */,
 			);
 			name = Style;
+			sourceTree = "<group>";
+		};
+		F26413061A40CBBA00287EFA /* Monsters */ = {
+			isa = PBXGroup;
+			children = (
+				F21F43B31A3C1C7100FEA417 /* LCKMonsterManualTableViewController.h */,
+				F21F43B41A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m */,
+				F26413041A40C8B700287EFA /* Monsters.plist */,
+				F26413071A40CBCF00287EFA /* LCKMonster.h */,
+				F26413081A40CBCF00287EFA /* LCKMonster.m */,
+				F264130A1A40CC5500287EFA /* LCKMonsterAttack.h */,
+				F264130B1A40CC5500287EFA /* LCKMonsterAttack.m */,
+			);
+			name = Monsters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,6 +799,7 @@
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
 				F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */,
 				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
+				F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
@@ -805,6 +824,7 @@
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
+				F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */,
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
