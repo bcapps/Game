@@ -176,14 +176,9 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
             }
         }
         else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
-            NSString *entryTitle = [dictionary objectForKey:@"entryTitle"];
-            NSString *entryDescription = [dictionary objectForKey:@"entryDescription"];
-            
-            if (entryTitle && entryDescription) {
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerJournalEntryReceivedNotification object:nil userInfo:@{LCKMultipeerJournalEntryTitle: entryTitle, LCKMultipeerJournalEntryDescription: entryDescription}];
-                }];
-            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerJournalEntryReceivedNotification object:nil userInfo:dictionary];
+            }];
         }
     }
 }
