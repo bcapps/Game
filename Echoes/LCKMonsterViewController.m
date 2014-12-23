@@ -38,7 +38,7 @@
     
     self.monsterTextView.backgroundColor = [UIColor backgroundColor];
     self.monsterTextView.attributedText = [self monsterText];
-    self.monsterTextView.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    self.monsterTextView.textContainerInset = UIEdgeInsetsMake(5, 10, 5, 10);
     [self.monsterTextView scrollRangeToVisible:NSMakeRange(0, 0)];
     
     self.title = self.monster.name;
@@ -94,7 +94,7 @@
 - (NSAttributedString *)monsterACAttributedString {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"AC: "]];
+    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"TN To Defend: "]];
     [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:self.monster.AC.stringValue]];
     
     return attributedString;
@@ -103,7 +103,7 @@
 - (NSAttributedString *)monsterToHitNumberAttributedString {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"Hit Number: "]];
+    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"TN To Hit: "]];
     [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:self.monster.hitNumber.stringValue]];
     
     return attributedString;

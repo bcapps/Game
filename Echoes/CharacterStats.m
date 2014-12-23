@@ -66,15 +66,15 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
 + (NSString *)statDescriptionForStatType:(LCKStatType)statType {
     switch (statType) {
         case LCKStatTypeVitality:
-            return @"· Increases health by 3 per point.\n· Add to any resistance checks made against poison.\n· Add to any resistance checks made against staggering.";
+            return @"· Increases health by 3 per point.\n· Increases resistance to poison.\n· Reduces your chance to be staggered when hit.";
         case LCKStatTypeStrength:
-            return @"· Add to damage and attack rolls made when using strength weapons.\n· Add to any resistance checks made against toxic.";
+            return @"· Increases damage done by most strength based weapons.\n· Increases resistance to toxic effects.";
         case LCKStatTypeDexterity:
-            return @"· Add to damage and attack rolls made when using dexterity weapons.\n· Add to any dodge checks made.";
+            return @"· Increased damage done by most dexterity based weapons.\n· Increases chance to hit enemies.\n· Lowers your chance of being hit.";
         case LCKStatTypeIntelligence:
-            return @"· Add to damage and attack rolls made when using intelligence weapons.\n· Add to any resistance checks made against bleeding.";
+            return @"· Increased damage done by spells.\n· Increases resistance to bleeding effects.";
         case LCKStatTypeFaith:
-            return @"· Add to damage and attack rolls made when using faith weapons.\n· Add to any resistance checks made against curses.";
+            return @"· Increases damage done by miracles.\n· Increases resistance to curses.";
     }
 }
 
