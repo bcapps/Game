@@ -9,6 +9,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="souls" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="characterStats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterStats" inverseName="character" inverseEntity="CharacterStats" syncable="YES"/>
+        <relationship name="journal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journal" inverseName="character" inverseEntity="Journal" syncable="YES"/>
     </entity>
     <entity name="CharacterStats" representedClassName="CharacterStats" syncable="YES">
         <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -20,13 +21,22 @@
     </entity>
     <entity name="Cleric" representedClassName="Cleric" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Hunter" representedClassName="Hunter" parentEntity="CharacterStats" syncable="YES"/>
+    <entity name="Journal" representedClassName="Journal" syncable="YES">
+        <relationship name="character" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="journal" inverseEntity="Character" syncable="YES"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JournalEntry" inverseName="journal" inverseEntity="JournalEntry" syncable="YES"/>
+    </entity>
+    <entity name="JournalEntry" representedClassName="JournalEntry" syncable="YES">
+        <attribute name="entryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="journal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journal" inverseName="entries" inverseEntity="Journal" syncable="YES"/>
+    </entity>
     <entity name="Knight" representedClassName="Knight" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Sorcerer" representedClassName="Sorcerer" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Thief" representedClassName="Thief" parentEntity="CharacterStats" syncable="YES"/>
     <entity name="Warrior" representedClassName="Warrior" parentEntity="CharacterStats" syncable="YES"/>
     <elements>
         <element name="Bandit" positionX="0" positionY="0" width="128" height="45"/>
-        <element name="Character" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Character" positionX="0" positionY="0" width="128" height="163"/>
         <element name="CharacterStats" positionX="0" positionY="0" width="128" height="133"/>
         <element name="Cleric" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Hunter" positionX="0" positionY="0" width="128" height="45"/>
@@ -34,5 +44,7 @@
         <element name="Sorcerer" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Thief" positionX="0" positionY="0" width="128" height="45"/>
         <element name="Warrior" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="Journal" positionX="9" positionY="63" width="128" height="73"/>
+        <element name="JournalEntry" positionX="18" positionY="72" width="128" height="88"/>
     </elements>
 </model>

@@ -126,6 +126,8 @@
 		F26413291A48FED100287EFA /* LCKLoreProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413281A48FED100287EFA /* LCKLoreProvider.m */; };
 		F264132C1A48FEFD00287EFA /* LCKLore.m in Sources */ = {isa = PBXBuildFile; fileRef = F264132B1A48FEFD00287EFA /* LCKLore.m */; };
 		F264132F1A49002000287EFA /* LCKLoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F264132E1A49002000287EFA /* LCKLoreViewController.m */; };
+		F26413351A49064B00287EFA /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413341A49064B00287EFA /* Journal.m */; };
+		F264133B1A4906D600287EFA /* JournalEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F264133A1A4906D600287EFA /* JournalEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +292,10 @@
 		F264132B1A48FEFD00287EFA /* LCKLore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLore.m; sourceTree = "<group>"; };
 		F264132D1A49002000287EFA /* LCKLoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoreViewController.h; sourceTree = "<group>"; };
 		F264132E1A49002000287EFA /* LCKLoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoreViewController.m; sourceTree = "<group>"; };
+		F26413331A49064B00287EFA /* Journal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Journal.h; sourceTree = "<group>"; };
+		F26413341A49064B00287EFA /* Journal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journal.m; sourceTree = "<group>"; };
+		F26413391A4906D600287EFA /* JournalEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalEntry.h; sourceTree = "<group>"; };
+		F264133A1A4906D600287EFA /* JournalEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +546,10 @@
 				F2206B3B1A2D428F006E44B0 /* CharacterStats.m */,
 				F2206B361A2D428F006E44B0 /* Warrior.h */,
 				F2206B371A2D428F006E44B0 /* Warrior.m */,
+				F26413331A49064B00287EFA /* Journal.h */,
+				F26413341A49064B00287EFA /* Journal.m */,
+				F26413391A4906D600287EFA /* JournalEntry.h */,
+				F264133A1A4906D600287EFA /* JournalEntry.m */,
 				F2206B721A2D445A006E44B0 /* CharacterClasses.h */,
 			);
 			name = Model;
@@ -907,6 +917,7 @@
 				F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */,
 				F26413291A48FED100287EFA /* LCKLoreProvider.m in Sources */,
 				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
+				F26413351A49064B00287EFA /* Journal.m in Sources */,
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
@@ -914,6 +925,7 @@
 				F26413211A48FCF900287EFA /* LCKLoreTableViewController.m in Sources */,
 				F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */,
 				F2206B401A2D428F006E44B0 /* Knight.m in Sources */,
+				F264133B1A4906D600287EFA /* JournalEntry.m in Sources */,
 				F26413121A40D1A400287EFA /* LCKMonsterViewController.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F264132F1A49002000287EFA /* LCKLoreViewController.m in Sources */,
