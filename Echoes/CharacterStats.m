@@ -70,7 +70,7 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeStrength:
             return @"· Increases damage done by most strength based weapons.\n· Increases resistance to toxic effects.";
         case LCKStatTypeDexterity:
-            return @"· Increased damage done by most dexterity based weapons.\n· Increases chance to hit enemies.\n· Lowers your chance of being hit.";
+            return @"· Increased damage done by most dexterity based weapons.\n· Increases chance to hit enemies with weapons.\n· Lowers your chance of being hit.";
         case LCKStatTypeIntelligence:
             return @"· Increased damage done by spells.\n· Increases resistance to bleeding effects.";
         case LCKStatTypeFaith:
