@@ -15,7 +15,7 @@
 }
 
 - (NSString *)classDescription {
-    return @"Uses magic as his primary offensive tool. Limited to small weapons due to low starting strength.";
+    return @"Uses magic as their primary offensive tool. Limited to small weapons due to low starting strength.";
 }
 
 - (NSUInteger)startingHealthModification {
