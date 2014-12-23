@@ -15,6 +15,12 @@
 #import "UIColor+ColorStyle.h"
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
+typedef NS_ENUM(NSUInteger, LCKLoreSection) {
+    LCKLoreSectionWorld,
+    LCKLoreSectionClasses,
+    LCKLoreSectionCount
+};
+
 @implementation LCKLoreTableViewController
 
 #pragma mark - UIViewController
@@ -28,26 +34,63 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
+#pragma mark - LCKLoreTableViewController
+
+- (LCKLore *)loreForIndexPath:(NSIndexPath *)indexPath {
+    LCKLore *lore;
+    
+    if (indexPath.section == LCKLoreSectionWorld) {
+        lore = [[LCKLoreProvider worldLore] safeObjectAtIndex:indexPath.row];
+    }
+    else if (indexPath.section == LCKLoreSectionClasses) {
+        lore = [[LCKLoreProvider classLore] safeObjectAtIndex:indexPath.row];
+    }
+    
+    return lore;
+}
+
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return LCKLoreSectionCount;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [LCKLoreProvider allLore].count;
+    if (section == LCKLoreSectionWorld) {
+        return [LCKLoreProvider worldLore].count;
+    }
+    else if (section == LCKLoreSectionClasses) {
+        return [LCKLoreProvider classLore].count;
+    }
+    
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCKBaseCell class]) forIndexPath:indexPath];
     
-    LCKLore *lore = [[LCKLoreProvider allLore] safeObjectAtIndex:indexPath.row];
+    LCKLore *lore = [self loreForIndexPath:indexPath];
     
     cell.textLabel.text = lore.title;
     
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == LCKLoreSectionWorld) {
+        return @"World Lore";
+    }
+    else if (section == LCKLoreSectionClasses) {
+        return @"Class Lore";
+    }
+    
+    return @"";
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKLore *lore = [[LCKLoreProvider allLore] safeObjectAtIndex:indexPath.row];
+    LCKLore *lore = [self loreForIndexPath:indexPath];
     
     LCKLoreViewController *loreViewController = [[LCKLoreViewController alloc] initWithLore:lore];
     
