@@ -17,6 +17,8 @@
 
 @implementation LCKLoreTableViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
