@@ -11,11 +11,14 @@
 
 extern NSString * const LCKMultipeerItemReceivedNotification;
 extern NSString * const LCKMultipeerSoulsReceivedNotification;
+extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
 
 extern NSString * const LCKMultipeerPeerStateChangedNotification;
 
 extern NSString * const LCKMultipeerSoulsKey;
 extern NSString * const LCKMultipeerItemKey;
+extern NSString * const LCKMultipeerJournalEntryTitle;
+extern NSString * const LCKMultipeerJournalEntryDescription;
 
 @interface LCKMultipeerManager : NSObject
 
@@ -26,5 +29,5 @@ extern NSString * const LCKMultipeerItemKey;
 - (void)startMonitoring;
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
-
+- (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID;
 @end

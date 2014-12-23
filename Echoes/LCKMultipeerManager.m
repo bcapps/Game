@@ -10,15 +10,20 @@
 
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
 NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsReceivedNotification";
+NSString * const LCKMultipeerJournalEntryReceivedNotification = @"LCKMultipeerJournalEntryReceivedNotification";
 
 NSString * const LCKMultipeerPeerStateChangedNotification = @"LCKMultipeerPeerStateChangedNotification";
 
 NSString * const LCKMultipeerSoulsKey = @"soulAmount";
 NSString * const LCKMultipeerItemKey = @"itemName";
 
+NSString * const LCKMultipeerJournalEntryTitle = @"entryTitle";
+NSString * const LCKMultipeerJournalEntryDescription = @"entryDescription";
+
 typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     LCKMultipeerManagerSendTypeItem,
-    LCKMultipeerManagerSendTypeSouls
+    LCKMultipeerManagerSendTypeSouls,
+    LCKMultipeerManagerSendTypeJournalEntry
 };
 
 @interface LCKMultipeerManager () <MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate>
@@ -81,6 +86,17 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID {
     if (peerID && souls) {
         NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeSouls), @"value": souls};
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
+
+        return [self.session sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+    }
+    
+    return NO;
+}
+
+- (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID {
+    if (peerID && entryTitle && entryDescription) {
+        NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeJournalEntry), @"entryTitle": entryTitle, @"entryDescription": entryDescription};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
 
         return [self.session sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
@@ -156,6 +172,16 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
             if (souls) {
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerSoulsReceivedNotification object:nil userInfo:@{LCKMultipeerSoulsKey: souls}];
+                }];
+            }
+        }
+        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
+            NSString *entryTitle = [dictionary objectForKey:@"entryTitle"];
+            NSString *entryDescription = [dictionary objectForKey:@"entryDescription"];
+            
+            if (entryTitle && entryDescription) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerJournalEntryReceivedNotification object:nil userInfo:@{LCKMultipeerJournalEntryTitle: entryTitle, LCKMultipeerJournalEntryDescription: entryDescription}];
                 }];
             }
         }
