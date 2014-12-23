@@ -46,7 +46,6 @@
 		F21F43901A3A560000FEA417 /* sorcerercatalyst@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */; };
 		F21F43921A3A567900FEA417 /* mace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43911A3A567900FEA417 /* mace@2x.png */; };
 		F21F43961A3A576300FEA417 /* heatershield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43951A3A576300FEA417 /* heatershield@2x.png */; };
-		F21F43981A3A57AC00FEA417 /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43971A3A57AC00FEA417 /* thiefmask@2x.png */; };
 		F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43991A3A57DF00FEA417 /* soularrow@2x.png */; };
 		F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */; };
 		F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */; };
@@ -128,6 +127,7 @@
 		F264132F1A49002000287EFA /* LCKLoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F264132E1A49002000287EFA /* LCKLoreViewController.m */; };
 		F26413351A49064B00287EFA /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413341A49064B00287EFA /* Journal.m */; };
 		F264133B1A4906D600287EFA /* JournalEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F264133A1A4906D600287EFA /* JournalEntry.m */; };
+		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +194,6 @@
 		F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorcerercatalyst@2x.png"; sourceTree = "<group>"; };
 		F21F43911A3A567900FEA417 /* mace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mace@2x.png"; sourceTree = "<group>"; };
 		F21F43951A3A576300FEA417 /* heatershield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heatershield@2x.png"; sourceTree = "<group>"; };
-		F21F43971A3A57AC00FEA417 /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F21F43991A3A57DF00FEA417 /* soularrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soularrow@2x.png"; sourceTree = "<group>"; };
 		F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soulsIcon@2x.png"; sourceTree = "<group>"; };
 		F21F439E1A3BB39400FEA417 /* LCKStatusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatusButton.h; sourceTree = "<group>"; };
@@ -296,6 +295,7 @@
 		F26413341A49064B00287EFA /* Journal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journal.m; sourceTree = "<group>"; };
 		F26413391A4906D600287EFA /* JournalEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalEntry.h; sourceTree = "<group>"; };
 		F264133A1A4906D600287EFA /* JournalEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalEntry.m; sourceTree = "<group>"; };
+		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,7 +359,7 @@
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
 				F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */,
-				F21F43971A3A57AC00FEA417 /* thiefmask@2x.png */,
+				F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */,
 				F21F43891A3A553000FEA417 /* kiteshield@2x.png */,
 				F21F43831A3A549600FEA417 /* longsword@2x.png */,
 				F21F438B1A3A557100FEA417 /* banditknife@2x.png */,
@@ -769,6 +769,7 @@
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
 				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
 				F26413051A40C8B700287EFA /* Monsters.plist in Resources */,
+				F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */,
 				F21F438C1A3A557100FEA417 /* banditknife@2x.png in Resources */,
 				F21F43961A3A576300FEA417 /* heatershield@2x.png in Resources */,
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
@@ -783,7 +784,6 @@
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
-				F21F43981A3A57AC00FEA417 /* thiefmask@2x.png in Resources */,
 				F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
 				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
