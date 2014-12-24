@@ -6,7 +6,7 @@
 		<key>name</key>
 		<string>Broadsword</string>
 		<key>actionText</key>
-		<string>Slash: Swing your sword in an arc dealing 1d6 damage to enemies in front of you.</string>
+		<string>Slash: Swing your sword in an arc dealing 1d6 + [STR] damage to enemies in front of you.</string>
 		<key>descriptiveText</key>
 		<string>The horizontal sweeping motion makes this sword effective against multiple enemies.</string>
 		<key>flavorText</key>
@@ -42,7 +42,7 @@
 		<key>name</key>
 		<string>Bandit&apos;s Knife</string>
 		<key>actionText</key>
-		<string>Stab: Thrust at your opponent dealing 1d6 damage to an enemy.</string>
+		<string>Stab: Thrust at your opponent dealing 1d6 + [DEX] damage to an enemy.</string>
 		<key>descriptiveText</key>
 		<string>Highly effective when attacking from behind. Roll an extra 1d4 if attacking from behind.</string>
 		<key>flavorText</key>
@@ -60,7 +60,7 @@
 		<key>name</key>
 		<string>Battle Axe</string>
 		<key>actionText</key>
-		<string>Cleave: Cleave an opponent dealing 1d10 damage to an enemy.</string>
+		<string>Cleave: Cleave an opponent dealing 1d10 + [STR] damage to an enemy.</string>
 		<key>descriptiveText</key>
 		<string>Powerful attack due to its weight, but one wrong swing leaves the wielder wide open.</string>
 		<key>flavorText</key>
@@ -78,7 +78,7 @@
 		<key>name</key>
 		<string>Short Bow</string>
 		<key>actionText</key>
-		<string>Shoot: Fire an arrow at your opponent dealing 1d4 to an enemy.</string>
+		<string>Shoot: Fire an arrow at your opponent dealing 1d6 + [DEX] to an enemy.</string>
 		<key>descriptiveText</key>
 		<string>Aiming is key.</string>
 		<key>flavorText</key>
@@ -99,7 +99,7 @@
 		<key>actionText</key>
 		<string>Smack: Hit one enemy for 1d4 damage.</string>
 		<key>descriptiveText</key>
-		<string>Improves spell damage. Roll an additional 1d4 when casting a spell.</string>
+		<string>Enhances the power of your spells. Roll an additional 1d4 damage when casting a spell.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
@@ -149,7 +149,7 @@
 		<key>name</key>
 		<string>Mace</string>
 		<key>actionText</key>
-		<string>Smash: Hit one target for 1d6 damage.</string>
+		<string>Smash: Hit one target for 1d6 + [STR] damage.</string>
 		<key>descriptiveText</key>
 		<string>Iron hammer with a protrusive pommel. Standard weapon for clerics.</string>
 		<key>flavorText</key>
@@ -167,7 +167,7 @@
 		<key>name</key>
 		<string>Longsword</string>
 		<key>actionText</key>
-		<string>Slice: Hit one target for 2d4 damage.</string>
+		<string>Slice: Hit one target for 2d4 + [STR] damage.</string>
 		<key>descriptiveText</key>
 		<string>An accessible sword which inflicts consistent damage</string>
 		<key>flavorText</key>
@@ -203,7 +203,7 @@
 		<key>name</key>
 		<string>Soul Arrow</string>
 		<key>actionText</key>
-		<string>Conjure: Fires an arrow shaped bolt of magic dealing 1d8 damage.</string>
+		<string>Conjure: Fires an arrow shaped bolt of magic dealing 1d4 + [INT] damage.</string>
 		<key>descriptiveText</key>
 		<string>Soul arrows inflict magic damage, making them effective against iron armor, tough scales, and other physically resilient materials.</string>
 		<key>flavorText</key>
@@ -239,7 +239,7 @@
 		<key>name</key>
 		<string>Shortsword</string>
 		<key>actionText</key>
-		<string>Slash: Swing your sword in an arc dealing 1d6 to up to two enemies in front of you.</string>
+		<string>Slash: Swing your sword in an arc dealing 1d6 + [STR] to up to two enemies in front of you.</string>
 		<key>descriptiveText</key>
 		<string>A quick and efficient sword useful for hit and run tactics.</string>
 		<key>flavorText</key>
