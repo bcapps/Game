@@ -29,7 +29,7 @@ CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 135.0;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
-@interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource>
+@interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet iCarousel *classPicker;
 
@@ -40,6 +40,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *statsCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *classPickerHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -50,6 +51,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 - (void)dealloc {
     self.statsCollectionView.delegate = nil;
     self.statsCollectionView.dataSource = nil;
+    
+    self.characterNameTextField.delegate = nil;
 }
 
 #pragma mark - UIViewController
@@ -82,9 +85,11 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     [self carouselCurrentItemIndexDidChange:self.classPicker];
     
-    self.classPicker.backgroundColor = [UIColor redColor];
     [self.statsCollectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     self.statsCollectionView.backgroundColor = [self.statsCollectionView.backgroundColor colorWithAlphaComponent:0.8];
+    
+    self.characterNameTextField.delegate = self;
+    self.doneButton.enabled = NO;
 }
 
 - (NSArray *)classes {
@@ -176,6 +181,21 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     cell.statValueLabel.text = [characterStats statAsStringForStatType:(LCKStatType)indexPath.row];
     
     return cell;
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSUInteger length = textField.text.length - range.length + string.length;
+   
+    if (length > 0) {
+        self.doneButton.enabled = YES;
+    }
+    else {
+        self.doneButton.enabled = NO;
+    }
+    
+    return YES;
 }
 
 @end

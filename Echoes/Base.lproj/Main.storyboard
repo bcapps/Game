@@ -750,6 +750,7 @@
                         <outlet property="classNameLabel" destination="g9g-5N-MCR" id="bAr-zF-ioi"/>
                         <outlet property="classPicker" destination="M9g-87-Wtv" id="DgF-VY-8VY"/>
                         <outlet property="classPickerHeightConstraint" destination="GHh-B7-jZe" id="3in-e3-Jqk"/>
+                        <outlet property="doneButton" destination="tcJ-Q4-Xki" id="bih-Cw-4aO"/>
                         <outlet property="genderSegmentedControl" destination="En8-ha-hzX" id="cqX-D8-1U7"/>
                         <outlet property="statsCollectionView" destination="KrK-tE-GzK" id="lv9-hd-Fll"/>
                     </connections>
