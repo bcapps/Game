@@ -15,12 +15,14 @@
 #import "LCKMonsterManualTableViewController.h"
 #import "LCKLoreTableViewController.h"
 #import "LCKMultipeerManager.h"
+#import "LCKMapsTableViewController.h"
 
 typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     LCKDMToolsRowAllItems,
     LCKDMToolsRowSoulGifting,
     LCKDMToolsRowMonsterManual,
     LCKDMToolsRowLore,
+    LCKDMToolsRowMaps,
     LCKDMToolsRowCount
 };
 
@@ -58,6 +60,8 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
             return @"Monster Manual";
         case LCKDMToolsRowLore:
             return @"Lore";
+        case LCKDMToolsRowMaps:
+            return @"Maps";
         case LCKDMToolsRowCount:
             return @"";
     }
@@ -107,6 +111,11 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     }
     else if (indexPath.row == LCKDMToolsRowLore) {
         LCKLoreTableViewController *viewController = [[LCKLoreTableViewController alloc] init];
+        
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else if (indexPath.row == LCKDMToolsRowMaps) {
+        LCKMapsTableViewController *viewController = [[LCKMapsTableViewController alloc] init];
         
         [self.navigationController pushViewController:viewController animated:YES];
     }

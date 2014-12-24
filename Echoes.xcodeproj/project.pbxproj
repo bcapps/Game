@@ -128,6 +128,10 @@
 		F26413351A49064B00287EFA /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413341A49064B00287EFA /* Journal.m */; };
 		F264133B1A4906D600287EFA /* JournalEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F264133A1A4906D600287EFA /* JournalEntry.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
+		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
+		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
+		F2FE1CD21A4A7CF400FA161C /* LCKZoomableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */; };
+		F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +300,13 @@
 		F26413391A4906D600287EFA /* JournalEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalEntry.h; sourceTree = "<group>"; };
 		F264133A1A4906D600287EFA /* JournalEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalEntry.m; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
+		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
+		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
+		F2FE1CCD1A4A7CC600FA161C /* LCKScalingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKScalingImageView.h; sourceTree = "<group>"; };
+		F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKScalingImageView.m; sourceTree = "<group>"; };
+		F2FE1CD01A4A7CF400FA161C /* LCKZoomableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKZoomableImageViewController.h; sourceTree = "<group>"; };
+		F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKZoomableImageViewController.m; sourceTree = "<group>"; };
+		F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Undead Asylum@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +388,7 @@
 		F21F43631A32D75B00FEA417 /* DM Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2FE1CC91A4A588F00FA161C /* Maps */,
 				F26413241A48FD0600287EFA /* Items */,
 				F26413231A48FD0200287EFA /* Souls */,
 				F26413061A40CBBA00287EFA /* Monsters */,
@@ -663,6 +675,28 @@
 			name = Items;
 			sourceTree = "<group>";
 		};
+		F2FE1CC91A4A588F00FA161C /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE1CD31A4A7E3F00FA161C /* Map Images */,
+				F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */,
+				F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */,
+				F2FE1CD01A4A7CF400FA161C /* LCKZoomableImageViewController.h */,
+				F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */,
+				F2FE1CCD1A4A7CC600FA161C /* LCKScalingImageView.h */,
+				F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		F2FE1CD31A4A7E3F00FA161C /* Map Images */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */,
+			);
+			name = "Map Images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -789,6 +823,7 @@
 				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
 				F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
+				F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
 				F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */,
@@ -894,11 +929,13 @@
 				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
 				F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
+				F2FE1CD21A4A7CF400FA161C /* LCKZoomableImageViewController.m in Sources */,
 				F264132C1A48FEFD00287EFA /* LCKLore.m in Sources */,
 				F2206B441A2D4290006E44B0 /* Hunter.m in Sources */,
 				F2206B541A2D4290006E44B0 /* Thief.m in Sources */,
 				F2206AF71A2D2C0D006E44B0 /* LCKEchoAppDelegate.m in Sources */,
 				F2206B761A2D7E7E006E44B0 /* UIFont+FontStyle.m in Sources */,
+				F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */,
 				F2206B821A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */,
 				F21F43B21A3C126D00FEA417 /* LCKDMManager.m in Sources */,
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
@@ -932,6 +969,7 @@
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
 				F21F434A1A301A2500FEA417 /* Character.m in Sources */,
 				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,
+				F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */,
 				F21F43621A32CE0500FEA417 /* LCKMultipeerManager.m in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterStats.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
