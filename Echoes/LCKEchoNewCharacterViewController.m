@@ -128,6 +128,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 - (void)genderSelected {
     [self.classPicker reloadData];
+    
+    [self.characterNameTextField resignFirstResponder];
 }
 
 #pragma mark - iCarouselDelegate
@@ -147,6 +149,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classDescriptionLabel.text = characterStats.classDescription;
     
     [self.statsCollectionView reloadData];
+    [self.characterNameTextField resignFirstResponder];
 }
 
 #pragma mark - iCarouselDataSource
