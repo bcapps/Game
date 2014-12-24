@@ -70,11 +70,11 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeStrength:
             return @"· Increases damage done by most strength based weapons.\n· Reduces your chance to be staggered when hit.\n· Increases resistance to toxic effects.";
         case LCKStatTypeDexterity:
-            return @"· Increases damage done by most dexterity based weapons.\n· Increases chance to hit enemies with weapons.\n· Lowers your chance of being hit.";
+            return @"· Increases damage done by most dexterity based weapons.\n· Increases chance to hit enemies with weapons.\n· Lowers your chance of being hit by physical attacks.";
         case LCKStatTypeIntelligence:
-            return @"· Increases damage done by spells.\n· Increases resistance to poison.";
+            return @"· Increases damage done by spells.\n· Improves your chance to find an enemies weakness.\n· Increases resistance to poison.";
         case LCKStatTypeFaith:
-            return @"· Increases damage and healing done by miracles.\n· Increases resistance to curses.";
+            return @"· Increases damage and healing done by miracles.\n· Lowers your chance of being hit by magical attacks.\n· Increases resistance to curses.";
     }
 }
 
