@@ -642,12 +642,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="122" width="600" height="270"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-5p-wh5" userLabel="Class Description Label">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="pns-PM-wSE"/>
                                         </constraints>
@@ -749,6 +749,7 @@
                         <outlet property="classDescriptionLabel" destination="bWO-5p-wh5" id="572-Dt-xXp"/>
                         <outlet property="classNameLabel" destination="g9g-5N-MCR" id="bAr-zF-ioi"/>
                         <outlet property="classPicker" destination="M9g-87-Wtv" id="DgF-VY-8VY"/>
+                        <outlet property="classPickerHeightConstraint" destination="GHh-B7-jZe" id="3in-e3-Jqk"/>
                         <outlet property="genderSegmentedControl" destination="En8-ha-hzX" id="cqX-D8-1U7"/>
                         <outlet property="statsCollectionView" destination="KrK-tE-GzK" id="lv9-hd-Fll"/>
                     </connections>

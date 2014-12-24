@@ -25,6 +25,7 @@
 const CGFloat LCKEchoNewCharacterViewControllerNumberOfStats = 5;
 
 CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
+
 CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 135.0;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
@@ -38,6 +39,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (weak, nonatomic) IBOutlet UITextField *characterNameTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *statsCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *classPickerHeightConstraint;
 
 @end
 
@@ -58,6 +60,11 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classPicker.type = iCarouselTypeWheel;
     self.classPicker.contentOffset = CGSizeMake(0, LCKEchoNewCharacterViewControllerClassPickerVerticalOffset);
     
+    if (CGRectGetHeight(self.view.bounds) > 480.0) {
+        self.classPickerHeightConstraint.constant = 350.0;
+        [self.classPicker setNeedsUpdateConstraints];
+    }
+    
     self.characterNameTextField.textColor = [UIColor titleTextColor];
     self.characterNameTextField.font = [UIFont titleTextFontOfSize:16.0];
     self.characterNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Character Name" attributes:@{NSForegroundColorAttributeName: [UIColor lightTextColor], NSFontAttributeName: self.characterNameTextField.font}];
@@ -75,6 +82,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     [self carouselCurrentItemIndexDidChange:self.classPicker];
     
+    self.classPicker.backgroundColor = [UIColor redColor];
     [self.statsCollectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     self.statsCollectionView.backgroundColor = [self.statsCollectionView.backgroundColor colorWithAlphaComponent:0.8];
 }
