@@ -321,6 +321,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
         
         self.currentlyPresentedItemViewController = viewController;
         self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+        self.navigationController.navigationBar.tintColor = [UIColor grayColor];
     }];
 }
 
@@ -330,6 +331,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 
 - (void)dismissCurrentlyPresentedViewController:(LCKItemViewControllerDismissCompletion)completion {
     self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
+    self.navigationController.navigationBar.tintColor = self.view.window.tintColor;
 
     if (!self.currentlyPresentedItemViewController) {
         self.overlayView.alpha = 0.0;
