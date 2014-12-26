@@ -10,17 +10,22 @@ PODS:
   - LCKCategories/Foundation (0.4)
   - LCKCategories/UIKit (0.4)
   - LCKCategories/Utility (0.4)
+  - LCKControls (1.1):
+    - LCKCategories (~> 0.0)
+    - SVProgressHUD (~> 1.0)
   - LCKCoreData (2.1):
     - LCKCoreData/Core (= 2.1)
     - LCKCoreData/UIKit (= 2.1)
   - LCKCoreData/Core (2.1)
   - LCKCoreData/UIKit (2.1)
+  - SVProgressHUD (1.1.2)
   - UICountingLabel (HEAD based on 1.2.0)
 
 DEPENDENCIES:
   - HockeySDK (~> 3.6)
   - iCarousel (HEAD)
   - LCKCategories (from `git@github.com:Lickability/LCKCategories.git`, commit `9b96d37e580c5ad16e51274c94cdd3d1d8765f13`)
+  - LCKControls (from `git@github.com:Lickability/LCKControls.git`, commit `281d390d2f9b5b1a563c9472177edaaf4f4813e6`)
   - LCKCoreData (from `git@github.com:Lickability/LCKCoreData.git`, commit `07d361d99602ecdeb94597d97de9c1cd4e6e17fe`)
   - UICountingLabel (HEAD)
 
@@ -28,6 +33,9 @@ EXTERNAL SOURCES:
   LCKCategories:
     :commit: 9b96d37e580c5ad16e51274c94cdd3d1d8765f13
     :git: git@github.com:Lickability/LCKCategories.git
+  LCKControls:
+    :commit: 281d390d2f9b5b1a563c9472177edaaf4f4813e6
+    :git: git@github.com:Lickability/LCKControls.git
   LCKCoreData:
     :commit: 07d361d99602ecdeb94597d97de9c1cd4e6e17fe
     :git: git@github.com:Lickability/LCKCoreData.git
@@ -36,7 +44,9 @@ SPEC CHECKSUMS:
   HockeySDK: bfd1f5ac75938b07499c4ac12932244b72a2e70b
   iCarousel: 5acab560f10dc13da2440c89f35a0ad278b5147d
   LCKCategories: e99e66280b7ddb5ebe79f8791cd2fc665ce61035
+  LCKControls: 9cb1a7c38cef0395f6f0d613ead981c59d4e5e05
   LCKCoreData: 2bd3f71f534e8e1150e7a44ceeb885c5e1f484b3
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
   UICountingLabel: a55223a9357af71f833af76665164d2e3f3654b5
 
 COCOAPODS: 0.35.0.rc2

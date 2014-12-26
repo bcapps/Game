@@ -18,11 +18,13 @@
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
+#import <LCKControls/LCKEmptyView.h>
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
 @interface LCKInventoryTableViewController () <LCKItemViewControllerDelegate>
 
 @property (nonatomic) NSArray *unequippedItems;
+@property (nonatomic) LCKEmptyView *emptyView;
 
 @end
 
@@ -37,6 +39,21 @@
     
     [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    [self.tableView addSubview:self.emptyView];
+    
+    self.emptyView.hidden = self.unequippedItems.count > 0;
+    self.tableView.scrollEnabled = self.emptyView.hidden;
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    if (!self.emptyView.hidden) {
+        CGFloat emptyViewHeight = CGRectGetHeight(self.view.bounds) - self.topLayoutGuide.length;
+        self.emptyView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), emptyViewHeight);
+        [self.view bringSubviewToFront:self.emptyView];
+    }
 }
 
 #pragma mark - LCKInventoryTableViewController
@@ -59,6 +76,16 @@
     }
     
     return _unequippedItems;
+}
+
+- (LCKEmptyView *)emptyView {
+    if (!_emptyView) {
+        _emptyView = [[LCKEmptyView alloc] init];
+        _emptyView.titleLabel.text = NSLocalizedString(@"No items", nil);
+        _emptyView.detailTextLabel.text = NSLocalizedString(@"You should probably go find some.", nil);
+    }
+    
+    return _emptyView;
 }
 
 #pragma mark - UITableViewDataSource
@@ -91,6 +118,9 @@
 
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:indexPath.section];
         [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        self.emptyView.hidden = self.unequippedItems.count > 0;
+        self.tableView.scrollEnabled = self.emptyView.hidden;
     }
 }
 
