@@ -132,6 +132,7 @@
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
 		F2FE1CD21A4A7CF400FA161C /* LCKZoomableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */; };
 		F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */; };
+		F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1CD81A4E2F7300FA161C /* force@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +308,7 @@
 		F2FE1CD01A4A7CF400FA161C /* LCKZoomableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKZoomableImageViewController.h; sourceTree = "<group>"; };
 		F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKZoomableImageViewController.m; sourceTree = "<group>"; };
 		F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Undead Asylum@3x.png"; sourceTree = "<group>"; };
+		F2FE1CD81A4E2F7300FA161C /* force@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "force@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
+				F2FE1CD81A4E2F7300FA161C /* force@2x.png */,
 				F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */,
 				F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */,
 				F21F43891A3A553000FEA417 /* kiteshield@2x.png */,
@@ -792,6 +795,7 @@
 				F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */,
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
+				F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */,
 				F21F43921A3A567900FEA417 /* mace@2x.png in Resources */,
 				F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
@@ -1121,7 +1125,7 @@
 			baseConfigurationReference = 023C27F956B686D5089A3418 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Echoes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

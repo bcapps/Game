@@ -117,7 +117,7 @@
 		<key>actionText</key>
 		<string>Smack: Hit one enemy for 1d4 damage.</string>
 		<key>descriptiveText</key>
-		<string>Improves chance to hit with miracles. Add 1 to your dice rolls when casting miracles.</string>
+		<string>Improves chance to hit with miracles. Add 1 to your attack rolls when casting miracles.</string>
 		<key>flavorText</key>
 		<string></string>
 		<key>imageName</key>
@@ -252,6 +252,24 @@
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Force</string>
+		<key>actionText</key>
+		<string>Pray: Creates a concussive blast in front of you, knocking smaller enemies backwards.</string>
+		<key>descriptiveText</key>
+		<string>Can only be used when a talisman is equipped.</string>
+		<key>flavorText</key>
+		<string>They say at the Bridge of Dün, a single cleric fought a legion of knights with only his prayers, their bodies found at the bottom.</string>
+		<key>imageName</key>
+		<string>force</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>FAI 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>spell</string>
 	</dict>
 </array>
 </plist>
