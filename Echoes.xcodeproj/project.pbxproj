@@ -127,6 +127,9 @@
 		F264132F1A49002000287EFA /* LCKLoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F264132E1A49002000287EFA /* LCKLoreViewController.m */; };
 		F26413351A49064B00287EFA /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = F26413341A49064B00287EFA /* Journal.m */; };
 		F264133B1A4906D600287EFA /* JournalEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F264133A1A4906D600287EFA /* JournalEntry.m */; };
+		F268F0571A4E3D9A00AEA410 /* healingflask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */; };
+		F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */; };
+		F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -300,6 +303,9 @@
 		F26413341A49064B00287EFA /* Journal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journal.m; sourceTree = "<group>"; };
 		F26413391A4906D600287EFA /* JournalEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalEntry.h; sourceTree = "<group>"; };
 		F264133A1A4906D600287EFA /* JournalEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalEntry.m; sourceTree = "<group>"; };
+		F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "healingflask@2x.png"; sourceTree = "<group>"; };
+		F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undeadasylumeastkey@2x.png"; sourceTree = "<group>"; };
+		F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bigpilgrimkey@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -370,6 +376,7 @@
 			children = (
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
+				F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */,
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
 				F2FE1CD81A4E2F7300FA161C /* force@2x.png */,
 				F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */,
@@ -380,6 +387,8 @@
 				F21F438F1A3A560000FEA417 /* sorcerercatalyst@2x.png */,
 				F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */,
 				F21F438D1A3A55BF00FEA417 /* battleaxe@2x.png */,
+				F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */,
+				F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */,
 				F21F43951A3A576300FEA417 /* heatershield@2x.png */,
 				F21F43991A3A57DF00FEA417 /* soularrow@2x.png */,
 				F21F43A81A3BBF6400FEA417 /* shortsword@2x.png */,
@@ -794,6 +803,8 @@
 				F264131C1A40DDB400287EFA /* Hollow Soldier@2x.png in Resources */,
 				F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */,
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
+				F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */,
+				F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
 				F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */,
 				F21F43921A3A567900FEA417 /* mace@2x.png in Resources */,
@@ -837,6 +848,7 @@
 				F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,
 				F21F43841A3A549600FEA417 /* longsword@2x.png in Resources */,
 				F21F43901A3A560000FEA417 /* sorcerercatalyst@2x.png in Resources */,
+				F268F0571A4E3D9A00AEA410 /* healingflask@2x.png in Resources */,
 				F2206B021A2D2C0D006E44B0 /* Images.xcassets in Resources */,
 				F26413181A40DD1100287EFA /* Asylum Demon@2x.png in Resources */,
 			);

@@ -11,7 +11,7 @@
 @implementation LCKDMManager
 
 + (BOOL)isDMMode {
-    return NO;
+    return YES;
 }
 
 @end

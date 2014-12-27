@@ -271,5 +271,55 @@
 		<key>itemSlot</key>
 		<string>spell</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Healing Flask</string>
+		<key>actionText</key>
+		<string>Chug: When drank, restores 4 HP.</string>
+		<key>descriptiveText</key>
+		<string>A green bottle of unknown make. Fill it with fire at a bonfire, and drink from it to restore HP.</string>
+		<key>flavorText</key>
+		<string>An emerald flask, from the Keeper&apos;s soul 
+She lives to protect the flame, 
+And dies to protect it further.</string>
+		<key>imageName</key>
+		<string>healingflask</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string>accessory</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Undead Asylum F2 East Key</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Key to the iron bars on the east side of the second floor of the North Undead Asylum.</string>
+		<key>flavorText</key>
+		<string>The Undead Asylum is a giant Undead prison, segmented by countless iron bars. Even if an Undead were to escape from a cell, passage to the outside world would not be gained easily.</string>
+		<key>imageName</key>
+		<string>undeadasylumeastkey</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Big Pilgrim&apos;s Key</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Key to the inner door of the Undead Asylum main hall.</string>
+		<key>flavorText</key>
+		<string>Big key belonging to a chosen Undead pilgrim. But this chosen Undead knows not what this pilgrimage has in store.</string>
+		<key>imageName</key>
+		<string>bigpilgrimkey</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
