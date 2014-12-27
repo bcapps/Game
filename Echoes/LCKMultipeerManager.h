@@ -12,6 +12,7 @@
 extern NSString * const LCKMultipeerItemReceivedNotification;
 extern NSString * const LCKMultipeerSoulsReceivedNotification;
 extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
+extern NSString * const LCKMultipeerEventReceivedNotificiation;
 
 extern NSString * const LCKMultipeerPeerStateChangedNotification;
 
@@ -29,5 +30,7 @@ extern NSString * const LCKMultipeerJournalEntryDescription;
 - (void)startMonitoring;
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
+- (BOOL)sendEventName:(NSString *)eventName toPeerID:(MCPeerID *)peerID;
+
 - (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID;
 @end

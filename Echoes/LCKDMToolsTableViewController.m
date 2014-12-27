@@ -16,6 +16,7 @@
 #import "LCKLoreTableViewController.h"
 #import "LCKMultipeerManager.h"
 #import "LCKMapsTableViewController.h"
+#import "LCKEventsTableViewController.h"
 
 typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     LCKDMToolsRowAllItems,
@@ -23,6 +24,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     LCKDMToolsRowMonsterManual,
     LCKDMToolsRowLore,
     LCKDMToolsRowMaps,
+    LCKDMToolsRowEvents,
     LCKDMToolsRowCount
 };
 
@@ -62,6 +64,8 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
             return @"Lore";
         case LCKDMToolsRowMaps:
             return @"Maps";
+        case LCKDMToolsRowEvents:
+            return @"Events";
         case LCKDMToolsRowCount:
             return @"";
     }
@@ -116,6 +120,12 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     }
     else if (indexPath.row == LCKDMToolsRowMaps) {
         LCKMapsTableViewController *viewController = [[LCKMapsTableViewController alloc] init];
+        
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else if (indexPath.row == LCKDMToolsRowEvents) {
+        LCKEventsTableViewController *viewController = [[LCKEventsTableViewController alloc] init];
+        viewController.multipeerManager = self.multipeerManager;
         
         [self.navigationController pushViewController:viewController animated:YES];
     }

@@ -131,6 +131,9 @@
 		F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */; };
 		F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */; };
 		F268F05D1A4E494D00AEA410 /* emptyflask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F05C1A4E494D00AEA410 /* emptyflask@2x.png */; };
+		F268F0611A4F3E9C00AEA410 /* LCKEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0601A4F3E9C00AEA410 /* LCKEventsTableViewController.m */; };
+		F268F0641A4F3F2100AEA410 /* LCKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0631A4F3F2100AEA410 /* LCKEvent.m */; };
+		F268F0671A4F3F3100AEA410 /* LCKEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -308,6 +311,12 @@
 		F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undeadasylumeastkey@2x.png"; sourceTree = "<group>"; };
 		F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bigpilgrimkey@2x.png"; sourceTree = "<group>"; };
 		F268F05C1A4E494D00AEA410 /* emptyflask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emptyflask@2x.png"; sourceTree = "<group>"; };
+		F268F05F1A4F3E9C00AEA410 /* LCKEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEventsTableViewController.h; sourceTree = "<group>"; };
+		F268F0601A4F3E9C00AEA410 /* LCKEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEventsTableViewController.m; sourceTree = "<group>"; };
+		F268F0621A4F3F2100AEA410 /* LCKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEvent.h; sourceTree = "<group>"; };
+		F268F0631A4F3F2100AEA410 /* LCKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEvent.m; sourceTree = "<group>"; };
+		F268F0651A4F3F3100AEA410 /* LCKEventProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEventProvider.h; sourceTree = "<group>"; };
+		F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEventProvider.m; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -407,6 +416,7 @@
 				F26413241A48FD0600287EFA /* Items */,
 				F26413231A48FD0200287EFA /* Souls */,
 				F26413061A40CBBA00287EFA /* Monsters */,
+				F268F05E1A4F3E7400AEA410 /* Events */,
 				F26413221A48FCFF00287EFA /* Lore */,
 				F21F43AD1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.h */,
 				F21F43AE1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m */,
@@ -690,6 +700,19 @@
 			name = Items;
 			sourceTree = "<group>";
 		};
+		F268F05E1A4F3E7400AEA410 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				F268F0621A4F3F2100AEA410 /* LCKEvent.h */,
+				F268F0631A4F3F2100AEA410 /* LCKEvent.m */,
+				F268F0651A4F3F3100AEA410 /* LCKEventProvider.h */,
+				F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */,
+				F268F05F1A4F3E9C00AEA410 /* LCKEventsTableViewController.h */,
+				F268F0601A4F3E9C00AEA410 /* LCKEventsTableViewController.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		F2FE1CC91A4A588F00FA161C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,6 +965,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F268F0671A4F3F3100AEA410 /* LCKEventProvider.m in Sources */,
 				F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */,
 				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
@@ -969,9 +993,11 @@
 				F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */,
 				F21F43B51A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m in Sources */,
 				F21F436C1A3563C700FEA417 /* LCKBaseCell.m in Sources */,
+				F268F0611A4F3E9C00AEA410 /* LCKEventsTableViewController.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
 				F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */,
+				F268F0641A4F3F2100AEA410 /* LCKEvent.m in Sources */,
 				F26413291A48FED100287EFA /* LCKLoreProvider.m in Sources */,
 				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
 				F26413351A49064B00287EFA /* Journal.m in Sources */,

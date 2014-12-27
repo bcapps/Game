@@ -17,6 +17,7 @@
 #import "LCKItemButton.h"
 #import "LCKItem.h"
 #import "LCKStatusButton.h"
+#import "LCKEventProvider.h"
 
 #import "LCKInfoViewController.h"
 #import "LCKEquipmentViewController.h"
@@ -113,6 +114,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(soulsReceived:) name:LCKMultipeerSoulsReceivedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventReceived:) name:LCKMultipeerEventReceivedNotificiation object:nil];
     
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
     self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
@@ -489,6 +491,34 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     self.character.souls = newAmount;
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+}
+
+- (void)eventReceived:(NSNotification *)notification {
+    NSString *eventName = [notification.userInfo objectForKey:@"value"];
+    
+    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName]) {
+        LCKItem *emptyFlask;
+        
+        for (LCKItem *item in self.character.items) {
+            if ([item.name isEqualToString:@"Empty Flask"]) {
+                emptyFlask = item;
+                break;
+            }
+        }
+        
+        if (emptyFlask) {
+            LCKItem *healingFlask = [LCKItemProvider itemForName:@"Healing Flask"];
+            healingFlask.equipped = emptyFlask.equipped;
+            healingFlask.equippedSlot = emptyFlask.equippedSlot;
+            
+            [self.character removeItemFromInventory:emptyFlask];
+            [self.character addItemToInventory:healingFlask];
+            
+            [self updateItemButtons];
+            
+            [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+        }
+    }
 }
 
 #pragma mark - UICollectionViewDataSource

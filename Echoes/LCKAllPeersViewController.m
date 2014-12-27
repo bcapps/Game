@@ -15,6 +15,7 @@
 #import "LCKItem.h"
 #import "LCKDMManager.h"
 #import "LCKDMToolsTableViewController.h"
+#import "LCKEvent.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
@@ -73,6 +74,9 @@
         }
         else if (self.soulsToGive) {
             [self.multipeerManager sendSoulAmount:self.soulsToGive toPeerID:peerID];
+        }
+        else if (self.event) {
+            [self.multipeerManager sendEventName:self.event.name toPeerID:peerID];
         }
     }
     
