@@ -43,7 +43,6 @@
     if (![LCKDMManager isDMMode]) {
         self.navigationItem.leftBarButtonItem = nil;
     }
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

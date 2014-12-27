@@ -272,7 +272,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
 }
 
 - (CGRect)infoViewFrameForStatusFrame:(CGRect)statusFrame {
-    return CGRectMake(LCKCharacterStatInfoViewHorizontalMargin, CGRectGetMaxY(statusFrame), CGRectGetWidth(self.view.frame) - LCKCharacterStatInfoViewHorizontalMargin * 2, LCKCharacterStatInfoViewHeight);
+    return CGRectMake(LCKCharacterStatInfoViewHorizontalMargin, CGRectGetMaxY(statusFrame), CGRectGetWidth(self.view.frame) - LCKCharacterStatInfoViewHorizontalMargin * 2, LCKCharacterStatInfoViewHeight - 40.0);
 }
 
 - (CGRect)statInfoViewFrameForCellFrame:(CGRect)cellFrame {
