@@ -38,7 +38,7 @@ const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
 const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
-const CGFloat LCKCharacterStatInfoViewHeight = 125.0;
+const CGFloat LCKCharacterStatInfoViewHeight = 145.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 typedef void(^LCKItemViewControllerDismissCompletion)();
@@ -521,6 +521,7 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     
     [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
     
+    infoViewController.titleLabel.text = [CharacterStats statTitleForStatType:indexPath.row];
     infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:indexPath.row];
 }
 

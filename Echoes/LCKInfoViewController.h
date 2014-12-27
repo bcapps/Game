@@ -13,5 +13,6 @@
 @property (nonatomic) CGRect presentingRect;
 @property (nonatomic) UIPopoverArrowDirection arrowDirection;
 @property (nonatomic) UITextView *infoTextView;
+@property (nonatomic) UILabel *titleLabel;
 
 @end
