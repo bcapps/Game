@@ -49,9 +49,10 @@
     if (self.itemsToDisplay.count == 0) {
         self.noItemsLabel = [[UILabel alloc] init];
         self.noItemsLabel.textAlignment = NSTextAlignmentCenter;
-        self.noItemsLabel.text = @"No Items";
+        self.noItemsLabel.text = [self emptyText];
         self.noItemsLabel.textColor = [UIColor descriptiveTextColor];
-        self.noItemsLabel.font = [UIFont descriptiveTextFontOfSize:22.0];
+        self.noItemsLabel.font = [UIFont descriptiveTextFontOfSize:20.0];
+        self.noItemsLabel.numberOfLines = 0;
         
         [self.tableView addSubview:self.noItemsLabel];
     }
@@ -76,6 +77,29 @@
     }
     
     return self;
+}
+
+- (NSString *)emptyText {
+    if ([self.equipmentTypes containsObject:@(LCKItemSlotOneHand)]) {
+        return @"No Usable Weapons";
+    }
+    else if ([self.equipmentTypes containsObject:@(LCKItemSlotHelmet)]) {
+        return @"No Usable Helmets";
+    }
+    else if ([self.equipmentTypes containsObject:@(LCKItemSlotChest)]) {
+        return @"No Usables Chests";
+    }
+    else if ([self.equipmentTypes containsObject:@(LCKItemSlotAccessory)]) {
+        return @"No Usable Accessories";
+    }
+    else if ([self.equipmentTypes containsObject:@(LCKItemSlotBoots)]) {
+        return @"No Usable Boots";
+    }
+    else if ([self.equipmentTypes containsObject:@(LCKItemSlotSpell)]) {
+        return @"No Usable Spells or Miracles";
+    }
+    
+    return @"";
 }
 
 - (NSArray *)itemsToDisplay {
