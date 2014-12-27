@@ -59,23 +59,19 @@
 #pragma mark - LCKInventoryTableViewController
 
 - (NSArray *)unequippedItems {
-    if (!_unequippedItems) {
-        NSMutableArray *unequippedItems = [NSMutableArray array];
-        
-        for (LCKItem *item in self.character.items) {
-            if (!item.isEquipped) {
-                NSLog(@"Unequipped: %@", item.name);
-                [unequippedItems addObject:item];
-            }
-            else {
-                NSLog(@"Equipped: %@", item.name);
-            }
+    NSMutableArray *unequippedItems = [NSMutableArray array];
+    
+    for (LCKItem *item in self.character.items) {
+        if (!item.isEquipped) {
+            NSLog(@"Unequipped: %@", item.name);
+            [unequippedItems addObject:item];
         }
-        
-        _unequippedItems = [unequippedItems copy];
+        else {
+            NSLog(@"Equipped: %@", item.name);
+        }
     }
     
-    return _unequippedItems;
+    return [unequippedItems copy];
 }
 
 - (LCKEmptyView *)emptyView {

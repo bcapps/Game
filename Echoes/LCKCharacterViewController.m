@@ -536,6 +536,38 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
     [self dismissCurrentlyPresentedViewController:nil];
 }
 
+- (void)useItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
+    LCKItem *item = itemViewController.item;
+    
+    if ([item.name isEqualToString:@"Healing Flask"]) {
+        if (self.character.currentHealth.integerValue + 4 > self.character.maximumHealth.integerValue) {
+            self.character.currentHealth = self.character.maximumHealth;
+        }
+        else {
+            self.character.currentHealth = @(self.character.currentHealth.integerValue + 4);
+        }
+        
+        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+        self.decreaseHealthButton.enabled = YES;
+        
+        [self updateHealthText];
+        
+        [self.character removeItemFromInventory:item];
+        
+        LCKItem *emptyFlask = [LCKItemProvider itemForName:item.emptyItemName];
+        emptyFlask.equipped = YES;
+        emptyFlask.equippedSlot = item.equippedSlot;
+        
+        [self.character addItemToInventory:emptyFlask];
+        
+        [self updateItemButtons];
+        
+        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    }
+    
+    [self dismissCurrentlyPresentedViewController:nil];
+}
+
 #pragma mark - LCKEquipmentViewControllerDelegate
 
 - (void)itemWasSelected:(LCKItem *)item equipmentSlot:(LCKEquipmentSlot)equipmentSlot {

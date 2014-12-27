@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *unequipButton;
 @property (weak, nonatomic) IBOutlet UIView *nameSeparatorLineView;
 @property (weak, nonatomic) IBOutlet UIImageView *itemTypeImageView;
+@property (weak, nonatomic) IBOutlet UIButton *useItemButton;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *infoScrollView;
 
@@ -105,16 +106,21 @@
         self.view.layer.cornerRadius = 8.0;
         self.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
         self.view.layer.borderWidth = 1.0;
+        
+        self.useItemButton.hidden = !self.item.hasUseAction || !self.item.isEquipped;
+        [self.useItemButton setTitleColor:[UIColor greenHealthColor] forState:UIControlStateNormal];
+        self.useItemButton.titleLabel.font = [UIFont titleTextFontOfSize:15.0];
     }
     else {
         self.title = self.item.name;
         self.itemNameLabel.hidden = YES;
+        self.useItemButton.hidden = YES;
         self.nameSeparatorLineView.hidden = YES;
         
         UIBarButtonItem *giftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"giftIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(giftItem)];
         
         self.navigationItem.rightBarButtonItem = giftButton;
-    }    
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -139,6 +145,12 @@
 - (IBAction)unequipButtonTapped:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(unequipButtonTappedForItemViewController:)]) {
         [self.delegate unequipButtonTappedForItemViewController:self];
+    }
+}
+
+- (IBAction)useItemButtonTapped:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(useItemButtonTappedForItemViewController:)]) {
+        [self.delegate useItemButtonTappedForItemViewController:self];
     }
 }
 

@@ -273,24 +273,6 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Healing Flask</string>
-		<key>actionText</key>
-		<string>Chug: When drank, restores 4 HP.</string>
-		<key>descriptiveText</key>
-		<string>A green bottle of unknown make. Fill it with fire at a bonfire, and drink from it to restore HP.</string>
-		<key>flavorText</key>
-		<string>An emerald flask, from the Keeper&apos;s soul 
-She lives to protect the flame, 
-And dies to protect it further.</string>
-		<key>imageName</key>
-		<string>healingflask</string>
-		<key>attributeRequirements</key>
-		<array/>
-		<key>itemSlot</key>
-		<string>accessory</string>
-	</dict>
-	<dict>
-		<key>name</key>
 		<string>Undead Asylum F2 East Key</string>
 		<key>actionText</key>
 		<string></string>
@@ -320,6 +302,46 @@ And dies to protect it further.</string>
 		<array/>
 		<key>itemSlot</key>
 		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Healing Flask</string>
+		<key>actionText</key>
+		<string>Use: Drink to restore 4 HP.</string>
+		<key>descriptiveText</key>
+		<string>A green bottle of unknown make. Fill it with fire at a bonfire, and drink from it to restore HP.</string>
+		<key>flavorText</key>
+		<string>An emerald flask, from the Keeper&apos;s soul 
+She lives to protect the flame, 
+And dies to protect it further.</string>
+		<key>imageName</key>
+		<string>healingflask</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string>accessory</string>
+		<key>hasUseAction</key>
+		<true/>
+		<key>emptyVersion</key>
+		<string>Empty Flask</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Empty Flask</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>A green bottle of unknown make. Fill it with fire at a bonfire, and drink from it to restore HP.</string>
+		<key>flavorText</key>
+		<string>An emerald flask, from the Keeper&apos;s soul 
+She lives to protect the flame, 
+And dies to protect it further.</string>
+		<key>imageName</key>
+		<string>emptyflask</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string>accessory</string>
 	</dict>
 </array>
 </plist>

@@ -51,6 +51,10 @@ extern NSString * const LCKItemTypeNameSpell;
 @property (nonatomic, readonly) NSString *imageName;
 @property (nonatomic, readonly) NSArray *attributeRequirements;
 @property (nonatomic, readonly) LCKItemSlot itemSlot;
+
+@property (nonatomic, readonly) BOOL hasUseAction;
+@property (nonatomic, readonly) NSString *emptyItemName;
+
 @property (nonatomic) LCKEquipmentSlot equippedSlot;
 
 @property (nonatomic, readonly) UIImage *image;

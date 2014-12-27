@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, LCKItemViewControllerDisplayStyle) {
 @optional
 - (void)unequipButtonTappedForItemViewController:(LCKItemViewController *)itemViewController;
 - (void)giftItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController;
+- (void)useItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController;
 
 @end
 

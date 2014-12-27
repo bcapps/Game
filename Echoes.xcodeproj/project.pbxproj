@@ -130,6 +130,7 @@
 		F268F0571A4E3D9A00AEA410 /* healingflask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */; };
 		F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */; };
 		F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */; };
+		F268F05D1A4E494D00AEA410 /* emptyflask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F05C1A4E494D00AEA410 /* emptyflask@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -306,6 +307,7 @@
 		F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "healingflask@2x.png"; sourceTree = "<group>"; };
 		F268F0581A4E3EE700AEA410 /* undeadasylumeastkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undeadasylumeastkey@2x.png"; sourceTree = "<group>"; };
 		F268F05A1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bigpilgrimkey@2x.png"; sourceTree = "<group>"; };
+		F268F05C1A4E494D00AEA410 /* emptyflask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emptyflask@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
 				F2FE1CD81A4E2F7300FA161C /* force@2x.png */,
 				F21F43A61A3BBE5600FEA417 /* spidershield@2x.png */,
+				F268F05C1A4E494D00AEA410 /* emptyflask@2x.png */,
 				F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */,
 				F21F43891A3A553000FEA417 /* kiteshield@2x.png */,
 				F21F43831A3A549600FEA417 /* longsword@2x.png */,
@@ -796,6 +799,7 @@
 			files = (
 				F26412F71A3F851600287EFA /* BanditIconFemale@2x.png in Resources */,
 				F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */,
+				F268F05D1A4E494D00AEA410 /* emptyflask@2x.png in Resources */,
 				F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */,
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,

@@ -15,6 +15,8 @@ NSString * const LCKItemFlavorKey = @"flavorText";
 NSString * const LCKItemImageKey = @"imageName";
 NSString * const LCKItemAttributeRequirementsKey = @"attributeRequirements";
 NSString * const LCKItemItemSlotKey = @"itemSlot";
+NSString * const LCKItemHasUseActionKey = @"hasUseAction";
+NSString * const LCKItemEmptyVersionKey = @"emptyVersion";
 
 NSString * const LCKItemOneHandKey = @"onehand";
 NSString * const LCKItemTwoHandKey = @"twohand";
@@ -41,6 +43,8 @@ NSString * const LCKItemCodingAttributeKey = @"LCKItemCodingAttributeKey";
 NSString * const LCKItemCodingItemSlotKey = @"LCKItemCodingItemSlotKey";
 NSString * const LCKItemCodingEquipmentSlotKey = @"LCKItemCodingEquipmentSlotKey";
 NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
+NSString * const LCKItemCodingHasUseActionKey = @"LCKItemCodingHasUseActionKey";
+NSString * const LCKItemCodingEmptyVersionKey = @"LCKItemCodingEmptyVersionKey";
 
 @interface LCKItem ()
 
@@ -53,6 +57,9 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
 
 @property (nonatomic) NSNumber *itemSlotNumber;
 @property (nonatomic) NSNumber *equipmentSlotNumber;
+
+@property (nonatomic) BOOL hasUseAction;
+@property (nonatomic) NSString *emptyItemName;
 
 @end
 
@@ -73,6 +80,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _itemSlotNumber = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:LCKItemCodingItemSlotKey];
         _equipmentSlotNumber = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:LCKItemCodingEquipmentSlotKey];
         _equipped = [aDecoder decodeBoolForKey:LCKItemCodingEquippedKey];
+        _hasUseAction = [aDecoder decodeBoolForKey:LCKItemCodingHasUseActionKey];
+        _emptyItemName = [aDecoder decodeObjectOfClass:[NSString class] forKey:LCKItemCodingEmptyVersionKey];
     }
     
     return self;
@@ -88,6 +97,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
     [aCoder encodeObject:_itemSlotNumber forKey:LCKItemCodingItemSlotKey];
     [aCoder encodeObject:_equipmentSlotNumber forKey:LCKItemCodingEquipmentSlotKey];
     [aCoder encodeBool:_equipped forKey:LCKItemCodingEquippedKey];
+    [aCoder encodeBool:_hasUseAction forKey:LCKItemCodingHasUseActionKey];
+    [aCoder encodeObject:_emptyItemName forKey:LCKItemCodingEmptyVersionKey];
 }
 
 #pragma mark - NSCopying
@@ -105,6 +116,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         copy.itemSlotNumber = [self.itemSlotNumber copyWithZone:zone];
         copy.equipmentSlotNumber = [self.equipmentSlotNumber copyWithZone:zone];
         copy.equipped = self.isEquipped;
+        copy.hasUseAction = self.hasUseAction;
+        copy.emptyItemName = [self.emptyItemName copyWithZone:zone];
     }
     
     return copy;
@@ -125,6 +138,8 @@ NSString * const LCKItemCodingEquippedKey = @"LCKItemCodingEquippedKey";
         _equipped = NO;
         _equipmentSlotNumber = @(LCKEquipmentSlotUnequipped);
         _itemSlotNumber = @([self itemSlotForSlotString:[dictionary objectForKey:LCKItemItemSlotKey]]);
+        _hasUseAction = [[dictionary objectForKey:LCKItemHasUseActionKey] boolValue];
+        _emptyItemName = [dictionary objectForKey:LCKItemEmptyVersionKey];
     }
     
     return self;
