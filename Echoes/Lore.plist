@@ -37,6 +37,22 @@ Thus began the Age of Fire. But soon, the flames will fade, and only dark will r
 	<array>
 		<dict>
 			<key>title</key>
+			<string>You Wake Up</string>
+			<key>lore</key>
+			<string>Cold, and damp, your vision fades in. The gray stone walls surrounding you cleary have not been maintained. They look ready to crumble as the moss eats away at their integrity. There are several shadowed figures around you beginning to regain conciousness. Broken barrels lay about the room. A lone grated door exists at the center of the far wall.
+
+A broken body comes crashing down to the center of the floor. You look up and spot a Knight dressed in full armor. He looks at you momentarily before moving away from the hole in the ceiling. You look to the body on the floor. It is clearly an Undead that has long since turned.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Outside the Cell</string>
+			<key>lore</key>
+			<string>Cold, and damp, your vision fades in. The gray stone walls surrounding you cleary have not been maintained. They look ready to crumble as the moss eats away at their integrity. There are several shadowed figures around you beginning to regain conciousness. Broken barrels lay about the room. A lone grated door exists at the center of the far wall.
+
+A broken body comes crashing down to the center of the floor. You look up and spot a Knight dressed in full armor. He looks at you momentarily before moving away from the hole in the ceiling. You look to the body on the floor. It is clearly an Undead that has long since turned.</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Leaving the Asylum</string>
 			<key>lore</key>
 			<string>Only, in the ancient legends it is stated...that one day an Undead shall be chosen. to leave the Undead Asylum, in pilgrimage. To the land of the ancient Lords, Lordran.</string>

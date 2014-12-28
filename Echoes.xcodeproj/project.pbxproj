@@ -135,6 +135,7 @@
 		F268F0641A4F3F2100AEA410 /* LCKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0631A4F3F2100AEA410 /* LCKEvent.m */; };
 		F268F0671A4F3F3100AEA410 /* LCKEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */; };
 		F268F06A1A50C36500AEA410 /* LCKLoreGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0691A50C36500AEA410 /* LCKLoreGroup.m */; };
+		F268F06C1A50CA0A00AEA410 /* dungeoncellkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -320,6 +321,7 @@
 		F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEventProvider.m; sourceTree = "<group>"; };
 		F268F0681A50C36500AEA410 /* LCKLoreGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoreGroup.h; sourceTree = "<group>"; };
 		F268F0691A50C36500AEA410 /* LCKLoreGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoreGroup.m; sourceTree = "<group>"; };
+		F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dungeoncellkey@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			children = (
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
+				F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */,
 				F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */,
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
 				F2FE1CD81A4E2F7300FA161C /* force@2x.png */,
@@ -875,6 +878,7 @@
 				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
 				F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
+				F268F06C1A50CA0A00AEA410 /* dungeoncellkey@2x.png in Resources */,
 				F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */,
 				F26412F91A3F87D800287EFA /* ClericIconFemale@2x.png in Resources */,
 				F2206B681A2D43FE006E44B0 /* HunterIcon@2x.png in Resources */,

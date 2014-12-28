@@ -305,6 +305,22 @@
 	</dict>
 	<dict>
 		<key>name</key>
+		<string>Dungeon Cell Key</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Key to the dungeon of the Undead Asylum to the North.</string>
+		<key>flavorText</key>
+		<string>A mysterious knight, without saying a word, shoved a corpse down into the cell, and on its person was this key. Who was this knight? And what was his purpose? There may be no answer, but one must still forge ahead.</string>
+		<key>imageName</key>
+		<string>dungeoncellkey</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>Healing Flask</string>
 		<key>actionText</key>
 		<string>Use: Drink to restore 4 HP.</string>
