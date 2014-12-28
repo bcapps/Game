@@ -506,6 +506,11 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
             }
         }
         
+        self.character.currentHealth = self.character.maximumHealth;
+        
+        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+        self.decreaseHealthButton.enabled = YES;
+
         if (emptyFlask) {
             LCKItem *healingFlask = [LCKItemProvider itemForName:@"Healing Flask"];
             healingFlask.equipped = emptyFlask.equipped;
@@ -513,11 +518,12 @@ typedef void(^LCKItemViewControllerDismissCompletion)();
             
             [self.character removeItemFromInventory:emptyFlask];
             [self.character addItemToInventory:healingFlask];
-            
+
             [self updateItemButtons];
-            
-            [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
         }
+        
+        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+        [self updateHealthText];
     }
 }
 
