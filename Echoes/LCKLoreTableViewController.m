@@ -11,15 +11,10 @@
 #import "LCKLore.h"
 #import "LCKBaseCell.h"
 #import "LCKLoreViewController.h"
+#import "LCKLoreGroup.h"
 
 #import "UIColor+ColorStyle.h"
 #import <LCKCategories/NSArray+LCKAdditions.h>
-
-typedef NS_ENUM(NSUInteger, LCKLoreSection) {
-    LCKLoreSectionWorld,
-    LCKLoreSectionClasses,
-    LCKLoreSectionCount
-};
 
 @implementation LCKLoreTableViewController
 
@@ -37,33 +32,21 @@ typedef NS_ENUM(NSUInteger, LCKLoreSection) {
 #pragma mark - LCKLoreTableViewController
 
 - (LCKLore *)loreForIndexPath:(NSIndexPath *)indexPath {
-    LCKLore *lore;
+    LCKLoreGroup *loreGroup = [[LCKLoreProvider loreGroups] safeObjectAtIndex:indexPath.section];
     
-    if (indexPath.section == LCKLoreSectionWorld) {
-        lore = [[LCKLoreProvider worldLore] safeObjectAtIndex:indexPath.row];
-    }
-    else if (indexPath.section == LCKLoreSectionClasses) {
-        lore = [[LCKLoreProvider classLore] safeObjectAtIndex:indexPath.row];
-    }
-    
-    return lore;
+    return [loreGroup.loreArray safeObjectAtIndex:indexPath.row];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return LCKLoreSectionCount;
+    return [LCKLoreProvider loreGroups].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == LCKLoreSectionWorld) {
-        return [LCKLoreProvider worldLore].count;
-    }
-    else if (section == LCKLoreSectionClasses) {
-        return [LCKLoreProvider classLore].count;
-    }
-    
-    return 0;
+    LCKLoreGroup *loreGroup = [[LCKLoreProvider loreGroups] safeObjectAtIndex:section];
+
+    return loreGroup.loreArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,14 +60,9 @@ typedef NS_ENUM(NSUInteger, LCKLoreSection) {
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == LCKLoreSectionWorld) {
-        return @"World Lore";
-    }
-    else if (section == LCKLoreSectionClasses) {
-        return @"Class Lore";
-    }
-    
-    return @"";
+    LCKLoreGroup *loreGroup = [[LCKLoreProvider loreGroups] safeObjectAtIndex:section];
+
+    return loreGroup.title;
 }
 
 #pragma mark - UITableViewDelegate

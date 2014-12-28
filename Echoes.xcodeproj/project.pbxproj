@@ -134,6 +134,7 @@
 		F268F0611A4F3E9C00AEA410 /* LCKEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0601A4F3E9C00AEA410 /* LCKEventsTableViewController.m */; };
 		F268F0641A4F3F2100AEA410 /* LCKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0631A4F3F2100AEA410 /* LCKEvent.m */; };
 		F268F0671A4F3F3100AEA410 /* LCKEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */; };
+		F268F06A1A50C36500AEA410 /* LCKLoreGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0691A50C36500AEA410 /* LCKLoreGroup.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -317,6 +318,8 @@
 		F268F0631A4F3F2100AEA410 /* LCKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEvent.m; sourceTree = "<group>"; };
 		F268F0651A4F3F3100AEA410 /* LCKEventProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEventProvider.h; sourceTree = "<group>"; };
 		F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEventProvider.m; sourceTree = "<group>"; };
+		F268F0681A50C36500AEA410 /* LCKLoreGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoreGroup.h; sourceTree = "<group>"; };
+		F268F0691A50C36500AEA410 /* LCKLoreGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoreGroup.m; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -673,6 +676,8 @@
 				F26413281A48FED100287EFA /* LCKLoreProvider.m */,
 				F264132A1A48FEFD00287EFA /* LCKLore.h */,
 				F264132B1A48FEFD00287EFA /* LCKLore.m */,
+				F268F0681A50C36500AEA410 /* LCKLoreGroup.h */,
+				F268F0691A50C36500AEA410 /* LCKLoreGroup.m */,
 				F264131F1A48FCF900287EFA /* LCKLoreTableViewController.h */,
 				F26413201A48FCF900287EFA /* LCKLoreTableViewController.m */,
 				F264132D1A49002000287EFA /* LCKLoreViewController.h */,
@@ -1012,6 +1017,7 @@
 				F26413121A40D1A400287EFA /* LCKMonsterViewController.m in Sources */,
 				F2206AFA1A2D2C0D006E44B0 /* Echoes.xcdatamodeld in Sources */,
 				F264132F1A49002000287EFA /* LCKLoreViewController.m in Sources */,
+				F268F06A1A50C36500AEA410 /* LCKLoreGroup.m in Sources */,
 				F21F432B1A2F824000FEA417 /* LCKCharacterPortrait.m in Sources */,
 				F21F434A1A301A2500FEA417 /* Character.m in Sources */,
 				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,

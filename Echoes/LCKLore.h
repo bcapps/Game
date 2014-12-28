@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Lickability. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface LCKLore : NSObject
 
-- (instancetype)initWithTitle:(NSString *)title lore:(NSString *)lore;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSString *lore;

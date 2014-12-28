@@ -10,8 +10,6 @@
 
 @interface LCKLoreProvider : NSObject
 
-+ (NSArray *)allLore;
-+ (NSArray *)classLore;
-+ (NSArray *)worldLore;
++ (NSArray *)loreGroups;
 
 @end

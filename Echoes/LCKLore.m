@@ -8,14 +8,17 @@
 
 #import "LCKLore.h"
 
+NSString * const LCKLoreTitleKey = @"title";
+NSString * const LCKLoreDescriptionKey = @"lore";
+
 @implementation LCKLore
 
-- (instancetype)initWithTitle:(NSString *)title lore:(NSString *)lore {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     
     if (self) {
-        _title = title;
-        _lore = lore;
+        _title = [dictionary objectForKey:LCKLoreTitleKey];
+        _lore = [dictionary objectForKey:LCKLoreDescriptionKey];
     }
     
     return self;

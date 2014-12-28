@@ -2,8 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>The Forming of the World</key>
-	<string>In the age of Ancients, the world was unformed. Shrouded by fog. A land of gray crags, archtrees and everlasting dragons.
+	<key>World Lore</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>The Forming of the World</string>
+			<key>lore</key>
+			<string>In the age of Ancients, the world was unformed. Shrouded by fog. A land of gray crags, archtrees and everlasting dragons.
         
 But then there was fire. And with fire, came desparity. Heat... and cold. Life... and death. And of course, light and dark. Then from the dark, they came. And found the souls of lords within the flame.
 
@@ -26,32 +31,58 @@ Nito unleashed a miasma of death and disease.
 And Seath the Scaleless betrayed his own, and the dragons were no more.
 
 Thus began the Age of Fire. But soon, the flames will fade, and only dark will remain. Even now, there are only embers, and man sees not light, but only endless nights. And amongst the living are seen, carriers of the accursed darksign.</string>
-	<key>Leaving the Asylum</key>
-	<string>Only, in the ancient legends it is stated...that one day an Undead shall be chosen. to leave the Undead Asylum, in pilgrimage. To the land of the ancient Lords, Lordran.</string>
-	<key>Knight Introduction</key>
-	<string>The sky was gray. Always gray. You walk the walls of the city of Berenike, looking for what you don&apos;t know. This day would be no different than the days prior. As light faded, so did everyone&apos;s ambitions. No wars. No heroic quests. The occasional bandit would come around, but mostly just stealing enough to survive. 
+		</dict>
+	</array>
+	<key>Asylum Lore</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Leaving the Asylum</string>
+			<key>lore</key>
+			<string>Only, in the ancient legends it is stated...that one day an Undead shall be chosen. to leave the Undead Asylum, in pilgrimage. To the land of the ancient Lords, Lordran.</string>
+		</dict>
+	</array>
+	<key>Class Lore</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Knight Introduction</string>
+			<key>lore</key>
+			<string>The sky was gray. Always gray. You walk the walls of the city of Berenike, looking for what you don&apos;t know. This day would be no different than the days prior. As light faded, so did everyone&apos;s ambitions. No wars. No heroic quests. The occasional bandit would come around, but mostly just stealing enough to survive. 
 
 You hear a thud as a wooden trebuchet fires. Still testing the machines of war. Just in case you suppose. In case of what you don&apos;t know. Each day is darker and darker than the last. Thud. Another rock flies over the wall into the sea beside the city. Even the sea seems dark today. You can&apos;t remember the last time you saw it shine. 
 
 Thud..snap. Screaming. You heard screaming. That was new. You turn around to look at the trebuchets. There are men on the ground screaming and pointing in your direction. You raise your head in time to see a sizable rock headed in your direction. Not enough time. You can&apos;t move in time. But you aren&apos;t afraid. After all, what&apos;s coming next can&apos;t be any worse than this. You raise your hand instictively to protect yourself. And you see it. A sign of flame on your hand. Terror grips you as you realize this will not be your end. Only the beginning of something far worse. Then darkness.</string>
-	<key>Thief Introduction</key>
-	<string>Running. You need to go faster. They&apos;ll catch you if you don&apos;t. Running on the rooftops of Carim was exhilarating. You wondered why more people didn&apos;t choose the life of a thief. 
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Thief Introduction</string>
+			<key>lore</key>
+			<string>Running. You need to go faster. They&apos;ll catch you if you don&apos;t. Running on the rooftops of Carim was exhilarating. You wondered why more people didn&apos;t choose the life of a thief. 
 
 You jump from one building to the next gripping the edge and pulling yourself up. You here the city guards shouting as they attempt to follow you from below. Fools. You&apos;ll lose them before long. Your client will be happy. You obtained the Tearstone Ring just as requested. No one would&apos;ve even known if that maid hadn&apos;t been after the same thing.
 
 Your glove catches on a hook holding some flowers as you make your way down the side of a building. It rips the back of it off. No matter. With the score you&apos;ll make from this, you can afford a new pair of gloves. You run to the next ledge and jump to the building across. Just one more to go after this. You can hear the guards in the distance. They lost you. 
 
 You land on the building across the way and take your first step up the tilted roof. A shingle slips, and with it your footing. You fall backwards to the streets below, hands flung out attempting to grasp something, anything. You notice a light coming from beyond your hand. No, wait... from your hand. You don&apos;t have time to think about it as you feel the ground crush your back as you slam into the street, crushing a few barrels on your way. The guards run towards you shouting, first about you, but then about your hand. The last thing you see is the look of fear in a guard&apos;s eyes before his boot covers your face. Then darkness.</string>
-	<key>Cleric Introduction</key>
-	<string>As a cleric of Thorolund you knew what had to be done. You prepared yourself as you had prepared others time and time again. You set your affairs in order, said your goodbyes. You sat in the chapel waiting for them to arrive. To take you away. You knew it had to be done, but it still scared you. You glance at your hand.
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Cleric Introduction</string>
+			<key>lore</key>
+			<string>As a cleric of Thorolund you knew what had to be done. You prepared yourself as you had prepared others time and time again. You set your affairs in order, said your goodbyes. You sat in the chapel waiting for them to arrive. To take you away. You knew it had to be done, but it still scared you. You glance at your hand.
 
 You never understood why the ones you ushered grew so uncomfortable in this place while you waited with them. You always thought it was a beautiful place to spend your remaining time. The stained glass with scenes of glory, the alluring tapestries depicting the Lord&apos;s victory over the dragons, the painting on the ceiling where the gods lay. You can feel your hand almost burning from the light shining from it.
 
 Now you saw them for what they were. The stained glass was just a reminder of what you will never see again. No more glorious hymns would be sung, no more tales of magnificent battle. The tapestries might as well be showing a different world with how long ago the battles against the dragons were. They were of no real consequence to someone like you. And the gods, you scoffed. Well everyone knew they had abandoned you long ago.
 
 You hear the chapel doors swing open, and the sound of metal on granite as boots scraped the floor. You stand up and turn around to face who were once your friends. You know they are saying words, but you don&apos;t care to listen. You walk to the door. Forever into darkness.</string>
-	<key>Warrior Introduction</key>
-	<string>A warrior of Mirrah in the arena. Everyone shouting your name. Women cheering for you, men wanting to be you. This would be your last battle. The one that would grant you the title of champion. You could buy anything you wanted. This world would be yours. Only one thing stood in your way. That man.
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Warrior Introduction</string>
+			<key>lore</key>
+			<string>A warrior of Mirrah in the arena. Everyone shouting your name. Women cheering for you, men wanting to be you. This would be your last battle. The one that would grant you the title of champion. You could buy anything you wanted. This world would be yours. Only one thing stood in your way. That man.
 
 You could see the Berenike emblem on his shield. A knight you assumed. Not that it mattered. May a knight had fallen to your blade and mace. You walked towards the weapon rack and picked up your weapons. You could hear the announcer prepping the crowd. Riling them up. It got your blood pumping. Your heart racing. The more adrenaline that rushed into your body the less you could hear, until everything else was drowned out. You could hear your opponent breathing. See the sweat glistening off his brow. Feel the sand crunching beneath your leather boots.
 
@@ -60,29 +91,43 @@ A horn blasted, and you threw yourself at your opponent swinging mercilessly. Yo
 You throw your mace at your opponents head and he brings his shield up to block the assault blinding his vision. You throw yourself into the shield and bounce to the side of it, bringing your sword up into his chest, slipping between the cracks in his armor. A fatal blow, he knows as well as you.
 
 You drop your weapon down into the sand as you hear the crowd cheering and horns celebrating your victory. You raise your clenched fists in the air in celebration as you survey the crowd, sharing in their enjoyment. As you turn each section of the crowd begins to hush, getting quieter until nothing is heard. You look to the announcer in time to see him nod to the guardsman next to him. Just in time to feel the feel the first arrow slam into your back. And another. And another, this time pinning your leg. An entire volley of arrows strike you as you fall to the ground confused. Your face hits the sand and all you see is your hand, and a circle on it, glowing red with fire. Then darkness.</string>
-	<key>Sorcerer Introduction</key>
-	<string>You scramble with your parchment through the door and lock it quickly. You purchased every conceivable remedy, salve, treatment, herb, and spell you could think of. There had to be a way. This would not be the end of you. You place your purchases on the table and hear your assistant babbling on about some spell not working today, you didn&apos;t care to listen. He was always babbling. There was a knock at the door. You ignored it.
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Sorcerer Introduction</string>
+			<key>lore</key>
+			<string>You scramble with your parchment through the door and lock it quickly. You purchased every conceivable remedy, salve, treatment, herb, and spell you could think of. There had to be a way. This would not be the end of you. You place your purchases on the table and hear your assistant babbling on about some spell not working today, you didn&apos;t care to listen. He was always babbling. There was a knock at the door. You ignored it.
 
 You concealed your hand with a glove while you were out. But now you needed to study it. You sent your apprentice away, telling him to get some more Green Blossom. Just busy work really. You had plenty of it in your bag. Before even removing the glove you could tell it was burning. The accursed sign that had appeared that morning. A mark for the undead to bear. The knocking on the door grew louder. You needed to focus. Now was not the time for distractions.
 
 You could freeze it off. That must work. Cold is the opposite of heat, and you hadn&apos;t felt anything hotter than what was on your hand. You began mixing liquids together to create something so cold it could freeze time itself. Now all you needed was a little time.
 
 An explosion rocked your door off its hinges. A force pushed you to the ground. Several men entered yelling at you. You screamed at them, you were almost there! Who were they to say you could not succeeed where others failed. Some sorcerer elite from Vinheim! What did they know. They would never understand. As you struggle to break free of their enchantment one of the men knelt down to look in your eyes. They seemed to weep with such sorrow. He closed his eyes, spoke a few words, and then, slowly, you drifted into darkness.</string>
-	<key>Bandit Introduction</key>
-	<string>They had to have had help. They were on our camp in an instant. We had to run. There was no other option. You could smell the dampness in the air. A gentle mist from the air covered you as you sprinted through the woods. The ground was wet, the rocks were slippery. This would be good terrain to lose them. Their horses would have trouble moving through the woods in these conditions.
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Bandit Introduction</string>
+			<key>lore</key>
+			<string>They had to have had help. They were on our camp in an instant. We had to run. There was no other option. You could smell the dampness in the air. A gentle mist from the air covered you as you sprinted through the woods. The ground was wet, the rocks were slippery. This would be good terrain to lose them. Their horses would have trouble moving through the woods in these conditions.
 
 You paused to catch your breath. You told them not to attack that village. It was too close to Astora. That&apos;s what attracted these knights. The spoils weren&apos;t worth it. A few hundred gold pieces, some new equipment. The entire camp was slaughtered. Only a handful of us even made it to the forest. Who knew how many were left now.
 
 You could still hear the knights out there, shouting to eachother. The cries of the members of your crew that were still alive, slowly being silenced by a blade. What would you do now? Where would you go? You had nothing left but the clothes you wore. You put those thoughts out of your mind and began running again. All that mattered now was safety. You could stay with your uncle in Vinheim if you had to.
 
 There is a break in the trees as you run, stumbling onto a path. A lance catches you in the side impaling you. You didn&apos;t see the horse, or the knight it carried. You could feel the blood from your wound soaking your shirt. Your hand burning from the pain. Why was your hand burning? You were impaled in the side. Strange, you thought, as darkness came crashing in.</string>
-	<key>Hunter Introduction</key>
-	<string>Stealthily, you move about the grass. Blades of thick amber grain swept across your cloak as you moved silently through the plains. Hunting was not for the impatient. You had spent several hours tracking your quarry to it&apos;s den. Victory was near, you could taste it. Your village would eat well tonight.
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Hunter Introduction</string>
+			<key>lore</key>
+			<string>Stealthily, you move about the grass. Blades of thick amber grain swept across your cloak as you moved silently through the plains. Hunting was not for the impatient. You had spent several hours tracking your quarry to it&apos;s den. Victory was near, you could taste it. Your village would eat well tonight.
 
 You see the large boar not far ahead, tusks of ivory glimmering in the twilight. It&apos;s standing in front of a rocky cave entrance, which must be it&apos;s home. You nock an arrow to your bow, preparing for the right moment to let fly. You wait as the boar stamps at the ground, flattening it for a bed. It kneels to the ground and lets out a snort as it gets ready to sleep. You draw your bow back slowly, as to not make a sound. You breath in, and then out. As you exhale the last bit of breath you let go of the arrow and it whistles through the air. Perfect. A clean kill. 
 
 You walk up to the massive body and begin to wonder how you&apos;ll drag it back. You hear a rustle from behind you, and as you turn around, your body is slammed into the side of the rock wall behind you. Your body forcibly exhales from the impact. Another boar. Damn. You didn&apos;t see it. Quickly you grab an arrow from your quiver and stab at the boar&apos;s eye. Jamming it into it&apos;s face you hear the boar squeal and back away from you, before it runs off into the thick grass. You slide down slowly breathing a sigh of relief. That is, before you realize that one of the boar&apos;s tusks went through your chest. Must&apos;ve happened in the impact you think.
 
 You slowly stand, every breath you draw turns your lungs to fire. You need to make it back to the village. You can get help there. You walk slowly for hours, almost in a daze. Luckily it seems your feet knew where to take you. As you leave the forest you can see the village up ahead, you begin waving and catch the attention of the night watchman. You hear him shouting for help as you collapse to the ground, breathless and out of energy. At least you&apos;ll be safe now. You should really have someone take a look at your hand. It hurts more than your chest does now. Hands are moving you now, trying to get you back to the village. Then darkness.</string>
+		</dict>
+	</array>
 </dict>
 </plist>
