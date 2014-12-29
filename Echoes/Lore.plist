@@ -39,23 +39,184 @@ Thus began the Age of Fire. But soon, the flames will fade, and only dark will r
 			<key>title</key>
 			<string>You Wake Up</string>
 			<key>lore</key>
-			<string>Cold, and damp, your vision fades in. The gray stone walls surrounding you cleary have not been maintained. They look ready to crumble as the moss eats away at their integrity. There are several shadowed figures around you beginning to regain conciousness. Broken barrels lay about the room. A lone grated door exists at the center of the far wall.
+			<string>Cold, and damp, your vision fades in. The gray stone walls surrounding you cleary have not been maintained. They look ready to crumble as the moss eats away at their integrity. There are several shadowed figures around you beginning to regain conciousness. Broken barrels lay about the room, their shadows distinguished by the light cast from torches outside the cell. A lone grated door exists at the center of the far wall.
 
-A broken body comes crashing down to the center of the floor. You look up and spot a Knight dressed in full armor. He looks at you momentarily before moving away from the hole in the ceiling. You look to the body on the floor. It is clearly an Undead that has long since turned.</string>
+A broken body comes crashing down to the center of the floor. You look up and spot a Knight dressed in full armor. He looks at you momentarily before moving away from the hole in the ceiling. You look to the body on the floor. It is clearly an Undead that has long since turned.
+
+Items: Dungeon Cell Key</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Outside the Cell</string>
 			<key>lore</key>
-			<string>Cold, and damp, your vision fades in. The gray stone walls surrounding you cleary have not been maintained. They look ready to crumble as the moss eats away at their integrity. There are several shadowed figures around you beginning to regain conciousness. Broken barrels lay about the room. A lone grated door exists at the center of the far wall.
+			<string>Several torches along the arched hallway light your path. Several other cells line the corridor. You spot several dark figures against the left wall. They appear to be moving. The right side of the hall is lined with metal bars that you can see through, and you hear the pounding of large footsteps. To the far end of the hall appear to be stairs leading upward.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Dark Figures</string>
+			<key>lore</key>
+			<string>As you approach one of the dark figures it slowly turns it&apos;s head to look at you. Eyes sunken in it&apos;s gaze pierces your soul. It&apos;s skin a dark red color, with tattered rags sparsely covering it&apos;s body. Clearly an undead that has turned Hollow, and lost any sense of sanity in the process. You pray this is not to be your fate.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Stray Demon</string>
+			<key>lore</key>
+			<string>Looking through the metal grate you see a demon of monstrous proportions. His green scales are illuminated by the torchlight, wings that appear too small to carry the beast great distances twitch on his back. Several disfigured horns protrude from his face, with teeth that can only be described as grotesque. He stands at least ten men tall and appears to be pacing the ground in a large dungeon-like room. You think to yourself it would be wise to stay away from such a creature.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Up the Stairs</string>
+			<key>lore</key>
+			<string>Moving up the stairs you walk onto a small ledge above a small pool of water. The ledge leads around the room to another doorway. There appears to be a dark figure sitting in the corner, half submerged by the pool of water.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>To the Ladder</string>
+			<key>lore</key>
+			<string>Entering the doorway on the other end of the ledge, you walk down a small hallway, big enough to fit more than one of you at a time. At the end of the hallway you approach an octagonal room with a ladder on one wall. Looking up it is too dark to see what is at the top of the ladder.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Courtyard</string>
+			<key>lore</key>
+			<string>After climbing to the top of the ladder you move through a doorway into an open courtyard. The first thing you notice is a bonfire in the center of the courtyard. Your hand grows warmer as you stare at the bonfire, as if calling you towards it. The bonfire is located at the bottom of a set of stairs leading to two large doors. You notice a small gated doorway on the right wall of the courtyard.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Demon&apos;s Drop</string>
+			<key>lore</key>
+			<string>The heavy doors groan under your attempt to open them, slowly slipping open as you push harder. You enter a large rectangular courtyard. There are dozens of large vases scattered about the area, with light streaming down to the center of the courtyard. Another set of large doors lay at the other end of the courtyard. You hear the sound of loud stomping you heard before in the cell.
 
-A broken body comes crashing down to the center of the floor. You look up and spot a Knight dressed in full armor. He looks at you momentarily before moving away from the hole in the ceiling. You look to the body on the floor. It is clearly an Undead that has long since turned.</string>
+...
+
+As you stand about a large demon drops from the sky, slamming into the ground in front of you. You see the stones beneath his feet give way slightly under his sheer weight. Standing before you is assuredly a foul demon. It appears to be the same one you saw through the grate in the lower levels, with a heavy hammer in it&apos;s hands.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Escape the Demon</string>
+			<key>lore</key>
+			<string>Sprinting through the gate, it drops behind you as the demon narrowly misses with his large hammer. You hear a frustrated howl from behind you, and heavy stomping. You find yourself in a dark hallway, and notice another bonfire at the end of it.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Second Fire</string>
+			<key>lore</key>
+			<string>You are in a small room with water beneath you. A small doorway is on the opposite side of the room with light from outside pouring in.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Bottom of the Ramp</string>
+			<key>lore</key>
+			<string>Moving through the doorway you see a ramp of dirt and stone leading upward. Just outside the doorway you notice what appears to be a cache of equipment. At the top of the ramp stands an Undead Archer firing an arrow at you!
+
+Items:
+Knight - Longsword, Kite Shield
+Hunter - Shortsword, Short Bow
+Bandit - Battle Axe, Spider Shield
+Sorcerer - Sorcerer Catalyst, Soul Arrow
+Cleric - Mace, Force, Canvas Talisman
+Thief - Bandit Knife, Thief Mask
+Warrior - Broadsword, Heater Shield</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Top of the Ramp</string>
+			<key>lore</key>
+			<string>You make it to the top of the ramp and look through a broken archway leading back into the asylum. You see the undead archer waiting there for you. Behind him appears to be some sort of magical fog.
+
+Examining the fog before you, it is appears to be a magical gate that allows transit to the other side. 
+
+Moving through the fog gate it slowly dissapates allowing further passage.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Upper Pathways</string>
+			<key>lore</key>
+			<string>You find yourself on pathways above the first courtyard. You see a broken gate in front of you with what appears to be a knight in full armor on the ground inside a room. On your left there is a destroyed pathway littered with rubble, and to the right a pathway leading to stairs leading both up, and down.
+
+* Moving up the stairs, a large boulder begins to roll down at you. 3 damage to all that do not evade. It smashes through the wall behind you, leaving an opening. Moving up the stairs you encounter a Hollowed Undead. He aggressively attacks you! After dealing with him, you encounter a locked door.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Oscar&apos;s Room</string>
+			<key>lore</key>
+			<string>You find yourself on pathways above the first courtyard. You see a broken gate in front of you with what appears to be a knight in full armor on the ground inside a room. On your left there is a destroyed pathway littered with rubble, and to the right a pathway leading to stairs leading both up, and down.
+
+* Moving up the stairs, a large boulder begins to roll down at you. 3 damage to all that do not evade. It smashes through the wall behind you, leaving an opening.
+
+
+Oscar&apos;s Room
+
+Climbing of the rubble the boulder made, you see a knight leaning against the wall. He appears to be injured.
+
+First time speaking to him
+	…Oh, you… You&apos;re no Hollow, eh?
+	…Thank goodness…
+	…I&apos;m done for, I&apos;m afraid…
+	I&apos;ll die soon, then lose my sanity…
+	…I wish to ask something of you…
+	…You and I, we&apos;re both Undead… Hear me out, will you?
+	
+	Answer &quot;yes&quot;
+		…Regrettably, I have failed in my mission…
+		…But perhaps you can keep the torch lit…
+		…There is an old saying in my family…
+		…Thou who art Undead, art chosen…
+		…In thine exodus from the Undead Asylum, maketh pilgrimage to the land of Ancient Lords…
+		…When thou ringeth the Bell of Awakening, the fate of the Undead thou shalt know.
+		…Well, now you know… And I can die with hope in my heart…
+		…Oh, one more thing…Here, take this.
+		…An Estus Flsk, an Undead favourite.
+		…Oh, and this…
+		…Now I must bid farewell…
+		…I would hate to harm you after death…So, go now…
+		…And thank you…
+
+	Answer &quot;no&quot;
+		… Yes, I see…
+		… Perhaps I was too hopeful…
+		… Hah hah…
+		… Please, leave me be…
+		… I have not long to live, and I may harm you after death.
+		… Now, go…
+		
+		
+Items:
+All - Estus Flask
+One - Undead Asylum F2 East Key</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Outer Ramparts</string>
+			<key>lore</key>
+			<string>Moving through you door leads you to the outer ramparts of the asylum. Looking ahead you see tall mountains shrouded by fog. The sides of the ramparts are crumbling as the asylum is showing its age. The ramparts open up to your left, obscured by a short wall.
+
+After defeating the several hollows, you see a large doorway covered in the same mysterious fog as before. In front of you is a smaller doorway that leads back into the asylum.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Side Passage</string>
+			<key>lore</key>
+			<string>Moving into the side passage, you see an undead covered in steel armor, with a shield and a lance. He begins approaching you.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>The Aslyum Demon</string>
+			<key>lore</key>
+			<string>Moving through the fog gate you appear to be on a ledge above the courtyard that contained the large demon. You notice behind you that the fog gate has yet to disappate. Fear grips you as you look down to see the large demon looking up at you, growling.
+
+Items:
+Big Pilgrim&apos;s Key</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Leaving the Asylum</string>
 			<key>lore</key>
-			<string>Only, in the ancient legends it is stated...that one day an Undead shall be chosen. to leave the Undead Asylum, in pilgrimage. To the land of the ancient Lords, Lordran.</string>
+			<string>Pushing open the large doors, you look out onto a peninsula of land that seems to stretch up towards the sky.
+
+Making your way to the tip of a peninsula, large crows spring up, grab you with their claws, and begin carrying you away from the asylum.
+
+Only, in the ancient legends it is stated...that one day an Undead shall be chosen. to leave the Undead Asylum, in pilgrimage. To the land of the ancient Lords, Lordran.</string>
 		</dict>
 	</array>
 	<key>Class Lore</key>
