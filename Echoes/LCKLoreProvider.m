@@ -27,7 +27,30 @@
             [groupArray addObject:loreGroup];
         }];
         
-        lore = [groupArray copy];
+        lore = [groupArray sortedArrayUsingComparator:^NSComparisonResult(LCKLoreGroup *group1, LCKLoreGroup *group2) {
+            if ([group1.title isEqualToString:@"Class Lore"]) {
+                return YES;
+            }
+            else if ([group2.title isEqualToString:@"Class Lore"]) {
+                return NO;
+            }
+            
+            if ([group1.title isEqualToString:@"World Lore"]) {
+                return YES;
+            }
+            else if ([group2.title isEqualToString:@"World Lore"]) {
+                return NO;
+            }
+            
+            if ([group1.title isEqualToString:@"Asylum Lore"]) {
+                return YES;
+            }
+            else if ([group2.title isEqualToString:@"Asylum Lore"]) {
+                return NO;
+            }
+            
+            return NO;
+        }];
     });
     
     return lore;
