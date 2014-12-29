@@ -27,7 +27,9 @@
             [monsterArray addObject:monster];
         }];
         
-        monsters = [monsterArray copy];
+        monsters = [monsterArray sortedArrayUsingComparator:^NSComparisonResult(LCKMonster *monster1, LCKMonster *monster2) {
+            return [monster1.name localizedStandardCompare:monster2.name];
+        }];
     });
     
     return monsters;
