@@ -13,9 +13,12 @@
 #import "LCKCharacterPortrait.h"
 #import "LCKStatCell.h"
 #import "LCKInfoViewController.h"
+#import "LCKStatsCollectionViewController.h"
+#import "LCKStatInfoViewController.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
+#import "UIViewController+Presentation.h"
 
 #import <iCarousel/iCarousel.h>
 
@@ -29,7 +32,7 @@ CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselRadius = 135.0;
 CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
-@interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource, UITextFieldDelegate>
+@interface LCKEchoNewCharacterViewController () <iCarouselDelegate, iCarouselDataSource, UITextFieldDelegate, LCKStatsCollectionViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet iCarousel *classPicker;
 
@@ -38,10 +41,12 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (weak, nonatomic) IBOutlet UILabel *classDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UITextField *characterNameTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
-@property (weak, nonatomic) IBOutlet UICollectionView *statsCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *classPickerHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *statsFlowLayout;
+@property (nonatomic) LCKStatsCollectionViewController *statsCollectionViewController;
+
+@property (nonatomic) UIViewController *currentlyDisplayedViewController;
+@property (nonatomic) UIView *overlayView;
 
 @end
 
@@ -50,9 +55,6 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 #pragma mark - NSObject
 
 - (void)dealloc {
-    self.statsCollectionView.delegate = nil;
-    self.statsCollectionView.dataSource = nil;
-    
     self.characterNameTextField.delegate = nil;
 }
 
@@ -86,16 +88,23 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     [self carouselCurrentItemIndexDidChange:self.classPicker];
     
-    [self.statsCollectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
-    self.statsCollectionView.backgroundColor = [self.statsCollectionView.backgroundColor colorWithAlphaComponent:0.8];
-    
-    CGFloat itemSpacing = self.statsFlowLayout.minimumInteritemSpacing;
-    CGFloat numberOfItems = 5;
-    
-    self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, CGRectGetHeight(self.statsCollectionView.frame));
-    
     self.characterNameTextField.delegate = self;
     self.doneButton.enabled = NO;
+    
+    self.overlayView.hidden = YES;
+    [self.view addSubview:self.overlayView];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"StatsCollectionViewEmbed"]) {
+        self.statsCollectionViewController = segue.destinationViewController;
+        
+        NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
+        
+        CharacterStats *characterStats = [[[self.classes safeObjectAtIndex:self.classPicker.currentItemIndex] class] newCharacterStatsInContext:context];
+        self.statsCollectionViewController.displayedStats = characterStats;
+        self.statsCollectionViewController.delegate = self;
+    }
 }
 
 - (NSArray *)classes {
@@ -154,7 +163,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     self.classNameLabel.text = characterStats.className;
     self.classDescriptionLabel.text = characterStats.classDescription;
     
-    [self.statsCollectionView reloadData];
+    [self.statsCollectionViewController.collectionView reloadData];
     [self.characterNameTextField resignFirstResponder];
 }
 
@@ -173,28 +182,9 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     return portraitView;
 }
 
-#pragma mark - UICollectionViewDataSource
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return LCKEchoNewCharacterViewControllerNumberOfStats;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LCKStatCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LCKStatCellReuseIdentifier forIndexPath:indexPath];
-    
-    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
-    
-    CharacterStats *characterStats = [[[self.classes safeObjectAtIndex:self.classPicker.currentItemIndex] class] newCharacterStatsInContext:context];
-
-    cell.statNameLabel.text = [CharacterStats statNameForStatType:(LCKStatType)indexPath.row];
-    cell.statValueLabel.text = [characterStats statAsStringForStatType:(LCKStatType)indexPath.row];
-    
-    return cell;
-}
-
 #pragma mark - UITextFieldDelegate
 
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSUInteger length = textField.text.length - range.length + string.length;
    
     if (length > 0) {
@@ -207,4 +197,51 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     return YES;
 }
 
+#pragma mark - LCKStatsCollectionViewControllerDelegate
+
+- (void)statItemWasTappedForStatType:(LCKStatType)statType selectedCell:(UICollectionViewCell *)selectedCell {
+    LCKInfoViewController *infoViewController = [[LCKInfoViewController alloc] init];
+    infoViewController.arrowDirection = UIPopoverArrowDirectionDown;
+    
+    CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:self.statsCollectionViewController.collectionView];
+    
+    infoViewController.presentingRect = CGRectMake(cellFrame.origin.x - LCKStatInfoViewHorizontalMargin, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.width);
+    
+    [self presentViewController:infoViewController currentlyPresentedViewController:self.currentlyDisplayedViewController withFrame:[self statInfoViewFrameForCellFrame:cellFrame] fromView:selectedCell];
+    self.currentlyDisplayedViewController = infoViewController;
+    
+    self.overlayView.hidden = NO;
+    
+    infoViewController.titleLabel.text = [CharacterStats statTitleForStatType:statType];
+    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:statType];
+}
+
+- (UIView *)overlayView {
+    if (!_overlayView) {
+        _overlayView = [[UIView alloc] initWithFrame:self.view.frame];
+        _overlayView.clipsToBounds = NO;
+        _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        
+        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(overlayViewTapped)];
+        
+        [_overlayView addGestureRecognizer:dismissGesture];
+    }
+    
+    return _overlayView;
+}
+
+- (void)overlayViewTapped {
+    [self dismissCurrentlyPresentedViewController:self.currentlyDisplayedViewController animationBlock:^{
+        self.overlayView.alpha = 0.02;
+    } withCompletion:^{
+        self.currentlyDisplayedViewController = nil;
+        
+        self.overlayView.hidden = YES;
+        self.overlayView.alpha = 1.0;
+    }];
+}
+
+- (CGRect)statInfoViewFrameForCellFrame:(CGRect)cellFrame {
+    return CGRectMake(LCKStatInfoViewHorizontalMargin, CGRectGetMinY(cellFrame) - LCKStatInfoViewHeight - LCKStatInfoViewBottomMargin, CGRectGetWidth(self.view.frame) - LCKStatInfoViewHorizontalMargin * 2, LCKStatInfoViewHeight);
+}
 @end

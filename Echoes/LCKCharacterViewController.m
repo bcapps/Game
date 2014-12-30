@@ -30,6 +30,8 @@
 #import <LCKCategories/NSArray+LCKAdditions.h>
 #import <UICountingLabel/UICountingLabel.h>
 
+typedef void(^LCKItemViewControllerDismissCompletion)();
+
 const CGFloat LCKCharacterViewControllerAnimationDuration = 0.4;
 const CGFloat LCKItemViewControllerHorizontalMargin = 45.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
@@ -41,8 +43,6 @@ const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
 const CGFloat LCKCharacterStatInfoViewHeight = 145.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
-
-typedef void(^LCKItemViewControllerDismissCompletion)();
 
 @interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate>
 

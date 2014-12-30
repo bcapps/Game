@@ -35,6 +35,8 @@ NSString * const LCKStatCellReuseIdentifier = @"LCKStatCellReuseIdentifier";
 }
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
+    
     self.statNameLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)/2);
     self.statValueLabel.frame = CGRectMake(0, CGRectGetHeight(self.frame)/2, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)/2);
 }

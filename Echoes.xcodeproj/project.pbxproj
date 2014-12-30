@@ -136,6 +136,9 @@
 		F268F0671A4F3F3100AEA410 /* LCKEventProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0661A4F3F3100AEA410 /* LCKEventProvider.m */; };
 		F268F06A1A50C36500AEA410 /* LCKLoreGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0691A50C36500AEA410 /* LCKLoreGroup.m */; };
 		F268F06C1A50CA0A00AEA410 /* dungeoncellkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */; };
+		F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F06E1A5283F200AEA410 /* LCKStatsCollectionViewController.m */; };
+		F268F0721A52863200AEA410 /* LCKStatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */; };
+		F268F0751A5286D300AEA410 /* UIViewController+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -322,6 +325,12 @@
 		F268F0681A50C36500AEA410 /* LCKLoreGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoreGroup.h; sourceTree = "<group>"; };
 		F268F0691A50C36500AEA410 /* LCKLoreGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoreGroup.m; sourceTree = "<group>"; };
 		F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dungeoncellkey@2x.png"; sourceTree = "<group>"; };
+		F268F06D1A5283F200AEA410 /* LCKStatsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatsCollectionViewController.h; sourceTree = "<group>"; };
+		F268F06E1A5283F200AEA410 /* LCKStatsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatsCollectionViewController.m; sourceTree = "<group>"; };
+		F268F0701A52863200AEA410 /* LCKStatInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatInfoViewController.h; sourceTree = "<group>"; };
+		F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatInfoViewController.m; sourceTree = "<group>"; };
+		F268F0731A5286D300AEA410 /* UIViewController+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Presentation.h"; sourceTree = "<group>"; };
+		F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Presentation.m"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -564,6 +573,12 @@
 				F21F432D1A2F851100FEA417 /* LCKStatCell.m */,
 				F21F43A11A3BB9A200FEA417 /* LCKInfoViewController.h */,
 				F21F43A21A3BB9A200FEA417 /* LCKInfoViewController.m */,
+				F268F06D1A5283F200AEA410 /* LCKStatsCollectionViewController.h */,
+				F268F06E1A5283F200AEA410 /* LCKStatsCollectionViewController.m */,
+				F268F0701A52863200AEA410 /* LCKStatInfoViewController.h */,
+				F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */,
+				F268F0731A5286D300AEA410 /* UIViewController+Presentation.h */,
+				F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -979,6 +994,7 @@
 				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
 				F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */,
+				F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */,
 				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
 				F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
@@ -1027,7 +1043,9 @@
 				F21F432E1A2F851100FEA417 /* LCKStatCell.m in Sources */,
 				F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */,
 				F21F43621A32CE0500FEA417 /* LCKMultipeerManager.m in Sources */,
+				F268F0751A5286D300AEA410 /* UIViewController+Presentation.m in Sources */,
 				F2206B3C1A2D428F006E44B0 /* CharacterStats.m in Sources */,
+				F268F0721A52863200AEA410 /* LCKStatInfoViewController.m in Sources */,
 				F21F43281A2F813800FEA417 /* LCKItemButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
