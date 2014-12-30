@@ -100,8 +100,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
         self.statsCollectionViewController = segue.destinationViewController;
         
         NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
-        
         CharacterStats *characterStats = [[[self.classes safeObjectAtIndex:self.classPicker.currentItemIndex] class] newCharacterStatsInContext:context];
+
         self.statsCollectionViewController.displayedStats = characterStats;
         self.statsCollectionViewController.delegate = self;
     }
@@ -165,6 +165,11 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     [self.statsCollectionViewController.collectionView reloadData];
     [self.characterNameTextField resignFirstResponder];
+    
+    NSManagedObjectContext *context = [[LCKEchoCoreDataController sharedController] newMainQueueContext];
+    CharacterStats *newCharacterStats = [[[self.classes safeObjectAtIndex:self.classPicker.currentItemIndex] class] newCharacterStatsInContext:context];
+
+    self.statsCollectionViewController.displayedStats = newCharacterStats;
 }
 
 #pragma mark - iCarouselDataSource
