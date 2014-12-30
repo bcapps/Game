@@ -41,6 +41,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 @property (weak, nonatomic) IBOutlet UICollectionView *statsCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *classPickerHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *statsFlowLayout;
 
 @end
 
@@ -87,6 +88,11 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
     
     [self.statsCollectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     self.statsCollectionView.backgroundColor = [self.statsCollectionView.backgroundColor colorWithAlphaComponent:0.8];
+    
+    CGFloat itemSpacing = self.statsFlowLayout.minimumInteritemSpacing;
+    CGFloat numberOfItems = 5;
+    
+    self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, CGRectGetHeight(self.statsCollectionView.frame));
     
     self.characterNameTextField.delegate = self;
     self.doneButton.enabled = NO;

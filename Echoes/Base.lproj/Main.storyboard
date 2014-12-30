@@ -758,6 +758,7 @@
                         <outlet property="doneButton" destination="tcJ-Q4-Xki" id="bih-Cw-4aO"/>
                         <outlet property="genderSegmentedControl" destination="En8-ha-hzX" id="cqX-D8-1U7"/>
                         <outlet property="statsCollectionView" destination="KrK-tE-GzK" id="lv9-hd-Fll"/>
+                        <outlet property="statsFlowLayout" destination="R7z-Ue-8TY" id="RD4-Qb-8at"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlI-va-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
