@@ -15,9 +15,8 @@ extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
 extern NSString * const LCKMultipeerEventReceivedNotificiation;
 
 extern NSString * const LCKMultipeerPeerStateChangedNotification;
+extern NSString * const LCKMultipeerValueKey;
 
-extern NSString * const LCKMultipeerSoulsKey;
-extern NSString * const LCKMultipeerItemKey;
 extern NSString * const LCKMultipeerJournalEntryTitle;
 extern NSString * const LCKMultipeerJournalEntryDescription;
 

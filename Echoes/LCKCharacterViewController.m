@@ -470,7 +470,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 #pragma mark - Multipeer
 
 - (void)itemReceived:(NSNotification *)notification {
-    NSString *itemName = [notification.userInfo objectForKey:LCKMultipeerItemKey];
+    NSString *itemName = [notification.userInfo objectForKey:LCKMultipeerValueKey];
     
     LCKItem *item = [LCKItemProvider itemForName:itemName];
     
@@ -483,7 +483,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 }
 
 - (void)soulsReceived:(NSNotification *)notification {
-    NSNumber *souls = [notification.userInfo objectForKey:LCKMultipeerSoulsKey];
+    NSNumber *souls = [notification.userInfo objectForKey:LCKMultipeerValueKey];
     NSNumber *newAmount = @(self.character.souls.integerValue + souls.integerValue);
     
     [self.soulsButton.soulLabel countFromCurrentValueTo:newAmount.floatValue withDuration:1.5];
