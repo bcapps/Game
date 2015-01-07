@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+extern NSString * const LCKDMDisplayName;
+
 @interface LCKDMManager : NSObject
 
 + (BOOL)isDMMode;

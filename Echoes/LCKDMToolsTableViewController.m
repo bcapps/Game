@@ -17,6 +17,7 @@
 #import "LCKMultipeerManager.h"
 #import "LCKMapsTableViewController.h"
 #import "LCKEventsTableViewController.h"
+#import "LCKDMManager.h"
 
 typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     LCKDMToolsRowAllItems,
@@ -46,7 +47,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:@"DM"];
+    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:LCKDMDisplayName];
     [self.multipeerManager startMonitoring];
 }
 

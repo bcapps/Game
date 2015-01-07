@@ -114,8 +114,6 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
     NSLog(@"Found Peer %@", peerID.displayName);
     
-    [browser invitePeer:nil toSession:nil withContext:nil timeout:30];
-
     if (![peerID.displayName isEqualToString:self.characterName]) {
         [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
     }

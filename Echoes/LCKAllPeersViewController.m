@@ -23,6 +23,7 @@
 
 @property (nonatomic) LCKMultipeerManager *multipeerManager;
 @property (nonatomic) NSArray *peerIDs;
+@property (nonatomic) NSArray *peers;
 
 @end
 
@@ -67,6 +68,18 @@
     return self;
 }
 
+- (NSArray *)peers {    
+    NSMutableArray *peers = [NSMutableArray array];
+    
+    for (MCPeerID *peerID in self.multipeerManager.session.connectedPeers) {
+        if (![peerID.displayName isEqualToString:LCKDMDisplayName]) {
+            [peers addObject:peerID];
+        }
+    }
+    
+    return [peers copy];
+}
+
 - (void)send {
     for (MCPeerID *peerID in self.peerIDs) {
         if (self.item) {
@@ -95,7 +108,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
+    MCPeerID *peerID = [self.peers safeObjectAtIndex:indexPath.row];
     
     if (peerID) {
         if (self.peerType == LCKAllPeersTypeDM) {
@@ -128,7 +141,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.multipeerManager.session.connectedPeers.count;
+    return self.peers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -136,7 +149,7 @@
     cell.backgroundColor = [UIColor backgroundColor];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
-    MCPeerID *peerID = [self.multipeerManager.session.connectedPeers safeObjectAtIndex:indexPath.row];
+    MCPeerID *peerID = [self.peers safeObjectAtIndex:indexPath.row];
     
     cell.textLabel.text = peerID.displayName;
     cell.textLabel.font = [UIFont titleTextFontOfSize:15.0];

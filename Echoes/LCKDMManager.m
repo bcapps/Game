@@ -8,6 +8,8 @@
 
 #import "LCKDMManager.h"
 
+NSString * const LCKDMDisplayName = @"DM";
+
 @implementation LCKDMManager
 
 + (BOOL)isDMMode {
