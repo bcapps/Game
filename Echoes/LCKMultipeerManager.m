@@ -134,15 +134,6 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 // Incoming invitation request.  Call the invitationHandler block with YES and a valid session to connect the inviting peer to the session.
 - (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didReceiveInvitationFromPeer:(MCPeerID *)peerID withContext:(NSData *)context invitationHandler:(void(^)(BOOL accept, MCSession *session))invitationHandler {
-//    var runningTime = -timeStarted.timeIntervalSinceNow
-//    var peerRunningTime = NSTimeInterval()
-//    context.getBytes(&peerRunningTime)
-//    let isPeerOlder = (peerRunningTime > runningTime)
-//    invitationHandler(isPeerOlder, mcSession)
-//    if isPeerOlder {
-//        advertiser.stopAdvertisingPeer()
-//    }
-
     NSLog(@"Did Receive Invitiation From Peer");
 
     NSTimeInterval runningTime = -self.timeStarted.timeIntervalSinceNow;
