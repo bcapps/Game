@@ -68,7 +68,7 @@
     return self;
 }
 
-- (NSArray *)peers {    
+- (NSArray *)peers {
     NSMutableArray *peers = [NSMutableArray array];
     
     for (MCPeerID *peerID in self.multipeerManager.session.connectedPeers) {

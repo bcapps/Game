@@ -35,6 +35,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 @property (nonatomic) MCNearbyServiceBrowser *serviceBrowser;
 @property (nonatomic) MCNearbyServiceAdvertiser *serviceAdvertiser;
 @property (nonatomic) MCSession *session;
+@property (nonatomic) NSDate *timeStarted;
 
 @end
 
@@ -71,6 +72,8 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
         
         self.session = [[MCSession alloc] initWithPeer:peerID];
         self.session.delegate = self;
+        
+        _timeStarted = [NSDate date];
     }
 }
 
@@ -115,7 +118,10 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     NSLog(@"Found Peer %@", peerID.displayName);
     
     if (![peerID.displayName isEqualToString:self.characterName]) {
-        [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
+        NSTimeInterval runningTime = -self.timeStarted.timeIntervalSinceNow;
+        NSData *context = [NSData dataWithBytes:&runningTime length:sizeof(NSTimeInterval)];
+        
+        [browser invitePeer:peerID toSession:self.session withContext:context timeout:30];
     }
 }
 
@@ -128,10 +134,28 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 // Incoming invitation request.  Call the invitationHandler block with YES and a valid session to connect the inviting peer to the session.
 - (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didReceiveInvitationFromPeer:(MCPeerID *)peerID withContext:(NSData *)context invitationHandler:(void(^)(BOOL accept, MCSession *session))invitationHandler {
+//    var runningTime = -timeStarted.timeIntervalSinceNow
+//    var peerRunningTime = NSTimeInterval()
+//    context.getBytes(&peerRunningTime)
+//    let isPeerOlder = (peerRunningTime > runningTime)
+//    invitationHandler(isPeerOlder, mcSession)
+//    if isPeerOlder {
+//        advertiser.stopAdvertisingPeer()
+//    }
+
     NSLog(@"Did Receive Invitiation From Peer");
 
+    NSTimeInterval runningTime = -self.timeStarted.timeIntervalSinceNow;
+    NSTimeInterval peerRunningTime = 0;
+    [context getBytes:&peerRunningTime];
+    BOOL isPeerOlder = peerRunningTime > runningTime;
+    
     if (invitationHandler) {
-        invitationHandler(YES, self.session);
+        invitationHandler(isPeerOlder, self.session);
+    }
+    
+    if (isPeerOlder) {
+        [advertiser stopAdvertisingPeer];
     }
 }
 
