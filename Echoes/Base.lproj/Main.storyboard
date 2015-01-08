@@ -286,9 +286,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOl-u6-uL3" userLabel="Souls Button" customClass="LCKStatusButton">
-                                <rect key="frame" x="370" y="40" width="207" height="28"/>
+                                <rect key="frame" x="355" y="40" width="222" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="46U-eE-Rzp"/>
+                                    <constraint firstAttribute="height" constant="36" id="46U-eE-Rzp"/>
                                     <constraint firstAttribute="width" constant="112" id="jSB-rE-nC9"/>
                                 </constraints>
                                 <state key="normal">
@@ -355,7 +355,7 @@
                             <constraint firstAttribute="width" secondItem="oab-Ny-zTp" secondAttribute="width" id="sdS-dV-Z2J"/>
                             <constraint firstItem="7UR-hi-74E" firstAttribute="top" secondItem="n7P-e8-J8t" secondAttribute="bottom" constant="10" id="vgz-Wp-rZc"/>
                             <constraint firstItem="EmM-eE-XlB" firstAttribute="top" secondItem="oab-Ny-zTp" secondAttribute="bottom" constant="5" id="w7y-4M-MIb"/>
-                            <constraint firstItem="yOl-u6-uL3" firstAttribute="leading" secondItem="675-xe-31g" secondAttribute="leading" constant="-10" id="zKs-NK-WDe"/>
+                            <constraint firstItem="yOl-u6-uL3" firstAttribute="leading" secondItem="675-xe-31g" secondAttribute="leading" constant="-25" id="zKs-NK-WDe"/>
                             <constraint firstItem="IHP-mI-kKS" firstAttribute="leading" secondItem="U3k-ex-baV" secondAttribute="trailing" constant="-20" id="zN9-Iu-kUw"/>
                         </constraints>
                         <variation key="default">

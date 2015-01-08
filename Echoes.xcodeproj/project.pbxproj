@@ -47,7 +47,6 @@
 		F21F43921A3A567900FEA417 /* mace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43911A3A567900FEA417 /* mace@2x.png */; };
 		F21F43961A3A576300FEA417 /* heatershield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43951A3A576300FEA417 /* heatershield@2x.png */; };
 		F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43991A3A57DF00FEA417 /* soularrow@2x.png */; };
-		F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */; };
 		F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */; };
 		F21F43A31A3BB9A200FEA417 /* LCKInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21F43A21A3BB9A200FEA417 /* LCKInfoViewController.m */; };
 		F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43A41A3BBDFC00FEA417 /* canvastalisman@2x.png */; };
@@ -104,6 +103,7 @@
 		F2206B7B1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */; };
 		F2206B821A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
 		F2206B831A2D8C7A006E44B0 /* LCKCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */; };
+		F24C8C931A5E0F8B00B65CFC /* soulsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F24C8C921A5E0F8B00B65CFC /* soulsIcon@2x.png */; };
 		F26412F71A3F851600287EFA /* BanditIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412F61A3F851600287EFA /* BanditIconFemale@2x.png */; };
 		F26412F91A3F87D800287EFA /* ClericIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412F81A3F87D800287EFA /* ClericIconFemale@2x.png */; };
 		F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26412FA1A3F87E100287EFA /* HunterIconFemale@2x.png */; };
@@ -212,7 +212,6 @@
 		F21F43911A3A567900FEA417 /* mace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mace@2x.png"; sourceTree = "<group>"; };
 		F21F43951A3A576300FEA417 /* heatershield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heatershield@2x.png"; sourceTree = "<group>"; };
 		F21F43991A3A57DF00FEA417 /* soularrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soularrow@2x.png"; sourceTree = "<group>"; };
-		F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soulsIcon@2x.png"; sourceTree = "<group>"; };
 		F21F439E1A3BB39400FEA417 /* LCKStatusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKStatusButton.h; sourceTree = "<group>"; };
 		F21F439F1A3BB39400FEA417 /* LCKStatusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatusButton.m; sourceTree = "<group>"; };
 		F21F43A11A3BB9A200FEA417 /* LCKInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKInfoViewController.h; sourceTree = "<group>"; };
@@ -278,6 +277,7 @@
 		F2206B791A2D7E8D006E44B0 /* UIColor+ColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorStyle.m"; sourceTree = "<group>"; };
 		F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCharacterViewController.h; sourceTree = "<group>"; };
 		F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCharacterViewController.m; sourceTree = "<group>"; };
+		F24C8C921A5E0F8B00B65CFC /* soulsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soulsIcon@2x.png"; sourceTree = "<group>"; };
 		F26412F61A3F851600287EFA /* BanditIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BanditIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26412F81A3F87D800287EFA /* ClericIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClericIconFemale@2x.png"; sourceTree = "<group>"; };
 		F26412FA1A3F87E100287EFA /* HunterIconFemale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HunterIconFemale@2x.png"; sourceTree = "<group>"; };
@@ -551,8 +551,8 @@
 				F21F43351A2FC08D00FEA417 /* DownArrow@2x.png */,
 				F21F43361A2FC08D00FEA417 /* UpArrow@2x.png */,
 				F21F43331A2FBCC700FEA417 /* heartIcon@2x.png */,
+				F24C8C921A5E0F8B00B65CFC /* soulsIcon@2x.png */,
 				F21F436D1A36872C00FEA417 /* giftIcon@2x.png */,
-				F21F439C1A3BA87400FEA417 /* soulsIcon@2x.png */,
 				F2206AFB1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.h */,
 				F2206AFC1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m */,
 				F2206B251A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.h */,
@@ -862,6 +862,7 @@
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
 				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
 				F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */,
+				F24C8C931A5E0F8B00B65CFC /* soulsIcon@2x.png in Resources */,
 				F21F43881A3A54C900FEA417 /* shortbow@2x.png in Resources */,
 				F21F43A91A3BBF6400FEA417 /* shortsword@2x.png in Resources */,
 				F21F43861A3A54AB00FEA417 /* broadsword@2x.png in Resources */,
@@ -891,7 +892,6 @@
 				F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
-				F21F439D1A3BA87400FEA417 /* soulsIcon@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
 				F268F06C1A50CA0A00AEA410 /* dungeoncellkey@2x.png in Resources */,
 				F26412FB1A3F87E100287EFA /* HunterIconFemale@2x.png in Resources */,
