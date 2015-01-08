@@ -41,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     self.itemNameLabel.text = self.item.name;
     self.itemNameLabel.textColor = [UIColor titleTextColor];
     self.itemNameLabel.font = [UIFont titleTextFontOfSize:16.0];
