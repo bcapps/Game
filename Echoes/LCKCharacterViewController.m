@@ -431,7 +431,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
             equipmentTypes = @[@(LCKItemSlotSpell)];
         }
 
-        viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes equipmentSlot:equipmentSlot];
+        viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes equipmentSlot:equipmentSlot];        
     }
     
     [self presentViewController:viewController withFrame:[self itemControllerFrame] fromView:button];
