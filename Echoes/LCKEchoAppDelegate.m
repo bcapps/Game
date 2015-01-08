@@ -34,6 +34,8 @@
     
     self.window.tintColor = [UIColor whiteColor];
     
+    application.idleTimerDisabled = YES;
+    
     return YES;
 }
 
