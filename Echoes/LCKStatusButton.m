@@ -35,7 +35,7 @@
     
     self.imageView.frame = CGRectMake(0, 0.0, 32.0 , CGRectGetHeight(self.frame));
     
-    CGRect soulLabelFrame = CGRectMake(CGRectGetWidth(self.imageView.frame) + 5.0, 0.0, CGRectGetWidth(self.frame) - CGRectGetWidth(self.imageView.frame) - 2.0, CGRectGetHeight(self.frame));
+    CGRect soulLabelFrame = CGRectMake(CGRectGetWidth(self.imageView.frame) + 5.0, 2.0, CGRectGetWidth(self.frame) - CGRectGetWidth(self.imageView.frame) - 2.0, CGRectGetHeight(self.frame) - 2.0);
     
     self.soulLabel.frame = soulLabelFrame;
 }
