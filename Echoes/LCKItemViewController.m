@@ -148,6 +148,12 @@
     }
 }
 
+- (IBAction)closeButtonTapped:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(closeButtonTappedForItemViewController:)]) {
+        [self.delegate closeButtonTappedForItemViewController:self];
+    }
+}
+
 - (IBAction)useItemButtonTapped:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(useItemButtonTappedForItemViewController:)]) {
         [self.delegate useItemButtonTappedForItemViewController:self];

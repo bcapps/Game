@@ -146,6 +146,10 @@ const CGFloat LCKEquipmentViewControllerSectionHeaderHeight = 44.0;
     return items;
 }
 
+- (void)closeButtonTapped {
+    [self.delegate closeButtonWasTappedForEquipmentViewController:self];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -181,8 +185,15 @@ const CGFloat LCKEquipmentViewControllerSectionHeaderHeight = 44.0;
     
     UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(headerLabel.frame) - 1.0, CGRectGetWidth(headerLabel.frame), 1.0)];
     separatorLine.backgroundColor = [UIColor descriptiveTextColor];
+    
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44.0, 44.0)];
+    [closeButton setImage:[[UIImage imageNamed:@"CloseIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    
+    [closeButton addTarget:self action:@selector(closeButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
     [headerView addSubview:headerLabel];
     [headerView addSubview:separatorLine];
+    [headerView addSubview:closeButton];
     
     return headerView;
 }

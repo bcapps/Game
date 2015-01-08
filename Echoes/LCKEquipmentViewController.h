@@ -10,6 +10,7 @@
 
 @class Character;
 @class LCKItem;
+@class LCKEquipmentViewController;
 
 #import "LCKItem.h"
 #import "CharacterStats.h"
@@ -17,6 +18,7 @@
 @protocol LCKEquipmentViewControllerDelegate <NSObject>
 
 - (void)itemWasSelected:(LCKItem *)item equipmentSlot:(LCKEquipmentSlot)equipmentSlot;
+- (void)closeButtonWasTappedForEquipmentViewController:(LCKEquipmentViewController *)viewController;
 
 @end
 

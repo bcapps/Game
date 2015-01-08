@@ -604,6 +604,10 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self dismissCurrentlyPresentedViewController:nil];
 }
 
+- (void)closeButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
+    [self dismissCurrentlyPresentedViewController:nil];
+}
+
 #pragma mark - LCKEquipmentViewControllerDelegate
 
 - (void)itemWasSelected:(LCKItem *)item equipmentSlot:(LCKEquipmentSlot)equipmentSlot {
@@ -613,6 +617,10 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self updateItemButtons];
+    [self dismissCurrentlyPresentedViewController:nil];
+}
+
+- (void)closeButtonWasTappedForEquipmentViewController:(LCKEquipmentViewController *)viewController {
     [self dismissCurrentlyPresentedViewController:nil];
 }
 
