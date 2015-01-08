@@ -70,6 +70,8 @@
         case LCKItemSlotSpell:
             placeholderImage = [UIImage imageNamed:@"spellIcon"];
             break;
+        case LCKItemSlotNone:
+            break;
     }
     
     return [placeholderImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];

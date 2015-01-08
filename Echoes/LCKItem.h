@@ -10,6 +10,7 @@
 @import UIKit;
 
 typedef NS_ENUM(NSUInteger, LCKItemSlot) {
+    LCKItemSlotNone,
     LCKItemSlotHelmet,
     LCKItemSlotChest,
     LCKItemSlotBoots,

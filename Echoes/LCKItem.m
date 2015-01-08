@@ -184,7 +184,7 @@ NSString * const LCKItemCodingEmptyVersionKey = @"LCKItemCodingEmptyVersionKey";
         return LCKItemSlotSpell;
     }
     
-    return 0;
+    return LCKItemSlotNone;
 }
 
 - (BOOL)isAppropriateForItemSlot:(LCKItemSlot)itemSlot {
@@ -207,6 +207,8 @@ NSString * const LCKItemCodingEmptyVersionKey = @"LCKItemCodingEmptyVersionKey";
             return LCKItemTypeNameAccessory;
         case LCKItemSlotSpell:
             return LCKItemTypeNameSpell;
+        case LCKItemSlotNone:
+            return nil;
     }
 }
 
@@ -226,6 +228,8 @@ NSString * const LCKItemCodingEmptyVersionKey = @"LCKItemCodingEmptyVersionKey";
             return [UIImage imageNamed:@"accessoryIcon"];
         case LCKItemSlotSpell:
             return [UIImage imageNamed:@"spellIcon"];
+        case LCKItemSlotNone:
+            return nil;
     }
 }
 

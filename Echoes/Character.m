@@ -34,6 +34,10 @@
         updatedItem.equipped = item.isEquipped;
         updatedItem.equippedSlot = item.equippedSlot;
         
+        if (updatedItem.itemSlot == LCKItemSlotNone && updatedItem.equipped) {
+            updatedItem.equipped = NO;
+        }
+        
         if (updatedItem) {
             [updatedItems addObject:[updatedItem copy]];
         }
