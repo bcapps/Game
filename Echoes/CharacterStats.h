@@ -49,6 +49,7 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 
 - (NSString *)statAsStringForStatType:(LCKStatType)statType;
 - (NSNumber *)statValueForStatType:(LCKStatType)statType;
+- (void)addStatValue:(NSUInteger)statValue forStatType:(LCKStatType)statType;
 
 - (NSNumber *)statValueForStatString:(NSString *)statString;
 

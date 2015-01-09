@@ -45,7 +45,7 @@ const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
 const CGFloat LCKCharacterStatInfoViewHeight = 145.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate>
+@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate, LCKLevelUpDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -526,9 +526,9 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 //        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 //        [self updateHealthText];
 //    }
-    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName]) {
+    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName] && self.character.canLevelUp) {
         LCKLevelUpTableViewController *levelUpController = [[LCKLevelUpTableViewController alloc] initWithCharacter:self.character];
-        
+        levelUpController.delegate = self;
         [self presentViewController:levelUpController withFrame:[self itemControllerFrame] fromView:nil];
     }
 }
@@ -636,6 +636,15 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.navigationController popToViewController:self animated:YES];
     
     [self.character removeItemFromInventory:item];
+}
+
+#pragma mark - LCKLevelUpDelegate
+
+- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller {
+    [self.collectionView reloadData];
+    [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
+
+    [self dismissCurrentlyPresentedViewController:nil];
 }
 
 @end

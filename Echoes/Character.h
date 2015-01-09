@@ -39,6 +39,10 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 @property (nonatomic, readonly) LCKItem *equippedChest;
 @property (nonatomic, readonly) LCKItem *equippedBoots;
 
+@property (nonatomic, readonly) BOOL canLevelUp;
+
+- (void)increaseLevel;
+
 - (void)equipItem:(LCKItem *)item;
 - (void)unequipItem:(LCKItem *)item;
 

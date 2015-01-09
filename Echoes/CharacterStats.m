@@ -27,6 +27,21 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     return nil;
 }
 
+- (void)addStatValue:(NSUInteger)statValue forStatType:(LCKStatType)statType {
+    switch (statType) {
+        case LCKStatTypeVitality:
+            self.vitality = @(self.vitality.integerValue + 1);
+        case LCKStatTypeStrength:
+            self.strength = @(self.strength.integerValue + 1);
+        case LCKStatTypeDexterity:
+            self.dexterity = @(self.dexterity.integerValue + 1);
+        case LCKStatTypeIntelligence:
+            self.intelligence = @(self.intelligence.integerValue + 1);
+        case LCKStatTypeFaith:
+            self.faith = @(self.faith.integerValue + 1);
+    }
+}
+
 - (NSNumber *)statHealth {
     NSUInteger health = CharacterStatsInitialHealth + self.startingHealthModification + (CharacterStatsVitalityModifier * self.vitality.integerValue);
     

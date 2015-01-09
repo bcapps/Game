@@ -10,6 +10,7 @@
 #import "LCKBaseCell.h"
 
 #import "CharacterStats.h"
+#import "LCKEchoCoreDataController.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
@@ -35,8 +36,8 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.scrollEnabled = NO;
     
@@ -74,6 +75,16 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
     }
     
     return self;
+}
+
+- (void)levelUpButtonTapped {
+    NSUInteger statIndex = [self.increaseButtonArray indexOfObject:self.selectedButton];
+    
+    [self.character.characterStats addStatValue:1 forStatType:statIndex];
+    [self.character increaseLevel];
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    
+    [self.delegate levelUpButtonTappedForController:self];
 }
 
 #pragma mark - UITableViewDataSource
@@ -117,17 +128,23 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), LCKLevelUpTableViewControllerSectionHeaderHeight)];
     headerView.backgroundColor = self.tableView.backgroundColor;
     
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:headerView.bounds];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.text = @"Level Up";
-    headerLabel.textColor = [UIColor titleTextColor];
-    headerLabel.font = [UIFont titleTextFontOfSize:16.0];
-    headerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    UIButton *levelUpButton = [[UIButton alloc] initWithFrame:headerView.bounds];
+    [levelUpButton setTitle:@"Level Up" forState:UIControlStateNormal];
+    [levelUpButton setTitleColor:[UIColor titleTextColor] forState:UIControlStateNormal];
+    [levelUpButton setTitleColor:[UIColor descriptiveTextColor] forState:UIControlStateHighlighted];
+    [levelUpButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateDisabled];
+    levelUpButton.titleLabel.font = [UIFont titleTextFontOfSize:16.0];
+    levelUpButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [levelUpButton addTarget:self action:@selector(levelUpButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
-    UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(headerLabel.frame) - 1.0, CGRectGetWidth(headerLabel.frame), 1.0)];
+    if (!self.selectedButton) {
+        levelUpButton.enabled = NO;
+    }
+    
+    UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(levelUpButton.frame) - 1.0, CGRectGetWidth(levelUpButton.frame), 1.0)];
     separatorLine.backgroundColor = [UIColor descriptiveTextColor];
     
-    [headerView addSubview:headerLabel];
+    [headerView addSubview:levelUpButton];
     [headerView addSubview:separatorLine];
     
     return headerView;

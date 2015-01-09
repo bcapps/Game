@@ -9,9 +9,18 @@
 @import UIKit;
 
 @class Character;
+@class LCKLevelUpTableViewController;
+
+@protocol LCKLevelUpDelegate <NSObject>
+
+- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller;
+
+@end
 
 @interface LCKLevelUpTableViewController : UITableViewController
 
 - (instancetype)initWithCharacter:(Character *)character;
+
+@property (nonatomic, weak) id <LCKLevelUpDelegate> delegate;
 
 @end

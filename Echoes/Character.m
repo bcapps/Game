@@ -49,6 +49,15 @@
     self.items = [updatedItems copy];
 }
 
+- (void)increaseLevel {
+    self.souls = @(self.souls.integerValue - [self soulValueForLevelUp].integerValue);
+    self.level = @(self.level.integerValue + 1);
+}
+
+- (BOOL)canLevelUp {
+    return self.souls.integerValue >= [self soulValueForLevelUp].integerValue;
+}
+
 - (CharacterGender)characterGender {
     if ([self.gender isEqualToNumber:@(0)]) {
         return CharacterGenderMale;
@@ -211,6 +220,20 @@
     }
     
     return meetsRequirements;
+}
+
+- (NSNumber *)soulValueForLevelUp {
+    if (self.level.integerValue == 1) {
+        return @(2000);
+    }
+    else if (self.level.integerValue == 2) {
+        return @(4000);
+    }
+    else if (self.level.integerValue == 3) {
+        return @(6000);
+    }
+    
+    return @(999999999);
 }
 
 @end
