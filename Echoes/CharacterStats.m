@@ -31,14 +31,19 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     switch (statType) {
         case LCKStatTypeVitality:
             self.vitality = @(self.vitality.integerValue + 1);
+            break;
         case LCKStatTypeStrength:
             self.strength = @(self.strength.integerValue + 1);
+            break;
         case LCKStatTypeDexterity:
             self.dexterity = @(self.dexterity.integerValue + 1);
+            break;
         case LCKStatTypeIntelligence:
             self.intelligence = @(self.intelligence.integerValue + 1);
+            break;
         case LCKStatTypeFaith:
             self.faith = @(self.faith.integerValue + 1);
+            break;
     }
 }
 
