@@ -139,11 +139,17 @@
 		F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F06E1A5283F200AEA410 /* LCKStatsCollectionViewController.m */; };
 		F268F0721A52863200AEA410 /* LCKStatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */; };
 		F268F0751A5286D300AEA410 /* UIViewController+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */; };
+		F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */; };
+		F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */; };
+		F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */; };
+		F2D374C91A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C21A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png */; };
+		F2D374CA1A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C31A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png */; };
+		F2D374CC1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */; };
+		F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
 		F2FE1CD21A4A7CF400FA161C /* LCKZoomableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */; };
-		F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */; };
 		F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1CD81A4E2F7300FA161C /* force@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -331,6 +337,13 @@
 		F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatInfoViewController.m; sourceTree = "<group>"; };
 		F268F0731A5286D300AEA410 /* UIViewController+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Presentation.h"; sourceTree = "<group>"; };
 		F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Presentation.m"; sourceTree = "<group>"; };
+		F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatacombsMap@2x.png"; sourceTree = "<group>"; };
+		F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewLondoRuinsMap@2x.png"; sourceTree = "<group>"; };
+		F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadBurgMap@2x.png"; sourceTree = "<group>"; };
+		F2D374C21A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UpperBlighttownMap@2x.png"; sourceTree = "<group>"; };
+		F2D374C31A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ValleyOfDrakesMap@2x.png"; sourceTree = "<group>"; };
+		F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FirelinkShrineMap@2x.png"; sourceTree = "<group>"; };
+		F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadAsylumMap@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -338,7 +351,6 @@
 		F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKScalingImageView.m; sourceTree = "<group>"; };
 		F2FE1CD01A4A7CF400FA161C /* LCKZoomableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKZoomableImageViewController.h; sourceTree = "<group>"; };
 		F2FE1CD11A4A7CF400FA161C /* LCKZoomableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKZoomableImageViewController.m; sourceTree = "<group>"; };
-		F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Undead Asylum@3x.png"; sourceTree = "<group>"; };
 		F2FE1CD81A4E2F7300FA161C /* force@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "force@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -753,7 +765,13 @@
 		F2FE1CD31A4A7E3F00FA161C /* Map Images */ = {
 			isa = PBXGroup;
 			children = (
-				F2FE1CD61A4A7FE100FA161C /* Undead Asylum@3x.png */,
+				F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */,
+				F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */,
+				F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */,
+				F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */,
+				F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */,
+				F2D374C21A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png */,
+				F2D374C31A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png */,
 			);
 			name = "Map Images";
 			sourceTree = "<group>";
@@ -860,6 +878,7 @@
 				F21F43921A3A567900FEA417 /* mace@2x.png in Resources */,
 				F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */,
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
+				F2D374CC1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png in Resources */,
 				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
 				F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */,
 				F24C8C931A5E0F8B00B65CFC /* soulsIcon@2x.png in Resources */,
@@ -878,18 +897,23 @@
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
+				F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
 				F26413261A48FD3000287EFA /* Lore.plist in Resources */,
 				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
+				F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
+				F2D374CA1A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png in Resources */,
 				F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,
 				F21F43751A37F09D00FEA417 /* accessoryIcon@2x.png in Resources */,
 				F21F438E1A3A55BF00FEA417 /* battleaxe@2x.png in Resources */,
+				F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
-				F2FE1CD71A4A7FE100FA161C /* Undead Asylum@3x.png in Resources */,
+				F2D374C91A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png in Resources */,
+				F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,

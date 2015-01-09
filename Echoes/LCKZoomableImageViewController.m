@@ -12,7 +12,7 @@
 #import "UIColor+ColorStyle.h"
 
 const CGFloat LCKScalingImageViewiPhoneMaxZoomScale = 1.5;
-const CGFloat LCKScalingImageViewiPadMaxZoomScale = 2.0;
+const CGFloat LCKScalingImageViewiPadMaxZoomScale = 3.0;
 
 const CGFloat LCKScalingImageViewPinchDismissZoomScale = 0.75;
 
@@ -79,7 +79,13 @@ const CGFloat LCKScalingImageViewPinchDismissZoomScale = 0.75;
         self.minimumZoomScale = minScale;
         
         self.scalingImageView.minimumZoomScale = self.minimumZoomScale;
-        self.scalingImageView.maximumZoomScale = LCKScalingImageViewiPhoneMaxZoomScale;
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            self.scalingImageView.maximumZoomScale = LCKScalingImageViewiPhoneMaxZoomScale;
+        }
+        else {
+            self.scalingImageView.maximumZoomScale = LCKScalingImageViewiPadMaxZoomScale;
+        }
         
         self.scalingImageView.zoomScale = self.minimumZoomScale;
     }

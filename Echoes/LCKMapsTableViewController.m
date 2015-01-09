@@ -24,7 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mapNames = @[@"Undead Asylum"];
+    self.mapNames = @[@"CatacombsMap", @"FirelinkShrineMap", @"NewLondoRuinsMap", @"UndeadAsylumMap", @"UndeadBurgMap", @"UpperBlighttownMap", @"ValleyOfDrakesMap"];
+    [self.mapNames sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
     
     [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
     
@@ -56,6 +57,8 @@
     UIImage *mapImage = [UIImage imageNamed:mapName];
     
     LCKZoomableImageViewController *mapImageViewController = [[LCKZoomableImageViewController alloc] initWithImage:mapImage];
+    mapImageViewController.title = mapName;
+    
     [self.navigationController pushViewController:mapImageViewController animated:YES];
 }
 
