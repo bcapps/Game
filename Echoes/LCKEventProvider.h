@@ -9,6 +9,7 @@
 @import Foundation;
 
 extern NSString * const LCKEventProviderRestAtBonfireEventName;
+extern NSString * const LCKEventProviderLevelUpEventName;
 
 @interface LCKEventProvider : NSObject
 

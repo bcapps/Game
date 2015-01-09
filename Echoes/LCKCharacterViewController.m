@@ -497,36 +497,36 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 - (void)eventReceived:(NSNotification *)notification {
     NSString *eventName = [notification.userInfo objectForKey:@"value"];
     
-//    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName]) {
-//        LCKItem *emptyFlask;
-//        
-//        for (LCKItem *item in self.character.items) {
-//            if ([item.name isEqualToString:@"Empty Flask"]) {
-//                emptyFlask = item;
-//                break;
-//            }
-//        }
-//        
-//        self.character.currentHealth = self.character.maximumHealth;
-//        
-//        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
-//        self.decreaseHealthButton.enabled = YES;
-//
-//        if (emptyFlask) {
-//            LCKItem *healingFlask = [LCKItemProvider itemForName:@"Healing Flask"];
-//            healingFlask.equipped = emptyFlask.equipped;
-//            healingFlask.equippedSlot = emptyFlask.equippedSlot;
-//            
-//            [self.character removeItemFromInventory:emptyFlask];
-//            [self.character addItemToInventory:healingFlask];
-//
-//            [self updateItemButtons];
-//        }
-//        
-//        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
-//        [self updateHealthText];
-//    }
-    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName] && self.character.canLevelUp) {
+    if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName]) {
+        LCKItem *emptyFlask;
+        
+        for (LCKItem *item in self.character.items) {
+            if ([item.name isEqualToString:@"Empty Flask"]) {
+                emptyFlask = item;
+                break;
+            }
+        }
+        
+        self.character.currentHealth = self.character.maximumHealth;
+        
+        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+        self.decreaseHealthButton.enabled = YES;
+
+        if (emptyFlask) {
+            LCKItem *healingFlask = [LCKItemProvider itemForName:@"Healing Flask"];
+            healingFlask.equipped = emptyFlask.equipped;
+            healingFlask.equippedSlot = emptyFlask.equippedSlot;
+            
+            [self.character removeItemFromInventory:emptyFlask];
+            [self.character addItemToInventory:healingFlask];
+
+            [self updateItemButtons];
+        }
+        
+        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+        [self updateHealthText];
+    }
+    else if ([eventName isEqualToString:LCKEventProviderLevelUpEventName] && self.character.canLevelUp) {
         LCKLevelUpTableViewController *levelUpController = [[LCKLevelUpTableViewController alloc] initWithCharacter:self.character];
         levelUpController.delegate = self;
         [self presentViewController:levelUpController withFrame:[self itemControllerFrame] fromView:nil];
