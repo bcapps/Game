@@ -646,6 +646,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 
     [self updateHealthText];
+    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+
     [self.collectionView reloadData];
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
 

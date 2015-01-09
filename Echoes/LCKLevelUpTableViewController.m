@@ -116,15 +116,18 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return LCKLevelUpTableViewControllerSectionHeaderHeight;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), LCKLevelUpTableViewControllerSectionHeaderHeight)];
     headerView.backgroundColor = self.tableView.backgroundColor;
     
-    UIButton *levelUpButton = [[UIButton alloc] initWithFrame:headerView.bounds];
+    CGRect levelUpButtonFrame = headerView.bounds;
+    levelUpButtonFrame.origin.y = 8.0;
+    
+    UIButton *levelUpButton = [[UIButton alloc] initWithFrame:levelUpButtonFrame];
     [levelUpButton setTitle:@"Level Up" forState:UIControlStateNormal];
     [levelUpButton setTitleColor:[UIColor titleTextColor] forState:UIControlStateNormal];
     [levelUpButton setTitleColor:[UIColor descriptiveTextColor] forState:UIControlStateHighlighted];
@@ -137,7 +140,7 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
         levelUpButton.enabled = NO;
     }
     
-    UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(levelUpButton.frame) - 1.0, CGRectGetWidth(levelUpButton.frame), 1.0)];
+    UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(0.0, 4.0, CGRectGetWidth(levelUpButton.frame), 1.0)];
     separatorLine.backgroundColor = [UIColor descriptiveTextColor];
     
     [headerView addSubview:levelUpButton];
