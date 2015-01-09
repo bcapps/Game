@@ -249,4 +249,5 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 - (CGRect)statInfoViewFrameForCellFrame:(CGRect)cellFrame {
     return CGRectMake(LCKStatInfoViewHorizontalMargin, CGRectGetMinY(cellFrame) - LCKStatInfoViewHeight - LCKStatInfoViewBottomMargin, CGRectGetWidth(self.view.frame) - LCKStatInfoViewHorizontalMargin * 2, LCKStatInfoViewHeight);
 }
+
 @end

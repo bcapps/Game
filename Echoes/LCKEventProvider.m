@@ -10,6 +10,7 @@
 #import "LCKEvent.h"
 
 NSString * const LCKEventProviderRestAtBonfireEventName = @"Rest At Bonfire";
+NSString * const LCKEventProviderLevelUpEventName = @"Level Up";
 
 @implementation LCKEventProvider
 
@@ -19,8 +20,9 @@ NSString * const LCKEventProviderRestAtBonfireEventName = @"Rest At Bonfire";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         LCKEvent *bonfireEvent = [[LCKEvent alloc] initWithName:LCKEventProviderRestAtBonfireEventName];
+        LCKEvent *levelEvent = [[LCKEvent alloc] initWithName:LCKEventProviderLevelUpEventName];
         
-        events = @[bonfireEvent];
+        events = @[bonfireEvent, levelEvent];
     });
     
     return events;

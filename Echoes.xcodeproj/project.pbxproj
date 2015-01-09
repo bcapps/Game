@@ -146,6 +146,7 @@
 		F2D374CA1A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C31A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png */; };
 		F2D374CC1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */; };
 		F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */; };
+		F2D374D11A5F839B004CFDAF /* LCKLevelUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -344,6 +345,8 @@
 		F2D374C31A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ValleyOfDrakesMap@2x.png"; sourceTree = "<group>"; };
 		F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FirelinkShrineMap@2x.png"; sourceTree = "<group>"; };
 		F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadAsylumMap@2x.png"; sourceTree = "<group>"; };
+		F2D374CF1A5F839B004CFDAF /* LCKLevelUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLevelUpTableViewController.h; sourceTree = "<group>"; };
+		F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLevelUpTableViewController.m; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -591,6 +594,8 @@
 				F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */,
 				F268F0731A5286D300AEA410 /* UIViewController+Presentation.h */,
 				F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */,
+				F2D374CF1A5F839B004CFDAF /* LCKLevelUpTableViewController.h */,
+				F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -1021,6 +1026,7 @@
 				F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */,
 				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
 				F26413091A40CBCF00287EFA /* LCKMonster.m in Sources */,
+				F2D374D11A5F839B004CFDAF /* LCKLevelUpTableViewController.m in Sources */,
 				F2206B381A2D428F006E44B0 /* Warrior.m in Sources */,
 				F2FE1CD21A4A7CF400FA161C /* LCKZoomableImageViewController.m in Sources */,
 				F264132C1A48FEFD00287EFA /* LCKLore.m in Sources */,

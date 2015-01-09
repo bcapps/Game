@@ -48,6 +48,21 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
     }
 }
 
+- (NSNumber *)statValueForStatType:(LCKStatType)statType {
+    switch (statType) {
+        case LCKStatTypeVitality:
+            return self.vitality;
+        case LCKStatTypeStrength:
+            return self.strength;
+        case LCKStatTypeDexterity:
+            return self.dexterity;
+        case LCKStatTypeIntelligence:
+            return self.intelligence;
+        case LCKStatTypeFaith:
+            return self.faith;
+    }
+}
+
 + (NSString *)statNameForStatType:(LCKStatType)statType {
     switch (statType) {
         case LCKStatTypeVitality:

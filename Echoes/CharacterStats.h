@@ -48,6 +48,7 @@ extern NSUInteger const CharacterStatsVitalityModifier;
 - (UIImage *)classImageForGender:(CharacterGender)gender;
 
 - (NSString *)statAsStringForStatType:(LCKStatType)statType;
+- (NSNumber *)statValueForStatType:(LCKStatType)statType;
 
 - (NSNumber *)statValueForStatString:(NSString *)statString;
 
