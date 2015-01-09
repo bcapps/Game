@@ -11,9 +11,11 @@
 @class Character;
 @class LCKLevelUpTableViewController;
 
+#import "CharacterStats.h"
+
 @protocol LCKLevelUpDelegate <NSObject>
 
-- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller;
+- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller statTypeToLevel:(LCKStatType)statType;
 
 @end
 

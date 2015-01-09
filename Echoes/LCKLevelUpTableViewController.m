@@ -79,12 +79,8 @@ const CGFloat LCKLevelUpTableViewControllerSectionHeaderHeight = 38.0;
 
 - (void)levelUpButtonTapped {
     NSUInteger statIndex = [self.increaseButtonArray indexOfObject:self.selectedButton];
-    
-    [self.character.characterStats addStatValue:1 forStatType:statIndex];
-    [self.character increaseLevel];
-    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
-    
-    [self.delegate levelUpButtonTappedForController:self];
+        
+    [self.delegate levelUpButtonTappedForController:self statTypeToLevel:statIndex];
 }
 
 #pragma mark - UITableViewDataSource

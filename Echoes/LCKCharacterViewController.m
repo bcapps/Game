@@ -640,7 +640,12 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 #pragma mark - LCKLevelUpDelegate
 
-- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller {
+- (void)levelUpButtonTappedForController:(LCKLevelUpTableViewController *)controller statTypeToLevel:(LCKStatType)statType {
+    [self.character.characterStats addStatValue:1 forStatType:statType];
+    [self.character increaseLevel];
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+
+    [self updateHealthText];
     [self.collectionView reloadData];
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
 
