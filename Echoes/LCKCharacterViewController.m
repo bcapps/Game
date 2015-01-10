@@ -255,6 +255,10 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     return CGRectMake(LCKItemViewControllerHorizontalMargin, LCKItemViewControllerVerticalMargin, CGRectGetWidth(self.view.frame) - LCKItemViewControllerHorizontalMargin * 2, CGRectGetHeight(self.view.frame) - LCKItemViewControllerVerticalMargin * 2);
 }
 
+- (CGRect)levelUpControllerFrame {
+    return CGRectMake(LCKItemViewControllerHorizontalMargin, LCKItemViewControllerVerticalMargin, CGRectGetWidth(self.view.frame) - LCKItemViewControllerHorizontalMargin * 2, 280.0);
+}
+
 #pragma mark - Silhoutte
 
 - (void)setupSilhouetteGender {
@@ -529,7 +533,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     else if ([eventName isEqualToString:LCKEventProviderLevelUpEventName] && self.character.canLevelUp) {
         LCKLevelUpTableViewController *levelUpController = [[LCKLevelUpTableViewController alloc] initWithCharacter:self.character];
         levelUpController.delegate = self;
-        [self presentViewController:levelUpController withFrame:[self itemControllerFrame] fromView:nil];
+        [self presentViewController:levelUpController withFrame:[self levelUpControllerFrame] fromView:nil];
     }
 }
 
