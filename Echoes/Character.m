@@ -224,14 +224,66 @@
 
 - (NSNumber *)soulValueForLevelUp {
     if (self.level.integerValue == 1) {
-        return @(2000);
+        return @(850);
     }
     else if (self.level.integerValue == 2) {
-        return @(4000);
+        return @(2600);
     }
     else if (self.level.integerValue == 3) {
-        return @(6000);
+        return @(5500);
     }
+    else if (self.level.integerValue == 4) {
+        return @(9500);
+    }
+    else if (self.level.integerValue == 5) {
+        return @(14500);
+    }
+    else if (self.level.integerValue == 6) {
+        return @(20800);
+    }
+    else if (self.level.integerValue == 7) {
+        return @(28500);
+    }
+    else if (self.level.integerValue == 8) {
+        return @(37000);
+    }
+    else if (self.level.integerValue == 9) {
+        return @(48000);
+    }
+    else if (self.level.integerValue == 10) {
+        return @(60000);
+    }
+    else if (self.level.integerValue == 11) {
+        return @(74000);
+    }
+    else if (self.level.integerValue == 12) {
+        return @(90500);
+    }
+    else if (self.level.integerValue == 13) {
+        return @(109000);
+    }
+    else if (self.level.integerValue == 14) {
+        return @(128000);
+    }
+    else if (self.level.integerValue == 15) {
+        return @(151000);
+    }
+    else if (self.level.integerValue == 16) {
+        return @(176000);
+    }
+    else if (self.level.integerValue == 17) {
+        return @(204000);
+    }
+    else if (self.level.integerValue == 18) {
+        return @(234000);
+    }
+    else if (self.level.integerValue == 19) {
+        return @(266000);
+    }
+    else if (self.level.integerValue == 20) {
+        return @(300000);
+    }
+
     
     return @(999999999);
 }
