@@ -359,5 +359,157 @@ And dies to protect it further.</string>
 		<key>itemSlot</key>
 		<string>accessory</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Winged Spear</string>
+		<key>actionText</key>
+		<string>Thrust: Stab an enemy for 2d4 + [STR]. If the enemy is wearing armor, add 5 damage.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>A long-hilted spear with a barbed point. Long reach, and can be used with shield up. Effective against hard exteriors.</string>
+		<key>imageName</key>
+		<string>wingedspear</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 4</string>
+			<string>DEX 4</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Zweihander</string>
+		<key>actionText</key>
+		<string>Cleave: Cleave any adjacent enemies for 2d8 + 2 * [STR]. Chance to knock an enemy down when struck.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>As the name suggests, the Zweihander is held with two hands, but its wielder must still be inhumanly strong. It is this great weight that sends foes flying when hit solidly.</string>
+		<key>imageName</key>
+		<string>zweihander</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 5</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>twohand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Binoculars</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Increases attack and damage rolls for ranged weapons by 2.</string>
+		<key>flavorText</key>
+		<string></string>
+		<key>imageName</key>
+		<string>binoculars</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 5</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>accessory</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ring of Sacrifice</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Prevents death caused by curses.</string>
+		<key>flavorText</key>
+		<string>This mystical ring was created in a sacrificial rite of Velka, the Goddess of Sin.</string>
+		<key>imageName</key>
+		<string>ringofsacrifice</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 5</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>accessory</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blue Tearstone Ring</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Reduce physical damage taken by 1.</string>
+		<key>flavorText</key>
+		<string>This blue tearstone from Catarina boosts the defence of its wearer when in danger.</string>
+		<key>imageName</key>
+		<string>ringofsacrifice</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 5</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>accessory</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Uchigatana</string>
+		<key>actionText</key>
+		<string>Slash: Swing downward causing 2d6 + [DEX] damage to an enemy.</string>
+		<key>descriptiveText</key>
+		<string>Causes 2 additional bleed damage every time the enemy moves until it dies.</string>
+		<key>flavorText</key>
+		<string>Katana forged in an Eastern land. Known for its brisk slashing motions. The Uchigatana cuts beautifully and causes bleeding, but its blade is easily nicked.</string>
+		<key>imageName</key>
+		<string>uchigatana</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 3</string>
+		</array>
+		<key>itemSlot</key>
+		<string>twohand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Black Knight Shield</string>
+		<key>actionText</key>
+		<string>Cover: Raise your shield over an ally standing next to you. They gain the benefits of the shield while they remain near you.</string>
+		<key>descriptiveText</key>
+		<string>Reduces physical damage received by 3. Prevents fire damage while covering.</string>
+		<key>flavorText</key>
+		<string>Shield of the Black Knights that wander Lordran. A flowing canal is chiseled deeply into its face.</string>
+		<key>imageName</key>
+		<string>blackknightshield</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 3</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Black Knight Sword</string>
+		<key>actionText</key>
+		<string>Slash: Swing your sword in an arc dealing 3d6 + [STR] to up to two enemies in front of you.</string>
+		<key>descriptiveText</key>
+		<string>Deals an extra 1d6 damage when used against demons.</string>
+		<key>flavorText</key>
+		<string>Greatsword of the black knights who wander Lordran. Used to face chaos demons.</string>
+		<key>imageName</key>
+		<string>blackknightsword</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 3</string>
+		</array>
+		<key>itemSlot</key>
+		<string>twohand</string>
+	</dict>
 </array>
 </plist>

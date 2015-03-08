@@ -147,6 +147,16 @@
 		F2D374CC1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CB1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png */; };
 		F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */; };
 		F2D374D11A5F839B004CFDAF /* LCKLevelUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */; };
+		F2D374D51A60BADB004CFDAF /* LCKJournalProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */; };
+		F2D374D71A60BAF2004CFDAF /* Journal.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D374D61A60BAF2004CFDAF /* Journal.plist */; };
+		F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D8188F1AABCDFF00051561 /* binoculars@2x.png */; };
+		F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818901AABCDFF00051561 /* blackknightshield@2x.png */; };
+		F2D818991AABCDFF00051561 /* blackknightsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818911AABCDFF00051561 /* blackknightsword@2x.png */; };
+		F2D8189A1AABCDFF00051561 /* bluetearstonering@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818921AABCDFF00051561 /* bluetearstonering@2x.png */; };
+		F2D8189B1AABCDFF00051561 /* ringofsacrifice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818931AABCDFF00051561 /* ringofsacrifice@2x.png */; };
+		F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818941AABCDFF00051561 /* uchigatana@2x.png */; };
+		F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818951AABCDFF00051561 /* wingedspear@2x.png */; };
+		F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818961AABCDFF00051561 /* zweihander@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -347,6 +357,17 @@
 		F2D374CD1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadAsylumMap@2x.png"; sourceTree = "<group>"; };
 		F2D374CF1A5F839B004CFDAF /* LCKLevelUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLevelUpTableViewController.h; sourceTree = "<group>"; };
 		F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLevelUpTableViewController.m; sourceTree = "<group>"; };
+		F2D374D31A60BADB004CFDAF /* LCKJournalProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKJournalProvider.h; sourceTree = "<group>"; };
+		F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKJournalProvider.m; sourceTree = "<group>"; };
+		F2D374D61A60BAF2004CFDAF /* Journal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Journal.plist; sourceTree = "<group>"; };
+		F2D8188F1AABCDFF00051561 /* binoculars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "binoculars@2x.png"; sourceTree = "<group>"; };
+		F2D818901AABCDFF00051561 /* blackknightshield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackknightshield@2x.png"; sourceTree = "<group>"; };
+		F2D818911AABCDFF00051561 /* blackknightsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackknightsword@2x.png"; sourceTree = "<group>"; };
+		F2D818921AABCDFF00051561 /* bluetearstonering@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluetearstonering@2x.png"; sourceTree = "<group>"; };
+		F2D818931AABCDFF00051561 /* ringofsacrifice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ringofsacrifice@2x.png"; sourceTree = "<group>"; };
+		F2D818941AABCDFF00051561 /* uchigatana@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uchigatana@2x.png"; sourceTree = "<group>"; };
+		F2D818951AABCDFF00051561 /* wingedspear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wingedspear@2x.png"; sourceTree = "<group>"; };
+		F2D818961AABCDFF00051561 /* zweihander@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zweihander@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -417,6 +438,14 @@
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
 				F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */,
+				F2D8188F1AABCDFF00051561 /* binoculars@2x.png */,
+				F2D818901AABCDFF00051561 /* blackknightshield@2x.png */,
+				F2D818911AABCDFF00051561 /* blackknightsword@2x.png */,
+				F2D818921AABCDFF00051561 /* bluetearstonering@2x.png */,
+				F2D818931AABCDFF00051561 /* ringofsacrifice@2x.png */,
+				F2D818941AABCDFF00051561 /* uchigatana@2x.png */,
+				F2D818951AABCDFF00051561 /* wingedspear@2x.png */,
+				F2D818961AABCDFF00051561 /* zweihander@2x.png */,
 				F268F0561A4E3D9A00AEA410 /* healingflask@2x.png */,
 				F21F43911A3A567900FEA417 /* mace@2x.png */,
 				F2FE1CD81A4E2F7300FA161C /* force@2x.png */,
@@ -442,6 +471,7 @@
 		F21F43631A32D75B00FEA417 /* DM Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2D374D21A60BAC7004CFDAF /* Journals */,
 				F2FE1CC91A4A588F00FA161C /* Maps */,
 				F26413241A48FD0600287EFA /* Items */,
 				F26413231A48FD0200287EFA /* Souls */,
@@ -753,6 +783,16 @@
 			name = Events;
 			sourceTree = "<group>";
 		};
+		F2D374D21A60BAC7004CFDAF /* Journals */ = {
+			isa = PBXGroup;
+			children = (
+				F2D374D61A60BAF2004CFDAF /* Journal.plist */,
+				F2D374D31A60BADB004CFDAF /* LCKJournalProvider.h */,
+				F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */,
+			);
+			name = Journals;
+			sourceTree = "<group>";
+		};
 		F2FE1CC91A4A588F00FA161C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +918,7 @@
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */,
 				F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */,
+				F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
 				F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */,
 				F21F43921A3A567900FEA417 /* mace@2x.png in Resources */,
@@ -885,12 +926,16 @@
 				F2206B701A2D43FE006E44B0 /* WarriorIcon@2x.png in Resources */,
 				F2D374CC1A5F5C5D004CFDAF /* FirelinkShrineMap@2x.png in Resources */,
 				F21F436E1A36872C00FEA417 /* giftIcon@2x.png in Resources */,
+				F2D818991AABCDFF00051561 /* blackknightsword@2x.png in Resources */,
 				F21F439A1A3A57DF00FEA417 /* soularrow@2x.png in Resources */,
+				F2D374D71A60BAF2004CFDAF /* Journal.plist in Resources */,
 				F24C8C931A5E0F8B00B65CFC /* soulsIcon@2x.png in Resources */,
 				F21F43881A3A54C900FEA417 /* shortbow@2x.png in Resources */,
 				F21F43A91A3BBF6400FEA417 /* shortsword@2x.png in Resources */,
 				F21F43861A3A54AB00FEA417 /* broadsword@2x.png in Resources */,
+				F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */,
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
+				F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */,
 				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
 				F26413051A40C8B700287EFA /* Monsters.plist in Resources */,
 				F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */,
@@ -904,10 +949,14 @@
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
 				F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
+				F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */,
 				F26413261A48FD3000287EFA /* Lore.plist in Resources */,
+				F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */,
 				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
+				F2D8189A1AABCDFF00051561 /* bluetearstonering@2x.png in Resources */,
+				F2D8189B1AABCDFF00051561 /* ringofsacrifice@2x.png in Resources */,
 				F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
 				F2D374CA1A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png in Resources */,
@@ -1053,6 +1102,7 @@
 				F2206B501A2D4290006E44B0 /* Cleric.m in Sources */,
 				F21F43AC1A3C0B6800FEA417 /* LCKSoulGiftingViewController.m in Sources */,
 				F268F0641A4F3F2100AEA410 /* LCKEvent.m in Sources */,
+				F2D374D51A60BADB004CFDAF /* LCKJournalProvider.m in Sources */,
 				F26413291A48FED100287EFA /* LCKLoreProvider.m in Sources */,
 				F21F433E1A2FCF4C00FEA417 /* LCKItemViewController.m in Sources */,
 				F26413351A49064B00287EFA /* Journal.m in Sources */,

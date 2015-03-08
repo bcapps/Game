@@ -77,6 +77,47 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Black Knight</key>
+	<dict>
+		<key>AC</key>
+		<integer>14</integer>
+		<key>Health</key>
+		<integer>33</integer>
+		<key>To Hit</key>
+		<integer>9</integer>
+		<key>Soul Value</key>
+		<integer>500</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Cleave</string>
+				<key>description</key>
+				<string>Swing his greatsword in an arc dealing 2d6 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Stab</string>
+				<key>description</key>
+				<string>Stab one target for 2d6+4 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 3.</string>
+			</dict>
+		</array>
+	</dict>
 	<key>Asylum Demon</key>
 	<dict>
 		<key>AC</key>
@@ -154,6 +195,64 @@
 				<string>Soft Under Belly</string>
 				<key>description</key>
 				<string>Takes 1 additional physical damage from frontal attacks.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Taurus Demon</key>
+	<dict>
+		<key>AC</key>
+		<integer>7</integer>
+		<key>Health</key>
+		<integer>80</integer>
+		<key>To Hit</key>
+		<integer>8</integer>
+		<key>Soul Value</key>
+		<real>4000</real>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Leap</string>
+				<key>description</key>
+				<string>Leaps into the air reversing his direction, slamming the ground for 1d6 + 2 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Axe Pound</string>
+				<key>description</key>
+				<string>A downward axe thrust hitting enemies in front of him for 2d6 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Jumping Pound</string>
+				<key>description</key>
+				<string>Crouches down. Leaps towards any enemy outside of his reach dealing 2d6 + 5 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Giant Swing</string>
+				<key>description</key>
+				<string>Cocks the greataxe back. Swings in an arc in front of him for 3d4 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Demon</string>
+				<key>description</key>
+				<string>This enemy is vulnerable to demon weapons.</string>
 			</dict>
 		</array>
 	</dict>
