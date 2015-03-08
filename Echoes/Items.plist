@@ -545,5 +545,23 @@ And dies to protect it further.</string>
 		<key>itemSlot</key>
 		<string></string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blood Spear</string>
+		<key>actionText</key>
+		<string>Conjure: Fires an arrow shaped bolt of magic dealing 1d8 + [INT] damage. Lose 1 health.</string>
+		<key>descriptiveText</key>
+		<string>Forms a magical spear to pierce using your own blood as a catalyst. </string>
+		<key>flavorText</key>
+		<string>How else do you achieve power without a little blood, sweat, and tears?</string>
+		<key>imageName</key>
+		<string>bloodspear</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>INT 5</string>
+		</array>
+		<key>itemSlot</key>
+		<string>spell</string>
+	</dict>
 </array>
 </plist>
