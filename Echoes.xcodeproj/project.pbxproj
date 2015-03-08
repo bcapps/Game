@@ -161,6 +161,7 @@
 		F2D818A71AABFB3B00051561 /* firebomb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818A31AABF94900051561 /* firebomb@2x.png */; };
 		F2D818A91AABFCFA00051561 /* Undead Male Merchant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818A81AABFCFA00051561 /* Undead Male Merchant@2x.png */; };
 		F2D818AB1AABFD5200051561 /* Black Knight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818AA1AABFD5200051561 /* Black Knight@2x.png */; };
+		F2D818AD1AABFDE500051561 /* masterkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818AC1AABFDE500051561 /* masterkey@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -376,6 +377,7 @@
 		F2D818A31AABF94900051561 /* firebomb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firebomb@2x.png"; sourceTree = "<group>"; };
 		F2D818A81AABFCFA00051561 /* Undead Male Merchant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Undead Male Merchant@2x.png"; sourceTree = "<group>"; };
 		F2D818AA1AABFD5200051561 /* Black Knight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black Knight@2x.png"; sourceTree = "<group>"; };
+		F2D818AC1AABFDE500051561 /* masterkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "masterkey@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
 				F268F06B1A50CA0A00AEA410 /* dungeoncellkey@2x.png */,
+				F2D818AC1AABFDE500051561 /* masterkey@2x.png */,
 				F2D8188F1AABCDFF00051561 /* binoculars@2x.png */,
 				F2D818A31AABF94900051561 /* firebomb@2x.png */,
 				F2D818901AABCDFF00051561 /* blackknightshield@2x.png */,
@@ -967,6 +970,7 @@
 				F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */,
 				F2D818A21AABD1E900051561 /* Taurus Demon@2x.png in Resources */,
 				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
+				F2D818AD1AABFDE500051561 /* masterkey@2x.png in Resources */,
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F2D8189A1AABCDFF00051561 /* bluetearstonering@2x.png in Resources */,

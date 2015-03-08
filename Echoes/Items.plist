@@ -529,5 +529,21 @@ And dies to protect it further.</string>
 		<key>hasUseAction</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Master Key</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>This universal key opens any basic lock. Tool of the trade for thieves.</string>
+		<key>flavorText</key>
+		<string>But in the cursed land of the Undead, most doors are left unopened.</string>
+		<key>imageName</key>
+		<string>masterkey</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
