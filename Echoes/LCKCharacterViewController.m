@@ -605,11 +605,13 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         emptyFlask.equippedSlot = item.equippedSlot;
         
         [self.character addItemToInventory:emptyFlask];
-        
-        [self updateItemButtons];
-        
-        [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     }
+    else if ([item.name isEqualToString:@"Firebomb"]) {
+        [self.character removeItemFromInventory:item];
+    }
+    
+    [self updateItemButtons];
+    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self dismissCurrentlyPresentedViewController:nil];
 }

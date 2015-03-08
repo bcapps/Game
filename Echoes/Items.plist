@@ -511,5 +511,23 @@ And dies to protect it further.</string>
 		<key>itemSlot</key>
 		<string>twohand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Firebomb</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Throw at an enemy to deal 3d6 fire damage.</string>
+		<key>flavorText</key>
+		<string>Bisque urn filled with black powder. Explodes, inflicting fire damage. Many warriors use these to augment their strategic repertoire.</string>
+		<key>imageName</key>
+		<string>firebomb</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string>accessory</string>
+		<key>hasUseAction</key>
+		<true/>
+	</dict>
 </array>
 </plist>

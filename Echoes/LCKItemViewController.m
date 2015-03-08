@@ -25,8 +25,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemRequirementsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *unequipButton;
 @property (weak, nonatomic) IBOutlet UIView *nameSeparatorLineView;
-@property (weak, nonatomic) IBOutlet UIImageView *itemTypeImageView;
 @property (weak, nonatomic) IBOutlet UIButton *useItemButton;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *infoScrollView;
 
@@ -94,8 +94,6 @@
     
     self.itemRequirementsLabel.attributedText = attributedText;
     
-    self.itemTypeImageView.image = [[LCKItem imageForItemSlot:self.item.itemSlot] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-
     self.unequipButton.titleLabel.font = [UIFont descriptiveTextFontOfSize:14.0];
     [self.unequipButton setTitleColor:[UIColor removeColor] forState:UIControlStateNormal];
     
@@ -115,6 +113,7 @@
         self.title = self.item.name;
         self.itemNameLabel.hidden = YES;
         self.useItemButton.hidden = YES;
+        self.closeButton.hidden = YES;
         self.nameSeparatorLineView.hidden = YES;
         
         UIBarButtonItem *giftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"giftIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(giftItem)];
