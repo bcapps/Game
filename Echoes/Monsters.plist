@@ -77,6 +77,39 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Hollow Archer</key>
+	<dict>
+		<key>AC</key>
+		<integer>10</integer>
+		<key>Health</key>
+		<integer>5</integer>
+		<key>To Hit</key>
+		<integer>11</integer>
+		<key>Soul Value</key>
+		<integer>40</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shoot</string>
+				<key>description</key>
+				<string>Shoot&apos;s a crossbow bolt at a target dealing 1d6+1 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 1.</string>
+			</dict>
+		</array>
+	</dict>
 	<key>Black Knight</key>
 	<dict>
 		<key>AC</key>
