@@ -157,6 +157,8 @@
 		F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818941AABCDFF00051561 /* uchigatana@2x.png */; };
 		F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818951AABCDFF00051561 /* wingedspear@2x.png */; };
 		F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818961AABCDFF00051561 /* zweihander@2x.png */; };
+		F2D818A01AABD1CE00051561 /* Black Knight@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2D8189F1AABD1CE00051561 /* Black Knight@2x.jpg */; };
+		F2D818A21AABD1E900051561 /* Taurus Demon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818A11AABD1E900051561 /* Taurus Demon@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -368,6 +370,8 @@
 		F2D818941AABCDFF00051561 /* uchigatana@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uchigatana@2x.png"; sourceTree = "<group>"; };
 		F2D818951AABCDFF00051561 /* wingedspear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wingedspear@2x.png"; sourceTree = "<group>"; };
 		F2D818961AABCDFF00051561 /* zweihander@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zweihander@2x.png"; sourceTree = "<group>"; };
+		F2D8189F1AABD1CE00051561 /* Black Knight@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Knight@2x.jpg"; sourceTree = "<group>"; };
+		F2D818A11AABD1E900051561 /* Taurus Demon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Taurus Demon@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -727,6 +731,8 @@
 		F26413161A40DD0500287EFA /* Monster Art */ = {
 			isa = PBXGroup;
 			children = (
+				F2D818A11AABD1E900051561 /* Taurus Demon@2x.png */,
+				F2D8189F1AABD1CE00051561 /* Black Knight@2x.jpg */,
 				F26413171A40DD1100287EFA /* Asylum Demon@2x.png */,
 				F264131B1A40DDB400287EFA /* Hollow Soldier@2x.png */,
 				F264131D1A40DF7D00287EFA /* Hollow@2x.png */,
@@ -933,6 +939,7 @@
 				F21F43881A3A54C900FEA417 /* shortbow@2x.png in Resources */,
 				F21F43A91A3BBF6400FEA417 /* shortsword@2x.png in Resources */,
 				F21F43861A3A54AB00FEA417 /* broadsword@2x.png in Resources */,
+				F2D818A01AABD1CE00051561 /* Black Knight@2x.jpg in Resources */,
 				F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */,
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
 				F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */,
@@ -952,6 +959,7 @@
 				F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */,
 				F26413261A48FD3000287EFA /* Lore.plist in Resources */,
 				F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */,
+				F2D818A21AABD1E900051561 /* Taurus Demon@2x.png in Resources */,
 				F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */,
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,

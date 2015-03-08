@@ -118,6 +118,32 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Undead Male Merchant</key>
+	<dict>
+		<key>AC</key>
+		<integer>12</integer>
+		<key>Health</key>
+		<integer>33</integer>
+		<key>To Hit</key>
+		<integer>11</integer>
+		<key>Soul Value</key>
+		<integer>250</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Slash</string>
+				<key>description</key>
+				<string>Swing his katana dealing 2d6 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array/>
+	</dict>
 	<key>Asylum Demon</key>
 	<dict>
 		<key>AC</key>
