@@ -42,6 +42,7 @@ extern NSString * const LCKItemTypeNameHelmet;
 extern NSString * const LCKItemTypeNameChest;
 extern NSString * const LCKItemTypeNameBoots;
 extern NSString * const LCKItemTypeNameSpell;
+extern NSString * const LCKItemTypeNameInventory;
 
 @interface LCKItem : NSObject <NSCoding, NSCopying>
 

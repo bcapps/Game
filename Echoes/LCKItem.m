@@ -33,6 +33,7 @@ NSString * const LCKItemTypeNameHelmet = @"Helmet";
 NSString * const LCKItemTypeNameChest = @"Chest";
 NSString * const LCKItemTypeNameBoots = @"Boots";
 NSString * const LCKItemTypeNameSpell = @"Spell";
+NSString * const LCKItemTypeNameInventory = @"Inventory";
 
 NSString * const LCKItemCodingNameKey = @"LCKItemCodingNameKey";
 NSString * const LCKItemCodingActionKey = @"LCKItemCodingActionKey";

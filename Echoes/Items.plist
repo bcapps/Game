@@ -445,7 +445,7 @@ And dies to protect it further.</string>
 		<key>flavorText</key>
 		<string>This blue tearstone from Catarina boosts the defence of its wearer when in danger.</string>
 		<key>imageName</key>
-		<string>ringofsacrifice</string>
+		<string>bluetearstonering</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 5</string>
@@ -549,7 +549,7 @@ And dies to protect it further.</string>
 		<key>name</key>
 		<string>Blood Spear</string>
 		<key>actionText</key>
-		<string>Conjure: Fires an arrow shaped bolt of magic dealing 1d8 + [INT] damage. Lose 1 health.</string>
+		<string>Conjure: Fires an spear shaped bolt of magic dealing 1d8 + [INT] damage. Lose 1 health.</string>
 		<key>descriptiveText</key>
 		<string>Forms a magical spear to pierce using your own blood as a catalyst. </string>
 		<key>flavorText</key>

@@ -61,23 +61,26 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
         if ([item isAppropriateForItemSlot:LCKItemSlotOneHand]) {
             [[itemDictionary objectForKey:LCKItemTypeNameOneHanded] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotTwoHand]) {
             [[itemDictionary objectForKey:LCKItemTypeNameTwoHanded] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotAccessory]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotAccessory]) {
             [[itemDictionary objectForKey:LCKItemTypeNameAccessory] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotChest]) {
             [[itemDictionary objectForKey:LCKItemTypeNameChest] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotHelmet]) {
             [[itemDictionary objectForKey:LCKItemTypeNameHelmet] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotBoots]) {
             [[itemDictionary objectForKey:LCKItemTypeNameBoots] addObject:item];
         }
-        if ([item isAppropriateForItemSlot:LCKItemSlotSpell]) {
+        else if ([item isAppropriateForItemSlot:LCKItemSlotSpell]) {
             [[itemDictionary objectForKey:LCKItemTypeNameSpell] addObject:item];
+        }
+        else {
+            [[itemDictionary objectForKey:LCKItemTypeNameInventory] addObject:item];
         }
     }
     
@@ -85,7 +88,7 @@ typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
 }
 
 - (NSArray *)itemTypeNames {
-    return @[LCKItemTypeNameOneHanded, LCKItemTypeNameTwoHanded, LCKItemTypeNameAccessory, LCKItemTypeNameChest, LCKItemTypeNameHelmet, LCKItemTypeNameBoots, LCKItemTypeNameSpell];
+    return @[LCKItemTypeNameOneHanded, LCKItemTypeNameTwoHanded, LCKItemTypeNameAccessory, LCKItemTypeNameChest, LCKItemTypeNameHelmet, LCKItemTypeNameBoots, LCKItemTypeNameSpell, LCKItemTypeNameInventory];
 }
 
 - (LCKItem *)itemForIndexPath:(NSIndexPath *)indexPath {
