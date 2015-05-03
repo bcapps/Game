@@ -487,7 +487,6 @@ And dies to protect it further.</string>
 		<key>attributeRequirements</key>
 		<array>
 			<string>STR 3</string>
-			<string>DEX 3</string>
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
@@ -562,6 +561,68 @@ And dies to protect it further.</string>
 		</array>
 		<key>itemSlot</key>
 		<string>spell</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Black Leather Armor</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Reduces poison damage taken by 2.</string>
+		<key>flavorText</key>
+		<string>This armor made of smooth black leather is extremely quiet, a good thing for those who hide in the shadows.
+The leather itself is thick, offering a decent level of protection.</string>
+		<key>imageName</key>
+		<string>blackleatherarmor</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gargoyle Helm</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Increases chance to hit with melee weapons by 1.</string>
+		<key>flavorText</key>
+		<string>Helm of the gargoyle, an enchanted creature that guards the Bell of Awakening in the belfry of the Undead Church.</string>
+		<key>imageName</key>
+		<string>gargoylehelm</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>helmet</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Demon&apos;s Catalyst</string>
+		<key>actionText</key>
+		<string>Smack: Hit one enemy for 1d4 damage.</string>
+		<key>descriptiveText</key>
+		<string>Enhances the power of your spells. Roll an additional 1d6 damage when casting a spell.</string>
+		<key>flavorText</key>
+		<string>Demon catalyst formed from Izalith molten
+rock. Can be used as fire weapon.
+The Demon Firesage was the first demon,
+and the last master of the original fire
+arts before the Witch of Izalith was
+engulfed by Chaos, creating pyromancy.</string>
+		<key>imageName</key>
+		<string>sorcerercatalyst</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>INT 5</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
 	</dict>
 </array>
 </plist>
