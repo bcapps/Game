@@ -652,8 +652,8 @@ He was born into royalty, but wandered the lands in a fateful ill-conceived jour
 		<key>descriptiveText</key>
 		<string>When you are attacked, roll a d20. If 10+, counter attack for 2d6 damage.</string>
 		<key>flavorText</key>
-		<string>A rapier with intricate decorations. Chosen weapon of the infamous Undead Prince Ricard. Ricard&apos;s exploits are told in a monomyth.
-He was born into royalty, but wandered the lands in a fateful ill-conceived journey. He became Undead, and disappeared up North.</string>
+		<string>Standard thrusting sword. Regular one-handed attack can be delivered with shield held up. Can parry with use of left hand.
+Thrusting attacks pierce and are effective against foes with hard exteriors, but the wielder is left open to damage after a swing.</string>
 		<key>imageName</key>
 		<string>ricardsrapier</string>
 		<key>attributeRequirements</key>
@@ -663,6 +663,26 @@ He was born into royalty, but wandered the lands in a fateful ill-conceived jour
 		</array>
 		<key>itemSlot</key>
 		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fang Boar Helm</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Decreases damage taken by physical attacks by 1. Increases damage taken by magical attacks by 1.</string>
+		<key>flavorText</key>
+		<string>Severed head of the fully-armored Fang Boar taken by the one who killed it as proof of his victory, just as the Gods once did with the head of the ancient dragon.
+Can be worn on the head as a surprisingly sound piece of protective gear.</string>
+		<key>imageName</key>
+		<string>fangboarhelm</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>helmet</string>
 	</dict>
 </array>
 </plist>
