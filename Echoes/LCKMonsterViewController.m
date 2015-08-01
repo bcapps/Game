@@ -94,7 +94,7 @@
 - (NSAttributedString *)monsterACAttributedString {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"TN To Defend: "]];
+    [attributedString appendAttributedString:[[self class] titleAttributedStringForString:@"AC: "]];
     [attributedString appendAttributedString:[[self class] descriptionAttributedStringForString:self.monster.AC.stringValue]];
     
     return attributedString;

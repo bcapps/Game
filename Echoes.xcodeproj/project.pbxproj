@@ -169,6 +169,9 @@
 		F2D818AD1AABFDE500051561 /* masterkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818AC1AABFDE500051561 /* masterkey@2x.png */; };
 		F2D818AF1AAC005D00051561 /* bloodspear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818AE1AAC005D00051561 /* bloodspear@2x.png */; };
 		F2E21EC61B6D3F2500E6C6CB /* DarkrootBasin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EC51B6D3F2500E6C6CB /* DarkrootBasin@2x.png */; };
+		F2E21ECA1B6D46D200E6C6CB /* Berenike Knight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EC71B6D46D200E6C6CB /* Berenike Knight@2x.png */; };
+		F2E21ECB1B6D46D200E6C6CB /* Channeler@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EC81B6D46D200E6C6CB /* Channeler@2x.png */; };
+		F2E21ECC1B6D46D200E6C6CB /* Hellkite Dragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EC91B6D46D200E6C6CB /* Hellkite Dragon@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -392,6 +395,9 @@
 		F2D818AC1AABFDE500051561 /* masterkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "masterkey@2x.png"; sourceTree = "<group>"; };
 		F2D818AE1AAC005D00051561 /* bloodspear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bloodspear@2x.png"; sourceTree = "<group>"; };
 		F2E21EC51B6D3F2500E6C6CB /* DarkrootBasin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkrootBasin@2x.png"; sourceTree = "<group>"; };
+		F2E21EC71B6D46D200E6C6CB /* Berenike Knight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Berenike Knight@2x.png"; sourceTree = "<group>"; };
+		F2E21EC81B6D46D200E6C6CB /* Channeler@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Channeler@2x.png"; sourceTree = "<group>"; };
+		F2E21EC91B6D46D200E6C6CB /* Hellkite Dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hellkite Dragon@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -757,6 +763,9 @@
 			isa = PBXGroup;
 			children = (
 				F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */,
+				F2E21EC71B6D46D200E6C6CB /* Berenike Knight@2x.png */,
+				F2E21EC81B6D46D200E6C6CB /* Channeler@2x.png */,
+				F2E21EC91B6D46D200E6C6CB /* Hellkite Dragon@2x.png */,
 				F2D818A81AABFCFA00051561 /* Undead Male Merchant@2x.png */,
 				F2D818AA1AABFD5200051561 /* Black Knight@2x.png */,
 				F2D818A11AABD1E900051561 /* Taurus Demon@2x.png */,
@@ -955,6 +964,7 @@
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */,
 				F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */,
+				F2E21ECA1B6D46D200E6C6CB /* Berenike Knight@2x.png in Resources */,
 				F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
 				F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */,
@@ -973,6 +983,7 @@
 				F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */,
 				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
 				F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */,
+				F2E21ECC1B6D46D200E6C6CB /* Hellkite Dragon@2x.png in Resources */,
 				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
 				F2D818A91AABFCFA00051561 /* Undead Male Merchant@2x.png in Resources */,
 				F26413051A40C8B700287EFA /* Monsters.plist in Resources */,
@@ -1002,6 +1013,7 @@
 				F28F9CC41AF444F400716241 /* Hollow Archer@2x.png in Resources */,
 				F2D374CE1A5F5CD2004CFDAF /* UndeadAsylumMap@2x.png in Resources */,
 				F21F438A1A3A553000FEA417 /* kiteshield@2x.png in Resources */,
+				F2E21ECB1B6D46D200E6C6CB /* Channeler@2x.png in Resources */,
 				F2D374CA1A5F5BDF004CFDAF /* ValleyOfDrakesMap@2x.png in Resources */,
 				F26413031A3F89EB00287EFA /* KnightIconFemale@2x.png in Resources */,
 				F21F43341A2FBCC700FEA417 /* heartIcon@2x.png in Resources */,

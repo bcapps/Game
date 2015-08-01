@@ -315,5 +315,177 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Berenike Knight</key>
+	<dict>
+		<key>AC</key>
+		<integer>13</integer>
+		<key>Health</key>
+		<integer>20</integer>
+		<key>To Hit</key>
+		<integer>11</integer>
+		<key>Soul Value</key>
+		<integer>250</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Bash</string>
+				<key>description</key>
+				<string>Slams his heavy mace in front of him for 1d8. Ignores shields.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Hits enemies in an arc for 1d8 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Cover</string>
+				<key>description</key>
+				<string>Hides behind his shield. After being struck in the front retaliates by bashing opponent to the ground.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Heavy Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 2.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Channeler</key>
+	<dict>
+		<key>AC</key>
+		<integer>9</integer>
+		<key>Health</key>
+		<integer>13</integer>
+		<key>To Hit</key>
+		<integer>13</integer>
+		<key>Soul Value</key>
+		<integer>150</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Stab</string>
+				<key>description</key>
+				<string>Stabs an opponent with the trident for 1d6 physical.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Soul Arrow</string>
+				<key>description</key>
+				<string>Magical arrow for 1d8 magic damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Ritual Dance</string>
+				<key>description</key>
+				<string>Increases damage for all nearby enemies by 2x.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>No Armor.</string>
+				<key>description</key>
+				<string>Increase phyiscal damage taken by 2.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Hellkite Dragon</key>
+	<dict>
+		<key>AC</key>
+		<integer>7</integer>
+		<key>Health</key>
+		<integer>100</integer>
+		<key>To Hit</key>
+		<integer>8</integer>
+		<key>Soul Value</key>
+		<real>4000</real>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Claw</string>
+				<key>description</key>
+				<string>Claws at the target in front of him. 1d8 damage physical damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tail Swipe</string>
+				<key>description</key>
+				<string>Swipes with his tail behind him. Deals 2d6 physical damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Flame Breath</string>
+				<key>description</key>
+				<string>Breathes in heavily. Deals 2d10 fire damage.</string>
+				<key>diceRoll</key>
+				<string>1-8</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Swipe</string>
+				<key>description</key>
+				<string>Takes flight above the bridge. Flies across raking the bridge. Deals 1d12 damage.</string>
+				<key>diceRoll</key>
+				<string>9-17</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Flying Fire</string>
+				<key>description</key>
+				<string>Takes flight above the bridge. Breathes flames across the bridge, deals 2d10 fire damage.</string>
+				<key>diceRoll</key>
+				<string>18-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Thick Scales</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 4.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Thick Scales</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 4.</string>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>
