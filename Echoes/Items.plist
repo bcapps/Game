@@ -624,5 +624,45 @@ engulfed by Chaos, creating pyromancy.</string>
 		<key>itemSlot</key>
 		<string>onehand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rapier</string>
+		<key>actionText</key>
+		<string>Thrust: Stab an enemy for 1d6 + [DEX].</string>
+		<key>descriptiveText</key>
+		<string>When you are attacked, roll a d20. If 10+, counter attack for 1d6 damage.</string>
+		<key>flavorText</key>
+		<string>A rapier with intricate decorations. Chosen weapon of the infamous Undead Prince Ricard. Ricard&apos;s exploits are told in a monomyth.
+He was born into royalty, but wandered the lands in a fateful ill-conceived journey. He became Undead, and disappeared up North.</string>
+		<key>imageName</key>
+		<string>rapier</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 1</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ricard&apos;s Rapier</string>
+		<key>actionText</key>
+		<string>Thrust: Stab an enemy for 2d4 + [DEX].</string>
+		<key>descriptiveText</key>
+		<string>When you are attacked, roll a d20. If 10+, counter attack for 2d6 damage.</string>
+		<key>flavorText</key>
+		<string>A rapier with intricate decorations. Chosen weapon of the infamous Undead Prince Ricard. Ricard&apos;s exploits are told in a monomyth.
+He was born into royalty, but wandered the lands in a fateful ill-conceived journey. He became Undead, and disappeared up North.</string>
+		<key>imageName</key>
+		<string>ricardsrapier</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+			<string>DEX 4</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
 </array>
 </plist>

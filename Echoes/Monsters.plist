@@ -370,7 +370,7 @@
 		<key>AC</key>
 		<integer>9</integer>
 		<key>Health</key>
-		<integer>13</integer>
+		<integer>12</integer>
 		<key>To Hit</key>
 		<integer>13</integer>
 		<key>Soul Value</key>
@@ -549,6 +549,131 @@
 				<string>Slow</string>
 				<key>description</key>
 				<string>Moves very slowly.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Demonic Foliage</key>
+	<dict>
+		<key>AC</key>
+		<integer>9</integer>
+		<key>Health</key>
+		<integer>8</integer>
+		<key>To Hit</key>
+		<integer>10</integer>
+		<key>Soul Value</key>
+		<integer>100</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Grab</string>
+				<key>description</key>
+				<string>Grabs and traps one opponent for 1d4 phyiscal damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Extend</string>
+				<key>description</key>
+				<string>Whips his arms out </string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Fear of Fire</string>
+				<key>description</key>
+				<string>Increases fire damage taken by 4.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Undead Prince Ricard</key>
+	<dict>
+		<key>AC</key>
+		<integer>14</integer>
+		<key>Health</key>
+		<integer>15</integer>
+		<key>To Hit</key>
+		<integer>11</integer>
+		<key>Soul Value</key>
+		<integer>250</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Stab</string>
+				<key>description</key>
+				<string>Stabs three times dealing 3d4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Guard Up</string>
+				<key>description</key>
+				<string>Raises his rapier at his side. The next melee attack is countered for 1d10 damage. Avoids shields.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 1.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Balder Knight</key>
+	<dict>
+		<key>AC</key>
+		<integer>14</integer>
+		<key>Health</key>
+		<integer>8</integer>
+		<key>To Hit</key>
+		<integer>11</integer>
+		<key>Soul Value</key>
+		<integer>250</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Stab</string>
+				<key>description</key>
+				<string>Stabs twice dealing 2d4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Guard Up</string>
+				<key>description</key>
+				<string>Raises his rapier at his side. The next melee attack is countered for 1d8 damage. Avoids shields.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 1.</string>
 			</dict>
 		</array>
 	</dict>
