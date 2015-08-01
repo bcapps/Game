@@ -420,11 +420,11 @@
 		<key>AC</key>
 		<integer>7</integer>
 		<key>Health</key>
-		<integer>100</integer>
+		<integer>90</integer>
 		<key>To Hit</key>
-		<integer>8</integer>
+		<integer>14</integer>
 		<key>Soul Value</key>
-		<real>4000</real>
+		<real>9000</real>
 		<key>Attacks</key>
 		<array>
 			<dict>
@@ -481,9 +481,74 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Thick Scales</string>
+				<string>Magic Weakness</string>
 				<key>description</key>
-				<string>Reduces physical damage taken by 4.</string>
+				<string>Increases damage taken by magic by 4.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Regeneration</string>
+				<key>description</key>
+				<string>Every round regains 2 health.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Havel</key>
+	<dict>
+		<key>AC</key>
+		<integer>16</integer>
+		<key>Health</key>
+		<integer>60</integer>
+		<key>To Hit</key>
+		<integer>10</integer>
+		<key>Soul Value</key>
+		<integer>2000</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Bash</string>
+				<key>description</key>
+				<string>Slams his heavy mace in front of him for 4d8. Ignores shields.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Hits enemies in an arc for 3d8 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Heavy Shield</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 2.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Stone Armor</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 3.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Magical Resistance</string>
+				<key>description</key>
+				<string>Reduces magic damage taken by 10.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slow</string>
+				<key>description</key>
+				<string>Moves very slowly.</string>
 			</dict>
 		</array>
 	</dict>
