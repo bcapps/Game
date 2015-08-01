@@ -24,7 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mapNames = @[@"CatacombsMap", @"FirelinkShrineMap", @"NewLondoRuinsMap", @"UndeadAsylumMap", @"UndeadBurgMap", @"UpperBlighttownMap", @"ValleyOfDrakesMap", @"UndeadParishExterior", @"UndeadParishInterior"];
+    self.mapNames = @[@"CatacombsMap",
+                      @"FirelinkShrineMap",
+                      @"NewLondoRuinsMap",
+                      @"UndeadAsylumMap",
+                      @"UndeadBurgMap",
+                      @"UpperBlighttownMap",
+                      @"ValleyOfDrakesMap",
+                      @"UndeadParishExterior",
+                      @"UndeadParishInterior",
+                      @"DarkrootBasin"];
     [self.mapNames sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
     
     [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
