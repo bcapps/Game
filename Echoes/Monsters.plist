@@ -600,9 +600,9 @@
 		<key>Health</key>
 		<integer>15</integer>
 		<key>To Hit</key>
-		<integer>11</integer>
+		<integer>13</integer>
 		<key>Soul Value</key>
-		<integer>250</integer>
+		<integer>600</integer>
 		<key>Attacks</key>
 		<array>
 			<dict>
@@ -644,7 +644,7 @@
 		<key>To Hit</key>
 		<integer>11</integer>
 		<key>Soul Value</key>
-		<integer>250</integer>
+		<integer>200</integer>
 		<key>Attacks</key>
 		<array>
 			<dict>
@@ -674,6 +674,62 @@
 				<string>Shield</string>
 				<key>description</key>
 				<string>Reduces physical damage taken by 1.</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Fang Boar</key>
+	<dict>
+		<key>AC</key>
+		<integer>15</integer>
+		<key>Health</key>
+		<integer>12</integer>
+		<key>To Hit</key>
+		<integer>13</integer>
+		<key>Soul Value</key>
+		<integer>1000</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Kick</string>
+				<key>description</key>
+				<string>Kicks a person behind him for 2d4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Fang Thrust</string>
+				<key>description</key>
+				<string>Thrusts his fang at you dealing 1d6 + 2 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Trample</string>
+				<key>description</key>
+				<string>Raises up on his hind legs. Launches forward hitting all in his path for 2d6 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Hardened Armor</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 5.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Weak Point</string>
+				<key>description</key>
+				<string>When being struck from behind, increases physical damage dealth by 5.</string>
 			</dict>
 		</array>
 	</dict>
