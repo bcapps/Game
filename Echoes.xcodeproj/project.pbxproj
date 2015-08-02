@@ -179,6 +179,7 @@
 		F2E21ED61B6D609C00E6C6CB /* rapier@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21ED51B6D609C00E6C6CB /* rapier@2x.png */; };
 		F2E21ED81B6D616700E6C6CB /* Fang Boar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21ED71B6D616700E6C6CB /* Fang Boar@2x.png */; };
 		F2E21EDA1B6D629500E6C6CB /* fangboarhelm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21ED91B6D629500E6C6CB /* fangboarhelm@2x.png */; };
+		F2E21EDC1B6D9FC000E6C6CB /* drakesword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EDB1B6D9FC000E6C6CB /* drakesword@2x.png */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -412,6 +413,7 @@
 		F2E21ED51B6D609C00E6C6CB /* rapier@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapier@2x.png"; sourceTree = "<group>"; };
 		F2E21ED71B6D616700E6C6CB /* Fang Boar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fang Boar@2x.png"; sourceTree = "<group>"; };
 		F2E21ED91B6D629500E6C6CB /* fangboarhelm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fangboarhelm@2x.png"; sourceTree = "<group>"; };
+		F2E21EDB1B6D9FC000E6C6CB /* drakesword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drakesword@2x.png"; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				F2D818AE1AAC005D00051561 /* bloodspear@2x.png */,
 				F2E21ED11B6D5E1F00E6C6CB /* ricardsrapier@2x.png */,
 				F2E21ED51B6D609C00E6C6CB /* rapier@2x.png */,
+				F2E21EDB1B6D9FC000E6C6CB /* drakesword@2x.png */,
 				F2E21ED91B6D629500E6C6CB /* fangboarhelm@2x.png */,
 				F2735B0F1AF5C78D00C935C3 /* blackleatherarmor@2x.png */,
 				F2735B101AF5C78D00C935C3 /* gargoylehelm@2x.png */,
@@ -1054,6 +1057,7 @@
 				F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */,
 				F2206B051A2D2C0D006E44B0 /* LaunchScreen.xib in Resources */,
 				F2E21ED61B6D609C00E6C6CB /* rapier@2x.png in Resources */,
+				F2E21EDC1B6D9FC000E6C6CB /* drakesword@2x.png in Resources */,
 				F264131E1A40DF7D00287EFA /* Hollow@2x.png in Resources */,
 				F21F43381A2FC08D00FEA417 /* UpArrow@2x.png in Resources */,
 				F2735B0E1AF5C4F800C935C3 /* UndeadParishInterior@2x.png in Resources */,

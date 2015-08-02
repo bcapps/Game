@@ -684,5 +684,25 @@ Can be worn on the head as a surprisingly sound piece of protective gear.</strin
 		<key>itemSlot</key>
 		<string>helmet</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Drake Sword</string>
+		<key>actionText</key>
+		<string>Strike: Strike an enemy dealing 2d6 + 2 * [STR] to an enemy.</string>
+		<key>descriptiveText</key>
+		<string>When attacking, you may choose to deal an additional 3d6 damage. If you do, roll a d20. If you roll 5 or less, the drake sword breaks after use.</string>
+		<key>flavorText</key>
+		<string>This Sword, one of the rare dragon weapons, is formed by a drake&apos;s tail. Drakes are seen as undeveloped imitators of the dragons, but in they are likely their distant kin.
+The sword is imbued with a mystical power, to be released when held with both hands.</string>
+		<key>imageName</key>
+		<string>drakesword</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 3</string>
+			<string>DEX 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
 </array>
 </plist>
