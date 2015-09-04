@@ -803,5 +803,76 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Hollow Thief</key>
+	<dict>
+		<key>AC</key>
+		<integer>13</integer>
+		<key>Health</key>
+		<integer>5</integer>
+		<key>To Hit</key>
+		<integer>8</integer>
+		<key>Soul Value</key>
+		<integer>120</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Swing his hand viciously for 1d6 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Frenzy</string>
+				<key>description</key>
+				<string>Attacks everyone nearby for 1d10 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Coat</string>
+				<key>description</key>
+				<string>Coats his weapon in poison. If struck, attacker takes 2 poison damage every time they move or attack.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<string>If damaged, may drink from an estus flask to restore health.</string>
+		</array>
+	</dict>
+	<key>Undead Attack Dog</key>
+	<dict>
+		<key>AC</key>
+		<integer>13</integer>
+		<key>Health</key>
+		<integer>3</integer>
+		<key>To Hit</key>
+		<integer>8</integer>
+		<key>Soul Value</key>
+		<integer>80</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Bite</string>
+				<key>description</key>
+				<string>Bites you for 1d4+2 damage.</string>
+				<key>diceRoll</key>
+				<string>1-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array/>
+		<key>Attributes</key>
+		<array/>
+	</dict>
 </dict>
 </plist>
