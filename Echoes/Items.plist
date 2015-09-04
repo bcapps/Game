@@ -704,5 +704,24 @@ The sword is imbued with a mystical power, to be released when held with both ha
 		<key>itemSlot</key>
 		<string>onehand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gargoyle Tail Axe</string>
+		<key>actionText</key>
+		<string>Cut: Strike an enemy dealing 2d6 + [STR] + [DEX] to an enemy.</string>
+		<key>descriptiveText</key>
+		<string>The axe bends as you swing it, dealing damage to all enemies in an arc front of you.</string>
+		<key>flavorText</key>
+		<string>Sliced tail of the gargoyle guarding the Bell of Awakening in the Undead Church.</string>
+		<key>imageName</key>
+		<string>gargoyleaxe</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>twohand</string>
+	</dict>
 </array>
 </plist>

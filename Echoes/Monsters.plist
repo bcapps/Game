@@ -731,6 +731,76 @@
 				<key>description</key>
 				<string>When being struck from behind, increases physical damage dealth by 5.</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Drops</string>
+				<key>description</key>
+				<string>Fang Boar Helm</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Stone Gargoyle</key>
+	<dict>
+		<key>AC</key>
+		<integer>15</integer>
+		<key>Health</key>
+		<integer>60</integer>
+		<key>To Hit</key>
+		<integer>10</integer>
+		<key>Soul Value</key>
+		<integer>6000</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Tail Lash</string>
+				<key>description</key>
+				<string>Lashes his tail behind him dealing 1d6+3 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Trident Spike</string>
+				<key>description</key>
+				<string>Thrusts his trident towards you dealing 2d4+2 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Flame Breath</string>
+				<key>description</key>
+				<string>Breathes deeply in before expelling flame from his mouth in an arc for 2d6+2 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Fireball</string>
+				<key>description</key>
+				<string>Leaps up into the air floating above. Shoots a fireball at the furthest enemy away. 10+ to dodge, otherwise 2d6 daamge.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Hardened Skin</string>
+				<key>description</key>
+				<string>Reduces physical damage taken by 3.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Drops</string>
+				<key>description</key>
+				<string>Gargoyle Helm, Gargoyle Tail Axe If Tail Cut</string>
+			</dict>
 		</array>
 	</dict>
 </dict>

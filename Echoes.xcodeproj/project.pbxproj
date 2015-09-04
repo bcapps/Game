@@ -139,6 +139,8 @@
 		F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F06E1A5283F200AEA410 /* LCKStatsCollectionViewController.m */; };
 		F268F0721A52863200AEA410 /* LCKStatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */; };
 		F268F0751A5286D300AEA410 /* UIViewController+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */; };
+		F26B86791B9A2E4100F3C2D4 /* gargoyleaxe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26B86781B9A2E4100F3C2D4 /* gargoyleaxe@2x.png */; };
+		F26B867B1B9A2E7200F3C2D4 /* Gargoyle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26B867A1B9A2E7200F3C2D4 /* Gargoyle@2x.png */; };
 		F2735B0D1AF5C4F800C935C3 /* UndeadParishExterior@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B0B1AF5C4F800C935C3 /* UndeadParishExterior@2x.png */; };
 		F2735B0E1AF5C4F800C935C3 /* UndeadParishInterior@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B0C1AF5C4F800C935C3 /* UndeadParishInterior@2x.png */; };
 		F2735B111AF5C78D00C935C3 /* blackleatherarmor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B0F1AF5C78D00C935C3 /* blackleatherarmor@2x.png */; };
@@ -371,6 +373,8 @@
 		F268F0711A52863200AEA410 /* LCKStatInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKStatInfoViewController.m; sourceTree = "<group>"; };
 		F268F0731A5286D300AEA410 /* UIViewController+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Presentation.h"; sourceTree = "<group>"; };
 		F268F0741A5286D300AEA410 /* UIViewController+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Presentation.m"; sourceTree = "<group>"; };
+		F26B86781B9A2E4100F3C2D4 /* gargoyleaxe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gargoyleaxe@2x.png"; sourceTree = "<group>"; };
+		F26B867A1B9A2E7200F3C2D4 /* Gargoyle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gargoyle@2x.png"; sourceTree = "<group>"; };
 		F2735B0B1AF5C4F800C935C3 /* UndeadParishExterior@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadParishExterior@2x.png"; sourceTree = "<group>"; };
 		F2735B0C1AF5C4F800C935C3 /* UndeadParishInterior@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadParishInterior@2x.png"; sourceTree = "<group>"; };
 		F2735B0F1AF5C78D00C935C3 /* blackleatherarmor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackleatherarmor@2x.png"; sourceTree = "<group>"; };
@@ -496,6 +500,7 @@
 				F2D818A31AABF94900051561 /* firebomb@2x.png */,
 				F2D818901AABCDFF00051561 /* blackknightshield@2x.png */,
 				F2D818911AABCDFF00051561 /* blackknightsword@2x.png */,
+				F26B86781B9A2E4100F3C2D4 /* gargoyleaxe@2x.png */,
 				F2D818921AABCDFF00051561 /* bluetearstonering@2x.png */,
 				F2D818931AABCDFF00051561 /* ringofsacrifice@2x.png */,
 				F2D818941AABCDFF00051561 /* uchigatana@2x.png */,
@@ -782,6 +787,7 @@
 		F26413161A40DD0500287EFA /* Monster Art */ = {
 			isa = PBXGroup;
 			children = (
+				F26B867A1B9A2E7200F3C2D4 /* Gargoyle@2x.png */,
 				F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */,
 				F2E21ED71B6D616700E6C6CB /* Fang Boar@2x.png */,
 				F2E21ECD1B6D47C800E6C6CB /* Havel@2x.png */,
@@ -978,6 +984,7 @@
 				F26412F71A3F851600287EFA /* BanditIconFemale@2x.png in Resources */,
 				F21F43761A37F09D00FEA417 /* bootsIcon@2x.png in Resources */,
 				F268F05D1A4E494D00AEA410 /* emptyflask@2x.png in Resources */,
+				F26B867B1B9A2E7200F3C2D4 /* Gargoyle@2x.png in Resources */,
 				F26413011A3F898700287EFA /* WarriorIconFemale@2x.png in Resources */,
 				F21F43371A2FC08D00FEA417 /* DownArrow@2x.png in Resources */,
 				F21F43501A301CD100FEA417 /* inventoryIcon@2x.png in Resources */,
@@ -1038,6 +1045,7 @@
 				F26412FF1A3F885900287EFA /* SorcererIconFemale@2x.png in Resources */,
 				F2206B001A2D2C0D006E44B0 /* Main.storyboard in Resources */,
 				F2D8189A1AABCDFF00051561 /* bluetearstonering@2x.png in Resources */,
+				F26B86791B9A2E4100F3C2D4 /* gargoyleaxe@2x.png in Resources */,
 				F2735B121AF5C78D00C935C3 /* gargoylehelm@2x.png in Resources */,
 				F2D8189B1AABCDFF00051561 /* ringofsacrifice@2x.png in Resources */,
 				F28F9CC41AF444F400716241 /* Hollow Archer@2x.png in Resources */,
