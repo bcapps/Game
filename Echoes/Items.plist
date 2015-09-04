@@ -723,5 +723,22 @@ The sword is imbued with a mystical power, to be released when held with both ha
 		<key>itemSlot</key>
 		<string>twohand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Basement Key</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>Opens the narrow passage leading below at the far face of the great bridge in the Undead Burg.
+The lower Undead Burg is a treacherous place. Do not turn your back on the wily thieves, or the wild dogs who serve the Capra Demon.</string>
+		<key>imageName</key>
+		<string>basementkey</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
