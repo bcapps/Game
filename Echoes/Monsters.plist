@@ -845,7 +845,12 @@
 		</array>
 		<key>Attributes</key>
 		<array>
-			<string>If damaged, may drink from an estus flask to restore health.</string>
+			<dict>
+				<key>name</key>
+				<string>Flask</string>
+				<key>description</key>
+				<string>If damaged, may drink from an estus flask to restore health.</string>
+			</dict>
 		</array>
 	</dict>
 	<key>Undead Attack Dog</key>
