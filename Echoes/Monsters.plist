@@ -784,7 +784,7 @@
 				<key>description</key>
 				<string>Leaps up into the air floating above. Shoots a fireball at the furthest enemy away. 10+ to dodge, otherwise 2d6 daamge.</string>
 				<key>diceRoll</key>
-				<string>1-10</string>
+				<string>11-20</string>
 			</dict>
 		</array>
 		<key>Attributes</key>
@@ -873,6 +873,70 @@
 		<array/>
 		<key>Attributes</key>
 		<array/>
+	</dict>
+	<key>Capra Demon</key>
+	<dict>
+		<key>AC</key>
+		<integer>11</integer>
+		<key>Health</key>
+		<integer>80</integer>
+		<key>To Hit</key>
+		<integer>9</integer>
+		<key>Soul Value</key>
+		<integer>10000</integer>
+		<key>Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Swing</string>
+				<key>description</key>
+				<string>Swings his gigantic sword hitting all in front of him for 1d6 + 3 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Double Swing</string>
+				<key>description</key>
+				<string>Swings one gigantic sword dealing 1d6 + 3 damage in front of him, then pivots and swings his other sword behind him for 1d6 + 3 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Signaled Attacks</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Power Smash</string>
+				<key>description</key>
+				<string>Brings both blades up over his head. Downward slash for 2d8 + 4 damage.</string>
+				<key>diceRoll</key>
+				<string>1-10</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Leaping Smash</string>
+				<key>description</key>
+				<string>Crouches down. Leaps towards his opponent for 2d6 + 2 damage.</string>
+				<key>diceRoll</key>
+				<string>11-20</string>
+			</dict>
+		</array>
+		<key>Attributes</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Demon</string>
+				<key>description</key>
+				<string>This enemy is vulnerable to demon weapons.</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Drops</string>
+				<key>description</key>
+				<string>Gargoyle Helm, Key To Depths</string>
+			</dict>
+		</array>
 	</dict>
 </dict>
 </plist>

@@ -373,7 +373,9 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     [self presentViewController:infoViewController withFrame:[self infoViewFrameForStatusFrame:self.soulsButton.frame] fromView:self.soulsButton];
 
-    infoViewController.infoTextView.text = @"· Souls are gained by defeating powerful enemies and absorbing their souls.\n· Souls can be used to level up.\n· Souls can be used to purchase items.";
+    NSString *soulsText = [NSString stringWithFormat:@"· Souls are gained by defeating powerful enemies and absorbing their souls.\n· Souls can be used to level up (%@).\n· Souls can be used to purchase items.", [self.character soulValueForLevelUp].stringValue];
+    
+    infoViewController.infoTextView.text = soulsText;
 }
 
 - (IBAction)equipmentButtonTapped:(LCKItemButton *)button {

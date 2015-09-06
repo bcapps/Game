@@ -52,4 +52,6 @@ typedef NS_ENUM(NSUInteger, CharacterGender) {
 - (BOOL)meetsRequirement:(NSString *)requirement forItem:(LCKItem *)item;
 - (BOOL)meetsRequirementsForItem:(LCKItem *)item;
 
+- (NSNumber *)soulValueForLevelUp;
+
 @end
