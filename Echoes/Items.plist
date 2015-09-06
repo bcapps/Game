@@ -740,5 +740,24 @@ The lower Undead Burg is a treacherous place. Do not turn your back on the wily 
 		<key>itemSlot</key>
 		<string></string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sorcerer Cloak</string>
+		<key>actionText</key>
+		<string>Shield: Shield an ally preventing the next 5 magic damage taken.</string>
+		<key>descriptiveText</key>
+		<string>Increases magic damage done by 1, and reduces magic damage taken by 1.</string>
+		<key>flavorText</key>
+		<string>Cloak worn by proper sorcerers who studied at Vinheim Dragon School.</string>
+		<key>imageName</key>
+		<string>sorcerercloak</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 2</string>
+			<string>DEX 2</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
 </array>
 </plist>

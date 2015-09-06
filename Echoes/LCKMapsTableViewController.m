@@ -33,7 +33,8 @@
                       @"ValleyOfDrakesMap",
                       @"UndeadParishExterior",
                       @"UndeadParishInterior",
-                      @"DarkrootBasin"];
+                      @"DarkrootBasin",
+                      @"LowerUndeadBurg"];
     [self.mapNames sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
     
     [self.tableView registerClass:[LCKBaseCell class] forCellReuseIdentifier:NSStringFromClass([LCKBaseCell class])];
