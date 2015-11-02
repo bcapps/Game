@@ -17,8 +17,14 @@
  */
 - (instancetype)initWithSession:(LCKMultipeerSession *)session serviceName:(NSString *)serviceName;
 
+/**
+ Begin browsing for other peers looking for the given service name.
+ */
 - (void)startBrowsing;
 
+/**
+ Stop browsing for other peers.
+ */
 - (void)stopBrowsing;
 
 @end

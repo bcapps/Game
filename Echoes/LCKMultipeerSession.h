@@ -25,13 +25,21 @@
 
 @interface LCKMultipeerSession : NSObject
 
+/**
+ The internal multipeer session.
+ */
 @property (nonatomic, readonly) MCSession *internalSession;
+
+/**
+ The peer ID created from the given peer Name.
+ */
 @property (nonatomic, readonly) MCPeerID *peerID;
 
 /**
  Initializes a multipeer session for the given peer name.
  
  @param peerName The display name of the peer.
+ @param delegate An optional delegate to receive messages from the internal session.
  */
 - (instancetype)initWithPeerName:(NSString *)peerName delegate:(id <LCKMultipeerSessionDelegate>)delegate;
 
