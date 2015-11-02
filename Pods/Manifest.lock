@@ -1,6 +1,8 @@
 PODS:
-  - HockeySDK (3.6.2)
-  - iCarousel (HEAD based on 1.8.1)
+  - HockeySDK (3.8.4):
+    - HockeySDK/AllFeaturesLib (= 3.8.4)
+  - HockeySDK/AllFeaturesLib (3.8.4)
+  - iCarousel (HEAD based on 1.8.2)
   - LCKCategories (0.4):
     - LCKCategories/CoreData (= 0.4)
     - LCKCategories/Foundation (= 0.4)
@@ -22,7 +24,7 @@ PODS:
   - UICountingLabel (HEAD based on 1.2.0)
 
 DEPENDENCIES:
-  - HockeySDK (~> 3.6)
+  - HockeySDK (~> 3.8.4)
   - iCarousel (HEAD)
   - LCKCategories (from `git@github.com:Lickability/LCKCategories.git`, commit `9b96d37e580c5ad16e51274c94cdd3d1d8765f13`)
   - LCKControls (from `git@github.com:Lickability/LCKControls.git`, commit `281d390d2f9b5b1a563c9472177edaaf4f4813e6`)
@@ -41,12 +43,12 @@ EXTERNAL SOURCES:
     :git: git@github.com:Lickability/LCKCoreData.git
 
 SPEC CHECKSUMS:
-  HockeySDK: bfd1f5ac75938b07499c4ac12932244b72a2e70b
-  iCarousel: 5acab560f10dc13da2440c89f35a0ad278b5147d
-  LCKCategories: e99e66280b7ddb5ebe79f8791cd2fc665ce61035
-  LCKControls: 9cb1a7c38cef0395f6f0d613ead981c59d4e5e05
-  LCKCoreData: 2bd3f71f534e8e1150e7a44ceeb885c5e1f484b3
-  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
-  UICountingLabel: a55223a9357af71f833af76665164d2e3f3654b5
+  HockeySDK: 464a9eb01c42718515629d8d1d406983e5f855dc
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
+  LCKCategories: 251e53d52287bd7a00d51988d5020d39850d0070
+  LCKControls: 8a7ee5cae5eb65b652b39b40c6153f1754e1208f
+  LCKCoreData: 7172c7ba6255e26bad48e92163715507ee89b480
+  SVProgressHUD: 3afb875b9eb23acd1bed9b82495695c68621a8b2
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-COCOAPODS: 0.35.0.rc2
+COCOAPODS: 0.39.0

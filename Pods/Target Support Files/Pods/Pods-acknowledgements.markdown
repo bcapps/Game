@@ -8,7 +8,7 @@ This application makes use of the following third party libraries:
 The Hockey SDK is provided under the following license:
 
     The MIT License
-    Copyright (c) 2012-2014 HockeyApp, Bit Stadium GmbH.
+    Copyright (c) 2012-2015 HockeyApp, Bit Stadium GmbH.
     All rights reserved.
 	
     Permission is hereby granted, free of charge, to any person
@@ -35,8 +35,8 @@ The Hockey SDK is provided under the following license:
 Except as noted below, PLCrashReporter 
 is provided under the following license:
 
-    Copyright (c) 2008 - 2014 Plausible Labs Cooperative, Inc.
-    Copyright (c) 2012 - 2014 HockeyApp, Bit Stadium GmbH.
+    Copyright (c) 2008 - 2015 Plausible Labs Cooperative, Inc.
+    Copyright (c) 2012 - 2015 HockeyApp, Bit Stadium GmbH.
     All rights reserved.
 
     Permission is hereby granted, free of charge, to any person
@@ -237,7 +237,7 @@ THE SOFTWARE.
 
 iCarousel
 
-Version 1.8.1, October 13th, 2014
+Version 1.8.2, August 10th, 2015
 
 Copyright (C) 2011 Charcoal Design
 

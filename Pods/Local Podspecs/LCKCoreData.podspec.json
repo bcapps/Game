@@ -1,0 +1,31 @@
+{
+  "name": "LCKCoreData",
+  "version": "2.1",
+  "summary": "LCKCoreData is a repository for apps that want to use Core Data",
+  "homepage": "http://lickability.com",
+  "authors": {
+    "Lickability": "http://lickability.com"
+  },
+  "source": {
+    "git": "git@github.com:Lickability/LCKCoreData.git",
+    "tag": "2.1"
+  },
+  "platforms": {
+    "ios": "7.0",
+    "osx": "10.9"
+  },
+  "license": "Copyright 2014 Lickability",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Classes/LCKCoreDataController.{h,m}",
+      "frameworks": "CoreData"
+    },
+    {
+      "name": "UIKit",
+      "source_files": "Classes/LCKCoreDataTableViewController.{h,m}",
+      "frameworks": "UIKit"
+    }
+  ]
+}

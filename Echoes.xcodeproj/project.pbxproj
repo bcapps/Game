@@ -162,6 +162,9 @@
 		F2D374D11A5F839B004CFDAF /* LCKLevelUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D374D01A5F839B004CFDAF /* LCKLevelUpTableViewController.m */; };
 		F2D374D51A60BADB004CFDAF /* LCKJournalProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */; };
 		F2D374D71A60BAF2004CFDAF /* Journal.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D374D61A60BAF2004CFDAF /* Journal.plist */; };
+		F2D5AF821BE81B8100E41337 /* LCKServiceAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */; };
+		F2D5AF851BE81DD300E41337 /* LCKMultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */; };
+		F2D5AF881BE8201800E41337 /* LCKServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */; };
 		F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D8188F1AABCDFF00051561 /* binoculars@2x.png */; };
 		F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818901AABCDFF00051561 /* blackknightshield@2x.png */; };
 		F2D818991AABCDFF00051561 /* blackknightsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D818911AABCDFF00051561 /* blackknightsword@2x.png */; };
@@ -404,6 +407,12 @@
 		F2D374D31A60BADB004CFDAF /* LCKJournalProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKJournalProvider.h; sourceTree = "<group>"; };
 		F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKJournalProvider.m; sourceTree = "<group>"; };
 		F2D374D61A60BAF2004CFDAF /* Journal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Journal.plist; sourceTree = "<group>"; };
+		F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKServiceAdvertiser.h; sourceTree = "<group>"; };
+		F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKServiceAdvertiser.m; sourceTree = "<group>"; };
+		F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerSession.h; sourceTree = "<group>"; };
+		F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerSession.m; sourceTree = "<group>"; };
+		F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKServiceBrowser.h; sourceTree = "<group>"; };
+		F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKServiceBrowser.m; sourceTree = "<group>"; };
 		F2D8188F1AABCDFF00051561 /* binoculars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "binoculars@2x.png"; sourceTree = "<group>"; };
 		F2D818901AABCDFF00051561 /* blackknightshield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackknightshield@2x.png"; sourceTree = "<group>"; };
 		F2D818911AABCDFF00051561 /* blackknightsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackknightsword@2x.png"; sourceTree = "<group>"; };
@@ -581,6 +590,12 @@
 				F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */,
 				F21F43601A32CE0500FEA417 /* LCKMultipeerManager.h */,
 				F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */,
+				F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */,
+				F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */,
+				F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */,
+				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
+				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
+				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
 			);
 			name = Multipeer;
 			sourceTree = "<group>";
@@ -926,6 +941,7 @@
 				F2206AEB1A2D2C0D006E44B0 /* Frameworks */,
 				F2206AEC1A2D2C0D006E44B0 /* Resources */,
 				D1D75D51E284598421989F46 /* Copy Pods Resources */,
+				37C2293436B151A9FD398EF9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -945,6 +961,7 @@
 				F2206B071A2D2C0D006E44B0 /* Frameworks */,
 				F2206B081A2D2C0D006E44B0 /* Resources */,
 				8E3ED45414F3D591EC0ECE50 /* Copy Pods Resources */,
+				18397F9178CB412B94F2F249 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -962,7 +979,7 @@
 		F2206AE61A2D2C0D006E44B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Lickability;
 				TargetAttributes = {
 					F2206AED1A2D2C0D006E44B0 = {
@@ -1124,6 +1141,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18397F9178CB412B94F2F249 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2374F862BCAB560D7938E9A1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1137,6 +1169,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37C2293436B151A9FD398EF9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E3ED45414F3D591EC0ECE50 /* Copy Pods Resources */ = {
@@ -1195,6 +1242,9 @@
 				F21F43411A2FD26D00FEA417 /* LCKItemProvider.m in Sources */,
 				F21F43441A2FD28000FEA417 /* LCKItem.m in Sources */,
 				F21F43591A3020FA00FEA417 /* LCKAllItemsTableViewController.m in Sources */,
+				F2D5AF821BE81B8100E41337 /* LCKServiceAdvertiser.m in Sources */,
+				F2D5AF851BE81DD300E41337 /* LCKMultipeerSession.m in Sources */,
+				F2D5AF881BE8201800E41337 /* LCKServiceBrowser.m in Sources */,
 				F21F43691A355E8400FEA417 /* LCKEquipmentViewController.m in Sources */,
 				F268F06F1A5283F200AEA410 /* LCKStatsCollectionViewController.m in Sources */,
 				F21F43A01A3BB39400FEA417 /* LCKStatusButton.m in Sources */,
@@ -1323,6 +1373,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1337,7 +1388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1373,7 +1424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1386,12 +1437,13 @@
 			baseConfigurationReference = 23B12920D7E84FE6F534C0E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Echoes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1402,12 +1454,13 @@
 			baseConfigurationReference = 023C27F956B686D5089A3418 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Echoes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1428,6 +1481,7 @@
 				);
 				INFOPLIST_FILE = EchoesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Echoes.app/Echoes";
 			};
@@ -1444,6 +1498,7 @@
 				);
 				INFOPLIST_FILE = EchoesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Echoes.app/Echoes";
 			};

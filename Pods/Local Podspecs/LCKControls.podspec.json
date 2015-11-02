@@ -1,0 +1,33 @@
+{
+  "name": "LCKControls",
+  "version": "1.1",
+  "summary": "This pod is used to hold common controls that are used across applications.",
+  "homepage": "https://github.com/Lickability/LCKControls/",
+  "license": "Copyright 2014 Lickability",
+  "authors": {
+    "Lickability": "http://lickability.com"
+  },
+  "source": {
+    "git": "https://github.com/Lickability/LCKControls.git",
+    "tag": "1.1"
+  },
+  "platforms": {
+    "osx": "10.9",
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Classes",
+  "resources": "Assets",
+  "dependencies": {
+    "LCKCategories": [
+      "~> 0.0"
+    ],
+    "SVProgressHUD": [
+      "~> 1.0"
+    ]
+  },
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ]
+}

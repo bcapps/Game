@@ -1,0 +1,1 @@
+../../../LCKCoreData/Classes/LCKCoreDataTableViewController.h

@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     self.tableView.tableFooterView = [[UIView alloc] init];
     
     self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:LCKDMDisplayName];
-    [self.multipeerManager startMonitoring];
+    [self.multipeerManager startSession];
 }
 
 #pragma mark - LCKDMToolsTableViewController

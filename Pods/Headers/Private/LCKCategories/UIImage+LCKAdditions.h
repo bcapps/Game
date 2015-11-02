@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/UIKit/UIImage+LCKAdditions.h

@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/Foundation/NSArray+LCKAdditions.h

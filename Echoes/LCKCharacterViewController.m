@@ -111,7 +111,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     
     self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:self.character.displayName];
-    [self.multipeerManager startMonitoring];
+    [self.multipeerManager startSession];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(soulsReceived:) name:LCKMultipeerSoulsReceivedNotification object:nil];

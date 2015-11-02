@@ -1,0 +1,1 @@
+../../../LCKControls/Classes/LCKRoundedImageCell.h

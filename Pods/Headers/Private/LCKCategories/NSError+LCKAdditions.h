@@ -1,0 +1,1 @@
+../../../LCKCategories/Classes/Foundation/NSError+LCKAdditions.h

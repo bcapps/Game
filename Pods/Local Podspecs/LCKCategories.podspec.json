@@ -1,0 +1,44 @@
+{
+  "name": "LCKCategories",
+  "version": "0.4",
+  "summary": "LCKCategories is a repository for apps want to use common categories that extend functionality.",
+  "homepage": "http://lickability.com",
+  "authors": {
+    "Lickability": "http://lickability.com"
+  },
+  "source": {
+    "git": "https://github.com/Lickability/LCKCategories.git",
+    "tag": "0.4"
+  },
+  "platforms": {
+    "ios": "7.0",
+    "osx": "10.9"
+  },
+  "license": "Copyright 2014 Lickability",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "CoreData",
+      "source_files": "Classes/CoreData/*",
+      "frameworks": "CoreData"
+    },
+    {
+      "name": "UIKit",
+      "source_files": "Classes/UIKit/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "Foundation",
+      "source_files": "Classes/Foundation/*",
+      "frameworks": "Foundation"
+    },
+    {
+      "name": "Utility",
+      "source_files": "Classes/Utility/*",
+      "frameworks": [
+        "Foundation",
+        "UIKit"
+      ]
+    }
+  ]
+}

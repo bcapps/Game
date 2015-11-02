@@ -22,11 +22,13 @@ extern NSString * const LCKMultipeerJournalEntryDescription;
 
 @interface LCKMultipeerManager : NSObject
 
-@property (nonatomic, readonly) MCSession *session;
+@property (nonatomic, readonly) NSArray *connectedPeers;
 
 - (instancetype)initWithCharacterName:(NSString *)characterName;
 
-- (void)startMonitoring;
+- (void)startSession;
+- (void)stopSession;
+
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendEventName:(NSString *)eventName toPeerID:(MCPeerID *)peerID;

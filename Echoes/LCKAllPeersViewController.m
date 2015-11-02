@@ -71,7 +71,7 @@
 - (NSArray *)peers {
     NSMutableArray *peers = [NSMutableArray array];
     
-    for (MCPeerID *peerID in self.multipeerManager.session.connectedPeers) {
+    for (MCPeerID *peerID in self.multipeerManager.connectedPeers) {
         if (![peerID.displayName isEqualToString:LCKDMDisplayName]) {
             [peers addObject:peerID];
         }
