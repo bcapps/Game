@@ -586,16 +586,11 @@
 		F21F437C1A3A25DC00FEA417 /* Multipeer */ = {
 			isa = PBXGroup;
 			children = (
+				F2D5AF891BE82ACB00E41337 /* Multipeer Backend */,
 				F21F43641A32D78000FEA417 /* LCKAllPeersViewController.h */,
 				F21F43651A32D78000FEA417 /* LCKAllPeersViewController.m */,
 				F21F43601A32CE0500FEA417 /* LCKMultipeerManager.h */,
 				F21F43611A32CE0500FEA417 /* LCKMultipeerManager.m */,
-				F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */,
-				F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */,
-				F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */,
-				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
-				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
-				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
 			);
 			name = Multipeer;
 			sourceTree = "<group>";
@@ -895,6 +890,19 @@
 				F2D374D41A60BADB004CFDAF /* LCKJournalProvider.m */,
 			);
 			name = Journals;
+			sourceTree = "<group>";
+		};
+		F2D5AF891BE82ACB00E41337 /* Multipeer Backend */ = {
+			isa = PBXGroup;
+			children = (
+				F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */,
+				F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */,
+				F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */,
+				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
+				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
+				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
+			);
+			name = "Multipeer Backend";
 			sourceTree = "<group>";
 		};
 		F2FE1CC91A4A588F00FA161C /* Maps */ = {

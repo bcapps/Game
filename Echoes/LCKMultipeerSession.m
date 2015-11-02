@@ -7,18 +7,11 @@
 //
 
 #import "LCKMultipeerSession.h"
-#import "LCKMultipeerManager.h"
-
-typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
-    LCKMultipeerManagerSendTypeItem,
-    LCKMultipeerManagerSendTypeSouls,
-    LCKMultipeerManagerSendTypeJournalEntry,
-    LCKMultipeerManagerSendTypeEvent
-};
 
 @interface LCKMultipeerSession () <MCSessionDelegate>
 
 @property (nonatomic) NSString *peerName;
+@property (nonatomic) id <LCKMultipeerSessionDelegate> delegate;
 
 @property (nonatomic) MCSession *internalSession;
 @property (nonatomic) MCPeerID *peerID;
@@ -27,11 +20,12 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 @implementation LCKMultipeerSession
 
-- (instancetype)initWithPeerName:(NSString *)peerName {
+- (instancetype)initWithPeerName:(NSString *)peerName delegate:(id<LCKMultipeerSessionDelegate>)delegate {
     self = [super init];
     
     if (self) {
         _peerName = peerName;
+        _delegate = delegate;
     }
     
     return self;
@@ -56,61 +50,43 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 #pragma mark - MCSessionDelegate
 
-// Received data from remote peer
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    NSLog(@"Did Receive Data");
-    
-    if (data) {
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
-        
-        NSString *notificationName;
-        
-        if (type == LCKMultipeerManagerSendTypeItem) {
-            notificationName = LCKMultipeerItemReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeSouls) {
-            notificationName = LCKMultipeerSoulsReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
-            notificationName = LCKMultipeerJournalEntryReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeEvent) {
-            notificationName = LCKMultipeerEventReceivedNotificiation;
-        }
-        
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
-        }];
+    if ([self.delegate respondsToSelector:@selector(session:didReceiveData:fromPeer:)]) {
+        [self.delegate session:self didReceiveData:data fromPeer:peerID];
     }
 }
 
 - (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void(^)(BOOL accept))certificateHandler {
-    if (certificateHandler) {
+    if ([self.delegate respondsToSelector:@selector(session:didReceiveCertificate:fromPeer:certificateHandler:)]) {
+        [self.delegate session:self didReceiveCertificate:certificate fromPeer:peerID certificateHandler:certificateHandler];
+    }
+    else if (certificateHandler) {
         certificateHandler(YES);
     }
 }
 
-// Remote peer changed state
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{        
-        [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
-    }];
+    if ([self.delegate respondsToSelector:@selector(session:peer:didChangeState:)]) {
+        [self.delegate session:self peer:peerID didChangeState:state];
+    }
 }
 
-// Received a byte stream from remote peer
 - (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID {
-    NSLog(@"Did Receive Stream");
+    if ([self.delegate respondsToSelector:@selector(session:didReceiveStream:withName:fromPeer:)]) {
+        [self.delegate session:self didReceiveStream:stream withName:streamName fromPeer:peerID];
+    }
 }
 
-// Start receiving a resource from remote peer
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress {
-    NSLog(@"Did Start Resource");
+    if ([self.delegate respondsToSelector:@selector(session:didStartReceivingResourceWithName:fromPeer:withProgress:)]) {
+        [self.delegate session:self didStartReceivingResourceWithName:resourceName fromPeer:peerID withProgress:progress];
+    }
 }
 
-// Finished receiving a resource from remote peer and saved the content in a temporary location - the app is responsible for moving the file to a permanent location within its sandbox
 - (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error {
-    NSLog(@"Did Finish Resource");
+    if ([self.delegate respondsToSelector:@selector(session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:)]) {
+        [self.delegate session:self didFinishReceivingResourceWithName:resourceName fromPeer:peerID atURL:localURL withError:error];
+    }
 }
 
 @end

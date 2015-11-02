@@ -34,7 +34,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     LCKMultipeerManagerSendTypeEvent
 };
 
-@interface LCKMultipeerManager ()
+@interface LCKMultipeerManager () <LCKMultipeerSessionDelegate>
 
 @property (nonatomic) LCKMultipeerSession *session;
 
@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     self = [super init];
     
     if (self) {
-        _session = [[LCKMultipeerSession alloc] initWithPeerName:characterName];
+        _session = [[LCKMultipeerSession alloc] initWithPeerName:characterName delegate:self];
         
         if ([characterName isEqualToString:LCKDMDisplayName]) {
             _serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:_session serviceName:@"echoes"];
@@ -121,6 +121,38 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     }
     
     return NO;
+}
+
+- (void)session:(LCKMultipeerSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
+    if (data) {
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
+        
+        NSString *notificationName;
+        
+        if (type == LCKMultipeerManagerSendTypeItem) {
+            notificationName = LCKMultipeerItemReceivedNotification;
+        }
+        else if (type == LCKMultipeerManagerSendTypeSouls) {
+            notificationName = LCKMultipeerSoulsReceivedNotification;
+        }
+        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
+            notificationName = LCKMultipeerJournalEntryReceivedNotification;
+        }
+        else if (type == LCKMultipeerManagerSendTypeEvent) {
+            notificationName = LCKMultipeerEventReceivedNotificiation;
+        }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
+        }];
+    }
+}
+
+- (void)session:(LCKMultipeerSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
+    }];
 }
 
 @end
