@@ -14,4 +14,4 @@ pod 'LCKControls', :git => 'git@github.com:Lickability/LCKControls.git', :commit
 
 pod 'iCarousel', :head
 pod 'UICountingLabel', :head
-pod 'HockeySDK', '~> 3.6'
+pod 'HockeySDK', '~> 3.8.4'

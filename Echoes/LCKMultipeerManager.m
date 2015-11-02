@@ -7,6 +7,8 @@
 //
 
 #import "LCKMultipeerManager.h"
+#import "LCKDMManager.h"
+
 #import <LCKCategories/NSNotificationCenter+LCKAdditions.h>
 
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
@@ -34,6 +36,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 @property (nonatomic) MCNearbyServiceBrowser *serviceBrowser;
 @property (nonatomic) MCNearbyServiceAdvertiser *serviceAdvertiser;
+@property (nonatomic) MCPeerID *localPeerID;
 @property (nonatomic) MCSession *session;
 @property (nonatomic) NSDate *timeStarted;
 
@@ -53,6 +56,21 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     
     if (self) {
         _characterName = characterName;
+        
+        if (_characterName.length) {
+            _localPeerID = [[MCPeerID alloc] initWithDisplayName:_characterName];
+            
+            _session = [[MCSession alloc] initWithPeer:_localPeerID];
+            _session.delegate = self;
+            
+            if ([LCKDMManager isDMMode]) {
+                _serviceBrowser = [[MCNearbyServiceBrowser alloc] initWithPeer:_localPeerID serviceType:@"echoes"];
+                _serviceBrowser.delegate = self;
+            }
+
+            _serviceAdvertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:_localPeerID discoveryInfo:nil serviceType:@"echoes"];
+            _serviceAdvertiser.delegate = self;
+        }
     }
     
     return self;
@@ -60,18 +78,8 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 - (void)startMonitoring {
     if (self.characterName.length > 0) {
-        MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:self.characterName];
-        
-        self.serviceBrowser = [[MCNearbyServiceBrowser alloc] initWithPeer:peerID serviceType:@"echoes"];
-        self.serviceBrowser.delegate = self;
         [self.serviceBrowser startBrowsingForPeers];
-        
-        self.serviceAdvertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:peerID discoveryInfo:@{} serviceType:@"echoes"];
-        self.serviceAdvertiser.delegate = self;
         [self.serviceAdvertiser startAdvertisingPeer];
-        
-        self.session = [[MCSession alloc] initWithPeer:peerID];
-        self.session.delegate = self;
         
         _timeStarted = [NSDate date];
     }
@@ -117,12 +125,13 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
     NSLog(@"Found Peer %@", peerID.displayName);
     
-    if (![peerID.displayName isEqualToString:self.characterName]) {
-        NSTimeInterval runningTime = -self.timeStarted.timeIntervalSinceNow;
-        NSData *context = [NSData dataWithBytes:&runningTime length:sizeof(NSTimeInterval)];
-        
-        [browser invitePeer:peerID toSession:self.session withContext:context timeout:30];
+    if ([self shouldInvitePeer:peerID]) {
+        [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30];
     }
+}
+
+- (BOOL)shouldInvitePeer:(MCPeerID *)peerID {
+    return ![peerID.displayName isEqualToString:self.characterName] && [LCKDMManager isDMMode];
 }
 
 // A nearby peer has stopped advertising
@@ -135,18 +144,16 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 // Incoming invitation request.  Call the invitationHandler block with YES and a valid session to connect the inviting peer to the session.
 - (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didReceiveInvitationFromPeer:(MCPeerID *)peerID withContext:(NSData *)context invitationHandler:(void(^)(BOOL accept, MCSession *session))invitationHandler {
     NSLog(@"Did Receive Invitiation From Peer");
-
-    NSTimeInterval runningTime = -self.timeStarted.timeIntervalSinceNow;
-    NSTimeInterval peerRunningTime = 0;
-    [context getBytes:&peerRunningTime];
-    BOOL isPeerOlder = peerRunningTime > runningTime;
+    
+    BOOL shouldAcceptInvitation = ![LCKDMManager isDMMode];
     
     if (invitationHandler) {
-        invitationHandler(isPeerOlder, self.session);
+        invitationHandler(shouldAcceptInvitation, self.session);
     }
     
-    if (isPeerOlder) {
-        [advertiser stopAdvertisingPeer];
+    if (shouldAcceptInvitation) {
+        [self.serviceBrowser stopBrowsingForPeers];
+        [self.serviceAdvertiser stopAdvertisingPeer];
     }
 }
 
@@ -160,8 +167,6 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 // Remote peer changed state
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-    NSLog(@"Peer State Changed");
-    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
     }];
@@ -191,7 +196,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
         }
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:dictionary];
+            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
         }];
     }
 }
