@@ -39,6 +39,8 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 @interface LCKMultipeerManager () <LCKMultipeerSessionDelegate>
 
 @property (nonatomic) NSString *characterName;
+@property (nonatomic, readonly) BOOL isAdvertiser;
+@property (nonatomic, readonly) BOOL isBrowser;
 
 @property (nonatomic) LCKMultipeerSession *session;
 @property (nonatomic) LCKServiceBrowser *serviceBrowser;
@@ -74,8 +76,6 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (void)startSession {
-    [self instantiateMultipeerObjects];
-    
     [self.serviceBrowser startBrowsing];
     [self.serviceAdvertiser beginAdvertising];
 }
@@ -86,24 +86,49 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     
     [self.session.internalSession disconnect];
     
-    [self tearDownMultipeerObjects];
-}
-
-- (void)instantiateMultipeerObjects {
-    self.session = [[LCKMultipeerSession alloc] initWithPeerName:self.characterName delegate:self];
-
-    if ([self.characterName isEqualToString:LCKDMDisplayName]) {
-        self.serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
-    }
-    else {
-        self.serviceAdvertiser = [[LCKServiceAdvertiser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
-    }
-}
-
-- (void)tearDownMultipeerObjects {
     self.serviceBrowser = nil;
     self.serviceAdvertiser = nil;
     self.session = nil;
+}
+
+- (LCKMultipeerSession *)session {
+    if (!_session) {
+        _session = [[LCKMultipeerSession alloc] initWithPeerName:self.characterName delegate:self];
+    }
+    
+    return _session;
+}
+
+- (LCKServiceBrowser *)serviceBrowser {
+    if (![self isBrowser]) {
+        return nil;
+    }
+    
+    if (!_serviceBrowser) {
+        _serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
+    }
+    
+    return _serviceBrowser;
+}
+
+- (LCKServiceAdvertiser *)serviceAdvertiser {
+    if (![self isAdvertiser]) {
+        return nil;
+    }
+    
+    if (!_serviceAdvertiser) {
+        _serviceAdvertiser = [[LCKServiceAdvertiser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
+    }
+    
+    return _serviceAdvertiser;
+}
+
+- (BOOL)isAdvertiser {
+    return ![LCKDMManager isDMMode];
+}
+
+- (BOOL)isBrowser {
+    return [LCKDMManager isDMMode];
 }
 
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {
