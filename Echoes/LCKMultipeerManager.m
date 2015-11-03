@@ -27,6 +27,8 @@ NSString * const LCKMultipeerValueKey = @"value";
 NSString * const LCKMultipeerJournalEntryTitle = @"entryTitle";
 NSString * const LCKMultipeerJournalEntryDescription = @"entryDescription";
 
+static NSString * const LCKMultipeerManagerServiceName = @"echoes";
+
 typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     LCKMultipeerManagerSendTypeItem,
     LCKMultipeerManagerSendTypeSouls,
@@ -36,8 +38,9 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 @interface LCKMultipeerManager () <LCKMultipeerSessionDelegate>
 
-@property (nonatomic) LCKMultipeerSession *session;
+@property (nonatomic) NSString *characterName;
 
+@property (nonatomic) LCKMultipeerSession *session;
 @property (nonatomic) LCKServiceBrowser *serviceBrowser;
 @property (nonatomic) LCKServiceAdvertiser *serviceAdvertiser;
 
@@ -57,14 +60,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     self = [super init];
     
     if (self) {
-        _session = [[LCKMultipeerSession alloc] initWithPeerName:characterName delegate:self];
-        
-        if ([characterName isEqualToString:LCKDMDisplayName]) {
-            _serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:_session serviceName:@"echoes"];
-        }
-        else {
-            _serviceAdvertiser = [[LCKServiceAdvertiser alloc] initWithSession:_session serviceName:@"echoes"];
-        }
+        _characterName = characterName;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startSession) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopSession) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -78,6 +74,8 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (void)startSession {
+    [self instantiateMultipeerObjects];
+    
     [self.serviceBrowser startBrowsing];
     [self.serviceAdvertiser beginAdvertising];
 }
@@ -87,6 +85,25 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     [self.serviceAdvertiser stopAdvertising];
     
     [self.session.internalSession disconnect];
+    
+    [self tearDownMultipeerObjects];
+}
+
+- (void)instantiateMultipeerObjects {
+    self.session = [[LCKMultipeerSession alloc] initWithPeerName:self.characterName delegate:self];
+
+    if ([self.characterName isEqualToString:LCKDMDisplayName]) {
+        self.serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
+    }
+    else {
+        self.serviceAdvertiser = [[LCKServiceAdvertiser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
+    }
+}
+
+- (void)tearDownMultipeerObjects {
+    self.serviceBrowser = nil;
+    self.serviceAdvertiser = nil;
+    self.session = nil;
 }
 
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {

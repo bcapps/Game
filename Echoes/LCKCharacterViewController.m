@@ -90,6 +90,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.collectionView.dataSource = nil;
     self.collectionView.delegate = nil;
     
+    [self.multipeerManager stopSession];
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
