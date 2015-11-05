@@ -29,7 +29,7 @@
  *
  *  @return A BOOL indicating if the data was sent successfully.
  */
-- (BOOL)sendData:(NSData *)data toPeerID:(MCPeerID *)peerID;
+- (BOOL)sendObject:(id <NSCoding>)object toPeerID:(MCPeerID *)peerID;
 
 /**
  *  Sends data through the multipeer session to all peers
@@ -38,6 +38,6 @@
  *
  *  @return A BOOL indicating if the data was sent successfully.
  */
-- (BOOL)sendDataToAllConnectedPeers:(NSData *)data;
+- (BOOL)sendObjectToAllConnectedPeers:(id <NSCoding>)object;
 
 @end

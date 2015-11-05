@@ -77,7 +77,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (void)startSession {
-    [self.serviceBrowser startBrowsing];
+    [self.serviceBrowser beginBrowsing];
     [self.serviceAdvertiser beginAdvertising];
 }
 
@@ -151,7 +151,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
         NSDictionary *dictionary = @{@"type": @(sendType), @"value": object};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
         
-        return [messageSender sendData:data toPeerID:peerID];
+        return NO;//[messageSender sendData:data toPeerID:peerID];
     }
     
     return NO;
@@ -164,7 +164,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
         NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeJournalEntry), @"entryTitle": entryTitle, @"entryDescription": entryDescription};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
         
-        return [messageSender sendData:data toPeerID:peerID];
+        return NO;//[messageSender sendData:data toPeerID:peerID];
     }
     
     return NO;
@@ -172,27 +172,31 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 
 - (void)session:(LCKMultipeerSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
     if (data) {
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
+        id object = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         
-        NSString *notificationName;
         
-        if (type == LCKMultipeerManagerSendTypeItem) {
-            notificationName = LCKMultipeerItemReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeSouls) {
-            notificationName = LCKMultipeerSoulsReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
-            notificationName = LCKMultipeerJournalEntryReceivedNotification;
-        }
-        else if (type == LCKMultipeerManagerSendTypeEvent) {
-            notificationName = LCKMultipeerEventReceivedNotificiation;
-        }
         
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
-        }];
+//        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
+//        
+//        NSString *notificationName;
+//        
+//        if (type == LCKMultipeerManagerSendTypeItem) {
+//            notificationName = LCKMultipeerItemReceivedNotification;
+//        }
+//        else if (type == LCKMultipeerManagerSendTypeSouls) {
+//            notificationName = LCKMultipeerSoulsReceivedNotification;
+//        }
+//        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
+//            notificationName = LCKMultipeerJournalEntryReceivedNotification;
+//        }
+//        else if (type == LCKMultipeerManagerSendTypeEvent) {
+//            notificationName = LCKMultipeerEventReceivedNotificiation;
+//        }
+//        
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
+//        }];
     }
 }
 

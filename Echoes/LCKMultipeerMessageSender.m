@@ -31,22 +31,24 @@
     return self;
 }
 
-- (BOOL)sendData:(NSData *)data toPeerID:(MCPeerID *)peerID {
+- (BOOL)sendObject:(id <NSCoding>)object toPeerID:(MCPeerID *)peerID {
     if (!peerID) {
         return NO;
     }
     
-    return [self sendData:data toPeers:@[peerID]];
+    return [self sendObject:object toPeers:@[peerID]];
 }
 
-- (BOOL)sendDataToAllConnectedPeers:(NSData *)data {
-    return [self sendData:data toPeers:self.session.internalSession.connectedPeers];
+- (BOOL)sendObjectToAllConnectedPeers:(id <NSCoding>)object {
+    return [self sendObject:object toPeers:self.session.internalSession.connectedPeers];
 }
 
-- (BOOL)sendData:(NSData *)data toPeers:(NSArray *)peers {
-    if (!data) {
+- (BOOL)sendObject:(id <NSCoding>)object toPeers:(NSArray *)peers {
+    if (!object || !peers) {
         return NO;
     }
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
     
     return [self.session.internalSession sendData:data toPeers:peers withMode:MCSessionSendDataReliable error:nil];
 }

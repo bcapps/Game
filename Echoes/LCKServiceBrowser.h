@@ -20,7 +20,7 @@
 /**
  Begin browsing for other peers looking for the given service name.
  */
-- (void)startBrowsing;
+- (void)beginBrowsing;
 
 /**
  Stop browsing for other peers.

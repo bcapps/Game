@@ -46,7 +46,7 @@
     return ![peerID.displayName isEqualToString:self.session.peerID.displayName];
 }
 
-- (void)startBrowsing {
+- (void)beginBrowsing {
     [self.serviceBrowser startBrowsingForPeers];
 }
 
