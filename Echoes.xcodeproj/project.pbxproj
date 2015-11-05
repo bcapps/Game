@@ -891,6 +891,21 @@
 			name = Events;
 			sourceTree = "<group>";
 		};
+		F29F6E721BEB137E005052D5 /* Private API */ = {
+			isa = PBXGroup;
+			children = (
+				F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */,
+				F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */,
+				F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */,
+				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
+				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
+				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
+				F2E6DBC81BEAEBE200158C33 /* LCKMultipeerMessageSender.h */,
+				F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */,
+			);
+			name = "Private API";
+			sourceTree = "<group>";
+		};
 		F2D374D21A60BAC7004CFDAF /* Journals */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,14 +919,7 @@
 		F2D5AF891BE82ACB00E41337 /* Multipeer Backend */ = {
 			isa = PBXGroup;
 			children = (
-				F2D5AF861BE8201800E41337 /* LCKServiceBrowser.h */,
-				F2D5AF871BE8201800E41337 /* LCKServiceBrowser.m */,
-				F2D5AF801BE81B8100E41337 /* LCKServiceAdvertiser.h */,
-				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
-				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
-				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
-				F2E6DBC81BEAEBE200158C33 /* LCKMultipeerMessageSender.h */,
-				F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */,
+				F29F6E721BEB137E005052D5 /* Private API */,
 				F29F6E6F1BEB0F3A005052D5 /* LCKMultipeerMessage.h */,
 				F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */,
 				F29F6E661BEB0473005052D5 /* LCKMultipeer.h */,
