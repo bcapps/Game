@@ -13,6 +13,8 @@
 #import "LCKServiceBrowser.h"
 #import "LCKMultipeerSession.h"
 #import "LCKMultipeerMessageSender.h"
+#import "LCKMultipeerMessage.h"
+#import "LCKMultipeer.h"
 
 #import <LCKCategories/NSNotificationCenter+LCKAdditions.h>
 
@@ -37,15 +39,9 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     LCKMultipeerManagerSendTypeEvent
 };
 
-@interface LCKMultipeerManager () <LCKMultipeerSessionDelegate>
+@interface LCKMultipeerManager () <LCKMultipeerDelegate>
 
-@property (nonatomic) NSString *characterName;
-@property (nonatomic, readonly) BOOL isAdvertiser;
-@property (nonatomic, readonly) BOOL isBrowser;
-
-@property (nonatomic) LCKMultipeerSession *session;
-@property (nonatomic) LCKServiceBrowser *serviceBrowser;
-@property (nonatomic) LCKServiceAdvertiser *serviceAdvertiser;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end
 
@@ -63,7 +59,13 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     self = [super init];
     
     if (self) {
-        _characterName = characterName;
+        LCKMultipeerUserType userType = LCKMultipeerUserTypeClient;
+        
+        if ([LCKDMManager isDMMode]) {
+            userType = LCKMultipeerUserTypeHost;
+        }
+        
+        _multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:userType peerName:characterName serviceName:@"echoes" delegate:self];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startSession) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopSession) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -73,63 +75,15 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (NSArray *)connectedPeers {
-    return self.session.internalSession.connectedPeers;
+    return self.multipeer.connectedPeers;
 }
 
 - (void)startSession {
-    [self.serviceBrowser beginBrowsing];
-    [self.serviceAdvertiser beginAdvertising];
+    [self.multipeer startMultipeerConnectivity];
 }
 
 - (void)stopSession {
-    [self.serviceBrowser stopBrowsing];
-    [self.serviceAdvertiser stopAdvertising];
-    
-    [self.session.internalSession disconnect];
-    
-    self.serviceBrowser = nil;
-    self.serviceAdvertiser = nil;
-    self.session = nil;
-}
-
-- (LCKMultipeerSession *)session {
-    if (!_session) {
-        _session = [[LCKMultipeerSession alloc] initWithPeerName:self.characterName delegate:self];
-    }
-    
-    return _session;
-}
-
-- (LCKServiceBrowser *)serviceBrowser {
-    if (![self isBrowser]) {
-        return nil;
-    }
-    
-    if (!_serviceBrowser) {
-        _serviceBrowser = [[LCKServiceBrowser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
-    }
-    
-    return _serviceBrowser;
-}
-
-- (LCKServiceAdvertiser *)serviceAdvertiser {
-    if (![self isAdvertiser]) {
-        return nil;
-    }
-    
-    if (!_serviceAdvertiser) {
-        _serviceAdvertiser = [[LCKServiceAdvertiser alloc] initWithSession:self.session serviceName:LCKMultipeerManagerServiceName];
-    }
-    
-    return _serviceAdvertiser;
-}
-
-- (BOOL)isAdvertiser {
-    return ![LCKDMManager isDMMode];
-}
-
-- (BOOL)isBrowser {
-    return [LCKDMManager isDMMode];
+    [self.multipeer stopMultipeerConnectivity];
 }
 
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID {
@@ -145,65 +99,40 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (BOOL)sendObject:(id)object toPeerID:(MCPeerID *)peerID sendType:(LCKMultipeerManagerSendType)sendType {
-    if (object) {
-        LCKMultipeerMessageSender *messageSender = [[LCKMultipeerMessageSender alloc] initWithMultipeerSession:self.session];
+    NSDictionary *dictionary = @{@"value": object};
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
+    
+    LCKMultipeerMessage *message = [[LCKMultipeerMessage alloc] initWithMessageType:sendType messageData:data];
+    
+    return [self.multipeer sendMessage:message toPeer:peerID];
+}
 
-        NSDictionary *dictionary = @{@"type": @(sendType), @"value": object};
-        NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
-        
-        return NO;//[messageSender sendData:data toPeerID:peerID];
+
+- (void)multipeer:(LCKMultipeer *)multipeer receivedMessage:(LCKMultipeerMessage *)message fromPeer:(MCPeerID *)peer {
+    NSString *notificationName;
+    
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:message.data options:0 error:nil];
+
+    if (message.type == LCKMultipeerManagerSendTypeItem) {
+        notificationName = LCKMultipeerItemReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeSouls) {
+        notificationName = LCKMultipeerSoulsReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeJournalEntry) {
+        notificationName = LCKMultipeerJournalEntryReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeEvent) {
+        notificationName = LCKMultipeerEventReceivedNotificiation;
     }
     
-    return NO;
-}
-
-- (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID {
-    if (entryTitle && entryDescription) {
-        LCKMultipeerMessageSender *messageSender = [[LCKMultipeerMessageSender alloc] initWithMultipeerSession:self.session];
-
-        NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeJournalEntry), @"entryTitle": entryTitle, @"entryDescription": entryDescription};
-        NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
-        
-        return NO;//[messageSender sendData:data toPeerID:peerID];
-    }
-    
-    return NO;
-}
-
-- (void)session:(LCKMultipeerSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    if (data) {
-        id object = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        
-        
-        
-//        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//        LCKMultipeerManagerSendType type = [[dictionary objectForKey:@"type"] integerValue];
-//        
-//        NSString *notificationName;
-//        
-//        if (type == LCKMultipeerManagerSendTypeItem) {
-//            notificationName = LCKMultipeerItemReceivedNotification;
-//        }
-//        else if (type == LCKMultipeerManagerSendTypeSouls) {
-//            notificationName = LCKMultipeerSoulsReceivedNotification;
-//        }
-//        else if (type == LCKMultipeerManagerSendTypeJournalEntry) {
-//            notificationName = LCKMultipeerJournalEntryReceivedNotification;
-//        }
-//        else if (type == LCKMultipeerManagerSendTypeEvent) {
-//            notificationName = LCKMultipeerEventReceivedNotificiation;
-//        }
-//        
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
-//        }];
-    }
-}
-
-- (void)session:(LCKMultipeerSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
     }];
+}
+
+- (void)multipeer:(LCKMultipeer *)multipeer connectedPeersStateDidChange:(NSArray *)connectedPeers {
+    [[NSNotificationCenter defaultCenter] postNotificationName:LCKMultipeerPeerStateChangedNotification object:nil];
 }
 
 @end

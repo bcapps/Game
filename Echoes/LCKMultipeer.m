@@ -72,12 +72,12 @@
     self.session = nil;
 }
 
-- (BOOL)sendObject:(id <NSCoding>)object toPeer:(MCPeerID *)peerID {
-    return [self.messageSender sendObject:object toPeerID:peerID];
+- (BOOL)sendMessage:(LCKMultipeerMessage *)message toPeer:(MCPeerID *)peerID {
+    return [self.messageSender sendMessage:message toPeerID:peerID];
 }
 
-- (BOOL)sendObjectToAllConnectedPeers:(id <NSCoding>)object {
-    return [self.messageSender sendObjectToAllConnectedPeers:object];
+- (BOOL)sendMessageToAllConnectedPeers:(LCKMultipeerMessage *)message {
+    return [self.messageSender sendMessageToAllConnectedPeers:message];
 }
 
 - (NSArray *)connectedPeers {
@@ -127,20 +127,20 @@
 #pragma mark - LCKMultipeerSessionDelegate
 
 - (void)session:(LCKMultipeerSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    if ([self.delegate respondsToSelector:@selector(objectReceived:fromPeer:)]) {
-        id <NSCoding> object = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if ([self.delegate respondsToSelector:@selector(multipeer:receivedMessage:fromPeer:)]) {
+        LCKMultipeerMessage *message = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.delegate objectReceived:object fromPeer:peerID];
+            [self.delegate multipeer:self receivedMessage:message fromPeer:peerID];
         }];
     }
 }
 
 - (void)session:(LCKMultipeerSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-    if ([self.delegate respondsToSelector:@selector(connectedPeersStateDidChange:)]) {
+    if ([self.delegate respondsToSelector:@selector(multipeer:connectedPeersStateDidChange:)]) {
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.delegate connectedPeersStateDidChange:self.connectedPeers];
+            [self.delegate multipeer:self connectedPeersStateDidChange:self.connectedPeers];
         }];
     }
 }

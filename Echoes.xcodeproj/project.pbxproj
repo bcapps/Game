@@ -153,6 +153,7 @@
 		F2735B121AF5C78D00C935C3 /* gargoylehelm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B101AF5C78D00C935C3 /* gargoylehelm@2x.png */; };
 		F28F9CC41AF444F400716241 /* Hollow Archer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */; };
 		F29F6E681BEB0473005052D5 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E671BEB0473005052D5 /* LCKMultipeer.m */; };
+		F29F6E711BEB0F3A005052D5 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */; };
 		F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */; };
 		F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */; };
 		F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */; };
@@ -399,6 +400,8 @@
 		F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hollow Archer@2x.png"; sourceTree = "<group>"; };
 		F29F6E661BEB0473005052D5 /* LCKMultipeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeer.h; sourceTree = "<group>"; };
 		F29F6E671BEB0473005052D5 /* LCKMultipeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeer.m; sourceTree = "<group>"; };
+		F29F6E6F1BEB0F3A005052D5 /* LCKMultipeerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerMessage.h; sourceTree = "<group>"; };
+		F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerMessage.m; sourceTree = "<group>"; };
 		F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatacombsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewLondoRuinsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadBurgMap@2x.png"; sourceTree = "<group>"; };
@@ -911,6 +914,8 @@
 				F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */,
 				F29F6E661BEB0473005052D5 /* LCKMultipeer.h */,
 				F29F6E671BEB0473005052D5 /* LCKMultipeer.m */,
+				F29F6E6F1BEB0F3A005052D5 /* LCKMultipeerMessage.h */,
+				F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */,
 			);
 			name = "Multipeer Backend";
 			sourceTree = "<group>";
@@ -1288,6 +1293,7 @@
 				F21F43661A32D78000FEA417 /* LCKAllPeersViewController.m in Sources */,
 				F21F43AF1A3C0C5A00FEA417 /* LCKDMToolsTableViewController.m in Sources */,
 				F21F43B51A3C1C7100FEA417 /* LCKMonsterManualTableViewController.m in Sources */,
+				F29F6E711BEB0F3A005052D5 /* LCKMultipeerMessage.m in Sources */,
 				F21F436C1A3563C700FEA417 /* LCKBaseCell.m in Sources */,
 				F268F0611A4F3E9C00AEA410 /* LCKEventsTableViewController.m in Sources */,
 				F2206B2A1A2D3703006E44B0 /* LCKDismissSegue.m in Sources */,

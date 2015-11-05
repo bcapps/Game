@@ -33,5 +33,4 @@ extern NSString * const LCKMultipeerJournalEntryDescription;
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendEventName:(NSString *)eventName toPeerID:(MCPeerID *)peerID;
 
-- (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID;
 @end

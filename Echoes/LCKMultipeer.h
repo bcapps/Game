@@ -9,6 +9,9 @@
 @import Foundation;
 @import MultipeerConnectivity;
 
+@class LCKMultipeer;
+@class LCKMultipeerMessage;
+
 /**
  *  The type of user this multipeer object should be representing.
  */
@@ -31,19 +34,19 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
 @optional
 
 /**
- *  This delegate method is called when an object is received from another peer in the same session.
+ *  This delegate method is called when a message is received from another peer in the same session.
  *
- *  @param object The object that is received.
+ *  @param message The message that is received.
  *  @param peer   The peer that sent it.
  */
-- (void)objectReceived:(id <NSCoding>)object fromPeer:(MCPeerID *)peer;
+- (void)multipeer:(LCKMultipeer *)multipeer receivedMessage:(LCKMultipeerMessage *)message fromPeer:(MCPeerID *)peer;
 
 /**
  *  This delegate method is called when the state of one or more peers has changed in the session.
  *
  *  @param connectedPeers The current peers that are connected to the session.
  */
-- (void)connectedPeersStateDidChange:(NSArray *)connectedPeers;
+- (void)multipeer:(LCKMultipeer *)multipeer connectedPeersStateDidChange:(NSArray *)connectedPeers;
 
 @end
 
@@ -87,22 +90,22 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
 - (void)stopMultipeerConnectivity;
 
 /**
- *  Sends a specified object to the specified peer.
+ *  Sends a specified message to the specified peer.
  *
- *  @param object The object you wish the peer to receive.
- *  @param peerID The peer you wish to receive the object.
+ *  @param message The message you wish the peer to receive.
+ *  @param peerID  The peer you wish to receive the message.
  *
  *  @return A BOOL indicating if the send was successful.
  */
-- (BOOL)sendObject:(id <NSCoding>)object toPeer:(MCPeerID *)peerID;
+- (BOOL)sendMessage:(LCKMultipeerMessage *)message toPeer:(MCPeerID *)peerID;
 
 /**
- *  Sends an object to all connected peers.
+ *  Sends a message to all connected peers.
  *
- *  @param object The object you wish to send.
+ *  @param message The message you wish to send.
  *
  *  @return A BOOL indicating if the send was successful.
  */
-- (BOOL)sendObjectToAllConnectedPeers:(id <NSCoding>)object;
+- (BOOL)sendMessageToAllConnectedPeers:(LCKMultipeerMessage *)message;
 
 @end

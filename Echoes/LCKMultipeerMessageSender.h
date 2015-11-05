@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+#import "LCKMultipeerMessage.h"
+
 @class LCKMultipeerSession;
 
 @interface LCKMultipeerMessageSender : NSObject
@@ -22,22 +24,22 @@
 - (instancetype)initWithMultipeerSession:(LCKMultipeerSession *)session;
 
 /**
- *  Sends data through the multipeer session.
+ *  Sends a message through the multipeer session.
  *
- *  @param data   The data to send.
- *  @param peerID The peer ID to send the data to.
+ *  @param message   The message to send.
+ *  @param peerID    The peer ID to send the data to.
  *
- *  @return A BOOL indicating if the data was sent successfully.
+ *  @return A BOOL indicating if the message was sent successfully.
  */
-- (BOOL)sendObject:(id <NSCoding>)object toPeerID:(MCPeerID *)peerID;
+- (BOOL)sendMessage:(LCKMultipeerMessage *)message toPeerID:(MCPeerID *)peerID;
 
 /**
- *  Sends data through the multipeer session to all peers
+ *  Sends a message through the multipeer session to all peers
  *
- *  @param data The data to send.
+ *  @param message The message to send.
  *
- *  @return A BOOL indicating if the data was sent successfully.
+ *  @return A BOOL indicating if the message was sent successfully.
  */
-- (BOOL)sendObjectToAllConnectedPeers:(id <NSCoding>)object;
+- (BOOL)sendMessageToAllConnectedPeers:(LCKMultipeerMessage *)message;
 
 @end
