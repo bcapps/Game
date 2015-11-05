@@ -8,6 +8,8 @@
 
 #import "LCKMultipeer+Messaging.h"
 
+NSString * const LCKMultipeerValueKey = @"value";
+
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
 NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsReceivedNotification";
 NSString * const LCKMultipeerJournalEntryReceivedNotification = @"LCKMultipeerJournalEntryReceivedNotification";
@@ -28,7 +30,7 @@ NSString * const LCKMultipeerEventReceivedNotificiation = @"LCKMultipeerEventRec
 }
 
 - (BOOL)sendObject:(id)object toPeerID:(MCPeerID *)peerID sendType:(LCKMultipeerManagerSendType)sendType {
-    NSDictionary *dictionary = @{@"value": object};
+    NSDictionary *dictionary = @{LCKMultipeerValueKey: object};
     NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
     
     LCKMultipeerMessage *message = [[LCKMultipeerMessage alloc] initWithMessageType:sendType messageData:data];

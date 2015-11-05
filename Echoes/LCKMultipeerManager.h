@@ -9,12 +9,7 @@
 @import Foundation;
 @import MultipeerConnectivity;
 
-
 extern NSString * const LCKMultipeerPeerStateChangedNotification;
-extern NSString * const LCKMultipeerValueKey;
-
-extern NSString * const LCKMultipeerJournalEntryTitle;
-extern NSString * const LCKMultipeerJournalEntryDescription;
 
 @interface LCKMultipeerManager : NSObject
 

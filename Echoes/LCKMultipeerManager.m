@@ -14,11 +14,6 @@
 
 NSString * const LCKMultipeerPeerStateChangedNotification = @"LCKMultipeerPeerStateChangedNotification";
 
-NSString * const LCKMultipeerValueKey = @"value";
-
-NSString * const LCKMultipeerJournalEntryTitle = @"entryTitle";
-NSString * const LCKMultipeerJournalEntryDescription = @"entryDescription";
-
 static NSString * const LCKMultipeerManagerServiceName = @"echoes";
 
 @interface LCKMultipeerManager () <LCKMultipeerDelegate>

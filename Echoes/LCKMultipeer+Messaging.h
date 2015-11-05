@@ -8,6 +8,8 @@
 
 #import "LCKMultipeer.h"
 
+extern NSString * const LCKMultipeerValueKey;
+
 extern NSString * const LCKMultipeerItemReceivedNotification;
 extern NSString * const LCKMultipeerSoulsReceivedNotification;
 extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
