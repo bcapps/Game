@@ -9,14 +9,7 @@
 #import "LCKMultipeerManager.h"
 #import "LCKDMManager.h"
 
-#import "LCKServiceAdvertiser.h"
-#import "LCKServiceBrowser.h"
-#import "LCKMultipeerSession.h"
-#import "LCKMultipeerMessageSender.h"
-#import "LCKMultipeerMessage.h"
 #import "LCKMultipeer.h"
-
-#import <LCKCategories/NSNotificationCenter+LCKAdditions.h>
 
 NSString * const LCKMultipeerItemReceivedNotification = @"LCKMultipeerItemReceivedNotification";
 NSString * const LCKMultipeerSoulsReceivedNotification = @"LCKMultipeerSoulsReceivedNotification";
@@ -126,9 +119,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
         notificationName = LCKMultipeerEventReceivedNotificiation;
     }
     
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
-    }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
 }
 
 - (void)multipeer:(LCKMultipeer *)multipeer connectedPeersStateDidChange:(NSArray *)connectedPeers {

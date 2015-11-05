@@ -912,10 +912,10 @@
 				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
 				F2E6DBC81BEAEBE200158C33 /* LCKMultipeerMessageSender.h */,
 				F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */,
-				F29F6E661BEB0473005052D5 /* LCKMultipeer.h */,
-				F29F6E671BEB0473005052D5 /* LCKMultipeer.m */,
 				F29F6E6F1BEB0F3A005052D5 /* LCKMultipeerMessage.h */,
 				F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */,
+				F29F6E661BEB0473005052D5 /* LCKMultipeer.h */,
+				F29F6E671BEB0473005052D5 /* LCKMultipeer.m */,
 			);
 			name = "Multipeer Backend";
 			sourceTree = "<group>";

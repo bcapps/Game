@@ -10,7 +10,8 @@
 @import MultipeerConnectivity;
 
 @class LCKMultipeer;
-@class LCKMultipeerMessage;
+
+#import "LCKMultipeerMessage.h"
 
 /**
  *  The type of user this multipeer object should be representing.
