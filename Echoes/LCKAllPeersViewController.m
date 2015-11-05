@@ -22,7 +22,7 @@
 @interface LCKAllPeersViewController ()
 
 @property (nonatomic) LCKMultipeerManager *multipeerManager;
-@property (nonatomic) NSArray *peerIDs;
+@property (nonatomic) NSArray *selectedPeerIDs;
 @property (nonatomic) NSArray *peers;
 
 @end
@@ -45,7 +45,7 @@
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    self.peerIDs = @[];
+    self.selectedPeerIDs = @[];
     
     if (self.peerType == LCKAllPeersTypeDM) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(send)];
@@ -81,7 +81,7 @@
 }
 
 - (void)send {
-    for (MCPeerID *peerID in self.peerIDs) {
+    for (MCPeerID *peerID in self.selectedPeerIDs) {
         if (self.item) {
             [self.multipeerManager sendItemName:self.item.name toPeerID:peerID];
         }
@@ -112,13 +112,13 @@
     
     if (peerID) {
         if (self.peerType == LCKAllPeersTypeDM) {
-            if ([self.peerIDs containsObject:peerID]) {
-                NSMutableArray *peerIDsArray = [self.peerIDs mutableCopy];
+            if ([self.selectedPeerIDs containsObject:peerID]) {
+                NSMutableArray *peerIDsArray = [self.selectedPeerIDs mutableCopy];
                 [peerIDsArray removeObject:peerID];
-                self.peerIDs = [peerIDsArray copy];
+                self.selectedPeerIDs = [peerIDsArray copy];
             }
             else {
-                self.peerIDs = [self.peerIDs arrayByAddingObject:peerID];
+                self.selectedPeerIDs = [self.selectedPeerIDs arrayByAddingObject:peerID];
             }
         }
         else if (peerID) {
@@ -155,7 +155,7 @@
     cell.textLabel.font = [UIFont titleTextFontOfSize:15.0];
     cell.textLabel.textColor = [UIColor titleTextColor];
     
-    if ([self.peerIDs containsObject:peerID]) {
+    if ([self.selectedPeerIDs containsObject:peerID]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     

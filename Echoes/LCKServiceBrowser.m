@@ -56,7 +56,6 @@
 
 #pragma mark - MCNearbyServiceBrowserDelegate
 
-// Found a nearby advertising peer
 - (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info {
     NSLog(@"Found Peer %@", peerID.displayName);
     
@@ -65,7 +64,6 @@
     }
 }
 
-// A nearby peer has stopped advertising
 - (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID {
     NSLog(@"Lost Peer %@", peerID.displayName);
 }

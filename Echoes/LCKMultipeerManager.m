@@ -12,6 +12,7 @@
 #import "LCKServiceAdvertiser.h"
 #import "LCKServiceBrowser.h"
 #import "LCKMultipeerSession.h"
+#import "LCKMultipeerMessageSender.h"
 
 #import <LCKCategories/NSNotificationCenter+LCKAdditions.h>
 
@@ -144,22 +145,26 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 }
 
 - (BOOL)sendObject:(id)object toPeerID:(MCPeerID *)peerID sendType:(LCKMultipeerManagerSendType)sendType {
-    if (object && peerID) {
+    if (object) {
+        LCKMultipeerMessageSender *messageSender = [[LCKMultipeerMessageSender alloc] initWithMultipeerSession:self.session];
+
         NSDictionary *dictionary = @{@"type": @(sendType), @"value": object};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
         
-        return [self.session.internalSession sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+        return [messageSender sendData:data toPeerID:peerID];
     }
     
     return NO;
 }
 
 - (BOOL)addJournalEntryWithEntryTitle:(NSString *)entryTitle entryDescription:(NSString *)entryDescription toPeerID:(MCPeerID *)peerID {
-    if (peerID && entryTitle && entryDescription) {
+    if (entryTitle && entryDescription) {
+        LCKMultipeerMessageSender *messageSender = [[LCKMultipeerMessageSender alloc] initWithMultipeerSession:self.session];
+
         NSDictionary *dictionary = @{@"type": @(LCKMultipeerManagerSendTypeJournalEntry), @"entryTitle": entryTitle, @"entryDescription": entryDescription};
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
-
-        return [self.session.internalSession sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:nil];
+        
+        return [messageSender sendData:data toPeerID:peerID];
     }
     
     return NO;

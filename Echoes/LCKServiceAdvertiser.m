@@ -62,9 +62,4 @@
     }
 }
 
-- (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didNotStartAdvertisingPeer:(NSError *)error {
-    NSLog(@"Error starting advertising: %@", error);
-}
-
-
 @end

@@ -191,6 +191,7 @@
 		F2E21ED81B6D616700E6C6CB /* Fang Boar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21ED71B6D616700E6C6CB /* Fang Boar@2x.png */; };
 		F2E21EDA1B6D629500E6C6CB /* fangboarhelm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21ED91B6D629500E6C6CB /* fangboarhelm@2x.png */; };
 		F2E21EDC1B6D9FC000E6C6CB /* drakesword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E21EDB1B6D9FC000E6C6CB /* drakesword@2x.png */; };
+		F2E6DBCA1BEAEBE200158C33 /* LCKMultipeerMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */; };
 		F2FE1C931A4A0B1500FA161C /* thiefmask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */; };
 		F2FE1CCC1A4A589B00FA161C /* LCKMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */; };
 		F2FE1CCF1A4A7CC600FA161C /* LCKScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE1CCE1A4A7CC600FA161C /* LCKScalingImageView.m */; };
@@ -439,6 +440,8 @@
 		F2E21ED71B6D616700E6C6CB /* Fang Boar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fang Boar@2x.png"; sourceTree = "<group>"; };
 		F2E21ED91B6D629500E6C6CB /* fangboarhelm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fangboarhelm@2x.png"; sourceTree = "<group>"; };
 		F2E21EDB1B6D9FC000E6C6CB /* drakesword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drakesword@2x.png"; sourceTree = "<group>"; };
+		F2E6DBC81BEAEBE200158C33 /* LCKMultipeerMessageSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerMessageSender.h; sourceTree = "<group>"; };
+		F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerMessageSender.m; sourceTree = "<group>"; };
 		F2FE1C921A4A0B1500FA161C /* thiefmask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thiefmask@2x.png"; sourceTree = "<group>"; };
 		F2FE1CCA1A4A589B00FA161C /* LCKMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMapsTableViewController.h; sourceTree = "<group>"; };
 		F2FE1CCB1A4A589B00FA161C /* LCKMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMapsTableViewController.m; sourceTree = "<group>"; };
@@ -901,6 +904,8 @@
 				F2D5AF811BE81B8100E41337 /* LCKServiceAdvertiser.m */,
 				F2D5AF831BE81DD300E41337 /* LCKMultipeerSession.h */,
 				F2D5AF841BE81DD300E41337 /* LCKMultipeerSession.m */,
+				F2E6DBC81BEAEBE200158C33 /* LCKMultipeerMessageSender.h */,
+				F2E6DBC91BEAEBE200158C33 /* LCKMultipeerMessageSender.m */,
 			);
 			name = "Multipeer Backend";
 			sourceTree = "<group>";
@@ -1291,6 +1296,7 @@
 				F2206AF41A2D2C0D006E44B0 /* main.m in Sources */,
 				F264130F1A40CEBA00287EFA /* LCKMonsterProvider.m in Sources */,
 				F2206AFD1A2D2C0D006E44B0 /* LCKEchoCharactersTableViewController.m in Sources */,
+				F2E6DBCA1BEAEBE200158C33 /* LCKMultipeerMessageSender.m in Sources */,
 				F2206B7A1A2D7E8D006E44B0 /* UIColor+ColorStyle.m in Sources */,
 				F26413211A48FCF900287EFA /* LCKLoreTableViewController.m in Sources */,
 				F264130C1A40CC5500287EFA /* LCKMonsterAttack.m in Sources */,
