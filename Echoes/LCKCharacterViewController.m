@@ -24,6 +24,7 @@
 #import "LCKLevelUpTableViewController.h"
 
 #import "LCKMultipeerManager.h"
+#import "LCKMultipeer+Messaging.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"

@@ -9,10 +9,6 @@
 @import Foundation;
 @import MultipeerConnectivity;
 
-extern NSString * const LCKMultipeerItemReceivedNotification;
-extern NSString * const LCKMultipeerSoulsReceivedNotification;
-extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
-extern NSString * const LCKMultipeerEventReceivedNotificiation;
 
 extern NSString * const LCKMultipeerPeerStateChangedNotification;
 extern NSString * const LCKMultipeerValueKey;

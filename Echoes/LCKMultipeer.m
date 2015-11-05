@@ -30,6 +30,12 @@
 
 @implementation LCKMultipeer
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [self stopMultipeerConnectivity];
+}
+
 #pragma mark - LCKMultipeer
 
 - (instancetype)initWithMultipeerUserType:(LCKMultipeerUserType)userType peerName:(NSString *)peerName serviceName:(NSString *)serviceName delegate:(id <LCKMultipeerDelegate>)delegate {
@@ -40,6 +46,9 @@
         _peerName = peerName;
         _serviceName = serviceName;
         _delegate = delegate;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startMultipeerConnectivity) name:UIApplicationDidBecomeActiveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopMultipeerConnectivity) name:UIApplicationDidEnterBackgroundNotification object:nil];
     }
     
     return self;
