@@ -10,6 +10,9 @@
 
 @interface LCKHockeyController : NSObject
 
+/**
+ *  Starts the Hockey service and begins reporting crashes.
+ */
 - (void)startReporting;
 
 @end

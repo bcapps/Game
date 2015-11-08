@@ -630,6 +630,7 @@
 		F2206AF01A2D2C0D006E44B0 /* Echoes */ = {
 			isa = PBXGroup;
 			children = (
+				F28A00311BEFCC40000B960F /* Crash Reporting */,
 				F21F437C1A3A25DC00FEA417 /* Multipeer */,
 				F21F43631A32D75B00FEA417 /* DM Tools */,
 				F21F43391A2FCD9900FEA417 /* Items */,
@@ -638,8 +639,6 @@
 				F2206B1A1A2D2E91006E44B0 /* Core Data */,
 				F2206AF51A2D2C0D006E44B0 /* LCKEchoAppDelegate.h */,
 				F2206AF61A2D2C0D006E44B0 /* LCKEchoAppDelegate.m */,
-				F28A002E1BEFCABD000B960F /* LCKHockeyController.h */,
-				F28A002F1BEFCABD000B960F /* LCKHockeyController.m */,
 				F2206B281A2D3703006E44B0 /* LCKDismissSegue.h */,
 				F2206B291A2D3703006E44B0 /* LCKDismissSegue.m */,
 				F2206AFE1A2D2C0D006E44B0 /* Main.storyboard */,
@@ -894,6 +893,15 @@
 				F268F0601A4F3E9C00AEA410 /* LCKEventsTableViewController.m */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		F28A00311BEFCC40000B960F /* Crash Reporting */ = {
+			isa = PBXGroup;
+			children = (
+				F28A002E1BEFCABD000B960F /* LCKHockeyController.h */,
+				F28A002F1BEFCABD000B960F /* LCKHockeyController.m */,
+			);
+			name = "Crash Reporting";
 			sourceTree = "<group>";
 		};
 		F29F6E721BEB137E005052D5 /* Private API */ = {

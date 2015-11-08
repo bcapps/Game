@@ -209,17 +209,13 @@
 }
 
 - (BOOL)meetsRequirementsForItem:(LCKItem *)item {
-    BOOL meetsRequirements = YES;
-    
     for (NSString *requirement in item.attributeRequirements) {
-        meetsRequirements = [self meetsRequirement:requirement forItem:item];
-        
-        if (!meetsRequirements) {
-            break;
+        if (![self meetsRequirement:requirement forItem:item]) {
+            return NO;
         }
     }
     
-    return meetsRequirements;
+    return YES;
 }
 
 - (NSNumber *)soulValueForLevelUp {
