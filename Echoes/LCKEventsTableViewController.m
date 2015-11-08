@@ -51,7 +51,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeer];
     peersViewController.peerType = LCKAllPeersTypeDM;
     
     LCKEvent *event = [[LCKEventProvider allEvents] safeObjectAtIndex:indexPath.row];

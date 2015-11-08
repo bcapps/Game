@@ -13,7 +13,6 @@
 #import "LCKBaseCell.h"
 #import "LCKItemViewController.h"
 #import "LCKAllPeersViewController.h"
-#import "LCKMultipeerManager.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -135,7 +134,7 @@
 #pragma mark - LCKItemViewControllerDelegate
 
 - (void)giftItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
-    LCKAllPeersViewController *allPeersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    LCKAllPeersViewController *allPeersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeer];
     allPeersViewController.peerType = LCKAllPeersTypePlayer;
     allPeersViewController.item = itemViewController.item;
     

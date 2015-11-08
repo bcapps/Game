@@ -8,10 +8,10 @@
 
 @import UIKit;
 
-@class LCKMultipeerManager;
+@class LCKMultipeer;
 
 @interface LCKEventsTableViewController : UITableViewController
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end

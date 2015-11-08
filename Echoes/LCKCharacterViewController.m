@@ -23,7 +23,6 @@
 #import "LCKEquipmentViewController.h"
 #import "LCKLevelUpTableViewController.h"
 
-#import "LCKMultipeerManager.h"
 #import "LCKMultipeer+Messaging.h"
 
 #import "UIColor+ColorStyle.h"
@@ -46,7 +45,7 @@ const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
 const CGFloat LCKCharacterStatInfoViewHeight = 145.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate, LCKLevelUpDelegate>
+@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate, LCKLevelUpDelegate, LCKMultipeerEventListener>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -79,7 +78,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 @property (nonatomic) UIViewController *currentlyPresentedItemViewController;
 @property (nonatomic) UIView *overlayView;
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end
 
@@ -91,7 +90,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.collectionView.dataSource = nil;
     self.collectionView.delegate = nil;
     
-    [self.multipeerManager stopSession];
+    [self.multipeer stopMultipeerConnectivity];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -113,8 +112,10 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     
-    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:self.character.displayName];
-    [self.multipeerManager startSession];
+    self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeClient peerName:self.character.displayName serviceName:@"echoes"];
+    [self.multipeer addEventListener:self];
+
+    [self.multipeer startMultipeerConnectivity];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(soulsReceived:) name:LCKMultipeerSoulsReceivedNotification object:nil];
@@ -217,7 +218,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     if ([segue.identifier isEqualToString:@"showInventoryViewController"]) {
         LCKInventoryTableViewController *inventoryViewController = segue.destinationViewController;
         inventoryViewController.delegate = self;
-        inventoryViewController.multipeerManager = self.multipeerManager;
+        inventoryViewController.multipeer = self.multipeer;
         
         inventoryViewController.character = self.character;
     }
@@ -663,6 +664,29 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
 
     [self dismissCurrentlyPresentedViewController:nil];
+}
+
+#pragma mark - LCKMultipeerEventListener
+
+- (void)multipeer:(LCKMultipeer *)multipeer receivedMessage:(LCKMultipeerMessage *)message fromPeer:(MCPeerID *)peer {
+    NSString *notificationName;
+    
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:message.data options:0 error:nil];
+    
+    if (message.type == LCKMultipeerManagerSendTypeItem) {
+        notificationName = LCKMultipeerItemReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeSouls) {
+        notificationName = LCKMultipeerSoulsReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeJournalEntry) {
+        notificationName = LCKMultipeerJournalEntryReceivedNotification;
+    }
+    else if (message.type == LCKMultipeerManagerSendTypeEvent) {
+        notificationName = LCKMultipeerEventReceivedNotificiation;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
 }
 
 @end

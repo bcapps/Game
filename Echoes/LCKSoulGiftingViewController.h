@@ -8,10 +8,10 @@
 
 @import UIKit;
 
-@class LCKMultipeerManager;
+@class LCKMultipeer;
 
 @interface LCKSoulGiftingViewController : UIViewController
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end

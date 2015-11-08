@@ -19,7 +19,9 @@
 @property (nonatomic) LCKMultipeerUserType userType;
 @property (nonatomic) NSString *peerName;
 @property (nonatomic) NSString *serviceName;
-@property (nonatomic) id <LCKMultipeerDelegate> delegate;
+
+@property (nonatomic) NSOperationQueue *eventListenerQueue;
+@property NSHashTable *eventListeners;
 
 @property (nonatomic) LCKMultipeerSession *session;
 @property (nonatomic) LCKServiceAdvertiser *serviceAdvertiser;
@@ -38,14 +40,18 @@
 
 #pragma mark - LCKMultipeer
 
-- (instancetype)initWithMultipeerUserType:(LCKMultipeerUserType)userType peerName:(NSString *)peerName serviceName:(NSString *)serviceName delegate:(id <LCKMultipeerDelegate>)delegate {
+- (instancetype)initWithMultipeerUserType:(LCKMultipeerUserType)userType peerName:(NSString *)peerName serviceName:(NSString *)serviceName {
     self = [super init];
     
     if (self) {
         _userType = userType;
         _peerName = peerName;
         _serviceName = serviceName;
-        _delegate = delegate;
+        
+        _eventListeners = [NSHashTable weakObjectsHashTable];
+        
+        _eventListenerQueue = [[NSOperationQueue alloc] init];
+        _eventListenerQueue.maxConcurrentOperationCount = 1;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startMultipeerConnectivity) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopMultipeerConnectivity) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -79,6 +85,22 @@
     
     [self.session.internalSession disconnect];
     self.session = nil;
+}
+
+- (void)addEventListener:(id <LCKMultipeerEventListener>)eventListener {
+    [self.eventListenerQueue addOperationWithBlock:^{
+        if (eventListener) {
+            [self.eventListeners addObject:eventListener];
+        }
+    }];
+}
+
+- (void)removeEventListener:(id <LCKMultipeerEventListener>)eventListener {
+    [self.eventListenerQueue addOperationWithBlock:^{
+        if (eventListener) {
+            [self.eventListeners removeObject:eventListener];
+        }
+    }];
 }
 
 - (BOOL)sendMessage:(LCKMultipeerMessage *)message toPeer:(MCPeerID *)peerID {
@@ -136,22 +158,29 @@
 #pragma mark - LCKMultipeerSessionDelegate
 
 - (void)session:(LCKMultipeerSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    if ([self.delegate respondsToSelector:@selector(multipeer:receivedMessage:fromPeer:)]) {
-        LCKMultipeerMessage *message = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.delegate multipeer:self receivedMessage:message fromPeer:peerID];
-        }];
-    }
+    [self.eventListenerQueue addOperationWithBlock:^{
+        for (id <LCKMultipeerEventListener> eventListener in self.eventListeners) {
+            if ([eventListener respondsToSelector:@selector(multipeer:receivedMessage:fromPeer:)]) {
+                LCKMultipeerMessage *message = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+                
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [eventListener multipeer:self receivedMessage:message fromPeer:peerID];
+                }];
+            }
+        }
+    }];
 }
 
 - (void)session:(LCKMultipeerSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-    if ([self.delegate respondsToSelector:@selector(multipeer:connectedPeersStateDidChange:)]) {
-        
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.delegate multipeer:self connectedPeersStateDidChange:self.connectedPeers];
-        }];
-    }
+    [self.eventListenerQueue addOperationWithBlock:^{
+        for (id <LCKMultipeerEventListener> eventListener in self.eventListeners) {
+            if ([eventListener respondsToSelector:@selector(multipeer:connectedPeersStateDidChange:)]) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [eventListener multipeer:self connectedPeersStateDidChange:self.connectedPeers];
+                }];
+            }
+        }
+    }];
 }
 
 @end

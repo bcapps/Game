@@ -14,7 +14,7 @@
 #import "LCKSoulGiftingViewController.h"
 #import "LCKMonsterManualTableViewController.h"
 #import "LCKLoreTableViewController.h"
-#import "LCKMultipeerManager.h"
+#import "LCKMultipeer.h"
 #import "LCKMapsTableViewController.h"
 #import "LCKEventsTableViewController.h"
 #import "LCKDMManager.h"
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
 
 @interface LCKDMToolsTableViewController ()
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end
 
@@ -47,8 +47,8 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     self.tableView.backgroundColor = [UIColor backgroundColor];
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    self.multipeerManager = [[LCKMultipeerManager alloc] initWithCharacterName:LCKDMDisplayName];
-    [self.multipeerManager startSession];
+    self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeHost peerName:@"DM" serviceName:@"echoes"];
+    [self.multipeer startMultipeerConnectivity];
 }
 
 #pragma mark - LCKDMToolsTableViewController
@@ -99,13 +99,13 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == LCKDMToolsRowAllItems) {
         LCKAllItemsTableViewController *viewController = [[LCKAllItemsTableViewController alloc] init];
-        viewController.multipeerManager = self.multipeerManager;
+        viewController.multipeer = self.multipeer;
         
         [self.navigationController pushViewController:viewController animated:YES];
     }
     else if (indexPath.row == LCKDMToolsRowSoulGifting) {
         LCKSoulGiftingViewController *viewController = [[LCKSoulGiftingViewController alloc] init];
-        viewController.multipeerManager = self.multipeerManager;
+        viewController.multipeer = self.multipeer;
         
         [self.navigationController pushViewController:viewController animated:YES];
     }
@@ -126,7 +126,7 @@ typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     }
     else if (indexPath.row == LCKDMToolsRowEvents) {
         LCKEventsTableViewController *viewController = [[LCKEventsTableViewController alloc] init];
-        viewController.multipeerManager = self.multipeerManager;
+        viewController.multipeer = self.multipeer;
         
         [self.navigationController pushViewController:viewController animated:YES];
     }

@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, LCKAllPeersType) {
 
 typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
 
-@class LCKMultipeerManager;
+@class LCKMultipeer;
 @class LCKItem;
 @class LCKEvent;
 
@@ -30,6 +30,6 @@ typedef void(^LCKAllPeersViewControllerDismissedBlock)(BOOL success);
 
 @property (nonatomic, copy) LCKAllPeersViewControllerDismissedBlock dismissBlock;
 
-- (instancetype)initWithMultipeerManager:(LCKMultipeerManager *)multipeerManager;
+- (instancetype)initWithMultipeerManager:(LCKMultipeer *)multipeer;
 
 @end

@@ -46,7 +46,7 @@
 #pragma mark - LCKSoulGiftingViewController
 
 - (void)giftSouls {
-    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeerManager];
+    LCKAllPeersViewController *peersViewController = [[LCKAllPeersViewController alloc] initWithMultipeerManager:self.multipeer];
     peersViewController.peerType = LCKAllPeersTypeDM;
     peersViewController.soulsToGive = @([self.textField.text integerValue]);
     [self.navigationController pushViewController:peersViewController animated:YES];

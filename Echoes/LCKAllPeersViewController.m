@@ -7,7 +7,7 @@
 //
 
 #import "LCKAllPeersViewController.h"
-#import "LCKMultipeerManager.h"
+#import "LCKMultipeer+Messaging.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
@@ -19,9 +19,9 @@
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 
-@interface LCKAllPeersViewController ()
+@interface LCKAllPeersViewController () <LCKMultipeerEventListener>
 
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 @property (nonatomic) NSArray *selectedPeerIDs;
 @property (nonatomic) NSArray *peers;
 
@@ -51,18 +51,18 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(send)];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(peerStateChanged) name:LCKMultipeerPeerStateChangedNotification object:nil];
+    [self.multipeer addEventListener:self];    
 }
 
 #pragma mark - UITableViewController
 
 #pragma mark - LCKAllPeersViewController
 
-- (instancetype)initWithMultipeerManager:(LCKMultipeerManager *)multipeerManager {
+- (instancetype)initWithMultipeerManager:(LCKMultipeer *)multipeer {
     self = [super init];
     
     if (self) {
-        _multipeerManager = multipeerManager;
+        _multipeer = multipeer;
     }
     
     return self;
@@ -71,7 +71,7 @@
 - (NSArray *)peers {
     NSMutableArray *peers = [NSMutableArray array];
     
-    for (MCPeerID *peerID in self.multipeerManager.connectedPeers) {
+    for (MCPeerID *peerID in self.multipeer.connectedPeers) {
         if (![peerID.displayName isEqualToString:LCKDMDisplayName]) {
             [peers addObject:peerID];
         }
@@ -83,13 +83,13 @@
 - (void)send {
     for (MCPeerID *peerID in self.selectedPeerIDs) {
         if (self.item) {
-            [self.multipeerManager sendItemName:self.item.name toPeerID:peerID];
+            [self.multipeer sendItemName:self.item.name toPeerID:peerID];
         }
         else if (self.soulsToGive) {
-            [self.multipeerManager sendSoulAmount:self.soulsToGive toPeerID:peerID];
+            [self.multipeer sendSoulAmount:self.soulsToGive toPeerID:peerID];
         }
         else if (self.event) {
-            [self.multipeerManager sendEventName:self.event.name toPeerID:peerID];
+            [self.multipeer sendEventName:self.event.name toPeerID:peerID];
         }
     }
     
@@ -99,10 +99,6 @@
             break;
         }
     }
-}
-
-- (void)peerStateChanged {
-    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate
@@ -122,7 +118,7 @@
             }
         }
         else if (peerID) {
-            BOOL success = [self.multipeerManager sendItemName:self.item.name toPeerID:peerID];
+            BOOL success = [self.multipeer sendItemName:self.item.name toPeerID:peerID];
             
             if (self.dismissBlock) {
                 self.dismissBlock(success);
@@ -160,6 +156,12 @@
     }
     
     return cell;
+}
+
+#pragma mark - LCKMultipeerEventListener
+
+- (void)multipeer:(LCKMultipeer *)multipeer connectedPeersStateDidChange:(NSArray *)connectedPeers {
+    [self.tableView reloadData];
 }
 
 @end

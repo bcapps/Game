@@ -11,7 +11,7 @@
 
 #import "Character.h"
 
-@class LCKMultipeerManager;
+@class LCKMultipeer;
 
 @protocol LCKInventoryTableViewControllerDelegate <NSObject>
 
@@ -23,6 +23,6 @@
 
 @property (nonatomic) Character *character;
 @property (nonatomic, weak) id <LCKInventoryTableViewControllerDelegate> delegate;
-@property (nonatomic) LCKMultipeerManager *multipeerManager;
+@property (nonatomic) LCKMultipeer *multipeer;
 
 @end

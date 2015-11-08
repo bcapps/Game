@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
 /**
  *  A multipeer delegate protocol used for communicating change or information received from other peers. These delegate methods are guaranteed to be run on the main queue.
  */
-@protocol LCKMultipeerDelegate <NSObject>
+@protocol LCKMultipeerEventListener <NSObject>
 
 @optional
 
@@ -64,21 +64,15 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
 @property (nonatomic, readonly) LCKMultipeerUserType userType;
 
 /**
- *  The delegate this instance was initialized with.
- */
-@property (nonatomic, readonly) id <LCKMultipeerDelegate> delegate;
-
-/**
  *  Initializes the multipeer object with the specified user type.
  *
  *  @param userType The type of user this multipeer object will represent.
  *  @param peerName The display name to user for this peer.
  *  @param serviceName The service this multipeer object will represent.
- *  @param delegate The delegate of the multipeer object.
  *
  *  @return An initialized multipeer instance.
  */
-- (instancetype)initWithMultipeerUserType:(LCKMultipeerUserType)userType peerName:(NSString *)peerName serviceName:(NSString *)serviceName delegate:(id <LCKMultipeerDelegate>)delegate;
+- (instancetype)initWithMultipeerUserType:(LCKMultipeerUserType)userType peerName:(NSString *)peerName serviceName:(NSString *)serviceName;
 
 /**
  *  Call this method to enable multipeer connectivity.
@@ -89,6 +83,20 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
  *  Call this method to disable multipeer connectivity.
  */
 - (void)stopMultipeerConnectivity;
+
+/**
+ *  Adds an event listener to the multipeer session.
+ *
+ *  @param eventListener The event listener to add.
+ */
+- (void)addEventListener:(id <LCKMultipeerEventListener>)eventListener;
+
+/**
+ *  Removes an event listener from the multipeer session.
+ *
+ *  @param eventListener The event listener to remove.
+ */
+- (void)removeEventListener:(id <LCKMultipeerEventListener>)eventListener;
 
 /**
  *  Sends a specified message to the specified peer.
