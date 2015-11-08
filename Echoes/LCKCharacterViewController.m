@@ -117,10 +117,6 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
     [self.multipeer startMultipeerConnectivity];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemReceived:) name:LCKMultipeerItemReceivedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(soulsReceived:) name:LCKMultipeerSoulsReceivedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventReceived:) name:LCKMultipeerEventReceivedNotificiation object:nil];
-    
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
     self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
     
@@ -480,9 +476,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 #pragma mark - Multipeer
 
-- (void)itemReceived:(NSNotification *)notification {
-    NSString *itemName = [notification.userInfo objectForKey:LCKMultipeerValueKey];
-    
+- (void)itemReceived:(NSString *)itemName {
     LCKItem *item = [LCKItemProvider itemForName:itemName];
     
     [self.character addItemToInventory:item];
@@ -493,8 +487,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self presentViewController:itemViewController withFrame:[self itemControllerFrame] fromView:nil];
 }
 
-- (void)soulsReceived:(NSNotification *)notification {
-    NSNumber *souls = [notification.userInfo objectForKey:LCKMultipeerValueKey];
+- (void)soulsReceived:(NSNumber *)souls {
     NSNumber *newAmount = @(self.character.souls.integerValue + souls.integerValue);
     
     [self.soulsButton.soulLabel countFromCurrentValueTo:newAmount.floatValue withDuration:1.5];
@@ -504,9 +497,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
 
-- (void)eventReceived:(NSNotification *)notification {
-    NSString *eventName = [notification.userInfo objectForKey:@"value"];
-    
+- (void)eventReceived:(NSString *)eventName {
     if ([eventName isEqualToString:LCKEventProviderRestAtBonfireEventName]) {
         LCKItem *emptyFlask;
         
@@ -669,24 +660,18 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 #pragma mark - LCKMultipeerEventListener
 
 - (void)multipeer:(LCKMultipeer *)multipeer receivedMessage:(LCKMultipeerMessage *)message fromPeer:(MCPeerID *)peer {
-    NSString *notificationName;
-    
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:message.data options:0 error:nil];
+    id value = [dictionary objectForKey:LCKMultipeerValueKey];
     
     if (message.type == LCKMultipeerManagerSendTypeItem) {
-        notificationName = LCKMultipeerItemReceivedNotification;
+        [self itemReceived:value];
     }
     else if (message.type == LCKMultipeerManagerSendTypeSouls) {
-        notificationName = LCKMultipeerSoulsReceivedNotification;
-    }
-    else if (message.type == LCKMultipeerManagerSendTypeJournalEntry) {
-        notificationName = LCKMultipeerJournalEntryReceivedNotification;
+        [self soulsReceived:value];
     }
     else if (message.type == LCKMultipeerManagerSendTypeEvent) {
-        notificationName = LCKMultipeerEventReceivedNotificiation;
+        [self eventReceived:value];
     }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self userInfo:dictionary];
 }
 
 @end

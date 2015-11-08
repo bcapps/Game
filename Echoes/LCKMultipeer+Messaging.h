@@ -12,13 +12,11 @@ extern NSString * const LCKMultipeerValueKey;
 
 extern NSString * const LCKMultipeerItemReceivedNotification;
 extern NSString * const LCKMultipeerSoulsReceivedNotification;
-extern NSString * const LCKMultipeerJournalEntryReceivedNotification;
-extern NSString * const LCKMultipeerEventReceivedNotificiation;
+extern NSString * const LCKMultipeerEventReceivedNotification;
 
 typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
     LCKMultipeerManagerSendTypeItem,
     LCKMultipeerManagerSendTypeSouls,
-    LCKMultipeerManagerSendTypeJournalEntry,
     LCKMultipeerManagerSendTypeEvent
 };
 
@@ -27,7 +25,5 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerManagerSendType) {
 - (BOOL)sendItemName:(NSString *)itemName toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendSoulAmount:(NSNumber *)souls toPeerID:(MCPeerID *)peerID;
 - (BOOL)sendEventName:(NSString *)eventName toPeerID:(MCPeerID *)peerID;
-
-- (void)receiveMessage:(LCKMultipeerMessage *)message;
 
 @end
