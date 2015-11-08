@@ -9,12 +9,11 @@
 #import "LCKEchoAppDelegate.h"
 
 #import "LCKEchoCoreDataController.h"
-#import <HockeySDK/HockeySDK.h>
-
-#import <HockeySDK/BITHockeyManager.h>
-#import <HockeySDK/BITCrashManager.h>
+#import "LCKHockeyController.h"
 
 @interface LCKEchoAppDelegate ()
+
+@property (nonatomic) LCKHockeyController *hockeyController;
 
 @end
 
@@ -23,10 +22,8 @@
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"2e1122a4b5aaea239b30e91d5c7983c7"];
-    [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
+    self.hockeyController = [[LCKHockeyController alloc] init];
+    [self.hockeyController startReporting];
     
     [LCKEchoCoreDataController registerSubclass:[LCKEchoCoreDataController class]];
     
