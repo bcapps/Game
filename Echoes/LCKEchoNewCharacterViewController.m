@@ -191,13 +191,8 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSUInteger length = textField.text.length - range.length + string.length;
-   
-    if (length > 0) {
-        self.doneButton.enabled = YES;
-    }
-    else {
-        self.doneButton.enabled = NO;
-    }
+    
+    self.doneButton.enabled = length > 0;
     
     return YES;
 }
