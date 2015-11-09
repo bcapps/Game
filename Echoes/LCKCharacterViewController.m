@@ -157,6 +157,78 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
 }
 
+- (LCKEquipmentSlot)equipmentSlotForItemButton:(LCKItemButton *)itemButton {
+    LCKEquipmentSlot equipmentSlot = LCKEquipmentSlotUnequipped;
+    
+    if (itemButton == self.leftHandButton || itemButton == self.rightHandButton) {
+        if (itemButton == self.leftHandButton) {
+            equipmentSlot = LCKEquipmentSlotLeftHand;
+        }
+        else {
+            equipmentSlot = LCKEquipmentSlotRightHand;
+        }
+    }
+    else if (itemButton == self.firstAccessoryButton || itemButton == self.secondAccessoryButton) {
+        if (itemButton == self.firstAccessoryButton) {
+            equipmentSlot = LCKEquipmentSlotFirstAccessory;
+        }
+        else {
+            equipmentSlot = LCKEquipmentSlotSecondAccessory;
+        }
+    }
+    else if (itemButton == self.helmetButton) {
+        equipmentSlot = LCKEquipmentSlotHelmet;
+    }
+    else if (itemButton == self.chestButton) {
+        equipmentSlot = LCKEquipmentSlotChest;
+    }
+    else if (itemButton == self.bootsButton) {
+        equipmentSlot = LCKEquipmentSlotBoots;
+    }
+    else if (itemButton == self.firstSpellButton || itemButton == self.secondSpellButton || itemButton == self.thirdSpellButton || itemButton == self.fourthSpellButton) {
+        
+        if (itemButton == self.firstSpellButton) {
+            equipmentSlot = LCKEquipmentSlotFirstSpell;
+        }
+        else if (itemButton == self.secondSpellButton) {
+            equipmentSlot = LCKEquipmentSlotSecondSpell;
+        }
+        else if (itemButton == self.thirdSpellButton) {
+            equipmentSlot = LCKEquipmentSlotThirdSpell;
+        }
+        else {
+            equipmentSlot = LCKEquipmentSlotFourthSpell;
+        }
+    }
+    
+    return equipmentSlot;
+}
+
+- (NSArray *)equipmentTypesForItemButton:(LCKItemButton *)button {
+    NSArray *equipmentTypes;
+    
+    if (button == self.leftHandButton || button == self.rightHandButton) {
+        equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
+    }
+    else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
+        equipmentTypes = @[@(LCKItemSlotAccessory)];
+    }
+    else if (button == self.helmetButton) {
+        equipmentTypes = @[@(LCKItemSlotHelmet)];
+    }
+    else if (button == self.chestButton) {
+        equipmentTypes = @[@(LCKItemSlotChest)];
+    }
+    else if (button == self.bootsButton) {
+        equipmentTypes = @[@(LCKItemSlotBoots)];
+    }
+    else if (button == self.firstSpellButton || button == self.secondSpellButton || button == self.thirdSpellButton || button == self.fourthSpellButton) {
+        equipmentTypes = @[@(LCKItemSlotSpell)];
+    }
+    
+    return equipmentTypes;
+}
+
 - (void)updateItemButtons {
     self.leftHandButton.item = nil;
     self.rightHandButton.item = nil;
@@ -352,59 +424,9 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         viewController = [self newItemViewControllerForItem:button.item];
     }
     else {
-        NSArray *equipmentTypes;
-        LCKEquipmentSlot equipmentSlot = LCKEquipmentSlotUnequipped;
+        NSArray *equipmentTypes = [self equipmentTypesForItemButton:button];
+        LCKEquipmentSlot equipmentSlot = [self equipmentSlotForItemButton:button];
         
-        if (button == self.leftHandButton || button == self.rightHandButton) {
-            if (button == self.leftHandButton) {
-                equipmentSlot = LCKEquipmentSlotLeftHand;
-            }
-            else {
-                equipmentSlot = LCKEquipmentSlotRightHand;
-            }
-            
-            equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
-        }
-        else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
-            if (button == self.firstAccessoryButton) {
-                equipmentSlot = LCKEquipmentSlotFirstAccessory;
-            }
-            else {
-                equipmentSlot = LCKEquipmentSlotSecondAccessory;
-            }
-            
-            equipmentTypes = @[@(LCKItemSlotAccessory)];
-        }
-        else if (button == self.helmetButton) {
-            equipmentSlot = LCKEquipmentSlotHelmet;
-            equipmentTypes = @[@(LCKItemSlotHelmet)];
-        }
-        else if (button == self.chestButton) {
-            equipmentSlot = LCKEquipmentSlotChest;
-            equipmentTypes = @[@(LCKItemSlotChest)];
-        }
-        else if (button == self.bootsButton) {
-            equipmentSlot = LCKEquipmentSlotBoots;
-            equipmentTypes = @[@(LCKItemSlotBoots)];
-        }
-        else if (button == self.firstSpellButton || button == self.secondSpellButton || button == self.thirdSpellButton || button == self.fourthSpellButton) {
-            
-            if (button == self.firstSpellButton) {
-                equipmentSlot = LCKEquipmentSlotFirstSpell;
-            }
-            else if (button == self.secondSpellButton) {
-                equipmentSlot = LCKEquipmentSlotSecondSpell;
-            }
-            else if (button == self.thirdSpellButton) {
-                equipmentSlot = LCKEquipmentSlotThirdSpell;
-            }
-            else {
-                equipmentSlot = LCKEquipmentSlotFourthSpell;
-            }
-            
-            equipmentTypes = @[@(LCKItemSlotSpell)];
-        }
-
         viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes equipmentSlot:equipmentSlot];        
     }
     
