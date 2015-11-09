@@ -421,8 +421,12 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 - (void)modifyCurrentCharacterHealthBy:(NSInteger)healthModificationValue {
     NSInteger newHealth = self.character.currentHealth.integerValue + healthModificationValue;
-    if (newHealth < 0 || newHealth > self.character.maximumHealth.integerValue) {
-        return;
+    
+    if (newHealth > self.character.maximumHealth.integerValue) {
+        newHealth = self.character.maximumHealth.integerValue;
+    }
+    else if (newHealth < 0) {
+        newHealth = 0;
     }
     
     self.character.currentHealth = @(newHealth);
@@ -523,12 +527,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     LCKItem *item = itemViewController.item;
     
     if ([item.name isEqualToString:@"Healing Flask"]) {
-        if (self.character.currentHealth.integerValue + 4 > self.character.maximumHealth.integerValue) {
-            self.character.currentHealth = self.character.maximumHealth;
-        }
-        else {
-            self.character.currentHealth = @(self.character.currentHealth.integerValue + 4);
-        }
+        [self modifyCurrentCharacterHealthBy:4];
         
         [self updateHealthStatus];
         
