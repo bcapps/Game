@@ -412,23 +412,20 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 }
 
 - (IBAction)increaseHealthButtonTapped:(UIButton *)sender {
-    if (self.character.currentHealth.integerValue + 1 > self.character.maximumHealth.integerValue) {
-        return;
-    }
-    
     [self modifyCurrentCharacterHealthBy:1];
 }
 
 - (IBAction)decreaseHealthButtonTapped:(UIButton *)sender {
-    if (self.character.currentHealth.integerValue - 1 < 0) {
-        return;
-    }
-    
     [self modifyCurrentCharacterHealthBy:-1];
 }
 
 - (void)modifyCurrentCharacterHealthBy:(NSInteger)healthModificationValue {
-    self.character.currentHealth = @(self.character.currentHealth.integerValue + healthModificationValue);
+    NSInteger newHealth = self.character.currentHealth.integerValue + healthModificationValue;
+    if (newHealth < 0 || newHealth > self.character.maximumHealth.integerValue) {
+        return;
+    }
+    
+    self.character.currentHealth = @(newHealth);
     [self updateHealthStatus];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
