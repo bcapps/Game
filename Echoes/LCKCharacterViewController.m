@@ -105,17 +105,15 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.title = self.character.name;
     
     [self setupSilhouetteGender];
-    self.healthLabel.textColor = [UIColor colorWithRed:220.0/255.0 green:0 blue:10.0/255.0 alpha:1.0];
     self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
     
-    [self updateHealthText];
+    [self updateHealthStatus];
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     
     self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeClient peerName:self.character.displayName serviceName:@"echoes"];
     [self.multipeer addEventListener:self];
-
     [self.multipeer startMultipeerConnectivity];
     
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
@@ -132,19 +130,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, LCKCharacterViewControllerStatHeight);
     
-    self.leftHandButton.itemSlot = LCKItemSlotOneHand;
-    self.rightHandButton.itemSlot = LCKItemSlotOneHand;
-    self.helmetButton.itemSlot = LCKItemSlotHelmet;
-    self.chestButton.itemSlot = LCKItemSlotChest;
-    self.bootsButton.itemSlot = LCKItemSlotBoots;
-    
-    self.firstAccessoryButton.itemSlot = LCKItemSlotAccessory;
-    self.secondAccessoryButton.itemSlot = LCKItemSlotAccessory;
-
-    self.firstSpellButton.itemSlot = LCKItemSlotSpell;
-    self.secondSpellButton.itemSlot = LCKItemSlotSpell;
-    self.thirdSpellButton.itemSlot = LCKItemSlotSpell;
-    self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
+    [self setItemSlotsForItemButtons];
     
     [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
     self.soulsButton.soulLabel.method = UILabelCountingMethodLinear;
@@ -152,9 +138,6 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:0.0];
     
     [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
-    self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
     
     self.overlayView.hidden = YES;
     [self.view addSubview:self.overlayView];
@@ -164,6 +147,22 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [super viewWillAppear:animated];
     
     [self updateItemButtons];
+}
+
+- (void)setItemSlotsForItemButtons {
+    self.leftHandButton.itemSlot = LCKItemSlotOneHand;
+    self.rightHandButton.itemSlot = LCKItemSlotOneHand;
+    self.helmetButton.itemSlot = LCKItemSlotHelmet;
+    self.chestButton.itemSlot = LCKItemSlotChest;
+    self.bootsButton.itemSlot = LCKItemSlotBoots;
+    
+    self.firstAccessoryButton.itemSlot = LCKItemSlotAccessory;
+    self.secondAccessoryButton.itemSlot = LCKItemSlotAccessory;
+    
+    self.firstSpellButton.itemSlot = LCKItemSlotSpell;
+    self.secondSpellButton.itemSlot = LCKItemSlotSpell;
+    self.thirdSpellButton.itemSlot = LCKItemSlotSpell;
+    self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
 }
 
 - (void)updateItemButtons {
@@ -226,7 +225,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
 #pragma mark - LCKCharacterViewController
 
-- (void)updateHealthText {
+- (void)updateHealthStatus {
     self.healthLabel.text = [NSString stringWithFormat:@"%@/%@", self.character.currentHealth, self.character.maximumHealth];
     
     CGFloat healthPercentage = self.character.currentHealth.floatValue / self.character.maximumHealth.floatValue;
@@ -240,6 +239,9 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     else {
         self.healthLabel.textColor = [UIColor redColor];
     }
+    
+    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+    self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
 }
 
 - (UIView *)overlayView {
@@ -418,10 +420,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     self.character.currentHealth = @(self.character.currentHealth.integerValue + 1);
     
-    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
-    self.decreaseHealthButton.enabled = YES;
-    
-    [self updateHealthText];
+    [self updateHealthStatus];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
@@ -432,11 +431,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     }
     
     self.character.currentHealth = @(self.character.currentHealth.integerValue - 1);
-    
-    self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
-    self.increaseHealthButton.enabled = YES;
-    
-    [self updateHealthText];
+
+    [self updateHealthStatus];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 }
@@ -477,9 +473,6 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         
         self.character.currentHealth = self.character.maximumHealth;
         
-        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
-        self.decreaseHealthButton.enabled = YES;
-
         if (emptyFlask) {
             LCKItem *healingFlask = [LCKItemProvider itemForName:@"Healing Flask"];
             healingFlask.equipped = emptyFlask.equipped;
@@ -492,7 +485,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         }
         
         [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
-        [self updateHealthText];
+        [self updateHealthStatus];
     }
     else if ([eventName isEqualToString:LCKEventProviderLevelUpEventName] && self.character.canLevelUp) {
         LCKLevelUpTableViewController *levelUpController = [[LCKLevelUpTableViewController alloc] initWithCharacter:self.character];
@@ -557,10 +550,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
             self.character.currentHealth = @(self.character.currentHealth.integerValue + 4);
         }
         
-        self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
-        self.decreaseHealthButton.enabled = YES;
-        
-        [self updateHealthText];
+        [self updateHealthStatus];
         
         [self.character removeItemFromInventory:item];
         
@@ -615,8 +605,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.character increaseLevel];
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 
-    [self updateHealthText];
-    self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
+    [self updateHealthStatus];
 
     [self.collectionView reloadData];
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
