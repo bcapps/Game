@@ -29,6 +29,7 @@
 #import "UIFont+FontStyle.h"
 #import "UIViewController+Presentation.h"
 #import "LCKStatsCollectionViewController.h"
+#import "LCKItemButtonController.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 #import <UICountingLabel/UICountingLabel.h>
@@ -81,6 +82,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 @property (nonatomic) UIView *overlayView;
 
 @property (nonatomic) LCKMultipeer *multipeer;
+@property (nonatomic) LCKItemButtonController *itemButtonController;
 
 @end
 
@@ -120,6 +122,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         self.silhouetteWidthConstraint.constant -= LCKCharacterViewControllerFemaleFix;
     }
     
+    self.itemButtonController = [[LCKItemButtonController alloc] init];
+    
     [self.view updateConstraintsIfNeeded];
         
     [self setItemSlotsForItemButtons];
@@ -138,143 +142,24 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self updateItemButtons];
+    [self.itemButtonController updateItemButtonsForCharacter:self.character];
 }
 
 - (void)setItemSlotsForItemButtons {
-    self.leftHandButton.itemSlot = LCKItemSlotOneHand;
-    self.rightHandButton.itemSlot = LCKItemSlotOneHand;
-    self.helmetButton.itemSlot = LCKItemSlotHelmet;
-    self.chestButton.itemSlot = LCKItemSlotChest;
-    self.bootsButton.itemSlot = LCKItemSlotBoots;
+    self.itemButtonController.leftHandButton = self.leftHandButton;
+    self.itemButtonController.rightHandButton = self.rightHandButton;
     
-    self.firstAccessoryButton.itemSlot = LCKItemSlotAccessory;
-    self.secondAccessoryButton.itemSlot = LCKItemSlotAccessory;
+    self.itemButtonController.helmetButton = self.helmetButton;
+    self.itemButtonController.chestButton = self.chestButton;
+    self.itemButtonController.bootsButton = self.bootsButton;
     
-    self.firstSpellButton.itemSlot = LCKItemSlotSpell;
-    self.secondSpellButton.itemSlot = LCKItemSlotSpell;
-    self.thirdSpellButton.itemSlot = LCKItemSlotSpell;
-    self.fourthSpellButton.itemSlot = LCKItemSlotSpell;
-}
-
-- (LCKEquipmentSlot)equipmentSlotForItemButton:(LCKItemButton *)itemButton {
-    LCKEquipmentSlot equipmentSlot = LCKEquipmentSlotUnequipped;
+    self.itemButtonController.firstAccessoryButton = self.firstAccessoryButton;
+    self.itemButtonController.secondAccessoryButton = self.secondAccessoryButton;
     
-    if (itemButton == self.leftHandButton || itemButton == self.rightHandButton) {
-        if (itemButton == self.leftHandButton) {
-            equipmentSlot = LCKEquipmentSlotLeftHand;
-        }
-        else {
-            equipmentSlot = LCKEquipmentSlotRightHand;
-        }
-    }
-    else if (itemButton == self.firstAccessoryButton || itemButton == self.secondAccessoryButton) {
-        if (itemButton == self.firstAccessoryButton) {
-            equipmentSlot = LCKEquipmentSlotFirstAccessory;
-        }
-        else {
-            equipmentSlot = LCKEquipmentSlotSecondAccessory;
-        }
-    }
-    else if (itemButton == self.helmetButton) {
-        equipmentSlot = LCKEquipmentSlotHelmet;
-    }
-    else if (itemButton == self.chestButton) {
-        equipmentSlot = LCKEquipmentSlotChest;
-    }
-    else if (itemButton == self.bootsButton) {
-        equipmentSlot = LCKEquipmentSlotBoots;
-    }
-    else if (itemButton == self.firstSpellButton || itemButton == self.secondSpellButton || itemButton == self.thirdSpellButton || itemButton == self.fourthSpellButton) {
-        
-        if (itemButton == self.firstSpellButton) {
-            equipmentSlot = LCKEquipmentSlotFirstSpell;
-        }
-        else if (itemButton == self.secondSpellButton) {
-            equipmentSlot = LCKEquipmentSlotSecondSpell;
-        }
-        else if (itemButton == self.thirdSpellButton) {
-            equipmentSlot = LCKEquipmentSlotThirdSpell;
-        }
-        else {
-            equipmentSlot = LCKEquipmentSlotFourthSpell;
-        }
-    }
-    
-    return equipmentSlot;
-}
-
-- (NSArray *)equipmentTypesForItemButton:(LCKItemButton *)button {
-    NSArray *equipmentTypes;
-    
-    if (button == self.leftHandButton || button == self.rightHandButton) {
-        equipmentTypes = @[@(LCKItemSlotOneHand), @(LCKItemSlotTwoHand)];
-    }
-    else if (button == self.firstAccessoryButton || button == self.secondAccessoryButton) {
-        equipmentTypes = @[@(LCKItemSlotAccessory)];
-    }
-    else if (button == self.helmetButton) {
-        equipmentTypes = @[@(LCKItemSlotHelmet)];
-    }
-    else if (button == self.chestButton) {
-        equipmentTypes = @[@(LCKItemSlotChest)];
-    }
-    else if (button == self.bootsButton) {
-        equipmentTypes = @[@(LCKItemSlotBoots)];
-    }
-    else if (button == self.firstSpellButton || button == self.secondSpellButton || button == self.thirdSpellButton || button == self.fourthSpellButton) {
-        equipmentTypes = @[@(LCKItemSlotSpell)];
-    }
-    
-    return equipmentTypes;
-}
-
-- (void)updateItemButtons {
-    self.leftHandButton.item = nil;
-    self.rightHandButton.item = nil;
-    self.firstSpellButton.item = nil;
-    self.secondSpellButton.item = nil;
-    self.thirdSpellButton.item = nil;
-    self.fourthSpellButton.item = nil;
-    self.firstAccessoryButton.item = nil;
-    self.secondAccessoryButton.item = nil;
-    
-    for (LCKItem *weapon in self.character.equippedWeapons) {
-        if (weapon.equippedSlot == LCKEquipmentSlotLeftHand) {
-            self.leftHandButton.item = weapon;
-        }
-        else if (weapon.equippedSlot == LCKEquipmentSlotRightHand) {
-            self.rightHandButton.item = weapon;
-        }
-    }
-
-    self.helmetButton.item = self.character.equippedHelm;
-    self.chestButton.item = self.character.equippedChest;
-    self.bootsButton.item = self.character.equippedBoots;
-    
-    for (LCKItem *spell in self.character.equippedSpells) {
-        if (spell.equippedSlot == LCKEquipmentSlotFirstSpell) {
-            self.firstSpellButton.item = spell;
-        }
-        else if (spell.equippedSlot == LCKEquipmentSlotSecondSpell) {
-            self.secondSpellButton.item = spell;
-        }
-        else if (spell.equippedSlot == LCKEquipmentSlotThirdSpell) {
-            self.thirdSpellButton.item = spell;
-        }
-        else if (spell.equippedSlot == LCKEquipmentSlotFourthSpell) {
-            self.fourthSpellButton.item = spell;
-        }
-    }
-    
-    for (LCKItem *accessory in self.character.equippedAccessories) {
-        if (accessory.equippedSlot == LCKEquipmentSlotFirstAccessory) {
-            self.firstAccessoryButton.item = accessory;
-        }
-        else if (accessory.equippedSlot == LCKEquipmentSlotSecondAccessory) {
-            self.secondAccessoryButton.item = accessory;
-        }
-    }    
+    self.itemButtonController.firstSpellButton = self.firstSpellButton;
+    self.itemButtonController.secondSpellButton = self.secondSpellButton;
+    self.itemButtonController.thirdSpellButton = self.thirdSpellButton;
+    self.itemButtonController.fourthSpellButton = self.fourthSpellButton;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -424,8 +309,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         viewController = [self newItemViewControllerForItem:button.item];
     }
     else {
-        NSArray *equipmentTypes = [self equipmentTypesForItemButton:button];
-        LCKEquipmentSlot equipmentSlot = [self equipmentSlotForItemButton:button];
+        NSArray *equipmentTypes = [self.itemButtonController equipmentTypesForItemButton:button];
+        LCKEquipmentSlot equipmentSlot = [self.itemButtonController equipmentSlotForItemButton:button];
         
         viewController = [self newEquipmentViewControllerForEquipmentTypes:equipmentTypes equipmentSlot:equipmentSlot];        
     }
@@ -501,7 +386,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
             [self.character removeItemFromInventory:emptyFlask];
             [self.character addItemToInventory:healingFlask];
 
-            [self updateItemButtons];
+            [self.itemButtonController updateItemButtonsForCharacter:self.character];
         }
         
         [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
@@ -541,7 +426,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
-    [self updateItemButtons];
+    [self.itemButtonController updateItemButtonsForCharacter:self.character];
     [self dismissCurrentlyPresentedViewController];
 }
 
@@ -565,7 +450,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         [self.character removeItemFromInventory:item];
     }
     
-    [self updateItemButtons];
+    [self.itemButtonController updateItemButtonsForCharacter:self.character];
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self dismissCurrentlyPresentedViewController];
@@ -583,7 +468,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
-    [self updateItemButtons];
+    [self.itemButtonController updateItemButtonsForCharacter:self.character];
     [self dismissCurrentlyPresentedViewController];
 }
 

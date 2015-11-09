@@ -62,11 +62,7 @@
     
     for (LCKItem *item in self.character.items) {
         if (!item.isEquipped) {
-            NSLog(@"Unequipped: %@", item.name);
             [unequippedItems addObject:item];
-        }
-        else {
-            NSLog(@"Equipped: %@", item.name);
         }
     }
     

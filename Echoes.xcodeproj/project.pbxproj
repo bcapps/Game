@@ -151,6 +151,7 @@
 		F2735B111AF5C78D00C935C3 /* blackleatherarmor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B0F1AF5C78D00C935C3 /* blackleatherarmor@2x.png */; };
 		F2735B121AF5C78D00C935C3 /* gargoylehelm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2735B101AF5C78D00C935C3 /* gargoylehelm@2x.png */; };
 		F28A00301BEFCABD000B960F /* LCKHockeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28A002F1BEFCABD000B960F /* LCKHockeyController.m */; };
+		F28A003A1BF02A82000B960F /* LCKItemButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28A00391BF02A82000B960F /* LCKItemButtonController.m */; };
 		F28F9CC41AF444F400716241 /* Hollow Archer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */; };
 		F29F6E681BEB0473005052D5 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E671BEB0473005052D5 /* LCKMultipeer.m */; };
 		F29F6E711BEB0F3A005052D5 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */; };
@@ -398,6 +399,8 @@
 		F2735B101AF5C78D00C935C3 /* gargoylehelm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gargoylehelm@2x.png"; sourceTree = "<group>"; };
 		F28A002E1BEFCABD000B960F /* LCKHockeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKHockeyController.h; sourceTree = "<group>"; };
 		F28A002F1BEFCABD000B960F /* LCKHockeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKHockeyController.m; sourceTree = "<group>"; };
+		F28A00381BF02A82000B960F /* LCKItemButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKItemButtonController.h; sourceTree = "<group>"; };
+		F28A00391BF02A82000B960F /* LCKItemButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKItemButtonController.m; sourceTree = "<group>"; };
 		F28F9CC31AF444F400716241 /* Hollow Archer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hollow Archer@2x.png"; sourceTree = "<group>"; };
 		F29F6E661BEB0473005052D5 /* LCKMultipeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeer.h; sourceTree = "<group>"; };
 		F29F6E671BEB0473005052D5 /* LCKMultipeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeer.m; sourceTree = "<group>"; };
@@ -703,6 +706,8 @@
 				F21F432A1A2F824000FEA417 /* LCKCharacterPortrait.m */,
 				F2206B801A2D8C7A006E44B0 /* LCKCharacterViewController.h */,
 				F2206B811A2D8C7A006E44B0 /* LCKCharacterViewController.m */,
+				F28A00381BF02A82000B960F /* LCKItemButtonController.h */,
+				F28A00391BF02A82000B960F /* LCKItemButtonController.m */,
 				F21F43511A301D1B00FEA417 /* LCKInventoryTableViewController.h */,
 				F21F43521A301D1B00FEA417 /* LCKInventoryTableViewController.m */,
 				F21F43671A355E8400FEA417 /* LCKEquipmentViewController.h */,
@@ -1307,6 +1312,7 @@
 				F2206B481A2D4290006E44B0 /* Bandit.m in Sources */,
 				F2206B1D1A2D2EA6006E44B0 /* LCKEchoCoreDataController.m in Sources */,
 				F2206B271A2D33FE006E44B0 /* LCKEchoNewCharacterViewController.m in Sources */,
+				F28A003A1BF02A82000B960F /* LCKItemButtonController.m in Sources */,
 				F26413151A40DA7800287EFA /* LCKMonsterAttribute.m in Sources */,
 				F21F43531A301D1B00FEA417 /* LCKInventoryTableViewController.m in Sources */,
 				F21F43A31A3BB9A200FEA417 /* LCKInfoViewController.m in Sources */,
