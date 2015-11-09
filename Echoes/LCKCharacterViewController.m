@@ -28,6 +28,7 @@
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
 #import "UIViewController+Presentation.h"
+#import "LCKStatsCollectionViewController.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 #import <UICountingLabel/UICountingLabel.h>
@@ -46,7 +47,7 @@ const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;
 const CGFloat LCKCharacterStatInfoViewHeight = 145.0;
 const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 
-@interface LCKCharacterViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate, LCKLevelUpDelegate, LCKMultipeerEventListener>
+@interface LCKCharacterViewController () <LCKItemViewControllerDelegate, LCKEquipmentViewControllerDelegate, LCKInventoryTableViewControllerDelegate, LCKLevelUpDelegate, LCKMultipeerEventListener, LCKStatsCollectionViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet LCKItemButton *helmetButton;
 @property (weak, nonatomic) IBOutlet LCKItemButton *chestButton;
@@ -63,18 +64,18 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 @property (weak, nonatomic) IBOutlet LCKStatusButton *soulsButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *silhouetteImageView;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *healthImageView;
 @property (weak, nonatomic) IBOutlet UIButton *increaseHealthButton;
 @property (weak, nonatomic) IBOutlet UIButton *decreaseHealthButton;
 @property (weak, nonatomic) IBOutlet UILabel *healthLabel;
 
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *statsFlowLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *silhouetteWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *silhouetteHeightConstraint;
 
 @property (strong, nonatomic) IBOutletCollection(LCKItemButton) NSArray *equipmentButtons;
+
+@property (nonatomic) LCKStatsCollectionViewController *statsCollectionViewController;
 
 @property (nonatomic) UIViewController *currentlyPresentedItemViewController;
 @property (nonatomic) UIView *overlayView;
@@ -88,9 +89,6 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
 #pragma mark - NSObject
 
 - (void)dealloc {
-    self.collectionView.dataSource = nil;
-    self.collectionView.delegate = nil;
-    
     [self.multipeer stopMultipeerConnectivity];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -110,7 +108,6 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self updateHealthStatus];
     
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    [self.collectionView registerClass:[LCKStatCell class] forCellWithReuseIdentifier:LCKStatCellReuseIdentifier];
     
     self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeClient peerName:self.character.displayName serviceName:@"echoes"];
     [self.multipeer addEventListener:self];
@@ -124,12 +121,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     }
     
     [self.view updateConstraintsIfNeeded];
-    
-    CGFloat itemSpacing = self.statsFlowLayout.minimumInteritemSpacing;
-    CGFloat numberOfItems = LCKCharacterViewControllerNumberOfStats;
-    
-    self.statsFlowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, LCKCharacterViewControllerStatHeight);
-    
+        
     [self setItemSlotsForItemButtons];
     
     [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
@@ -140,7 +132,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
     
     self.overlayView.hidden = YES;
-    [self.view addSubview:self.overlayView];
+    [self.view addSubview:self.overlayView];    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -220,6 +212,12 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         inventoryViewController.multipeer = self.multipeer;
         
         inventoryViewController.character = self.character;
+    }
+    else if ([segue.identifier isEqualToString:@"StatsViewControllerEmbed"]) {
+        self.statsCollectionViewController = segue.destinationViewController;
+        
+        self.statsCollectionViewController.displayedStats = self.character.characterStats;
+        self.statsCollectionViewController.delegate = self;
     }
 }
 
@@ -494,28 +492,14 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     }
 }
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - LCKStatsCollectionViewControllerDelegate
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return LCKCharacterViewControllerNumberOfStats;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LCKStatCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LCKStatCellReuseIdentifier forIndexPath:indexPath];
+- (void)statItemWasTappedForStatType:(LCKStatType)statType selectedCell:(UICollectionViewCell *)selectedCell {
+    UICollectionView *collectionView = self.statsCollectionViewController.collectionView;
     
-    cell.statNameLabel.text = [CharacterStats statNameForStatType:(LCKStatType)indexPath.row];
-    cell.statValueLabel.text = [self.character.characterStats statAsStringForStatType:(LCKStatType)indexPath.row];
-
-    return cell;
-}
-
-#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     LCKInfoViewController *infoViewController = [self newInfoViewController];
     infoViewController.arrowDirection = UIPopoverArrowDirectionDown;
-
-    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
+    
     CGRect cellFrame = [self.view convertRect:selectedCell.frame fromView:collectionView];
     
     CGRect presentationFrame = [self statInfoViewFrameForCellFrame:cellFrame];
@@ -524,8 +508,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     [self presentViewController:infoViewController withFrame:presentationFrame fromView:selectedCell];
     
-    infoViewController.titleLabel.text = [CharacterStats statTitleForStatType:indexPath.row];
-    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:indexPath.row];
+    infoViewController.titleLabel.text = [CharacterStats statTitleForStatType:statType];
+    infoViewController.infoTextView.text = [CharacterStats statDescriptionForStatType:statType];
 }
 
 #pragma mark - LCKItemViewControllerDelegate
@@ -606,10 +590,11 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
 
     [self updateHealthStatus];
-
-    [self.collectionView reloadData];
+    
+    self.statsCollectionViewController.displayedStats = self.character.characterStats;
+    [self.statsCollectionViewController.collectionView reloadData];
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
-
+    
     [self dismissCurrentlyPresentedViewController];
 }
 
