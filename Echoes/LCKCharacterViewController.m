@@ -416,11 +416,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         return;
     }
     
-    self.character.currentHealth = @(self.character.currentHealth.integerValue + 1);
-    
-    [self updateHealthStatus];
-    
-    [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
+    [self modifyCurrentCharacterHealthBy:1];
 }
 
 - (IBAction)decreaseHealthButtonTapped:(UIButton *)sender {
@@ -428,8 +424,11 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         return;
     }
     
-    self.character.currentHealth = @(self.character.currentHealth.integerValue - 1);
+    [self modifyCurrentCharacterHealthBy:-1];
+}
 
+- (void)modifyCurrentCharacterHealthBy:(NSInteger)healthModificationValue {
+    self.character.currentHealth = @(self.character.currentHealth.integerValue + healthModificationValue);
     [self updateHealthStatus];
     
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
