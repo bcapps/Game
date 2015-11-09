@@ -19,9 +19,9 @@
         NSMutableArray *monsterArray = [NSMutableArray array];
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Monsters" ofType:@"plist"];
         
-        NSDictionary *monsterDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
+        NSDictionary *monstersDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
         
-        [monsterDictionary enumerateKeysAndObjectsUsingBlock:^(NSString *monsterName, NSDictionary *monsterDictionary, BOOL *stop) {
+        [monstersDictionary enumerateKeysAndObjectsUsingBlock:^(NSString *monsterName, NSDictionary *monsterDictionary, BOOL *stop) {
             LCKMonster *monster = [[LCKMonster alloc] initWithDictionary:monsterDictionary name:monsterName];
             
             [monsterArray addObject:monster];

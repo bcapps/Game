@@ -66,6 +66,8 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeFaith:
             return [NSString stringWithFormat:@"%@", self.faith];
     }
+    
+    return @"";
 }
 
 - (NSNumber *)statValueForStatType:(LCKStatType)statType {
@@ -81,6 +83,8 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeFaith:
             return self.faith;
     }
+    
+    return @(0);
 }
 
 + (NSString *)statNameForStatType:(LCKStatType)statType {
@@ -96,6 +100,8 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeFaith:
             return @"FAI";
     }
+    
+    return @"";
 }
 
 + (NSString *)statTitleForStatType:(LCKStatType)statType {
@@ -111,6 +117,8 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeFaith:
             return @"Faith";
     }
+    
+    return @"";
 }
 
 + (NSString *)statDescriptionForStatType:(LCKStatType)statType {
@@ -126,6 +134,8 @@ NSUInteger const CharacterStatsVitalityModifier = 3;
         case LCKStatTypeFaith:
             return @"· Increases damage and healing done by miracles.\n· Lowers your chance of being hit by magical attacks.\n· Increases resistance to curses.";
     }
+    
+    return @"";
 }
 
 - (NSNumber *)statValueForStatString:(NSString *)statString {

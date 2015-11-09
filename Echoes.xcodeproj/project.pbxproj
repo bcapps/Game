@@ -34,7 +34,7 @@
 		F21F43771A37F09D00FEA417 /* chestIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43711A37F09D00FEA417 /* chestIcon@2x.png */; };
 		F21F43781A37F09D00FEA417 /* helmetIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */; };
 		F21F43791A37F09D00FEA417 /* oneHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */; };
-		F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */; };
+		F21F437A1A37F09D00FEA417 /* twoHandIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43741A37F09D00FEA417 /* twoHandIcon@2x.png */; };
 		F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */; };
 		F21F43841A3A549600FEA417 /* longsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43831A3A549600FEA417 /* longsword@2x.png */; };
 		F21F43861A3A54AB00FEA417 /* broadsword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F21F43851A3A54AB00FEA417 /* broadsword@2x.png */; };
@@ -253,7 +253,7 @@
 		F21F43711A37F09D00FEA417 /* chestIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chestIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helmetIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneHandIcon@2x.png"; sourceTree = "<group>"; };
-		F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwoHandIcon@2x.png"; sourceTree = "<group>"; };
+		F21F43741A37F09D00FEA417 /* twoHandIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twoHandIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spellIcon@2x.png"; sourceTree = "<group>"; };
 		F21F43831A3A549600FEA417 /* longsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "longsword@2x.png"; sourceTree = "<group>"; };
 		F21F43851A3A54AB00FEA417 /* broadsword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadsword@2x.png"; sourceTree = "<group>"; };
@@ -589,7 +589,7 @@
 				F21F43711A37F09D00FEA417 /* chestIcon@2x.png */,
 				F21F43721A37F09D00FEA417 /* helmetIcon@2x.png */,
 				F21F43731A37F09D00FEA417 /* oneHandIcon@2x.png */,
-				F21F43741A37F09D00FEA417 /* TwoHandIcon@2x.png */,
+				F21F43741A37F09D00FEA417 /* twoHandIcon@2x.png */,
 				F21F43801A3A4C6D00FEA417 /* spellIcon@2x.png */,
 			);
 			name = "Default Icon Types";
@@ -1095,7 +1095,7 @@
 				F26B86851B9BEF7E00F3C2D4 /* sorcerercloak@2x.png in Resources */,
 				F2D818971AABCDFF00051561 /* binoculars@2x.png in Resources */,
 				F2E21ED01B6D4B9500E6C6CB /* Demonic Foliage@2x.png in Resources */,
-				F21F437A1A37F09D00FEA417 /* TwoHandIcon@2x.png in Resources */,
+				F21F437A1A37F09D00FEA417 /* twoHandIcon@2x.png in Resources */,
 				F2D8189D1AABCDFF00051561 /* wingedspear@2x.png in Resources */,
 				F2E21ECC1B6D46D200E6C6CB /* Hellkite Dragon@2x.png in Resources */,
 				F21F43811A3A4C6D00FEA417 /* spellIcon@2x.png in Resources */,
