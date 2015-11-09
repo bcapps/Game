@@ -27,6 +27,7 @@
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"
+#import "UIViewController+Presentation.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
 #import <UICountingLabel/UICountingLabel.h>
@@ -154,6 +155,9 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     self.increaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:self.character.maximumHealth];
     self.decreaseHealthButton.enabled = ![self.character.currentHealth isEqualToNumber:@(0)];
+    
+    self.overlayView.hidden = YES;
+    [self.view addSubview:self.overlayView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -243,7 +247,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         _overlayView = [[UIView alloc] initWithFrame:self.view.frame];
         _overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
         
-        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(overlayViewTapped)];
+        UITapGestureRecognizer *dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissCurrentlyPresentedViewController)];
         
         [_overlayView addGestureRecognizer:dismissGesture];
     }
@@ -306,64 +310,27 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     return equipmentViewController;
 }
 
-- (void)presentViewController:(UIViewController *)viewController withFrame:(CGRect)frame fromView:(UIView *)button {
+- (void)presentViewController:(UIViewController *)viewController withFrame:(CGRect)frame fromView:(UIView *)view {
     if (!viewController) {
         return;
     }
     
-    [self dismissCurrentlyPresentedViewController:^{
-        viewController.view.frame = frame;
-        viewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
-        
-        self.overlayView.alpha = 0.0;
-        [self.view addSubview:self.overlayView];
-        [self addChildViewController:viewController];
-        [self.view addSubview:viewController.view];
-        [viewController didMoveToParentViewController:self];
-        
-        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            viewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
-            self.overlayView.alpha = 1.0;
-        } completion:nil];
-        
-        self.currentlyPresentedItemViewController = viewController;
-        self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
-        self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    }];
+    self.overlayView.hidden = NO;
+    self.overlayView.alpha = 1.0;
+
+    [self presentViewController:viewController currentlyPresentedViewController:self.currentlyPresentedItemViewController withFrame:frame fromView:view];
+    self.currentlyPresentedItemViewController = viewController;
 }
 
-- (void)overlayViewTapped {
-    [self dismissCurrentlyPresentedViewController:nil];
-}
-
-- (void)dismissCurrentlyPresentedViewController:(LCKItemViewControllerDismissCompletion)completion {
-    self.navigationController.navigationBar.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
-    self.navigationController.navigationBar.tintColor = self.view.window.tintColor;
-
-    if (!self.currentlyPresentedItemViewController) {
+- (void)dismissCurrentlyPresentedViewController {
+    [self dismissCurrentlyPresentedViewController:self.currentlyPresentedItemViewController animationBlock:^{
         self.overlayView.alpha = 0.0;
-        
-        if (completion) {
-            completion();
-        }
-    }
-    else {
-        UIViewController *presentedViewController = self.currentlyPresentedItemViewController;
+    } withCompletion:^{
         self.currentlyPresentedItemViewController = nil;
         
-        [UIView animateWithDuration:LCKCharacterViewControllerAnimationDuration delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.overlayView.alpha = 0.0;
-            presentedViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001);
-        } completion:^(BOOL finished) {
-            [presentedViewController willMoveToParentViewController:nil];
-            [presentedViewController.view removeFromSuperview];
-            [presentedViewController removeFromParentViewController];
-                        
-            if (completion) {
-                completion();
-            }
-        }];
-    }
+        self.overlayView.hidden = YES;
+        self.overlayView.alpha = 1.0;
+    }];
 }
 
 - (void)didSelectSoulsButton {
@@ -576,7 +543,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self updateItemButtons];
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 - (void)useItemButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
@@ -610,11 +577,11 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self updateItemButtons];
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 - (void)closeButtonTappedForItemViewController:(LCKItemViewController *)itemViewController {
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 #pragma mark - LCKEquipmentViewControllerDelegate
@@ -626,11 +593,11 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [[LCKEchoCoreDataController sharedController] saveContext:self.character.managedObjectContext];
     
     [self updateItemButtons];
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 - (void)closeButtonWasTappedForEquipmentViewController:(LCKEquipmentViewController *)viewController {
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 #pragma mark - LCKInventoryTableViewControllerDelegate
@@ -654,7 +621,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.collectionView reloadData];
     [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:1.5];
 
-    [self dismissCurrentlyPresentedViewController:nil];
+    [self dismissCurrentlyPresentedViewController];
 }
 
 #pragma mark - LCKMultipeerEventListener

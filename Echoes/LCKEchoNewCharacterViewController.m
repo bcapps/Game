@@ -232,7 +232,7 @@ CGFloat const LCKEchoNewCharacterViewControllerCarouselItemSize = 90.0;
 
 - (void)overlayViewTapped {
     [self dismissCurrentlyPresentedViewController:self.currentlyDisplayedViewController animationBlock:^{
-        self.overlayView.alpha = 0.02;
+        self.overlayView.alpha = 0.0;
     } withCompletion:^{
         self.currentlyDisplayedViewController = nil;
         
