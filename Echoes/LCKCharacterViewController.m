@@ -104,16 +104,15 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     self.view.backgroundColor = [UIColor backgroundColor];
     self.title = self.character.name;
     
+    [self setupMultipeerService];
     [self setupSilhouetteGender];
-    self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
     
     [self updateHealthStatus];
     
+    [self setupItemController];
+
+    self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-    self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeClient peerName:self.character.displayName serviceName:@"echoes"];
-    [self.multipeer addEventListener:self];
-    [self.multipeer startMultipeerConnectivity];
     
     self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
     self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
@@ -121,12 +120,8 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     if (self.character.characterGender == CharacterGenderFemale) {
         self.silhouetteWidthConstraint.constant -= LCKCharacterViewControllerFemaleFix;
     }
-    
-    self.itemButtonController = [[LCKItemButtonController alloc] init];
-    
+
     [self.view updateConstraintsIfNeeded];
-        
-    [self setItemSlotsForItemButtons];
     
     [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
     self.soulsButton.soulLabel.method = UILabelCountingMethodLinear;
@@ -145,7 +140,15 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [self.itemButtonController updateItemButtonsForCharacter:self.character];
 }
 
-- (void)setItemSlotsForItemButtons {
+- (void)setupMultipeerService {
+    self.multipeer = [[LCKMultipeer alloc] initWithMultipeerUserType:LCKMultipeerUserTypeClient peerName:self.character.displayName serviceName:@"echoes"];
+    [self.multipeer addEventListener:self];
+    [self.multipeer startMultipeerConnectivity];
+}
+
+- (void)setupItemController {
+    self.itemButtonController = [[LCKItemButtonController alloc] init];
+
     self.itemButtonController.leftHandButton = self.leftHandButton;
     self.itemButtonController.rightHandButton = self.rightHandButton;
     
