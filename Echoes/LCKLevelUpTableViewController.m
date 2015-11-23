@@ -10,7 +10,6 @@
 #import "LCKBaseCell.h"
 
 #import "CharacterStats.h"
-#import "LCKEchoCoreDataController.h"
 
 #import "UIColor+ColorStyle.h"
 #import "UIFont+FontStyle.h"

@@ -8,7 +8,6 @@
 
 #import "LCKStatsCollectionViewController.h"
 #import "LCKStatCell.h"
-#import "LCKInfoViewController.h"
 
 NSUInteger const LCKStatsCollectionViewNumberOfItems = 5;
 

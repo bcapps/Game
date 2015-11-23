@@ -7,7 +7,6 @@
 //
 
 #import "LCKCharacterViewController.h"
-#import "LCKStatCell.h"
 #import "CharacterStats.h"
 #import "LCKEchoCoreDataController.h"
 
@@ -15,7 +14,6 @@
 #import "LCKItemViewController.h"
 #import "LCKItemProvider.h"
 #import "LCKItemButton.h"
-#import "LCKItem.h"
 #import "LCKStatusButton.h"
 #import "LCKEventProvider.h"
 
@@ -31,17 +29,9 @@
 #import "LCKStatsCollectionViewController.h"
 #import "LCKItemButtonController.h"
 
-#import <LCKCategories/NSArray+LCKAdditions.h>
-#import <UICountingLabel/UICountingLabel.h>
-
-typedef void(^LCKItemViewControllerDismissCompletion)();
-
-const CGFloat LCKCharacterViewControllerAnimationDuration = 0.4;
 const CGFloat LCKItemViewControllerHorizontalMargin = 45.0;
 const CGFloat LCKItemViewControllerVerticalMargin = 100.0;
 
-const CGFloat LCKCharacterViewControllerNumberOfStats = 5;
-const CGFloat LCKCharacterViewControllerStatHeight = 50.0;
 const CGFloat LCKCharacterViewControllerFemaleFix = 40.0;
 
 const CGFloat LCKCharacterStatInfoViewHorizontalMargin = 10.0;

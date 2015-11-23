@@ -9,9 +9,7 @@
 #import "LCKEchoNewCharacterViewController.h"
 #import "LCKEchoCoreDataController.h"
 #import "CharacterClasses.h"
-#import "Character.h"
 #import "LCKCharacterPortrait.h"
-#import "LCKStatCell.h"
 #import "LCKInfoViewController.h"
 #import "LCKStatsCollectionViewController.h"
 #import "LCKStatInfoViewController.h"
@@ -22,10 +20,7 @@
 
 #import <iCarousel/iCarousel.h>
 
-#import <LCKCategories/NSManagedObject+LCKAdditions.h>
 #import <LCKCategories/NSArray+LCKAdditions.h>
-
-const CGFloat LCKEchoNewCharacterViewControllerNumberOfStats = 5;
 
 CGFloat const LCKEchoNewCharacterViewControllerClassPickerVerticalOffset = -100;
 

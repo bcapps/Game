@@ -151,11 +151,11 @@ NSString * const LCKItemCodingEmptyVersionKey = @"LCKItemCodingEmptyVersionKey";
 }
 
 - (LCKItemSlot)itemSlot {
-    return [self.itemSlotNumber integerValue];
+    return self.itemSlotNumber.integerValue;
 }
 
 - (LCKEquipmentSlot)equippedSlot {
-    return [self.equipmentSlotNumber integerValue];
+    return self.equipmentSlotNumber.integerValue;
 }
 
 - (void)setEquippedSlot:(LCKEquipmentSlot)equippedSlot {

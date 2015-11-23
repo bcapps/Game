@@ -12,7 +12,6 @@
 #import "LCKItemProvider.h"
 #import "LCKItem.h"
 
-#import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
 
 #import "LCKBaseCell.h"
@@ -20,15 +19,6 @@
 #import "LCKAllPeersViewController.h"
 
 #import <LCKCategories/NSArray+LCKAdditions.h>
-
-typedef NS_ENUM(NSUInteger, LCKAllItemsSection) {
-    LCKAllItemsSectionOneHanded,
-    LCKAllItemsSectionTwoHanded,
-    LCKAllItemsSectionAccessory,
-    LCKAllItemsSectionChest,
-    LCKAllItemsSectionHelmet,
-    LCKAllItemsSectionBoots
-};
 
 @interface LCKAllItemsTableViewController ()
 

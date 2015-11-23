@@ -17,7 +17,6 @@
 #import "LCKMultipeer.h"
 #import "LCKMapsTableViewController.h"
 #import "LCKEventsTableViewController.h"
-#import "LCKDMManager.h"
 
 typedef NS_ENUM(NSUInteger, LCKDMToolsRow) {
     LCKDMToolsRowAllItems,

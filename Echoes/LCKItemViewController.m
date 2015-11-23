@@ -8,7 +8,6 @@
 
 #import "LCKItemViewController.h"
 #import "Character.h"
-#import "CharacterStats.h"
 
 #import "UIFont+FontStyle.h"
 #import "UIColor+ColorStyle.h"
