@@ -106,29 +106,13 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     
     [self setupMultipeerService];
     [self setupSilhouetteGender];
-    
-    [self updateHealthStatus];
-    
     [self setupItemController];
-
+    [self setSilhoutteConstraints];
+    [self updateHealthStatus];
+    [self setupSoulsButton];
+    
     self.healthLabel.font = [UIFont titleTextFontOfSize:15.0];
     self.healthImageView.image = [self.healthImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-    self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
-    self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
-    
-    if (self.character.characterGender == CharacterGenderFemale) {
-        self.silhouetteWidthConstraint.constant -= LCKCharacterViewControllerFemaleFix;
-    }
-
-    [self.view updateConstraintsIfNeeded];
-    
-    [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
-    self.soulsButton.soulLabel.method = UILabelCountingMethodLinear;
-    self.soulsButton.soulLabel.format = @"%d";
-    [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:0.0];
-    
-    [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
     
     self.overlayView.hidden = YES;
     [self.view addSubview:self.overlayView];    
@@ -138,6 +122,26 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
     [super viewWillAppear:animated];
     
     [self.itemButtonController updateItemButtonsForCharacter:self.character];
+}
+
+- (void)setSilhoutteConstraints {
+    self.silhouetteHeightConstraint.constant = CGRectGetHeight(self.view.frame) * 0.65;
+    self.silhouetteWidthConstraint.constant = self.silhouetteHeightConstraint.constant * (self.silhouetteImageView.image.size.width / self.silhouetteImageView.image.size.height);
+    
+    if (self.character.characterGender == CharacterGenderFemale) {
+        self.silhouetteWidthConstraint.constant -= LCKCharacterViewControllerFemaleFix;
+    }
+    
+    [self.view updateConstraintsIfNeeded];
+}
+
+- (void)setupSoulsButton {
+    [self.soulsButton setImage:[UIImage imageNamed:@"soulsIcon"] forState:UIControlStateNormal];
+    self.soulsButton.soulLabel.method = UILabelCountingMethodLinear;
+    self.soulsButton.soulLabel.format = @"%d";
+    [self.soulsButton.soulLabel countFromCurrentValueTo:self.character.souls.floatValue withDuration:0.0];
+    
+    [self.soulsButton addTarget:self action:@selector(didSelectSoulsButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setupMultipeerService {
