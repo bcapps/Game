@@ -156,6 +156,7 @@
 		F29F6E681BEB0473005052D5 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E671BEB0473005052D5 /* LCKMultipeer.m */; };
 		F29F6E711BEB0F3A005052D5 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */; };
 		F29F6E791BEB160F005052D5 /* LCKMultipeer+Messaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */; };
+		F2B04DF91C138A8E00EB2AFB /* ghostblade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */; };
 		F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */; };
 		F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */; };
 		F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */; };
@@ -408,6 +409,7 @@
 		F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerMessage.m; sourceTree = "<group>"; };
 		F29F6E771BEB160F005052D5 /* LCKMultipeer+Messaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LCKMultipeer+Messaging.h"; sourceTree = "<group>"; };
 		F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LCKMultipeer+Messaging.m"; sourceTree = "<group>"; };
+		F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ghostblade@2x.png"; sourceTree = "<group>"; };
 		F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatacombsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewLondoRuinsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadBurgMap@2x.png"; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 				F2D818A31AABF94900051561 /* firebomb@2x.png */,
 				F2D818901AABCDFF00051561 /* blackknightshield@2x.png */,
 				F2D818911AABCDFF00051561 /* blackknightsword@2x.png */,
+				F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */,
 				F26B86781B9A2E4100F3C2D4 /* gargoyleaxe@2x.png */,
 				F2D818921AABCDFF00051561 /* bluetearstonering@2x.png */,
 				F2D818931AABCDFF00051561 /* ringofsacrifice@2x.png */,
@@ -1082,6 +1085,7 @@
 				F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */,
 				F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */,
 				F2E21ECA1B6D46D200E6C6CB /* Berenike Knight@2x.png in Resources */,
+				F2B04DF91C138A8E00EB2AFB /* ghostblade@2x.png in Resources */,
 				F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */,
 				F21F43A71A3BBE5600FEA417 /* spidershield@2x.png in Resources */,
 				F2FE1CD91A4E2F7300FA161C /* force@2x.png in Resources */,

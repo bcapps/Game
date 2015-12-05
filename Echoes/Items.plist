@@ -759,5 +759,24 @@ The lower Undead Burg is a treacherous place. Do not turn your back on the wily 
 		<key>itemSlot</key>
 		<string>chest</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ghost Blade</string>
+		<key>actionText</key>
+		<string>Strike: Stab an enemy for 2d6 + [DEX].</string>
+		<key>descriptiveText</key>
+		<string>Shadowstep: Move instantly behind your enemy. You may use this ability rather than moving on your turn.</string>
+		<key>flavorText</key>
+		<string>The ghosts of New Londo clutch this wickedly cursed dagger with their bony hands and make mincemeat of the living.</string>
+		<key>imageName</key>
+		<string>ghostblade</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 1</string>
+			<string>DEX 3</string>
+		</array>
+		<key>itemSlot</key>
+		<string>onehand</string>
+	</dict>
 </array>
 </plist>
