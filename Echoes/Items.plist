@@ -778,5 +778,22 @@ The lower Undead Burg is a treacherous place. Do not turn your back on the wily 
 		<key>itemSlot</key>
 		<string>onehand</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Key to Depths</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>Key opening the door from the lower Undead Burg to the Depths.
+Those banished from the Undead Burg eke out their existence in the Depths, a damp lair with no trace of sunlight. Nearly half of the Depths form a perilous flooded labyrinth.</string>
+		<key>imageName</key>
+		<string>keytodepths</string>
+		<key>attributeRequirements</key>
+		<array/>
+		<key>itemSlot</key>
+		<string></string>
+	</dict>
 </array>
 </plist>

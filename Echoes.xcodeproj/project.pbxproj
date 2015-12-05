@@ -157,6 +157,7 @@
 		F29F6E711BEB0F3A005052D5 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E701BEB0F3A005052D5 /* LCKMultipeerMessage.m */; };
 		F29F6E791BEB160F005052D5 /* LCKMultipeer+Messaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */; };
 		F2B04DF91C138A8E00EB2AFB /* ghostblade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */; };
+		F2B04DFB1C138CD200EB2AFB /* keytodepths@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */; };
 		F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */; };
 		F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */; };
 		F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */; };
@@ -410,6 +411,7 @@
 		F29F6E771BEB160F005052D5 /* LCKMultipeer+Messaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LCKMultipeer+Messaging.h"; sourceTree = "<group>"; };
 		F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LCKMultipeer+Messaging.m"; sourceTree = "<group>"; };
 		F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ghostblade@2x.png"; sourceTree = "<group>"; };
+		F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keytodepths@2x.png"; sourceTree = "<group>"; };
 		F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatacombsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewLondoRuinsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadBurgMap@2x.png"; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
 				F26B867C1B9A2F5B00F3C2D4 /* basementkey@2x.png */,
+				F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */,
 				F26B86841B9BEF7E00F3C2D4 /* sorcerercloak@2x.png */,
 				F2D818AE1AAC005D00051561 /* bloodspear@2x.png */,
 				F2E21ED11B6D5E1F00E6C6CB /* ricardsrapier@2x.png */,
@@ -1122,6 +1125,7 @@
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
 				F26B86811B9A317300F3C2D4 /* Undead Attack Dog@2x.png in Resources */,
+				F2B04DFB1C138CD200EB2AFB /* keytodepths@2x.png in Resources */,
 				F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */,
 				F21F43251A2EA52500FEA417 /* SilhoutteFemale@2x.png in Resources */,
 				F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */,
