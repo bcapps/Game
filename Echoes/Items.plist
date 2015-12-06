@@ -765,7 +765,7 @@ The lower Undead Burg is a treacherous place. Do not turn your back on the wily 
 		<key>actionText</key>
 		<string>Strike: Stab an enemy for 2d6 + [DEX].</string>
 		<key>descriptiveText</key>
-		<string>Shadowstep: Move instantly behind your enemy. You may use this ability rather than moving on your turn.</string>
+		<string>When attacking from behind, deal an additional 1d4 damage.</string>
 		<key>flavorText</key>
 		<string>The ghosts of New Londo clutch this wickedly cursed dagger with their bony hands and make mincemeat of the living.</string>
 		<key>imageName</key>
@@ -794,6 +794,92 @@ Those banished from the Undead Burg eke out their existence in the Depths, a dam
 		<array/>
 		<key>itemSlot</key>
 		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Boots</string>
+		<key>actionText</key>
+		<string>Shadowstep: Move instantly behind your enemy. You may use this ability rather than moving on your turn.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>Boots of the Darkwraiths, former knights
+of New Londo who descended into Dark.
+
+Their boots transformed, and remain a
+symbol of the Dark servants and their
+diabolical art of Lifedrain.</string>
+		<key>imageName</key>
+		<string>darkboots</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>DEX 4</string>
+		</array>
+		<key>itemSlot</key>
+		<string>boots</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Breastplate</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>When attacking, if you deal damage, deal an additional [DEX] in damage, and gain that much life.</string>
+		<key>flavorText</key>
+		<string>Boots of the Darkwraiths, former knights
+of New Londo who descended into Dark.
+
+Their boots transformed, and remain a
+symbol of the Dark servants and their
+diabolical art of Lifedrain.</string>
+		<key>imageName</key>
+		<string>darkbreastplate</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>DEX 4</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soul Storm</string>
+		<key>actionText</key>
+		<string>Conjure: Summon an [INT] number of orbs each dealing 1d4 damage.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>This spell was said to have been devised
+by a master sorcerer, but his name is
+long forgotten.</string>
+		<key>imageName</key>
+		<string>soulstorm</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>INT 6</string>
+		</array>
+		<key>itemSlot</key>
+		<string>spell</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bloody Soul Storm</string>
+		<key>actionText</key>
+		<string>Conjure: Summon an [INT] number of orbs each dealing 1d4 + [INT] damage. You lose [INT] health.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>This spell was said to have been devised
+by a master sorcerer, but his name is
+long forgotten.</string>
+		<key>imageName</key>
+		<string>bloodysoulstorm</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>INT 7</string>
+		</array>
+		<key>itemSlot</key>
+		<string>spell</string>
 	</dict>
 </array>
 </plist>

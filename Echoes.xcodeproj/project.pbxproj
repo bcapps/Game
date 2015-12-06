@@ -158,6 +158,10 @@
 		F29F6E791BEB160F005052D5 /* LCKMultipeer+Messaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */; };
 		F2B04DF91C138A8E00EB2AFB /* ghostblade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */; };
 		F2B04DFB1C138CD200EB2AFB /* keytodepths@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */; };
+		F2B04DFD1C13CA6300EB2AFB /* darkboots@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DFC1C13CA6300EB2AFB /* darkboots@2x.png */; };
+		F2B04DFF1C13CD0E00EB2AFB /* darkbreastplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04DFE1C13CD0E00EB2AFB /* darkbreastplate@2x.png */; };
+		F2B04E011C13CDEF00EB2AFB /* soulstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04E001C13CDEF00EB2AFB /* soulstorm@2x.png */; };
+		F2B04E031C13D0D500EB2AFB /* bloodysoulstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B04E021C13D0D500EB2AFB /* bloodysoulstorm@2x.png */; };
 		F2D374C41A5F5BDF004CFDAF /* CatacombsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */; };
 		F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */; };
 		F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */; };
@@ -412,6 +416,10 @@
 		F29F6E781BEB160F005052D5 /* LCKMultipeer+Messaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LCKMultipeer+Messaging.m"; sourceTree = "<group>"; };
 		F2B04DF81C138A8E00EB2AFB /* ghostblade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ghostblade@2x.png"; sourceTree = "<group>"; };
 		F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keytodepths@2x.png"; sourceTree = "<group>"; };
+		F2B04DFC1C13CA6300EB2AFB /* darkboots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darkboots@2x.png"; sourceTree = "<group>"; };
+		F2B04DFE1C13CD0E00EB2AFB /* darkbreastplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darkbreastplate@2x.png"; sourceTree = "<group>"; };
+		F2B04E001C13CDEF00EB2AFB /* soulstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soulstorm@2x.png"; sourceTree = "<group>"; };
+		F2B04E021C13D0D500EB2AFB /* bloodysoulstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bloodysoulstorm@2x.png"; sourceTree = "<group>"; };
 		F2D374BD1A5F5BDF004CFDAF /* CatacombsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatacombsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374BF1A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewLondoRuinsMap@2x.png"; sourceTree = "<group>"; };
 		F2D374C11A5F5BDF004CFDAF /* UndeadBurgMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndeadBurgMap@2x.png"; sourceTree = "<group>"; };
@@ -527,8 +535,12 @@
 			children = (
 				F21F437B1A37F0A000FEA417 /* Default Icon Types */,
 				F21F43851A3A54AB00FEA417 /* broadsword@2x.png */,
+				F2B04E001C13CDEF00EB2AFB /* soulstorm@2x.png */,
+				F2B04DFC1C13CA6300EB2AFB /* darkboots@2x.png */,
+				F2B04DFE1C13CD0E00EB2AFB /* darkbreastplate@2x.png */,
 				F26B867C1B9A2F5B00F3C2D4 /* basementkey@2x.png */,
 				F2B04DFA1C138CD200EB2AFB /* keytodepths@2x.png */,
+				F2B04E021C13D0D500EB2AFB /* bloodysoulstorm@2x.png */,
 				F26B86841B9BEF7E00F3C2D4 /* sorcerercloak@2x.png */,
 				F2D818AE1AAC005D00051561 /* bloodspear@2x.png */,
 				F2E21ED11B6D5E1F00E6C6CB /* ricardsrapier@2x.png */,
@@ -1087,6 +1099,7 @@
 				F21F43A51A3BBDFC00FEA417 /* canvastalisman@2x.png in Resources */,
 				F268F0591A4E3EE700AEA410 /* undeadasylumeastkey@2x.png in Resources */,
 				F268F05B1A4E3F5A00AEA410 /* bigpilgrimkey@2x.png in Resources */,
+				F2B04E011C13CDEF00EB2AFB /* soulstorm@2x.png in Resources */,
 				F2E21ECA1B6D46D200E6C6CB /* Berenike Knight@2x.png in Resources */,
 				F2B04DF91C138A8E00EB2AFB /* ghostblade@2x.png in Resources */,
 				F2D818981AABCDFF00051561 /* blackknightshield@2x.png in Resources */,
@@ -1121,6 +1134,7 @@
 				F21F43231A2E96C000FEA417 /* SilhoutteMale@2x.png in Resources */,
 				F2206B6C1A2D43FE006E44B0 /* SorcererIcon@2x.png in Resources */,
 				F26412FD1A3F87EC00287EFA /* ThiefIconFemale@2x.png in Resources */,
+				F2B04DFD1C13CA6300EB2AFB /* darkboots@2x.png in Resources */,
 				F2206B6E1A2D43FE006E44B0 /* ThiefIcon@2x.png in Resources */,
 				F2206B641A2D43FE006E44B0 /* BanditIcon@2x.png in Resources */,
 				F21F433B1A2FCDA800FEA417 /* Items.plist in Resources */,
@@ -1131,6 +1145,7 @@
 				F2D8189E1AABCDFF00051561 /* zweihander@2x.png in Resources */,
 				F26413261A48FD3000287EFA /* Lore.plist in Resources */,
 				F2735B0D1AF5C4F800C935C3 /* UndeadParishExterior@2x.png in Resources */,
+				F2B04E031C13D0D500EB2AFB /* bloodysoulstorm@2x.png in Resources */,
 				F2E21EDA1B6D629500E6C6CB /* fangboarhelm@2x.png in Resources */,
 				F2E21ED21B6D5E1F00E6C6CB /* ricardsrapier@2x.png in Resources */,
 				F2D8189C1AABCDFF00051561 /* uchigatana@2x.png in Resources */,
@@ -1158,6 +1173,7 @@
 				F2735B111AF5C78D00C935C3 /* blackleatherarmor@2x.png in Resources */,
 				F2D374C81A5F5BDF004CFDAF /* UndeadBurgMap@2x.png in Resources */,
 				F26B867D1B9A2F5B00F3C2D4 /* basementkey@2x.png in Resources */,
+				F2B04DFF1C13CD0E00EB2AFB /* darkbreastplate@2x.png in Resources */,
 				F2206B661A2D43FE006E44B0 /* ClericIcon@2x.png in Resources */,
 				F2D374C91A5F5BDF004CFDAF /* UpperBlighttownMap@2x.png in Resources */,
 				F2D374C61A5F5BDF004CFDAF /* NewLondoRuinsMap@2x.png in Resources */,
