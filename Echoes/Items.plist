@@ -881,5 +881,44 @@ long forgotten.</string>
 		<key>itemSlot</key>
 		<string>spell</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Elite Knight Armor</string>
+		<key>actionText</key>
+		<string></string>
+		<key>descriptiveText</key>
+		<string>Reduces physical damage taken by 2.</string>
+		<key>flavorText</key>
+		<string>Armor of a nameless knight, perhaps an elite knight of Astora, based on the fire-warding heraldic symbol on its blue surcoat.
+Although he was loath to give up on his Undead mission, he perished at the Undead Asylum, and went Hollow.</string>
+		<key>imageName</key>
+		<string>eliteknightarmor</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 4</string>
+			<string>DEX 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chester&apos;s Long Coat</string>
+		<key>actionText</key>
+		<string>Consume: Prevent the damage of the next magical attack to hit you. Add [STR] to your next attack and heal for [FAI] health.</string>
+		<key>descriptiveText</key>
+		<string></string>
+		<key>flavorText</key>
+		<string>Black leather long coat worn by Marvellous Chester, a man of mystery lost in the past.</string>
+		<key>imageName</key>
+		<string>chesterslongcoat</string>
+		<key>attributeRequirements</key>
+		<array>
+			<string>STR 4</string>
+			<string>DEX 1</string>
+		</array>
+		<key>itemSlot</key>
+		<string>chest</string>
+	</dict>
 </array>
 </plist>
