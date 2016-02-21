@@ -9,5 +9,6 @@
 import Foundation
 
 struct Inventory {
+    var gold: Int = 0
     var items = [Item]()
 }
