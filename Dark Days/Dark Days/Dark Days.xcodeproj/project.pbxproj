@@ -57,6 +57,12 @@
 		F21ECE381C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
 		F21ECE391C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
 		F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
+		F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
+		F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
+		F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
+		F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
+		F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
+		F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +124,8 @@
 		F21ECE2F1C7A6C7F008041E9 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		F21ECE331C7A6CD0008041E9 /* Items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Items.json; path = "World Data/Items.json"; sourceTree = "<group>"; };
 		F21ECE371C7A7254008041E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F21ECE3C1C7A75F7008041E9 /* Floors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Floors.json; path = "World Data/Floors.json"; sourceTree = "<group>"; };
+		F21ECE401C7A7B94008041E9 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
-				F21ECDEF1C7A5341008041E9 /* Lore */,
+				F21ECDEF1C7A5341008041E9 /* World */,
 				F21ECE2A1C7A6AEC008041E9 /* Skills */,
 				F21ECE291C7A6AE8008041E9 /* Items */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
@@ -215,12 +223,13 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		F21ECDEF1C7A5341008041E9 /* Lore */ = {
+		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F21ECE3B1C7A75E9008041E9 /* Floors */,
 				F21ECDF01C7A537D008041E9 /* Gods */,
 			);
-			name = Lore;
+			name = World;
 			sourceTree = "<group>";
 		};
 		F21ECDF01C7A537D008041E9 /* Gods */ = {
@@ -275,6 +284,15 @@
 				F21ECE2F1C7A6C7F008041E9 /* Skill.swift */,
 			);
 			name = Skills;
+			sourceTree = "<group>";
+		};
+		F21ECE3B1C7A75E9008041E9 /* Floors */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE3C1C7A75F7008041E9 /* Floors.json */,
+				F21ECE401C7A7B94008041E9 /* Floor.swift */,
+			);
+			name = Floors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +409,7 @@
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
+				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
@@ -413,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
@@ -430,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
@@ -445,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
@@ -459,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
