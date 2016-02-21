@@ -12,11 +12,7 @@
 		F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDBF1C7A516B008041E9 /* Main.storyboard */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
-		F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */; };
 		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
-		F21ECDEB1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
-		F21ECDEC1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
-		F21ECDED1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
 		F21ECDF21C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
 		F21ECDF31C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
 		F21ECDF41C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
@@ -26,6 +22,17 @@
 		F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
 		F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
 		F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
+		F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */; };
+		F21ECE001C7A5E25008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
+		F21ECE011C7A5E25008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
+		F21ECE021C7A5E25008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
+		F21ECE041C7A5E58008041E9 /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
+		F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
+		F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
+		F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
+		F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
+		F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F21ECE051C7A5E58008041E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F21ECE041C7A5E58008041E9 /* Decodable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,15 +75,17 @@
 		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21ECDC71C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21ECDCC1C7A516B008041E9 /* Dark DaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysTests.swift; sourceTree = "<group>"; };
 		F21ECDD21C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysUITests.swift; sourceTree = "<group>"; };
 		F21ECDDD1C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F21ECDEA1C7A5319008041E9 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
 		F21ECDF11C7A5448008041E9 /* Gods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gods.json; sourceTree = "<group>"; };
 		F21ECDF51C7A5777008041E9 /* God.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = God.swift; sourceTree = "<group>"; };
 		F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
+		F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProviderTests.swift; sourceTree = "<group>"; };
+		F21ECDFF1C7A5E25008041E9 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
+		F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONArray.json; sourceTree = "<group>"; };
+		F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONDictionary.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21ECDEB1C7A5319008041E9 /* Decodable.framework in Frameworks */,
+				F21ECE001C7A5E25008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21ECDEC1C7A5319008041E9 /* Decodable.framework in Frameworks */,
+				F21ECE011C7A5E25008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21ECDED1C7A5319008041E9 /* Decodable.framework in Frameworks */,
+				F21ECE021C7A5E25008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,9 +139,9 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
-				F21ECDEF1C7A5341008041E9 /* Lore */,
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
+				F21ECDEF1C7A5341008041E9 /* Lore */,
+				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
 				F21ECDBF1C7A516B008041E9 /* Main.storyboard */,
@@ -132,8 +155,10 @@
 		F21ECDCF1C7A516B008041E9 /* Dark DaysTests */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */,
 				F21ECDD21C7A516B008041E9 /* Info.plist */,
+				F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */,
+				F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */,
+				F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */,
 			);
 			path = "Dark DaysTests";
 			sourceTree = "<group>";
@@ -150,7 +175,7 @@
 		F21ECDEE1C7A532C008041E9 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDEA1C7A5319008041E9 /* Decodable.framework */,
+				F21ECDFF1C7A5E25008041E9 /* Decodable.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -182,6 +207,7 @@
 				F21ECDB41C7A516B008041E9 /* Sources */,
 				F21ECDB51C7A516B008041E9 /* Frameworks */,
 				F21ECDB61C7A516B008041E9 /* Resources */,
+				F21ECE051C7A5E58008041E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,9 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
 				F21ECDF21C7A5448008041E9 /* Gods.json in Resources */,
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
+				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +315,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
+				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDF31C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
+				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDF41C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
-				F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */,
+				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

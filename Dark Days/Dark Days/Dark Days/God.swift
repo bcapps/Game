@@ -18,7 +18,7 @@ struct God : Decodable {
         return try God(
             name: json => "name",
             background: json => "background",
-            responsibilties: json => "responsibilties"
+            responsibilties: json => "responsibilities"
         )
     }
 }
