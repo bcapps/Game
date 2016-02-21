@@ -45,6 +45,12 @@
 		F21ECE241C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
 		F21ECE251C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
 		F21ECE261C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
+		F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE2B1C7A6B05008041E9 /* Skills.json */; };
+		F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE2B1C7A6B05008041E9 /* Skills.json */; };
+		F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE2B1C7A6B05008041E9 /* Skills.json */; };
+		F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE2F1C7A6C7F008041E9 /* Skill.swift */; };
+		F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE2F1C7A6C7F008041E9 /* Skill.swift */; };
+		F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE2F1C7A6C7F008041E9 /* Skill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +108,8 @@
 		F21ECE1B1C7A662E008041E9 /* Gods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gods.json; path = "World Data/Gods.json"; sourceTree = "<group>"; };
 		F21ECE1F1C7A6634008041E9 /* Races.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Races.json; path = "World Data/Races.json"; sourceTree = "<group>"; };
 		F21ECE201C7A6634008041E9 /* Stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Stats.json; path = "World Data/Stats.json"; sourceTree = "<group>"; };
+		F21ECE2B1C7A6B05008041E9 /* Skills.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Skills.json; path = "World Data/Skills.json"; sourceTree = "<group>"; };
+		F21ECE2F1C7A6C7F008041E9 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,8 @@
 			children = (
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* Lore */,
+				F21ECE2A1C7A6AEC008041E9 /* Skills */,
+				F21ECE291C7A6AE8008041E9 /* Items */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
@@ -217,12 +227,44 @@
 		F21ECE0E1C7A5F7E008041E9 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE1F1C7A6634008041E9 /* Races.json */,
-				F21ECE201C7A6634008041E9 /* Stats.json */,
-				F21ECE0F1C7A5F8A008041E9 /* Stat.swift */,
-				F21ECE171C7A65F1008041E9 /* Race.swift */,
+				F21ECE281C7A6AB8008041E9 /* Stats */,
+				F21ECE271C7A6AB1008041E9 /* Race */,
 			);
 			name = Character;
+			sourceTree = "<group>";
+		};
+		F21ECE271C7A6AB1008041E9 /* Race */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE1F1C7A6634008041E9 /* Races.json */,
+				F21ECE171C7A65F1008041E9 /* Race.swift */,
+			);
+			name = Race;
+			sourceTree = "<group>";
+		};
+		F21ECE281C7A6AB8008041E9 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE201C7A6634008041E9 /* Stats.json */,
+				F21ECE0F1C7A5F8A008041E9 /* Stat.swift */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		F21ECE291C7A6AE8008041E9 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		F21ECE2A1C7A6AEC008041E9 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE2B1C7A6B05008041E9 /* Skills.json */,
+				F21ECE2F1C7A6C7F008041E9 /* Skill.swift */,
+			);
+			name = Skills;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +378,7 @@
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
+				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
@@ -348,6 +391,7 @@
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
+				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 			);
@@ -360,6 +404,7 @@
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
+				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 			);
@@ -372,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
@@ -388,6 +434,7 @@
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
+				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
 			);
@@ -400,6 +447,7 @@
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
+				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
 			);
