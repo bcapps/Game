@@ -9,15 +9,6 @@
 import Foundation
 import Decodable
 
-//LCKItemSlotNone,
-//LCKItemSlotHelmet,
-//LCKItemSlotChest,
-//LCKItemSlotBoots,
-//LCKItemSlotAccessory,
-//LCKItemSlotOneHand,
-//LCKItemSlotTwoHand,
-//LCKItemSlotSpell
-
 enum ItemSlot: String {
     case None = "None"
     case Helmet = "Helmet"
