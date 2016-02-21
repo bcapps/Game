@@ -13,7 +13,7 @@ NSString * const LCKDMDisplayName = @"DM";
 @implementation LCKDMManager
 
 + (BOOL)isDMMode {
-    return YES;
+    return NO;
 }
 
 @end

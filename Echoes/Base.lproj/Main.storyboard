@@ -281,7 +281,7 @@
                                     <constraint firstAttribute="height" constant="50" id="gNo-Wf-EYD"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="qk4-Gb-8Lh" kind="embed" identifier="StatsViewControllerEmbed" id="6df-TP-COa"/>
+                                    <segue destination="qk4-Gb-8Lh" kind="embed" identifier="StatsEmbed" id="6df-TP-COa"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -347,8 +347,8 @@
                                 <exclude reference="zN9-Iu-kUw"/>
                                 <exclude reference="LIK-Nm-bsC"/>
                                 <exclude reference="qZx-83-lAj"/>
-                                <exclude reference="r3c-1r-7bE"/>
                                 <exclude reference="67d-qY-hUO"/>
+                                <exclude reference="r3c-1r-7bE"/>
                             </mask>
                         </variation>
                     </view>
@@ -417,7 +417,7 @@
         <!--Stats Collection View Controller-->
         <scene sceneID="SQa-V9-6bm">
             <objects>
-                <collectionViewController storyboardIdentifier="StatsCollectionViewEmbed" id="qk4-Gb-8Lh" customClass="LCKStatsCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="StatsEmbed" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qk4-Gb-8Lh" customClass="LCKStatsCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vnW-ar-OQ5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -887,6 +887,10 @@
         <scene sceneID="5XX-kW-Mwa">
             <objects>
                 <viewController id="dQW-zN-nZ3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IuC-ea-vkJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="h6s-wH-ev0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mey-GT-er6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

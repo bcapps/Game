@@ -167,7 +167,7 @@ const CGFloat LCKCharacterStatInfoViewBottomMargin = 10.0;
         
         inventoryViewController.character = self.character;
     }
-    else if ([segue.identifier isEqualToString:@"StatsViewControllerEmbed"]) {
+    else if ([segue.identifier isEqualToString:@"StatsEmbed"]) {
         self.statsCollectionViewController = segue.destinationViewController;
         
         self.statsCollectionViewController.displayedStats = self.character.characterStats;
