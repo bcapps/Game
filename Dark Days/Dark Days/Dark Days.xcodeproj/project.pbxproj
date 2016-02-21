@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
+		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
+		F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDBF1C7A516B008041E9 /* Main.storyboard */; };
+		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
+		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
+		F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */; };
+		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F21ECDCD1C7A516B008041E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F21ECDB01C7A516B008041E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F21ECDB71C7A516B008041E9;
+			remoteInfo = "Dark Days";
+		};
+		F21ECDD81C7A516B008041E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F21ECDB01C7A516B008041E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F21ECDB71C7A516B008041E9;
+			remoteInfo = "Dark Days";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F21ECDBD1C7A516B008041E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F21ECDC01C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F21ECDC21C7A516B008041E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F21ECDC71C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21ECDCC1C7A516B008041E9 /* Dark DaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysTests.swift; sourceTree = "<group>"; };
+		F21ECDD21C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysUITests.swift; sourceTree = "<group>"; };
+		F21ECDDD1C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F21ECDB51C7A516B008041E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDC91C7A516B008041E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDD41C7A516B008041E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F21ECDAF1C7A516B008041E9 = {
+			isa = PBXGroup;
+			children = (
+				F21ECDBA1C7A516B008041E9 /* Dark Days */,
+				F21ECDCF1C7A516B008041E9 /* Dark DaysTests */,
+				F21ECDDA1C7A516B008041E9 /* Dark DaysUITests */,
+				F21ECDB91C7A516B008041E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F21ECDB91C7A516B008041E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDB81C7A516B008041E9 /* Dark Days.app */,
+				F21ECDCC1C7A516B008041E9 /* Dark DaysTests.xctest */,
+				F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
+				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
+				F21ECDBF1C7A516B008041E9 /* Main.storyboard */,
+				F21ECDC21C7A516B008041E9 /* Assets.xcassets */,
+				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
+				F21ECDC71C7A516B008041E9 /* Info.plist */,
+			);
+			path = "Dark Days";
+			sourceTree = "<group>";
+		};
+		F21ECDCF1C7A516B008041E9 /* Dark DaysTests */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */,
+				F21ECDD21C7A516B008041E9 /* Info.plist */,
+			);
+			path = "Dark DaysTests";
+			sourceTree = "<group>";
+		};
+		F21ECDDA1C7A516B008041E9 /* Dark DaysUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */,
+				F21ECDDD1C7A516B008041E9 /* Info.plist */,
+			);
+			path = "Dark DaysUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F21ECDB71C7A516B008041E9 /* Dark Days */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F21ECDE01C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark Days" */;
+			buildPhases = (
+				F21ECDB41C7A516B008041E9 /* Sources */,
+				F21ECDB51C7A516B008041E9 /* Frameworks */,
+				F21ECDB61C7A516B008041E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dark Days";
+			productName = "Dark Days";
+			productReference = F21ECDB81C7A516B008041E9 /* Dark Days.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F21ECDCB1C7A516B008041E9 /* Dark DaysTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F21ECDE31C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark DaysTests" */;
+			buildPhases = (
+				F21ECDC81C7A516B008041E9 /* Sources */,
+				F21ECDC91C7A516B008041E9 /* Frameworks */,
+				F21ECDCA1C7A516B008041E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F21ECDCE1C7A516B008041E9 /* PBXTargetDependency */,
+			);
+			name = "Dark DaysTests";
+			productName = "Dark DaysTests";
+			productReference = F21ECDCC1C7A516B008041E9 /* Dark DaysTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F21ECDD61C7A516B008041E9 /* Dark DaysUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F21ECDE61C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark DaysUITests" */;
+			buildPhases = (
+				F21ECDD31C7A516B008041E9 /* Sources */,
+				F21ECDD41C7A516B008041E9 /* Frameworks */,
+				F21ECDD51C7A516B008041E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F21ECDD91C7A516B008041E9 /* PBXTargetDependency */,
+			);
+			name = "Dark DaysUITests";
+			productName = "Dark DaysUITests";
+			productReference = F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F21ECDB01C7A516B008041E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Lickability;
+				TargetAttributes = {
+					F21ECDB71C7A516B008041E9 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					F21ECDCB1C7A516B008041E9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F21ECDB71C7A516B008041E9;
+					};
+					F21ECDD61C7A516B008041E9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F21ECDB71C7A516B008041E9;
+					};
+				};
+			};
+			buildConfigurationList = F21ECDB31C7A516B008041E9 /* Build configuration list for PBXProject "Dark Days" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F21ECDAF1C7A516B008041E9;
+			productRefGroup = F21ECDB91C7A516B008041E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F21ECDB71C7A516B008041E9 /* Dark Days */,
+				F21ECDCB1C7A516B008041E9 /* Dark DaysTests */,
+				F21ECDD61C7A516B008041E9 /* Dark DaysUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F21ECDB61C7A516B008041E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
+				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDCA1C7A516B008041E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDD51C7A516B008041E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F21ECDB41C7A516B008041E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
+				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDC81C7A516B008041E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21ECDD31C7A516B008041E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F21ECDCE1C7A516B008041E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F21ECDB71C7A516B008041E9 /* Dark Days */;
+			targetProxy = F21ECDCD1C7A516B008041E9 /* PBXContainerItemProxy */;
+		};
+		F21ECDD91C7A516B008041E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F21ECDB71C7A516B008041E9 /* Dark Days */;
+			targetProxy = F21ECDD81C7A516B008041E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F21ECDBF1C7A516B008041E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F21ECDC01C7A516B008041E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F21ECDC51C7A516B008041E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F21ECDDE1C7A516B008041E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F21ECDDF1C7A516B008041E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F21ECDE11C7A516B008041E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Dark Days/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F21ECDE21C7A516B008041E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Dark Days/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F21ECDE41C7A516B008041E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
+			};
+			name = Debug;
+		};
+		F21ECDE51C7A516B008041E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
+			};
+			name = Release;
+		};
+		F21ECDE71C7A516B008041E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Dark Days";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F21ECDE81C7A516B008041E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Dark Days";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F21ECDB31C7A516B008041E9 /* Build configuration list for PBXProject "Dark Days" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21ECDDE1C7A516B008041E9 /* Debug */,
+				F21ECDDF1C7A516B008041E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F21ECDE01C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark Days" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21ECDE11C7A516B008041E9 /* Debug */,
+				F21ECDE21C7A516B008041E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F21ECDE31C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark DaysTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21ECDE41C7A516B008041E9 /* Debug */,
+				F21ECDE51C7A516B008041E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F21ECDE61C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark DaysUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21ECDE71C7A516B008041E9 /* Debug */,
+				F21ECDE81C7A516B008041E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F21ECDB01C7A516B008041E9 /* Project object */;
+}
