@@ -14,6 +14,18 @@
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDD01C7A516B008041E9 /* Dark_DaysTests.swift */; };
 		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
+		F21ECDEB1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
+		F21ECDEC1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
+		F21ECDED1C7A5319008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDEA1C7A5319008041E9 /* Decodable.framework */; };
+		F21ECDF21C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
+		F21ECDF31C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
+		F21ECDF41C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
+		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
+		F21ECDF71C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
+		F21ECDF81C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
+		F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
+		F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
+		F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,10 @@
 		F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysUITests.swift; sourceTree = "<group>"; };
 		F21ECDDD1C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21ECDEA1C7A5319008041E9 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
+		F21ECDF11C7A5448008041E9 /* Gods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gods.json; sourceTree = "<group>"; };
+		F21ECDF51C7A5777008041E9 /* God.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = God.swift; sourceTree = "<group>"; };
+		F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDEB1C7A5319008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDEC1C7A5319008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDED1C7A5319008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +116,9 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
+				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
+				F21ECDEF1C7A5341008041E9 /* Lore */,
+				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
 				F21ECDBF1C7A516B008041E9 /* Main.storyboard */,
@@ -123,6 +145,31 @@
 				F21ECDDD1C7A516B008041E9 /* Info.plist */,
 			);
 			path = "Dark DaysUITests";
+			sourceTree = "<group>";
+		};
+		F21ECDEE1C7A532C008041E9 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDEA1C7A5319008041E9 /* Decodable.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		F21ECDEF1C7A5341008041E9 /* Lore */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDF01C7A537D008041E9 /* Gods */,
+			);
+			name = Lore;
+			sourceTree = "<group>";
+		};
+		F21ECDF01C7A537D008041E9 /* Gods */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDF11C7A5448008041E9 /* Gods.json */,
+				F21ECDF51C7A5777008041E9 /* God.swift */,
+			);
+			name = Gods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +278,7 @@
 			files = (
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
+				F21ECDF21C7A5448008041E9 /* Gods.json in Resources */,
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDF31C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDF41C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
+				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F21ECDD11C7A516B008041E9 /* Dark_DaysTests.swift in Sources */,
+				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
+				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +455,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
@@ -410,6 +471,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
@@ -421,6 +487,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
@@ -433,6 +504,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
@@ -444,6 +520,11 @@
 		F21ECDE71C7A516B008041E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";
@@ -456,6 +537,11 @@
 		F21ECDE81C7A516B008041E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";

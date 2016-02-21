@@ -1,0 +1,41 @@
+[{
+ "name": "Vitael, God of Life",
+ "background": "Creates all living things. Secretly usurped by Odro the god of chaos after the war of the gods.",
+ "responsibilities": ["Nature", "Life", "Portals"]
+ }, {
+ "name": "Morter, God of Death",
+ "background": "Ferries those who die to the afterlife.",
+ "responsibilities": ["Death"]
+ }, {
+ "name": "Shiro, God of Hope",
+ "background": "Offers rebirth to those who die. Replaced by Verrat, the God of Betrayal.",
+ "responsibilities": ["Rebirth"]
+ }, {
+ "name": "Dolo, God of Agony",
+ "background": "Brings pain and suffering to the living.",
+ "responsibilities": ["Pain", "Suffering", "Torture"]
+ }, {
+ "name": "Demitas, God of Greed",
+ "background": "Tempts the living with material possessions.",
+ "responsibilities": ["Treasure", "Items"]
+ }, {
+ "name": "Kazu, God of Deceit",
+ "background": "Tricks mortals through lies and deception.",
+ "responsibilities": ["Traps", "Tricks", "Lies"]
+ }, {
+ "name": "Azoth, God of Demons",
+ "background": "Unleashes wicked horrors upon the world.",
+ "responsibilities": ["Demons", "War"]
+ }, {
+ "name": "Torel, God of Mercy",
+ "background": "Shows compassion and provides escape for those suffering.",
+ "responsibilities": ["Poisons", "Curses", "Suicide"]
+ }, {
+ "name": "Odro, God of Chaos",
+ "background": "Spins the wishes of gods and mortals to his own design.",
+ "responsibilities": ["Chaos", "Disorder", "Confusion"]
+ }, {
+ "name": "Verrat, God of Betrayal",
+ "background": "Waits for the opportune moment to strike.",
+ "responsibilities": ["Treachery"]
+ }]
