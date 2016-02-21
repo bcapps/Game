@@ -63,6 +63,15 @@
 		F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
 		F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
 		F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
+		F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
+		F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
+		F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
+		F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */; };
+		F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */; };
+		F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */; };
+		F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
+		F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
+		F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +135,9 @@
 		F21ECE371C7A7254008041E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F21ECE3C1C7A75F7008041E9 /* Floors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Floors.json; path = "World Data/Floors.json"; sourceTree = "<group>"; };
 		F21ECE401C7A7B94008041E9 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		F21ECE451C7A7C90008041E9 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,7 @@
 				F21ECDC21C7A516B008041E9 /* Assets.xcassets */,
 				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
 				F21ECDC71C7A516B008041E9 /* Info.plist */,
+				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -244,6 +257,8 @@
 		F21ECE0E1C7A5F7E008041E9 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				F21ECE491C7A7C95008041E9 /* Inventory */,
+				F21ECE441C7A7C7C008041E9 /* Hero */,
 				F21ECE281C7A6AB8008041E9 /* Stats */,
 				F21ECE271C7A6AB1008041E9 /* Race */,
 			);
@@ -293,6 +308,22 @@
 				F21ECE401C7A7B94008041E9 /* Floor.swift */,
 			);
 			name = Floors;
+			sourceTree = "<group>";
+		};
+		F21ECE441C7A7C7C008041E9 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE451C7A7C90008041E9 /* Hero.swift */,
+			);
+			name = Hero;
+			sourceTree = "<group>";
+		};
+		F21ECE491C7A7C95008041E9 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */,
+			);
+			name = Inventory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,9 +487,12 @@
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
+				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
+				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +502,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
+				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
+				F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */,
+				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
@@ -483,7 +520,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
+				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
+				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,
+				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,

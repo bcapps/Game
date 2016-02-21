@@ -38,7 +38,7 @@ enum ItemSlot: String {
     }
 }
 
-struct Item: Decodable {
+struct Item: Decodable, Nameable {
     let name: String
     let damage: String
     let effects: String

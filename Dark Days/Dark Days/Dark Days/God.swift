@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct God : Decodable {
+struct God : Decodable, Nameable {
     let name : String
     let background: String
     let responsibilties: [String]

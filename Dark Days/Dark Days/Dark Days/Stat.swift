@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Stat: Decodable {
+struct Stat: Decodable, Nameable {
     let name: String
     let shortName: String
     let explanation: String

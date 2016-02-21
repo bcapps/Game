@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Floor: Decodable {
+struct Floor: Decodable, Nameable {
     let name: String
     let background: String
     let towns: [String]
