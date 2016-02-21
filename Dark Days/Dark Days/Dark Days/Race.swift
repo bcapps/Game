@@ -1,5 +1,5 @@
 //
-//  Stats.swift
+//  Race.swift
 //  Dark Days
 //
 //  Created by Andrew Harrison on 2/21/16.
@@ -9,18 +9,15 @@
 import Foundation
 import Decodable
 
-struct Stats: Decodable {
+struct Race: Decodable {
     let name: String
-    let shortName: String
     let explanation: String
     let benefits: [String]
     
-    static func decode(json: AnyObject) throws -> Stats {
-        return try Stats(
+    static func decode(json: AnyObject) throws -> Race {
+        return try Race(
             name: json => "name",
-            shortName: json => "shortName",
             explanation: json => "explanation",
-            benefits: json => "benefits"
-        )
+            benefits: json => "benefits")
     }
 }

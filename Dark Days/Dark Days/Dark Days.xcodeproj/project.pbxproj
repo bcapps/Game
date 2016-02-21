@@ -13,9 +13,6 @@
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
-		F21ECDF21C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
-		F21ECDF31C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
-		F21ECDF41C7A5448008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDF11C7A5448008041E9 /* Gods.json */; };
 		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
 		F21ECDF71C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
 		F21ECDF81C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
@@ -33,12 +30,21 @@
 		F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
 		F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
 		F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */; };
-		F21ECE101C7A5F8A008041E9 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stats.swift */; };
-		F21ECE111C7A5F8A008041E9 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stats.swift */; };
-		F21ECE121C7A5F8A008041E9 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stats.swift */; };
-		F21ECE141C7A6017008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE131C7A6017008041E9 /* Stats.json */; };
-		F21ECE151C7A6017008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE131C7A6017008041E9 /* Stats.json */; };
-		F21ECE161C7A6017008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE131C7A6017008041E9 /* Stats.json */; };
+		F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stat.swift */; };
+		F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stat.swift */; };
+		F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE0F1C7A5F8A008041E9 /* Stat.swift */; };
+		F21ECE181C7A65F1008041E9 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE171C7A65F1008041E9 /* Race.swift */; };
+		F21ECE191C7A65F1008041E9 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE171C7A65F1008041E9 /* Race.swift */; };
+		F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE171C7A65F1008041E9 /* Race.swift */; };
+		F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1B1C7A662E008041E9 /* Gods.json */; };
+		F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1B1C7A662E008041E9 /* Gods.json */; };
+		F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1B1C7A662E008041E9 /* Gods.json */; };
+		F21ECE211C7A6634008041E9 /* Races.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1F1C7A6634008041E9 /* Races.json */; };
+		F21ECE221C7A6634008041E9 /* Races.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1F1C7A6634008041E9 /* Races.json */; };
+		F21ECE231C7A6634008041E9 /* Races.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE1F1C7A6634008041E9 /* Races.json */; };
+		F21ECE241C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
+		F21ECE251C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
+		F21ECE261C7A6634008041E9 /* Stats.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE201C7A6634008041E9 /* Stats.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,15 +91,17 @@
 		F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysUITests.swift; sourceTree = "<group>"; };
 		F21ECDDD1C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F21ECDF11C7A5448008041E9 /* Gods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gods.json; sourceTree = "<group>"; };
 		F21ECDF51C7A5777008041E9 /* God.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = God.swift; sourceTree = "<group>"; };
 		F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
 		F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProviderTests.swift; sourceTree = "<group>"; };
 		F21ECDFF1C7A5E25008041E9 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
 		F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONArray.json; sourceTree = "<group>"; };
 		F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONDictionary.json; sourceTree = "<group>"; };
-		F21ECE0F1C7A5F8A008041E9 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		F21ECE131C7A6017008041E9 /* Stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stats.json; sourceTree = "<group>"; };
+		F21ECE0F1C7A5F8A008041E9 /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		F21ECE171C7A65F1008041E9 /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		F21ECE1B1C7A662E008041E9 /* Gods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Gods.json; path = "World Data/Gods.json"; sourceTree = "<group>"; };
+		F21ECE1F1C7A6634008041E9 /* Races.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Races.json; path = "World Data/Races.json"; sourceTree = "<group>"; };
+		F21ECE201C7A6634008041E9 /* Stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Stats.json; path = "World Data/Stats.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +208,7 @@
 		F21ECDF01C7A537D008041E9 /* Gods */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDF11C7A5448008041E9 /* Gods.json */,
+				F21ECE1B1C7A662E008041E9 /* Gods.json */,
 				F21ECDF51C7A5777008041E9 /* God.swift */,
 			);
 			name = Gods;
@@ -209,8 +217,10 @@
 		F21ECE0E1C7A5F7E008041E9 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE131C7A6017008041E9 /* Stats.json */,
-				F21ECE0F1C7A5F8A008041E9 /* Stats.swift */,
+				F21ECE1F1C7A6634008041E9 /* Races.json */,
+				F21ECE201C7A6634008041E9 /* Stats.json */,
+				F21ECE0F1C7A5F8A008041E9 /* Stat.swift */,
+				F21ECE171C7A65F1008041E9 /* Race.swift */,
 			);
 			name = Character;
 			sourceTree = "<group>";
@@ -321,11 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
+				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
-				F21ECDF21C7A5448008041E9 /* Gods.json in Resources */,
-				F21ECE141C7A6017008041E9 /* Stats.json in Resources */,
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
+				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,10 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
-				F21ECE151C7A6017008041E9 /* Stats.json in Resources */,
+				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
+				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
-				F21ECDF31C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,10 +357,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
-				F21ECE161C7A6017008041E9 /* Stats.json in Resources */,
+				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
+				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
-				F21ECDF41C7A5448008041E9 /* Gods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,9 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
-				F21ECE101C7A5F8A008041E9 /* Stats.swift in Sources */,
+				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
+				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,9 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
-				F21ECE111C7A5F8A008041E9 /* Stats.swift in Sources */,
+				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +398,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
-				F21ECE121C7A5F8A008041E9 /* Stats.swift in Sources */,
+				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
