@@ -21,4 +21,34 @@ class ObjectProviderTests: XCTestCase {
         
         XCTAssertEqual(gods.count, 10)
     }
+    
+    func testObjectProviderProvidesGods() {
+        let gods: [God] = ObjectProvider.objectsForJSON("Gods")
+        
+        XCTAssertEqual(gods.count, 10)
+    }
+    
+    func testObjectProviderProvidesSkills() {
+        let skills: [Skill] = ObjectProvider.objectsForJSON("Skills")
+        
+        XCTAssertEqual(skills.count, 2)
+    }
+    
+    func testObjectProviderProvidesItems() {
+        let items: [Item] = ObjectProvider.objectsForJSON("Items")
+        
+        XCTAssertEqual(items.count, 2)
+    }
+    
+    func testObjectProviderProvidesStats() {
+        let stats: [Stat] = ObjectProvider.objectsForJSON("Stats")
+        
+        XCTAssertEqual(stats.count, 5)
+    }
+    
+    func testObjectProviderProvidesRaces() {
+        let races: [Race] = ObjectProvider.objectsForJSON("Races")
+        
+        XCTAssertEqual(races.count, 3)
+    }
 }
