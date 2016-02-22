@@ -37,12 +37,36 @@ final class ObjectProvider {
         return nil
     }
     
-    static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
+    static func statForName(name: String) -> Stat? {
+        return objectForJSONForName("Stats", objectName: name)
+    }
+    
+    static func raceForName(name: String) -> Race? {
+        return objectForJSONForName("Races", objectName: name)
+    }
+    
+    static func skillForName(name: String) -> Skill? {
+        return objectForJSONForName("Skills", objectName: name)
+    }
+    
+    static func itemForName(name: String) -> Item? {
+        return objectForJSONForName("Items", objectName: name)
+    }
+    
+    static func floorForName(name: String) -> Floor? {
+        return objectForJSONForName("Floors", objectName: name)
+    }
+    
+    static func godForName(name: String) -> God? {
+        return objectForJSONForName("Gods", objectName: name)
+    }
+    
+    private static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         
         return objects.filter({$0.name == objectName}).first
     }
-        
+    
     private static func decodedObjectForJSONDictionary<T: Decodable>(JSONDictionary: [String: AnyObject]) -> T? {
         do {
             return try T.decode(JSONDictionary)

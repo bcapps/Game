@@ -32,9 +32,6 @@ final class StatCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
-        case ShortName
-        case Explanation
-        case Benefits
     }
     
     var value: Stat?
@@ -46,26 +43,20 @@ final class StatCoder: NSObject, Coder {
     
     init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let rawShortName = aDecoder.decodeObjectForKey(Keys.ShortName.rawValue) as? String
-        let rawExplanation = aDecoder.decodeObjectForKey(Keys.Explanation.rawValue) as? String
-        let rawBenefits = aDecoder.decodeObjectForKey(Keys.Benefits.rawValue) as? [String]
         
-        guard let name = rawName, shortName = rawShortName, explanation = rawExplanation, benefits = rawBenefits else {
+        guard let name = rawName else {
             value = nil
             
             super.init()
             return nil
         }
         
-        value = Stat(name: name, shortName: shortName, explanation: explanation, benefits: benefits)
+        value = ObjectProvider.statForName(name)
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeObject(value?.shortName, forKey: Keys.ShortName.rawValue)
-        aCoder.encodeObject(value?.explanation, forKey: Keys.Explanation.rawValue)
-        aCoder.encodeObject(value?.benefits, forKey: Keys.Benefits.rawValue)
     }
 }

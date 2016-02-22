@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Skill: Decodable, Nameable {
+struct Skill: Decodable, Nameable, Codeable {
     typealias CoderType = SkillCoder
     
     let name: String

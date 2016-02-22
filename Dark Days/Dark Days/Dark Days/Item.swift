@@ -61,10 +61,6 @@ final class ItemCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
-        case Damage
-        case Effects
-        case Flavor
-        case ItemSlot
     }
     
     var value: Item?
@@ -76,28 +72,20 @@ final class ItemCoder: NSObject, Coder {
     
     required init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let rawDamage = aDecoder.decodeObjectForKey(Keys.Damage.rawValue) as? String
-        let rawEffects = aDecoder.decodeObjectForKey(Keys.Effects.rawValue) as? String
-        let rawFlavor = aDecoder.decodeObjectForKey(Keys.Flavor.rawValue) as? String
-        let rawItemSlot = aDecoder.decodeObjectForKey(Keys.ItemSlot.rawValue) as? String ?? ""
         
-        guard let name = rawName, damage = rawDamage, effects = rawEffects, flavor = rawFlavor, itemSlot = ItemSlot(rawValue: rawItemSlot) else {
+        guard let name = rawName else {
             value = nil
             super.init()
             
             return nil
         }
         
-        value = Item(name: name, damage: damage, effects: effects, flavor: flavor, itemSlot: itemSlot)
+        value = ObjectProvider.itemForName(name)
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeObject(value?.damage, forKey: Keys.Damage.rawValue)
-        aCoder.encodeObject(value?.effects, forKey: Keys.Effects.rawValue)
-        aCoder.encodeObject(value?.flavor, forKey: Keys.Flavor.rawValue)
-        aCoder.encodeObject(value?.itemSlot.rawValue, forKey: Keys.ItemSlot.rawValue)        
-    }    
+    }
 }
