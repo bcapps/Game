@@ -20,16 +20,16 @@ protocol Coder: NSCoding {
     init(value: ObjectType)
 }
 
-extension Array where Element: Codeable, Element.CoderType.ObjectType == Element, Element.CoderType: Coder {
-    var coders: [Element.CoderType] {
+extension CollectionType where Generator.Element: Codeable, Generator.Element.CoderType.ObjectType == Generator.Element, Generator.Element.CoderType: Coder {
+    var coders: [Generator.Element.CoderType] {
         return map { element in
-            return Element.CoderType(value: element)
+            return Generator.Element.CoderType(value: element)
         }
     }
 }
 
-extension Array where Element: Coder, Element.ObjectType: Codeable, Element.ObjectType.CoderType == Element {
-    var objects: [Element.ObjectType] {
+extension CollectionType where Generator.Element: Coder, Generator.Element.ObjectType: Codeable, Generator.Element.ObjectType.CoderType == Generator.Element {
+    var objects: [Generator.Element.ObjectType] {
         let objectsAndNils = map { element in
             return element.value
         }
