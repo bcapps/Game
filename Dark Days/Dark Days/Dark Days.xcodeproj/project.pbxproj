@@ -659,6 +659,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dark",
 					Days,
+					"$(PROJECT_DIR)/Dark",
+					Days/NYTPersistence.framework/Frameworks,
 				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,6 +677,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dark",
 					Days,
+					"$(PROJECT_DIR)/Dark",
+					Days/NYTPersistence.framework/Frameworks,
 				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
