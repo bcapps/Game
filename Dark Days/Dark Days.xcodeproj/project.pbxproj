@@ -81,6 +81,7 @@
 		F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
 		F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
 		F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
+		F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
 		F2350AFA1C7ADA6800D6E18E /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		F2350AFC1C7ADAFA00D6E18E /* Monsters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Monsters.json; path = "World Data/Monsters.json"; sourceTree = "<group>"; };
+		F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				F21ECE451C7A7C90008041E9 /* Hero.swift */,
+				F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
+				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
