@@ -57,6 +57,8 @@ class HeroCodingTests: XCTestCase {
         
         XCTAssertEqual(sut?.stats.count, 5)
         XCTAssertEqual(sut?.stats[0].name, "Strength")
+        XCTAssertEqual(sut?.stats[0].currentValue, 1)
+        XCTAssertEqual(sut?.stats[4].currentValue, 5)
         
         XCTAssertEqual(sut?.race.name, race?.name)
         
