@@ -13,8 +13,8 @@ struct Inventory {
     var items = [Item]()
 }
 
-final class InventoryCoder: NSObject, Persister {
-    typealias ObjectType = Inventory
+final class InventoryCoder: NSObject, Coder {
+    typealias CodeableType = Inventory
     
     private enum Keys: String {
         case Gold
@@ -46,7 +46,7 @@ final class InventoryCoder: NSObject, Persister {
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.items.persisters, forKey: Keys.Items.rawValue)
+        aCoder.encodeObject(value?.items.coders, forKey: Keys.Items.rawValue)
         aCoder.encodeInteger(value?.gold ?? 0, forKey: Keys.Gold.rawValue)
     }
 }
