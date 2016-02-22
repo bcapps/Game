@@ -13,7 +13,7 @@ struct Inventory {
     var items = [Item]()
 }
 
-final class InventoryCoder: NSObject, Coder {
+final class InventoryCoder: NSObject, Persister {
     typealias ObjectType = Inventory
     
     private enum Keys: String {
@@ -46,7 +46,7 @@ final class InventoryCoder: NSObject, Coder {
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.items.coders, forKey: Keys.Items.rawValue)
+        aCoder.encodeObject(value?.items.persisters, forKey: Keys.Items.rawValue)
         aCoder.encodeInteger(value?.gold ?? 0, forKey: Keys.Gold.rawValue)
     }
 }

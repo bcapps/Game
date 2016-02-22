@@ -73,8 +73,8 @@
 		F21ECE7B1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
 		F21ECE7C1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
 		F21ECE7D1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
-		F2350AE81C7AA21600D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
-		F2350AE91C7AA21600D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2350AEE1C7AACDC00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
+		F2350AEF1C7AACDC00D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,13 +95,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F2350AEA1C7AA21600D6E18E /* Embed Frameworks */ = {
+		F2350AF01C7AACDC00D6E18E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2350AE91C7AA21600D6E18E /* Decodable.framework in Embed Frameworks */,
+				F2350AEF1C7AACDC00D6E18E /* Decodable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350AE81C7AA21600D6E18E /* Decodable.framework in Frameworks */,
+				F2350AEE1C7AACDC00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +341,7 @@
 				F21ECDB41C7A516B008041E9 /* Sources */,
 				F21ECDB51C7A516B008041E9 /* Frameworks */,
 				F21ECDB61C7A516B008041E9 /* Resources */,
-				F2350AEA1C7AA21600D6E18E /* Embed Frameworks */,
+				F2350AF01C7AACDC00D6E18E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -667,10 +667,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dark",
 					Days,
-					"$(PROJECT_DIR)/Dark",
-					Days/NYTPersistence.framework/Frameworks,
-					"$(PROJECT_DIR)/Dark",
-					Days,
 				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -685,10 +681,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Dark",
-					Days,
-					"$(PROJECT_DIR)/Dark",
-					Days/NYTPersistence.framework/Frameworks,
 					"$(PROJECT_DIR)/Dark",
 					Days,
 				);

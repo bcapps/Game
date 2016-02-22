@@ -38,8 +38,8 @@ enum ItemSlot: String {
     }
 }
 
-struct Item: Decodable, Nameable, Codeable {
-    typealias CoderType = ItemCoder
+struct Item: Decodable, Nameable, Persistable {
+    typealias PersisterType = ItemCoder
     
     let name: String
     let damage: String
@@ -56,7 +56,7 @@ struct Item: Decodable, Nameable, Codeable {
     }
 }
 
-final class ItemCoder: NSObject, Coder {
+final class ItemCoder: NSObject, Persister {
     typealias ObjectType = Item
     
     private enum Keys: String {
