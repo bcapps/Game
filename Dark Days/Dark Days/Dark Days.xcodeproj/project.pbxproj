@@ -77,6 +77,10 @@
 		F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
+		F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
+		F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
+		F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
+		F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +151,8 @@
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
+		F2350AFA1C7ADA6800D6E18E /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		F2350AFC1C7ADAFA00D6E18E /* Monsters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Monsters.json; path = "World Data/Monsters.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +208,6 @@
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* World */,
-				F21ECE2A1C7A6AEC008041E9 /* Skills */,
-				F21ECE291C7A6AE8008041E9 /* Items */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
@@ -251,6 +255,9 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F21ECE291C7A6AE8008041E9 /* Items */,
+				F21ECE2A1C7A6AEC008041E9 /* Skills */,
+				F2350AF91C7ADA5600D6E18E /* Monsters */,
 				F21ECE3B1C7A75E9008041E9 /* Floors */,
 				F21ECDF01C7A537D008041E9 /* Gods */,
 			);
@@ -344,6 +351,15 @@
 				F21ECE7A1C7A9D67008041E9 /* Persistence.swift */,
 			);
 			name = Persistence;
+			sourceTree = "<group>";
+		};
+		F2350AF91C7ADA5600D6E18E /* Monsters */ = {
+			isa = PBXGroup;
+			children = (
+				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
+				F2350AFA1C7ADA6800D6E18E /* Monster.swift */,
+			);
+			name = Monsters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +471,7 @@
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
+				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
 				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
@@ -476,6 +493,7 @@
 				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE351C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
+				F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */,
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +526,7 @@
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
+				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
@@ -522,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,

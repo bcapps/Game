@@ -61,6 +61,10 @@ final class ObjectProvider {
         return objectForJSONForName("Gods", objectName: name)
     }
     
+    static func monsterForName(name: String) -> Monster? {
+        return objectForJSONForName("Monsters", objectName: name)
+    }
+    
     private static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         

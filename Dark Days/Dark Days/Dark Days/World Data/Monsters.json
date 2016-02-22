@@ -1,0 +1,9 @@
+[{
+ "name": "Zombie",
+ "explanation": "A shambling creature. Fears the light.",
+ "health": 10
+ }, {
+ "name": "Ninja",
+ "explanation": "A silent rogue that prowls during the night.",
+ "health": 20
+ }]
