@@ -14,7 +14,7 @@ class InventoryPersistenceTests: XCTestCase {
     func testInventoryPersistence() {
         var sut = Inventory()
         
-        let item = Item(name: "Item", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet)
+        let item = Item(name: "Longsword", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet)
         
         sut.items.append(item)
         sut.gold = 5000
@@ -27,6 +27,6 @@ class InventoryPersistenceTests: XCTestCase {
         let firstItem = inventory?.items.first
         
         XCTAssertEqual(inventory?.gold, 5000)
-        XCTAssertEqual(firstItem?.name, "Item")
+        XCTAssertEqual(firstItem?.name, "Longsword")
     }
 }
