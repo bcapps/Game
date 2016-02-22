@@ -40,13 +40,7 @@ final class ObjectProvider {
     static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         
-        for object in objects {
-            if object.name == objectName {
-                return object
-            }
-        }
-        
-        return nil
+        return objects.filter({$0.name == objectName}).first
     }
         
     private static func decodedObjectForJSONDictionary<T: Decodable>(JSONDictionary: [String: AnyObject]) -> T? {
