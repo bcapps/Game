@@ -16,7 +16,6 @@ struct Stat: Decodable, Nameable, Codeable {
     let shortName: String
     let explanation: String
     let benefits: [String]
-    let value: Int = 0
     
     static func decode(json: AnyObject) throws -> Stat {
         return try Stat(
