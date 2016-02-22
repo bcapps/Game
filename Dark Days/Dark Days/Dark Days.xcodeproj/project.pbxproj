@@ -76,6 +76,7 @@
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
 		F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
+		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		F21ECE7A1C7A9D67008041E9 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
+		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */,
 				F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */,
 				F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */,
+				F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */,
 			);
 			path = "Dark DaysTests";
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */,
+				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,

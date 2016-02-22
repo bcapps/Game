@@ -24,9 +24,5 @@ class ItemCodingTests: XCTestCase {
         XCTAssertEqual(unarchivedItem?.effects, "")
         XCTAssertEqual(unarchivedItem?.flavor, "A generic longsword. It looks like it may have seen some use.")
         XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.itemSlotForItemString("onehand"))
-        
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
 }

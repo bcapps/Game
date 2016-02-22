@@ -16,13 +16,15 @@ struct Stat: Decodable, Nameable, Codeable {
     let shortName: String
     let explanation: String
     let benefits: [String]
+    var currentValue: Int = 0
     
     static func decode(json: AnyObject) throws -> Stat {
         return try Stat(
             name: json => "name",
             shortName: json => "shortName",
             explanation: json => "explanation",
-            benefits: json => "benefits"
+            benefits: json => "benefits",
+            currentValue: 0
         )
     }
 }
@@ -32,6 +34,7 @@ final class StatCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
+        case CurrentValue
     }
     
     var value: Stat?
@@ -51,12 +54,16 @@ final class StatCoder: NSObject, Coder {
             return nil
         }
         
-        value = ObjectProvider.statForName(name)
+        var stat = ObjectProvider.statForName(name)
+        stat?.currentValue = aDecoder.decodeIntegerForKey(Keys.CurrentValue.rawValue)
+        
+        value = stat
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+        aCoder.encodeInteger(value?.currentValue ?? 0, forKey: Keys.CurrentValue.rawValue)
     }
 }
