@@ -20,8 +20,6 @@
 		F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
 		F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */; };
 		F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */; };
-		F21ECE011C7A5E25008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
-		F21ECE021C7A5E25008041E9 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 		F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
 		F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
 		F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */; };
@@ -70,11 +68,13 @@
 		F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
 		F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
 		F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
-		F21ECE7B1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
-		F21ECE7C1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
-		F21ECE7D1C7A9D67008041E9 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coder.swift */; };
+		F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
+		F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
+		F21ECE7D1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
 		F2350AEE1C7AACDC00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 		F2350AEF1C7AACDC00D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
+		F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +141,8 @@
 		F21ECE451C7A7C90008041E9 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
-		F21ECE7A1C7A9D67008041E9 /* Coder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
+		F21ECE7A1C7A9D67008041E9 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21ECE011C7A5E25008041E9 /* Decodable.framework in Frameworks */,
+				F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +166,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21ECE021C7A5E25008041E9 /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +195,7 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
+				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* World */,
 				F21ECE2A1C7A6AEC008041E9 /* Skills */,
@@ -208,7 +209,6 @@
 				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
 				F21ECDC71C7A516B008041E9 /* Info.plist */,
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
-				F21ECE7A1C7A9D67008041E9 /* Coder.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -220,6 +220,7 @@
 				F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */,
 				F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */,
 				F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */,
+				F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */,
 			);
 			path = "Dark DaysTests";
 			sourceTree = "<group>";
@@ -329,6 +330,14 @@
 				F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */,
 			);
 			name = Inventory;
+			sourceTree = "<group>";
+		};
+		F2350AF11C7AAD0000D6E18E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECE7A1C7A9D67008041E9 /* Persistence.swift */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,7 +505,7 @@
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
-				F21ECE7B1C7A9D67008041E9 /* Coder.swift in Sources */,
+				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
@@ -514,8 +523,9 @@
 				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
-				F21ECE7C1C7A9D67008041E9 /* Coder.swift in Sources */,
+				F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
+				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
@@ -533,7 +543,7 @@
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
-				F21ECE7D1C7A9D67008041E9 /* Coder.swift in Sources */,
+				F21ECE7D1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
