@@ -30,21 +30,13 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TIf-kr-Ffy" firstAttribute="centerX" secondItem="DY8-Ek-OGq" secondAttribute="centerX" id="1pn-49-sXd"/>
                     <constraint firstItem="TIf-kr-Ffy" firstAttribute="leading" secondItem="SnH-Ib-t49" secondAttribute="trailing" constant="5" id="KW6-ZT-cZu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="TIf-kr-Ffy" secondAttribute="trailing" constant="5" id="d01-GL-8L4"/>
                     <constraint firstItem="SnH-Ib-t49" firstAttribute="leading" secondItem="DY8-Ek-OGq" secondAttribute="leading" constant="5" id="fFa-T6-Fnp"/>
                     <constraint firstItem="SnH-Ib-t49" firstAttribute="top" secondItem="DY8-Ek-OGq" secondAttribute="top" constant="5" id="jO6-rI-fSI"/>
                     <constraint firstAttribute="bottom" secondItem="SnH-Ib-t49" secondAttribute="bottom" constant="5" id="kSl-Rg-1YP"/>
-                    <constraint firstItem="TIf-kr-Ffy" firstAttribute="leading" secondItem="SnH-Ib-t49" secondAttribute="leading" constant="5" id="o39-bk-9fI"/>
                     <constraint firstItem="TIf-kr-Ffy" firstAttribute="centerY" secondItem="DY8-Ek-OGq" secondAttribute="centerY" id="xPx-Jc-dvT"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="1pn-49-sXd"/>
-                        <exclude reference="o39-bk-9fI"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <point key="canvasLocation" x="380" y="138"/>
         </tableViewCell>
