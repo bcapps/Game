@@ -70,10 +70,7 @@
 		F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
 		F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
 		F21ECE7D1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
-		F2350AEE1C7AACDC00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
-		F2350AEF1C7AACDC00D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
-		F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21ECDFF1C7A5E25008041E9 /* Decodable.framework */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
 		F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
@@ -86,6 +83,13 @@
 		F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
 		F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
 		F2350B0C1C7BE3A900D6E18E /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2350B0B1C7BE3A900D6E18E /* HeroCell.xib */; };
+		F2350B0E1C7BE76700D6E18E /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B0D1C7BE76700D6E18E /* HeroCell.swift */; };
+		F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */; };
+		F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */; };
+		F2350B271C7C113E00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B251C7C113E00D6E18E /* Decodable.framework */; };
+		F2350B281C7C113E00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B251C7C113E00D6E18E /* Decodable.framework */; };
+		F2350B291C7C114300D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B251C7C113E00D6E18E /* Decodable.framework */; };
+		F2350B2A1C7C114300D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B251C7C113E00D6E18E /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,13 +110,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F2350AF01C7AACDC00D6E18E /* Embed Frameworks */ = {
+		F2350B241C7C10E400D6E18E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2350AEF1C7AACDC00D6E18E /* Decodable.framework in Embed Frameworks */,
+				F2350B2A1C7C114300D6E18E /* Decodable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,7 +138,6 @@
 		F21ECDF51C7A5777008041E9 /* God.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = God.swift; sourceTree = "<group>"; };
 		F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
 		F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProviderTests.swift; sourceTree = "<group>"; };
-		F21ECDFF1C7A5E25008041E9 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
 		F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONArray.json; sourceTree = "<group>"; };
 		F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectProviderTestJSONDictionary.json; sourceTree = "<group>"; };
 		F21ECE0F1C7A5F8A008041E9 /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
@@ -163,6 +166,10 @@
 		F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		F2350B091C7BD0EE00D6E18E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		F2350B0B1C7BE3A900D6E18E /* HeroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
+		F2350B0D1C7BE76700D6E18E /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Male@2x.png"; sourceTree = "<group>"; };
+		F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Female@2x.png"; sourceTree = "<group>"; };
+		F2350B251C7C113E00D6E18E /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350AEE1C7AACDC00D6E18E /* Decodable.framework in Frameworks */,
+				F2350B291C7C114300D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350AF41C7AAE2A00D6E18E /* Decodable.framework in Frameworks */,
+				F2350B271C7C113E00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2350B281C7C113E00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +267,7 @@
 		F21ECDEE1C7A532C008041E9 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDFF1C7A5E25008041E9 /* Decodable.framework */,
+				F2350B251C7C113E00D6E18E /* Decodable.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -378,11 +386,30 @@
 		F2350B021C7BCEA700D6E18E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F2350B0F1C7BE7D800D6E18E /* Hero */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F2350B0F1C7BE7D800D6E18E /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				F2350B101C7BE7DF00D6E18E /* Art */,
 				F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */,
 				F2350B0B1C7BE3A900D6E18E /* HeroCell.xib */,
 				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
+				F2350B0D1C7BE76700D6E18E /* HeroCell.swift */,
 			);
-			name = "View Controllers";
+			name = Hero;
+			sourceTree = "<group>";
+		};
+		F2350B101C7BE7DF00D6E18E /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */,
+				F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */,
+			);
+			name = Art;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,7 +422,7 @@
 				F21ECDB41C7A516B008041E9 /* Sources */,
 				F21ECDB51C7A516B008041E9 /* Frameworks */,
 				F21ECDB61C7A516B008041E9 /* Resources */,
-				F2350AF01C7AACDC00D6E18E /* Embed Frameworks */,
+				F2350B241C7C10E400D6E18E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -490,10 +517,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F2350B0C1C7BE3A900D6E18E /* HeroCell.xib in Resources */,
+				F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */,
 				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
@@ -545,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
+				F2350B0E1C7BE76700D6E18E /* HeroCell.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
@@ -723,7 +753,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
@@ -735,7 +769,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
+				);
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
@@ -749,6 +787,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
 					"$(PROJECT_DIR)/Dark",
 					Days,
 				);
@@ -768,6 +808,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dark",
 					Days,
+					"$(PROJECT_DIR)/Dark",
+					Days,
 				);
 				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -782,6 +824,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
 					"$(PROJECT_DIR)/Dark",
 					Days,
 				);
@@ -799,6 +843,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Dark",
+					Days,
 					"$(PROJECT_DIR)/Dark",
 					Days,
 				);
