@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
-		F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDBF1C7A516B008041E9 /* Main.storyboard */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
@@ -82,6 +81,10 @@
 		F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
 		F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
+		F2350B041C7BCEBC00D6E18E /* CharacterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */; };
+		F2350B061C7BCEE800D6E18E /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */; };
+		F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
+		F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +122,6 @@
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21ECDBD1C7A516B008041E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F21ECDC01C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F21ECDC21C7A516B008041E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21ECDC71C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +157,10 @@
 		F2350AFA1C7ADA6800D6E18E /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		F2350AFC1C7ADAFA00D6E18E /* Monsters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Monsters.json; path = "World Data/Monsters.json"; sourceTree = "<group>"; };
 		F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroBuilder.swift; sourceTree = "<group>"; };
+		F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CharacterList.storyboard; sourceTree = "<group>"; };
+		F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
+		F2350B091C7BD0EE00D6E18E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,9 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
+				F2350B091C7BD0EE00D6E18E /* Reusable.swift */,
+				F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */,
+				F2350B021C7BCEA700D6E18E /* View */,
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* World */,
@@ -214,7 +223,6 @@
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
-				F21ECDBF1C7A516B008041E9 /* Main.storyboard */,
 				F21ECDC21C7A516B008041E9 /* Assets.xcassets */,
 				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
 				F21ECDC71C7A516B008041E9 /* Info.plist */,
@@ -365,6 +373,15 @@
 			name = Monsters;
 			sourceTree = "<group>";
 		};
+		F2350B021C7BCEA700D6E18E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */,
+				F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,11 +490,11 @@
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
+				F2350B041C7BCEBC00D6E18E /* CharacterList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
-				F21ECDC11C7A516B008041E9 /* Main.storyboard in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
@@ -535,6 +552,9 @@
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
+				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
+				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
+				F2350B061C7BCEE800D6E18E /* CharacterListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
@@ -599,14 +619,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F21ECDBF1C7A516B008041E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F21ECDC01C7A516B008041E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

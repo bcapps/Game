@@ -788,7 +788,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="StatsCollectionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QKO-EL-yii" customClass="LCKStatsCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RUX-h6-LBX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b8r-eH-HVz">
                             <size key="itemSize" width="50" height="50"/>
@@ -910,7 +910,7 @@
         <image name="inventoryIcon.png" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Os-uu-hNJ"/>
+        <segue reference="Bxp-pO-EeZ"/>
         <segue reference="yxC-a4-4HD"/>
     </inferredMetricsTieBreakers>
 </document>
