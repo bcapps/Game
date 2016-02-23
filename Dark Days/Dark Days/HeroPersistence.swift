@@ -10,6 +10,12 @@ import Foundation
 
 final class HeroPersistence {
     
+    let persistencePath: String
+    
+    init(persistencePath: String = "Heroes") {
+        self.persistencePath = persistencePath
+    }
+    
     func persistHero(hero: Hero) {
         let archivedHeroCoder = NSKeyedArchiver.archivedDataWithRootObject(HeroCoder(value: hero))
         
@@ -53,7 +59,7 @@ final class HeroPersistence {
     }
     
     private func heroDirectoryPath() -> String {
-        let heroesPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0].stringByAppendingString("/Heroes/")
+        let heroesPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0].stringByAppendingString("/" + persistencePath + "/")
         
         if NSFileManager.defaultManager().fileExistsAtPath(heroesPath) == false {
             do {
