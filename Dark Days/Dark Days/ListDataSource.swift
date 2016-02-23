@@ -10,7 +10,7 @@ import UIKit
 
 final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableViewDataSource {
     
-    typealias TableViewCellConfigureBlock = (cell: U, item: T?) -> Void
+    typealias TableViewCellConfigureBlock = (cell: U, object: T?) -> Void
 
     let collection: [T]
     let configureCell: TableViewCellConfigureBlock
@@ -27,11 +27,11 @@ final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let item = collection[indexPath.row]
+        let object = collection[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(U.self, type: .Cell)
         
-        configureCell(cell: cell, item: item)
+        configureCell(cell: cell, object: object)
         
         return cell
     }

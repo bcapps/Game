@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HeroCell: UITableViewCell {
+final class LeftImageCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var raceImageView: UIImageView!
 }

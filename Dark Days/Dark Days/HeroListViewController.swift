@@ -9,17 +9,17 @@
 import UIKit
 
 final class HeroListViewController: UITableViewController {
-    var dataSource: ListDataSource<Item, HeroCell>?
+    var dataSource: ListDataSource<Hero, LeftImageCell>?
     
     override func viewDidLoad() {
-        let items: [Item] = ObjectProvider.objectsForJSON("Items")
+        let heroes: [Hero] = [Hero]()
         
-        dataSource = ListDataSource(collection: items, configureCell: { cell, item in
-            cell.nameLabel?.text = item?.name
+        dataSource = ListDataSource(collection: heroes, configureCell: { cell, hero in
+            cell.nameLabel?.text = hero?.name
             cell.raceImageView?.image = UIImage(named: "Elf-Male")
         })
         
-        tableView.registerNib(HeroCell.nib, aClass: HeroCell.self, type: .Cell)
+        tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
         tableView.dataSource = dataSource
         tableView.rowHeight = 54.0
     }
