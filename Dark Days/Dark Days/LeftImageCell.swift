@@ -10,5 +10,5 @@ import UIKit
 
 final class LeftImageCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var raceImageView: UIImageView!
+    @IBOutlet weak var leftImageView: UIImageView!
 }

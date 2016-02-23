@@ -58,7 +58,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="infoImageView" destination="Ssa-TL-ct5" id="SoE-PN-kZJ"/>
+                <outlet property="infoImageView" destination="Ssa-TL-ct5" id="uVJ-qh-rHi"/>
                 <outlet property="infoNameLabel" destination="bwb-Ib-sok" id="Zpw-WU-RjU"/>
                 <outlet property="infoTextView" destination="g8V-3x-kFQ" id="Y1a-ZQ-fLe"/>
             </connections>

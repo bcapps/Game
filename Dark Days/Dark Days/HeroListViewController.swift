@@ -18,7 +18,7 @@ final class HeroListViewController: UITableViewController {
         
         dataSource = ListDataSource(collection: heroes, configureCell: { cell, hero in
             cell.nameLabel?.text = hero?.name
-            cell.raceImageView?.image = hero?.race.image
+            cell.leftImageView?.image = hero?.race.image
         })
         
         tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)

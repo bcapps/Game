@@ -12,5 +12,7 @@ public class HeroCreationViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 }

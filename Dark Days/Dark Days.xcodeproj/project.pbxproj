@@ -23,6 +23,8 @@
 		C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
+		C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */; };
+		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
@@ -152,6 +154,8 @@
 		C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHero.swift; sourceTree = "<group>"; };
 		C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCreationViewController.swift; sourceTree = "<group>"; };
 		C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroCreation.storyboard; sourceTree = "<group>"; };
+		C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RaceList.storyboard; sourceTree = "<group>"; };
+		C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 		C3AB8F3B1C7CF3F2007CE0BA /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */,
+				C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */,
 				C3AB8F3D1C7CF407007CE0BA /* Item */,
 				C394059D1C7CB68500EBFD07 /* Root */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero */,
@@ -643,6 +649,7 @@
 				F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */,
 				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
+				C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
@@ -755,6 +762,7 @@
 				C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
+				C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
