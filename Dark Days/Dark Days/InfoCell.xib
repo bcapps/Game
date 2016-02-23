@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="hFT-V8-G45" customClass="InfoCell" customModule="Dark_Days" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="hFT-V8-G45" id="wI4-qv-xSV">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elf-Male.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-TL-ct5">
+                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ssa-TL-ct5" secondAttribute="height" multiplier="1:1" id="2Gx-67-CNB"/>
+                            <constraint firstAttribute="width" constant="64" id="ZZk-Yd-pMF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-Ib-sok">
+                        <rect key="frame" x="80" y="8" width="232" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-RB-nFF">
+                        <rect key="frame" x="80" y="33.5" width="227" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bwb-Ib-sok" firstAttribute="leading" secondItem="Ssa-TL-ct5" secondAttribute="trailing" constant="8" id="3ag-eh-66C"/>
+                    <constraint firstItem="Ssa-TL-ct5" firstAttribute="top" secondItem="wI4-qv-xSV" secondAttribute="topMargin" id="6uq-MP-DI9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RAV-RB-nFF" secondAttribute="bottom" constant="8" id="7Cy-gT-N5M"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bwb-Ib-sok" secondAttribute="trailing" id="D44-hc-ZTe"/>
+                    <constraint firstItem="Ssa-TL-ct5" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" id="Izc-Sd-xta"/>
+                    <constraint firstItem="RAV-RB-nFF" firstAttribute="top" secondItem="bwb-Ib-sok" secondAttribute="bottom" constant="5" id="Jio-ML-oqk"/>
+                    <constraint firstItem="RAV-RB-nFF" firstAttribute="leading" secondItem="Ssa-TL-ct5" secondAttribute="trailing" constant="8" id="Qy9-zr-zqj"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Ssa-TL-ct5" secondAttribute="bottom" constant="5" id="c8X-xi-u8Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RAV-RB-nFF" secondAttribute="trailing" constant="5" id="u6e-yL-kTP"/>
+                    <constraint firstItem="bwb-Ib-sok" firstAttribute="top" secondItem="Ssa-TL-ct5" secondAttribute="top" id="vbq-5O-HuY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoDescriptionLabel" destination="RAV-RB-nFF" id="s5Y-F6-3T0"/>
+                <outlet property="infoImageView" destination="Ssa-TL-ct5" id="SoE-PN-kZJ"/>
+                <outlet property="infoNameLabel" destination="bwb-Ib-sok" id="Zpw-WU-RjU"/>
+            </connections>
+            <point key="canvasLocation" x="584" y="263"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Elf-Male.png" width="200" height="176"/>
+    </resources>
+</document>

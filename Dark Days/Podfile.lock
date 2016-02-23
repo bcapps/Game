@@ -1,0 +1,10 @@
+PODS:
+  - Decodable (0.4.1)
+
+DEPENDENCIES:
+  - Decodable
+
+SPEC CHECKSUMS:
+  Decodable: 4df86629544f717045a931ed6e9f0be35fa3c3b0
+
+COCOAPODS: 0.38.2

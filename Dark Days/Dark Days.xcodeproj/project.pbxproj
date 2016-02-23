@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192061302A0CAD9080A4CAE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39405901C7CAE7900EBFD07 /* InfoCell.xib */; };
+		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
+		C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
+		C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
+		C394059A1C7CB63A00EBFD07 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39405991C7CB63A00EBFD07 /* ItemList.storyboard */; };
+		C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */; };
+		C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
@@ -127,6 +135,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2192061302A0CAD9080A4CAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C39405901C7CAE7900EBFD07 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		C39405921C7CAF2900EBFD07 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		C39405951C7CB10D00EBFD07 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C39405971C7CB16900EBFD07 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		C39405991C7CB63A00EBFD07 /* ItemList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
+		C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		C394059E1C7CB69F00EBFD07 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21ECDBD1C7A516B008041E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2350B7B1C7C166300D6E18E /* Decodable.framework in Frameworks */,
+				BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +223,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA39A6022C0E5ED665DD3C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2192061302A0CAD9080A4CAE /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84E799EDE252FC176C767087 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */,
+				AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C394058D1C7CAE2B00EBFD07 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F21ECDC21C7A516B008041E9 /* Assets.xcassets */,
+				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
+				F21ECDC71C7A516B008041E9 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		C394058E1C7CAE3B00EBFD07 /* Table View Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F2350B091C7BD0EE00D6E18E /* Reusable.swift */,
+				F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */,
+			);
+			name = "Table View Extension";
+			sourceTree = "<group>";
+		};
+		C394058F1C7CAE5F00EBFD07 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				C39405991C7CB63A00EBFD07 /* ItemList.storyboard */,
+				C39405901C7CAE7900EBFD07 /* InfoCell.xib */,
+				C39405921C7CAF2900EBFD07 /* InfoCell.swift */,
+				C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		C39405941C7CB10100EBFD07 /* UI Customization */ = {
+			isa = PBXGroup;
+			children = (
+				C39405951C7CB10D00EBFD07 /* ColorExtension.swift */,
+				C39405971C7CB16900EBFD07 /* FontExtension.swift */,
+			);
+			name = "UI Customization";
+			sourceTree = "<group>";
+		};
+		C394059D1C7CB68500EBFD07 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C394059E1C7CB69F00EBFD07 /* Root.storyboard */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
 		F21ECDAF1C7A516B008041E9 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +294,8 @@
 				F21ECDCF1C7A516B008041E9 /* Dark DaysTests */,
 				F21ECDDA1C7A516B008041E9 /* Dark DaysUITests */,
 				F21ECDB91C7A516B008041E9 /* Products */,
+				84E799EDE252FC176C767087 /* Pods */,
+				0AA39A6022C0E5ED665DD3C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,21 +312,19 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
-				F2350B091C7BD0EE00D6E18E /* Reusable.swift */,
-				F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */,
-				F2350B021C7BCEA700D6E18E /* View Controllers */,
+				C39405941C7CB10100EBFD07 /* UI Customization */,
+				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
+				C394058D1C7CAE2B00EBFD07 /* Support */,
+				F2350B021C7BCEA700D6E18E /* View */,
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* World */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
+				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
+				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
-				F21ECDC21C7A516B008041E9 /* Assets.xcassets */,
-				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
-				F21ECDC71C7A516B008041E9 /* Info.plist */,
-				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
-				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -388,12 +471,14 @@
 			name = Monsters;
 			sourceTree = "<group>";
 		};
-		F2350B021C7BCEA700D6E18E /* View Controllers */ = {
+		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C394059D1C7CB68500EBFD07 /* Root */,
+				C394058F1C7CAE5F00EBFD07 /* Info */,
 				F2350B0F1C7BE7D800D6E18E /* Hero */,
 			);
-			name = "View Controllers";
+			name = View;
 			sourceTree = "<group>";
 		};
 		F2350B0F1C7BE7D800D6E18E /* Hero */ = {
@@ -402,8 +487,8 @@
 				F2350B101C7BE7DF00D6E18E /* Art */,
 				F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */,
 				F2350B0B1C7BE3A900D6E18E /* HeroCell.xib */,
-				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
 				F2350B0D1C7BE76700D6E18E /* HeroCell.swift */,
+				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -424,10 +509,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F21ECDE01C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark Days" */;
 			buildPhases = (
+				0CA5C1C7BFB3A0626FCCDC13 /* Check Pods Manifest.lock */,
 				F21ECDB41C7A516B008041E9 /* Sources */,
 				F21ECDB51C7A516B008041E9 /* Frameworks */,
 				F21ECDB61C7A516B008041E9 /* Resources */,
 				F2350B241C7C10E400D6E18E /* Embed Frameworks */,
+				23FE5ABCF5F5E21ED390C3F3 /* Embed Pods Frameworks */,
+				542C8716EE993FFFF5BE1F31 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -522,6 +610,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
 				F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
@@ -531,7 +620,9 @@
 				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
+				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
+				C394059A1C7CB63A00EBFD07 /* ItemList.storyboard in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
@@ -573,6 +664,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CA5C1C7BFB3A0626FCCDC13 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23FE5ABCF5F5E21ED390C3F3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		542C8716EE993FFFF5BE1F31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F21ECDB41C7A516B008041E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -587,6 +726,7 @@
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
+				C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
@@ -594,10 +734,13 @@
 				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
+				C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
+				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
+				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +902,7 @@
 		};
 		F21ECDE11C7A516B008041E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -771,6 +915,7 @@
 		};
 		F21ECDE21C7A516B008041E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
