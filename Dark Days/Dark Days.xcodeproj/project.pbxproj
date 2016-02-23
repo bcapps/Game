@@ -75,9 +75,9 @@
 		F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
 		F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
 		F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */; };
-		F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
-		F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
-		F21ECE7D1C7A9D67008041E9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Persistence.swift */; };
+		F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
+		F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
+		F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
@@ -170,7 +170,7 @@
 		F21ECE451C7A7C90008041E9 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
-		F21ECE7A1C7A9D67008041E9 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F21ECE7A1C7A9D67008041E9 /* Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
@@ -467,7 +467,7 @@
 		F2350AF11C7AAD0000D6E18E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE7A1C7A9D67008041E9 /* Persistence.swift */,
+				F21ECE7A1C7A9D67008041E9 /* Coding.swift */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
-				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
+				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */,
@@ -764,7 +764,7 @@
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
-				F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */,
+				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
@@ -786,7 +786,7 @@
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
-				F21ECE7D1C7A9D67008041E9 /* Persistence.swift in Sources */,
+				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
