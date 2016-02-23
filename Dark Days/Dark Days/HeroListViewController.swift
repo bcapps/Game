@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CharacterListViewController: UITableViewController {
+final class HeroListViewController: UITableViewController {
     var dataSource: ListDataSource<Item, UITableViewCell>?
     
     override func viewDidLoad() {

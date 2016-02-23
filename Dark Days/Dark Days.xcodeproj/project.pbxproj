@@ -81,8 +81,8 @@
 		F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350AFC1C7ADAFA00D6E18E /* Monsters.json */; };
 		F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
-		F2350B041C7BCEBC00D6E18E /* CharacterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */; };
-		F2350B061C7BCEE800D6E18E /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */; };
+		F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */; };
+		F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */; };
 		F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
 		F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
 /* End PBXBuildFile section */
@@ -157,8 +157,8 @@
 		F2350AFA1C7ADA6800D6E18E /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		F2350AFC1C7ADAFA00D6E18E /* Monsters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Monsters.json; path = "World Data/Monsters.json"; sourceTree = "<group>"; };
 		F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroBuilder.swift; sourceTree = "<group>"; };
-		F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CharacterList.storyboard; sourceTree = "<group>"; };
-		F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroList.storyboard; sourceTree = "<group>"; };
+		F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		F2350B091C7BD0EE00D6E18E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -376,8 +376,8 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F2350B031C7BCEBC00D6E18E /* CharacterList.storyboard */,
-				F2350B051C7BCEE800D6E18E /* CharacterListViewController.swift */,
+				F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */,
+				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
-				F2350B041C7BCEBC00D6E18E /* CharacterList.storyboard in Resources */,
+				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
@@ -554,7 +554,7 @@
 				F21ECE7B1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
-				F2350B061C7BCEE800D6E18E /* CharacterListViewController.swift in Sources */,
+				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,

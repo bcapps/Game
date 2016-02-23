@@ -25,7 +25,7 @@
         <!--Heroes-->
         <scene sceneID="SVx-lX-pOO">
             <objects>
-                <tableViewController title="Heroes" id="jfF-7b-0DO" customClass="CharacterListViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Heroes" id="jfF-7b-0DO" customClass="HeroListViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TL7-L2-6PP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
