@@ -18,7 +18,7 @@ final class ItemListViewController: UITableViewController {
             if let item = item {
                 cell.infoImageView?.image = UIImage(named: "Elf-Male")
                 cell.infoNameLabel?.text = item.name
-                cell.infoDescriptionLabel?.attributedText = self.descriptionForItem(item)
+                cell.infoTextView?.attributedText = self.descriptionForItem(item)                
             }
         })
         
@@ -35,6 +35,12 @@ final class ItemListViewController: UITableViewController {
         
         let paragraphyStyle = NSMutableParagraphStyle()
         paragraphyStyle.lineHeightMultiple = 0.85
+        
+//        NSTextStorage *ts = [[NSTextStorage alloc] initWithString:multiline.title attributes:@{NSFontAttributeName:font}];
+//        NSLayoutManager *lm = [[NSLayoutManager alloc] init];
+//        NSTextContainer *tc = [[NSTextContainer alloc] initWithSize:CGSizeMake(40, 40)];
+//        [lm addTextContainer:tc];
+//        [ts addLayoutManager:lm];
         
         if item.damage.characters.count > 0 {
             let damageString = NSAttributedString(string: "Damage: " + item.damage, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
