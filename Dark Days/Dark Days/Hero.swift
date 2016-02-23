@@ -22,6 +22,7 @@ struct Hero: Codeable {
     let stats: [Stat]
     let race: Race
     let skills: [Skill]
+    let uniqueID = NSUUID().UUIDString
 }
 
 final class HeroCoder: NSObject, Coder {

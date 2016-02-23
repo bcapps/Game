@@ -21,7 +21,7 @@ class ItemCodingTests: XCTestCase {
         
         XCTAssertEqual(unarchivedItem?.name, "Longsword")
         XCTAssertEqual(unarchivedItem?.damage, "1d6 + [STR]")
-        XCTAssertEqual(unarchivedItem?.effects, "")
+        XCTAssertEqual(unarchivedItem?.effects, "The sharp blade deals extra damage to fleshy creatures.")
         XCTAssertEqual(unarchivedItem?.flavor, "A generic longsword. It looks like it may have seen some use.")
         XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.itemSlotForItemString("onehand"))
     }
