@@ -19,9 +19,8 @@ final class HeroListViewController: UITableViewController {
             cell.raceImageView?.image = UIImage(named: "Elf-Male")
         })
         
-        tableView.registerClass(HeroCell.self, type: .Cell)
+        tableView.registerNib(HeroCell.nib, aClass: HeroCell.self, type: .Cell)
         tableView.dataSource = dataSource
-        tableView.rowHeight = 104.0
-        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.rowHeight = 54.0
     }
 }

@@ -90,6 +90,9 @@
 		F2350B7A1C7C165F00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; };
 		F2350B7B1C7C166300D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; };
 		F2350B7C1C7C166300D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
+		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
+		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +173,7 @@
 		F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Male@2x.png"; sourceTree = "<group>"; };
 		F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Female@2x.png"; sourceTree = "<group>"; };
 		F2350B771C7C165F00D6E18E /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
+		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
 				F21ECDC71C7A516B008041E9 /* Info.plist */,
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
+				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 			files = (
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B0E1C7BE76700D6E18E /* HeroCell.swift in Sources */,
+				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
@@ -607,6 +613,7 @@
 				F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
+				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Persistence.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
@@ -623,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
+				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,
