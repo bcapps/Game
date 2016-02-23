@@ -25,6 +25,7 @@
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
 		C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */; };
 		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
+		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 		C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroCreation.storyboard; sourceTree = "<group>"; };
 		C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RaceList.storyboard; sourceTree = "<group>"; };
 		C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
+		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				C39405951C7CB10D00EBFD07 /* ColorExtension.swift */,
 				C39405971C7CB16900EBFD07 /* FontExtension.swift */,
+				C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */,
 			);
 			name = "UI Customization";
 			sourceTree = "<group>";
@@ -296,10 +299,9 @@
 		C3AB8F3B1C7CF3F2007CE0BA /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */,
-				C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */,
-				C3AB8F3D1C7CF407007CE0BA /* Item */,
 				C394059D1C7CB68500EBFD07 /* Root */,
+				C3AB8F531C7D0CD5007CE0BA /* Race */,
+				C3AB8F3D1C7CF407007CE0BA /* Item */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero */,
 			);
 			name = "View Controller";
@@ -323,6 +325,15 @@
 				C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */,
 			);
 			name = Item;
+			sourceTree = "<group>";
+		};
+		C3AB8F531C7D0CD5007CE0BA /* Race */ = {
+			isa = PBXGroup;
+			children = (
+				C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */,
+				C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */,
+			);
+			name = Race;
 			sourceTree = "<group>";
 		};
 		F21ECDAF1C7A516B008041E9 = {
@@ -752,6 +763,7 @@
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
+				C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,

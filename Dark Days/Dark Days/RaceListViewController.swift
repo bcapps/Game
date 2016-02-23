@@ -24,5 +24,7 @@ final class RaceListViewController: UITableViewController {
         tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
         tableView.dataSource = dataSource
         tableView.rowHeight = 54.0
+        
+        tableView.customize()
     }
 }

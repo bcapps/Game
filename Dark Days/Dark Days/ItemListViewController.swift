@@ -24,12 +24,12 @@ final class ItemListViewController: UITableViewController {
             }
         })
         
-        tableView.backgroundColor = .backgroundColor()
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.dataSource = dataSource
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.tableFooterView = UIView()
+        
+        tableView.customize()
     }
     
     private func descriptionForItem(item: Item) -> NSAttributedString {

@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-175" y="308"/>
         </scene>
-        <!--ItemList-->
+        <!--HeroList-->
         <scene sceneID="dVQ-5b-z1Z">
             <objects>
-                <viewControllerPlaceholder storyboardName="ItemList" id="Yhl-hV-gjb" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HeroList" id="Yhl-hV-gjb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9H8-L1-x2f"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXa-7z-UYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
