@@ -10,9 +10,24 @@ import XCTest
 
 class HeroPersistenceTests: XCTestCase {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testHeroPersistence() {
+        let sut = HeroPersistence()
+        let hero = TestHero.hero
+        
+        XCTAssertEqual(sut.allPersistedHeroes().count, 0)
+        
+        sut.persistHero(hero)
+        
+        XCTAssertEqual(sut.allPersistedHeroes().count, 1)
+        
+        let testHero = sut.allPersistedHeroes().first
+        
+        XCTAssertEqual(hero.name, testHero?.name)
+        XCTAssertEqual(hero.uniqueID, testHero?.uniqueID)
+        
+        sut.removeHero(hero)
+        
+        XCTAssertEqual(sut.allPersistedHeroes().count, 0)
     }
 
 }

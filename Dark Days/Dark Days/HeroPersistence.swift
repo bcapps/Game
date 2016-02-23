@@ -26,10 +26,10 @@ final class HeroPersistence {
         var heroes = [Hero]()
 
         do {
-            let heroPaths = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(heroDirectoryPath())
+            let heroURLs = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(NSURL(fileURLWithPath: heroDirectoryPath()), includingPropertiesForKeys: nil, options: .SkipsHiddenFiles)
             
-            for heroPath in heroPaths {
-                if let hero = heroForPath(heroPath) {
+            for heroURL in heroURLs {
+                if let hero = heroForURL(heroURL) {
                     heroes.append(hero)
                 }
             }
@@ -38,18 +38,22 @@ final class HeroPersistence {
         return heroes
     }
     
-    private func heroForPath(path: String) -> Hero? {
-        let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? HeroCoder
+    private func heroForURL(URL: NSURL) -> Hero? {
+        if let path = URL.path {
+            let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? HeroCoder
+            
+            return unarchivedHeroCoder?.value
+        }
         
-        return unarchivedHeroCoder?.value
+        return nil
     }
     
     private func pathForHero(hero: Hero) -> String {
-        return heroDirectoryPath().stringByAppendingString(hero.uniqueID)
+        return heroDirectoryPath().stringByAppendingString(hero.uniqueID + ".hero")
     }
     
     private func heroDirectoryPath() -> String {
-        let heroesPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0].stringByAppendingString("/Heroes")
+        let heroesPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0].stringByAppendingString("/Heroes/")
         
         if NSFileManager.defaultManager().fileExistsAtPath(heroesPath) == false {
             do {

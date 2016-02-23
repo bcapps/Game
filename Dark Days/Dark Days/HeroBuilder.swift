@@ -18,7 +18,7 @@ final class HeroBuilder {
     func build() -> Hero {
         let inventory = Inventory()
         
-        return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills)
+        return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, uniqueID: NSUUID().UUIDString)
     }
     
     func setName(name: String) {
