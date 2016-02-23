@@ -11,4 +11,20 @@ import UIKit
 final class LeftImageCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var leftImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupLeftImageCell()
+    }
+    
+    private func setupLeftImageCell() {
+        backgroundColor = .backgroundColor()
+        
+        nameLabel.backgroundColor = .backgroundColor()
+        leftImageView.backgroundColor = .backgroundColor()
+        
+        nameLabel.textColor = .bodyTextColor()
+        nameLabel.font = .bodyFont()
+    }
 }

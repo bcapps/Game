@@ -10,9 +10,10 @@ import UIKit
 
 public class HeroCreationViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        scrollView.backgroundColor = .backgroundColor()
     }
 }

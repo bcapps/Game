@@ -18,12 +18,26 @@
                             <outlet property="delegate" destination="jfF-7b-0DO" id="Kqq-mT-9GQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heroes" id="DQU-4p-Zug"/>
+                    <navigationItem key="navigationItem" title="Heroes" id="DQU-4p-Zug">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b43-or-JfE">
+                            <connections>
+                                <segue destination="Jkw-ar-4IH" kind="presentation" id="pjq-IS-kde"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMh-BY-yMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-616" y="260"/>
+        </scene>
+        <!--HeroCreation-->
+        <scene sceneID="xDZ-j2-5Wa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroCreation" id="Jkw-ar-4IH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCC-hp-VCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277.5" y="260"/>
         </scene>
     </scenes>
 </document>

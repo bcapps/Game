@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hero Creation View Controller-->
         <scene sceneID="ewJ-xi-FDr">
             <objects>
-                <viewController id="pyA-fk-XHE" sceneMemberID="viewController">
+                <viewController id="pyA-fk-XHE" customClass="HeroCreationViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S0h-YM-Xqf"/>
                         <viewControllerLayoutGuide type="bottom" id="PM0-Rz-Qaa"/>
@@ -59,6 +59,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="h4z-Qq-RGm" id="ekW-5m-ypi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HV-Ve-a1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
