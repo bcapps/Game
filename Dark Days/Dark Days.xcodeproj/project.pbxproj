@@ -253,10 +253,8 @@
 		C394058F1C7CAE5F00EBFD07 /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				C39405991C7CB63A00EBFD07 /* ItemList.storyboard */,
 				C39405901C7CAE7900EBFD07 /* InfoCell.xib */,
 				C39405921C7CAF2900EBFD07 /* InfoCell.swift */,
-				C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -276,6 +274,34 @@
 				C394059E1C7CB69F00EBFD07 /* Root.storyboard */,
 			);
 			name = Root;
+			sourceTree = "<group>";
+		};
+		C3AB8F3B1C7CF3F2007CE0BA /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3AB8F3D1C7CF407007CE0BA /* Item */,
+				C394059D1C7CB68500EBFD07 /* Root */,
+				C3AB8F3C1C7CF403007CE0BA /* Hero */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		C3AB8F3C1C7CF403007CE0BA /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */,
+				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
+			);
+			name = Hero;
+			sourceTree = "<group>";
+		};
+		C3AB8F3D1C7CF407007CE0BA /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C39405991C7CB63A00EBFD07 /* ItemList.storyboard */,
+				C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */,
+			);
+			name = Item;
 			sourceTree = "<group>";
 		};
 		F21ECDAF1C7A516B008041E9 = {
@@ -303,9 +329,11 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
+				F2350B101C7BE7DF00D6E18E /* Art */,
 				C39405941C7CB10100EBFD07 /* UI Customization */,
 				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
 				C394058D1C7CAE2B00EBFD07 /* Support */,
+				C3AB8F3B1C7CF3F2007CE0BA /* View Controller */,
 				F2350B021C7BCEA700D6E18E /* View */,
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEF1C7A5341008041E9 /* World */,
@@ -456,7 +484,6 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C394059D1C7CB68500EBFD07 /* Root */,
 				C394058F1C7CAE5F00EBFD07 /* Info */,
 				F2350B0F1C7BE7D800D6E18E /* Hero */,
 			);
@@ -466,11 +493,8 @@
 		F2350B0F1C7BE7D800D6E18E /* Hero */ = {
 			isa = PBXGroup;
 			children = (
-				F2350B101C7BE7DF00D6E18E /* Art */,
-				F2350B031C7BCEBC00D6E18E /* HeroList.storyboard */,
 				F2350B0B1C7BE3A900D6E18E /* HeroCell.xib */,
 				F2350B0D1C7BE76700D6E18E /* HeroCell.swift */,
-				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
