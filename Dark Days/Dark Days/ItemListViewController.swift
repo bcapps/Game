@@ -12,6 +12,8 @@ final class ItemListViewController: UITableViewController {
     var dataSource: ListDataSource<Item, InfoCell>?
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let items: [Item] = ObjectProvider.objectsForJSON("Items")
         
         dataSource = ListDataSource(collection: items, configureCell: { cell, item in

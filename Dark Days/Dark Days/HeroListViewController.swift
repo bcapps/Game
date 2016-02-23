@@ -12,6 +12,8 @@ final class HeroListViewController: UITableViewController {
     var dataSource: ListDataSource<Hero, LeftImageCell>?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let heroes: [Hero] = HeroPersistence().allPersistedHeroes()
         
         dataSource = ListDataSource(collection: heroes, configureCell: { cell, hero in
