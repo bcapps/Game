@@ -22,6 +22,10 @@ extension UIColor {
         return UIColor(white: 0.7, alpha: 1.0)
     }
     
+    static func sideTextColor() -> UIColor {
+        return UIColor(white: 0.5, alpha: 1.0)
+    }
+    
     static func borderColor() -> UIColor {
         return UIColor(white: 0.5, alpha: 1.0)
     }

@@ -11,10 +11,14 @@ import UIKit
 extension UIFont {
     
     static func headingFont() -> UIFont {
-        return UIFont.boldSystemFontOfSize(16.0)
+        return UIFont(name: "Avenir-Black", size: 18.0) ?? UIFont.boldSystemFontOfSize(18.0)
     }
     
     static func bodyFont() -> UIFont {
-        return UIFont.systemFontOfSize(15.0)
+        return UIFont(name: "Avenir-Medium", size: 16.0) ?? UIFont.systemFontOfSize(17.0)
+    }
+    
+    static func smallFont() -> UIFont {
+        return UIFont(name: "Avenir-Medium", size: 14.0) ?? UIFont.systemFontOfSize(14.0)
     }
 }

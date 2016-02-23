@@ -15,9 +15,11 @@ final class ItemListViewController: UITableViewController {
         let items: [Item] = ObjectProvider.objectsForJSON("Items")
         
         dataSource = ListDataSource(collection: items, configureCell: { cell, item in
-            cell.infoImageView?.image = UIImage(named: "Elf-Male")
-            cell.infoNameLabel?.text = item?.name
-            //cell.infoTextView?.text = item?.damage
+            if let item = item {
+                cell.infoImageView?.image = UIImage(named: "Elf-Male")
+                cell.infoNameLabel?.text = item.name
+                cell.infoDescriptionLabel?.attributedText = self.descriptionForItem(item)
+            }
         })
         
         tableView.backgroundColor = .backgroundColor()
@@ -26,5 +28,32 @@ final class ItemListViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
+    }
+    
+    private func descriptionForItem(item: Item) -> NSAttributedString {
+        let description = NSMutableAttributedString()
+        
+        let paragraphyStyle = NSMutableParagraphStyle()
+        paragraphyStyle.lineHeightMultiple = 0.85
+        
+        if item.damage.characters.count > 0 {
+            let damageString = NSAttributedString(string: "Damage: " + item.damage, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+            
+            description.appendAttributedString(damageString)
+        }
+        
+        if item.effects.characters.count > 0 {
+            let effectsString = NSAttributedString(string: "\n\n" + item.effects, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+            
+            description.appendAttributedString(effectsString)
+        }
+        
+        if item.flavor.characters.count > 0 {
+            let flavorString = NSAttributedString(string: "\n\n" + item.flavor, attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.sideTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+            
+            description.appendAttributedString(flavorString)
+        }
+        
+        return description
     }
 }
