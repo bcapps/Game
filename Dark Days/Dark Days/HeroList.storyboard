@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" title="Heroes" id="DQU-4p-Zug">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="b43-or-JfE">
                             <connections>
-                                <segue destination="Jkw-ar-4IH" kind="presentation" id="pjq-IS-kde"/>
+                                <segue destination="6k8-mh-k5Q" kind="presentation" id="mZW-CR-uaY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -31,13 +31,32 @@
             </objects>
             <point key="canvasLocation" x="-616" y="260"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Msc-7D-DWm">
+            <objects>
+                <navigationController id="6k8-mh-k5Q" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="trF-r0-sv2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jkw-ar-4IH" kind="relationship" relationship="rootViewController" id="wHf-IM-cKH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg5-3E-lny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="260"/>
+        </scene>
         <!--HeroCreation-->
         <scene sceneID="xDZ-j2-5Wa">
             <objects>
-                <viewControllerPlaceholder storyboardName="HeroCreation" id="Jkw-ar-4IH" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HeroCreation" id="Jkw-ar-4IH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4fU-fp-cnf"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCC-hp-VCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277.5" y="260"/>
+            <point key="canvasLocation" x="70.5" y="260"/>
         </scene>
     </scenes>
 </document>

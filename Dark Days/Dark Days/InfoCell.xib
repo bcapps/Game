@@ -22,7 +22,7 @@
                         <attributedString key="attributedText"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-TL-ct5">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elf-Male.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-TL-ct5">
                         <rect key="frame" x="8" y="8" width="56" height="56"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ssa-TL-ct5" secondAttribute="height" multiplier="1:1" id="2Gx-67-CNB"/>
@@ -57,4 +57,7 @@
             <point key="canvasLocation" x="584" y="263"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Elf-Male.png" width="200" height="176"/>
+    </resources>
 </document>

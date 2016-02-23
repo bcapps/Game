@@ -9,7 +9,7 @@
 import UIKit
 
 final class RaceListViewController: UITableViewController {
-    var dataSource: ListDataSource<Race, LeftImageCell>?
+    var dataSource: ListDataSource<Race, InfoCell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +17,12 @@ final class RaceListViewController: UITableViewController {
         let races: [Race] = ObjectProvider.objectsForJSON("Races")
         
         dataSource = ListDataSource(collection: races, configureCell: { cell, race in
-            cell.nameLabel?.text = race?.name
-            cell.leftImageView?.image = race?.image
+            cell.infoNameLabel?.text = race?.name
+            //cell.infoImageView?.image = race?.image
+            cell.infoTextView?.text = race?.explanation
         })
         
-        tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
+        tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.dataSource = dataSource
         tableView.rowHeight = 54.0
         

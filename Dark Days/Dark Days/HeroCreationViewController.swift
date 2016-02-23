@@ -11,9 +11,16 @@ import UIKit
 public class HeroCreationViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var nameField: UITextField!
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.backgroundColor = .backgroundColor()
+        nameField.backgroundColor = .backgroundColor()
+        nameField.textColor = .headerTextColor()
+        nameField.font = .smallFont()
+        
+        nameField.attributedPlaceholder = NSAttributedString(string: "Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: UIFont.smallFont()])
     }
 }

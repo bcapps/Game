@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Hero Creation View Controller-->
+        <!--New Hero-->
         <scene sceneID="ewJ-xi-FDr">
             <objects>
                 <viewController id="pyA-fk-XHE" customClass="HeroCreationViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4z-Qq-RGm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-6r-SVk">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-6r-SVk">
                                         <rect key="frame" x="15" y="15" width="289" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="NSf-Gs-vo0"/>
@@ -58,8 +58,10 @@
                             <constraint firstItem="h4z-Qq-RGm" firstAttribute="width" secondItem="jAm-EA-FEG" secondAttribute="width" id="xSK-dh-09D"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Hero" id="DM9-Rg-DUV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="nameField" destination="C9E-6r-SVk" id="BQ2-5A-kbK"/>
                         <outlet property="scrollView" destination="h4z-Qq-RGm" id="ekW-5m-ypi"/>
                     </connections>
                 </viewController>
