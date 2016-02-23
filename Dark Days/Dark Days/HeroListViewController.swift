@@ -17,9 +17,8 @@ final class HeroListViewController: UITableViewController {
         dataSource = ListDataSource(collection: items, configureCell: { cell, item in
             cell.textLabel?.text = item?.name
         })
-                
+        
         tableView.registerClass(UITableViewCell.self, type: .Cell)
         tableView.dataSource = dataSource
     }
 }
-
