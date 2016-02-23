@@ -24,6 +24,12 @@ struct Race: Decodable, Nameable, Codeable {
     }
 }
 
+extension Race {
+    var image: UIImage {
+        return UIImage(named: "Elf") ?? UIImage()
+    }
+}
+
 final class RaceCoder: NSObject, Coder {
     typealias CodeableType = Race
     

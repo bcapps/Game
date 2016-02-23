@@ -12,11 +12,11 @@ final class HeroListViewController: UITableViewController {
     var dataSource: ListDataSource<Hero, LeftImageCell>?
     
     override func viewDidLoad() {
-        let heroes: [Hero] = [Hero]()
+        let heroes: [Hero] = HeroPersistence().allPersistedHeroes()
         
         dataSource = ListDataSource(collection: heroes, configureCell: { cell, hero in
             cell.nameLabel?.text = hero?.name
-            cell.raceImageView?.image = UIImage(named: "Elf-Male")
+            cell.raceImageView?.image = hero?.race.image
         })
         
         tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
