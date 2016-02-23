@@ -94,10 +94,6 @@
 		F2350B0E1C7BE76700D6E18E /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B0D1C7BE76700D6E18E /* HeroCell.swift */; };
 		F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */; };
 		F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */; };
-		F2350B791C7C165F00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; };
-		F2350B7A1C7C165F00D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; };
-		F2350B7B1C7C166300D6E18E /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; };
-		F2350B7C1C7C166300D6E18E /* Decodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2350B771C7C165F00D6E18E /* Decodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
@@ -127,7 +123,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2350B7C1C7C166300D6E18E /* Decodable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +185,6 @@
 		F2350B0D1C7BE76700D6E18E /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Male@2x.png"; sourceTree = "<group>"; };
 		F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Female@2x.png"; sourceTree = "<group>"; };
-		F2350B771C7C165F00D6E18E /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Decodable.framework; sourceTree = "<group>"; };
 		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,7 +193,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350B7B1C7C166300D6E18E /* Decodable.framework in Frameworks */,
 				BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350B791C7C165F00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2350B7A1C7C165F00D6E18E /* Decodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +308,6 @@
 				C394058D1C7CAE2B00EBFD07 /* Support */,
 				F2350B021C7BCEA700D6E18E /* View */,
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
-				F21ECDEE1C7A532C008041E9 /* Libraries */,
 				F21ECDEF1C7A5341008041E9 /* World */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
 				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
@@ -350,14 +340,6 @@
 				F21ECDDD1C7A516B008041E9 /* Info.plist */,
 			);
 			path = "Dark DaysUITests";
-			sourceTree = "<group>";
-		};
-		F21ECDEE1C7A532C008041E9 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				F2350B771C7C165F00D6E18E /* Decodable.framework */,
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 		F21ECDEF1C7A5341008041E9 /* World */ = {
