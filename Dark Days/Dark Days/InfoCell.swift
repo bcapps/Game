@@ -9,9 +9,37 @@
 import UIKit
 
 final class InfoCell: UITableViewCell {
-    @IBOutlet weak var infoImageView: UIImageView!
-    @IBOutlet weak var infoNameLabel: UILabel!
-    @IBOutlet weak var infoTextView: UITextView!
+    var infoImage: UIImage? {
+        set {
+            infoImageView.image = newValue
+        }
+        get {
+            return infoImageView.image
+        }
+    }
+    
+    var nameText: String? {
+        set {
+            infoNameLabel.text = newValue
+        }
+        get {
+            return infoNameLabel.text
+        }
+    }
+    
+    var infoAttributedText: NSAttributedString? {
+        set {
+            infoTextView.attributedText = newValue
+            layoutIfNeeded()
+        }
+        get {
+            return infoTextView.attributedText
+        }
+    }
+    
+    @IBOutlet private weak var infoImageView: UIImageView!
+    @IBOutlet private weak var infoNameLabel: UILabel!
+    @IBOutlet private weak var infoTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +66,10 @@ final class InfoCell: UITableViewCell {
         infoTextView.backgroundColor = backgroundColor
         infoTextView.textContainer.lineFragmentPadding = 0;
         infoTextView.textContainerInset = UIEdgeInsetsZero
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(white: 0.13, alpha: 1.0)
+        selectedBackgroundView = backgroundView
     }
     
     override func layoutSubviews() {

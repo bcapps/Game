@@ -17,14 +17,12 @@ final class RaceListViewController: UITableViewController {
         let races: [Race] = ObjectProvider.objectsForJSON("Races")
         
         dataSource = ListDataSource(collection: races, configureCell: { cell, race in
-            cell.infoNameLabel?.text = race?.name
-            cell.infoImageView?.image = race?.image
+            cell.nameText = race?.name
+            cell.infoImage = race?.image
             
             if let race = race {
-                cell.infoTextView?.attributedText = self.raceInfoTextForRace(race)
+                cell.infoAttributedText = self.raceInfoTextForRace(race)
             }
-            
-            cell.layoutIfNeeded()
         })
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
@@ -33,16 +31,18 @@ final class RaceListViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()
+        
+        title = "Races"
     }
     
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {
         let infoAttributedString = NSMutableAttributedString()
         
-        let paragraphyStyle = NSMutableParagraphStyle()
-        paragraphyStyle.lineHeightMultiple = 0.85
-        
         if race.explanation.characters.count > 0 {
-            let damageString = NSAttributedString(string: race.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+            let paragraphyStyle = NSMutableParagraphStyle()
+            paragraphyStyle.lineHeightMultiple = 0.9
+
+            let damageString = NSAttributedString(string: race.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
             
             infoAttributedString.appendAttributedString(damageString)
         }
