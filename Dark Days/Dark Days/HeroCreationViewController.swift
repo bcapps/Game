@@ -25,11 +25,13 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        let nameFieldFont = UIFont(name: "Avenir-Heavy", size: 21.0) ?? UIFont.systemFontOfSize(21.0)
+        
         view.backgroundColor = .backgroundColor()
         nameField.backgroundColor = .backgroundColor()
         nameField.textColor = .headerTextColor()
-        nameField.font = .smallFont()
-        nameField.attributedPlaceholder = NSAttributedString.attributedStringWithSmallAttributes("Hero Name")
+        nameField.font = nameFieldFont
+        nameField.attributedPlaceholder = NSAttributedString(string: "Enter Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: nameFieldFont])
         
         transitionToRaceList()
     }
