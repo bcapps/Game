@@ -9,7 +9,11 @@
 import UIKit
 
 final class RaceListViewController: UITableViewController {
+    
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    
     var dataSource: ListDataSource<Race, InfoCell>?
+    var selectedRace: Race?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,12 @@ final class RaceListViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedRace = dataSource?.collection[indexPath.row]
+        
+        nextButton.enabled = true
     }
     
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {
