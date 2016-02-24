@@ -11,12 +11,10 @@ import UIKit
 final class SkillsListViewController: UITableViewController {
     var skills = [Skill]() {
         didSet {
-            dataSource = ListDataSource(collection: skills, configureCell: { cell, item in
-                if let item = item {
-                    cell.infoImage = UIImage(named: "Elf")
-                    cell.nameText = item.name
-                    //cell.infoAttributedText = self.descriptionForItem(item)
-                }
+            dataSource = ListDataSource(collection: skills, configureCell: { cell, skill in
+                cell.infoImage = skill?.image
+                cell.nameText = skill?.name
+                cell.infoAttributedText = self.descriptionForSkill(skill)
             })
             
             tableView.reloadData()
@@ -34,5 +32,16 @@ final class SkillsListViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()
+    }
+    
+    private func descriptionForSkill(skill: Skill?) -> NSAttributedString? {
+        if let skill = skill {
+            let paragraphyStyle = NSMutableParagraphStyle()
+            paragraphyStyle.lineHeightMultiple = 0.85
+            
+            return NSAttributedString(string: skill.benefit + "\n" + skill.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+        }
+        
+        return nil
     }
 }

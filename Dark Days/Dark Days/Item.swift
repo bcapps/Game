@@ -56,6 +56,12 @@ struct Item: Decodable, Nameable, Codeable {
     }
 }
 
+extension Item {
+    var image: UIImage {
+        return UIImage(named: name) ?? UIImage()
+    }
+}
+
 final class ItemCoder: NSObject, Coder {
     typealias CodeableType = Item
     
