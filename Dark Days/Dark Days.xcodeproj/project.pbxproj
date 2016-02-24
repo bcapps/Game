@@ -23,7 +23,6 @@
 		C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
-		C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */; };
 		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
 		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		C3AB8F581C7DF857007CE0BA /* SkillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */; };
@@ -155,7 +154,6 @@
 		C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHero.swift; sourceTree = "<group>"; };
 		C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCreationViewController.swift; sourceTree = "<group>"; };
 		C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroCreation.storyboard; sourceTree = "<group>"; };
-		C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RaceList.storyboard; sourceTree = "<group>"; };
 		C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
 		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsListViewController.swift; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 		C3AB8F531C7D0CD5007CE0BA /* Race */ = {
 			isa = PBXGroup;
 			children = (
-				C3AB8F4F1C7D0AC6007CE0BA /* RaceList.storyboard */,
 				C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */,
 			);
 			name = Race;
@@ -658,7 +655,6 @@
 				F2350B0C1C7BE3A900D6E18E /* LeftImageCell.xib in Resources */,
 				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
-				C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
