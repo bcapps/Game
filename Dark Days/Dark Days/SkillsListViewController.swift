@@ -36,10 +36,7 @@ final class SkillsListViewController: UITableViewController {
     
     private func descriptionForSkill(skill: Skill?) -> NSAttributedString? {
         if let skill = skill {
-            let paragraphyStyle = NSMutableParagraphStyle()
-            paragraphyStyle.lineHeightMultiple = 0.85
-            
-            return NSAttributedString(string: skill.benefit + "\n" + skill.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+            return NSAttributedString.attributedStringWithBodyAttributes(skill.benefit + "\n" + skill.explanation)
         }
         
         return nil
