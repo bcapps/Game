@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RaceListViewControllerDelegate {
+    func didSelectRace(raceListViewController: RaceListViewController, race: Race)
+}
+
 final class RaceListViewController: UITableViewController {
     
     var races = [Race]() {
@@ -25,8 +29,9 @@ final class RaceListViewController: UITableViewController {
         }
     }
     
+    var raceListDelegate: RaceListViewControllerDelegate?
+    
     private var dataSource: ListDataSource<Race, InfoCell>?
-    private var selectedRace: Race?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +42,14 @@ final class RaceListViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.keyboardDismissMode = .Interactive
         tableView.customize()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let race = dataSource?.collection[indexPath.row]
+        
+        if let race = race {
+            raceListDelegate?.didSelectRace(self, race: race)
+        }
     }
     
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {

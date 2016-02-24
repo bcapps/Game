@@ -8,9 +8,19 @@
 
 import UIKit
 
-public class HeroCreationViewController: UIViewController {
+public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate {
+    
+    private enum HeroCreationState: String {
+        case ChooseRace
+        case ChooseSkill
+        case ChooseAttributes
+    }
     
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    
+    private let heroBuilder = HeroBuilder()
+    private var currentCreationState: HeroCreationState = .ChooseRace
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +34,30 @@ public class HeroCreationViewController: UIViewController {
         transitionToRaceList()
     }
     
+    internal func didSelectRace(raceListViewController: RaceListViewController, race: Race) {
+        heroBuilder.race = race
+        nextButton.enabled = true
+    }
+    
+    @IBAction func nextButtonTapped(sender: AnyObject) {
+        nextButton.enabled = false
+        
+        if currentCreationState == .ChooseRace {
+            if heroBuilder.race.raceType == .Human {
+                transitionToSkillList()
+            }
+            else {
+                transitionToItemList()
+            }
+        }
+        else if currentCreationState == .ChooseSkill {
+            
+        }
+        else if currentCreationState == .ChooseAttributes {
+            
+        }
+    }
+    
     private func transitionToItemList() {
         let itemListViewController = ItemListViewController()
         itemListViewController.items = ObjectProvider.objectsForJSON("Items")
@@ -32,10 +66,23 @@ public class HeroCreationViewController: UIViewController {
     }
     
     private func transitionToRaceList() {
+        currentCreationState = .ChooseRace
+        
         let raceListViewController = RaceListViewController()
+        raceListViewController.raceListDelegate = self
         raceListViewController.races = ObjectProvider.objectsForJSON("Races")
         
         switchToViewController(raceListViewController)
+    }
+    
+    private func transitionToSkillList() {
+        currentCreationState = .ChooseSkill
+
+        let skillListViewController = SkillsListViewController()
+        skillListViewController.skills = ObjectProvider.objectsForJSON("Skills")
+        
+        switchToViewController(skillListViewController)
+        
     }
     
     private func switchToViewController(viewController: UIViewController) {

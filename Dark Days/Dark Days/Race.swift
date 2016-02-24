@@ -25,6 +25,25 @@ struct Race: Decodable, Nameable, Codeable {
 }
 
 extension Race {
+    enum RaceType: String {
+        case Human
+        case Dwarf
+        case Elf
+    }
+    
+    var raceType: RaceType {
+        get {
+            if self.name == "Dwarf" {
+                return .Dwarf
+            }
+            else if self.name == "Elf" {
+                return .Elf
+            }
+            
+            return .Human
+        }
+    }
+
     var image: UIImage {
         return UIImage(named: name) ?? UIImage()
     }
