@@ -15,22 +15,38 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Hau-kM-5z4" kind="relationship" relationship="rootViewController" id="K2E-lI-7ir"/>
+                        <segue destination="Xfa-P7-i6p" kind="relationship" relationship="rootViewController" id="hAv-tu-eSk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tej-Un-hEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41" y="36"/>
         </scene>
-        <!--RaceList-->
-        <scene sceneID="xrO-bZ-7ZW">
+        <!--Choose Race-->
+        <scene sceneID="0Gu-k8-A1q">
             <objects>
-                <viewControllerPlaceholder storyboardName="RaceList" id="Hau-kM-5z4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mnz-bw-C5w"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YBw-J3-2QP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Choose Race" id="Xfa-P7-i6p" customClass="RaceListViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tMe-wF-cws">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Xfa-P7-i6p" id="59I-hi-9gy"/>
+                            <outlet property="delegate" destination="Xfa-P7-i6p" id="l57-Hf-gj2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Race" id="e0s-VH-I0P">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eQN-kh-9wT">
+                            <connections>
+                                <segue destination="xZr-HS-ZaI" kind="custom" customClass="DismissSegue" customModule="Dark_Days" customModuleProvider="target" id="rdc-At-tuA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="OK0-Xn-P1c"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vi3-1P-Bo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="36"/>
+            <point key="canvasLocation" x="455" y="36"/>
         </scene>
     </scenes>
 </document>
