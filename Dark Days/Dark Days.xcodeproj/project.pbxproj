@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192061302A0CAD9080A4CAE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
+		C30460B41C7E1F6000A7DB63 /* StatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B31C7E1F6000A7DB63 /* StatListViewController.swift */; };
+		C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B61C7E1F8200A7DB63 /* ListViewController.swift */; };
 		C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39405901C7CAE7900EBFD07 /* InfoCell.xib */; };
 		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
 		C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
@@ -145,6 +147,8 @@
 		2192061302A0CAD9080A4CAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildControllerExtension.swift; sourceTree = "<group>"; };
+		C30460B31C7E1F6000A7DB63 /* StatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatListViewController.swift; sourceTree = "<group>"; };
+		C30460B61C7E1F8200A7DB63 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C39405901C7CAE7900EBFD07 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		C39405921C7CAF2900EBFD07 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		C39405951C7CB10D00EBFD07 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -252,6 +256,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C30460B51C7E1F6600A7DB63 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				C30460B31C7E1F6000A7DB63 /* StatListViewController.swift */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
 		C394058D1C7CAE2B00EBFD07 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +315,8 @@
 		C3AB8F3B1C7CF3F2007CE0BA /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
+				C30460B51C7E1F6600A7DB63 /* Stats */,
 				C394059D1C7CB68500EBFD07 /* Root */,
 				C3AB8F531C7D0CD5007CE0BA /* Race */,
 				C3AB8F3D1C7CF407007CE0BA /* Item */,
@@ -760,6 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
@@ -785,6 +800,7 @@
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
+				C30460B41C7E1F6000A7DB63 /* StatListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,

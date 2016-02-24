@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate, SkillsListViewControllerDelegate {
+public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate, SkillsListViewControllerDelegate, ListViewControllerDelegate {
     
     private enum HeroCreationState: String {
         case ChooseRace
@@ -89,21 +89,33 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         }
     }
     
+    func didSelectObject<T: Displayable>(itemListViewController: ListViewController<T>, object: T) {
+        nextButton.enabled = true
+        
+        if let object = object as? Race {
+            heroBuilder.race = object
+        }
+        else if let object = object as? Skill {
+            heroBuilder.skill = object
+        }
+    }
+    
     private func transitionToItemList() {
         currentCreationState = .ChooseAttributes
         
-        let itemListViewController = ItemListViewController()
-        itemListViewController.items = ObjectProvider.objectsForJSON("Items")
+        let raceListViewController = ListViewController<Item>(style: .Plain)
+        raceListViewController.listDelegate = self
+        raceListViewController.objects = ObjectProvider.objectsForJSON("Items")
         
-        switchToViewController(itemListViewController)
+        switchToViewController(raceListViewController)
     }
     
     private func transitionToRaceList() {
         currentCreationState = .ChooseRace
         
-        let raceListViewController = RaceListViewController()
-        raceListViewController.raceListDelegate = self
-        raceListViewController.races = ObjectProvider.objectsForJSON("Races")
+        let raceListViewController = ListViewController<Race>(style: .Plain)
+        raceListViewController.listDelegate = self
+        raceListViewController.objects = ObjectProvider.objectsForJSON("Races")
         
         switchToViewController(raceListViewController)
     }
@@ -111,11 +123,11 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
     private func transitionToSkillList() {
         currentCreationState = .ChooseSkill
 
-        let skillListViewController = SkillsListViewController()
-        skillListViewController.skillsListDelegate = self
-        skillListViewController.skills = ObjectProvider.objectsForJSON("Skills")
+        let raceListViewController = ListViewController<Skill>(style: .Plain)
+        raceListViewController.listDelegate = self
+        raceListViewController.objects = ObjectProvider.objectsForJSON("Skills")
         
-        switchToViewController(skillListViewController)
+        switchToViewController(raceListViewController)
         
     }
     

@@ -23,12 +23,6 @@ struct Skill: Decodable, Nameable, Codeable {
     }
 }
 
-extension Skill {
-    var image: UIImage {
-        return UIImage(named: name) ?? UIImage()
-    }
-}
-
 final class SkillCoder: NSObject, Coder {
     typealias CodeableType = Skill
     
