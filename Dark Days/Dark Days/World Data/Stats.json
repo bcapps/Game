@@ -2,25 +2,25 @@
  "name": "Strength",
  "shortName": "STR",
  "explanation": "Strength measures your character’s muscle and physical power.",
- "benefits": ["Increases damage dealt with melee or thrown weapons.", "Increases chance to hit with melee weapons."]
+ "benefits": ["• Increases damage dealt with melee or thrown weapons.", "• Increases chance to hit with melee weapons."]
  }, {
  "name": "Dexterity",
  "shortName": "DEX",
  "explanation": "Dexterity measures hand-eye coordination, agility, reflexes, and balance.",
- "benefits": ["Increases chance to hit with ranged weapons.", "Increases chance to evade ranged and melee weapon attacks."]
+ "benefits": ["• Increases chance to hit with ranged weapons.", "• Increases chance to evade ranged and melee weapon attacks."]
  }, {
  "name": "Constitution",
  "shortName": "CON",
  "explanation": "Constitution represents your character’s health and stamina.",
- "benefits": ["Increases chance to resist physically debilitating effects, such as poison.", "Increases resistance to being interrupted or knocked down."]
+ "benefits": ["• Increases chance to resist physically debilitating effects, such as poison.", "• Increases resistance to being interrupted or knocked down."]
  }, {
  "name": "Intelligence",
  "shortName": "INT",
  "explanation": "Intelligence determines how well your character learns and reasons.",
- "benefits": ["Increases chance to hit with spells.", "Increases chance you will resist damaging spells cast upon you."]
+ "benefits": ["• Increases chance to hit with spells.", "• Increases chance you will resist damaging spells cast upon you."]
  }, {
  "name": "Faith",
  "shortName": "FAI",
  "explanation": "Faith represents your belief in the god that has bestowed this magic upon you.",
- "benefits": ["Increases damage dealt by spells.", "Increases chance you will resist mentally debilitating effects, such as mind control."]
+ "benefits": ["• Increases damage dealt by spells.", "• Increases chance you will resist mentally debilitating effects, such as mind control."]
  }]

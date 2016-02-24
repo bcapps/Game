@@ -68,11 +68,11 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
                     heroBuilder.skill = ObjectProvider.skillForName("Dwarven Resilience")
                 }
                 
-                transitionToItemList()
+                transitionToStatList()
             }
         }
         else if currentCreationState == .ChooseSkill {
-            transitionToItemList()
+            transitionToStatList()
         }
         else if currentCreationState == .ChooseAttributes {
             
@@ -90,14 +90,14 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
     }
     
-    private func transitionToItemList() {
+    private func transitionToStatList() {
         currentCreationState = .ChooseAttributes
         
-        let raceListViewController = ListViewController<Item>(style: .Plain)
-        raceListViewController.listDelegate = self
-        raceListViewController.objects = ObjectProvider.objectsForJSON("Items")
+        let statListViewController = ListViewController<Stat>(style: .Plain)
+        statListViewController.listDelegate = self
+        statListViewController.objects = ObjectProvider.objectsForJSON("Stats")
         
-        switchToViewController(raceListViewController)
+        switchToViewController(statListViewController)
     }
     
     private func transitionToRaceList() {
@@ -113,12 +113,11 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToSkillList() {
         currentCreationState = .ChooseSkill
 
-        let raceListViewController = ListViewController<Skill>(style: .Plain)
-        raceListViewController.listDelegate = self
-        raceListViewController.objects = ObjectProvider.objectsForJSON("Skills")
+        let skillListViewController = ListViewController<Skill>(style: .Plain)
+        skillListViewController.listDelegate = self
+        skillListViewController.objects = ObjectProvider.objectsForJSON("Skills")
         
-        switchToViewController(raceListViewController)
-        
+        switchToViewController(skillListViewController)
     }
     
     private func switchToViewController(viewController: UIViewController) {

@@ -131,10 +131,10 @@ extension Stat: Displayable {
     }
     
     var subtext: String? {
-        return nil
+        return benefits.joinWithSeparator("\n")
     }
     
     var additionalInfo: String? {
-        return benefits.joinWithSeparator("\n")
+        return nil
     }
 }
