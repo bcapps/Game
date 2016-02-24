@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192061302A0CAD9080A4CAE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
 		C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39405901C7CAE7900EBFD07 /* InfoCell.xib */; };
 		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
 		C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
@@ -143,6 +144,7 @@
 /* Begin PBXFileReference section */
 		2192061302A0CAD9080A4CAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildControllerExtension.swift; sourceTree = "<group>"; };
 		C39405901C7CAE7900EBFD07 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		C39405921C7CAF2900EBFD07 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		C39405951C7CB10D00EBFD07 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				C39405971C7CB16900EBFD07 /* FontExtension.swift */,
 				C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */,
 				F2350B831C7D59DE00D6E18E /* DismissSegue.swift */,
+				C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */,
 			);
 			name = "UI Customization";
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
+				C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */,
 				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

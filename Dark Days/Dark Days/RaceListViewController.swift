@@ -10,8 +10,6 @@ import UIKit
 
 final class RaceListViewController: UITableViewController {
     
-    @IBOutlet weak var nextButton: UIBarButtonItem!
-    
     var races = [Race]() {
         didSet {
             dataSource = ListDataSource(collection: races, configureCell: { cell, race in
@@ -37,14 +35,8 @@ final class RaceListViewController: UITableViewController {
         tableView.dataSource = dataSource
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        tableView.keyboardDismissMode = .Interactive
         tableView.customize()
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedRace = dataSource?.collection[indexPath.row]
-        
-        nextButton.enabled = true
     }
     
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {

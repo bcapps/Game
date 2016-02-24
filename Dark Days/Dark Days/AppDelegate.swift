@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.tintColor = UIColor.whiteColor()
         
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            if let viewController = navigationController.viewControllers.first as? HeroListViewController {
+                viewController.heroes = HeroPersistence().allPersistedHeroes()
+            }
+        }
+        
         return true
     }
 }

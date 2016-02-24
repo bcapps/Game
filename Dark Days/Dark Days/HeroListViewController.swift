@@ -31,12 +31,4 @@ final class HeroListViewController: UITableViewController {
         
         tableView.customize()
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? UINavigationController {
-            if let viewController = destination.viewControllers.first as? RaceListViewController {
-                viewController.races = ObjectProvider.objectsForJSON("Races")
-            }
-        }
-    }
 }
