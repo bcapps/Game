@@ -34,24 +34,21 @@ final class ItemListViewController: UITableViewController {
     
     private func descriptionForItem(item: Item) -> NSAttributedString {
         let description = NSMutableAttributedString()
-        
-        let paragraphyStyle = NSMutableParagraphStyle()
-        paragraphyStyle.lineHeightMultiple = 0.85
-                
+                        
         if item.damage.characters.count > 0 {
-            let damageString = NSAttributedString(string: "Damage: " + item.damage, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+            let damageString = NSAttributedString.attributedStringWithBodyAttributes("Damage: " + item.damage)
             
             description.appendAttributedString(damageString)
         }
         
         if item.effects.characters.count > 0 {
-            let effectsString = NSAttributedString(string: "\n\n" + item.effects, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+            let effectsString = NSAttributedString.attributedStringWithBodyAttributes("\n\n" + item.effects)
             
             description.appendAttributedString(effectsString)
         }
         
         if item.flavor.characters.count > 0 {
-            let flavorString = NSAttributedString(string: "\n\n" + item.flavor, attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.sideTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
+            let flavorString = NSAttributedString.attributedStringWithSmallAttributes("\n\n" + item.flavor)
             
             description.appendAttributedString(flavorString)
         }

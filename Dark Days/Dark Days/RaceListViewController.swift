@@ -34,7 +34,7 @@ final class RaceListViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        tableView.customize()        
+        tableView.customize()
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -46,25 +46,17 @@ final class RaceListViewController: UITableViewController {
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {
         let infoAttributedString = NSMutableAttributedString()
         
-        if race.explanation.characters.count > 0 {
-            let paragraphyStyle = NSMutableParagraphStyle()
-            paragraphyStyle.lineHeightMultiple = 0.9
-
-            let damageString = NSAttributedString(string: race.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphyStyle])
-            
-            infoAttributedString.appendAttributedString(damageString)
-        }
+        let explanation = NSAttributedString.attributedStringWithBodyAttributes(race.explanation)
+        infoAttributedString.appendAttributedString(explanation)
         
-        if race.benefits.count > 0 {
-            infoAttributedString.appendAttributedString(NSAttributedString(string: "\n\nBenefits", attributes: [NSFontAttributeName: UIFont.headingFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()]))
+        let benefitsHeading = NSAttributedString.attributedStringWithHeadingAttributes("\n\nBenefits")
+        infoAttributedString.appendAttributedString(benefitsHeading)
+        
+        for string in race.benefits {
+            infoAttributedString.appendAttributedString(NSAttributedString(string: "\n"))
             
-            for string in race.benefits {
-                infoAttributedString.appendAttributedString(NSAttributedString(string: "\n"))
-                
-                let benefitString = NSAttributedString(string: "• " + string, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
-                
-                infoAttributedString.appendAttributedString(benefitString)
-            }
+            let benefitString = NSAttributedString.attributedStringWithBodyAttributes("• " + string)
+            infoAttributedString.appendAttributedString(benefitString)
         }
         
         return infoAttributedString

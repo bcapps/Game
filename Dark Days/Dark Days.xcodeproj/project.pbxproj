@@ -26,6 +26,7 @@
 		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
 		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		C3AB8F581C7DF857007CE0BA /* SkillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */; };
+		C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
@@ -157,6 +158,7 @@
 		C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
 		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsListViewController.swift; sourceTree = "<group>"; };
+		C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
 				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
+				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
+				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
 				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
