@@ -107,7 +107,9 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         let statListViewController = ListViewController<Stat>(style: .Plain)
         statListViewController.listDelegate = self
         statListViewController.objects = ObjectProvider.objectsForJSON("Stats")
-
+        
+        title = "Choose Stat"
+        
         switchToViewController(statListViewController)
     }
     
@@ -118,6 +120,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         raceListViewController.listDelegate = self
         raceListViewController.objects = ObjectProvider.objectsForJSON("Races")
         
+        title = "Choose Race"
+        
         switchToViewController(raceListViewController)
     }
     
@@ -127,6 +131,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         let skillListViewController = ListViewController<Skill>(style: .Plain)
         skillListViewController.listDelegate = self
         skillListViewController.objects = ObjectProvider.objectsForJSON("Skills")
+        
+        title = "Choose Skill"
         
         switchToViewController(skillListViewController)
     }

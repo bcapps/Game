@@ -12,7 +12,7 @@ protocol ListViewControllerDelegate {
     func didSelectObject<T: Displayable>(listViewController: ListViewController<T>, object: T)
 }
 
-final class ListViewController<T: Displayable>: UITableViewController {
+class ListViewController<T: Displayable>: UITableViewController {
     private var dataSource: ListDataSource<T, InfoCell>?
     
     override init(style: UITableViewStyle) {
