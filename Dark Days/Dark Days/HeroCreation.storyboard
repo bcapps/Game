@@ -49,9 +49,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MZD-CG-2IS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CKh-Ni-sA5">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="CKh-Ni-sA5">
                             <connections>
-                                <segue destination="xZr-HS-ZaI" kind="custom" customClass="DismissSegue" customModule="Dark_Days" customModuleProvider="target" id="zz8-lg-Ioe"/>
+                                <action selector="backButtonTapped:" destination="nDV-16-MyN" id="qyb-sw-G7G"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="noM-nb-y3g">

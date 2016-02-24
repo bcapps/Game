@@ -44,6 +44,25 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         nextButton.enabled = true
     }
     
+    @IBAction func backButtonTapped(sender: AnyObject) {
+        if currentCreationState == .ChooseRace {
+            presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        }
+        else if currentCreationState == .ChooseSkill {
+            transitionToRaceList()
+        }
+        else if currentCreationState == .ChooseAttributes {
+            if heroBuilder.race.raceType == .Human {
+                transitionToSkillList()
+            }
+            else {
+                transitionToRaceList()
+            }
+        }
+        
+        nextButton.enabled = false
+    }
+    
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
         
@@ -63,7 +82,7 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
             }
         }
         else if currentCreationState == .ChooseSkill {
-            
+            transitionToItemList()
         }
         else if currentCreationState == .ChooseAttributes {
             
@@ -71,6 +90,8 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
     }
     
     private func transitionToItemList() {
+        currentCreationState = .ChooseAttributes
+        
         let itemListViewController = ItemListViewController()
         itemListViewController.items = ObjectProvider.objectsForJSON("Items")
         
