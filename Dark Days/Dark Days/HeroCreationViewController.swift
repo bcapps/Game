@@ -20,7 +20,6 @@ public class HeroCreationViewController: UIViewController {
         nameField.backgroundColor = .backgroundColor()
         nameField.textColor = .headerTextColor()
         nameField.font = .smallFont()
-        
-        nameField.attributedPlaceholder = NSAttributedString(string: "Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: UIFont.smallFont()])
+        nameField.attributedPlaceholder = NSAttributedString.attributedStringWithSmallAttributes("Hero Name")
     }
 }
