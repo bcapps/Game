@@ -9,20 +9,24 @@
 import UIKit
 
 final class ItemListViewController: UITableViewController {
-    var dataSource: ListDataSource<Item, InfoCell>?
+    var items = [Item]() {
+        didSet {
+            dataSource = ListDataSource(collection: items, configureCell: { cell, item in
+                if let item = item {
+                    cell.infoImage = UIImage(named: "Elf")
+                    cell.nameText = item.name
+                    cell.infoAttributedText = self.descriptionForItem(item)
+                }
+            })
+            
+            tableView.reloadData()
+        }
+    }
+    
+    private var dataSource: ListDataSource<Item, InfoCell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let items: [Item] = ObjectProvider.objectsForJSON("Items")
-        
-        dataSource = ListDataSource(collection: items, configureCell: { cell, item in
-            if let item = item {
-                cell.infoImage = UIImage(named: "Elf")
-                cell.nameText = item.name
-                cell.infoAttributedText = self.descriptionForItem(item)
-            }
-        })
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.dataSource = dataSource

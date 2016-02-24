@@ -12,22 +12,26 @@ final class RaceListViewController: UITableViewController {
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
-    var dataSource: ListDataSource<Race, InfoCell>?
-    var selectedRace: Race?
+    var races = [Race]() {
+        didSet {
+            dataSource = ListDataSource(collection: races, configureCell: { cell, race in
+                cell.nameText = race?.name
+                cell.infoImage = race?.image
+                
+                if let race = race {
+                    cell.infoAttributedText = self.raceInfoTextForRace(race)
+                }
+            })
+            
+            tableView.reloadData()
+        }
+    }
+    
+    private var dataSource: ListDataSource<Race, InfoCell>?
+    private var selectedRace: Race?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let races: [Race] = ObjectProvider.objectsForJSON("Races")
-        
-        dataSource = ListDataSource(collection: races, configureCell: { cell, race in
-            cell.nameText = race?.name
-            cell.infoImage = race?.image
-            
-            if let race = race {
-                cell.infoAttributedText = self.raceInfoTextForRace(race)
-            }
-        })
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.dataSource = dataSource
