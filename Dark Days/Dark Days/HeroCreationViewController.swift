@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate, SkillsListViewControllerDelegate, ListViewControllerDelegate {
+public class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     private enum HeroCreationState: String {
         case ChooseRace
@@ -32,16 +32,6 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         nameField.attributedPlaceholder = NSAttributedString.attributedStringWithSmallAttributes("Hero Name")
         
         transitionToRaceList()
-    }
-    
-    internal func didSelectRace(raceListViewController: RaceListViewController, race: Race) {
-        heroBuilder.race = race
-        nextButton.enabled = true
-    }
-    
-    internal func didSelectSkill(skillsListViewController: SkillsListViewController, skill: Skill) {
-        heroBuilder.skill = skill
-        nextButton.enabled = true
     }
     
     @IBAction func backButtonTapped(sender: AnyObject) {
@@ -89,7 +79,7 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         }
     }
     
-    func didSelectObject<T: Displayable>(itemListViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: Displayable>(listViewController: ListViewController<T>, object: T) {
         nextButton.enabled = true
         
         if let object = object as? Race {

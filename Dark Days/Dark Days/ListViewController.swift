@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ListViewControllerDelegate {
-    func didSelectObject<T: Displayable>(itemListViewController: ListViewController<T>, object: T)
+    func didSelectObject<T: Displayable>(listViewController: ListViewController<T>, object: T)
 }
 
 final class ListViewController<T: Displayable>: UITableViewController {

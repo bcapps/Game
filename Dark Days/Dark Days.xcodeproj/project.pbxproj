@@ -15,8 +15,6 @@
 		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
 		C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
 		C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
-		C394059A1C7CB63A00EBFD07 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39405991C7CB63A00EBFD07 /* ItemList.storyboard */; };
-		C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */; };
 		C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
 		C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
 		C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
@@ -26,7 +24,6 @@
 		C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
-		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
 		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		C3AB8F581C7DF857007CE0BA /* SkillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */; };
 		C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
@@ -153,15 +150,12 @@
 		C39405921C7CAF2900EBFD07 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		C39405951C7CB10D00EBFD07 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C39405971C7CB16900EBFD07 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
-		C39405991C7CB63A00EBFD07 /* ItemList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
-		C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		C394059E1C7CB69F00EBFD07 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroPersistence.swift; sourceTree = "<group>"; };
 		C3AB8F461C7CF992007CE0BA /* HeroPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroPersistenceTests.swift; sourceTree = "<group>"; };
 		C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHero.swift; sourceTree = "<group>"; };
 		C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCreationViewController.swift; sourceTree = "<group>"; };
 		C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroCreation.storyboard; sourceTree = "<group>"; };
-		C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
 		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		C3AB8F571C7DF857007CE0BA /* SkillsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsListViewController.swift; sourceTree = "<group>"; };
 		C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -318,7 +312,6 @@
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
 				C30460B51C7E1F6600A7DB63 /* Stats */,
 				C394059D1C7CB68500EBFD07 /* Root */,
-				C3AB8F531C7D0CD5007CE0BA /* Race */,
 				C3AB8F3D1C7CF407007CE0BA /* Item */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero */,
 				C3AB8F561C7DF817007CE0BA /* Skills */,
@@ -340,18 +333,8 @@
 		C3AB8F3D1C7CF407007CE0BA /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				C39405991C7CB63A00EBFD07 /* ItemList.storyboard */,
-				C394059B1C7CB66200EBFD07 /* ItemListViewController.swift */,
 			);
 			name = Item;
-			sourceTree = "<group>";
-		};
-		C3AB8F531C7D0CD5007CE0BA /* Race */ = {
-			isa = PBXGroup;
-			children = (
-				C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */,
-			);
-			name = Race;
 			sourceTree = "<group>";
 		};
 		C3AB8F561C7DF817007CE0BA /* Skills */ = {
@@ -679,7 +662,6 @@
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
-				C394059A1C7CB63A00EBFD07 /* ItemList.storyboard in Resources */,
 				F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
@@ -790,7 +772,6 @@
 				C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
-				C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */,
@@ -798,7 +779,6 @@
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
-				C394059C1C7CB66200EBFD07 /* ItemListViewController.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				C30460B41C7E1F6000A7DB63 /* StatListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
