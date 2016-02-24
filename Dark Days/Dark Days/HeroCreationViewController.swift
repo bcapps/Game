@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate {
+public class HeroCreationViewController: UIViewController, RaceListViewControllerDelegate, SkillsListViewControllerDelegate {
     
     private enum HeroCreationState: String {
         case ChooseRace
@@ -39,6 +39,11 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         nextButton.enabled = true
     }
     
+    internal func didSelectSkill(skillsListViewController: SkillsListViewController, skill: Skill) {
+        heroBuilder.skill = skill
+        nextButton.enabled = true
+    }
+    
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
         
@@ -47,6 +52,13 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
                 transitionToSkillList()
             }
             else {
+                if heroBuilder.race.raceType == .Elf {
+                    heroBuilder.skill = ObjectProvider.skillForName("Elven Accuracy")
+                }
+                else if heroBuilder.race.raceType == .Dwarf {
+                    heroBuilder.skill = ObjectProvider.skillForName("Dwarven Resilience")
+                }
+                
                 transitionToItemList()
             }
         }
@@ -79,6 +91,7 @@ public class HeroCreationViewController: UIViewController, RaceListViewControlle
         currentCreationState = .ChooseSkill
 
         let skillListViewController = SkillsListViewController()
+        skillListViewController.skillsListDelegate = self
         skillListViewController.skills = ObjectProvider.objectsForJSON("Skills")
         
         switchToViewController(skillListViewController)

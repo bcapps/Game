@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SkillsListViewControllerDelegate {
+    func didSelectSkill(skillsListViewController: SkillsListViewController, skill: Skill)
+}
+
 final class SkillsListViewController: UITableViewController {
     var skills = [Skill]() {
         didSet {
@@ -20,6 +24,8 @@ final class SkillsListViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    var skillsListDelegate: SkillsListViewControllerDelegate?
     
     private var dataSource: ListDataSource<Skill, InfoCell>?
 
@@ -34,11 +40,23 @@ final class SkillsListViewController: UITableViewController {
         tableView.customize()
     }
     
-    private func descriptionForSkill(skill: Skill?) -> NSAttributedString? {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let skill = dataSource?.collection[indexPath.row]
+        
         if let skill = skill {
-            return NSAttributedString.attributedStringWithBodyAttributes(skill.benefit + "\n" + skill.explanation)
+            skillsListDelegate?.didSelectSkill(self, skill: skill)
+        }
+    }
+    
+    private func descriptionForSkill(skill: Skill?) -> NSAttributedString {
+        let description = NSMutableAttributedString()
+
+        if let skill = skill {
+            description.appendAttributedString(NSAttributedString.attributedStringWithBodyAttributes(skill.benefit))
+            description.appendAttributedString(NSAttributedString(string: "\n\n"))
+            description.appendAttributedString(NSAttributedString.attributedStringWithSmallAttributes(skill.explanation))
         }
         
-        return nil
+        return description
     }
 }

@@ -12,12 +12,17 @@ final class HeroBuilder {
     
     var name: String = ""
     var gender: Gender = .Male
-    var skills = [Skill]()
+    var skill: Skill?
     var race: Race = Race(name: "", explanation: "", benefits: [])
     var stats = [Stat]()
         
     func build() -> Hero {
         let inventory = Inventory()
+        
+        var skills = [Skill]()
+        if let skill = skill {
+            skills.append(skill)
+        }
         
         return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, uniqueID: NSUUID().UUIDString)
     }
