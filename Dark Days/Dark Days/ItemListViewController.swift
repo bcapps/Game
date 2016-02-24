@@ -10,7 +10,7 @@ import UIKit
 
 final class ItemListViewController: UITableViewController {
     var dataSource: ListDataSource<Item, InfoCell>?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
