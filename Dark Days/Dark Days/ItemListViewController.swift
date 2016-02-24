@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ItemListViewControllerDelegate {
+    func didSelectItem(itemListViewController: ItemListViewController, item: Item)
+}
+
 final class ItemListViewController: UITableViewController {
     var items = [Item]() {
         didSet {
@@ -23,6 +27,8 @@ final class ItemListViewController: UITableViewController {
         }
     }
     
+    var itemListDelegate: ItemListViewControllerDelegate?
+    
     private var dataSource: ListDataSource<Item, InfoCell>?
     
     override func viewDidLoad() {
@@ -34,6 +40,14 @@ final class ItemListViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let item = dataSource?.collection[indexPath.row]
+        
+        if let item = item {
+            itemListDelegate?.didSelectItem(self, item: item)
+        }
     }
     
     private func descriptionForItem(item: Item) -> NSAttributedString {

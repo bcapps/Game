@@ -22,12 +22,6 @@ public class HeroCreationViewController: UIViewController {
         nameField.attributedPlaceholder = NSAttributedString.attributedStringWithSmallAttributes("Hero Name")
         
         transitionToRaceList()
-        
-        
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) { () -> Void in
-            self.transitionToItemList()
-        }
     }
     
     private func transitionToItemList() {

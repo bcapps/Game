@@ -16,7 +16,7 @@ extension UIViewController {
             viewController.didMoveToParentViewController(self)
         }
         
-        if let currentChildController = childViewControllers.first {
+        if let currentChildController = childViewControllers.last {
             viewController.view.alpha = 0.0
             addViewController(viewController)
             
