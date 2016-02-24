@@ -30,9 +30,7 @@ final class RaceListViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        tableView.customize()
-        
-        title = "Races"
+        tableView.customize()        
     }
     
     private func raceInfoTextForRace(race: Race) -> NSAttributedString {

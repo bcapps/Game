@@ -106,6 +106,7 @@
 		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
+		F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageCell.swift; sourceTree = "<group>"; };
 		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
 		F2350B811C7D3F2500D6E18E /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
+		F2350B831C7D59DE00D6E18E /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				C39405951C7CB10D00EBFD07 /* ColorExtension.swift */,
 				C39405971C7CB16900EBFD07 /* FontExtension.swift */,
 				C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */,
+				F2350B831C7D59DE00D6E18E /* DismissSegue.swift */,
 			);
 			name = "UI Customization";
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
+				F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,

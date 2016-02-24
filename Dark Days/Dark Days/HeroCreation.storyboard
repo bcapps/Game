@@ -9,6 +9,7 @@
         <scene sceneID="NoB-oo-MlT">
             <objects>
                 <navigationController id="xZr-HS-ZaI" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="7hA-Aq-4wR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,11 +26,11 @@
         <scene sceneID="xrO-bZ-7ZW">
             <objects>
                 <viewControllerPlaceholder storyboardName="RaceList" id="Hau-kM-5z4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Races" id="mnz-bw-C5w"/>
+                    <navigationItem key="navigationItem" id="mnz-bw-C5w"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBw-J3-2QP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="36"/>
+            <point key="canvasLocation" x="360" y="36"/>
         </scene>
     </scenes>
 </document>

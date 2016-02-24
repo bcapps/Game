@@ -18,7 +18,6 @@
                             <outlet property="delegate" destination="FD1-VF-jd6" id="fha-uy-oNv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Races" id="BPh-TJ-HFn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb0-6Z-vVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
