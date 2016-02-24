@@ -9,11 +9,11 @@
 import UIKit
 
 protocol ListViewControllerDelegate {
-    func didSelectObject<T: Displayable>(listViewController: ListViewController<T>, object: T)
+    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
 }
 
-class ListViewController<T: Displayable>: UITableViewController {
-    private var dataSource: ListDataSource<T, InfoCell>?
+class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
+    private var dataSource: ListDataSource<ListDisplayable, InfoCell>?
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -21,11 +21,14 @@ class ListViewController<T: Displayable>: UITableViewController {
     
     var objects = [T]() {
         didSet {
-            dataSource = ListDataSource(collection: objects, configureCell: { cell, object in
+            
+            let displayableObjects = ListDisplayable.displayableObjects(objects)
+            
+            dataSource = ListDataSource(collection: displayableObjects, configureCell: { cell, object in
                 if let object = object {
                     cell.infoImage = object.image
                     cell.nameText = object.title
-                    cell.infoAttributedText = object.attributedStringForDisplayable()
+                    cell.infoAttributedText = object.attributedString
                 }
             })
             
@@ -50,42 +53,7 @@ class ListViewController<T: Displayable>: UITableViewController {
         let object = dataSource?.collection[indexPath.row]
         
         if let object = object {
-            listDelegate?.didSelectObject(self, object: object)
+            //listDelegate?.didSelectObject(self, object: object)
         }
-    }
-}
-
-extension Displayable {
-    func attributedStringForDisplayable() -> NSAttributedString {
-        let attributedString = NSMutableAttributedString()
-        
-        if let information = information {
-            let info = NSAttributedString.attributedStringWithBodyAttributes(information)
-            
-            attributedString.appendAttributedString(info)
-        }
-        
-        if let additionalInfo = additionalInfo {
-            attributedString.appendAttributedString(NSAttributedString(string: "\n\n"))
-            
-            if let title = additionalInfoTitle {
-                let attributedTitle = NSAttributedString.attributedStringWithHeadingAttributes(title)
-                attributedString.appendAttributedString(attributedTitle)
-                attributedString.appendAttributedString(NSAttributedString(string: "\n"))
-            }
-            
-            let additionalInfo = NSAttributedString.attributedStringWithBodyAttributes(additionalInfo)
-            
-            attributedString.appendAttributedString(additionalInfo)
-        }
-        
-        if let subtext = subtext {
-            attributedString.appendAttributedString(NSAttributedString(string: "\n"))
-            
-            let subtext = NSAttributedString.attributedStringWithSmallAttributes(subtext)
-            attributedString.appendAttributedString(subtext)
-        }
-        
-        return attributedString
     }
 }

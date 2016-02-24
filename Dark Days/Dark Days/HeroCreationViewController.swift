@@ -87,7 +87,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
     }
     
-    func didSelectObject<T: Displayable>(listViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         nextButton.enabled = true
         
         if let object = object as? Race {
