@@ -16,6 +16,7 @@ final class HeroListViewController: UITableViewController {
                 cell.leftImageView?.image = hero?.race.image
             })
             
+            tableView.dataSource = dataSource
             tableView.reloadData()
         }
     }
@@ -26,9 +27,14 @@ final class HeroListViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
-        tableView.dataSource = dataSource
         tableView.rowHeight = 54.0
         
         tableView.customize()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        heroes = HeroPersistence().allPersistedHeroes()
     }
 }

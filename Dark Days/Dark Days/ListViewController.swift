@@ -29,6 +29,7 @@ final class ListViewController<T: Displayable>: UITableViewController {
                 }
             })
             
+            tableView.dataSource = dataSource
             tableView.reloadData()
         }
     }
@@ -39,7 +40,6 @@ final class ListViewController<T: Displayable>: UITableViewController {
         super.viewDidLoad()
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
-        tableView.dataSource = dataSource
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         

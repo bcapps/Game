@@ -55,7 +55,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
-        
+        nextButton.title = "Next"
+
         if currentCreationState == .ChooseRace {
             if heroBuilder.race.raceType == .Human {
                 transitionToSkillList()
@@ -73,9 +74,14 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
         else if currentCreationState == .ChooseSkill {
             transitionToStatList()
+            nextButton.title = "Done"
         }
         else if currentCreationState == .ChooseAttributes {
+            presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
             
+            heroBuilder.name = nameField.text ?? "Default Name"
+            
+            HeroPersistence().persistHero(heroBuilder.build())
         }
     }
     
@@ -88,6 +94,9 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         else if let object = object as? Skill {
             heroBuilder.skill = object
         }
+        else if let object = object as? Stat {
+            heroBuilder.setStatValueForStat(1, stat: object)
+        }
     }
     
     private func transitionToStatList() {
@@ -96,7 +105,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         let statListViewController = ListViewController<Stat>(style: .Plain)
         statListViewController.listDelegate = self
         statListViewController.objects = ObjectProvider.objectsForJSON("Stats")
-        
+
         switchToViewController(statListViewController)
     }
     
@@ -112,7 +121,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     private func transitionToSkillList() {
         currentCreationState = .ChooseSkill
-
+        
         let skillListViewController = ListViewController<Skill>(style: .Plain)
         skillListViewController.listDelegate = self
         skillListViewController.objects = ObjectProvider.objectsForJSON("Skills")
