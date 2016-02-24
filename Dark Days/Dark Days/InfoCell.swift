@@ -43,8 +43,10 @@ final class InfoCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        var exclusionRect = infoTextView.convertRect(infoImageView.bounds, fromView: infoImageView)
-        exclusionRect.size.width += (infoNameLabel.frame.origin.x - infoImageView.bounds.size.width) / 2.0
+        var exclusionRect = infoTextView.convertRect(infoImageView.frame, fromView: self)
+        let infoLabelFrame = infoTextView.convertRect(infoNameLabel.frame, fromView: self)
+        
+        exclusionRect.size.width += (infoLabelFrame.origin.x - infoImageView.bounds.size.width)
         exclusionRect.size.height += 5.0
         
         let imageViewPath = UIBezierPath(rect: exclusionRect)

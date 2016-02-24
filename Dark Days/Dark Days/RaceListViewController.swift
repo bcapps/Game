@@ -23,6 +23,8 @@ final class RaceListViewController: UITableViewController {
             if let race = race {
                 cell.infoTextView?.attributedText = self.raceInfoTextForRace(race)
             }
+            
+            cell.layoutIfNeeded()
         })
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
@@ -46,7 +48,7 @@ final class RaceListViewController: UITableViewController {
         }
         
         if race.benefits.count > 0 {
-            infoAttributedString.appendAttributedString(NSAttributedString(string: "\n\nBenefits:", attributes: [NSFontAttributeName: UIFont.headingFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()]))
+            infoAttributedString.appendAttributedString(NSAttributedString(string: "\n\nBenefits", attributes: [NSFontAttributeName: UIFont.headingFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()]))
             
             for string in race.benefits {
                 infoAttributedString.appendAttributedString(NSAttributedString(string: "\n"))

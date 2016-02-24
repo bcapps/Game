@@ -17,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8V-3x-kFQ">
-                        <rect key="frame" x="8" y="34" width="299" height="30"/>
+                        <rect key="frame" x="13" y="34" width="294" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <attributedString key="attributedText"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-TL-ct5">
-                        <rect key="frame" x="8" y="8" width="56" height="56"/>
+                        <rect key="frame" x="13" y="8" width="56" height="56"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ssa-TL-ct5" secondAttribute="height" multiplier="1:1" id="2Gx-67-CNB"/>
                             <constraint firstAttribute="width" constant="56" id="ZZk-Yd-pMF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-Ib-sok">
-                        <rect key="frame" x="72" y="8" width="240" height="20.5"/>
+                        <rect key="frame" x="77" y="8" width="235" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,8 +41,8 @@
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="g8V-3x-kFQ" secondAttribute="bottom" constant="5" id="6FS-JO-PM1"/>
                     <constraint firstItem="Ssa-TL-ct5" firstAttribute="top" secondItem="wI4-qv-xSV" secondAttribute="topMargin" id="6uq-MP-DI9"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bwb-Ib-sok" secondAttribute="trailing" id="D44-hc-ZTe"/>
-                    <constraint firstItem="g8V-3x-kFQ" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" id="HKe-9h-JcS"/>
-                    <constraint firstItem="Ssa-TL-ct5" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" id="Izc-Sd-xta"/>
+                    <constraint firstItem="g8V-3x-kFQ" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" constant="5" id="HKe-9h-JcS"/>
+                    <constraint firstItem="Ssa-TL-ct5" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" constant="5" id="Izc-Sd-xta"/>
                     <constraint firstItem="g8V-3x-kFQ" firstAttribute="top" secondItem="bwb-Ib-sok" secondAttribute="bottom" constant="5" id="NxN-YI-o8c"/>
                     <constraint firstAttribute="trailingMargin" secondItem="g8V-3x-kFQ" secondAttribute="trailing" constant="5" id="Pim-D3-X2N"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Ssa-TL-ct5" secondAttribute="bottom" priority="999" constant="5" id="c8X-xi-u8Z"/>
