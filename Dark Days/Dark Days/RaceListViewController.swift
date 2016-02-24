@@ -18,14 +18,45 @@ final class RaceListViewController: UITableViewController {
         
         dataSource = ListDataSource(collection: races, configureCell: { cell, race in
             cell.infoNameLabel?.text = race?.name
-            //cell.infoImageView?.image = race?.image
-            cell.infoTextView?.text = race?.explanation
+            cell.infoImageView?.image = race?.image
+            
+            if let race = race {
+                cell.infoTextView?.attributedText = self.raceInfoTextForRace(race)
+            }
         })
         
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.dataSource = dataSource
-        tableView.rowHeight = 54.0
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()
+    }
+    
+    private func raceInfoTextForRace(race: Race) -> NSAttributedString {
+        let infoAttributedString = NSMutableAttributedString()
+        
+        let paragraphyStyle = NSMutableParagraphStyle()
+        paragraphyStyle.lineHeightMultiple = 0.85
+        
+        if race.explanation.characters.count > 0 {
+            let damageString = NSAttributedString(string: race.explanation, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+            
+            infoAttributedString.appendAttributedString(damageString)
+        }
+        
+        if race.benefits.count > 0 {
+            infoAttributedString.appendAttributedString(NSAttributedString(string: "\n\nBenefits:", attributes: [NSFontAttributeName: UIFont.headingFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()]))
+            
+            for string in race.benefits {
+                infoAttributedString.appendAttributedString(NSAttributedString(string: "\n"))
+                
+                let benefitString = NSAttributedString(string: "• " + string, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+                
+                infoAttributedString.appendAttributedString(benefitString)
+            }
+        }
+        
+        return infoAttributedString
     }
 }

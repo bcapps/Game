@@ -27,7 +27,6 @@
 		C3AB8F521C7D0AD6007CE0BA /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F511C7D0AD6007CE0BA /* RaceListViewController.swift */; };
 		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
-		F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBD1C7A516B008041E9 /* ViewController.swift */; };
 		F21ECDC31C7A516B008041E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC21C7A516B008041E9 /* Assets.xcassets */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
@@ -103,11 +102,10 @@
 		F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
 		F2350B0C1C7BE3A900D6E18E /* LeftImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2350B0B1C7BE3A900D6E18E /* LeftImageCell.xib */; };
 		F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */; };
-		F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */; };
-		F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */; };
 		F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
+		F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +159,6 @@
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F21ECDBD1C7A516B008041E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F21ECDC21C7A516B008041E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21ECDC71C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,9 +199,8 @@
 		F2350B091C7BD0EE00D6E18E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		F2350B0B1C7BE3A900D6E18E /* LeftImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftImageCell.xib; sourceTree = "<group>"; };
 		F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageCell.swift; sourceTree = "<group>"; };
-		F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Male@2x.png"; sourceTree = "<group>"; };
-		F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elf-Female@2x.png"; sourceTree = "<group>"; };
 		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
+		F2350B811C7D3F2500D6E18E /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,7 +357,6 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
-				F2350B101C7BE7DF00D6E18E /* Art */,
 				C39405941C7CB10100EBFD07 /* UI Customization */,
 				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
 				C394058D1C7CAE2B00EBFD07 /* Support */,
@@ -373,8 +368,8 @@
 				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
+				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
-				F21ECDBD1C7A516B008041E9 /* ViewController.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -534,15 +529,6 @@
 			name = "Left Image Cell";
 			sourceTree = "<group>";
 		};
-		F2350B101C7BE7DF00D6E18E /* Art */ = {
-			isa = PBXGroup;
-			children = (
-				F2350B111C7BE7E800D6E18E /* Elf-Male@2x.png */,
-				F2350B121C7BE7E800D6E18E /* Elf-Female@2x.png */,
-			);
-			name = Art;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -652,12 +638,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
-				F2350B141C7BE7E800D6E18E /* Elf-Female@2x.png in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F2350B0C1C7BE3A900D6E18E /* LeftImageCell.xib in Resources */,
-				F2350B131C7BE7E800D6E18E /* Elf-Male@2x.png in Resources */,
 				F2350B041C7BCEBC00D6E18E /* HeroList.storyboard in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				C3AB8F501C7D0AC6007CE0BA /* RaceList.storyboard in Resources */,
@@ -762,11 +746,11 @@
 			files = (
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */,
+				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
-				F21ECDBE1C7A516B008041E9 /* ViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,

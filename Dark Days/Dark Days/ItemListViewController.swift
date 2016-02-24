@@ -18,7 +18,7 @@ final class ItemListViewController: UITableViewController {
         
         dataSource = ListDataSource(collection: items, configureCell: { cell, item in
             if let item = item {
-                cell.infoImageView?.image = UIImage(named: "Elf-Male")
+                cell.infoImageView?.image = UIImage(named: "Elf")
                 cell.infoNameLabel?.text = item.name
                 cell.infoTextView?.attributedText = self.descriptionForItem(item)                
             }
