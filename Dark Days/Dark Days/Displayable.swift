@@ -59,6 +59,10 @@ struct ListDisplayable {
         
         return displayableObjects
     }
+    
+    static func displayableObject<T: ListDisplayingGeneratable>(object: T) -> ListDisplayable {
+        return T.displayable(object)
+    }
 }
 
 extension ListDisplayable {

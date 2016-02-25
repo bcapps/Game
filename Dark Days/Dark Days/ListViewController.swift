@@ -13,7 +13,7 @@ protocol ListViewControllerDelegate {
 }
 
 class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
-    private var dataSource: ListDataSource<ListDisplayable, InfoCell>?
+    private var dataSource: ListDataSource<T, InfoCell>?
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -22,13 +22,13 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     var objects = [T]() {
         didSet {
             
-            let displayableObjects = ListDisplayable.displayableObjects(objects)
-            
-            dataSource = ListDataSource(collection: displayableObjects, configureCell: { cell, object in
+            dataSource = ListDataSource(collection: objects, configureCell: { cell, object in
                 if let object = object {
-                    cell.infoImage = object.image
-                    cell.nameText = object.title
-                    cell.infoAttributedText = object.attributedString
+                    let displayableObject = ListDisplayable.displayableObject(object)
+
+                    cell.infoImage = displayableObject.image
+                    cell.nameText = displayableObject.title
+                    cell.infoAttributedText = displayableObject.attributedString
                 }
             })
             
@@ -53,7 +53,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         let object = dataSource?.collection[indexPath.row]
         
         if let object = object {
-            //listDelegate?.didSelectObject(self, object: object)
+            listDelegate?.didSelectObject(self, object: object)
         }
     }
 }
