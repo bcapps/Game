@@ -22,6 +22,8 @@ struct Hero: Codeable {
     let stats: [Stat]
     let race: Race
     let skills: [Skill]
+    let magicType: MagicType
+    let god: God?
     let uniqueID: String
 }
 
@@ -35,6 +37,8 @@ final class HeroCoder: NSObject, Coder {
         case Stats
         case Race
         case Skills
+        case MagicType
+        case God
         case UniqueID
     }
     
@@ -53,15 +57,17 @@ final class HeroCoder: NSObject, Coder {
         let rawSkills = aDecoder.decodeObjectForKey(Keys.Skills.rawValue) as? [SkillCoder]
         let rawInventory = aDecoder.decodeObjectForKey(Keys.Inventory.rawValue) as? InventoryCoder
         let rawUniqueID = aDecoder.decodeObjectForKey(Keys.UniqueID.rawValue) as? String
+        let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? MagicTypeCoder
+        let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GodCoder
         
-        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, inventory = rawInventory?.value, uniqueID = rawUniqueID else {
+        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else {
             value = nil
             super.init()
             
             return nil
         }
         
-        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, uniqueID: uniqueID)
+        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
         
         super.init()
     }
@@ -78,5 +84,11 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encodeObject(value.skills.coders, forKey: Keys.Skills.rawValue)
         aCoder.encodeObject(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
         aCoder.encodeObject(value.uniqueID, forKey: Keys.UniqueID.rawValue)
+        
+        if let god = value.god {
+            aCoder.encodeObject(GodCoder(value: god), forKey: Keys.God.rawValue)
+        }
+        
+        aCoder.encodeObject(MagicTypeCoder(value: value.magicType), forKey: Keys.MagicType.rawValue)
     }
 }

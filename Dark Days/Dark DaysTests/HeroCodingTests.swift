@@ -35,5 +35,7 @@ class HeroCodingTests: XCTestCase {
         
         XCTAssertEqual(sut?.skills.count, 2)
         XCTAssertEqual(sut?.skills[0].name, "Dwarven Resilience")
+        XCTAssertEqual(sut?.god?.name, "Dolo, God of Agony")
+        XCTAssertEqual(sut?.magicType.status, .Mundane)
     }
 }

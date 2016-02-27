@@ -14,7 +14,15 @@ protocol ListDisplayingGeneratable {
 
 extension Hero: ListDisplayingGeneratable {
     static func displayable(object: Hero) -> ListDisplayable {
-        return ListDisplayable(title: object.name, information: nil, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: object.race.image)
+        var subtext = object.magicType.name
+        
+        if let godName = object.god?.name {
+            subtext.appendContentsOf(": " + godName)
+        }
+        
+        let information = object.gender.rawValue + " " + object.race.name
+        
+        return ListDisplayable(title: object.name, information: information, additionalInfoTitle: nil, additionalInfo: nil, subtext: subtext, image: object.race.image)
     }
 }
 
@@ -39,6 +47,18 @@ extension Skill: ListDisplayingGeneratable {
 extension Stat: ListDisplayingGeneratable {
     static func displayable(stat: Stat) -> ListDisplayable {
         return ListDisplayable(title: stat.name, information: stat.explanation, additionalInfoTitle: nil, additionalInfo: nil, subtext: stat.benefits.joinWithSeparator("\n"), image: UIImage(named: stat.name))
+    }
+}
+
+extension MagicType: ListDisplayingGeneratable {
+    static func displayable(magicType: MagicType) -> ListDisplayable {
+        return ListDisplayable(title: magicType.name, information: magicType.explanation, additionalInfoTitle: nil, additionalInfo: nil, subtext: magicType.benefits.joinWithSeparator("\n"), image: UIImage(named: magicType.name))
+    }
+}
+
+extension God: ListDisplayingGeneratable {
+    static func displayable(god: God) -> ListDisplayable {
+        return ListDisplayable(title: god.name, information: god.background, additionalInfoTitle: "Responsibilities", additionalInfo: god.responsibilties.joinWithSeparator("\n"), subtext: nil, image: UIImage(named: god.name))
     }
 }
 

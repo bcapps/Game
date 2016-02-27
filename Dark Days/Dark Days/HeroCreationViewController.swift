@@ -14,6 +14,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         case ChooseRace
         case ChooseSkill
         case ChooseAttributes
+        case ChooseMagicType
+        case ChooseGod
     }
     
     @IBOutlet weak var nameField: UITextField!
@@ -41,21 +43,24 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBAction func backButtonTapped(sender: AnyObject) {
         nextButton.title = "Next"
 
-        if currentCreationState == .ChooseRace {
-            presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        }
-        else if currentCreationState == .ChooseSkill {
-            transitionToRaceList()
-        }
-        else if currentCreationState == .ChooseAttributes {
-            selectedStats.removeAll()
-            
-            if heroBuilder.race.raceType == .Human {
-                transitionToSkillList()
-            }
-            else {
+        switch(currentCreationState) {
+            case .ChooseRace:
+                presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+            case .ChooseSkill:
                 transitionToRaceList()
-            }
+            case .ChooseAttributes:
+                selectedStats.removeAll()
+            
+                if heroBuilder.race.raceType == .Human {
+                    transitionToSkillList()
+                }
+                else {
+                    transitionToRaceList()
+                }
+            case .ChooseMagicType:
+                transitionToStatList()
+            case .ChooseGod:
+                transitionToMagicTypeList()
         }
         
         nextButton.enabled = false
@@ -64,41 +69,38 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
 
-        if currentCreationState == .ChooseRace {
-            if heroBuilder.race.raceType == .Human {
-                transitionToSkillList()
-            }
-            else {
-                heroBuilder.skill = heroBuilder.race.startingSkill
-                
-                transitionToStatList()
-            }
-        }
-        else if currentCreationState == .ChooseSkill {
-            transitionToStatList()
-            nextButton.title = "Done"
-        }
-        else if currentCreationState == .ChooseAttributes {
-            presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-            
-            heroBuilder.name = nameField.text ?? "Default Name"
-            
-            for stat in selectedStats {
+        switch(currentCreationState) {
+            case .ChooseRace:
                 switch heroBuilder.race.raceType {
-                case .Elf: fallthrough
-                case .Dwarf:
-                    heroBuilder.setStatValueForStat(2, stat: stat)
-                case .Human:
-                    heroBuilder.setStatValueForStat(1, stat: stat)
-                }
+                    case .Human:
+                        transitionToSkillList()
+                    case .Elf: fallthrough
+                    case .Dwarf: fallthrough
+                    default:
+                        heroBuilder.skill = heroBuilder.race.startingSkill
+                        transitionToStatList()
             }
-            
-            HeroPersistence().persistHero(heroBuilder.build())
+            case .ChooseSkill:
+                transitionToStatList()
+            case .ChooseAttributes:
+                transitionToMagicTypeList()
+            case .ChooseMagicType:
+                switch heroBuilder.magicType.status {
+                    case .Mundane:
+                        buildAndPersistHero()
+                        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                    case .Gifted:
+                        nextButton.title = "Done"
+                        transitionToGodList()
+                }
+            case .ChooseGod:
+                buildAndPersistHero()
+                presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
     func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        if heroBuilder.race.raceType == .Human {
+        if currentCreationState == .ChooseAttributes && heroBuilder.race.raceType == .Human {
             return selectedStats.count < 2
         }
         
@@ -116,6 +118,19 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
         else if let object = object as? Stat {
             selectedStats.append(object)
+        }
+        else if let object = object as? MagicType {
+            switch object.status {
+                case .Mundane:
+                    nextButton.title = "Done"
+                case .Gifted:
+                    nextButton.title = "Next"
+            }
+
+            heroBuilder.magicType = object
+        }
+        else if let object = object as? God {
+            heroBuilder.god = object
         }
     }
     
@@ -136,6 +151,18 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         title = "Choose Stat"
         
         switchToViewController(statListViewController)
+    }
+    
+    private func transitionToMagicTypeList() {
+        currentCreationState = .ChooseMagicType
+        
+        let magicTypeListViewController = ListViewController<MagicType>(style: .Plain)
+        magicTypeListViewController.listDelegate = self
+        magicTypeListViewController.objects = ObjectProvider.objectsForJSON("MagicTypes")
+        
+        title = "Choose Magic Type"
+        
+        switchToViewController(magicTypeListViewController)
     }
     
     private func transitionToRaceList() {
@@ -162,6 +189,36 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         switchToViewController(skillListViewController)
     }
     
+    private func transitionToGodList() {
+        currentCreationState = .ChooseGod
+        
+        let godListViewController = ListViewController<God>(style: .Plain)
+        godListViewController.listDelegate = self
+        godListViewController.objects = God.startingGods
+        
+        title = "Choose God"
+        
+        switchToViewController(godListViewController)
+    }
+    
+    private func buildAndPersistHero() {
+        heroBuilder.name = nameField.text ?? "Default Name"
+        
+        for stat in selectedStats {
+            switch heroBuilder.race.raceType {
+            case .Elf: fallthrough
+            case .Dwarf:
+                heroBuilder.setStatValueForStat(2, stat: stat)
+            case .Human:
+                heroBuilder.setStatValueForStat(1, stat: stat)
+            }
+        }
+        
+        if let hero = heroBuilder.build() {
+            HeroPersistence().persistHero(hero)
+        }
+    }
+    
     private func switchToViewController(viewController: UIViewController) {
         setFrameForChildViewController(viewController)
         
@@ -178,6 +235,18 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         frame.origin.y = CGRectGetMaxY(nameField.frame) + 10
         frame.size.height -= CGRectGetMaxY(nameField.frame) + 10
         viewController.view.frame = frame
+    }
+}
+
+private extension God {
+    static var startingGods: [God] {
+        let optionalKazu = ObjectProvider.godForName("Kazu, God of Deceit")
+        let optionalDolo = ObjectProvider.godForName("Dolo, God of Agony")
+        let optionalShiro = ObjectProvider.godForName("Shiro, God of Hope")
+        
+        guard let kazu = optionalKazu, dolo = optionalDolo, shiro = optionalShiro else { return [] }
+        
+        return [kazu, dolo, shiro]
     }
 }
 

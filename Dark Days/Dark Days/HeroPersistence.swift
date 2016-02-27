@@ -8,10 +8,6 @@
 
 import Foundation
 
-// Guard let vs. if let
-// Guard let when: Exit scope early due to conditions not being met.
-// If let when: When else if is required, or control flow keywords are impossible.
-
 final class HeroPersistence {
     
     let persistenceFilename: String

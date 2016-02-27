@@ -15,16 +15,18 @@ final class HeroBuilder {
     var skill: Skill?
     var race: Race = Race(name: "", explanation: "", benefits: [])
     var stats: [Stat] = ObjectProvider.objectsForJSON("Stats")
-        
-    func build() -> Hero {
+    var magicType: MagicType = MagicType(name: "", explanation:  "", benefits:  [])
+    var god: God?
+    
+    func build() -> Hero? {
         let inventory = Inventory()
         
         var skills = [Skill]()
         if let skill = skill {
             skills.append(skill)
         }
-        
-        return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, uniqueID: NSUUID().UUIDString)
+                
+        return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, magicType: magicType, god: god, uniqueID: NSUUID().UUIDString)
     }
         
     func setStatValueForStat(value: Int, stat: Stat) {
