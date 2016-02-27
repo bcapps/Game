@@ -10,8 +10,17 @@ import XCTest
 
 class HeroPersistenceTests: XCTestCase {
 
+    let sut = HeroPersistence(persistenceFilename: "TestHeroes")
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        for hero in sut.allPersistedHeroes() {
+            sut.removeHero(hero)
+        }
+    }
+    
     func testHeroPersistence() {
-        let sut = HeroPersistence(persistenceFilename: "TestHeroes")
         let hero = TestHero.hero
         
         XCTAssertEqual(sut.allPersistedHeroes().count, 0)
@@ -28,6 +37,18 @@ class HeroPersistenceTests: XCTestCase {
         sut.removeHero(hero)
         
         XCTAssertEqual(sut.allPersistedHeroes().count, 0)
+    }
+    
+    func testHeroStatPersistence() {
+        let hero = TestHero.hero
+        
+        hero.stats.first?.currentValue = 324
+        
+        sut.persistHero(hero)
+        
+        let testHero = sut.allPersistedHeroes().first
+        
+        XCTAssertEqual(testHero!.stats.first?.currentValue, 324)
     }
 
 }
