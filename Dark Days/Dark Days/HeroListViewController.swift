@@ -17,18 +17,29 @@ final class HeroListViewController: ListViewController<Hero> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addButtonTapped"))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addButtonTapped"))
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.objects = HeroPersistence().allPersistedHeroes()
+        objects = HeroPersistence().allPersistedHeroes()
     }
     
     internal func addButtonTapped() {
         if let heroCreationFlow = UIStoryboard.heroCreationViewController() {
-            self.navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
+            navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
         }
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { action, indexPath in
+            let hero = self.objects[indexPath.row]
+            
+            HeroPersistence().removeHero(hero)
+            self.objects = HeroPersistence().allPersistedHeroes()
+        }
+        
+        return [deleteAction]
     }
 }
