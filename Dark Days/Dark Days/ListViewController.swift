@@ -49,6 +49,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.customize()
+        tableView.keyboardDismissMode = .Interactive
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
