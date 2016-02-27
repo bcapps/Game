@@ -8,8 +8,6 @@
 
 import UIKit
 
-// TODO: Subscripting to make objects private.
-
 final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableViewDataSource {
     
     typealias TableViewCellConfigureBlock = (cell: U, object: T) -> Void
