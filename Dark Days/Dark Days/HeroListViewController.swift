@@ -26,10 +26,8 @@ final class HeroListViewController: ListViewController<Hero> {
         self.objects = HeroPersistence().allPersistedHeroes()
     }
     
-    internal func addButtonTapped() {
-        let heroCreationFlow = UIStoryboard(name: "HeroCreation", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
-        
-        if let heroCreationFlow = heroCreationFlow {
+    internal func addButtonTapped() {        
+        if let heroCreationFlow = UIStoryboard.heroCreationViewController() {
             self.navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
         }
     }
