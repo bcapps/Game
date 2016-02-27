@@ -8,32 +8,28 @@
 
 import UIKit
 
-// TODO: Inject duration and rename to replaceChildViewController, pass in child view controller to replace. refactor remove into generic method, expose add and remove because you will use them. Go fuck yourself SwiftLint! You're helpful.
-
 extension UIViewController {
-    func switchToChildViewController(viewController: UIViewController) {
-        func addViewController(viewController: UIViewController) {
-            addChildViewController(viewController)
-            view.addSubview(viewController.view)
-            viewController.didMoveToParentViewController(self)
-        }
-        
-        if let currentChildController = childViewControllers.last {
-            viewController.view.alpha = 0.0
-            addViewController(viewController)
-            
-            UIView.animateWithDuration(0.4, animations: {
-                currentChildController.view.alpha = 0.0
-                viewController.view.alpha = 1.0
-                },
-                completion: { completed in
-                    currentChildController.willMoveToParentViewController(nil)
-                    currentChildController.view.removeFromSuperview()
-                    currentChildController.removeFromParentViewController()
-            })
-        }
-        else {
-            addViewController(viewController)
-        }
+    func addViewController(viewController: UIViewController) {
+        addChildViewController(viewController)
+        view.addSubview(viewController.view)
+        viewController.didMoveToParentViewController(self)
     }
+
+    func removeViewController(viewController: UIViewController) {
+        viewController.willMoveToParentViewController(nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParentViewController()
+    }
+    
+    func replaceChildViewController(currentViewController: UIViewController, newViewController: UIViewController, animationDuration: NSTimeInterval) {
+        newViewController.view.alpha = 0.0
+        addViewController(newViewController)
+        
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+            currentViewController.view.alpha = 0.0
+            newViewController.view.alpha = 1.0
+        }) { completed in
+            self.removeViewController(currentViewController)
+        }
+    }    
 }

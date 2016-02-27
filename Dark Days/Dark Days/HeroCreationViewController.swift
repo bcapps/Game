@@ -164,7 +164,13 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     private func switchToViewController(viewController: UIViewController) {
         setFrameForChildViewController(viewController)
-        switchToChildViewController(viewController)
+        
+        if let currentChildViewController = self.childViewControllers.first {
+            replaceChildViewController(currentChildViewController, newViewController: viewController, animationDuration: 0.4)
+        }
+        else {
+            addViewController(viewController)
+        }
     }
     
     private func setFrameForChildViewController(viewController: UIViewController) {
