@@ -37,6 +37,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     }
     
     @IBAction func backButtonTapped(sender: AnyObject) {
+        nextButton.title = "Next"
+
         if currentCreationState == .ChooseRace {
             presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -57,7 +59,6 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
-        nextButton.title = "Next"
 
         if currentCreationState == .ChooseRace {
             if heroBuilder.race.raceType == .Human {
@@ -106,7 +107,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         
         let statListViewController = ListViewController<Stat>(style: .Plain)
         statListViewController.listDelegate = self
-        statListViewController.objects = ObjectProvider.objectsForJSON("Stats")
+        statListViewController.objects = heroBuilder.race.startingStats
         
         title = "Choose Stat"
         
@@ -147,5 +148,30 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         frame.origin.y = CGRectGetMaxY(nameField.frame) + 10
         frame.size.height -= CGRectGetMaxY(nameField.frame) + 10
         viewController.view.frame = frame
+    }
+}
+
+private extension Race {
+    var startingStats: [Stat] {
+        switch raceType {
+        case .Elf:
+            let dexterity = ObjectProvider.statForName("Dexterity")
+            let intelligence = ObjectProvider.statForName("Intelligence")
+            
+            if let dexterity = dexterity, intelligence = intelligence {
+                return [dexterity, intelligence]
+            }
+        case .Dwarf:
+            let constitution = ObjectProvider.statForName("Constitution")
+            let faith = ObjectProvider.statForName("Faith")
+            
+            if let constitution = constitution, faith = faith {
+                return [constitution, faith]
+            }
+        case .Human:
+            return ObjectProvider.objectsForJSON("Stats")
+        }
+        
+        return []
     }
 }
