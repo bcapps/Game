@@ -14,23 +14,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="Yhl-hV-gjb" kind="relationship" relationship="rootViewController" id="gDK-Gy-NKV"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tz9-bb-Ogc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-175" y="308"/>
-        </scene>
-        <!--HeroList-->
-        <scene sceneID="dVQ-5b-z1Z">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HeroList" id="Yhl-hV-gjb" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9H8-L1-x2f"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mXa-7z-UYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="111" y="308"/>
         </scene>
     </scenes>
 </document>

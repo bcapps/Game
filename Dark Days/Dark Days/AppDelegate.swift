@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         window?.tintColor = UIColor.whiteColor()
-                
+        
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            let heroListViewController = HeroListViewController(style: .Plain)
+            heroListViewController.objects = HeroPersistence().allPersistedHeroes()
+            
+            navigationController.pushViewController(heroListViewController, animated: false)
+        }
+        
         return true
     }
 }

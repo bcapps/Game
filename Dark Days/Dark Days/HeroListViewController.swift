@@ -8,33 +8,29 @@
 
 import UIKit
 
-final class HeroListViewController: UITableViewController {
-    var heroes = [Hero]() {
-        didSet {
-            dataSource = ListDataSource(objects: heroes, configureCell: { cell, hero in
-                cell.nameLabel?.text = hero.name
-                cell.leftImageView?.image = hero.race.image
-            })
-            
-            tableView.dataSource = dataSource
-            tableView.reloadData()
-        }
-    }
+final class HeroListViewController: ListViewController<Hero> {
     
-    private var dataSource: ListDataSource<Hero, LeftImageCell>?
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(LeftImageCell.nib, aClass: LeftImageCell.self, type: .Cell)
-        tableView.rowHeight = 54.0
-        
-        tableView.customize()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addButtonTapped"))
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        heroes = HeroPersistence().allPersistedHeroes()
+        self.objects = HeroPersistence().allPersistedHeroes()
+    }
+    
+    internal func addButtonTapped() {
+        let heroCreationFlow = UIStoryboard(name: "HeroCreation", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
+        
+        if let heroCreationFlow = heroCreationFlow {
+            self.navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
+        }
     }
 }
