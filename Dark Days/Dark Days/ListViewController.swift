@@ -16,16 +16,16 @@ protocol ListViewControllerDelegate {
 
 // custom initializer that takes objects.
 
-class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
-    private var dataSource: ListDataSource<T, InfoCell>?
-    
-    override init(style: UITableViewStyle) {
-        super.init(style: style)
+class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {    
+    init(objects: [T], delegate: ListViewControllerDelegate?) {
+        self.objects = objects
+        self.listDelegate = delegate
+        
+        super.init(style: .Plain)
     }
     
     var objects = [T]() {
         didSet {
-            
             dataSource = ListDataSource(objects: objects, configureCell: { cell, object in
                 let displayableObject = ListDisplayable.displayableObject(object)
                 
@@ -39,7 +39,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         }
     }
     
-    var listDelegate: ListViewControllerDelegate?
+    private var listDelegate: ListViewControllerDelegate?
+    private var dataSource: ListDataSource<T, InfoCell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()

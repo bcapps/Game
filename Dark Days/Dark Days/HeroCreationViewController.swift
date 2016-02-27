@@ -143,9 +143,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToStatList() {
         currentCreationState = .ChooseAttributes
         
-        let statListViewController = ListViewController<Stat>(style: .Plain)
-        statListViewController.objects = heroBuilder.race.startingStats
-        statListViewController.listDelegate = self
+        let statListViewController = ListViewController<Stat>(objects: heroBuilder.race.startingStats, delegate: self)
         statListViewController.tableView.allowsMultipleSelection = heroBuilder.race.raceType == .Human
         
         title = "Choose Stat"
@@ -156,9 +154,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToMagicTypeList() {
         currentCreationState = .ChooseMagicType
         
-        let magicTypeListViewController = ListViewController<MagicType>(style: .Plain)
-        magicTypeListViewController.listDelegate = self
-        magicTypeListViewController.objects = ObjectProvider.objectsForJSON("MagicTypes")
+        let magicTypeListViewController = ListViewController<MagicType>(objects: ObjectProvider.objectsForJSON("MagicTypes"), delegate: self)
         
         title = "Choose Magic Type"
         
@@ -168,9 +164,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToRaceList() {
         currentCreationState = .ChooseRace
         
-        let raceListViewController = ListViewController<Race>(style: .Plain)
-        raceListViewController.listDelegate = self
-        raceListViewController.objects = ObjectProvider.objectsForJSON("Races")
+        let raceListViewController = ListViewController<Race>(objects: ObjectProvider.objectsForJSON("Races"), delegate: self)
         
         title = "Choose Race"
         
@@ -180,9 +174,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToSkillList() {
         currentCreationState = .ChooseSkill
         
-        let skillListViewController = ListViewController<Skill>(style: .Plain)
-        skillListViewController.listDelegate = self
-        skillListViewController.objects = ObjectProvider.objectsForJSON("Skills")
+        let skillListViewController = ListViewController<Skill>(objects: ObjectProvider.objectsForJSON("Skills"), delegate: self)
         
         title = "Choose Skill"
         
@@ -192,9 +184,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToGodList() {
         currentCreationState = .ChooseGod
         
-        let godListViewController = ListViewController<God>(style: .Plain)
-        godListViewController.listDelegate = self
-        godListViewController.objects = God.startingGods
+        let godListViewController = ListViewController<God>(objects: God.startingGods, delegate: self)
         
         title = "Choose God"
         

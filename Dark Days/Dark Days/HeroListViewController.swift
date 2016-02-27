@@ -10,8 +10,8 @@ import UIKit
 
 final class HeroListViewController: ListViewController<Hero> {
     
-    override init(style: UITableViewStyle) {
-        super.init(style: style)
+    override init(objects: [Hero], delegate: ListViewControllerDelegate?) {
+        super.init(objects: objects, delegate: delegate)
     }
     
     override func viewDidLoad() {
