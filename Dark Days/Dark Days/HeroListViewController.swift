@@ -17,6 +17,8 @@ final class HeroListViewController: ListViewController<Hero> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Heroes"
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addButtonTapped"))
     }
     
