@@ -10,6 +10,8 @@ import UIKit
 
 protocol ListViewControllerDelegate {
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
+    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
+    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool
 }
 
 class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
@@ -49,11 +51,32 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         tableView.customize()
     }
     
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        let object = dataSource?.collection[indexPath.row]
+        
+        
+        if let object = object, listDelegate = listDelegate {
+            if listDelegate.canSelectObject(self, object: object) == false {
+                return nil
+            }
+        }
+        
+        return indexPath
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let object = dataSource?.collection[indexPath.row]
         
         if let object = object {
             listDelegate?.didSelectObject(self, object: object)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let object = dataSource?.collection[indexPath.row]
+        
+        if let object = object {
+            listDelegate?.didDeselectObject(self, object: object)
         }
     }
 }

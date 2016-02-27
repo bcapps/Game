@@ -20,8 +20,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
     private let heroBuilder = HeroBuilder()
-    private let statListViewController = StatSelectionViewController(style: .Plain)
 
+    private var selectedStats = [Stat]()
     private var currentCreationState: HeroCreationState = .ChooseRace
     
     override public func viewDidLoad() {
@@ -48,6 +48,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             transitionToRaceList()
         }
         else if currentCreationState == .ChooseAttributes {
+            selectedStats.removeAll()
+            
             if heroBuilder.race.raceType == .Human {
                 transitionToSkillList()
             }
@@ -81,7 +83,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             
             heroBuilder.name = nameField.text ?? "Default Name"
             
-            for stat in statListViewController.selectedStats {
+            for stat in selectedStats {
                 switch heroBuilder.race.raceType {
                 case .Elf: fallthrough
                 case .Dwarf:
@@ -95,6 +97,14 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
     }
     
+    func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+        if heroBuilder.race.raceType == .Human {
+            return selectedStats.count < 2
+        }
+        
+        return true
+    }
+    
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         nextButton.enabled = true
         
@@ -104,12 +114,24 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         else if let object = object as? Skill {
             heroBuilder.skill = object
         }
+        else if let object = object as? Stat {
+            selectedStats.append(object)
+        }
+    }
+    
+    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+        if let object = object as? Stat {
+            selectedStats.removeObject(object)
+        }
     }
     
     private func transitionToStatList() {
         currentCreationState = .ChooseAttributes
         
+        let statListViewController = ListViewController<Stat>(style: .Plain)
         statListViewController.objects = heroBuilder.race.startingStats
+        statListViewController.listDelegate = self
+        statListViewController.tableView.allowsMultipleSelection = heroBuilder.race.raceType == .Human
         
         title = "Choose Stat"
         
