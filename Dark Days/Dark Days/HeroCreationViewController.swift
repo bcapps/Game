@@ -194,13 +194,21 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func buildAndPersistHero() {
         heroBuilder.name = nameField.text ?? "Default Name"
         
+        switch heroBuilder.magicType.status {
+            case .Mundane:
+                heroBuilder.increaseStatValue(1, type: .Strength)
+                heroBuilder.increaseStatValue(1, type: .Constitution)
+            case .Gifted:
+                heroBuilder.increaseStatValue(1, type: .Faith)
+        }
+        
         for stat in selectedStats {
             switch heroBuilder.race.raceType {
             case .Elf: fallthrough
             case .Dwarf:
-                heroBuilder.setStatValueForStat(2, stat: stat)
+                heroBuilder.increaseStatValue(2, type: stat.statType)
             case .Human:
-                heroBuilder.setStatValueForStat(1, stat: stat)
+                heroBuilder.increaseStatValue(1, type: stat.statType)
             }
         }
         

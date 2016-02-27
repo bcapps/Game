@@ -9,7 +9,16 @@
 import Foundation
 import Decodable
 
-struct Stat: Decodable, Nameable, Codeable, Equatable {
+
+enum StatType: String {
+    case Strength
+    case Dexterity
+    case Constitution
+    case Intelligence
+    case Faith
+}
+
+final class Stat: Decodable, Nameable, Codeable, Equatable {
     typealias CoderType = StatCoder
     
     let name: String
@@ -17,6 +26,31 @@ struct Stat: Decodable, Nameable, Codeable, Equatable {
     let explanation: String
     let benefits: [String]
     var currentValue: Int = 0
+    
+    var statType: StatType {
+        switch name {
+        case "Strength":
+            return .Strength
+        case "Dexterity":
+            return .Dexterity
+        case "Constitution":
+            return .Constitution
+        case "Intelligence":
+            return .Intelligence
+        case "Faith":
+            return .Faith
+        default:
+            return .Strength
+        }
+    }
+    
+    init(name: String, shortName: String, explanation: String, benefits: [String], currentValue: Int) {
+        self.name = name
+        self.shortName = shortName
+        self.explanation = explanation
+        self.benefits = benefits
+        self.currentValue = currentValue
+    }
     
     static func decode(json: AnyObject) throws -> Stat {
         return try Stat(
@@ -58,7 +92,7 @@ final class StatCoder: NSObject, Coder {
             return nil
         }
         
-        var stat = ObjectProvider.statForName(name)
+        let stat = ObjectProvider.statForName(name)
         stat?.currentValue = aDecoder.decodeIntegerForKey(Keys.CurrentValue.rawValue)
         
         value = stat

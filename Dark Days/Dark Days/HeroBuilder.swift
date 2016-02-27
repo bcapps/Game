@@ -29,8 +29,8 @@ final class HeroBuilder {
         return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, magicType: magicType, god: god, uniqueID: NSUUID().UUIDString)
     }
         
-    func setStatValueForStat(value: Int, stat: Stat) {
-        var stat = stats.filter({$0.name == stat.name}).first
-        stat?.currentValue = value
+    func increaseStatValue(value: Int, type: StatType) {
+        let stat = stats.filter({$0.statType == type}).first
+        stat?.currentValue += value
     }
 }

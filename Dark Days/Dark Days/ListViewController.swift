@@ -26,16 +26,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     
     var objects = [T]() {
         didSet {
-            dataSource = ListDataSource(objects: objects, configureCell: { cell, object in
-                let displayableObject = ListDisplayable.displayableObject(object)
-                
-                cell.infoImage = displayableObject.image
-                cell.nameText = displayableObject.title
-                cell.infoAttributedText = displayableObject.attributedString
-            })
-            
-            tableView.dataSource = dataSource
-            tableView.reloadData()
+            reloadDataSource()
         }
     }
     
@@ -51,6 +42,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         
         tableView.customize()
         tableView.keyboardDismissMode = .Interactive
+        
+        reloadDataSource()
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
@@ -79,5 +72,18 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         if let object = object {
             listDelegate?.didDeselectObject(self, object: object)
         }
+    }
+    
+    private func reloadDataSource() {
+        dataSource = ListDataSource(objects: objects, configureCell: { cell, object in
+            let displayableObject = ListDisplayable.displayableObject(object)
+            
+            cell.infoImage = displayableObject.image
+            cell.nameText = displayableObject.title
+            cell.infoAttributedText = displayableObject.attributedString
+        })
+        
+        tableView.dataSource = dataSource
+        tableView.reloadData()
     }
 }
