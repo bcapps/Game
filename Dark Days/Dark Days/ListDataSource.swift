@@ -14,8 +14,14 @@ final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableView
     
     typealias TableViewCellConfigureBlock = (cell: U, object: T) -> Void
 
-    let objects: [T]
+    private let objects: [T]
     private let configureCell: TableViewCellConfigureBlock
+    
+    subscript(index: Int) -> T {
+        get {
+            return objects[index]
+        }
+    }
     
     init(objects: [T], configureCell: TableViewCellConfigureBlock) {
         self.objects = objects

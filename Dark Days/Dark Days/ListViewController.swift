@@ -52,7 +52,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let object = dataSource?.objects[indexPath.row]
+        let object = dataSource?[indexPath.row]
         
         if let object = object, listDelegate = listDelegate {
             if listDelegate.canSelectObject(self, object: object) == false {
@@ -64,7 +64,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.objects[indexPath.row]
+        let object = dataSource?[indexPath.row]
         
         if let object = object {
             listDelegate?.didSelectObject(self, object: object)
@@ -72,7 +72,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.objects[indexPath.row]
+        let object = dataSource?[indexPath.row]
         
         if let object = object {
             listDelegate?.didDeselectObject(self, object: object)
