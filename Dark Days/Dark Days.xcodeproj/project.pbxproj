@@ -97,8 +97,6 @@
 		F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */; };
 		F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
 		F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
-		F2350B0C1C7BE3A900D6E18E /* LeftImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2350B0B1C7BE3A900D6E18E /* LeftImageCell.xib */; };
-		F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */; };
 		F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
@@ -203,8 +201,6 @@
 		F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		F2350B091C7BD0EE00D6E18E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		F2350B0B1C7BE3A900D6E18E /* LeftImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftImageCell.xib; sourceTree = "<group>"; };
-		F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageCell.swift; sourceTree = "<group>"; };
 		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
 		F2350B811C7D3F2500D6E18E /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		F2350B831C7D59DE00D6E18E /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
@@ -354,12 +350,12 @@
 			children = (
 				C39405941C7CB10100EBFD07 /* UI Customization */,
 				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
-				C394058D1C7CAE2B00EBFD07 /* Support */,
 				C3AB8F3B1C7CF3F2007CE0BA /* View Controller */,
 				F2350B021C7BCEA700D6E18E /* View */,
 				F2350AF11C7AAD0000D6E18E /* Persistence */,
 				F21ECDEF1C7A5341008041E9 /* World */,
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
+				C394058D1C7CAE2B00EBFD07 /* Support */,
 				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
@@ -513,18 +509,8 @@
 			isa = PBXGroup;
 			children = (
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
-				F2350B0F1C7BE7D800D6E18E /* Left Image Cell */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		F2350B0F1C7BE7D800D6E18E /* Left Image Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F2350B0B1C7BE3A900D6E18E /* LeftImageCell.xib */,
-				F2350B0D1C7BE76700D6E18E /* LeftImageCell.swift */,
-			);
-			name = "Left Image Cell";
 			sourceTree = "<group>";
 		};
 		F2350B8B1C8231D600D6E18E /* Magic Type */ = {
@@ -656,7 +642,6 @@
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
-				F2350B0C1C7BE3A900D6E18E /* LeftImageCell.xib in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
@@ -764,7 +749,6 @@
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
-				F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */,
