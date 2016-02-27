@@ -8,26 +8,28 @@
 
 import UIKit
 
+// TODO: Subscripting to make objects private.
+
 final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableViewDataSource {
     
-    typealias TableViewCellConfigureBlock = (cell: U, object: T?) -> Void
+    typealias TableViewCellConfigureBlock = (cell: U, object: T) -> Void
 
-    let collection: [T]
-    let configureCell: TableViewCellConfigureBlock
+    let objects: [T]
+    private let configureCell: TableViewCellConfigureBlock
     
-    init(collection: [T], configureCell: TableViewCellConfigureBlock) {
-        self.collection = collection
+    init(objects: [T], configureCell: TableViewCellConfigureBlock) {
+        self.objects = objects
         self.configureCell = configureCell
         
         super.init()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collection.count
+        return objects.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let object = collection[indexPath.row]
+        let object = objects[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(U.self, type: .Cell)
         

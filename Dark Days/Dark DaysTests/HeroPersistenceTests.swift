@@ -11,7 +11,7 @@ import XCTest
 class HeroPersistenceTests: XCTestCase {
 
     func testHeroPersistence() {
-        let sut = HeroPersistence(persistencePath: "TestHeroes")
+        let sut = HeroPersistence(persistenceFilename: "TestHeroes")
         let hero = TestHero.hero
         
         XCTAssertEqual(sut.allPersistedHeroes().count, 0)

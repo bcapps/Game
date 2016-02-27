@@ -11,14 +11,24 @@ import UIKit
 extension UIFont {
     
     static func headingFont() -> UIFont {
-        return UIFont(name: "Avenir-Black", size: 18.0) ?? UIFont.boldSystemFontOfSize(18.0)
+        return fontOfName("Avenir-Black", size: 18)
     }
     
     static func bodyFont() -> UIFont {
-        return UIFont(name: "Avenir-Medium", size: 16.0) ?? UIFont.systemFontOfSize(17.0)
+        return fontOfName("Avenir-Medium", size: 16)
     }
     
     static func smallFont() -> UIFont {
-        return UIFont(name: "Avenir-Medium", size: 14.0) ?? UIFont.systemFontOfSize(14.0)
+        return fontOfName("Avenir-Medium", size: 14)
+    }
+    
+    private static func fontOfName(name: String, size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: name, size: size) else {
+            assertionFailure()
+            
+            return UIFont.boldSystemFontOfSize(size)
+        }
+        
+        return font
     }
 }

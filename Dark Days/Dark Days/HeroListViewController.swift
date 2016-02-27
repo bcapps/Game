@@ -11,9 +11,9 @@ import UIKit
 final class HeroListViewController: UITableViewController {
     var heroes = [Hero]() {
         didSet {
-            dataSource = ListDataSource(collection: heroes, configureCell: { cell, hero in
-                cell.nameLabel?.text = hero?.name
-                cell.leftImageView?.image = hero?.race.image
+            dataSource = ListDataSource(objects: heroes, configureCell: { cell, hero in
+                cell.nameLabel?.text = hero.name
+                cell.leftImageView?.image = hero.race.image
             })
             
             tableView.dataSource = dataSource

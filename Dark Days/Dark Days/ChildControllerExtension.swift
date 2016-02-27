@@ -8,6 +8,8 @@
 
 import UIKit
 
+// TODO: Inject duration and rename to replaceChildViewController, pass in child view controller to replace. refactor remove into generic method, expose add and remove because you will use them. Go fuck yourself SwiftLint! You're helpful.
+
 extension UIViewController {
     func switchToChildViewController(viewController: UIViewController) {
         func addViewController(viewController: UIViewController) {
@@ -20,11 +22,11 @@ extension UIViewController {
             viewController.view.alpha = 0.0
             addViewController(viewController)
             
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, animations: {
                 currentChildController.view.alpha = 0.0
                 viewController.view.alpha = 1.0
                 },
-                completion: { (completed) -> Void in
+                completion: { completed in
                     currentChildController.willMoveToParentViewController(nil)
                     currentChildController.view.removeFromSuperview()
                     currentChildController.removeFromParentViewController()

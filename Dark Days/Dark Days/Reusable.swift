@@ -22,6 +22,8 @@ extension Reusable {
 extension UITableViewCell : Reusable {}
 extension UITableViewHeaderFooterView: Reusable {}
 
+// TODO: Register nib should be better.
+
 extension UITableView {
     
     enum Type {

@@ -14,6 +14,8 @@ protocol ListViewControllerDelegate {
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool
 }
 
+// custom initializer that takes objects.
+
 class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     private var dataSource: ListDataSource<T, InfoCell>?
     
@@ -24,14 +26,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     var objects = [T]() {
         didSet {
             
-            dataSource = ListDataSource(collection: objects, configureCell: { cell, object in
-                if let object = object {
-                    let displayableObject = ListDisplayable.displayableObject(object)
-
-                    cell.infoImage = displayableObject.image
-                    cell.nameText = displayableObject.title
-                    cell.infoAttributedText = displayableObject.attributedString
-                }
+            dataSource = ListDataSource(objects: objects, configureCell: { cell, object in
+                let displayableObject = ListDisplayable.displayableObject(object)
+                
+                cell.infoImage = displayableObject.image
+                cell.nameText = displayableObject.title
+                cell.infoAttributedText = displayableObject.attributedString
             })
             
             tableView.dataSource = dataSource
@@ -52,8 +52,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let object = dataSource?.collection[indexPath.row]
-        
+        let object = dataSource?.objects[indexPath.row]
         
         if let object = object, listDelegate = listDelegate {
             if listDelegate.canSelectObject(self, object: object) == false {
@@ -65,7 +64,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.collection[indexPath.row]
+        let object = dataSource?.objects[indexPath.row]
         
         if let object = object {
             listDelegate?.didSelectObject(self, object: object)
@@ -73,7 +72,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.collection[indexPath.row]
+        let object = dataSource?.objects[indexPath.row]
         
         if let object = object {
             listDelegate?.didDeselectObject(self, object: object)
