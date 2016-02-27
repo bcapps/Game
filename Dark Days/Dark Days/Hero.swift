@@ -25,6 +25,18 @@ struct Hero: Codeable {
     let magicType: MagicType
     let god: God?
     let uniqueID: String
+    
+    func increaseStatBy(statType: StatType, value: Int) {
+        let statToIncrease = stats.filter { $0.statType == statType }.first
+        
+        statToIncrease?.currentValue += value
+    }
+    
+    func statValueForType(statType: StatType) -> Int {
+        let stat = stats.filter { $0.statType == statType }.first
+        
+        return stat?.currentValue ?? 0
+    }
 }
 
 final class HeroCoder: NSObject, Coder {

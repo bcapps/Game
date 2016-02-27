@@ -50,5 +50,5 @@ class HeroPersistenceTests: XCTestCase {
         
         XCTAssertEqual(testHero!.stats.first?.currentValue, 324)
     }
-
+    
 }

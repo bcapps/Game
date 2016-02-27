@@ -38,4 +38,12 @@ class HeroCodingTests: XCTestCase {
         XCTAssertEqual(sut?.god?.name, "Dolo, God of Agony")
         XCTAssertEqual(sut?.magicType.status, .Mundane)
     }
+    
+    func testHeroStatUpdate() {
+        let hero = TestHero.hero
+        
+        hero.increaseStatBy(.Strength, value: 4)
+        
+        XCTAssertEqual(hero.statValueForType(.Strength), 5)
+    }
 }

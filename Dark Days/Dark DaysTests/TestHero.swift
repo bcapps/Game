@@ -19,19 +19,19 @@ final class TestHero {
         inventory.items.append(item1!)
         inventory.items.append(item2!)
         
-        var stat1 = ObjectProvider.statForName("Strength")
+        let stat1 = ObjectProvider.statForName("Strength")
         stat1?.currentValue = 1
         
-        var stat2 = ObjectProvider.statForName("Dexterity")
+        let stat2 = ObjectProvider.statForName("Dexterity")
         stat2?.currentValue = 2
         
-        var stat3 = ObjectProvider.statForName("Constitution")
+        let stat3 = ObjectProvider.statForName("Constitution")
         stat3?.currentValue = 3
         
-        var stat4 = ObjectProvider.statForName("Intelligence")
+        let stat4 = ObjectProvider.statForName("Intelligence")
         stat4?.currentValue = 4
         
-        var stat5 = ObjectProvider.statForName("Faith")
+        let stat5 = ObjectProvider.statForName("Faith")
         stat5?.currentValue = 5
         
         let race = ObjectProvider.raceForName("Elf")
