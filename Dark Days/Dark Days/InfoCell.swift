@@ -82,6 +82,6 @@ final class InfoCell: UITableViewCell {
         exclusionRect.size.height += 5.0
         
         let imageViewPath = UIBezierPath(rect: exclusionRect)
-        infoTextView.textContainer.exclusionPaths = [imageViewPath]
+        infoTextView.textContainer.exclusionPaths = [imageViewPath]        
     }
 }
