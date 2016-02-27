@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Stat: Decodable, Nameable, Codeable {
+struct Stat: Decodable, Nameable, Codeable, Equatable {
     typealias CoderType = StatCoder
     
     let name: String
@@ -27,6 +27,10 @@ struct Stat: Decodable, Nameable, Codeable {
             currentValue: 0
         )
     }
+}
+
+func == (lhs: Stat, rhs: Stat) -> Bool {
+    return lhs.name == rhs.name
 }
 
 final class StatCoder: NSObject, Coder {

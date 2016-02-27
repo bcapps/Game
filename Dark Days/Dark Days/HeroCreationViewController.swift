@@ -20,6 +20,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
     private let heroBuilder = HeroBuilder()
+    private let statListViewController = StatSelectionViewController(style: .Plain)
+
     private var currentCreationState: HeroCreationState = .ChooseRace
     
     override public func viewDidLoad() {
@@ -65,12 +67,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
                 transitionToSkillList()
             }
             else {
-                if heroBuilder.race.raceType == .Elf {
-                    heroBuilder.skill = ObjectProvider.skillForName("Elven Accuracy")
-                }
-                else if heroBuilder.race.raceType == .Dwarf {
-                    heroBuilder.skill = ObjectProvider.skillForName("Dwarven Resilience")
-                }
+                heroBuilder.skill = heroBuilder.race.startingSkill
                 
                 transitionToStatList()
             }
@@ -83,6 +80,16 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
             
             heroBuilder.name = nameField.text ?? "Default Name"
+            
+            for stat in statListViewController.selectedStats {
+                switch heroBuilder.race.raceType {
+                case .Elf: fallthrough
+                case .Dwarf:
+                    heroBuilder.setStatValueForStat(2, stat: stat)
+                case .Human:
+                    heroBuilder.setStatValueForStat(1, stat: stat)
+                }
+            }
             
             HeroPersistence().persistHero(heroBuilder.build())
         }
@@ -97,16 +104,11 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         else if let object = object as? Skill {
             heroBuilder.skill = object
         }
-        else if let object = object as? Stat {
-            heroBuilder.setStatValueForStat(1, stat: object)
-        }
     }
     
     private func transitionToStatList() {
         currentCreationState = .ChooseAttributes
         
-        let statListViewController = ListViewController<Stat>(style: .Plain)
-        statListViewController.listDelegate = self
         statListViewController.objects = heroBuilder.race.startingStats
         
         title = "Choose Stat"
@@ -173,5 +175,16 @@ private extension Race {
         }
         
         return []
+    }
+    
+    var startingSkill: Skill? {
+        switch raceType {
+        case .Elf:
+            return ObjectProvider.skillForName("Elven Accuracy")
+        case .Dwarf:
+            return ObjectProvider.skillForName("Dwarven Resilience")
+        case .Human:
+            return nil
+        }
     }
 }

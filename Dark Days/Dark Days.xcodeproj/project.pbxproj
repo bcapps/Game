@@ -106,6 +106,8 @@
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
 		F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
+		F2350B861C81538900D6E18E /* StatSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B851C81538900D6E18E /* StatSelectionViewController.swift */; };
+		F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +203,8 @@
 		F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInstantiation.swift; sourceTree = "<group>"; };
 		F2350B811C7D3F2500D6E18E /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		F2350B831C7D59DE00D6E18E /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		F2350B851C81538900D6E18E /* StatSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatSelectionViewController.swift; sourceTree = "<group>"; };
+		F2350B871C81555900D6E18E /* ArrayRemoval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayRemoval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +304,7 @@
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
 				C394059D1C7CB68500EBFD07 /* Root */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero */,
+				F2350B851C81538900D6E18E /* StatSelectionViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
+				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -728,6 +734,7 @@
 			files = (
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
+				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B0E1C7BE76700D6E18E /* LeftImageCell.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
@@ -743,6 +750,7 @@
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
+				F2350B861C81538900D6E18E /* StatSelectionViewController.swift in Sources */,
 				F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,

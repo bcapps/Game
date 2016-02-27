@@ -14,7 +14,7 @@ final class HeroBuilder {
     var gender: Gender = .Male
     var skill: Skill?
     var race: Race = Race(name: "", explanation: "", benefits: [])
-    var stats = [Stat]()
+    var stats: [Stat] = ObjectProvider.objectsForJSON("Stats")
         
     func build() -> Hero {
         let inventory = Inventory()
