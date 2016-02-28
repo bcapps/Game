@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GVh-lf-OHh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Hero View Controller-->
+        <scene sceneID="jSY-xC-3vn">
+            <objects>
+                <viewController id="GVh-lf-OHh" customClass="HeroViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BYk-lY-vIi"/>
+                        <viewControllerLayoutGuide type="bottom" id="lNS-tN-AT4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dmw-nJ-ihR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SilhoutteMale" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-ib-KGt" userLabel="Character Silhouette">
+                                <rect key="frame" x="88" y="40" width="143" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="f0x-Ss-kZo"/>
+                                    <constraint firstAttribute="height" constant="400" id="h0J-hc-xll"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-B1-mLe" userLabel="HelmetButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="137" y="40" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JqS-tT-Ofc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="200" y="215" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dul-Tm-cZS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="73" y="215" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i6n-CV-R7r"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-he-zNu" userLabel="ChestButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="137" y="130" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oPu-FD-2Be"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="137" y="380" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VC5-h6-Mw0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lDs-B1-mLe" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="top" id="4Jr-Ia-U2f"/>
+                            <constraint firstItem="6MH-he-zNu" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="Ssj-et-8wE"/>
+                            <constraint firstItem="LMS-Zp-1oA" firstAttribute="trailing" secondItem="H5F-ib-KGt" secondAttribute="trailing" constant="15" id="VbP-AI-cQg"/>
+                            <constraint firstItem="tWM-Zd-iTa" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="bUQ-oe-6yS"/>
+                            <constraint firstItem="H5F-ib-KGt" firstAttribute="centerY" secondItem="dmw-nJ-ihR" secondAttribute="centerY" id="cpd-Dn-Wlg"/>
+                            <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="top" constant="90" id="hLx-9a-phu"/>
+                            <constraint firstItem="H5F-ib-KGt" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="jvo-39-PCv"/>
+                            <constraint firstItem="lDs-B1-mLe" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="kko-zf-KJa"/>
+                            <constraint firstItem="58g-mR-vui" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="lPz-zz-78M"/>
+                            <constraint firstItem="LMS-Zp-1oA" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="trailing" id="lgp-z1-Z38"/>
+                            <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-15" id="scb-EJ-mDA"/>
+                            <constraint firstItem="LMS-Zp-1oA" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="vpO-Gm-SkJ"/>
+                            <constraint firstItem="tWM-Zd-iTa" firstAttribute="bottom" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="-10" id="y1u-75-PdT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lgp-z1-Z38"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bN-FQ-RKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="303"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SilhoutteMale" width="133" height="372"/>
+    </resources>
+</document>

@@ -14,6 +14,10 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("HeroCreation")
     }
     
+    static func heroViewController() -> UIViewController? {
+        return initialViewControllerFromStoryboardNamed("HeroViewController") as? HeroViewController
+    }
+    
     private static func initialViewControllerFromStoryboardNamed(storyboardName: String) -> UIViewController? {
         return UIStoryboard(name: storyboardName, bundle: NSBundle.mainBundle()).instantiateInitialViewController()
     }

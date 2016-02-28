@@ -80,14 +80,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SilhoutteFemale.png" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-ex-baV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SilhoutteFemale.png" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-ex-baV">
                                 <rect key="frame" x="230" y="40" width="140" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="avw-uY-2OZ"/>
                                     <constraint firstAttribute="width" constant="140" id="g8d-a6-c1M"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mI-kKS" userLabel="EquipmentHelmet" customClass="LCKItemButton">
                                 <rect key="frame" x="275" y="35" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MzF-zN-CcS"/>
@@ -100,7 +100,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="czD-dC-4ee"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-tH-Ejn" userLabel="EquipmentChest" customClass="LCKItemButton">
                                 <rect key="frame" x="275" y="110" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8dG-tT-J27"/>
@@ -113,7 +113,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="dgg-Nd-mY6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wz-xsE" userLabel="EquipmentRightHand" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="190" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Im8-au-mwd"/>
@@ -126,7 +126,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Gqi-9T-0rm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar4-85-oMt" userLabel="EquipmentAccessory1" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="35" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HT7-MD-qpk"/>
@@ -139,7 +139,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="1GR-tE-JH1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-dZ-bU0" userLabel="EquipmentAccessory2" customClass="LCKItemButton">
                                 <rect key="frame" x="170" y="98" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="F5F-5a-KBu"/>
@@ -152,7 +152,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="7gO-Dq-gYV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-jD-en0" userLabel="EquipmentBoots" customClass="LCKItemButton">
                                 <rect key="frame" x="275" y="360" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="02s-7Q-cF6"/>
@@ -165,7 +165,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="8fw-qk-JMZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-xe-31g" userLabel="EquipmentLeftHand" customClass="LCKItemButton">
                                 <rect key="frame" x="380" y="190" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="PA5-OQ-vRO"/>
@@ -178,7 +178,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="fVp-Po-dGf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7P-e8-J8t" userLabel="EquipmentSpell1" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7P-e8-J8t" userLabel="EquipmentSpell1" customClass="LCKItemButton">
                                 <rect key="frame" x="152" y="275" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="eX6-R3-Deq"/>
@@ -191,7 +191,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="wXU-b1-lgD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-yb-kyb" userLabel="EquipmentSpell2" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-yb-kyb" userLabel="EquipmentSpell2" customClass="LCKItemButton">
                                 <rect key="frame" x="198" y="275" width="36" height="36"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,7 +200,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="F65-bX-8gu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UR-hi-74E" userLabel="EquipmentSpell3" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UR-hi-74E" userLabel="EquipmentSpell3" customClass="LCKItemButton">
                                 <rect key="frame" x="152" y="321" width="36" height="36"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,7 +209,7 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="wp5-fF-vF4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kb-wS-brh" userLabel="EquipmentSpell4" customClass="LCKItemButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kb-wS-brh" userLabel="EquipmentSpell4" customClass="LCKItemButton">
                                 <rect key="frame" x="198" y="321" width="36" height="36"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,27 +218,27 @@
                                     <action selector="equipmentButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="klm-l9-J26"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oab-Ny-zTp" userLabel="Separator Line">
                                 <rect key="frame" x="0.0" y="549" width="600" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5Hn-Vs-iFi"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELO-qo-6rC" userLabel="Heart Image Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heartIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELO-qo-6rC" userLabel="Heart Image Icon">
                                 <rect key="frame" x="372" y="280" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="HJV-mp-PEl"/>
                                     <constraint firstAttribute="height" constant="65" id="soW-MV-Rbn"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-iC-meJ" userLabel="HealthLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-iC-meJ" userLabel="HealthLabel">
                                 <rect key="frame" x="384" y="277" width="42" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is3-ZS-0SK" userLabel="Increase Health Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is3-ZS-0SK" userLabel="Increase Health Button">
                                 <rect key="frame" x="382" y="246" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="Lia-5M-3rK"/>
@@ -249,7 +249,7 @@
                                     <action selector="increaseHealthButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="b8V-v5-npC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-I5-mWV" userLabel="Decrease Health Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-I5-mWV" userLabel="Decrease Health Button">
                                 <rect key="frame" x="382" y="335" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0kq-wt-H3j"/>
@@ -260,7 +260,7 @@
                                     <action selector="decreaseHealthButtonTapped:" destination="3rc-7A-iZC" eventType="touchUpInside" id="Axu-lI-0Vf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOl-u6-uL3" userLabel="Souls Button" customClass="LCKStatusButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOl-u6-uL3" userLabel="Souls Button" customClass="LCKStatusButton">
                                 <rect key="frame" x="355" y="40" width="218" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="46U-eE-Rzp"/>
@@ -275,7 +275,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-UA-5qt">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-UA-5qt">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gNo-Wf-EYD"/>
@@ -682,7 +682,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-87-Wtv" userLabel="Class Picker" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="122" width="600" height="270"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-5N-MCR" userLabel="Class Name Label">

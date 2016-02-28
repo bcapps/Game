@@ -119,6 +119,9 @@
 		F2473B1A1C8382EA008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
 		F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
 		F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
+		F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
+		F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
+		F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +220,9 @@
 		F2350B951C82444800D6E18E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2473B151C8382C9008FD65B /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		F2473B171C8382E6008FD65B /* Spells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Spells.json; path = "World Data/Spells.json"; sourceTree = "<group>"; };
+		F2473B1E1C83B307008FD65B /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		F2473B201C83B328008FD65B /* HeroViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroViewController.storyboard; sourceTree = "<group>"; };
+		F2473B221C83B606008FD65B /* EquipmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +322,7 @@
 			children = (
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
 				F2350B941C82412600D6E18E /* Hero List */,
+				F2473B1D1C83B2FB008FD65B /* Hero */,
 				C394059D1C7CB68500EBFD07 /* Root */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero Creation */,
 			);
@@ -548,6 +555,16 @@
 			name = Spells;
 			sourceTree = "<group>";
 		};
+		F2473B1D1C83B2FB008FD65B /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				F2473B1E1C83B307008FD65B /* HeroViewController.swift */,
+				F2473B201C83B328008FD65B /* HeroViewController.storyboard */,
+				F2473B221C83B606008FD65B /* EquipmentButton.swift */,
+			);
+			name = Hero;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -664,6 +681,7 @@
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				F2473B181C8382E6008FD65B /* Spells.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
+				F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */,
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
@@ -787,6 +805,7 @@
 				F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
+				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
@@ -799,6 +818,7 @@
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
 				C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */,
+				F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */,
 				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
