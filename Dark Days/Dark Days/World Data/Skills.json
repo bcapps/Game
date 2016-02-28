@@ -26,4 +26,8 @@
  "name": "Power Attack",
  "explanation": "One shot, one kill.",
  "benefit": "Deals an increased [STR * 2] damage, but reduces your attack roll by 3."
+ }, {
+ "name": "Human Perseverance",
+ "explanation": "There is sometimes a benefit to being at the bottom.",
+ "benefit": "Anytime you make a Strength or Dexterity based check, add 1 your roll."
  }]

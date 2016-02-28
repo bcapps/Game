@@ -174,13 +174,13 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         
         var startingSkills = [Skill]()
         
-        let dw = ObjectProvider.skillForName("Dual Wielding")
+        let human = ObjectProvider.skillForName("Human Perseverance")
         let warcry = ObjectProvider.skillForName("War Cry")
         let feint = ObjectProvider.skillForName("Feint")
         let powerattack = ObjectProvider.skillForName("Power Attack")
         
-        if let dw = dw, warcry = warcry, feint = feint, powerattack = powerattack {
-            startingSkills.appendContentsOf([dw, warcry, feint, powerattack])
+        if let human = human, warcry = warcry, feint = feint, powerattack = powerattack {
+            startingSkills.appendContentsOf([human, warcry, feint, powerattack])
         }
         
         let skillListViewController = ListViewController<Skill>(objects: startingSkills, delegate: self)
