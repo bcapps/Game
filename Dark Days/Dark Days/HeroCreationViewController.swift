@@ -28,14 +28,12 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nameFieldFont = UIFont(name: "Avenir-Heavy", size: 21.0) ?? UIFont.systemFontOfSize(21.0)
-        
+                
         view.backgroundColor = .backgroundColor()
         nameField.backgroundColor = .backgroundColor()
         nameField.textColor = .headerTextColor()
-        nameField.font = nameFieldFont
-        nameField.attributedPlaceholder = NSAttributedString(string: "Enter Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: nameFieldFont])
+        nameField.font = .heavyLargeFont()
+        nameField.attributedPlaceholder = NSAttributedString(string: "Enter Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: UIFont.heavyLargeFont()])
         
         transitionToRaceList()
     }
@@ -198,6 +196,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             case .Mundane:
                 heroBuilder.increaseStatValue(1, type: .Strength)
                 heroBuilder.increaseStatValue(1, type: .Constitution)
+                heroBuilder.increaseStatValue(1, type: .Dexterity)
             case .Gifted:
                 heroBuilder.increaseStatValue(1, type: .Faith)
         }

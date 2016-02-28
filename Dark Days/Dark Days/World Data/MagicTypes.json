@@ -1,9 +1,9 @@
 [{
  "name": "Gifted",
- "explanation": "The gods have granted you power beyond imagination.",
- "benefits": ["• Ability to use magic.", "• Increases your faith by 1."]
+ "explanation": "The gods have granted you power beyond imagination. Your faith in them is as unwavering as your will.",
+ "benefits": ["• Grants the ability to use magic.", "• Increases your Faith by 1."]
  }, {
  "name": "Mundane",
- "explanation": "Without the use of magic, you learned to endure the hardships of the environment around you.",
- "benefits": ["• You are physically stronger, increasing your strength and consititution by 1.", "• FILLER TEXT."]
+ "explanation": "Without the use of magic, you learned to endure the hardships of the environment around you. All your physical traits have been enhanced through hard work and dedication.",
+ "benefits": ["• Increases Strength by 1.", "• Increases constitution by 1.", "• Increases dexterity by 1."]
  }]

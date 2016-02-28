@@ -22,6 +22,10 @@ extension UIFont {
         return fontOfName("Avenir-Medium", size: 14)
     }
     
+    static func heavyLargeFont() -> UIFont {
+        return fontOfName("Avenir-Heavy", size: 21)
+    }
+    
     private static func fontOfName(name: String, size: CGFloat) -> UIFont {
         guard let font = UIFont(name: name, size: size) else {
             assertionFailure()
