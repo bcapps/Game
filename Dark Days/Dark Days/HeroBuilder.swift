@@ -50,16 +50,20 @@ final class HeroBuilder {
                     spells.appendContentsOf([reflect, ray, inspire])
                 }
             case "Dolo, God of Agony":
-                let reflect = ObjectProvider.spellForName("Reflect")
-                
-                if let reflect = reflect {
-                    spells.append(reflect)
+                let bond = ObjectProvider.spellForName("Agonizing Bond")
+                let fiendfyre = ObjectProvider.spellForName("Fiendfyre")
+                let thornbind = ObjectProvider.spellForName("Thorn Bind")
+
+                if let bond = bond, fiendfyre = fiendfyre, thornbind = thornbind {
+                    spells.appendContentsOf([bond, fiendfyre, thornbind])
                 }
             case "Kazu, God of Deceit":
-                let reflect = ObjectProvider.spellForName("Reflect")
-                
-                if let reflect = reflect {
-                    spells.append(reflect)
+                let blind = ObjectProvider.spellForName("Blind")
+                let stalker = ObjectProvider.spellForName("Shadow Stalker")
+                let paranoia = ObjectProvider.spellForName("Paranoia")
+
+                if let blind = blind, stalker = stalker, paranoia = paranoia {
+                    spells.appendContentsOf([blind, stalker, paranoia])
                 }
             default:
                 print("Bad God?")
