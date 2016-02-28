@@ -113,6 +113,12 @@
 		F2350B961C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
 		F2350B971C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
 		F2350B981C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
+		F2473B161C8382C9008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
+		F2473B181C8382E6008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
+		F2473B191C8382E9008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
+		F2473B1A1C8382EA008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
+		F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
+		F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +215,8 @@
 		F2350B8C1C8231E700D6E18E /* MagicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicType.swift; sourceTree = "<group>"; };
 		F2350B8E1C8231FB00D6E18E /* MagicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MagicTypes.json; path = "World Data/MagicTypes.json"; sourceTree = "<group>"; };
 		F2350B951C82444800D6E18E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2473B151C8382C9008FD65B /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		F2473B171C8382E6008FD65B /* Spells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Spells.json; path = "World Data/Spells.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +403,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F2473B141C8382BE008FD65B /* Spells */,
 				F2350B8B1C8231D600D6E18E /* Magic Type */,
 				F21ECE291C7A6AE8008041E9 /* Items */,
 				F21ECE2A1C7A6AEC008041E9 /* Skills */,
@@ -530,6 +539,15 @@
 			name = "Hero List";
 			sourceTree = "<group>";
 		};
+		F2473B141C8382BE008FD65B /* Spells */ = {
+			isa = PBXGroup;
+			children = (
+				F2473B151C8382C9008FD65B /* Spell.swift */,
+				F2473B171C8382E6008FD65B /* Spells.json */,
+			);
+			name = Spells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -644,6 +662,7 @@
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
+				F2473B181C8382E6008FD65B /* Spells.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
@@ -662,6 +681,7 @@
 			files = (
 				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
+				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
 				F2350B971C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */,
@@ -685,6 +705,7 @@
 				F2350B981C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
 				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
+				F2473B1A1C8382EA008FD65B /* Spells.json in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
@@ -772,6 +793,7 @@
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F2350B8A1C8230AE00D6E18E /* StoryboardLoading.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
+				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				F2350B8D1C8231E700D6E18E /* MagicType.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
@@ -789,6 +811,7 @@
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
+				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
 				C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
@@ -826,6 +849,7 @@
 				C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
+				F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
