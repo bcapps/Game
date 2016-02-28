@@ -1,26 +1,51 @@
 [{
- "name": "Strength",
- "shortName": "STR",
- "explanation": "Strength measures your character’s muscle and physical power.",
- "benefits": ["• Increases damage dealt with melee or thrown weapons.", "• Increases chance to hit with melee weapons."]
+ "name": "Reflect",
+ "damage": "Monster Damage + [FAI]",
+ "effects": "Casts a barrier on one target ally, reflecting the next attack targeted on that ally.",
+ "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
  }, {
- "name": "Dexterity",
- "shortName": "DEX",
- "explanation": "Dexterity measures hand-eye coordination, agility, reflexes, and balance.",
- "benefits": ["• Increases chance to hit with ranged weapons.", "• Increases chance to evade ranged and melee weapon attacks."]
+ "name": "Inspire",
+ "damage": "",
+ "effects": "Add 1 to all attack rolls made by your party, and reduce all physical damage taken by your party by 1.",
+ "flavor": "All it takes to light the way, is one candle burning brightly in the night."
  }, {
- "name": "Constitution",
- "shortName": "CON",
- "explanation": "Constitution represents your character’s health and stamina.",
- "benefits": ["• Increases chance to resist physically debilitating effects, such as poison.", "• Increases resistance to being interrupted or knocked down."]
+ "name": "Ray of Light",
+ "damage": "Heals 1d4 + [FAI]",
+ "effects": "",
+ "flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
  }, {
- "name": "Intelligence",
- "shortName": "INT",
- "explanation": "Intelligence determines how well your character learns and reasons.",
- "benefits": ["• Increases chance to hit with spells.", "• Increases chance you will resist damaging spells cast upon you."]
+ "name": "Blind",
+ "damage": "",
+ "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4.",
+ "flavor": "Sometimes darkness can be beautiful."
  }, {
- "name": "Faith",
- "shortName": "FAI",
- "explanation": "Faith represents your belief in the god that has bestowed this magic upon you.",
- "benefits": ["• Increases damage dealt by spells.", "• Increases chance you will resist mentally debilitating effects, such as mind control."]
+ "name": "Shadow Stalker",
+ "damage": "Next physical attack gets 1d6 + [FAI]",
+ "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack automatically hits, and brings you out of the shadows dealing additional damage.",
+ "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
+ }, {
+ "name": "Paranoia",
+ "damage": "Stuns the target for 1 round and deals 1d4 + [FAI]",
+ "effects": "",
+ "flavor": "My head is a very dark place. Soon yours will be as well."
+ }, {
+ "name": "Agonizing Bond",
+ "damage": "",
+ "effects": "Bonds two enemies together, and damage dealt to one, is dealt to the other as well.",
+ "flavor": "Your numbers do nothing but increase my strength."
+ }, {
+ "name": "Fiendfyre",
+ "damage": "1d6 + [FAI]",
+ "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action.",
+ "flavor": "My fire will teach you to fear the light."
+ }, {
+ "name": "Dolo's Fury",
+ "damage": "",
+ "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within reach for 3d6 + [FAI] damage each round. Roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-15: Lose 1 hit point.\n 16-20: Lose 2 hit points.",
+ "flavor": "Monsters are real. They live inside us, and sometimes, they win."
+ }, {
+ "name": "Thorn Bind",
+ "damage": "1d4 + [FAI]",
+ "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional 1d4 damage each round until they break free.",
+ "flavor": "Monsters are real. They live inside us, and sometimes, they win."
  }]

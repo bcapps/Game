@@ -22,6 +22,7 @@ struct Hero: Codeable {
     let stats: [Stat]
     let race: Race
     let skills: [Skill]
+    let spells: [Spell]
     let magicType: MagicType
     let god: God?
     let uniqueID: String
@@ -49,6 +50,7 @@ final class HeroCoder: NSObject, Coder {
         case Stats
         case Race
         case Skills
+        case Spells
         case MagicType
         case God
         case UniqueID
@@ -67,19 +69,20 @@ final class HeroCoder: NSObject, Coder {
         let rawStats = aDecoder.decodeObjectForKey(Keys.Stats.rawValue) as? [StatCoder]
         let rawRace = aDecoder.decodeObjectForKey(Keys.Race.rawValue) as? RaceCoder
         let rawSkills = aDecoder.decodeObjectForKey(Keys.Skills.rawValue) as? [SkillCoder]
+        let rawSpells = aDecoder.decodeObjectForKey(Keys.Spells.rawValue) as? [SpellCoder]
         let rawInventory = aDecoder.decodeObjectForKey(Keys.Inventory.rawValue) as? InventoryCoder
         let rawUniqueID = aDecoder.decodeObjectForKey(Keys.UniqueID.rawValue) as? String
         let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? MagicTypeCoder
         let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GodCoder
         
-        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else {
+        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, spells = rawSpells?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else {
             value = nil
             super.init()
             
             return nil
         }
         
-        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
+        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
         
         super.init()
     }
@@ -94,6 +97,7 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encodeObject(value.stats.coders, forKey: Keys.Stats.rawValue)
         aCoder.encodeObject(RaceCoder(value: value.race), forKey: Keys.Race.rawValue)
         aCoder.encodeObject(value.skills.coders, forKey: Keys.Skills.rawValue)
+        aCoder.encodeObject(value.spells.coders, forKey: Keys.Spells.rawValue)
         aCoder.encodeObject(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
         aCoder.encodeObject(value.uniqueID, forKey: Keys.UniqueID.rawValue)
         
