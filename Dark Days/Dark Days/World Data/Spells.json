@@ -41,7 +41,7 @@
  }, {
  "name": "Dolo's Fury",
  "damage": "",
- "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within reach for 3d6 + [FAI] damage each round. Roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-15: Lose 1 hit point.\n 16-20: Lose 2 hit points.",
+ "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points.",
  "flavor": "Monsters are real. They live inside us, and sometimes, they win."
  }, {
  "name": "Thorn Bind",
