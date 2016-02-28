@@ -6,4 +6,24 @@
  "name": "Dwarven Resilience",
  "explanation": "Dwarven mines and goblin raids have tempered your flesh, making it more difficult to hurt you.",
  "benefit": "The first time you are struck in combat, reduce the damage you take by your constitution value."
+ }, {
+ "name": "Dual Wielding",
+ "explanation": "You know what they say. Two in the hand is worth more than one in the bush.",
+ "benefit": "Allows you to wield two one-handed weapons at once, and strike with both at the same time."
+ }, {
+ "name": "Spellsunder",
+ "explanation": "There is nothing your sword can't cut, not even the gods themselves.",
+ "benefit": "Allows you to slice magical energy with you blade, rendering it inneffective. Add an additional 2 to rolls made to resist damaging magic."
+ }, {
+ "name": "War Cry",
+ "explanation": "The thundering sound of your voice resonates against the shields of your enemies, striking fear into their very soul.",
+ "benefit": "Reduces attack rolls made by enemies by 2."
+ }, {
+ "name": "Feint",
+ "explanation": "If you can't swing your blade properly, don't swing it at all.",
+ "benefit": "If you dodge a physical attack made by an enemy, you may move to their side. If you do, your next physical attack deals an additional [STR + DEX] damage."
+ }, {
+ "name": "Power Attack",
+ "explanation": "One shot, one kill.",
+ "benefit": "Deals an increased [STR * 2] damage, but reduces your attack roll by 3."
  }]

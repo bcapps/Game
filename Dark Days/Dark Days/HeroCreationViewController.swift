@@ -172,7 +172,18 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private func transitionToSkillList() {
         currentCreationState = .ChooseSkill
         
-        let skillListViewController = ListViewController<Skill>(objects: ObjectProvider.objectsForJSON("Skills"), delegate: self)
+        var startingSkills = [Skill]()
+        
+        let dw = ObjectProvider.skillForName("Dual Wielding")
+        let warcry = ObjectProvider.skillForName("War Cry")
+        let feint = ObjectProvider.skillForName("Feint")
+        let powerattack = ObjectProvider.skillForName("Power Attack")
+        
+        if let dw = dw, warcry = warcry, feint = feint, powerattack = powerattack {
+            startingSkills.appendContentsOf([dw, warcry, feint, powerattack])
+        }
+        
+        let skillListViewController = ListViewController<Skill>(objects: startingSkills, delegate: self)
         
         title = "Choose Skill"
         
