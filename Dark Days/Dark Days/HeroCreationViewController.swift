@@ -47,8 +47,6 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             case .ChooseSkill:
                 transitionToRaceList()
             case .ChooseAttributes:
-                selectedStats.removeAll()
-            
                 if heroBuilder.race.raceType == .Human {
                     transitionToSkillList()
                 }
@@ -139,6 +137,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     }
     
     private func transitionToStatList() {
+        selectedStats.removeAll()
         currentCreationState = .ChooseAttributes
         
         let statListViewController = ListViewController<Stat>(objects: heroBuilder.race.startingStats, delegate: self)
