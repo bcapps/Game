@@ -1,7 +1,7 @@
 [{
  "name": "Gifted",
  "explanation": "The gods have granted you power beyond imagination.",
- "benefits": ["• Ability to use magic.", "• FILLER TEXT."]
+ "benefits": ["• Ability to use magic.", "• Increases your faith by 1."]
  }, {
  "name": "Mundane",
  "explanation": "Without the use of magic, you learned to endure the hardships of the environment around you.",

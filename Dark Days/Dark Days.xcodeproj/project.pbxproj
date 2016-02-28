@@ -395,6 +395,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F2350B8B1C8231D600D6E18E /* Magic Type */,
 				F21ECE291C7A6AE8008041E9 /* Items */,
 				F21ECE2A1C7A6AEC008041E9 /* Skills */,
 				F2350AF91C7ADA5600D6E18E /* Monsters */,
@@ -418,7 +419,6 @@
 			children = (
 				F21ECE491C7A7C95008041E9 /* Inventory */,
 				F21ECE441C7A7C7C008041E9 /* Hero */,
-				F2350B8B1C8231D600D6E18E /* Magic Type */,
 				F21ECE281C7A6AB8008041E9 /* Stats */,
 				F21ECE271C7A6AB1008041E9 /* Race */,
 			);
