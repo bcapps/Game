@@ -56,6 +56,12 @@ extension MagicType: ListDisplayingGeneratable {
     }
 }
 
+extension Spell: ListDisplayingGeneratable {
+    static func displayable(spell: Spell) -> ListDisplayable {
+        return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.explanation, subtext: spell.flavor, image: UIImage(named: spell.name))
+    }
+}
+
 extension God: ListDisplayingGeneratable {
     static func displayable(god: God) -> ListDisplayable {
         return ListDisplayable(title: god.name, information: god.background, additionalInfoTitle: "Responsibilities", additionalInfo: god.responsibilties.joinWithSeparator("\n"), subtext: nil, image: UIImage(named: god.name))

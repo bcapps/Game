@@ -7,96 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B741A9C7EEA75A941DBB62A76CE5CCF /* Decodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 448FD17813FA451332B2AB589DD03CE4 /* Decodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D8C1C82F0ECB45066E04491BF301205 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4DC2F82B9500DC4471CF1F294F2B3 /* Foundation.framework */; };
-		17DA295CF7405D998179CAEC628EAA17 /* Decodable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A35900767B339AA31F3116D2BF86626E /* Decodable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E9B813B2D11CA2FF60CBBD1CDB0F89E /* Castable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FB11CDA2A7D9FE97A6553CD0EB9D3 /* Castable.swift */; };
-		20FD76E04BAD049FB6D57EF36334377C /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 849FE3C3EB339933B49432706E1EE458 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4773FB2A77FABCE4E8A574E860D0F001 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126B49CC716ACD066632319034850E /* Decodable.swift */; };
-		4808BE75CBBFBE3196E3303E7EA3A901 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290CF0A2C8B6E05C80E7C7711A43C58 /* Operators.swift */; };
-		4D10AA41DED69EDE259380F3F0C62F61 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A87F62D8FCFE2A474C0CD3495CDF68 /* DecodingError.swift */; };
-		90869D6DFDE65B166FBDF2290F223A27 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32742B250811D7BD09962C582158A739 /* Parse.swift */; };
-		9B1743022C2290CC36F63B65538D78DD /* Decodable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98AB3B018D40C1275FC25D07DCE5E4 /* Decodable-dummy.m */; };
-		BDBDED24B197BD0477587B5DCC4FE1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4DC2F82B9500DC4471CF1F294F2B3 /* Foundation.framework */; };
-		C53B22A7F6EED19917BD7A53207E7F07 /* NSValueCastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C5582753102AC3D8EB3B2CAB6FA63 /* NSValueCastable.swift */; };
-		E573B6B5C15A4DED96910E37463FB8E7 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFC86DC9049F3E9F57079280F99A39A /* Pods-dummy.m */; };
-		FE9301A74D2F11E5B09E857B779C6A91 /* RawRepresentableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A947D5D08AFEB4EFC51D4BB37B482 /* RawRepresentableDecodable.swift */; };
+		01A4F9A064F5FFFACA45A3BA2F1C0071 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A5DFE54C4173CFE5B49E9E8469AB01 /* Decodable.swift */; };
+		0270BAB7E7E7ABF8EC3B9C174264F60D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B054D8BCA8FBDA1E887A4134A7D967 /* Foundation.framework */; };
+		03D818F4014EAE1CD1AF8F50D6440DFE /* AZDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DFFEF0FBD8CF0EFF063F0094F5C22 /* AZDropdownMenu.swift */; };
+		1818AD570702096349C748A95884F18B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D767ED386BE7F0E8B04CAEC2D44A9EA /* Operators.swift */; };
+		1953D8A708C1FB3F77CAAF60BF07AFD1 /* Decodable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA54D147BFEC0B80F46F44C85BA37476 /* Decodable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F6D754DCFC6B03D4362B4006D3E768E /* Castable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE6EE538183079F1E776087FDBF091 /* Castable.swift */; };
+		4730AFC3ADB6947B9D332EACF2A18664 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B054D8BCA8FBDA1E887A4134A7D967 /* Foundation.framework */; };
+		4CAB4F9E77EF6E690B8F48C61890366F /* NSValueCastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346EAFF406153762F3CBE9BE8C87F63 /* NSValueCastable.swift */; };
+		5BCB77D6605D033A96D86303CFE9A4B1 /* AZDropdownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F57313991C583901157B311EEB74ED0E /* AZDropdownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69E56B0E25A12EF23C170101E5DBC31C /* AZDropdownMenuDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E543684336CDFC0272E6FE564132982 /* AZDropdownMenuDefaultCell.swift */; };
+		73891F59DA27020386DC95DE9E5ACE42 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A295F7B334D0A89626CB26E26BC086 /* Parse.swift */; };
+		7485032E21E6AE0EBE77B82D8949933E /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14443E819F3FF3978B0EC1942AF9AB /* DecodingError.swift */; };
+		7528877124A7DEC2707B1017C5CAABF6 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77F0AB59AD08FEE443BBB5636D5B1BFD /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FABA3F5EB93562810A67B4084A7D5E7 /* Decodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F9F8E58A6523334CFD72AEAD6761A27 /* Decodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4B6C1967725B5DB315D557B531D282E /* AZDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1518650E67DE8CC7957FF8A4E9F9EE /* AZDropdownMenu-dummy.m */; };
+		C675F730F1F4EC67A0F7D23EE7D5A59B /* AZDropdownMenuBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8F113E92AC5D72D5A84521D1A1C69 /* AZDropdownMenuBaseCell.swift */; };
+		C8DB9C6F0101A685E6C342BCBD2BF986 /* AZDropdownMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A5793D401591CB7968D3BBE82E9CDF8 /* AZDropdownMenu.bundle */; };
+		E07FCB4F20D9A2FADF9BF0A65093E211 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F34F8D1C993A562564688FA2A9A583 /* Pods-dummy.m */; };
+		E5521FB5AFFFA63DD8132D6E5198FFEF /* RawRepresentableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763F1C42AE63946BC68941D5F9A45D0D /* RawRepresentableDecodable.swift */; };
+		F52A9CE14BDD7959FFBE2042A6AB846F /* Decodable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4383E5F967F2B4696016BCC15F4186B4 /* Decodable-dummy.m */; };
+		FDAEDE85DA75E3280890392BCF48AFD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B054D8BCA8FBDA1E887A4134A7D967 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A60681864C5B025A7C1C75A84D0276D /* PBXContainerItemProxy */ = {
+		0AAAB794AEDD58E2814988BAA957FB73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60C1F87F5452C02BE71F3ECDF2F91B46;
+			remoteGlobalIDString = 255726F77BBEF8D234862B3BBDBFA048;
+			remoteInfo = AZDropdownMenu;
+		};
+		BFA596FF6C285C3BEF966C37199FDCC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B0E81E92F5EDBB993A0AA0F7809FD73;
+			remoteInfo = "AZDropdownMenu-AZDropdownMenu";
+		};
+		E6381624A03845F6EDAFFD5FA17CBBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89A3BB7D4CF5BEF0D0AA3A264AA0F297;
 			remoteInfo = Decodable;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18EC6606503E8C398A54C66F6BAA44DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		32742B250811D7BD09962C582158A739 /* Parse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parse.swift; path = Sources/Parse.swift; sourceTree = "<group>"; };
-		376C5582753102AC3D8EB3B2CAB6FA63 /* NSValueCastable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSValueCastable.swift; path = Sources/NSValueCastable.swift; sourceTree = "<group>"; };
-		41A87F62D8FCFE2A474C0CD3495CDF68 /* DecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodingError.swift; path = Sources/DecodingError.swift; sourceTree = "<group>"; };
-		448FD17813FA451332B2AB589DD03CE4 /* Decodable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Decodable.h; path = Sources/Decodable.h; sourceTree = "<group>"; };
-		44B936EF2968C1E3CD19644B20AF10A8 /* Decodable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decodable-prefix.pch"; sourceTree = "<group>"; };
-		478FB11CDA2A7D9FE97A6553CD0EB9D3 /* Castable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Castable.swift; path = Sources/Castable.swift; sourceTree = "<group>"; };
-		51E444D6069A2DDACEFE10488348AD66 /* Decodable-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Decodable-Private.xcconfig"; sourceTree = "<group>"; };
+		07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "AZDropdownMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		13878B8493A53E403D6F9C07A7164F76 /* Decodable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Decodable.xcconfig; sourceTree = "<group>"; };
+		1A5793D401591CB7968D3BBE82E9CDF8 /* AZDropdownMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AZDropdownMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F09D73B5CDE8515D4ABA9CD75856F05 /* Decodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Decodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		299E517FF0FAC53B41D6E7149C0425E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		2E543684336CDFC0272E6FE564132982 /* AZDropdownMenuDefaultCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZDropdownMenuDefaultCell.swift; path = Pod/Classes/AZDropdownMenuDefaultCell.swift; sourceTree = "<group>"; };
+		309FFAD62D5481C3103700FE691B704D /* Decodable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Decodable.modulemap; sourceTree = "<group>"; };
+		35939B6403D9F11355731DD112247D94 /* AZDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AZDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
+		3610CE404AF2E16DBDDA000CB02F0EE3 /* AZDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AZDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		4383E5F967F2B4696016BCC15F4186B4 /* Decodable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Decodable-dummy.m"; sourceTree = "<group>"; };
+		4A09EEA6A4835778877EF5E08D47B97A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		50BFB7C5E022CDD185807E6227679D9B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1518650E67DE8CC7957FF8A4E9F9EE /* AZDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AZDropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		6346EAFF406153762F3CBE9BE8C87F63 /* NSValueCastable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSValueCastable.swift; path = Sources/NSValueCastable.swift; sourceTree = "<group>"; };
+		6D767ED386BE7F0E8B04CAEC2D44A9EA /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		763F1C42AE63946BC68941D5F9A45D0D /* RawRepresentableDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentableDecodable.swift; path = Sources/RawRepresentableDecodable.swift; sourceTree = "<group>"; };
+		77F0AB59AD08FEE443BBB5636D5B1BFD /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		7C5FE47B14CB6AA6CECE58EF3EAE5860 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		849FE3C3EB339933B49432706E1EE458 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		9A98AB3B018D40C1275FC25D07DCE5E4 /* Decodable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Decodable-dummy.m"; sourceTree = "<group>"; };
-		9EC4DC2F82B9500DC4471CF1F294F2B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A35900767B339AA31F3116D2BF86626E /* Decodable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decodable-umbrella.h"; sourceTree = "<group>"; };
-		AAE3C222DE7B4787EF86FC5D7BBFE5E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		B6C154E1065AE9D92A6397EA8964F58D /* Decodable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Decodable.modulemap; sourceTree = "<group>"; };
-		B78A947D5D08AFEB4EFC51D4BB37B482 /* RawRepresentableDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentableDecodable.swift; path = Sources/RawRepresentableDecodable.swift; sourceTree = "<group>"; };
+		88F8F113E92AC5D72D5A84521D1A1C69 /* AZDropdownMenuBaseCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZDropdownMenuBaseCell.swift; path = Pod/Classes/AZDropdownMenuBaseCell.swift; sourceTree = "<group>"; };
+		8F9F8E58A6523334CFD72AEAD6761A27 /* Decodable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Decodable.h; path = Sources/Decodable.h; sourceTree = "<group>"; };
+		9146A443F31D55F7A104533F031F7BB2 /* Decodable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decodable-prefix.pch"; sourceTree = "<group>"; };
+		A5A295F7B334D0A89626CB26E26BC086 /* Parse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parse.swift; path = Sources/Parse.swift; sourceTree = "<group>"; };
+		A90F746096698441ACFA6D38352BCFB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA134A8E8BF2E63F5773C0756D6145BF /* AZDropdownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AZDropdownMenu.modulemap; sourceTree = "<group>"; };
+		B0A5DFE54C4173CFE5B49E9E8469AB01 /* Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decodable.swift; path = Sources/Decodable.swift; sourceTree = "<group>"; };
+		B58DFFEF0FBD8CF0EFF063F0094F5C22 /* AZDropdownMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AZDropdownMenu.swift; path = Pod/Classes/AZDropdownMenu.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C9126B49CC716ACD066632319034850E /* Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decodable.swift; path = Sources/Decodable.swift; sourceTree = "<group>"; };
+		CA54D147BFEC0B80F46F44C85BA37476 /* Decodable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decodable-umbrella.h"; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CCBE6EE538183079F1E776087FDBF091 /* Castable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Castable.swift; path = Sources/Castable.swift; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D1236BA61FCEE05D2C54B01F8CFEEE29 /* Decodable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Decodable.xcconfig; sourceTree = "<group>"; };
-		D290CF0A2C8B6E05C80E7C7711A43C58 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
-		DDFC86DC9049F3E9F57079280F99A39A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		D7F34F8D1C993A562564688FA2A9A583 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		DBF2C91594F40B84AB9A07FF004CD6B7 /* AZDropdownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AZDropdownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31CCE9C0108575E9227910D2481DE7D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECF1369889C41507A041E15D9999BD0A /* Decodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Decodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEAD9A336A25D0C7212525668AD83036 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B054D8BCA8FBDA1E887A4134A7D967 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		ED14443E819F3FF3978B0EC1942AF9AB /* DecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodingError.swift; path = Sources/DecodingError.swift; sourceTree = "<group>"; };
+		F57313991C583901157B311EEB74ED0E /* AZDropdownMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AZDropdownMenu-umbrella.h"; sourceTree = "<group>"; };
+		F7C438DF384C8CB312D5103EAC5D7081 /* Decodable-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Decodable-Private.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83D7A53E5EB7B04A11AA8BC70842F4F8 /* Frameworks */ = {
+		069682E077EC648AFC3022D0D59FBAFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBDED24B197BD0477587B5DCC4FE1FC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE8E7584B2723D5096A0422DADC02627 /* Frameworks */ = {
+		907CA0714F445F28E7F7424F2F44BF09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D8C1C82F0ECB45066E04491BF301205 /* Foundation.framework in Frameworks */,
+				4730AFC3ADB6947B9D332EACF2A18664 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF47E03E9975B6BAFF4B70E716F39CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0270BAB7E7E7ABF8EC3B9C174264F60D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDBBA72C73494E16943443CF362A28B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAEDE85DA75E3280890392BCF48AFD4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		479CB9BD860473383BB1F2FDEF26E60F /* Decodable */ = {
+		387ED2E3831F54E0026C7BFBCF8A96AE /* Decodable */ = {
 			isa = PBXGroup;
 			children = (
-				478FB11CDA2A7D9FE97A6553CD0EB9D3 /* Castable.swift */,
-				448FD17813FA451332B2AB589DD03CE4 /* Decodable.h */,
-				C9126B49CC716ACD066632319034850E /* Decodable.swift */,
-				41A87F62D8FCFE2A474C0CD3495CDF68 /* DecodingError.swift */,
-				376C5582753102AC3D8EB3B2CAB6FA63 /* NSValueCastable.swift */,
-				D290CF0A2C8B6E05C80E7C7711A43C58 /* Operators.swift */,
-				32742B250811D7BD09962C582158A739 /* Parse.swift */,
-				B78A947D5D08AFEB4EFC51D4BB37B482 /* RawRepresentableDecodable.swift */,
-				81D0E7F09E03BBEBFB13BEA125BDEA88 /* Support Files */,
+				CCBE6EE538183079F1E776087FDBF091 /* Castable.swift */,
+				8F9F8E58A6523334CFD72AEAD6761A27 /* Decodable.h */,
+				B0A5DFE54C4173CFE5B49E9E8469AB01 /* Decodable.swift */,
+				ED14443E819F3FF3978B0EC1942AF9AB /* DecodingError.swift */,
+				6346EAFF406153762F3CBE9BE8C87F63 /* NSValueCastable.swift */,
+				6D767ED386BE7F0E8B04CAEC2D44A9EA /* Operators.swift */,
+				A5A295F7B334D0A89626CB26E26BC086 /* Parse.swift */,
+				763F1C42AE63946BC68941D5F9A45D0D /* RawRepresentableDecodable.swift */,
+				CC1C28C810E24C02ACD4DFD460FB8774 /* Support Files */,
 			);
 			path = Decodable;
 			sourceTree = "<group>";
@@ -104,7 +152,7 @@
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9EC4DC2F82B9500DC4471CF1F294F2B3 /* Foundation.framework */,
+				E9B054D8BCA8FBDA1E887A4134A7D967 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -116,12 +164,12 @@
 				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
 				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
 				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
-				DDFC86DC9049F3E9F57079280F99A39A /* Pods-dummy.m */,
+				D7F34F8D1C993A562564688FA2A9A583 /* Pods-dummy.m */,
 				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
 				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
-				849FE3C3EB339933B49432706E1EE458 /* Pods-umbrella.h */,
-				AAE3C222DE7B4787EF86FC5D7BBFE5E3 /* Pods.debug.xcconfig */,
-				18EC6606503E8C398A54C66F6BAA44DB /* Pods.release.xcconfig */,
+				77F0AB59AD08FEE443BBB5636D5B1BFD /* Pods-umbrella.h */,
+				299E517FF0FAC53B41D6E7149C0425E0 /* Pods.debug.xcconfig */,
+				4A09EEA6A4835778877EF5E08D47B97A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
@@ -132,25 +180,30 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D81FD53C91DBC47E595799C716B6047E /* Pods */,
+				8478E6B69D57E312DD260BC61105DAD4 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		81D0E7F09E03BBEBFB13BEA125BDEA88 /* Support Files */ = {
+		8478E6B69D57E312DD260BC61105DAD4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B6C154E1065AE9D92A6397EA8964F58D /* Decodable.modulemap */,
-				D1236BA61FCEE05D2C54B01F8CFEEE29 /* Decodable.xcconfig */,
-				51E444D6069A2DDACEFE10488348AD66 /* Decodable-Private.xcconfig */,
-				9A98AB3B018D40C1275FC25D07DCE5E4 /* Decodable-dummy.m */,
-				44B936EF2968C1E3CD19644B20AF10A8 /* Decodable-prefix.pch */,
-				A35900767B339AA31F3116D2BF86626E /* Decodable-umbrella.h */,
-				FEAD9A336A25D0C7212525668AD83036 /* Info.plist */,
+				9F03B9220155FE1D603933900CC0E8D7 /* AZDropdownMenu */,
+				387ED2E3831F54E0026C7BFBCF8A96AE /* Decodable */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Decodable";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F03B9220155FE1D603933900CC0E8D7 /* AZDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B58DFFEF0FBD8CF0EFF063F0094F5C22 /* AZDropdownMenu.swift */,
+				88F8F113E92AC5D72D5A84521D1A1C69 /* AZDropdownMenuBaseCell.swift */,
+				2E543684336CDFC0272E6FE564132982 /* AZDropdownMenuDefaultCell.swift */,
+				CD1CD1884979AC6C5337C0FEFFA3B65A /* Support Files */,
+			);
+			path = AZDropdownMenu;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -169,53 +222,140 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC1C28C810E24C02ACD4DFD460FB8774 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				309FFAD62D5481C3103700FE691B704D /* Decodable.modulemap */,
+				13878B8493A53E403D6F9C07A7164F76 /* Decodable.xcconfig */,
+				F7C438DF384C8CB312D5103EAC5D7081 /* Decodable-Private.xcconfig */,
+				4383E5F967F2B4696016BCC15F4186B4 /* Decodable-dummy.m */,
+				9146A443F31D55F7A104533F031F7BB2 /* Decodable-prefix.pch */,
+				CA54D147BFEC0B80F46F44C85BA37476 /* Decodable-umbrella.h */,
+				A90F746096698441ACFA6D38352BCFB0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Decodable";
+			sourceTree = "<group>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECF1369889C41507A041E15D9999BD0A /* Decodable.framework */,
-				7C5FE47B14CB6AA6CECE58EF3EAE5860 /* Pods.framework */,
+				1A5793D401591CB7968D3BBE82E9CDF8 /* AZDropdownMenu.bundle */,
+				DBF2C91594F40B84AB9A07FF004CD6B7 /* AZDropdownMenu.framework */,
+				1F09D73B5CDE8515D4ABA9CD75856F05 /* Decodable.framework */,
+				50BFB7C5E022CDD185807E6227679D9B /* Pods.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D81FD53C91DBC47E595799C716B6047E /* Pods */ = {
+		CD1CD1884979AC6C5337C0FEFFA3B65A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				479CB9BD860473383BB1F2FDEF26E60F /* Decodable */,
+				AA134A8E8BF2E63F5773C0756D6145BF /* AZDropdownMenu.modulemap */,
+				3610CE404AF2E16DBDDA000CB02F0EE3 /* AZDropdownMenu.xcconfig */,
+				07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */,
+				5C1518650E67DE8CC7957FF8A4E9F9EE /* AZDropdownMenu-dummy.m */,
+				35939B6403D9F11355731DD112247D94 /* AZDropdownMenu-prefix.pch */,
+				F57313991C583901157B311EEB74ED0E /* AZDropdownMenu-umbrella.h */,
+				E31CCE9C0108575E9227910D2481DE7D /* Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/AZDropdownMenu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5005904CEFA6657FB2B9E6606963C62B /* Headers */ = {
+		00E9CE76110733AB1218A0CCA6A55F01 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FD76E04BAD049FB6D57EF36334377C /* Pods-umbrella.h in Headers */,
+				5BCB77D6605D033A96D86303CFE9A4B1 /* AZDropdownMenu-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C35E39E952D4844EB7300E4E51A4C5AE /* Headers */ = {
+		599CC5C14A6D1650C9EAC60F6FE1260C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17DA295CF7405D998179CAEC628EAA17 /* Decodable-umbrella.h in Headers */,
-				0B741A9C7EEA75A941DBB62A76CE5CCF /* Decodable.h in Headers */,
+				1953D8A708C1FB3F77CAAF60BF07AFD1 /* Decodable-umbrella.h in Headers */,
+				9FABA3F5EB93562810A67B4084A7D5E7 /* Decodable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B634F01BA525F71D2FA9B57787B1005 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7528877124A7DEC2707B1017C5CAABF6 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		60C1F87F5452C02BE71F3ECDF2F91B46 /* Decodable */ = {
+		255726F77BBEF8D234862B3BBDBFA048 /* AZDropdownMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 216F060C5B2F9052AC127792010DBDE7 /* Build configuration list for PBXNativeTarget "Decodable" */;
+			buildConfigurationList = 5BAAD84CA1AC0FBD899BCC6DA5668F7D /* Build configuration list for PBXNativeTarget "AZDropdownMenu" */;
 			buildPhases = (
-				C0BEB194268BC5F4F14524683D66CC41 /* Sources */,
-				FE8E7584B2723D5096A0422DADC02627 /* Frameworks */,
-				C35E39E952D4844EB7300E4E51A4C5AE /* Headers */,
+				434138ABA78CF308248B40AD6ECD5CDA /* Sources */,
+				DDBBA72C73494E16943443CF362A28B6 /* Frameworks */,
+				2845A29F0812366461CAF4560F38E5CC /* Resources */,
+				00E9CE76110733AB1218A0CCA6A55F01 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F7B5C042363CF2413D40F760205B56B /* PBXTargetDependency */,
+			);
+			name = AZDropdownMenu;
+			productName = AZDropdownMenu;
+			productReference = DBF2C91594F40B84AB9A07FF004CD6B7 /* AZDropdownMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2B0E81E92F5EDBB993A0AA0F7809FD73 /* AZDropdownMenu-AZDropdownMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C2F466E45C975F9BEE118B17F9B1FD /* Build configuration list for PBXNativeTarget "AZDropdownMenu-AZDropdownMenu" */;
+			buildPhases = (
+				00DF8B0BBA23E097A3D0667DA852DEC8 /* Sources */,
+				069682E077EC648AFC3022D0D59FBAFC /* Frameworks */,
+				9714CF68651AEE788A7816E0B38808EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AZDropdownMenu-AZDropdownMenu";
+			productName = "AZDropdownMenu-AZDropdownMenu";
+			productReference = 1A5793D401591CB7968D3BBE82E9CDF8 /* AZDropdownMenu.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5501903AEA30663F3E9A5EB57122A955 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71FB3A77DDBAEB0E4200D8976B636887 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				F31F8ED9A042C3D256898D3F6C9D0EB4 /* Sources */,
+				907CA0714F445F28E7F7424F2F44BF09 /* Frameworks */,
+				8B634F01BA525F71D2FA9B57787B1005 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E970EBD092B22B00A2D3AE0FEE66B32 /* PBXTargetDependency */,
+				59203CBBD947984F74738327296381A2 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 50BFB7C5E022CDD185807E6227679D9B /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		89A3BB7D4CF5BEF0D0AA3A264AA0F297 /* Decodable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CA261D6BF3CF14E1CE978CDCF3EFBBE /* Build configuration list for PBXNativeTarget "Decodable" */;
+			buildPhases = (
+				6D4CF06F1A975905A3697807980657D7 /* Sources */,
+				BF47E03E9975B6BAFF4B70E716F39CF7 /* Frameworks */,
+				599CC5C14A6D1650C9EAC60F6FE1260C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -223,25 +363,7 @@
 			);
 			name = Decodable;
 			productName = Decodable;
-			productReference = ECF1369889C41507A041E15D9999BD0A /* Decodable.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A01BAA95D19B809EE941FF1CF0053BE6 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 387E07E00AF735DAA61DDC2AA421F70B /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				EB2413AC64427864AC64CF85DF9CF66D /* Sources */,
-				83D7A53E5EB7B04A11AA8BC70842F4F8 /* Frameworks */,
-				5005904CEFA6657FB2B9E6606963C62B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3AC33434DC394FEAD1B1052963DC35A /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 7C5FE47B14CB6AA6CECE58EF3EAE5860 /* Pods.framework */;
+			productReference = 1F09D73B5CDE8515D4ABA9CD75856F05 /* Decodable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -265,69 +387,117 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60C1F87F5452C02BE71F3ECDF2F91B46 /* Decodable */,
-				A01BAA95D19B809EE941FF1CF0053BE6 /* Pods */,
+				255726F77BBEF8D234862B3BBDBFA048 /* AZDropdownMenu */,
+				2B0E81E92F5EDBB993A0AA0F7809FD73 /* AZDropdownMenu-AZDropdownMenu */,
+				89A3BB7D4CF5BEF0D0AA3A264AA0F297 /* Decodable */,
+				5501903AEA30663F3E9A5EB57122A955 /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		C0BEB194268BC5F4F14524683D66CC41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		2845A29F0812366461CAF4560F38E5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9B813B2D11CA2FF60CBBD1CDB0F89E /* Castable.swift in Sources */,
-				9B1743022C2290CC36F63B65538D78DD /* Decodable-dummy.m in Sources */,
-				4773FB2A77FABCE4E8A574E860D0F001 /* Decodable.swift in Sources */,
-				4D10AA41DED69EDE259380F3F0C62F61 /* DecodingError.swift in Sources */,
-				C53B22A7F6EED19917BD7A53207E7F07 /* NSValueCastable.swift in Sources */,
-				4808BE75CBBFBE3196E3303E7EA3A901 /* Operators.swift in Sources */,
-				90869D6DFDE65B166FBDF2290F223A27 /* Parse.swift in Sources */,
-				FE9301A74D2F11E5B09E857B779C6A91 /* RawRepresentableDecodable.swift in Sources */,
+				C8DB9C6F0101A685E6C342BCBD2BF986 /* AZDropdownMenu.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB2413AC64427864AC64CF85DF9CF66D /* Sources */ = {
+		9714CF68651AEE788A7816E0B38808EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00DF8B0BBA23E097A3D0667DA852DEC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E573B6B5C15A4DED96910E37463FB8E7 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434138ABA78CF308248B40AD6ECD5CDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B6C1967725B5DB315D557B531D282E /* AZDropdownMenu-dummy.m in Sources */,
+				03D818F4014EAE1CD1AF8F50D6440DFE /* AZDropdownMenu.swift in Sources */,
+				C675F730F1F4EC67A0F7D23EE7D5A59B /* AZDropdownMenuBaseCell.swift in Sources */,
+				69E56B0E25A12EF23C170101E5DBC31C /* AZDropdownMenuDefaultCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D4CF06F1A975905A3697807980657D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6D754DCFC6B03D4362B4006D3E768E /* Castable.swift in Sources */,
+				F52A9CE14BDD7959FFBE2042A6AB846F /* Decodable-dummy.m in Sources */,
+				01A4F9A064F5FFFACA45A3BA2F1C0071 /* Decodable.swift in Sources */,
+				7485032E21E6AE0EBE77B82D8949933E /* DecodingError.swift in Sources */,
+				4CAB4F9E77EF6E690B8F48C61890366F /* NSValueCastable.swift in Sources */,
+				1818AD570702096349C748A95884F18B /* Operators.swift in Sources */,
+				73891F59DA27020386DC95DE9E5ACE42 /* Parse.swift in Sources */,
+				E5521FB5AFFFA63DD8132D6E5198FFEF /* RawRepresentableDecodable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31F8ED9A042C3D256898D3F6C9D0EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E07FCB4F20D9A2FADF9BF0A65093E211 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F3AC33434DC394FEAD1B1052963DC35A /* PBXTargetDependency */ = {
+		4E970EBD092B22B00A2D3AE0FEE66B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AZDropdownMenu;
+			target = 255726F77BBEF8D234862B3BBDBFA048 /* AZDropdownMenu */;
+			targetProxy = 0AAAB794AEDD58E2814988BAA957FB73 /* PBXContainerItemProxy */;
+		};
+		59203CBBD947984F74738327296381A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Decodable;
-			target = 60C1F87F5452C02BE71F3ECDF2F91B46 /* Decodable */;
-			targetProxy = 0A60681864C5B025A7C1C75A84D0276D /* PBXContainerItemProxy */;
+			target = 89A3BB7D4CF5BEF0D0AA3A264AA0F297 /* Decodable */;
+			targetProxy = E6381624A03845F6EDAFFD5FA17CBBCC /* PBXContainerItemProxy */;
+		};
+		6F7B5C042363CF2413D40F760205B56B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AZDropdownMenu-AZDropdownMenu";
+			target = 2B0E81E92F5EDBB993A0AA0F7809FD73 /* AZDropdownMenu-AZDropdownMenu */;
+			targetProxy = BFA596FF6C285C3BEF966C37199FDCC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1EF5DDFD487DAF2AFE5B1DB824E373F0 /* Debug */ = {
+		0B1C74A78DFA3FD214B6B7C2FD31C045 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAE3C222DE7B4787EF86FC5D7BBFE5E3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AZDropdownMenu/AZDropdownMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AZDropdownMenu/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MODULEMAP_FILE = "Target Support Files/AZDropdownMenu/AZDropdownMenu.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_NAME = AZDropdownMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -337,9 +507,9 @@
 			};
 			name = Debug;
 		};
-		2E1B323B7EB1758FC70E7DFFC75A5507 /* Release */ = {
+		44924FEBD4D8327EC42354747E7937C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51E444D6069A2DDACEFE10488348AD66 /* Decodable-Private.xcconfig */;
+			baseConfigurationReference = F7C438DF384C8CB312D5103EAC5D7081 /* Decodable-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.4.1;
@@ -364,37 +534,36 @@
 			};
 			name = Release;
 		};
-		47E3F2A8DC22A88F41BE0E1F6025E8D5 /* Debug */ = {
+		5FB52D61230725154F89D22C0AE15A79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51E444D6069A2DDACEFE10488348AD66 /* Decodable-Private.xcconfig */;
+			baseConfigurationReference = 07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.4.1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.4.1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Decodable/Decodable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Decodable/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AZDropdownMenu/AZDropdownMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AZDropdownMenu/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Decodable/Decodable.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Decodable;
+				MODULEMAP_FILE = "Target Support Files/AZDropdownMenu/AZDropdownMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AZDropdownMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		6307495466FC833EA13F34B987248648 /* Release */ = {
+		6F5F717CA8737960E0C4419CFEC43B9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18EC6606503E8C398A54C66F6BAA44DB /* Pods.release.xcconfig */;
+			baseConfigurationReference = 4A09EEA6A4835778877EF5E08D47B97A /* Pods.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -460,6 +629,88 @@
 			};
 			name = Debug;
 		};
+		944CF9784AE5D3CB80F7BA0D4B2FF42E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = AZDropdownMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9C0E1F6DB45BADCB6CF66CCB55B44DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 299E517FF0FAC53B41D6E7149C0425E0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B60AACB3B7FBAAFF2716F65FCED13AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7C438DF384C8CB312D5103EAC5D7081 /* Decodable-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.4.1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.4.1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Decodable/Decodable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Decodable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Decodable/Decodable.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Decodable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6D1AAC85DE9504ED2C9837EE1CFBC7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07BC606F94E2D945B433CA69E394BF52 /* AZDropdownMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = AZDropdownMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -497,15 +748,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		216F060C5B2F9052AC127792010DBDE7 /* Build configuration list for PBXNativeTarget "Decodable" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47E3F2A8DC22A88F41BE0E1F6025E8D5 /* Debug */,
-				2E1B323B7EB1758FC70E7DFFC75A5507 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -515,11 +757,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		387E07E00AF735DAA61DDC2AA421F70B /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		5BAAD84CA1AC0FBD899BCC6DA5668F7D /* Build configuration list for PBXNativeTarget "AZDropdownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EF5DDFD487DAF2AFE5B1DB824E373F0 /* Debug */,
-				6307495466FC833EA13F34B987248648 /* Release */,
+				0B1C74A78DFA3FD214B6B7C2FD31C045 /* Debug */,
+				5FB52D61230725154F89D22C0AE15A79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71FB3A77DDBAEB0E4200D8976B636887 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C0E1F6DB45BADCB6CF66CCB55B44DC7 /* Debug */,
+				6F5F717CA8737960E0C4419CFEC43B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CA261D6BF3CF14E1CE978CDCF3EFBBE /* Build configuration list for PBXNativeTarget "Decodable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60AACB3B7FBAAFF2716F65FCED13AEA /* Debug */,
+				44924FEBD4D8327EC42354747E7937C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C2F466E45C975F9BEE118B17F9B1FD /* Build configuration list for PBXNativeTarget "AZDropdownMenu-AZDropdownMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				944CF9784AE5D3CB80F7BA0D4B2FF42E /* Debug */,
+				B6D1AAC85DE9504ED2C9837EE1CFBC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,10 +1,13 @@
 PODS:
+  - AZDropdownMenu (1.0.0)
   - Decodable (0.4.1)
 
 DEPENDENCIES:
+  - AZDropdownMenu
   - Decodable
 
 SPEC CHECKSUMS:
+  AZDropdownMenu: cd6c84858f8e3370dadb32365b33aa9dd0edf7ff
   Decodable: 4df86629544f717045a931ed6e9f0be35fa3c3b0
 
 COCOAPODS: 0.38.2
