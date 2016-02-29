@@ -14,13 +14,13 @@ struct Spell: Decodable, Codeable, Nameable {
 
     let name: String
     let damage: String
-    let explanation: String
+    let effects: String
     let flavor: String
     
     static func decode(json: AnyObject) throws -> Spell {
         return try Spell(name: json => "name",
             damage: json => "damage",
-            explanation: json => "explanation",
+            effects: json => "effects",
             flavor: json => "flavor")
     }
 }

@@ -39,9 +39,12 @@ final class TestHero {
         let skill = ObjectProvider.skillForName("Dwarven Resilience")
         let skill2 = ObjectProvider.skillForName("Elven Accuracy")
         
+        let spell = ObjectProvider.spellForName("Blind")
+        let spell2 = ObjectProvider.spellForName("Paranoia")
+        
         let magicType = ObjectProvider.magicTypeForName("Mundane")
         let god = ObjectProvider.godForName("Dolo, God of Agony")
         
-        return Hero(name: "Twig", gender: Gender.Male, inventory: inventory, stats: [stat1!, stat2!, stat3!, stat4!, stat5!], race: race!, skills: [skill!, skill2!], magicType: magicType!, god: god!, uniqueID: NSUUID().UUIDString)
+        return Hero(name: "Twig", gender: Gender.Male, inventory: inventory, stats: [stat1!, stat2!, stat3!, stat4!, stat5!], race: race!, skills: [skill!, skill2!], spells: [spell!, spell2!], magicType: magicType!, god: god!, uniqueID: NSUUID().UUIDString)
     }
 }

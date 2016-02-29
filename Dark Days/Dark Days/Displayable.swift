@@ -58,7 +58,7 @@ extension MagicType: ListDisplayingGeneratable {
 
 extension Spell: ListDisplayingGeneratable {
     static func displayable(spell: Spell) -> ListDisplayable {
-        return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.explanation, subtext: spell.flavor, image: UIImage(named: spell.name))
+        return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name))
     }
 }
 
