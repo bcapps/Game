@@ -52,7 +52,7 @@ final class InfoCell: UITableViewCell {
         infoImageView.layer.borderColor = UIColor.borderColor().CGColor
         infoImageView.layer.borderWidth = 1.0
         infoImageView.layer.masksToBounds = true
-        
+
         infoNameLabel.font = UIFont.headingFont()
         infoTextView.font = UIFont.bodyFont()
         

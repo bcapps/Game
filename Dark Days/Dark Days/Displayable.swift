@@ -58,7 +58,12 @@ extension MagicType: ListDisplayingGeneratable {
 
 extension Spell: ListDisplayingGeneratable {
     static func displayable(spell: Spell) -> ListDisplayable {
-        return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name))
+        var damage = spell.damage
+        if damage.characters.count > 0 {
+            damage = "Damage: " + spell.damage
+        }
+        
+        return ListDisplayable(title: spell.name, information: damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name))
     }
 }
 
@@ -92,22 +97,30 @@ struct ListDisplayable {
 }
 
 extension ListDisplayable {
+    
+//    return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name))
+
     var attributedString: NSAttributedString {
         get {
             let attributedString = NSMutableAttributedString()
             
-            if let information = information {
+            if let information = information where information.characters.count > 0 {
                 let info = NSAttributedString.attributedStringWithBodyAttributes(information)
                 
                 attributedString.appendAttributedString(info)
+                attributedString.appendAttributedString(NSAttributedString(string: "\n"))
             }
             
-            if let additionalInfo = additionalInfo {
-                attributedString.appendAttributedString(NSAttributedString(string: "\n\n"))
-                
-                if let title = additionalInfoTitle {
+            if let additionalInfo = additionalInfo where additionalInfo.characters.count > 0 {
+
+                if let title = additionalInfoTitle where title.characters.count > 0 {
+                    attributedString.appendAttributedString(NSAttributedString(string: "\n"))
+
                     let attributedTitle = NSAttributedString.attributedStringWithHeadingAttributes(title)
                     attributedString.appendAttributedString(attributedTitle)
+                    attributedString.appendAttributedString(NSAttributedString(string: "\n"))
+                }
+                else if information?.characters.count > 0 {
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
                 }
                 
@@ -116,7 +129,7 @@ extension ListDisplayable {
                 attributedString.appendAttributedString(additionalInfo)
             }
             
-            if let subtext = subtext {
+            if let subtext = subtext where subtext.characters.count > 0 {
                 attributedString.appendAttributedString(NSAttributedString(string: "\n"))
                 
                 let subtext = NSAttributedString.attributedStringWithSmallAttributes(subtext)
