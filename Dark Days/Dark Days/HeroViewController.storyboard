@@ -92,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Menu" width="200" height="133"/>
+        <image name="Menu" width="40" height="26"/>
         <image name="SilhoutteMale" width="133" height="372"/>
     </resources>
 </document>

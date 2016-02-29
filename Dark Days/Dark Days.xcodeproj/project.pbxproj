@@ -122,10 +122,6 @@
 		F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
 		F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
 		F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
-		F2473B251C83C40C008FD65B /* HeroMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B241C83C40C008FD65B /* HeroMenuViewController.swift */; };
-		F2473B271C83C425008FD65B /* HeroMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B261C83C425008FD65B /* HeroMenuViewController.storyboard */; };
-		F2D458081C83C6FB00751635 /* HeroMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458071C83C6FB00751635 /* HeroMenuCell.swift */; };
-		F2D4580A1C83C77900751635 /* HeroMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D458091C83C77900751635 /* HeroMenuCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,10 +223,6 @@
 		F2473B1E1C83B307008FD65B /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		F2473B201C83B328008FD65B /* HeroViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroViewController.storyboard; sourceTree = "<group>"; };
 		F2473B221C83B606008FD65B /* EquipmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentButton.swift; sourceTree = "<group>"; };
-		F2473B241C83C40C008FD65B /* HeroMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroMenuViewController.swift; sourceTree = "<group>"; };
-		F2473B261C83C425008FD65B /* HeroMenuViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroMenuViewController.storyboard; sourceTree = "<group>"; };
-		F2D458071C83C6FB00751635 /* HeroMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroMenuCell.swift; sourceTree = "<group>"; };
-		F2D458091C83C77900751635 /* HeroMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroMenuCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,10 +561,6 @@
 				F2473B221C83B606008FD65B /* EquipmentButton.swift */,
 				F2473B1E1C83B307008FD65B /* HeroViewController.swift */,
 				F2473B201C83B328008FD65B /* HeroViewController.storyboard */,
-				F2473B241C83C40C008FD65B /* HeroMenuViewController.swift */,
-				F2473B261C83C425008FD65B /* HeroMenuViewController.storyboard */,
-				F2D458071C83C6FB00751635 /* HeroMenuCell.swift */,
-				F2D458091C83C77900751635 /* HeroMenuCell.xib */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -697,8 +685,6 @@
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
-				F2D4580A1C83C77900751635 /* HeroMenuCell.xib in Resources */,
-				F2473B271C83C425008FD65B /* HeroMenuViewController.storyboard in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
@@ -808,7 +794,6 @@
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
-				F2473B251C83C40C008FD65B /* HeroMenuViewController.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
@@ -821,7 +806,6 @@
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
-				F2D458081C83C6FB00751635 /* HeroMenuCell.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
