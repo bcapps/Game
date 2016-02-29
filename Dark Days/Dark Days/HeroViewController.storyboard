@@ -24,40 +24,45 @@
                                     <constraint firstAttribute="width" secondItem="H5F-ib-KGt" secondAttribute="height" multiplier="1:2.7972" id="mlc-zM-2V7"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-B1-mLe" userLabel="HelmetButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="137" y="40" width="46" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-B1-mLe" userLabel="HelmetButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="133" y="40" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JqS-tT-Ofc"/>
+                                    <constraint firstAttribute="height" constant="55" id="JqS-tT-Ofc"/>
+                                    <constraint firstAttribute="width" secondItem="lDs-B1-mLe" secondAttribute="height" multiplier="1:1" id="rkV-Dk-XHd"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Helm"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="204" y="225" width="46" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="205" y="222.5" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dul-Tm-cZS"/>
+                                    <constraint firstAttribute="height" constant="55" id="dul-Tm-cZS"/>
+                                    <constraint firstAttribute="width" secondItem="LMS-Zp-1oA" secondAttribute="height" multiplier="1:1" id="jjP-91-bsI"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="LeftHand"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="70" y="225" width="46" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="60" y="222.5" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="i6n-CV-R7r"/>
+                                    <constraint firstAttribute="height" constant="55" id="i6n-CV-R7r"/>
+                                    <constraint firstAttribute="width" secondItem="58g-mR-vui" secondAttribute="height" multiplier="1:1" id="rc4-a8-WeH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="RightHand"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-he-zNu" userLabel="ChestButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="137" y="130" width="46" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-he-zNu" userLabel="ChestButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="132.5" y="125" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="oPu-FD-2Be"/>
+                                    <constraint firstAttribute="width" secondItem="6MH-he-zNu" secondAttribute="height" multiplier="1:1" id="7Os-bT-OsL"/>
+                                    <constraint firstAttribute="height" constant="55" id="oPu-FD-2Be"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Chest"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="137" y="400" width="46" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="132.5" y="395" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VC5-h6-Mw0"/>
+                                    <constraint firstAttribute="height" constant="55" id="VC5-h6-Mw0"/>
+                                    <constraint firstAttribute="width" secondItem="tWM-Zd-iTa" secondAttribute="height" multiplier="1:1" id="Xbx-or-Lf4"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Boots"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,13 +71,13 @@
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="top" secondItem="BYk-lY-vIi" secondAttribute="bottom" constant="20" id="4gk-va-UAW"/>
                             <constraint firstItem="lNS-tN-AT4" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="20" id="FCV-8J-zsI"/>
                             <constraint firstItem="6MH-he-zNu" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="Ssj-et-8wE"/>
-                            <constraint firstItem="LMS-Zp-1oA" firstAttribute="trailing" secondItem="H5F-ib-KGt" secondAttribute="trailing" constant="15" id="VbP-AI-cQg"/>
-                            <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="bottom" constant="40" id="aHM-F5-AjM"/>
+                            <constraint firstItem="LMS-Zp-1oA" firstAttribute="trailing" secondItem="H5F-ib-KGt" secondAttribute="trailing" constant="25" id="VbP-AI-cQg"/>
+                            <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="bottom" constant="30" id="aHM-F5-AjM"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="bUQ-oe-6yS"/>
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="jvo-39-PCv"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="kko-zf-KJa"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="lPz-zz-78M"/>
-                            <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-15" id="scb-EJ-mDA"/>
+                            <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-25" id="scb-EJ-mDA"/>
                             <constraint firstItem="LMS-Zp-1oA" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="vpO-Gm-SkJ"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="bottom" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="-10" id="y1u-75-PdT"/>
                         </constraints>
@@ -92,7 +97,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Boots" width="40" height="40"/>
+        <image name="Chest" width="40" height="40"/>
+        <image name="Helm" width="40" height="40"/>
+        <image name="LeftHand" width="40" height="40"/>
         <image name="Menu" width="40" height="26"/>
+        <image name="RightHand" width="40" height="40"/>
         <image name="SilhoutteMale" width="133" height="372"/>
     </resources>
 </document>

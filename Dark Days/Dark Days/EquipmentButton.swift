@@ -9,5 +9,12 @@
 import UIKit
 
 final class EquipmentButton: UIButton {
-    
+    override func awakeFromNib() {
+        layer.borderColor = UIColor.borderColor().CGColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 8.0
+        
+        imageView?.tintColor = UIColor(white: 0.5, alpha: 0.7)
+        backgroundColor = UIColor(white: 0.7, alpha: 0.15)
+    }
 }
