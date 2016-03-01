@@ -43,13 +43,15 @@ struct Item: Decodable, Nameable, Codeable {
     let effects: String
     let flavor: String
     let itemSlot: ItemSlot
+    let twoHanded: Bool
     
     static func decode(json: AnyObject) throws -> Item {
         return try Item(name: json => "name",
             damage: json => "damage",
             effects: json => "effects",
             flavor: json => "flavor",
-            itemSlot: ItemSlot.itemSlotForItemString(json => "itemSlot"))
+            itemSlot: ItemSlot.itemSlotForItemString(json => "itemSlot"),
+            twoHanded: json => "twohanded")
     }
 }
 
