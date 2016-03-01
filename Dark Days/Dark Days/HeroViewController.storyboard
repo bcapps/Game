@@ -31,6 +31,9 @@
                                     <constraint firstAttribute="width" secondItem="lDs-B1-mLe" secondAttribute="height" multiplier="1:1" id="rkV-Dk-XHd"/>
                                 </constraints>
                                 <state key="normal" image="Helm"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="8NJ-Q3-f5v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ao-dt-idE" userLabel="AccessoryButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
                                 <rect key="frame" x="38" y="40" width="55" height="55"/>
@@ -39,6 +42,9 @@
                                     <constraint firstAttribute="width" secondItem="3ao-dt-idE" secondAttribute="height" multiplier="1:1" id="GTM-M1-RaW"/>
                                 </constraints>
                                 <state key="normal" image="Accessory"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="Ufe-VW-cDX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
                                 <rect key="frame" x="205" y="222" width="55" height="55"/>
@@ -47,6 +53,9 @@
                                     <constraint firstAttribute="width" secondItem="LMS-Zp-1oA" secondAttribute="height" multiplier="1:1" id="jjP-91-bsI"/>
                                 </constraints>
                                 <state key="normal" image="LeftHand"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="rIC-OL-i9D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
                                 <rect key="frame" x="60" y="222" width="55" height="55"/>
@@ -55,6 +64,9 @@
                                     <constraint firstAttribute="width" secondItem="58g-mR-vui" secondAttribute="height" multiplier="1:1" id="rc4-a8-WeH"/>
                                 </constraints>
                                 <state key="normal" image="RightHand"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="DWg-Zt-Pbt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-he-zNu" userLabel="ChestButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
                                 <rect key="frame" x="132" y="125" width="55" height="55"/>
@@ -63,6 +75,9 @@
                                     <constraint firstAttribute="height" constant="55" id="oPu-FD-2Be"/>
                                 </constraints>
                                 <state key="normal" image="Chest"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="n7f-un-zmp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
                                 <rect key="frame" x="132" y="395" width="55" height="55"/>
@@ -71,6 +86,9 @@
                                     <constraint firstAttribute="width" secondItem="tWM-Zd-iTa" secondAttribute="height" multiplier="1:1" id="Xbx-or-Lf4"/>
                                 </constraints>
                                 <state key="normal" image="Boots"/>
+                                <connections>
+                                    <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="vfg-y3-PrJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,6 +125,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="accessoryButton" destination="3ao-dt-idE" id="k6f-lz-qBK"/>
+                        <outlet property="bootsButton" destination="tWM-Zd-iTa" id="3dm-8e-mNb"/>
+                        <outlet property="chestButton" destination="6MH-he-zNu" id="VWx-dq-PxJ"/>
+                        <outlet property="helmetButton" destination="lDs-B1-mLe" id="ywF-Jv-1Dz"/>
+                        <outlet property="leftHandButton" destination="LMS-Zp-1oA" id="a3l-Dp-xRc"/>
+                        <outlet property="rightHandButton" destination="58g-mR-vui" id="Q4S-cD-MOL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bN-FQ-RKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

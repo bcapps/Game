@@ -10,6 +10,13 @@ import UIKit
 import AZDropdownMenu
 
 final class HeroViewController: UIViewController {
+    @IBOutlet weak var helmetButton: EquipmentButton!
+    @IBOutlet weak var accessoryButton: EquipmentButton!
+    @IBOutlet weak var leftHandButton: EquipmentButton!
+    @IBOutlet weak var rightHandButton: EquipmentButton!
+    @IBOutlet weak var chestButton: EquipmentButton!
+    @IBOutlet weak var bootsButton: EquipmentButton!
+    
     var hero: Hero?
     
     let menu = DropdownMenuFactory.heroDropdownMenu()
@@ -20,7 +27,12 @@ final class HeroViewController: UIViewController {
         title = hero?.name
         view.backgroundColor = .backgroundColor()
         
+        addItemSlotToEquipmentButtons()
         addMenuTapHandlers()
+    }
+    
+    @IBAction func equipmentButtonTapped(button: EquipmentButton) {
+        presentItemList(button.slot)
     }
     
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
@@ -30,6 +42,15 @@ final class HeroViewController: UIViewController {
         else {
             menu.showMenuFromView(view)
         }
+    }
+    
+    private func addItemSlotToEquipmentButtons() {
+        helmetButton.slot = .Helmet
+        accessoryButton.slot = .Accessory
+        leftHandButton.slot = .Hand
+        rightHandButton.slot = .Hand
+        chestButton.slot = .Chest
+        bootsButton.slot = .Boots
     }
     
     private func addMenuTapHandlers() {
@@ -52,6 +73,15 @@ final class HeroViewController: UIViewController {
         
         let itemsList = ListViewController<Item>(objects: items, delegate: nil)
         itemsList.title = "Inventory"
+        
+        presentListViewController(itemsList)
+    }
+    
+    private func presentItemList(itemSlot: ItemSlot) {
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
+        
+        let itemsList = ListViewController<Item>(objects: items, delegate: nil)
+        itemsList.title = itemSlot.rawValue
         
         presentListViewController(itemsList)
     }

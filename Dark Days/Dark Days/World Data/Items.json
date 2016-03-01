@@ -3,11 +3,11 @@
  "damage": "1d6 + [STR]",
  "effects": "The sharp blade deals extra damage to fleshy creatures.",
  "flavor": "A generic longsword. It looks like it may have seen some use.",
- "itemSlot": "onehand"
+ "itemSlot": "hand"
  }, {
  "name": "Dagger",
  "damage": "1d4 + [STR]",
  "effects": "The small dagger adds bonuses to hit.",
  "flavor": "A small dagger with a leather bound hilt and a sharp blade.",
- "itemSlot": "onehand"
+ "itemSlot": "hand"
  }]

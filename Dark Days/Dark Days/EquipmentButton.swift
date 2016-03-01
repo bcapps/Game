@@ -9,6 +9,8 @@
 import UIKit
 
 final class EquipmentButton: UIButton {
+    var slot = ItemSlot.None
+    
     override func awakeFromNib() {
         layer.borderColor = UIColor.borderColor().CGColor
         layer.borderWidth = 1

@@ -15,8 +15,7 @@ enum ItemSlot: String {
     case Chest = "Chest"
     case Boots = "Boots"
     case Accessory = "Accessory"
-    case OneHand = "One Handed"
-    case TwoHand = "Two Handed"
+    case Hand = "Hand"
     
     static func itemSlotForItemString(itemString: String) -> ItemSlot {
         switch itemString {
@@ -28,10 +27,8 @@ enum ItemSlot: String {
             return .Boots
         case "accessory":
             return .Accessory
-        case "onehand":
-            return .OneHand
-        case "twohand":
-            return .TwoHand
+        case "hand":
+            return .Hand
         default:
             return .None
         }
