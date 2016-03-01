@@ -9,7 +9,7 @@
 import UIKit
 import AZDropdownMenu
 
-final class HeroViewController: UIViewController {
+final class HeroViewController: UIViewController, ListViewControllerDelegate {
     @IBOutlet weak var helmetButton: EquipmentButton!
     @IBOutlet weak var accessoryButton: EquipmentButton!
     @IBOutlet weak var leftHandButton: EquipmentButton!
@@ -19,7 +19,7 @@ final class HeroViewController: UIViewController {
     
     var hero: Hero?
     
-    let menu = DropdownMenuFactory.heroDropdownMenu()
+    private let menu = DropdownMenuFactory.heroDropdownMenu()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +69,9 @@ final class HeroViewController: UIViewController {
     }
     
     private func presentItemList() {
-        guard let items = hero?.inventory.items else { return }
-        
+        //guard let items = hero?.inventory.items else { return }
+        guard let items: [Item] = ObjectProvider.objectsForJSON("Items") else { return }
+
         let itemsList = ListViewController<Item>(objects: items, delegate: nil)
         itemsList.title = "Inventory"
         
@@ -78,9 +79,10 @@ final class HeroViewController: UIViewController {
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
-        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
-        
-        let itemsList = ListViewController<Item>(objects: items, delegate: nil)
+        //guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
+        guard let items: [Item] = ObjectProvider.objectsForJSON("Items").filter({$0.itemSlot == itemSlot}) else { return }
+
+        let itemsList = ListViewController<Item>(objects: items, delegate: self)
         itemsList.title = itemSlot.rawValue
         
         presentListViewController(itemsList)
@@ -106,5 +108,21 @@ final class HeroViewController: UIViewController {
     
     private func presentListViewController(viewController: UIViewController) {
         navigationController?.pushViewController(viewController, animated: true)
-    }    
+    }
+    
+    //MARK: ListViewControllerDelegate
+    
+    func didSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+        if let item = object as? Item {
+            print(item)
+        }
+    }
+    
+    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+        
+    }
+    
+    func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+        return true
+    }
 }
