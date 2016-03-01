@@ -21,12 +21,12 @@
  }, {
  "name": "Shadow Stalker",
  "damage": "Next physical attack gets 1d6 + [FAI]",
- "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack automatically hits, and brings you out of the shadows dealing additional damage.",
+ "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage.",
  "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
  }, {
  "name": "Paranoia",
- "damage": "Stuns the target for 1 round and deals 1d4 + [FAI]",
- "effects": "",
+ "damage": "1d4 + [FAI]",
+ "effects": "Stuns the target for 1 round.",
  "flavor": "My head is a very dark place. Soon yours will be as well."
  }, {
  "name": "Agonizing Bond",
