@@ -12,4 +12,10 @@
  "flavor": "A small dagger with a leather bound hilt and a sharp blade.",
  "itemSlot": "hand",
  "twohanded": false
+ }, {
+ "name": "Cloth Robe",
+ "damage": "",
+ "effects": "It's made of cloth!",
+ "flavor": "Super duper cloth robes!",
+ "itemSlot": "chest",
  }]
