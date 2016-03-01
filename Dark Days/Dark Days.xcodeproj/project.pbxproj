@@ -122,6 +122,7 @@
 		F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
 		F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
 		F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
+		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		F2473B1E1C83B307008FD65B /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		F2473B201C83B328008FD65B /* HeroViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroViewController.storyboard; sourceTree = "<group>"; };
 		F2473B221C83B606008FD65B /* EquipmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentButton.swift; sourceTree = "<group>"; };
+		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +563,7 @@
 				F2473B221C83B606008FD65B /* EquipmentButton.swift */,
 				F2473B1E1C83B307008FD65B /* HeroViewController.swift */,
 				F2473B201C83B328008FD65B /* HeroViewController.storyboard */,
+				F2D458171C85452300751635 /* DropdownMenuFactory.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
 				C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */,
 				F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */,
+				F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */,
 				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

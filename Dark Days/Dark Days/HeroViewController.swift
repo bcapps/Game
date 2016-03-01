@@ -12,25 +12,7 @@ import AZDropdownMenu
 final class HeroViewController: UIViewController {
     var hero: Hero?
     
-    private static var inventoryItem: AZDropdownMenuItemData {
-        get {
-            return AZDropdownMenuItemData(title: "Inventory", icon: UIImage(named: "Inventory")!)
-        }
-    }
-    
-    private static var spellItem: AZDropdownMenuItemData {
-        get {
-            return AZDropdownMenuItemData(title: "Spellbook", icon: UIImage(named: "Spellbook")!)
-        }
-    }
-    
-    private static var skillItem: AZDropdownMenuItemData {
-        get {
-            return AZDropdownMenuItemData(title: "Skills", icon: UIImage(named: "Skills")!)
-        }
-    }
-    
-    let menu = AZDropdownMenu(dataSource: [inventoryItem, spellItem, skillItem])
+    let menu = DropdownMenuFactory.heroDropdownMenu()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +32,7 @@ final class HeroViewController: UIViewController {
         }
     }
     
-    private func customizeMenu() {
-        menu.itemColor = .backgroundColor()
-        menu.itemFontColor = .headerTextColor()
-        menu.itemFontName = UIFont.headingFont().fontName
-        menu.itemFontSize = UIFont.headingFont().pointSize
-        menu.itemHeight = 54
-        
+    private func customizeMenu() {        
         menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
             switch indexPath.row {
                 case 0:
@@ -72,30 +48,30 @@ final class HeroViewController: UIViewController {
     }
     
     private func presentItemList() {
-        if let items = hero?.inventory.items {
-            let itemsList = ListViewController<Item>(objects: items, delegate: nil)
-            itemsList.title = "Inventory"
-            
-            presentListViewController(itemsList)
-        }
+        guard let items = hero?.inventory.items else { return }
+        
+        let itemsList = ListViewController<Item>(objects: items, delegate: nil)
+        itemsList.title = "Inventory"
+        
+        presentListViewController(itemsList)
     }
     
     private func presentsSkillsList() {
-        if let skills = hero?.skills {
-            let skillsList = ListViewController<Skill>(objects: skills, delegate: nil)
-            skillsList.title = "Skills"
-            
-            presentListViewController(skillsList)
-        }
+        guard let skills = hero?.skills else { return }
+        
+        let skillsList = ListViewController<Skill>(objects: skills, delegate: nil)
+        skillsList.title = "Skills"
+        
+        presentListViewController(skillsList)
     }
     
     private func presentSpellsList() {
-        if let spells = hero?.spells {
-            let spellsList = ListViewController<Spell>(objects: spells, delegate: nil)
-            spellsList.title = "Spellbook"
-            
-            presentListViewController(spellsList)
-        }
+        guard let spells = hero?.spells else { return }
+        
+        let spellsList = ListViewController<Spell>(objects: spells, delegate: nil)
+        spellsList.title = "Spellbook"
+        
+        presentListViewController(spellsList)
     }
     
     private func presentListViewController(viewController: UIViewController) {
