@@ -20,7 +20,7 @@ final class HeroViewController: UIViewController {
         title = hero?.name
         view.backgroundColor = .backgroundColor()
         
-        customizeMenu()
+        addMenuTapHandlers()
     }
     
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
@@ -32,7 +32,7 @@ final class HeroViewController: UIViewController {
         }
     }
     
-    private func customizeMenu() {        
+    private func addMenuTapHandlers() {
         menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
             switch indexPath.row {
                 case 0:
