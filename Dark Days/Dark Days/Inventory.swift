@@ -11,6 +11,12 @@ import Foundation
 struct Inventory {
     var gold: Int = 0
     var items = [Item]()
+    
+    var equippedItems: [Item] {
+        get {
+            return items.filter({$0.equipped == true})
+        }
+    }
 }
 
 final class InventoryCoder: NSObject, Coder {
