@@ -45,6 +45,8 @@ struct Item: Decodable, Nameable, Codeable {
     let itemSlot: ItemSlot
     let twoHanded: Bool
     
+    var equipped = false
+    
     static func decode(json: AnyObject) throws -> Item {
         let twoHanded: Bool
         do { twoHanded = try json => "twohanded" } catch { twoHanded = false }
@@ -54,7 +56,8 @@ struct Item: Decodable, Nameable, Codeable {
             effects: json => "effects",
             flavor: json => "flavor",
             itemSlot: ItemSlot.itemSlotForItemString(json => "itemSlot"),
-            twoHanded: twoHanded)
+            twoHanded: twoHanded,
+            equipped: false)
     }
 }
 
@@ -63,6 +66,7 @@ final class ItemCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
+        case Equipped
     }
     
     var value: Item?
@@ -74,6 +78,7 @@ final class ItemCoder: NSObject, Coder {
     
     required init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let equipped = aDecoder.decodeBoolForKey(Keys.Equipped.rawValue)
         
         guard let name = rawName else {
             value = nil
@@ -83,11 +88,13 @@ final class ItemCoder: NSObject, Coder {
         }
         
         value = ObjectProvider.itemForName(name)
+        value?.equipped = equipped
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+        aCoder.encodeBool(value?.equipped ?? false, forKey: Keys.Equipped.rawValue)
     }
 }
