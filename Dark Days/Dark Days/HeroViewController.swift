@@ -28,6 +28,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         view.backgroundColor = .backgroundColor()
         
         addItemSlotToEquipmentButtons()
+        equipItemsFromInventory()
         addMenuTapHandlers()
     }
     
@@ -51,6 +52,40 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         rightHandButton.slot = .Hand
         chestButton.slot = .Chest
         bootsButton.slot = .Boots
+    }
+    
+    private func equipItemsFromInventory() {
+        guard let equippedItems = hero?.inventory.equippedItems else { return }
+        
+        for item in equippedItems {
+            if let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot) {
+                equipmentButton.item = item
+            }
+        }
+    }
+    
+    private func freeEquipmentButtonForItemSlot(slot: ItemSlot) -> EquipmentButton? {
+        switch slot {
+            case .Helmet:
+                return helmetButton
+            case .Accessory:
+                return accessoryButton
+            case .Hand:
+                if leftHandButton.item == nil {
+                    return leftHandButton
+                }
+                else if rightHandButton.item == nil {
+                    return rightHandButton
+                }
+            case .Chest:
+                return chestButton
+            case .Boots:
+                return bootsButton
+            case .None:
+                return nil
+        }
+        
+        return nil
     }
     
     private func addMenuTapHandlers() {

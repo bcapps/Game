@@ -10,6 +10,7 @@ import UIKit
 
 final class EquipmentButton: UIButton {
     var slot = ItemSlot.None
+    var item: Item?
     
     override func awakeFromNib() {
         layer.borderColor = UIColor.borderColor().CGColor
