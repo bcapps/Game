@@ -132,6 +132,12 @@
                         <outlet property="helmetButton" destination="lDs-B1-mLe" id="ywF-Jv-1Dz"/>
                         <outlet property="leftHandButton" destination="LMS-Zp-1oA" id="a3l-Dp-xRc"/>
                         <outlet property="rightHandButton" destination="58g-mR-vui" id="Q4S-cD-MOL"/>
+                        <outletCollection property="equipmentButtons" destination="lDs-B1-mLe" id="zqi-Po-yd4"/>
+                        <outletCollection property="equipmentButtons" destination="3ao-dt-idE" id="8TJ-Gx-c1y"/>
+                        <outletCollection property="equipmentButtons" destination="LMS-Zp-1oA" id="RkZ-L1-Wqa"/>
+                        <outletCollection property="equipmentButtons" destination="58g-mR-vui" id="kiD-C6-bDG"/>
+                        <outletCollection property="equipmentButtons" destination="6MH-he-zNu" id="C1O-hM-mmO"/>
+                        <outletCollection property="equipmentButtons" destination="tWM-Zd-iTa" id="hNS-8f-3bY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bN-FQ-RKw" userLabel="First Responder" sceneMemberID="firstResponder"/>

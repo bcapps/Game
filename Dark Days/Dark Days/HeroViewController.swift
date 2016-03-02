@@ -17,6 +17,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     @IBOutlet weak var chestButton: EquipmentButton!
     @IBOutlet weak var bootsButton: EquipmentButton!
     
+    @IBOutlet var equipmentButtons: [EquipmentButton]!
+    
     var hero: Hero?
     
     private let menu = DropdownMenuFactory.heroDropdownMenu()
@@ -65,24 +67,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func freeEquipmentButtonForItemSlot(slot: ItemSlot) -> EquipmentButton? {
-        switch slot {
-            case .Helmet:
-                return helmetButton
-            case .Accessory:
-                return accessoryButton
-            case .Hand:
-                if leftHandButton.item == nil {
-                    return leftHandButton
-                }
-                else if rightHandButton.item == nil {
-                    return rightHandButton
-                }
-            case .Chest:
-                return chestButton
-            case .Boots:
-                return bootsButton
-            case .None:
-                return nil
+        for equipmentButton in equipmentButtons {
+            if equipmentButton.slot == slot && equipmentButton.item == nil {
+                return equipmentButton
+            }
         }
         
         return nil
