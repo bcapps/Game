@@ -30,7 +30,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         view.backgroundColor = .backgroundColor()
         
         addItemSlotToEquipmentButtons()
-        equipItemsFromInventory()
+        updateEquippedItems()
         addMenuTapHandlers()
     }
     
@@ -56,7 +56,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         bootsButton.slot = .Boots
     }
     
-    private func equipItemsFromInventory() {
+    private func updateEquippedItems() {
         guard let equippedItems = hero?.inventory.equippedItems else { return }
         
         for item in equippedItems {
@@ -137,13 +137,23 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     func didSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {
-            print(item)
+            switch item.itemSlot {
+                case .Hand: fallthrough
+                default:
+                    let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot)
+                    equipmentButton?.item?.equipped = false
+                    equipmentButton?.item = item
+            }
+            
+            item.equipped = true
+            
+            updateEquippedItems()
+            
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
-    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
-        
-    }
+    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
         return true

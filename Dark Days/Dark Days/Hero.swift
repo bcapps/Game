@@ -26,7 +26,7 @@ struct Hero: Codeable {
     let magicType: MagicType
     let god: God?
     let uniqueID: String
-    
+        
     func increaseStatBy(statType: StatType, value: Int) {
         let statToIncrease = stats.filter { $0.statType == statType }.first
         

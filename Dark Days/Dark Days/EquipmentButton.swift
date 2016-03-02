@@ -10,7 +10,16 @@ import UIKit
 
 final class EquipmentButton: UIButton {
     var slot = ItemSlot.None
-    var item: Item?
+    var item: Item? {
+        didSet {
+            if let name = item?.name {
+                imageView?.image = UIImage(named: name)
+            }
+            else {
+                imageView?.image = slot.imageForItemSlot
+            }
+        }
+    }
     
     override func awakeFromNib() {
         layer.borderColor = UIColor.borderColor().CGColor

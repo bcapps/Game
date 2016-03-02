@@ -33,9 +33,28 @@ enum ItemSlot: String {
             return .None
         }
     }
+    
+    var imageForItemSlot: UIImage? {
+        get {
+            switch self {
+                case .Helmet:
+                    return UIImage(named: "Helmet")
+                case .Accessory:
+                    return UIImage(named: "Accessory")
+                case .Chest:
+                    return UIImage(named: "Chest")
+                case .Hand:
+                    return UIImage(named: "Hand")
+                case .Boots:
+                    return UIImage(named: "Boots")
+                case .None:
+                    return nil
+            }
+        }
+    }
 }
 
-struct Item: Decodable, Nameable, Codeable {
+final class Item: Decodable, Nameable, Codeable {
     typealias CoderType = ItemCoder
     
     let name: String
@@ -56,8 +75,16 @@ struct Item: Decodable, Nameable, Codeable {
             effects: json => "effects",
             flavor: json => "flavor",
             itemSlot: ItemSlot.itemSlotForItemString(json => "itemSlot"),
-            twoHanded: twoHanded,
-            equipped: false)
+            twoHanded: twoHanded)
+    }
+    
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool) {
+        self.name = name
+        self.damage = damage
+        self.effects = effects
+        self.flavor = flavor
+        self.itemSlot = itemSlot
+        self.twoHanded = twoHanded
     }
 }
 

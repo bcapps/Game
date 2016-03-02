@@ -59,7 +59,7 @@ extension MagicType: ListDisplayingGeneratable {
 extension Spell: ListDisplayingGeneratable {
     static func displayable(spell: Spell) -> ListDisplayable {
         var damage = spell.damage
-        if damage.characters.count > 0 {
+        if damage.isEmpty == false {
             damage = "Damage: " + spell.damage
         }
         
@@ -98,8 +98,6 @@ struct ListDisplayable {
 
 extension ListDisplayable {
     
-//    return ListDisplayable(title: spell.name, information: spell.damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name))
-
     var attributedString: NSAttributedString {
         get {
             let attributedString = NSMutableAttributedString()
