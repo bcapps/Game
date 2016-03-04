@@ -13,10 +13,10 @@ final class EquipmentButton: UIButton {
     var item: Item? {
         didSet {
             if let name = item?.name {
-                imageView?.image = UIImage(named: name)
+                setImage(UIImage(named: name), forState: .Normal)
             }
             else {
-                imageView?.image = slot.imageForItemSlot
+                setImage(slot.imageForItemSlot, forState: .Normal)
             }
         }
     }
