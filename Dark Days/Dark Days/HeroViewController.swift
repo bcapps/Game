@@ -35,7 +35,11 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     }
     
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
-        presentItemList(button.slot)
+        if let item = button.item {
+        }
+        else {
+            presentItemList(button.slot)
+        }
     }
     
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
@@ -45,6 +49,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         else {
             menu.showMenuFromView(view)
         }
+    }
+    
+    func saveHero() {
+        guard let hero = hero else { return }
+        
+        HeroPersistence().persistHero(hero)
     }
     
     private func addItemSlotToEquipmentButtons() {
@@ -92,8 +102,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func presentItemList() {
-        //guard let items = hero?.inventory.items else { return }
-        guard let items: [Item] = ObjectProvider.objectsForJSON("Items") else { return }
+        guard let items = hero?.inventory.items else { return }
 
         let itemsList = ListViewController<Item>(objects: items, delegate: nil)
         itemsList.title = "Inventory"
@@ -102,8 +111,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
-        //guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
-        guard let items: [Item] = ObjectProvider.objectsForJSON("Items").filter({$0.itemSlot == itemSlot}) else { return }
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
 
         let itemsList = ListViewController<Item>(objects: items, delegate: self)
         itemsList.title = itemSlot.rawValue
@@ -147,7 +155,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
             
             item.equipped = true
             
-            updateEquippedItems()
+            saveHero()
             
             self.navigationController?.popViewControllerAnimated(true)
         }
