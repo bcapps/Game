@@ -18,7 +18,6 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         case ChooseGod
     }
     
-    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
     private let heroBuilder = HeroBuilder()
@@ -30,10 +29,6 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         super.viewDidLoad()
                 
         view.backgroundColor = .backgroundColor()
-        nameField.backgroundColor = .backgroundColor()
-        nameField.textColor = .headerTextColor()
-        nameField.font = .heavyLargeFont()
-        nameField.attributedPlaceholder = NSAttributedString(string: "Enter Hero Name", attributes: [NSForegroundColorAttributeName: UIColor.sideTextColor(), NSFontAttributeName: UIFont.heavyLargeFont()])
         
         transitionToRaceList()
     }
@@ -200,7 +195,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     }
     
     private func buildAndPersistHero() {
-        heroBuilder.name = nameField.text ?? "Default Name"
+        heroBuilder.name = "Default Name"
         
         switch heroBuilder.magicType.status {
             case .Mundane:
@@ -239,8 +234,8 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     
     private func setFrameForChildViewController(viewController: UIViewController) {
         var frame = viewController.view.frame
-        frame.origin.y = CGRectGetMaxY(nameField.frame) + 10
-        frame.size.height -= CGRectGetMaxY(nameField.frame) + 10
+        frame.origin.y -= 20
+        frame.size.height += 20
         viewController.view.frame = frame
     }
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -34,19 +33,7 @@
                     <view key="view" contentMode="scaleToFill" id="bse-Ut-NgE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9at-qP-hkI">
-                                <rect key="frame" x="31" y="72" width="258" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9at-qP-hkI" firstAttribute="top" secondItem="hNF-BX-PaY" secondAttribute="bottom" constant="8" id="G9j-CN-P2Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9at-qP-hkI" secondAttribute="trailing" constant="15" id="Qdh-k1-ckx"/>
-                            <constraint firstItem="9at-qP-hkI" firstAttribute="leading" secondItem="bse-Ut-NgE" secondAttribute="leadingMargin" constant="15" id="bzt-QL-Zv8"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MZD-CG-2IS">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="CKh-Ni-sA5">
@@ -61,7 +48,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nameField" destination="9at-qP-hkI" id="Ick-bO-gXv"/>
                         <outlet property="nextButton" destination="noM-nb-y3g" id="GaI-5A-PGD"/>
                     </connections>
                 </viewController>

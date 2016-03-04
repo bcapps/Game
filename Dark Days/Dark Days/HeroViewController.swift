@@ -36,6 +36,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
         if let item = button.item {
+            //presentItem(item)
         }
         else {
             presentItemList(button.slot)
@@ -99,6 +100,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
                     print("No Action")
             }
         }
+    }
+    
+    private func presentItem(item: Item) {
+        let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
+        itemsList.view.frame = CGRectMake(50, 100, 200, 200)
+        
+        addViewController(itemsList)
     }
     
     private func presentItemList() {
