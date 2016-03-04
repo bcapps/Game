@@ -10,7 +10,7 @@ import Foundation
 
 final class TestHero {
     static var hero: Hero {
-        var inventory = Inventory()
+        let inventory = Inventory(gold: 0, items: [Item]())
         inventory.gold = 5000
         
         let item1 = ObjectProvider.itemForName("Longsword")

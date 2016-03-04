@@ -12,9 +12,9 @@ import XCTest
 
 class InventoryPersistenceTests: XCTestCase {
     func testInventoryPersistence() {
-        var sut = Inventory()
+        let sut = Inventory(gold: 0, items: [Item]())
         
-        let item = Item(name: "Longsword", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: false, equipped: false)
+        let item = Item(name: "Longsword", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: false)
         
         sut.items.append(item)
         sut.gold = 5000

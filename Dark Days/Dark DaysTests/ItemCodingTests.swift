@@ -12,7 +12,7 @@ import XCTest
 class ItemCodingTests: XCTestCase {
 
     func testItemReceivesLatestCopy() {
-        let item = Item(name: "Longsword", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, equipped: true)
+        let item = Item(name: "Longsword", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true)
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(ItemCoder(value: item))
         let unarchivedItemCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? ItemCoder
@@ -25,6 +25,6 @@ class ItemCodingTests: XCTestCase {
         XCTAssertEqual(unarchivedItem?.flavor, "A generic longsword. It looks like it may have seen some use.")
         XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.itemSlotForItemString("hand"))
         XCTAssertEqual(unarchivedItem?.twoHanded, true)
-        XCTAssertEqual(unarchivedItem?.equipped, true)
+        XCTAssertEqual(unarchivedItem?.equipped, false)
     }
 }

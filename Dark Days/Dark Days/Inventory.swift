@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Inventory {
+final class Inventory {
     var gold: Int = 0
     var items = [Item]()
     
@@ -16,6 +16,11 @@ struct Inventory {
         get {
             return items.filter({$0.equipped == true})
         }
+    }
+    
+    init(gold: Int, items: [Item]) {
+        self.gold = gold
+        self.items = items
     }
 }
 

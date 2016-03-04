@@ -13,7 +13,7 @@ enum Gender: String {
     case Male
 }
 
-struct Hero: Codeable {
+final class Hero: Codeable {
     typealias CoderType = HeroCoder
     
     let name: String
@@ -37,6 +37,19 @@ struct Hero: Codeable {
         let stat = stats.filter { $0.statType == statType }.first
         
         return stat?.currentValue ?? 0
+    }
+    
+    init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {
+        self.name = name
+        self.gender = gender
+        self.inventory = inventory
+        self.stats = stats
+        self.race = race
+        self.skills = skills
+        self.spells = spells
+        self.magicType = magicType
+        self.god = god
+        self.uniqueID = uniqueID
     }
 }
 
