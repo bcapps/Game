@@ -15,7 +15,11 @@ extension UIStoryboard {
     }
     
     static func heroViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("HeroViewController") as? HeroViewController
+        return initialViewControllerFromStoryboardNamed("HeroViewController")
+    }
+    
+    static func toolsViewController() -> UIViewController? {
+        return initialViewControllerFromStoryboardNamed("DMToolkit")
     }
     
     private static func initialViewControllerFromStoryboardNamed(storyboardName: String) -> UIViewController? {

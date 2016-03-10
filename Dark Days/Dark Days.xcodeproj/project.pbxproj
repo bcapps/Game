@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192061302A0CAD9080A4CAE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
 		C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B61C7E1F8200A7DB63 /* ListViewController.swift */; };
 		C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39405901C7CAE7900EBFD07 /* InfoCell.xib */; };
 		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
-		C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
-		C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
 		C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
 		C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
 		C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
@@ -23,7 +20,6 @@
 		C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AFA1C7ADA6800D6E18E /* Monster.swift */; };
 		C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
-		C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
 		C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
@@ -101,9 +97,7 @@
 		F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */; };
 		F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
-		F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
 		F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
-		F2350B8A1C8230AE00D6E18E /* StoryboardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B891C8230AE00D6E18E /* StoryboardLoading.swift */; };
 		F2350B8D1C8231E700D6E18E /* MagicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B8C1C8231E700D6E18E /* MagicType.swift */; };
 		F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350B8E1C8231FB00D6E18E /* MagicTypes.json */; };
 		F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = F2350B8E1C8231FB00D6E18E /* MagicTypes.json */; };
@@ -122,6 +116,75 @@
 		F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
 		F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
 		F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
+		F25187621C92138C003AD636 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187571C92138C003AD636 /* LCKMultipeer.m */; };
+		F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187571C92138C003AD636 /* LCKMultipeer.m */; };
+		F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187571C92138C003AD636 /* LCKMultipeer.m */; };
+		F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187591C92138C003AD636 /* LCKMultipeerMessage.m */; };
+		F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187591C92138C003AD636 /* LCKMultipeerMessage.m */; };
+		F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187591C92138C003AD636 /* LCKMultipeerMessage.m */; };
+		F25187681C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875B1C92138C003AD636 /* LCKMultipeerMessageSender.m */; };
+		F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875B1C92138C003AD636 /* LCKMultipeerMessageSender.m */; };
+		F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875B1C92138C003AD636 /* LCKMultipeerMessageSender.m */; };
+		F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875D1C92138C003AD636 /* LCKMultipeerSession.m */; };
+		F251876C1C92138C003AD636 /* LCKMultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875D1C92138C003AD636 /* LCKMultipeerSession.m */; };
+		F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875D1C92138C003AD636 /* LCKMultipeerSession.m */; };
+		F251876E1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875F1C92138C003AD636 /* LCKServiceAdvertiser.m */; };
+		F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875F1C92138C003AD636 /* LCKServiceAdvertiser.m */; };
+		F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = F251875F1C92138C003AD636 /* LCKServiceAdvertiser.m */; };
+		F25187711C92138C003AD636 /* LCKServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187611C92138C003AD636 /* LCKServiceBrowser.m */; };
+		F25187721C92138C003AD636 /* LCKServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187611C92138C003AD636 /* LCKServiceBrowser.m */; };
+		F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F25187611C92138C003AD636 /* LCKServiceBrowser.m */; };
+		F25187781C921429003AD636 /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187771C921429003AD636 /* PeerListViewController.swift */; };
+		F251877A1C921429003AD636 /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187771C921429003AD636 /* PeerListViewController.swift */; };
+		F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
+		F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
+		F251877E1C922756003AD636 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
+		F25187801C922AC7003AD636 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
+		F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25187821C922B22003AD636 /* DMToolkit.storyboard */; };
+		F25187841C922B22003AD636 /* DMToolkit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25187821C922B22003AD636 /* DMToolkit.storyboard */; };
+		F25187851C922B22003AD636 /* DMToolkit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25187821C922B22003AD636 /* DMToolkit.storyboard */; };
+		F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251878B1C922B6D003AD636 /* ToolsListViewController.swift */; };
+		F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251878B1C922B6D003AD636 /* ToolsListViewController.swift */; };
+		F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251878B1C922B6D003AD636 /* ToolsListViewController.swift */; };
+		F25187901C922B90003AD636 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B61C7E1F8200A7DB63 /* ListViewController.swift */; };
+		F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
+		F25187921C922B9B003AD636 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
+		F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
+		F25187941C922B9B003AD636 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
+		F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
+		F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B891C8230AE00D6E18E /* StoryboardLoading.swift */; };
+		F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405951C7CB10D00EBFD07 /* ColorExtension.swift */; };
+		F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
+		F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */; };
+		F251879E1C922B9D003AD636 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
+		F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
+		F25187A01C922B9D003AD636 /* StoryboardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B891C8230AE00D6E18E /* StoryboardLoading.swift */; };
+		F25187A11C922B9D003AD636 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405971C7CB16900EBFD07 /* FontExtension.swift */; };
+		F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B831C7D59DE00D6E18E /* DismissSegue.swift */; };
+		F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */; };
+		F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B891C8230AE00D6E18E /* StoryboardLoading.swift */; };
+		F25187AF1C922BB3003AD636 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
+		F25187B01C922BB3003AD636 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
+		F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B61C7E1F8200A7DB63 /* ListViewController.swift */; };
+		F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187771C921429003AD636 /* PeerListViewController.swift */; };
+		F25187B31C922BB3003AD636 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */; };
+		F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
+		F25187B51C922BB3003AD636 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
+		F25187B61C922BB3003AD636 /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
+		F25187B71C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
+		F25187B81C922BB3003AD636 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
+		F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
+		F25187BA1C922BB3003AD636 /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
+		F25187BB1C922BB3003AD636 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B091C7BD0EE00D6E18E /* Reusable.swift */; };
+		F25187BC1C922BB3003AD636 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B071C7BCF2B00D6E18E /* ListDataSource.swift */; };
+		F25187BD1C922BB3003AD636 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */; };
+		F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B221C83B606008FD65B /* EquipmentButton.swift */; };
+		F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B1E1C83B307008FD65B /* HeroViewController.swift */; };
+		F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2473B201C83B328008FD65B /* HeroViewController.storyboard */; };
+		F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
+		F25187C21C922BB3003AD636 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
+		F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
+		F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +287,24 @@
 		F2473B1E1C83B307008FD65B /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		F2473B201C83B328008FD65B /* HeroViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroViewController.storyboard; sourceTree = "<group>"; };
 		F2473B221C83B606008FD65B /* EquipmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentButton.swift; sourceTree = "<group>"; };
+		F25187531C92138B003AD636 /* Dark Days-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dark Days-Bridging-Header.h"; sourceTree = "<group>"; };
+		F25187541C92138B003AD636 /* Dark DaysTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dark DaysTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F25187551C92138B003AD636 /* Dark DaysUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dark DaysUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F25187561C92138C003AD636 /* LCKMultipeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeer.h; sourceTree = "<group>"; };
+		F25187571C92138C003AD636 /* LCKMultipeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeer.m; sourceTree = "<group>"; };
+		F25187581C92138C003AD636 /* LCKMultipeerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerMessage.h; sourceTree = "<group>"; };
+		F25187591C92138C003AD636 /* LCKMultipeerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerMessage.m; sourceTree = "<group>"; };
+		F251875A1C92138C003AD636 /* LCKMultipeerMessageSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerMessageSender.h; sourceTree = "<group>"; };
+		F251875B1C92138C003AD636 /* LCKMultipeerMessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerMessageSender.m; sourceTree = "<group>"; };
+		F251875C1C92138C003AD636 /* LCKMultipeerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMultipeerSession.h; sourceTree = "<group>"; };
+		F251875D1C92138C003AD636 /* LCKMultipeerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMultipeerSession.m; sourceTree = "<group>"; };
+		F251875E1C92138C003AD636 /* LCKServiceAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKServiceAdvertiser.h; sourceTree = "<group>"; };
+		F251875F1C92138C003AD636 /* LCKServiceAdvertiser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKServiceAdvertiser.m; sourceTree = "<group>"; };
+		F25187601C92138C003AD636 /* LCKServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKServiceBrowser.h; sourceTree = "<group>"; };
+		F25187611C92138C003AD636 /* LCKServiceBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKServiceBrowser.m; sourceTree = "<group>"; };
+		F25187771C921429003AD636 /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
+		F25187821C922B22003AD636 /* DMToolkit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMToolkit.storyboard; sourceTree = "<group>"; };
+		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +354,9 @@
 		C394058D1C7CAE2B00EBFD07 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F25187531C92138B003AD636 /* Dark Days-Bridging-Header.h */,
+				F25187541C92138B003AD636 /* Dark DaysTests-Bridging-Header.h */,
+				F25187551C92138B003AD636 /* Dark DaysUITests-Bridging-Header.h */,
 				F2350B951C82444800D6E18E /* Assets.xcassets */,
 				F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */,
 				F21ECDC71C7A516B008041E9 /* Info.plist */,
@@ -323,6 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
+				F25187811C922B15003AD636 /* DM Toolkit */,
+				F25187761C921417003AD636 /* Multipeer */,
 				F2350B941C82412600D6E18E /* Hero List */,
 				F2473B1D1C83B2FB008FD65B /* Hero */,
 				C394059D1C7CB68500EBFD07 /* Root */,
@@ -365,6 +451,7 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
+				F25187521C92137C003AD636 /* Multipeer Backend */,
 				C39405941C7CB10100EBFD07 /* UI Customization */,
 				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
 				C3AB8F3B1C7CF3F2007CE0BA /* View Controller */,
@@ -568,6 +655,50 @@
 			name = Hero;
 			sourceTree = "<group>";
 		};
+		F25187521C92137C003AD636 /* Multipeer Backend */ = {
+			isa = PBXGroup;
+			children = (
+				F25187751C9213FC003AD636 /* Private API */,
+				F25187561C92138C003AD636 /* LCKMultipeer.h */,
+				F25187571C92138C003AD636 /* LCKMultipeer.m */,
+				F25187581C92138C003AD636 /* LCKMultipeerMessage.h */,
+				F25187591C92138C003AD636 /* LCKMultipeerMessage.m */,
+			);
+			name = "Multipeer Backend";
+			sourceTree = "<group>";
+		};
+		F25187751C9213FC003AD636 /* Private API */ = {
+			isa = PBXGroup;
+			children = (
+				F251875A1C92138C003AD636 /* LCKMultipeerMessageSender.h */,
+				F251875B1C92138C003AD636 /* LCKMultipeerMessageSender.m */,
+				F251875C1C92138C003AD636 /* LCKMultipeerSession.h */,
+				F251875D1C92138C003AD636 /* LCKMultipeerSession.m */,
+				F251875E1C92138C003AD636 /* LCKServiceAdvertiser.h */,
+				F251875F1C92138C003AD636 /* LCKServiceAdvertiser.m */,
+				F25187601C92138C003AD636 /* LCKServiceBrowser.h */,
+				F25187611C92138C003AD636 /* LCKServiceBrowser.m */,
+			);
+			name = "Private API";
+			sourceTree = "<group>";
+		};
+		F25187761C921417003AD636 /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				F25187771C921429003AD636 /* PeerListViewController.swift */,
+			);
+			name = Multipeer;
+			sourceTree = "<group>";
+		};
+		F25187811C922B15003AD636 /* DM Toolkit */ = {
+			isa = PBXGroup;
+			children = (
+				F25187821C922B22003AD636 /* DMToolkit.storyboard */,
+				F251878B1C922B6D003AD636 /* ToolsListViewController.swift */,
+			);
+			name = "DM Toolkit";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -676,6 +807,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
@@ -700,6 +832,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
+				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
@@ -707,11 +841,13 @@
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
+				F25187841C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE351C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
 				F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */,
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
+				F25187B61C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,16 +855,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
+				F25187C21C922BB3003AD636 /* Root.storyboard in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B981C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
+				F25187851C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
 				F2473B1A1C8382EA008FD65B /* Spells.json in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
+				F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,42 +928,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187681C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
+				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
+				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
-				C3AB8F551C7D0D65007CE0BA /* TableViewExtension.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
+				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
+				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
-				C39405961C7CB10D00EBFD07 /* ColorExtension.swift in Sources */,
+				F25187941C922B9B003AD636 /* DismissSegue.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
+				F251876E1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
+				F25187621C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
-				F2350B841C7D59DE00D6E18E /* DismissSegue.swift in Sources */,
+				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
+				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
+				F25187711C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
+				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
-				F2350B8A1C8230AE00D6E18E /* StoryboardLoading.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
+				F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				F2350B8D1C8231E700D6E18E /* MagicType.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
-				C30460B21C7E101500A7DB63 /* ChildControllerExtension.swift in Sources */,
 				F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */,
 				F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */,
-				C39405981C7CB16900EBFD07 /* FontExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,27 +979,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187B31C922BB3003AD636 /* HeroListViewController.swift in Sources */,
+				F25187AF1C922BB3003AD636 /* Reusable.swift in Sources */,
+				F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */,
 				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
+				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
+				F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */,
+				F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
+				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
+				F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */,
+				F25187B71C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE111C7A5F8A008041E9 /* Stat.swift in Sources */,
+				F25187B51C922BB3003AD636 /* HeroViewController.swift in Sources */,
+				F251876C1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
+				F25187A01C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
+				F25187721C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B921C8231FD00D6E18E /* MagicType.swift in Sources */,
+				F25187BA1C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
+				F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
+				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
+				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
+				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
+				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
+				F25187B01C922BB3003AD636 /* ListDataSource.swift in Sources */,
+				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F251879E1C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -860,6 +1031,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25187BD1C922BB3003AD636 /* HeroListViewController.swift in Sources */,
+				F25187BB1C922BB3003AD636 /* Reusable.swift in Sources */,
+				F25187A11C922B9D003AD636 /* FontExtension.swift in Sources */,
+				F25187901C922B90003AD636 /* ListViewController.swift in Sources */,
+				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
@@ -868,15 +1044,33 @@
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				C3AB8F411C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
+				F25187801C922AC7003AD636 /* TableViewExtension.swift in Sources */,
+				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
+				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
+				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
+				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */,
+				F251877A1C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
 				F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
+				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
+				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
+				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
+				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
+				F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */,
+				F25187BC1C922BB3003AD636 /* ListDataSource.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */,
+				F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
+				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
+				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
+				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,11 +1191,14 @@
 			baseConfigurationReference = E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1010,11 +1207,13 @@
 			baseConfigurationReference = AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1022,11 +1221,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Debug;
@@ -1035,11 +1237,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark DaysTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Release;
@@ -1047,11 +1251,14 @@
 		F21ECDE71C7A516B008041E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = "Dark Days";
 				USES_XCTRUNNER = YES;
 			};
@@ -1060,11 +1267,13 @@
 		F21ECDE81C7A516B008041E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Dark DaysUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = "Dark Days";
 				USES_XCTRUNNER = YES;
 			};
