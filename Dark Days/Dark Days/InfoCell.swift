@@ -64,7 +64,7 @@ final class InfoCell: UITableViewCell {
         infoImageView.backgroundColor = backgroundColor
         infoNameLabel.backgroundColor = backgroundColor
         infoTextView.backgroundColor = backgroundColor
-        infoTextView.textContainer.lineFragmentPadding = 0;
+        infoTextView.textContainer.lineFragmentPadding = 0
         infoTextView.textContainerInset = UIEdgeInsetsZero
         
         let backgroundView = UIView()

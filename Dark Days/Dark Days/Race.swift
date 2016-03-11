@@ -35,8 +35,7 @@ extension Race {
         get {
             if self.name == "Dwarf" {
                 return .Dwarf
-            }
-            else if self.name == "Elf" {
+            } else if self.name == "Elf" {
                 return .Elf
             }
             

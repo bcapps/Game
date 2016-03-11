@@ -21,7 +21,9 @@ class HeroPersistenceTests: XCTestCase {
     }
     
     func testHeroPersistence() {
-        let hero = TestHero.hero
+        let optionalHero = TestHero.hero
+        
+        guard let hero = optionalHero else { XCTFail(); return }
         
         XCTAssertEqual(sut.allPersistedHeroes().count, 0)
         
@@ -40,7 +42,9 @@ class HeroPersistenceTests: XCTestCase {
     }
     
     func testHeroStatPersistence() {
-        let hero = TestHero.hero
+        let optionalHero = TestHero.hero
+        
+        guard let hero = optionalHero else { XCTFail(); return }
         
         hero.stats.first?.currentValue = 324
         
@@ -48,7 +52,6 @@ class HeroPersistenceTests: XCTestCase {
         
         let testHero = sut.allPersistedHeroes().first
         
-        XCTAssertEqual(testHero!.stats.first?.currentValue, 324)
+        XCTAssertEqual(testHero?.stats.first?.currentValue, 324)
     }
-    
 }

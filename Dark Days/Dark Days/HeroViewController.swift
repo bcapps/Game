@@ -37,8 +37,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
         if let item = button.item {
             //presentItem(item)
-        }
-        else {
+        } else {
             presentItemList(button.slot)
         }
     }
@@ -46,8 +45,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
         if menu.isDescendantOfView(view) {
             menu.hideMenu()
-        }
-        else {
+        } else {
             menu.showMenuFromView(view)
         }
     }
@@ -104,7 +102,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     private func presentItem(item: Item) {
         let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
-        itemsList.view.frame = CGRectMake(50, 100, 200, 200)
+        itemsList.view.frame = CGRect(x: 50, y: 100, width: 200, height: 200)
         
         addViewController(itemsList)
     }
@@ -151,7 +149,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     //MARK: ListViewControllerDelegate
     
-    func didSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {
             switch item.itemSlot {
                 case .Hand: fallthrough
@@ -169,9 +167,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         }
     }
     
-    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
-    func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
         return true
     }
 }

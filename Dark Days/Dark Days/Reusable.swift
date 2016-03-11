@@ -30,7 +30,7 @@ extension UITableView {
     }
     
     func registerClass<T: UIView where T: Reusable>(aClass: T.Type, type: Type) {
-        switch (type) {
+        switch type {
         case .Cell:
             registerClass(aClass, forCellReuseIdentifier: T.reuseIdentifier)
         case .HeaderFooter:
@@ -39,7 +39,7 @@ extension UITableView {
     }
     
     func registerNib<T: UIView where T: Reusable>(aNib: UINib, aClass: T.Type, type: Type) {
-        switch (type) {
+        switch type {
         case .Cell:
             registerNib(aNib, forCellReuseIdentifier: T.reuseIdentifier)
         case .HeaderFooter:
@@ -47,12 +47,12 @@ extension UITableView {
         }
     }
     
-    func dequeueReusableCell<T: UIView where T: Reusable>(aClass: T.Type, type: Type) -> T {
-        switch (type) {
+    func dequeueReusableCell<T: UIView where T: Reusable>(aClass: T.Type, type: Type) -> T? {
+        switch type {
         case .Cell:
-            return dequeueReusableCellWithIdentifier(T.reuseIdentifier) as! T
+            return dequeueReusableCellWithIdentifier(T.reuseIdentifier) as? T
         case .HeaderFooter:
-            return dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as! T
+            return dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as? T
             
         }
     }

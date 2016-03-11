@@ -1,0 +1,11 @@
+disabled_rules: # rule identifiers to exclude from running
+  - function_parameter_count
+  - trailing_whitespace
+  - line_length
+  - variable_name
+opt_in_rules: # some rules are only opt-in
+  - missing_docs
+  - force_unwrapping
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods

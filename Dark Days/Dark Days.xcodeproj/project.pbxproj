@@ -23,7 +23,6 @@
 		C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
-		F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */; };
 		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
 		F21ECDF71C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
 		F21ECDF81C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
@@ -185,6 +184,14 @@
 		F25187C21C922BB3003AD636 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C394059E1C7CB69F00EBFD07 /* Root.storyboard */; };
 		F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
 		F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
+		F25187C61C937366003AD636 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
+		F25187C71C937366003AD636 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B811C7D3F2500D6E18E /* Displayable.swift */; };
+		F25187C81C937370003AD636 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
+		F25187C91C937370003AD636 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
+		F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
+		F25187CB1C9373A1003AD636 /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
+		F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
+		F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -243,7 +250,6 @@
 		F21ECDCC1C7A516B008041E9 /* Dark DaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDD21C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21ECDD71C7A516B008041E9 /* Dark DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark DaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_DaysUITests.swift; sourceTree = "<group>"; };
 		F21ECDDD1C7A516B008041E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21ECDF51C7A5777008041E9 /* God.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = God.swift; sourceTree = "<group>"; };
 		F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
@@ -490,7 +496,6 @@
 		F21ECDDA1C7A516B008041E9 /* Dark DaysUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECDDB1C7A516B008041E9 /* Dark_DaysUITests.swift */,
 				F21ECDDD1C7A516B008041E9 /* Info.plist */,
 			);
 			path = "Dark DaysUITests";
@@ -713,6 +718,7 @@
 				F2350B241C7C10E400D6E18E /* Embed Frameworks */,
 				23FE5ABCF5F5E21ED390C3F3 /* Embed Pods Frameworks */,
 				542C8716EE993FFFF5BE1F31 /* Copy Pods Resources */,
+				F25187C51C936E55003AD636 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -921,6 +927,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F25187C51C936E55003AD636 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -984,6 +1004,7 @@
 				F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */,
 				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
+				F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
 				F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */,
@@ -1006,11 +1027,14 @@
 				F25187721C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B921C8231FD00D6E18E /* MagicType.swift in Sources */,
 				F25187BA1C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
+				F25187C81C937370003AD636 /* InfoCell.swift in Sources */,
 				F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
+				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
+				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
@@ -1034,6 +1058,7 @@
 				F25187BD1C922BB3003AD636 /* HeroListViewController.swift in Sources */,
 				F25187BB1C922BB3003AD636 /* Reusable.swift in Sources */,
 				F25187A11C922B9D003AD636 /* FontExtension.swift in Sources */,
+				F25187CB1C9373A1003AD636 /* HeroBuilder.swift in Sources */,
 				F25187901C922B90003AD636 /* ListViewController.swift in Sources */,
 				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
@@ -1042,11 +1067,11 @@
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
+				F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				C3AB8F411C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F25187801C922AC7003AD636 /* TableViewExtension.swift in Sources */,
 				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
-				F21ECDDC1C7A516B008041E9 /* Dark_DaysUITests.swift in Sources */,
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
@@ -1059,6 +1084,7 @@
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
+				F25187C91C937370003AD636 /* InfoCell.swift in Sources */,
 				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */,
@@ -1070,6 +1096,7 @@
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

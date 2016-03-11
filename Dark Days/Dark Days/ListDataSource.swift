@@ -37,8 +37,10 @@ final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableView
         
         let cell = tableView.dequeueReusableCell(U.self, type: .Cell)
         
-        configureCell(cell: cell, object: object)
+        if let cell = cell {
+            configureCell(cell: cell, object: object)
+        }
         
-        return cell
+        return cell ?? UITableViewCell()
     }
 }

@@ -12,7 +12,9 @@ import XCTest
 class HeroCodingTests: XCTestCase {
 
     func testHeroCoding() {
-        let hero = TestHero.hero
+        let optionalHero = TestHero.hero
+        
+        guard let hero = optionalHero else { XCTFail(); return }
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(HeroCoder(value: hero))
         let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? HeroCoder
@@ -40,7 +42,9 @@ class HeroCodingTests: XCTestCase {
     }
     
     func testHeroStatUpdate() {
-        let hero = TestHero.hero
+        let optionalHero = TestHero.hero
+        
+        guard let hero = optionalHero else { XCTFail(); return }
         
         hero.increaseStatBy(.Strength, value: 4)
         

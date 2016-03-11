@@ -14,8 +14,7 @@ final class EquipmentButton: UIButton {
         didSet {
             if let name = item?.name {
                 setImage(UIImage(named: name), forState: .Normal)
-            }
-            else {
+            } else {
                 setImage(slot.imageForItemSlot, forState: .Normal)
             }
         }

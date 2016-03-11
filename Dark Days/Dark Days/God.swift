@@ -9,10 +9,10 @@
 import Foundation
 import Decodable
 
-struct God : Decodable, Nameable, Codeable {
+struct God: Decodable, Nameable, Codeable {
     typealias CoderType = GodCoder
 
-    let name : String
+    let name: String
     let background: String
     let responsibilties: [String]
     

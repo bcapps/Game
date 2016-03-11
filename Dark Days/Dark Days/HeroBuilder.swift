@@ -40,7 +40,7 @@ final class HeroBuilder {
         var spells = [Spell]()
         
         if let name = god?.name {
-            switch(name) {
+            switch name {
             case "Shiro, God of Hope":
                 let reflect = ObjectProvider.spellForName("Reflect")
                 let ray = ObjectProvider.spellForName("Ray of Light")

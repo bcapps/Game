@@ -36,7 +36,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBAction func backButtonTapped(sender: AnyObject) {
         nextButton.title = "Next"
 
-        switch(currentCreationState) {
+        switch currentCreationState {
             case .ChooseRace:
                 presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
             case .ChooseSkill:
@@ -44,8 +44,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             case .ChooseAttributes:
                 if heroBuilder.race.raceType == .Human {
                     transitionToSkillList()
-                }
-                else {
+                } else {
                     transitionToRaceList()
                 }
             case .ChooseMagicType:
@@ -60,7 +59,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
 
-        switch(currentCreationState) {
+        switch currentCreationState {
             case .ChooseRace:
                 switch heroBuilder.race.raceType {
                     case .Human:
@@ -90,7 +89,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         }
     }
     
-    func canSelectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
         if currentCreationState == .ChooseAttributes && heroBuilder.race.raceType == .Human {
             return selectedStats.count < 2
         }
@@ -103,14 +102,11 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         
         if let object = object as? Race {
             heroBuilder.race = object
-        }
-        else if let object = object as? Skill {
+        } else if let object = object as? Skill {
             heroBuilder.skill = object
-        }
-        else if let object = object as? Stat {
+        } else if let object = object as? Stat {
             selectedStats.append(object)
-        }
-        else if let object = object as? MagicType {
+        } else if let object = object as? MagicType {
             switch object.status {
                 case .Mundane:
                     nextButton.title = "Done"
@@ -119,13 +115,12 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
             }
 
             heroBuilder.magicType = object
-        }
-        else if let object = object as? God {
+        } else if let object = object as? God {
             heroBuilder.god = object
         }
     }
     
-    func didDeselectObject<T : ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         if let object = object as? Stat {
             selectedStats.removeObject(object)
         }
@@ -226,8 +221,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
         
         if let currentChildViewController = self.childViewControllers.first {
             replaceChildViewController(currentChildViewController, newViewController: viewController, animationDuration: 0.4)
-        }
-        else {
+        } else {
             addViewController(viewController)
         }
     }
