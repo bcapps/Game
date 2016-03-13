@@ -19,6 +19,16 @@ final class StatCell: UICollectionViewCell {
         setupStatCell()
     }
     
+    override var highlighted: Bool {
+        didSet {
+            if highlighted {
+                alpha = 0.5
+            } else {
+                alpha = 1.0
+            }
+        }
+    }
+    
     private func setupStatCell() {
         
     }

@@ -102,16 +102,16 @@ extension ListDisplayable {
         get {
             let attributedString = NSMutableAttributedString()
             
-            if let information = information where information.characters.count > 0 {
+            if let information = information where !information.isEmpty {
                 let info = NSAttributedString.attributedStringWithBodyAttributes(information)
                 
                 attributedString.appendAttributedString(info)
                 attributedString.appendAttributedString(NSAttributedString(string: "\n"))
             }
             
-            if let additionalInfo = additionalInfo where additionalInfo.characters.count > 0 {
+            if let additionalInfo = additionalInfo where !additionalInfo.isEmpty {
 
-                if let title = additionalInfoTitle where title.characters.count > 0 {
+                if let title = additionalInfoTitle where !title.isEmpty {
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
 
                     let attributedTitle = NSAttributedString.attributedStringWithHeadingAttributes(title)
@@ -126,7 +126,7 @@ extension ListDisplayable {
                 attributedString.appendAttributedString(additionalInfo)
             }
             
-            if let subtext = subtext where subtext.characters.count > 0 {
+            if let subtext = subtext where !subtext.isEmpty {
                 attributedString.appendAttributedString(NSAttributedString(string: "\n"))
                 
                 let subtext = NSAttributedString.attributedStringWithSmallAttributes(subtext)
