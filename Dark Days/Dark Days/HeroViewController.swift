@@ -153,6 +153,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentListViewController(spellsList)
     }
     
+    private func presentStat(stat: Stat) {
+        let statList = ListViewController<Stat>(objects: [stat], delegate: nil)
+        
+        presentOverlayWithListViewController(statList)
+    }
+    
     private func presentListViewController(viewController: UIViewController) {
         navigationController?.pushViewController(viewController, animated: true)
     }
@@ -209,6 +215,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
         
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let stat = hero?.stats[indexPath.row]
+        
+        if let stat = stat {
+            presentStat(stat)
+        }
     }
     
     //MARK: ListViewControllerDelegate
