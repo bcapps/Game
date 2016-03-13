@@ -10,4 +10,7 @@ import UIKit
 
 class HealthView: UIView {
     
+    override func awakeAfterUsingCoder(aDecoder: NSCoder) -> AnyObject? {
+        return viewFromNib(nil)
+    }    
 }

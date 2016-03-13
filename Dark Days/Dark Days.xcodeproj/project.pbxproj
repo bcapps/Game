@@ -200,6 +200,10 @@
 		F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187E21C961A22003AD636 /* HealthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25187E11C961A22003AD636 /* HealthView.xib */; };
 		F29C55E11C961D1B00ED386E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E01C961D1B00ED386E /* HealthView.swift */; };
+		F29C55E41C9623DA00ED386E /* HealthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25187E11C961A22003AD636 /* HealthView.xib */; };
+		F29C55E51C9623DB00ED386E /* HealthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25187E11C961A22003AD636 /* HealthView.xib */; };
+		F29C55E61C9623DE00ED386E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E01C961D1B00ED386E /* HealthView.swift */; };
+		F29C55E71C9623DF00ED386E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E01C961D1B00ED386E /* HealthView.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -881,6 +885,7 @@
 			files = (
 				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
 				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
+				F29C55E41C9623DA00ED386E /* HealthView.xib in Resources */,
 				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
@@ -902,6 +907,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29C55E51C9623DB00ED386E /* HealthView.xib in Resources */,
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
@@ -1055,6 +1061,7 @@
 				F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */,
 				F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
+				F29C55E61C9623DE00ED386E /* HealthView.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
@@ -1113,6 +1120,7 @@
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
+				F29C55E71C9623DF00ED386E /* HealthView.swift in Sources */,
 				F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				C3AB8F411C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,

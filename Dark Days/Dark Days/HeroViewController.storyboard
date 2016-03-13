@@ -144,19 +144,25 @@
                                     <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="vfg-y3-PrJ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-3b-zqn" customClass="HealthView" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="229.5" y="281.5" width="56" height="56"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-BO-OeC" customClass="HealthView" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="229" y="271" width="70" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="6Oi-g2-XaW"/>
-                                    <constraint firstAttribute="width" secondItem="CvB-3b-zqn" secondAttribute="height" multiplier="1:1" id="Qf8-Cm-Pij"/>
+                                    <constraint firstAttribute="width" constant="70" id="R8v-bA-cJ6"/>
+                                    <constraint firstAttribute="height" constant="120" id="fyj-QM-Fui"/>
+                                    <constraint firstAttribute="width" secondItem="f2o-BO-OeC" secondAttribute="height" multiplier="1:1" id="sWm-Rn-bgv"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sWm-Rn-bgv"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CvB-3b-zqn" firstAttribute="top" secondItem="LMS-Zp-1oA" secondAttribute="bottom" constant="20" id="0Zn-Df-1wh"/>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="top" id="2xu-sr-5sJ"/>
+                            <constraint firstItem="f2o-BO-OeC" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="trailing" id="4Cd-QD-sHW"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="top" id="4Jr-Ia-U2f"/>
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="top" secondItem="BYk-lY-vIi" secondAttribute="bottom" constant="20" id="4gk-va-UAW"/>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="width" secondItem="3ao-dt-idE" secondAttribute="height" multiplier="1:1" id="K1s-up-HCP"/>
@@ -171,8 +177,8 @@
                             <constraint firstItem="lNS-tN-AT4" firstAttribute="top" secondItem="BdS-UO-7gL" secondAttribute="bottom" id="ib4-In-oxW"/>
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="jvo-39-PCv"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="kko-zf-KJa"/>
-                            <constraint firstItem="CvB-3b-zqn" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="trailing" id="kwZ-44-uas"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="lPz-zz-78M"/>
+                            <constraint firstItem="f2o-BO-OeC" firstAttribute="top" secondItem="LMS-Zp-1oA" secondAttribute="bottom" constant="10" id="mbo-wb-zFO"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-25" id="scb-EJ-mDA"/>
                             <constraint firstItem="LMS-Zp-1oA" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="vpO-Gm-SkJ"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="bottom" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="-10" id="y1u-75-PdT"/>
