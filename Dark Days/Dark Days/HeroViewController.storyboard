@@ -84,7 +84,7 @@
                                     <constraint firstAttribute="height" constant="55" id="JqS-tT-Ofc"/>
                                     <constraint firstAttribute="width" secondItem="lDs-B1-mLe" secondAttribute="height" multiplier="1:1" id="rkV-Dk-XHd"/>
                                 </constraints>
-                                <state key="normal" image="Helm"/>
+                                <state key="normal" image="Helmet"/>
                                 <connections>
                                     <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="8NJ-Q3-f5v"/>
                                 </connections>
@@ -206,7 +206,7 @@
         <image name="Accessory" width="40" height="40"/>
         <image name="Boots" width="40" height="40"/>
         <image name="Chest" width="40" height="40"/>
-        <image name="Helm" width="40" height="40"/>
+        <image name="Helmet" width="40" height="40"/>
         <image name="LeftHand" width="40" height="40"/>
         <image name="Menu" width="40" height="26"/>
         <image name="RightHand" width="40" height="40"/>

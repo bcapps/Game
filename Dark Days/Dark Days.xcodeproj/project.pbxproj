@@ -195,6 +195,9 @@
 		F25187DA1C952065003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
 		F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
 		F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
+		F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
+		F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
+		F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -315,6 +318,7 @@
 		F25187821C922B22003AD636 /* DMToolkit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMToolkit.storyboard; sourceTree = "<group>"; };
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
 		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -622,6 +626,7 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F25187DD1C961132003AD636 /* UnequipButton.swift */,
 				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
 			);
@@ -974,6 +979,7 @@
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
 				F25187DA1C952065003AD636 /* StatCell.swift in Sources */,
+				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
@@ -1017,6 +1023,7 @@
 				F25187AF1C922BB3003AD636 /* Reusable.swift in Sources */,
 				F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */,
 				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
+				F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */,
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
@@ -1113,6 +1120,7 @@
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
+				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

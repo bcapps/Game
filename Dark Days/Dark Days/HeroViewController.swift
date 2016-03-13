@@ -79,6 +79,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func updateEquippedItems() {
         guard let equippedItems = hero?.inventory.equippedItems else { return }
         
+        for equipmentButton in equipmentButtons {
+            equipmentButton.item = nil
+            
+            if equipmentButton == leftHandButton {
+                equipmentButton.setImage(UIImage(named: "LeftHand"), forState: .Normal)
+            } else if equipmentButton == rightHandButton {
+                equipmentButton.setImage(UIImage(named: "RightHand"), forState: .Normal)
+            }
+        }
+        
         for item in equippedItems {
             if let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot) {
                 equipmentButton.item = item
@@ -114,7 +124,15 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentItem(item: Item) {
         let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
         
-        presentOverlayWithListViewController(itemsList)
+        let button = UnequipButton(item: item)
+        button.backgroundColor = .backgroundColor()
+        button.setTitle("Unequip", forState: .Normal)
+        button.titleLabel?.font = UIFont.bodyFont()
+        button.setTitleColor(UIColor.redColor(), forState: .Normal)
+        button.setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
+        button.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+        
+        presentOverlayWithListViewController(itemsList, footerView: button)
     }
     
     private func presentItemList() {
@@ -163,16 +181,31 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func presentOverlayWithListViewController(viewController: UITableViewController) {
-        viewController.tableView.separatorStyle = .None
-        viewController.tableView.allowsSelection = false
-
+    private func presentOverlayWithListViewController(viewController: UITableViewController, footerView: UIView? = nil) {
         var frame = CGRectInset(view.frame, 40, 75)
         frame.origin.y = 50
-        viewController.view.frame = frame
-        viewController.view.layer.cornerRadius = 12.0
-        viewController.view.layer.borderWidth = 1.0
-        viewController.view.layer.borderColor = UIColor.grayColor().CGColor
+
+        let containingViewController = UIViewController()
+        containingViewController.view.frame = frame
+        containingViewController.view.layer.cornerRadius = 12.0
+        containingViewController.view.layer.borderWidth = 1.0
+        containingViewController.view.layer.borderColor = UIColor.grayColor().CGColor
+        
+        viewController.tableView.separatorStyle = .None
+        viewController.tableView.allowsSelection = false
+        viewController.view.frame = containingViewController.view.bounds
+        
+        containingViewController.addViewController(viewController)
+        
+        if let footerView = footerView {
+            let height: CGFloat = 40.0
+            let footerViewFrame = CGRect(x: 0, y: viewController.view.frame.size.height - height, width: viewController.view.frame.size.width, height: height)
+            footerView.frame = footerViewFrame
+            containingViewController.view.addSubview(footerView)
+            viewController.tableView.contentInset.bottom = 15
+            
+            footerView.layer.addSublayer(BorderGenerator.newTopBorder(footerView.frame.size.width, height: 1.0))
+        }
         
         if let overlayView = overlayView {
             overlayView.alpha = 0.0
@@ -182,8 +215,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             }
         }
         
-        replaceChildViewController(presentedOverlayController, newViewController: viewController, animationDuration: animationDuration)
-        presentedOverlayController = viewController
+        replaceChildViewController(presentedOverlayController, newViewController: containingViewController, animationDuration: animationDuration)
+        presentedOverlayController = containingViewController
     }
     
     func dismissOverlay() {
@@ -197,6 +230,15 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
             presentedOverlayController = nil
         }
+    }
+    
+    func unequipItem(button: UnequipButton) {
+        button.item.equipped = false
+        updateEquippedItems()
+        
+        dismissOverlay()
+        
+        saveHero()
     }
     
     //MARK: UICollectionViewDataSource
@@ -256,4 +298,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
+}
+
+private class BorderGenerator {
+    static func newTopBorder(width: CGFloat, height: CGFloat) -> CALayer {
+        let border: CALayer = CALayer()
+        border.frame = CGRect(x: 0.0, y: 0.0, width: width, height: height)
+        border.backgroundColor = UIColor.grayColor().CGColor
+        
+        return border
+    }
 }
