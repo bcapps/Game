@@ -3,9 +3,21 @@ disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
   - line_length
   - variable_name
+
 opt_in_rules: # some rules are only opt-in
   - missing_docs
   - force_unwrapping
+  - force_https
+
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
+
+custom_rules:
+  force_https:
+    name: "Force HTTPS over HTTP"
+    regex: "((?i)http(?!s))"
+    match_kinds: string
+	message: "HTTPS should be favored over HTTP"
+	severity: warning
+
