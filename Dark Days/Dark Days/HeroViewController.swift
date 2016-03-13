@@ -118,7 +118,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentItemList() {
-        guard let items = hero?.inventory.items else { return }
+        guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
 
         let itemsList = ListViewController<Item>(objects: items, delegate: nil)
         itemsList.title = "Inventory"
@@ -230,15 +230,23 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {
             switch item.itemSlot {
-                case .Hand: fallthrough
+                case .Hand:
+                    if item.twoHanded {
+                        leftHandButton.item?.equipped = false
+                        rightHandButton.item?.equipped = false
+                    } else if let leftHandItem = leftHandButton.item where leftHandItem.twoHanded {
+                        leftHandButton.item?.equipped = false
+                    } else if let rightHandItem = rightHandButton.item where rightHandItem.twoHanded {
+                        rightHandButton.item?.equipped = false
+                    }
                 default:
                     let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot)
                     equipmentButton?.item?.equipped = false
-                    equipmentButton?.item = item
             }
             
             item.equipped = true
             
+            updateEquippedItems()
             saveHero()
             
             self.navigationController?.popViewControllerAnimated(true)
