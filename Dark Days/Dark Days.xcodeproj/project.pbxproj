@@ -198,6 +198,8 @@
 		F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
+		F25187E21C961A22003AD636 /* HealthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25187E11C961A22003AD636 /* HealthView.xib */; };
+		F29C55E11C961D1B00ED386E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E01C961D1B00ED386E /* HealthView.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -319,6 +321,8 @@
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
 		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
+		F25187E11C961A22003AD636 /* HealthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthView.xib; sourceTree = "<group>"; };
+		F29C55E01C961D1B00ED386E /* HealthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -626,7 +630,8 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F25187DD1C961132003AD636 /* UnequipButton.swift */,
+				F29C55E31C961D2500ED386E /* Unequip Button */,
+				F29C55E21C961D1F00ED386E /* Health View */,
 				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
 			);
@@ -720,6 +725,23 @@
 				F25187D91C952065003AD636 /* StatCell.swift */,
 			);
 			name = "Stat Cell";
+			sourceTree = "<group>";
+		};
+		F29C55E21C961D1F00ED386E /* Health View */ = {
+			isa = PBXGroup;
+			children = (
+				F25187E11C961A22003AD636 /* HealthView.xib */,
+				F29C55E01C961D1B00ED386E /* HealthView.swift */,
+			);
+			name = "Health View";
+			sourceTree = "<group>";
+		};
+		F29C55E31C961D2500ED386E /* Unequip Button */ = {
+			isa = PBXGroup;
+			children = (
+				F25187DD1C961132003AD636 /* UnequipButton.swift */,
+			);
+			name = "Unequip Button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -844,6 +866,7 @@
 				C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */,
 				F21ECE0B1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
+				F25187E21C961A22003AD636 /* HealthView.xib in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
@@ -966,6 +989,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29C55E11C961D1B00ED386E /* HealthView.swift in Sources */,
 				F25187681C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
