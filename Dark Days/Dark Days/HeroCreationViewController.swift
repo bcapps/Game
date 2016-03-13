@@ -107,6 +107,10 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             heroBuilder.skill = object
         } else if let object = object as? Stat {
             selectedStats.append(object)
+            
+            if selectedStats.count < 2 && heroBuilder.race.raceType == .Human {
+                nextButton.enabled = false
+            }
         } else if let object = object as? MagicType {
             switch object.status {
                 case .Mundane:
@@ -124,6 +128,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
         if let object = object as? Stat {
             selectedStats.removeObject(object)
+            nextButton.enabled = false
         }
     }
     
