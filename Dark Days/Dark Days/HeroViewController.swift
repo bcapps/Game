@@ -17,7 +17,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     @IBOutlet weak var chestButton: EquipmentButton!
     @IBOutlet weak var bootsButton: EquipmentButton!
     
-    @IBOutlet var equipmentButtons: [EquipmentButton]!
+    @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
     
     var hero: Hero?
     

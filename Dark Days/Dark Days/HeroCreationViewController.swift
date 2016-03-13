@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
+class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     private enum HeroCreationState: String {
         case ChooseRace
@@ -25,7 +25,7 @@ public class HeroCreationViewController: UIViewController, ListViewControllerDel
     private var selectedStats = [Stat]()
     private var currentCreationState: HeroCreationState = .ChooseRace
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
                 
         view.backgroundColor = .backgroundColor()
