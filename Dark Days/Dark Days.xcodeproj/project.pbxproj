@@ -192,6 +192,9 @@
 		F25187CB1C9373A1003AD636 /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
 		F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
 		F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
+		F25187DA1C952065003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
+		F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
+		F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187D91C952065003AD636 /* StatCell.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -311,6 +314,7 @@
 		F25187771C921429003AD636 /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
 		F25187821C922B22003AD636 /* DMToolkit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMToolkit.storyboard; sourceTree = "<group>"; };
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
+		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -618,6 +622,7 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
 			);
 			name = View;
@@ -702,6 +707,14 @@
 				F251878B1C922B6D003AD636 /* ToolsListViewController.swift */,
 			);
 			name = "DM Toolkit";
+			sourceTree = "<group>";
+		};
+		F25187D81C952059003AD636 /* Stat Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F25187D91C952065003AD636 /* StatCell.swift */,
+			);
+			name = "Stat Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -960,6 +973,7 @@
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
+				F25187DA1C952065003AD636 /* StatCell.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
@@ -1046,6 +1060,7 @@
 				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */,
 				F251879E1C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
 			);
@@ -1092,6 +1107,7 @@
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
+				F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */,
 				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,

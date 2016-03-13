@@ -9,7 +9,7 @@
 import UIKit
 import AZDropdownMenu
 
-final class HeroViewController: UIViewController, ListViewControllerDelegate {
+final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var helmetButton: EquipmentButton!
     @IBOutlet weak var accessoryButton: EquipmentButton!
     @IBOutlet weak var leftHandButton: EquipmentButton!
@@ -191,6 +191,24 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
             replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
             presentedOverlayController = nil
         }
+    }
+    
+    //MARK: UICollectionViewDataSource
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StatCellIdentifier", forIndexPath: indexPath) as? StatCell
+        let stat = hero?.stats[indexPath.row]
+        
+        cell?.statTitle.text = stat?.shortName
+        if let value = stat?.currentValue {
+            cell?.statValue.text = String(value)
+        }
+        
+        return cell ?? UICollectionViewCell()
     }
     
     //MARK: ListViewControllerDelegate
