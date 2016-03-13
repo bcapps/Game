@@ -36,7 +36,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
         if let item = button.item {
-            //presentItem(item)
+            presentItem(item)
         } else {
             presentItemList(button.slot)
         }

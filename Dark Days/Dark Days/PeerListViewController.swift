@@ -67,7 +67,7 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     
     // MARK: LCKMultipeerEventListener
     
-    func multipeer(multipeer: LCKMultipeer!, connectedPeersStateDidChange connectedPeers: [AnyObject]!) {
+    func multipeer(multipeer: LCKMultipeer, connectedPeersStateDidChange connectedPeers: [AnyObject]) {
         tableView.reloadData()
     }
 }

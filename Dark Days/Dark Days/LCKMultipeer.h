@@ -13,6 +13,8 @@
 
 #import "LCKMultipeerMessage.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  The type of user this multipeer object should be representing.
  */
@@ -118,3 +120,5 @@ typedef NS_ENUM(NSUInteger, LCKMultipeerUserType) {
 - (BOOL)sendMessageToAllConnectedPeers:(LCKMultipeerMessage *)message;
 
 @end
+
+NS_ASSUME_NONNULL_END
