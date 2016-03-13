@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Hero View Controller-->
@@ -144,27 +145,23 @@
                                     <action selector="equipmentButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="vfg-y3-PrJ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-BO-OeC" customClass="HealthView" customModule="Dark_Days" customModuleProvider="target">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-I4-t9L">
                                 <rect key="frame" x="229" y="271" width="70" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="R8v-bA-cJ6"/>
-                                    <constraint firstAttribute="height" constant="120" id="fyj-QM-Fui"/>
-                                    <constraint firstAttribute="width" secondItem="f2o-BO-OeC" secondAttribute="height" multiplier="1:1" id="sWm-Rn-bgv"/>
+                                    <constraint firstAttribute="width" constant="70" id="gcp-yX-q5V"/>
+                                    <constraint firstAttribute="height" constant="120" id="myN-2V-YIl"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sWm-Rn-bgv"/>
-                                    </mask>
-                                </variation>
-                            </view>
+                                <connections>
+                                    <segue destination="8oN-n2-f1X" kind="embed" id="bXH-Jy-mfX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="top" id="2xu-sr-5sJ"/>
-                            <constraint firstItem="f2o-BO-OeC" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="trailing" id="4Cd-QD-sHW"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="top" id="4Jr-Ia-U2f"/>
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="top" secondItem="BYk-lY-vIi" secondAttribute="bottom" constant="20" id="4gk-va-UAW"/>
+                            <constraint firstItem="H5F-ib-KGt" firstAttribute="trailing" secondItem="n0R-I4-t9L" secondAttribute="leading" id="94O-f0-e4s"/>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="width" secondItem="3ao-dt-idE" secondAttribute="height" multiplier="1:1" id="K1s-up-HCP"/>
                             <constraint firstItem="BdS-UO-7gL" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="Ltg-cg-eHd"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="leading" secondItem="3ao-dt-idE" secondAttribute="trailing" constant="40" id="PLh-s8-wGS"/>
@@ -174,11 +171,11 @@
                             <constraint firstItem="BdS-UO-7gL" firstAttribute="width" secondItem="dmw-nJ-ihR" secondAttribute="width" id="Yj5-hv-Kxq"/>
                             <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="bottom" constant="30" id="aHM-F5-AjM"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="bUQ-oe-6yS"/>
+                            <constraint firstItem="n0R-I4-t9L" firstAttribute="top" secondItem="LMS-Zp-1oA" secondAttribute="bottom" constant="10" id="gIm-3D-mRi"/>
                             <constraint firstItem="lNS-tN-AT4" firstAttribute="top" secondItem="BdS-UO-7gL" secondAttribute="bottom" id="ib4-In-oxW"/>
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="jvo-39-PCv"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="kko-zf-KJa"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="lPz-zz-78M"/>
-                            <constraint firstItem="f2o-BO-OeC" firstAttribute="top" secondItem="LMS-Zp-1oA" secondAttribute="bottom" constant="10" id="mbo-wb-zFO"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-25" id="scb-EJ-mDA"/>
                             <constraint firstItem="LMS-Zp-1oA" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="vpO-Gm-SkJ"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="bottom" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="-10" id="y1u-75-PdT"/>
@@ -211,15 +208,77 @@
             </objects>
             <point key="canvasLocation" x="577" y="308"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="8H8-1C-XXr">
+            <objects>
+                <viewController id="8oN-n2-f1X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETK-8e-uLC">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-Ey-x7V" userLabel="Health Up">
+                                <rect key="frame" x="14" y="0.0" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="IFc-Zm-Asd"/>
+                                    <constraint firstAttribute="width" secondItem="jqL-Ey-x7V" secondAttribute="height" multiplier="1.75:1" id="XSJ-XL-euG"/>
+                                </constraints>
+                                <state key="normal" image="UpArrow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-w3-e9b" userLabel="Health Down">
+                                <rect key="frame" x="14" y="96" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="dJb-ig-UZP"/>
+                                    <constraint firstAttribute="width" secondItem="iZk-w3-e9b" secondAttribute="height" multiplier="1.75:1" id="guf-UR-51H"/>
+                                </constraints>
+                                <state key="normal" image="DownArrow"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4cj-SR-PAw" userLabel="Heart Image View">
+                                <rect key="frame" x="0.0" y="24" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4cj-SR-PAw" secondAttribute="height" multiplier="1:1" id="DFH-zZ-SRb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-Xr-7fL" userLabel="Health Label">
+                                <rect key="frame" x="14" y="43.5" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="UYY-Oi-7hY"/>
+                                    <constraint firstAttribute="height" constant="21" id="qwI-XQ-OZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jqL-Ey-x7V" firstAttribute="centerX" secondItem="ETK-8e-uLC" secondAttribute="centerX" id="DlG-a0-s13"/>
+                            <constraint firstItem="iZk-w3-e9b" firstAttribute="centerX" secondItem="ETK-8e-uLC" secondAttribute="centerX" id="Iya-XQ-S1J"/>
+                            <constraint firstItem="jqL-Ey-x7V" firstAttribute="bottom" secondItem="4cj-SR-PAw" secondAttribute="top" id="OEx-LX-oBn"/>
+                            <constraint firstItem="4cj-SR-PAw" firstAttribute="width" secondItem="ETK-8e-uLC" secondAttribute="width" id="VDa-Hw-qnC"/>
+                            <constraint firstItem="2LY-Xr-7fL" firstAttribute="centerX" secondItem="4cj-SR-PAw" secondAttribute="centerX" id="Z61-0F-3kn"/>
+                            <constraint firstItem="2LY-Xr-7fL" firstAttribute="centerY" secondItem="4cj-SR-PAw" secondAttribute="centerY" constant="-5" id="c7j-yS-KjP"/>
+                            <constraint firstItem="4cj-SR-PAw" firstAttribute="centerX" secondItem="ETK-8e-uLC" secondAttribute="centerX" id="iuX-9Q-VIC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="iZk-w3-e9b" secondAttribute="bottom" id="pqM-N7-pc6"/>
+                            <constraint firstItem="jqL-Ey-x7V" firstAttribute="top" secondItem="ETK-8e-uLC" secondAttribute="topMargin" id="uU0-fz-Nmy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUg-J1-O54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="308"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Accessory" width="40" height="40"/>
         <image name="Boots" width="40" height="40"/>
         <image name="Chest" width="40" height="40"/>
+        <image name="DownArrow" width="14" height="8"/>
+        <image name="HeartIcon" width="100" height="100"/>
         <image name="Helmet" width="40" height="40"/>
         <image name="LeftHand" width="40" height="40"/>
         <image name="Menu" width="40" height="26"/>
         <image name="RightHand" width="40" height="40"/>
         <image name="SilhoutteMale" width="133" height="372"/>
+        <image name="UpArrow" width="14" height="8"/>
     </resources>
 </document>
