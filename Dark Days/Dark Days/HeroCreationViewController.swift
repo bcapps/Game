@@ -19,6 +19,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var containerView: UIView!
     
     private let heroBuilder = HeroBuilder()
 
@@ -217,19 +218,15 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func switchToViewController(viewController: UIViewController) {
-        setFrameForChildViewController(viewController)
-        
         if let currentChildViewController = self.childViewControllers.first {
             replaceChildViewController(currentChildViewController, newViewController: viewController, animationDuration: 0.4)
         } else {
             addViewController(viewController)
         }
-    }
-    
-    private func setFrameForChildViewController(viewController: UIViewController) {
-        var frame = viewController.view.frame
-        frame.origin.y -= 20
-        frame.size.height += 20
+        
+        var frame = view.frame
+        frame.origin.y = 64
+        frame.size.height -= 64
         viewController.view.frame = frame
     }
 }
