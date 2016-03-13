@@ -102,9 +102,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     private func presentItem(item: Item) {
         let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
-        itemsList.view.frame = CGRect(x: 50, y: 100, width: 200, height: 200)
         
-        addViewController(itemsList)
+        let overlay = OverlayViewController(insetViewController: itemsList)
+        
+        addViewController(overlay)
     }
     
     private func presentItemList() {
