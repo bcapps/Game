@@ -59,7 +59,7 @@ final class InfoCell: UITableViewCell {
         infoNameLabel.textColor = .headerTextColor()
         infoTextView.textColor = .bodyTextColor()
         
-        backgroundColor = .backgroundColor()
+        backgroundColor = .clearColor()
         
         infoImageView.backgroundColor = backgroundColor
         infoNameLabel.backgroundColor = backgroundColor

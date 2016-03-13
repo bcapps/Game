@@ -192,9 +192,6 @@
 		F25187CB1C9373A1003AD636 /* HeroBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B001C7BCAF200D6E18E /* HeroBuilder.swift */; };
 		F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
 		F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350B871C81555900D6E18E /* ArrayRemoval.swift */; };
-		F25187CF1C94EF92003AD636 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187CE1C94EF92003AD636 /* OverlayViewController.swift */; };
-		F25187D01C94EF92003AD636 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187CE1C94EF92003AD636 /* OverlayViewController.swift */; };
-		F25187D11C94EF92003AD636 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187CE1C94EF92003AD636 /* OverlayViewController.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -314,7 +311,6 @@
 		F25187771C921429003AD636 /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
 		F25187821C922B22003AD636 /* DMToolkit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMToolkit.storyboard; sourceTree = "<group>"; };
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
-		F25187CE1C94EF92003AD636 /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -417,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
-				F25187CE1C94EF92003AD636 /* OverlayViewController.swift */,
 				F25187811C922B15003AD636 /* DM Toolkit */,
 				F25187761C921417003AD636 /* Multipeer */,
 				F2350B941C82412600D6E18E /* Hero List */,
@@ -965,7 +960,6 @@
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
-				F25187CF1C94EF92003AD636 /* OverlayViewController.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
@@ -1012,7 +1006,6 @@
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
-				F25187D01C94EF92003AD636 /* OverlayViewController.swift in Sources */,
 				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
 				F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */,
 				F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
@@ -1069,7 +1062,6 @@
 				F25187901C922B90003AD636 /* ListViewController.swift in Sources */,
 				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
-				F25187D11C94EF92003AD636 /* OverlayViewController.swift in Sources */,
 				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,

@@ -22,12 +22,23 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     var hero: Hero?
     
     private let menu = DropdownMenuFactory.heroDropdownMenu()
+    private let animationDuration = 0.35
+    
+    private var overlayView: UIView?
+    private var presentedOverlayController: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = hero?.name
         view.backgroundColor = .backgroundColor()
+        
+        overlayView = UIView(frame: view.frame)
+        overlayView?.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        overlayView?.userInteractionEnabled = true
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("dismissOverlay"))
+        overlayView?.addGestureRecognizer(tapRecognizer)
         
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
@@ -103,9 +114,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     private func presentItem(item: Item) {
         let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
         
-        let overlay = OverlayViewController(insetViewController: itemsList)
-        
-        addViewController(overlay)
+        presentOverlayWithListViewController(itemsList)
     }
     
     private func presentItemList() {
@@ -148,6 +157,42 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    private func presentOverlayWithListViewController(viewController: UITableViewController) {
+        viewController.tableView.separatorStyle = .None
+        viewController.tableView.allowsSelection = false
+
+        var frame = CGRectInset(view.frame, 40, 75)
+        frame.origin.y = 50
+        viewController.view.frame = frame
+        viewController.view.layer.cornerRadius = 12.0
+        viewController.view.layer.borderWidth = 1.0
+        viewController.view.layer.borderColor = UIColor.grayColor().CGColor
+        
+        if let overlayView = overlayView {
+            overlayView.alpha = 0.0
+            view.addSubview(overlayView)
+            UIView.animateWithDuration(animationDuration) {
+                overlayView.alpha = 1.0
+            }
+        }
+        
+        replaceChildViewController(presentedOverlayController, newViewController: viewController, animationDuration: animationDuration)
+        presentedOverlayController = viewController
+    }
+    
+    func dismissOverlay() {
+        if let presentedController = presentedOverlayController {
+            UIView.animateWithDuration(animationDuration, animations: {
+                self.overlayView?.alpha = 0.0
+                }, completion: { completed in
+                    self.overlayView?.removeFromSuperview()
+            })
+            
+            replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
+            presentedOverlayController = nil
+        }
+    }
+    
     //MARK: ListViewControllerDelegate
     
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
@@ -170,7 +215,5 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate {
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        return true
-    }
+    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
 }

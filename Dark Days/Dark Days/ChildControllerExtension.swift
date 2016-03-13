@@ -21,7 +21,7 @@ extension UIViewController {
         viewController.removeFromParentViewController()
     }
     
-    func replaceChildViewController(currentViewController: UIViewController, newViewController: UIViewController?, animationDuration: NSTimeInterval) {
+    func replaceChildViewController(currentViewController: UIViewController?, newViewController: UIViewController?, animationDuration: NSTimeInterval) {
         
         if let newViewController = newViewController {
             newViewController.view.alpha = 0.0
@@ -29,10 +29,12 @@ extension UIViewController {
         }
         
         UIView.animateWithDuration(animationDuration, animations: { () -> Void in
-            currentViewController.view.alpha = 0.0
+            currentViewController?.view.alpha = 0.0
             newViewController?.view.alpha = 1.0
         }) { completed in
-            self.removeViewController(currentViewController)
+            if let currentViewController = currentViewController {
+                self.removeViewController(currentViewController)
+            }
         }
     }    
 }
