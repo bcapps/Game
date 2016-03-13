@@ -30,6 +30,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         }
     }
     
+    var imageContentInset: UIEdgeInsets?
+    
     private var listDelegate: ListViewControllerDelegate?
     private var dataSource: ListDataSource<T, InfoCell>?
     
@@ -81,6 +83,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
             cell.infoImage = displayableObject.image
             cell.nameText = displayableObject.title
             cell.infoAttributedText = displayableObject.attributedString
+            cell.contentInset = self.imageContentInset ?? UIEdgeInsets()
         })
         
         tableView.dataSource = dataSource

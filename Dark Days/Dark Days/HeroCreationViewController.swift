@@ -138,7 +138,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         
         let statListViewController = ListViewController<Stat>(objects: heroBuilder.race.startingStats, delegate: self)
         statListViewController.tableView.allowsMultipleSelection = heroBuilder.race.raceType == .Human
-        
+        statListViewController.imageContentInset = listEdgeInsets()
         title = "Choose Stat"
         
         switchToViewController(statListViewController)
@@ -148,6 +148,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         currentCreationState = .ChooseMagicType
         
         let magicTypeListViewController = ListViewController<MagicType>(objects: ObjectProvider.objectsForJSON("MagicTypes"), delegate: self)
+        magicTypeListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose Magic Type"
         
@@ -179,6 +180,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         }
         
         let skillListViewController = ListViewController<Skill>(objects: startingSkills, delegate: self)
+        skillListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose Skill"
         
@@ -189,6 +191,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         currentCreationState = .ChooseGod
         
         let godListViewController = ListViewController<God>(objects: God.startingGods, delegate: self)
+        godListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose God"
         
@@ -220,6 +223,10 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         if let hero = heroBuilder.build() {
             HeroPersistence().persistHero(hero)
         }
+    }
+    
+    private func listEdgeInsets() -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
     
     private func switchToViewController(viewController: UIViewController) {

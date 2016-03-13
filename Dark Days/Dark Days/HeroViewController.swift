@@ -177,14 +177,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentOverlayWithListViewController(statList)
     }
     
-    private func presentListViewController(viewController: UIViewController) {
+    private func presentListViewController<T>(viewController: ListViewController<T>) {
+        viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func presentOverlayWithListViewController(viewController: UITableViewController, footerView: UIView? = nil) {
+    private func presentOverlayWithListViewController<T>(viewController: ListViewController<T>, footerView: UIView? = nil) {
         var frame = CGRectInset(view.frame, 40, 75)
         frame.origin.y = 50
-
+        
         let containingViewController = UIViewController()
         containingViewController.view.frame = frame
         containingViewController.view.layer.cornerRadius = 12.0
@@ -194,6 +196,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         viewController.tableView.separatorStyle = .None
         viewController.tableView.allowsSelection = false
         viewController.view.frame = containingViewController.view.bounds
+        viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         containingViewController.addViewController(viewController)
         
