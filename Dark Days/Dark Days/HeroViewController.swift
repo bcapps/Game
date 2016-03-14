@@ -19,7 +19,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
     
-    var hero: Hero?
+    var multipeer: LCKMultipeer?
+    
+    var hero: Hero? {
+        didSet {
+            multipeer = LCKMultipeer(multipeerUserType: .Client, peerName: hero?.name ?? "No Name", serviceName: "DarkDays")
+            multipeer?.startMultipeerConnectivity()
+        }
+    }
     
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
