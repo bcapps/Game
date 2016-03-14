@@ -18,6 +18,6 @@ custom_rules:
     name: "Force HTTPS over HTTP"
     regex: "((?i)http(?!s))"
     match_kinds: string
-	message: "HTTPS should be favored over HTTP"
-	severity: warning
+    message: "HTTPS should be favored over HTTP"
+    severity: warning
 
