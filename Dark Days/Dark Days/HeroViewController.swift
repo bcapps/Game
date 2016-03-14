@@ -130,7 +130,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentItem(item: Item) {
-        let itemsList = ListViewController<Item>(objects: [item], delegate: nil)
+        let itemSection = SectionList(sectionTitle: nil, objects: [item])
+        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
         
         let button = UnequipButton(item: item)
         button.backgroundColor = .backgroundColor()
@@ -145,8 +146,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
-
-        let itemsList = ListViewController<Item>(objects: items, delegate: nil)
+        
+        let itemSection = SectionList(sectionTitle: nil, objects: items)
+        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
         itemsList.title = "Inventory"
         itemsList.tableView.allowsSelection = false
         
@@ -155,8 +157,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     private func presentItemList(itemSlot: ItemSlot) {
         guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
-
-        let itemsList = ListViewController<Item>(objects: items, delegate: self)
+        
+        let itemSection = SectionList(sectionTitle: nil, objects: items)
+        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: self)
         itemsList.title = itemSlot.rawValue
         
         presentListViewController(itemsList)
@@ -165,7 +168,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentsSkillsList() {
         guard let skills = hero?.skills else { return }
         
-        let skillsList = ListViewController<Skill>(objects: skills, delegate: nil)
+        let skillSection = SectionList(sectionTitle: nil, objects: skills)
+        let skillsList = ListViewController<Skill>(sections: [skillSection], delegate: nil)
         skillsList.title = "Skills"
         skillsList.tableView.allowsSelection = false
         
@@ -175,7 +179,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentSpellsList() {
         guard let spells = hero?.spells else { return }
         
-        let spellsList = ListViewController<Spell>(objects: spells, delegate: nil)
+        let spellSection = SectionList(sectionTitle: nil, objects: spells)
+        let spellsList = ListViewController<Spell>(sections: [spellSection], delegate: nil)
         spellsList.title = "Spellbook"
         spellsList.tableView.allowsSelection = false
         
@@ -183,7 +188,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentStat(stat: Stat) {
-        let statList = ListViewController<Stat>(objects: [stat], delegate: nil)
+        let statSection = SectionList(sectionTitle: nil, objects: [stat])
+        let statList = ListViewController<Stat>(sections: [statSection], delegate: nil)
         
         presentOverlayWithListViewController(statList)
     }

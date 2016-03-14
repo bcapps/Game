@@ -17,14 +17,14 @@ protocol ListViewControllerDelegate {
 // custom initializer that takes objects.
 
 class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {    
-    init(objects: [T], delegate: ListViewControllerDelegate?) {
-        self.objects = objects
+    init(sections: [SectionList<T>], delegate: ListViewControllerDelegate?) {
+        self.sections = sections
         self.listDelegate = delegate
         
         super.init(style: .Plain)
     }
     
-    var objects = [T]() {
+    var sections = [SectionList<T>]() {
         didSet {
             reloadDataSource()
         }
@@ -48,8 +48,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         reloadDataSource()
     }
     
+    func objectForIndexPath(indexPath: NSIndexPath) -> T? {
+        return self.dataSource?.objectForIndexPath(indexPath)
+    }
+    
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let object = dataSource?[indexPath.row]
+        let object = dataSource?.objectForIndexPath(indexPath)
         
         if let object = object, listDelegate = listDelegate {
             if listDelegate.canSelectObject(self, object: object) == false {
@@ -61,7 +65,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?[indexPath.row]
+        let object = dataSource?.objectForIndexPath(indexPath)
         
         if let object = object {
             listDelegate?.didSelectObject(self, object: object)
@@ -69,7 +73,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?[indexPath.row]
+        let object = dataSource?.objectForIndexPath(indexPath)
         
         if let object = object {
             listDelegate?.didDeselectObject(self, object: object)
@@ -77,7 +81,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     private func reloadDataSource() {
-        dataSource = ListDataSource(objects: objects, configureCell: { cell, object in
+        dataSource = ListDataSource(sections: sections, configureCell: { cell, object in
             let displayableObject = ListDisplayable.displayableObject(object)
             
             cell.infoImage = displayableObject.image
@@ -85,7 +89,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
             cell.infoAttributedText = displayableObject.attributedString
             cell.contentInset = self.imageContentInset ?? UIEdgeInsets()
         })
-        
+                
         tableView.dataSource = dataSource
         tableView.reloadData()
     }

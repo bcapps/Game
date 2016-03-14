@@ -136,7 +136,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         selectedStats.removeAll()
         currentCreationState = .ChooseAttributes
         
-        let statListViewController = ListViewController<Stat>(objects: heroBuilder.race.startingStats, delegate: self)
+        let section = SectionList(sectionTitle: nil, objects: heroBuilder.race.startingStats)
+        
+        let statListViewController = ListViewController<Stat>(sections: [section], delegate: self)
         statListViewController.tableView.allowsMultipleSelection = heroBuilder.race.raceType == .Human
         statListViewController.imageContentInset = listEdgeInsets()
         title = "Choose Stat"
@@ -147,7 +149,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     private func transitionToMagicTypeList() {
         currentCreationState = .ChooseMagicType
         
-        let magicTypeListViewController = ListViewController<MagicType>(objects: ObjectProvider.objectsForJSON("MagicTypes"), delegate: self)
+        let section = SectionList<MagicType>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("MagicTypes"))
+
+        let magicTypeListViewController = ListViewController<MagicType>(sections: [section], delegate: self)
         magicTypeListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose Magic Type"
@@ -158,7 +162,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     private func transitionToRaceList() {
         currentCreationState = .ChooseRace
         
-        let raceListViewController = ListViewController<Race>(objects: ObjectProvider.objectsForJSON("Races"), delegate: self)
+        let section = SectionList<Race>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Races"))
+        let raceListViewController = ListViewController<Race>(sections: [section], delegate: self)
         
         title = "Choose Race"
         
@@ -179,7 +184,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             startingSkills.appendContentsOf([human, warcry, feint, powerattack])
         }
         
-        let skillListViewController = ListViewController<Skill>(objects: startingSkills, delegate: self)
+        let section = SectionList<Skill>(sectionTitle: nil, objects: startingSkills)
+        let skillListViewController = ListViewController<Skill>(sections: [section], delegate: self)
         skillListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose Skill"
@@ -190,7 +196,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     private func transitionToGodList() {
         currentCreationState = .ChooseGod
         
-        let godListViewController = ListViewController<God>(objects: God.startingGods, delegate: self)
+        let section = SectionList<God>(sectionTitle: nil, objects: God.startingGods)
+        let godListViewController = ListViewController<God>(sections: [section], delegate: self)
         godListViewController.imageContentInset = listEdgeInsets()
         
         title = "Choose God"

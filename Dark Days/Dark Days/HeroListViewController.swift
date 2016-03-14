@@ -10,8 +10,8 @@ import UIKit
 
 final class HeroListViewController: ListViewController<Hero> {
     
-    override init(objects: [Hero], delegate: ListViewControllerDelegate?) {
-        super.init(objects: objects, delegate: delegate)
+    override init(sections: [SectionList<Hero>], delegate: ListViewControllerDelegate?) {
+        super.init(sections: sections, delegate: delegate)
     }
     
     override func viewDidLoad() {
@@ -27,15 +27,17 @@ final class HeroListViewController: ListViewController<Hero> {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        objects = HeroPersistence().allPersistedHeroes()
+        sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes())]
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { action, indexPath in
-            let hero = self.objects[indexPath.row]
+            let hero = self.objectForIndexPath(indexPath)
             
-            HeroPersistence().removeHero(hero)
-            self.objects = HeroPersistence().allPersistedHeroes()
+            if let hero = hero {
+                HeroPersistence().removeHero(hero)
+                self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes())]
+            }
         }
         
         return [deleteAction]
@@ -45,7 +47,7 @@ final class HeroListViewController: ListViewController<Hero> {
         let heroVC = UIStoryboard.heroViewController()
         
         if let heroVC = heroVC as? HeroViewController {
-            heroVC.hero = self.objects[indexPath.row]
+            heroVC.hero = self.objectForIndexPath(indexPath)
             
             navigationController?.pushViewController(heroVC, animated: true)
         }
