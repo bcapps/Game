@@ -187,6 +187,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     private func presentListViewController<T>(viewController: ListViewController<T>) {
         viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        viewController.tableView.allowsSelection = false
         
         navigationController?.pushViewController(viewController, animated: true)
     }
