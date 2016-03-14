@@ -39,6 +39,10 @@ final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableView
         return self.sections.count
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section].sectionTitle
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let object = self.sections[indexPath.section].objects[indexPath.row]
         

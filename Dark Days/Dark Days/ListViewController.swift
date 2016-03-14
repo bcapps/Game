@@ -80,6 +80,28 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let containingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 35))
+        containingView.backgroundColor = .backgroundColor()
+        
+        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let label = UILabel(frame: labelFrame)
+        
+        if let text = self.dataSource?.tableView(tableView, titleForHeaderInSection: section) {
+            label.attributedText = NSAttributedString.attributedStringWithHeadingAttributes(text)
+            label.textAlignment = .Center
+        }
+        
+        let separatorFrame = CGRect(x: 0, y: CGRectGetHeight(containingView.frame) - 1, width: CGRectGetWidth(containingView.frame), height: 1)
+        let separatorView = UIView(frame: separatorFrame)
+        separatorView.backgroundColor = .grayColor()
+        
+        containingView.addSubview(label)
+        containingView.addSubview(separatorView)
+        
+        return containingView
+    }
+    
     private func reloadDataSource() {
         dataSource = ListDataSource(sections: sections, configureCell: { cell, object in
             let displayableObject = ListDisplayable.displayableObject(object)
