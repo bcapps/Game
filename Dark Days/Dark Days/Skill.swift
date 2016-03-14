@@ -28,8 +28,6 @@ final class SkillCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
-        case Explanation
-        case Benefit
     }
     
     var value: Skill?
@@ -41,24 +39,20 @@ final class SkillCoder: NSObject, Coder {
     
     init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let rawExplanation = aDecoder.decodeObjectForKey(Keys.Explanation.rawValue) as? String
-        let rawBenefit = aDecoder.decodeObjectForKey(Keys.Benefit.rawValue) as? String
         
-        guard let name = rawName, explanation = rawExplanation, benefit = rawBenefit else {
+        guard let name = rawName else {
             value = nil
             super.init()
             
             return nil
         }
         
-        value = Skill(name: name, explanation: explanation, benefit: benefit)
+        value = ObjectProvider.skillForName(name)
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeObject(value?.explanation, forKey: Keys.Explanation.rawValue)
-        aCoder.encodeObject(value?.benefit, forKey: Keys.Benefit.rawValue)
     }
 }
