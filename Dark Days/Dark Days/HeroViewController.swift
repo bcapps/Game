@@ -45,6 +45,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         addMenuTapHandlers()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let _ = segue.destinationViewController.view
+        
+        if let viewController = segue.destinationViewController as? HealthViewController {
+            viewController.hero = hero
+        }
+    }
+    
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
         if let item = button.item {
             presentItem(item)

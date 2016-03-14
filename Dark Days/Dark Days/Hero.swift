@@ -26,7 +26,18 @@ final class Hero: Codeable {
     let magicType: MagicType
     let god: God?
     let uniqueID: String
-        
+    
+    var currentHealth: Int = 0
+    var maximumHealth: Int {
+        get {
+            if let constitution = stats.filter({$0.statType == .Constitution}).first {
+                return 10 + (constitution.currentValue * 3)
+            }
+            
+            return 10
+        }
+    }
+    
     func increaseStatBy(statType: StatType, value: Int) {
         let statToIncrease = stats.filter { $0.statType == statType }.first
         
@@ -67,6 +78,7 @@ final class HeroCoder: NSObject, Coder {
         case MagicType
         case God
         case UniqueID
+        case CurrentHealth
     }
     
     var value: Hero?
@@ -96,6 +108,7 @@ final class HeroCoder: NSObject, Coder {
         }
         
         value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
+        value?.currentHealth = aDecoder.decodeIntegerForKey(Keys.CurrentHealth.rawValue) ?? 0
         
         super.init()
     }
@@ -113,6 +126,7 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encodeObject(value.spells.coders, forKey: Keys.Spells.rawValue)
         aCoder.encodeObject(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
         aCoder.encodeObject(value.uniqueID, forKey: Keys.UniqueID.rawValue)
+        aCoder.encodeInteger(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
         
         if let god = value.god {
             aCoder.encodeObject(GodCoder(value: god), forKey: Keys.God.rawValue)

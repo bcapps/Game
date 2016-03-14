@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="577" y="308"/>
         </scene>
-        <!--View Controller-->
+        <!--Health View Controller-->
         <scene sceneID="8H8-1C-XXr">
             <objects>
-                <viewController id="8oN-n2-f1X" sceneMemberID="viewController">
+                <viewController id="8oN-n2-f1X" customClass="HealthViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ETK-8e-uLC">
                         <rect key="frame" x="0.0" y="0.0" width="70" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,6 +223,9 @@
                                     <constraint firstAttribute="width" secondItem="jqL-Ey-x7V" secondAttribute="height" multiplier="1.75:1" id="XSJ-XL-euG"/>
                                 </constraints>
                                 <state key="normal" image="UpArrow"/>
+                                <connections>
+                                    <action selector="healthUp:" destination="8oN-n2-f1X" eventType="touchUpInside" id="Vlh-eK-Dxj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-w3-e9b" userLabel="Health Down">
                                 <rect key="frame" x="14" y="96" width="42" height="24"/>
@@ -231,6 +234,9 @@
                                     <constraint firstAttribute="width" secondItem="iZk-w3-e9b" secondAttribute="height" multiplier="1.75:1" id="guf-UR-51H"/>
                                 </constraints>
                                 <state key="normal" image="DownArrow"/>
+                                <connections>
+                                    <action selector="healthDown:" destination="8oN-n2-f1X" eventType="touchUpInside" id="wiA-vo-3Yc"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4cj-SR-PAw" userLabel="Heart Image View">
                                 <rect key="frame" x="0.0" y="24" width="70" height="70"/>
@@ -238,7 +244,7 @@
                                     <constraint firstAttribute="width" secondItem="4cj-SR-PAw" secondAttribute="height" multiplier="1:1" id="DFH-zZ-SRb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-Xr-7fL" userLabel="Health Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-Xr-7fL" userLabel="Health Label">
                                 <rect key="frame" x="14" y="43.5" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="UYY-Oi-7hY"/>
@@ -262,6 +268,11 @@
                             <constraint firstItem="jqL-Ey-x7V" firstAttribute="top" secondItem="ETK-8e-uLC" secondAttribute="topMargin" id="uU0-fz-Nmy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="healthDownButton" destination="iZk-w3-e9b" id="ZBI-uO-gHz"/>
+                        <outlet property="healthLabel" destination="2LY-Xr-7fL" id="qcv-4y-FdG"/>
+                        <outlet property="healthUpButton" destination="jqL-Ey-x7V" id="95e-XC-6Th"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUg-J1-O54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
