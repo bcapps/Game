@@ -9,6 +9,7 @@
 import UIKit
 
 final class ToolsListViewController: UITableViewController {
+    let multipeer = LCKMultipeer(multipeerUserType: .Host, peerName: "DM", serviceName: "DarkDays")
     
     enum Tool: Int {
         case PeersList
@@ -27,6 +28,8 @@ final class ToolsListViewController: UITableViewController {
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
         
         tableView.customize()
+        
+        multipeer.startMultipeerConnectivity()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,8 +50,6 @@ final class ToolsListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let multipeer = LCKMultipeer(multipeerUserType: .Host, peerName: "DM", serviceName: "DarkDays")
-        
         let peersViewController = PeerListViewController(multipeerManager: multipeer)
         
         navigationController?.pushViewController(peersViewController, animated: true)

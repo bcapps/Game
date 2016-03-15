@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = UIColor.whiteColor()
         
         if let navigationController = window?.rootViewController as? UINavigationController {
-            let heroListViewController = HeroListViewController(objects: HeroPersistence().allPersistedHeroes(), delegate: nil)
+            let heroListViewController = HeroListViewController(sections: [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes())], delegate: nil)
             
             navigationController.pushViewController(heroListViewController, animated: false)
         }

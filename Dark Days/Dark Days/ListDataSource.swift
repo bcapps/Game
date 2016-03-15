@@ -8,32 +8,43 @@
 
 import UIKit
 
+struct SectionList<T> {
+    let sectionTitle: String?
+    let objects: [T]
+}
+
 final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableViewDataSource {
     
     typealias TableViewCellConfigureBlock = (cell: U, object: T) -> Void
 
-    private let objects: [T]
+    private let sections: [SectionList<T>]
     private let configureCell: TableViewCellConfigureBlock
     
-    subscript(index: Int) -> T {
-        get {
-            return objects[index]
-        }
-    }
-    
-    init(objects: [T], configureCell: TableViewCellConfigureBlock) {
-        self.objects = objects
+    init(sections: [SectionList<T>], configureCell: TableViewCellConfigureBlock) {
+        self.sections = sections
         self.configureCell = configureCell
         
         super.init()
     }
     
+    func objectForIndexPath(indexPath: NSIndexPath) -> T? {
+        return self.sections[indexPath.section].objects[indexPath.row]
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return self.sections[section].objects.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return self.sections.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section].sectionTitle
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let object = objects[indexPath.row]
+        let object = self.sections[indexPath.section].objects[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(U.self, type: .Cell)
         
