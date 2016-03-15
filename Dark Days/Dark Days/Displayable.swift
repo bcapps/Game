@@ -117,7 +117,7 @@ extension ListDisplayable {
                     let attributedTitle = NSAttributedString.attributedStringWithHeadingAttributes(title)
                     attributedString.appendAttributedString(attributedTitle)
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
-                } else if information?.characters.count > 0 {
+                } else if information?.isEmpty == false {
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
                 }
                 
