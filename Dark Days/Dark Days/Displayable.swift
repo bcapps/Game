@@ -73,6 +73,18 @@ extension God: ListDisplayingGeneratable {
     }
 }
 
+extension Monster: ListDisplayingGeneratable {
+    static func displayable(monster: Monster) -> ListDisplayable {
+        return ListDisplayable(title: monster.name, information: monster.explanation, additionalInfoTitle: String(monster.health), additionalInfo: nil, subtext: nil, image: UIImage(named: monster.name))
+    }
+}
+
+extension Floor: ListDisplayingGeneratable {
+    static func displayable(floor: Floor) -> ListDisplayable {
+        return ListDisplayable(title: floor.name, information: floor.background, additionalInfoTitle: "Towns", additionalInfo: floor.towns.joinWithSeparator("\n"), subtext: nil, image: nil)
+    }
+}
+
 struct ListDisplayable {
     let title: String?
     let information: String?
