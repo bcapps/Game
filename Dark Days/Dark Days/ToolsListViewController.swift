@@ -12,7 +12,6 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     let multipeer = LCKMultipeer(multipeerUserType: .Host, peerName: "DM", serviceName: "DarkDays")
     
     enum Tool: Int {
-        case PeersList
         case ItemList
         case GodList
         case FloorList
@@ -23,8 +22,6 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
         func toolName() -> String {
             switch self {
-                case .PeersList:
-                    return "Peers List"
                 case .ItemList:
                     return "Item List"
                 case .GodList:
@@ -44,20 +41,18 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
         func toolViewController(delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
-            case .PeersList:
-                return nil
             case .ItemList:
                 return ListViewController<Item>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Items"))], delegate: delegate)
             case .GodList:
                 return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Gods"))], delegate: delegate)
             case .FloorList:
-                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Floors"))], delegate: delegate)
+                return ListViewController<Floor>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Floors"))], delegate: delegate)
             case .SpellList:
-                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Spells"))], delegate: delegate)
+                return ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Spells"))], delegate: delegate)
             case .SkillList:
-                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Skills"))], delegate: delegate)
+                return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
-                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Monsters"))], delegate: delegate)
+                return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Monsters"))], delegate: delegate)
             case .Gold:
                 return nil
             }
@@ -75,7 +70,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 7
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -94,10 +89,12 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let tool = Tool(rawValue: indexPath.row) else { return }
         
-        let viewController = tool.toolViewController(self)
-        
-        if let vC = viewController {
-            navigationController?.pushViewController(vC, animated: true)
+        switch tool {
+            case .Gold:
+                print("HI")
+            default:
+                guard let viewController = tool.toolViewController(self) else { return }
+                navigationController?.pushViewController(viewController, animated: true)
         }
     }
     
