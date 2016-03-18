@@ -17,6 +17,12 @@
 		C39ACBF01C9CA0B7004C5A6B /* SendGoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */; };
 		C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */; };
 		C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */; };
+		C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39ACBF31C9CA8EB004C5A6B /* NameHero.storyboard */; };
+		C39ACBF51C9CA8EB004C5A6B /* NameHero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39ACBF31C9CA8EB004C5A6B /* NameHero.storyboard */; };
+		C39ACBF61C9CA8EB004C5A6B /* NameHero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39ACBF31C9CA8EB004C5A6B /* NameHero.storyboard */; };
+		C39ACBF81C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBF71C9CA8F9004C5A6B /* NameHeroViewController.swift */; };
+		C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBF71C9CA8F9004C5A6B /* NameHeroViewController.swift */; };
+		C39ACBFA1C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39ACBF71C9CA8F9004C5A6B /* NameHeroViewController.swift */; };
 		C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
 		C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
 		C3AB8F411C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */; };
@@ -255,6 +261,8 @@
 		C39ACBEB1C9C9B95004C5A6B /* SendGold.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SendGold.storyboard; sourceTree = "<group>"; };
 		C39ACBED1C9C9D3E004C5A6B /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendGoldViewController.swift; sourceTree = "<group>"; };
+		C39ACBF31C9CA8EB004C5A6B /* NameHero.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NameHero.storyboard; sourceTree = "<group>"; };
+		C39ACBF71C9CA8F9004C5A6B /* NameHeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameHeroViewController.swift; sourceTree = "<group>"; };
 		C3AB8F3E1C7CF5B2007CE0BA /* HeroPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroPersistence.swift; sourceTree = "<group>"; };
 		C3AB8F461C7CF992007CE0BA /* HeroPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroPersistenceTests.swift; sourceTree = "<group>"; };
 		C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHero.swift; sourceTree = "<group>"; };
@@ -450,6 +458,8 @@
 		C3AB8F3C1C7CF403007CE0BA /* Hero Creation */ = {
 			isa = PBXGroup;
 			children = (
+				C39ACBF31C9CA8EB004C5A6B /* NameHero.storyboard */,
+				C39ACBF71C9CA8F9004C5A6B /* NameHeroViewController.swift */,
 				C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */,
 				C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */,
 			);
@@ -878,6 +888,7 @@
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
+				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
@@ -903,6 +914,7 @@
 				F2350AFE1C7ADB5900D6E18E /* Monsters.json in Resources */,
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F25187B61C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
+				C39ACBF51C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +931,7 @@
 				F2350B981C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
 				F25187851C922B22003AD636 /* DMToolkit.storyboard in Resources */,
+				C39ACBF61C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
 				F2473B1A1C8382EA008FD65B /* Spells.json in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
@@ -1031,6 +1044,7 @@
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
+				C39ACBF81C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F25187711C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
@@ -1068,6 +1082,7 @@
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
 				F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */,
 				F25187B71C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
@@ -1163,6 +1178,7 @@
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
+				C39ACBFA1C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
