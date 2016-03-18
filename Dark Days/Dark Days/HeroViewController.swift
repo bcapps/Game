@@ -149,14 +149,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentObjectInOverlay(item, footerView: button)
     }
     
-    private func presentSkill(skill: Skill) {
-        presentObjectInOverlay(skill)
-    }
-    
-    private func presentStat(stat: Stat) {
-        presentObjectInOverlay(stat)
-    }
-    
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
         
@@ -255,11 +247,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let stat = hero?.stats[indexPath.row]
+        guard let stat = hero?.stats[indexPath.row] else { return }
         
-        if let stat = stat {
-            presentStat(stat)
-        }
+        presentObjectInOverlay(stat)
     }
     
     //MARK: ListViewControllerDelegate
@@ -306,14 +296,18 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 guard let item = ObjectProvider.itemForName(objectName) else { return }
                 
                 hero?.inventory.items.append(item)
-                presentItem(item)
+                presentObjectInOverlay(item)
             case LCKMultipeer.MessageType.Skill.rawValue:
                 guard let skill = ObjectProvider.skillForName(objectName) else { return }
                 
                 hero?.skills.append(skill)
-                presentSkill(skill)
+                presentObjectInOverlay(skill)
                 break
             case LCKMultipeer.MessageType.Spell.rawValue:
+                guard let spell = ObjectProvider.spellForName(objectName) else { return }
+                
+                hero?.spells.append(spell)
+                presentObjectInOverlay(spell)
                 break
             case LCKMultipeer.MessageType.Gold.rawValue:
                 break
