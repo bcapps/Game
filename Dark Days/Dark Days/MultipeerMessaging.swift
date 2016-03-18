@@ -8,14 +8,17 @@
 
 import Foundation
 
+let MessageValueKey = "value"
+
 extension LCKMultipeer {
+    
     enum MessageType: UInt {
         case Item
         case Gold
     }
     
     func sendItemToPeer(item: Item, peer: MCPeerID) -> Bool {
-        return sendObjectToPeer(item, type: .Item, peer: peer)
+        return sendObjectToPeer(item.name, type: .Item, peer: peer)
     }
     
     func sendGoldToPeer(gold: Int, peer: MCPeerID) -> Bool {
@@ -25,7 +28,7 @@ extension LCKMultipeer {
     }
     
     private func sendObjectToPeer(object: AnyObject, type: MessageType, peer: MCPeerID) -> Bool {
-        let dictionary = ["value": object]
+        let dictionary = [MessageValueKey: object]
         
         guard let data = try? NSJSONSerialization.dataWithJSONObject(dictionary, options: .PrettyPrinted) else {
             return false

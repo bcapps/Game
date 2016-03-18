@@ -19,7 +19,7 @@ final class HeroBuilder {
     var god: God?
     
     func build() -> Hero? {
-        let inventory = Inventory(gold: 0, items: ObjectProvider.objectsForJSON("Items"))
+        let inventory = Inventory(gold: 0, items: [])
         
         var skills = [Skill]()
         if let skill = skill {

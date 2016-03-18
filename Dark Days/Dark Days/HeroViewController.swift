@@ -141,13 +141,17 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let itemSection = SectionList(sectionTitle: nil, objects: [item])
         let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
         
-        let button = UnequipButton(item: item)
-        button.backgroundColor = .backgroundColor()
-        button.setTitle("Unequip", forState: .Normal)
-        button.titleLabel?.font = UIFont.bodyFont()
-        button.setTitleColor(UIColor.redColor(), forState: .Normal)
-        button.setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
-        button.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+        var button: UnequipButton?
+        
+        if item.equipped {
+            button = UnequipButton(item: item)
+            button?.backgroundColor = .backgroundColor()
+            button?.setTitle("Unequip", forState: .Normal)
+            button?.titleLabel?.font = UIFont.bodyFont()
+            button?.setTitleColor(UIColor.redColor(), forState: .Normal)
+            button?.setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
+            button?.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+        }
         
         presentOverlayWithListViewController(itemsList, footerView: button)
     }
@@ -330,7 +334,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     // MARK: LCKMultipeerEventListener
     
     func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
-        print(message)
+        guard let object = try? NSJSONSerialization.JSONObjectWithData(message.data, options: NSJSONReadingOptions.AllowFragments) as? [String: AnyObject] else { return }
+        
+        if message.type == LCKMultipeer.MessageType.Item.rawValue {
+            guard let itemName = object?[MessageValueKey] as? String else { return }
+            guard let item = ObjectProvider.itemForName(itemName) else { return }
+            
+            hero?.inventory.items.append(item)
+            saveHero()
+            presentItem(item)
+        }
     }
 }
 

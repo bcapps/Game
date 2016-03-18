@@ -11,6 +11,7 @@ import UIKit
 final class PeerListViewController: UITableViewController, LCKMultipeerEventListener {
     
     let multipeer: LCKMultipeer
+    var objectToSend: AnyObject?
     
     var peers: [MCPeerID] {
         get {
@@ -63,6 +64,14 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
         cell.selectionStyle = .Gray
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let item = objectToSend as? Item {
+            let peerID = peers[indexPath.row]
+            
+            multipeer.sendItemToPeer(item, peer: peerID)
+        }
     }
     
     // MARK: LCKMultipeerEventListener
