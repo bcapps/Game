@@ -39,8 +39,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-Ht-NDp">
-                                                    <rect key="frame" x="0.0" y="20" width="50" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-Ht-NDp">
+                                                    <rect key="frame" x="0.0" y="21" width="50" height="20"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.63089037698412698" green="0.63089037698412698" blue="0.63089037698412698" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SilhoutteMale" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-ib-KGt" userLabel="Character Silhouette">
-                                <rect key="frame" x="90" y="40" width="139" height="387"/>
+                                <rect key="frame" x="91" y="40" width="137" height="383"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H5F-ib-KGt" secondAttribute="height" multiplier="1:2.7972" id="mlc-zM-2V7"/>
                                 </constraints>
@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="199" y="206" width="55" height="55"/>
+                                <rect key="frame" x="198" y="204" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dul-Tm-cZS"/>
                                     <constraint firstAttribute="width" secondItem="LMS-Zp-1oA" secondAttribute="height" multiplier="1:1" id="jjP-91-bsI"/>
@@ -113,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="65" y="206" width="55" height="55"/>
+                                <rect key="frame" x="66" y="204" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="i6n-CV-R7r"/>
                                     <constraint firstAttribute="width" secondItem="58g-mR-vui" secondAttribute="height" multiplier="1:1" id="rc4-a8-WeH"/>
@@ -135,7 +135,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="132" y="362" width="55" height="55"/>
+                                <rect key="frame" x="132" y="358" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="VC5-h6-Mw0"/>
                                     <constraint firstAttribute="width" secondItem="tWM-Zd-iTa" secondAttribute="height" multiplier="1:1" id="Xbx-or-Lf4"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-I4-t9L">
-                                <rect key="frame" x="229" y="271" width="70" height="120"/>
+                                <rect key="frame" x="228" y="269" width="70" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="gcp-yX-q5V"/>
                                     <constraint firstAttribute="height" constant="120" id="myN-2V-YIl"/>
@@ -167,7 +167,7 @@
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="leading" secondItem="3ao-dt-idE" secondAttribute="trailing" constant="40" id="PLh-s8-wGS"/>
                             <constraint firstItem="6MH-he-zNu" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="Ssj-et-8wE"/>
                             <constraint firstItem="LMS-Zp-1oA" firstAttribute="trailing" secondItem="H5F-ib-KGt" secondAttribute="trailing" constant="25" id="VbP-AI-cQg"/>
-                            <constraint firstItem="BdS-UO-7gL" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="8" id="W8U-aU-9tf"/>
+                            <constraint firstItem="BdS-UO-7gL" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="12" id="W8U-aU-9tf"/>
                             <constraint firstItem="BdS-UO-7gL" firstAttribute="width" secondItem="dmw-nJ-ihR" secondAttribute="width" id="Yj5-hv-Kxq"/>
                             <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="bottom" constant="40" id="aHM-F5-AjM"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="bUQ-oe-6yS"/>

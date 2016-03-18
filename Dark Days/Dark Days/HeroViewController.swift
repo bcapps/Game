@@ -158,25 +158,25 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
         
-        presentObjectsModally(items, title: "Inventory")
+        showList(items, title: "Inventory")
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
-        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot && $0.equipped == false}) else { return }
         
-        presentObjectsModally(items, title: itemSlot.rawValue, allowsSelection: true)
+        showList(items, title: itemSlot.rawValue, allowsSelection: true)
     }
     
     private func presentsSkillsList() {
         guard let skills = hero?.skills else { return }
         
-        presentObjectsModally(skills, title: "Skills")
+        showList(skills, title: "Skills")
     }
     
     private func presentSpellsList() {
         guard let spells = hero?.spells else { return }
         
-        presentObjectsModally(spells, title: "Spellbook")
+        showList(spells, title: "Spellbook")
     }
     
     func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
@@ -186,10 +186,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    func presentObjectsModally<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
+    func showList<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
         
         let section = SectionList(sectionTitle: nil, objects: objects)
-        let list = ListViewController<T>(sections: [section], delegate: nil)
+        let list = ListViewController<T>(sections: [section], delegate: self)
         list.title = title
         list.tableView.allowsSelection = allowsSelection
         
