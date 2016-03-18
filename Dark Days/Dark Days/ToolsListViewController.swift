@@ -114,9 +114,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     // MARK: ListViewControllerDelegate
     
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
-        guard let object = object as? AnyObject else { return }
         let peersViewController = PeerListViewController(multipeerManager: multipeer)
-        peersViewController.objectToSend = object
+        peersViewController.objectToSend = object as Any
         
         navigationController?.pushViewController(peersViewController, animated: true)
     }
