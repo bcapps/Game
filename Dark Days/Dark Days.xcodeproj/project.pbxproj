@@ -21,6 +21,7 @@
 		C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */; };
 		C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */; };
 		C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */; };
+		C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
@@ -251,6 +252,7 @@
 		C3AB8F4D1C7D0753007CE0BA /* HeroCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroCreation.storyboard; sourceTree = "<group>"; };
 		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
+		C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerMessaging.swift; sourceTree = "<group>"; };
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
 				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
 				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
+				C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -808,7 +811,7 @@
 				TargetAttributes = {
 					F21ECDB71C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = JL4AKR8DVC;
+						DevelopmentTeam = Z7HY32X2F3;
 					};
 					F21ECDCB1C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -988,6 +991,7 @@
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
+				C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,

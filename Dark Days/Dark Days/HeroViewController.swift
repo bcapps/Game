@@ -9,7 +9,7 @@
 import UIKit
 import AZDropdownMenu
 
-final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, LCKMultipeerEventListener {
     @IBOutlet weak var helmetButton: EquipmentButton!
     @IBOutlet weak var accessoryButton: EquipmentButton!
     @IBOutlet weak var leftHandButton: EquipmentButton!
@@ -25,6 +25,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         didSet {
             multipeer = LCKMultipeer(multipeerUserType: .Client, peerName: hero?.name ?? "No Name", serviceName: "DarkDays")
             multipeer?.startMultipeerConnectivity()
+            multipeer?.addEventListener(self)
         }
     }
     
@@ -325,6 +326,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
+    
+    // MARK: LCKMultipeerEventListener
+    
+    func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
+        print(message)
+    }
 }
 
 private class BorderGenerator {
