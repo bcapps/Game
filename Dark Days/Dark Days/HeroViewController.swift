@@ -19,6 +19,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var goldLabel: UILabel!
     
     var multipeer: LCKMultipeer?
     
@@ -52,6 +53,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
+        updateGoldText()
         addMenuTapHandlers()
         
         let itemSpacing = collectionViewFlowLayout.minimumInteritemSpacing
@@ -179,14 +181,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         showList(spells, title: "Spellbook")
     }
     
-    func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
+    private func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
         let section = SectionList(sectionTitle: nil, objects: [object])
         let list = ListViewController<T>(sections: [section], delegate: nil)
         
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    func showList<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
+    private func showList<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
         
         let section = SectionList(sectionTitle: nil, objects: objects)
         let list = ListViewController<T>(sections: [section], delegate: self)
@@ -216,7 +218,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentedOverlayController = containingViewController
     }
     
-    func dismissOverlay() {
+    private func dismissOverlay() {
         if let presentedController = presentedOverlayController {
             overlayView.removeOverlayView(animationDuration)
             
@@ -225,13 +227,21 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
-    func unequipItem(button: UnequipButton) {
+    private func unequipItem(button: UnequipButton) {
         button.item.equipped = false
         updateEquippedItems()
         
         dismissOverlay()
         
         saveHero()
+    }
+    
+    private func updateGoldText() {
+        let goldString = String(hero?.inventory.gold ?? 0)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .ByTruncatingTail
+                
+        goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
     }
     
     //MARK: UICollectionViewDataSource
@@ -320,6 +330,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 let heroGold = hero?.inventory.gold ?? 0
                 
                 hero?.inventory.gold = heroGold + (goldValue?.longValue ?? 0)
+                updateGoldText()
                 break
             default:
                 break
