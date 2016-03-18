@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface LCKMultipeerMessage : NSObject <NSCoding>
 
 /**
@@ -31,3 +33,5 @@
 - (instancetype)initWithMessageType:(NSUInteger)type messageData:(NSData *)data;
 
 @end
+
+NS_ASSUME_NONNULL_END
