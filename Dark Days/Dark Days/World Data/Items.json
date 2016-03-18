@@ -1,21 +1,44 @@
 [{
- "name": "Longsword",
- "damage": "1d6 + [STR]",
- "effects": "The sharp blade deals extra damage to fleshy creatures.",
- "flavor": "A generic longsword. It looks like it may have seen some use.",
- "itemSlot": "hand",
- "twohanded": true
- }, {
- "name": "Dagger",
+ "name": "Basic Axe",
  "damage": "1d4 + [STR]",
- "effects": "The small dagger adds bonuses to hit.",
- "flavor": "A small dagger with a leather bound hilt and a sharp blade.",
+ "effects": "",
+ "flavor": "A small axe. It looks sharp.",
  "itemSlot": "hand",
- "twohanded": false
  }, {
- "name": "Cloth Robe",
- "damage": "",
- "effects": "It's made of cloth!",
- "flavor": "Super duper cloth robes!",
- "itemSlot": "chest",
+ "name": "Basic Dagger",
+ "damage": "1d4 + [DEX]",
+ "effects": "",
+ "flavor": "A small blade used for cutting opponents with quick strikes.",
+ "itemSlot": "hand",
+ }, {
+ "name": "Basic Mace",
+ "damage": "1d4 + [STR]",
+ "effects": "",
+ "flavor": "A light hammer used for bludgeoning.",
+ "itemSlot": "hand"
+ }, {
+ "name": "Gauntlet",
+ "damage": "1d4 + [STR]",
+ "effects": "",
+ "flavor": "A metal glove useful for punching people. It is considered an unarmed weapon.",
+ "itemSlot": "hand"
+ }, {
+ "name": "Rapier",
+ "damage": "1d6 + [DEX]",
+ "effects": "",
+ "flavor": "A thin blade suited for lunging attacks.",
+ "itemSlot": "hand"
+ }, {
+ "name": "Basic Spear",
+ "damage": "1d8 + [STR]",
+ "effects": "",
+ "flavor": "A long spear used for stabbing enemies.",
+ "itemSlot": "hand",
+ "twoHanded": true
+ }, {
+ "name": "Basic Mace",
+ "damage": "1d4 + [STR]",
+ "effects": "",
+ "flavor": "A light hammer used for bludgeoning.",
+ "itemSlot": "hand"
  }]

@@ -26,7 +26,7 @@ class HeroCodingTests: XCTestCase {
         
         XCTAssertEqual(sut?.inventory.gold, 5000)
         XCTAssertEqual(sut?.inventory.items.count, 2)
-        XCTAssertEqual(sut?.inventory.items[0].name, "Longsword")
+        XCTAssertEqual(sut?.inventory.items[0].name, "Basic Mace")
         
         XCTAssertEqual(sut?.stats.count, 5)
         XCTAssertEqual(sut?.stats[0].name, "Strength")

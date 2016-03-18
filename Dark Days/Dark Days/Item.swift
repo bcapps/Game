@@ -68,7 +68,7 @@ final class Item: Decodable, Nameable, Codeable {
     
     static func decode(json: AnyObject) throws -> Item {
         let twoHanded: Bool
-        do { twoHanded = try json => "twohanded" } catch { twoHanded = false }
+        do { twoHanded = try json => "twoHanded" } catch { twoHanded = false }
         
         return try Item(name: json => "name",
             damage: json => "damage",
