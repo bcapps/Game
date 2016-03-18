@@ -197,7 +197,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentOverlayWithListViewController<T>(viewController: ListViewController<T>, footerView: UIView? = nil) {
-        var frame = CGRectInset(view.frame, 40, 75)
+        var frame = CGRectInset(view.frame, 50, 85)
         frame.origin.y = 50
         
         let containingViewController = ContainingViewController(containedViewController: viewController, footerView: footerView)
