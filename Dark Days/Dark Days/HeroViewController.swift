@@ -142,9 +142,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentItem(item: Item) {
-        let itemSection = SectionList(sectionTitle: nil, objects: [item])
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
-        
         var button: UnequipButton?
         
         if item.equipped {
@@ -157,57 +154,56 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             button?.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
         }
         
-        presentOverlayWithListViewController(itemsList, footerView: button)
+        presentObjectInOverlay(item, footerView: button)
+    }
+    
+    private func presentSkill(skill: Skill) {
+        presentObjectInOverlay(skill)
+    }
+    
+    private func presentStat(stat: Stat) {
+        presentObjectInOverlay(stat)
     }
     
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
         
-        let itemSection = SectionList(sectionTitle: nil, objects: items)
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
-        itemsList.title = "Inventory"
-        itemsList.tableView.allowsSelection = false
-        
-        presentListViewController(itemsList)
+        presentObjectsModally(items, title: "Inventory")
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
         guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
         
-        let itemSection = SectionList(sectionTitle: nil, objects: items)
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: self)
-        itemsList.title = itemSlot.rawValue
-        
-        presentListViewController(itemsList)
+        presentObjectsModally(items, title: itemSlot.rawValue, allowsSelection: true)
     }
     
     private func presentsSkillsList() {
         guard let skills = hero?.skills else { return }
         
-        let skillSection = SectionList(sectionTitle: nil, objects: skills)
-        let skillsList = ListViewController<Skill>(sections: [skillSection], delegate: nil)
-        skillsList.title = "Skills"
-        skillsList.tableView.allowsSelection = false
-        
-        presentListViewController(skillsList)
+        presentObjectsModally(skills, title: "Skills")
     }
     
     private func presentSpellsList() {
         guard let spells = hero?.spells else { return }
         
-        let spellSection = SectionList(sectionTitle: nil, objects: spells)
-        let spellsList = ListViewController<Spell>(sections: [spellSection], delegate: nil)
-        spellsList.title = "Spellbook"
-        spellsList.tableView.allowsSelection = false
-        
-        presentListViewController(spellsList)
+        presentObjectsModally(spells, title: "Spellbook")
     }
     
-    private func presentStat(stat: Stat) {
-        let statSection = SectionList(sectionTitle: nil, objects: [stat])
-        let statList = ListViewController<Stat>(sections: [statSection], delegate: nil)
+    func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
+        let section = SectionList(sectionTitle: nil, objects: [object])
+        let list = ListViewController<T>(sections: [section], delegate: nil)
         
-        presentOverlayWithListViewController(statList)
+        presentOverlayWithListViewController(list, footerView: footerView)
+    }
+    
+    func presentObjectsModally<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
+        
+        let section = SectionList(sectionTitle: nil, objects: objects)
+        let list = ListViewController<T>(sections: [section], delegate: nil)
+        list.title = title
+        list.tableView.allowsSelection = allowsSelection
+        
+        presentListViewController(list)
     }
     
     private func presentListViewController<T>(viewController: ListViewController<T>) {
@@ -340,14 +336,29 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
         guard let object = try? NSJSONSerialization.JSONObjectWithData(message.data, options: NSJSONReadingOptions.AllowFragments) as? [String: AnyObject] else { return }
         
-        if message.type == LCKMultipeer.MessageType.Item.rawValue {
-            guard let itemName = object?[MessageValueKey] as? String else { return }
-            guard let item = ObjectProvider.itemForName(itemName) else { return }
-            
-            hero?.inventory.items.append(item)
-            saveHero()
-            presentItem(item)
+        guard let objectName = object?[MessageValueKey] as? String else { return }
+        
+        switch message.type {
+            case LCKMultipeer.MessageType.Item.rawValue:
+                guard let item = ObjectProvider.itemForName(objectName) else { return }
+                
+                hero?.inventory.items.append(item)
+                presentItem(item)
+            case LCKMultipeer.MessageType.Skill.rawValue:
+                guard let skill = ObjectProvider.skillForName(objectName) else { return }
+                
+                hero?.skills.append(skill)
+                presentSkill(skill)
+                break
+            case LCKMultipeer.MessageType.Spell.rawValue:
+                break
+            case LCKMultipeer.MessageType.Gold.rawValue:
+                break
+            default:
+                break
         }
+        
+        saveHero()
     }
 }
 

@@ -14,11 +14,21 @@ extension LCKMultipeer {
     
     enum MessageType: UInt {
         case Item
+        case Spell
+        case Skill
         case Gold
     }
     
     func sendItemToPeer(item: Item, peer: MCPeerID) -> Bool {
         return sendObjectToPeer(item.name, type: .Item, peer: peer)
+    }
+    
+    func sendSpellToPeer(spell: Spell, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(spell.name, type: .Spell, peer: peer)
+    }
+    
+    func sendSkillToPeer(skill: Skill, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(skill.name, type: .Skill, peer: peer)
     }
     
     func sendGoldToPeer(gold: Int, peer: MCPeerID) -> Bool {

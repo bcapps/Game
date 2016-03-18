@@ -21,8 +21,8 @@ final class Hero: Codeable {
     let inventory: Inventory
     let stats: [Stat]
     let race: Race
-    let skills: [Skill]
-    let spells: [Spell]
+    var skills: [Skill]
+    var spells: [Spell]
     let magicType: MagicType
     let god: God?
     let uniqueID: String

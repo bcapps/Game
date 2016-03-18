@@ -71,6 +71,8 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
             let peerID = peers[indexPath.row]
             
             multipeer.sendItemToPeer(item, peer: peerID)
+            
+            navigationController?.popViewControllerAnimated(true)
         }
     }
     

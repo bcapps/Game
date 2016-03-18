@@ -115,7 +115,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
         
-        if object is Item {
+        if object is Item || object is Skill || object is Spell {
             return true
         }
         
