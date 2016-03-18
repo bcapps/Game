@@ -11,7 +11,7 @@ import UIKit
 final class HealthViewController: UIViewController {
     
     var hero: Hero? {
-        didSet {
+        didSet {            
             adjustHealthByValue(0)
         }
     }

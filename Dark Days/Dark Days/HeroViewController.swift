@@ -18,6 +18,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     @IBOutlet weak var bootsButton: EquipmentButton!
     
     @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     var multipeer: LCKMultipeer?
     
@@ -52,6 +53,11 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
         addMenuTapHandlers()
+        
+        let itemSpacing = collectionViewFlowLayout.minimumInteritemSpacing
+        let numberOfItems = CGFloat(5)
+        
+        collectionViewFlowLayout.itemSize = CGSize(width: (CGRectGetWidth(view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -289,7 +295,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
         guard let object = try? NSJSONSerialization.JSONObjectWithData(message.data, options: NSJSONReadingOptions.AllowFragments) as? [String: AnyObject] else { return }
         
-        guard let objectName = object?[MessageValueKey] as? String else { return }
+        let objectName = object?[MessageValueKey] as? String ?? ""
         
         switch message.type {
             case LCKMultipeer.MessageType.Item.rawValue:
@@ -310,6 +316,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 presentObjectInOverlay(spell)
                 break
             case LCKMultipeer.MessageType.Gold.rawValue:
+                let goldValue = object?[MessageValueKey] as? NSNumber
+                let heroGold = hero?.inventory.gold ?? 0
+                
+                hero?.inventory.gold = heroGold + (goldValue?.longValue ?? 0)
                 break
             default:
                 break

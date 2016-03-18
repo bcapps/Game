@@ -39,14 +39,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-Ht-NDp">
-                                                    <rect key="frame" x="0.0" y="20" width="50" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-Ht-NDp">
+                                                    <rect key="frame" x="0.0" y="20" width="50" height="20"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.63089037698412698" green="0.63089037698412698" blue="0.63089037698412698" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1p-VJ-NOg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                     <color key="textColor" red="0.91569527116402116" green="0.91569527116402116" blue="0.91569527116402116" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -193,6 +193,7 @@
                         <outlet property="accessoryButton" destination="3ao-dt-idE" id="k6f-lz-qBK"/>
                         <outlet property="bootsButton" destination="tWM-Zd-iTa" id="3dm-8e-mNb"/>
                         <outlet property="chestButton" destination="6MH-he-zNu" id="VWx-dq-PxJ"/>
+                        <outlet property="collectionViewFlowLayout" destination="pTd-Os-Ulj" id="kLT-c8-klg"/>
                         <outlet property="helmetButton" destination="lDs-B1-mLe" id="ywF-Jv-1Dz"/>
                         <outlet property="leftHandButton" destination="LMS-Zp-1oA" id="a3l-Dp-xRc"/>
                         <outlet property="rightHandButton" destination="58g-mR-vui" id="Q4S-cD-MOL"/>
@@ -249,7 +250,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-Xr-7fL" userLabel="Health Label">
-                                <rect key="frame" x="14" y="43.5" width="42" height="21"/>
+                                <rect key="frame" x="14" y="44" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="UYY-Oi-7hY"/>
                                     <constraint firstAttribute="height" constant="21" id="qwI-XQ-OZz"/>
