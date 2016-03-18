@@ -19,6 +19,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
     private let heroBuilder = HeroBuilder()
@@ -36,7 +37,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     @IBAction func backButtonTapped(sender: AnyObject) {
         nextButton.title = "Next"
-
+        
         switch currentCreationState {
             case .ChooseRace:
                 presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
@@ -59,6 +60,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
+        backButton.title = "Back"
 
         switch currentCreationState {
             case .ChooseRace:
@@ -160,6 +162,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func transitionToRaceList() {
+        backButton.title = "Cancel"
         currentCreationState = .ChooseRace
         
         let section = SectionList<Race>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Races"))
