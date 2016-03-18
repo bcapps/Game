@@ -35,6 +35,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private var overlayView: UIView?
     private var presentedOverlayController: UIViewController?
     
+    deinit {
+        multipeer?.stopMultipeerConnectivity()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

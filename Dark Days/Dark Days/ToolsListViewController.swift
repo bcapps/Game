@@ -59,6 +59,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         }
     }
     
+    deinit {
+        multipeer.stopMultipeerConnectivity()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
