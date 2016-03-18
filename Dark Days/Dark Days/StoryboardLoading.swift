@@ -22,6 +22,10 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("DMToolkit")
     }
     
+    static func sendGoldViewController() -> UIViewController? {
+        return initialViewControllerFromStoryboardNamed("SendGold")
+    }
+    
     private static func initialViewControllerFromStoryboardNamed(storyboardName: String) -> UIViewController? {
         return UIStoryboard(name: storyboardName, bundle: NSBundle.mainBundle()).instantiateInitialViewController()
     }

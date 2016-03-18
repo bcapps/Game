@@ -95,7 +95,16 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
         switch tool {
             case .Gold:
-                print("HI")
+                guard let goldViewController = UIStoryboard.sendGoldViewController() as? SendGoldViewController else { return }
+                
+                goldViewController.sendGoldTapped = { gold in
+                    let peersViewController = PeerListViewController(multipeerManager: self.multipeer)
+                    peersViewController.goldToSend = gold
+                    
+                    self.navigationController?.pushViewController(peersViewController, animated: true)
+                }
+                
+                navigationController?.pushViewController(goldViewController, animated: true)
             default:
                 guard let viewController = tool.toolViewController(self) else { return }
                 navigationController?.pushViewController(viewController, animated: true)
@@ -108,7 +117,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         guard let object = object as? AnyObject else { return }
         let peersViewController = PeerListViewController(multipeerManager: multipeer)
         peersViewController.objectToSend = object
-
+        
         navigationController?.pushViewController(peersViewController, animated: true)
     }
     

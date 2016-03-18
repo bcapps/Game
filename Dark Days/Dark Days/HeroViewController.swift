@@ -218,7 +218,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentedOverlayController = containingViewController
     }
     
-    private func dismissOverlay() {
+    func dismissOverlay() {
         if let presentedController = presentedOverlayController {
             overlayView.removeOverlayView(animationDuration)
             
