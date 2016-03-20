@@ -13,5 +13,5 @@ extension UIView {
         let className = NSStringFromClass(self).componentsSeparatedByString(".").last ?? ""
 
         return UINib(nibName: className, bundle: NSBundle.mainBundle())
-    }    
+    } 
 }

@@ -11,6 +11,8 @@ import UIKit
 final class PeerListViewController: UITableViewController, LCKMultipeerEventListener {
     
     let multipeer: LCKMultipeer
+    var objectToSend: Any?
+    var goldToSend: Int?
     
     var peers: [MCPeerID] {
         get {
@@ -63,6 +65,22 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
         cell.selectionStyle = .Gray
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let peerID = peers[indexPath.row]
+
+        if let item = objectToSend as? Item {
+            multipeer.sendItemToPeer(item, peer: peerID)
+        } else if let skill = objectToSend as? Skill {
+            multipeer.sendSkillToPeer(skill, peer: peerID)
+        } else if let spell = objectToSend as? Spell {
+            multipeer.sendSpellToPeer(spell, peer: peerID)
+        } else if let gold = goldToSend {
+            multipeer.sendGoldToPeer(gold, peer: peerID)
+        }
+        
+        navigationController?.popViewControllerAnimated(true)
     }
     
     // MARK: LCKMultipeerEventListener

@@ -13,8 +13,14 @@ class UnequipButton: UIButton {
     
     init(item: Item) {
         self.item = item
-        
+
         super.init(frame: CGRect())
+
+        backgroundColor = .backgroundColor()
+        setTitle("Unequip", forState: .Normal)
+        titleLabel?.font = UIFont.bodyFont()
+        setTitleColor(UIColor.redColor(), forState: .Normal)
+        setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
     }
     
     required init?(coder aDecoder: NSCoder) {

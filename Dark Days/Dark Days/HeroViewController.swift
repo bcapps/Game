@@ -9,7 +9,7 @@
 import UIKit
 import AZDropdownMenu
 
-final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, LCKMultipeerEventListener {
     @IBOutlet weak var helmetButton: EquipmentButton!
     @IBOutlet weak var accessoryButton: EquipmentButton!
     @IBOutlet weak var leftHandButton: EquipmentButton!
@@ -18,6 +18,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     @IBOutlet weak var bootsButton: EquipmentButton!
     
     @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var goldLabel: UILabel!
     
     var multipeer: LCKMultipeer?
     
@@ -25,14 +27,19 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         didSet {
             multipeer = LCKMultipeer(multipeerUserType: .Client, peerName: hero?.name ?? "No Name", serviceName: "DarkDays")
             multipeer?.startMultipeerConnectivity()
+            multipeer?.addEventListener(self)
         }
     }
     
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
     
-    private var overlayView: UIView?
+    private let overlayView = OverlayView()
     private var presentedOverlayController: UIViewController?
+    
+    deinit {
+        multipeer?.stopMultipeerConnectivity()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +47,19 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         title = hero?.name
         view.backgroundColor = .backgroundColor()
         
-        overlayView = UIView(frame: view.frame)
-        overlayView?.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
-        overlayView?.userInteractionEnabled = true
-        
+        overlayView.frame = view.frame
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("dismissOverlay"))
-        overlayView?.addGestureRecognizer(tapRecognizer)
+        overlayView.addGestureRecognizer(tapRecognizer)
         
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
+        updateGoldText()
         addMenuTapHandlers()
+        
+        let itemSpacing = collectionViewFlowLayout.minimumInteritemSpacing
+        let numberOfItems = CGFloat(5)
+        
+        collectionViewFlowLayout.itemSize = CGSize(width: (CGRectGetWidth(view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -137,68 +147,55 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentItem(item: Item) {
-        let itemSection = SectionList(sectionTitle: nil, objects: [item])
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
+        var button: UnequipButton?
         
-        let button = UnequipButton(item: item)
-        button.backgroundColor = .backgroundColor()
-        button.setTitle("Unequip", forState: .Normal)
-        button.titleLabel?.font = UIFont.bodyFont()
-        button.setTitleColor(UIColor.redColor(), forState: .Normal)
-        button.setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
-        button.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+        if item.equipped {
+            button = UnequipButton(item: item)
+            button?.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+        }
         
-        presentOverlayWithListViewController(itemsList, footerView: button)
+        presentObjectInOverlay(item, footerView: button)
     }
     
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
         
-        let itemSection = SectionList(sectionTitle: nil, objects: items)
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: nil)
-        itemsList.title = "Inventory"
-        itemsList.tableView.allowsSelection = false
-        
-        presentListViewController(itemsList)
+        showList(items, title: "Inventory")
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
-        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot}) else { return }
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot && $0.equipped == false}) else { return }
         
-        let itemSection = SectionList(sectionTitle: nil, objects: items)
-        let itemsList = ListViewController<Item>(sections: [itemSection], delegate: self)
-        itemsList.title = itemSlot.rawValue
-        
-        presentListViewController(itemsList)
+        showList(items, title: itemSlot.rawValue, allowsSelection: true)
     }
     
     private func presentsSkillsList() {
         guard let skills = hero?.skills else { return }
         
-        let skillSection = SectionList(sectionTitle: nil, objects: skills)
-        let skillsList = ListViewController<Skill>(sections: [skillSection], delegate: nil)
-        skillsList.title = "Skills"
-        skillsList.tableView.allowsSelection = false
-        
-        presentListViewController(skillsList)
+        showList(skills, title: "Skills")
     }
     
     private func presentSpellsList() {
         guard let spells = hero?.spells else { return }
         
-        let spellSection = SectionList(sectionTitle: nil, objects: spells)
-        let spellsList = ListViewController<Spell>(sections: [spellSection], delegate: nil)
-        spellsList.title = "Spellbook"
-        spellsList.tableView.allowsSelection = false
-        
-        presentListViewController(spellsList)
+        showList(spells, title: "Spellbook")
     }
     
-    private func presentStat(stat: Stat) {
-        let statSection = SectionList(sectionTitle: nil, objects: [stat])
-        let statList = ListViewController<Stat>(sections: [statSection], delegate: nil)
+    private func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
+        let section = SectionList(sectionTitle: nil, objects: [object])
+        let list = ListViewController<T>(sections: [section], delegate: nil)
         
-        presentOverlayWithListViewController(statList)
+        presentOverlayWithListViewController(list, footerView: footerView)
+    }
+    
+    private func showList<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
+        
+        let section = SectionList(sectionTitle: nil, objects: objects)
+        let list = ListViewController<T>(sections: [section], delegate: self)
+        list.title = title
+        list.tableView.allowsSelection = allowsSelection
+        
+        presentListViewController(list)
     }
     
     private func presentListViewController<T>(viewController: ListViewController<T>) {
@@ -208,39 +205,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentOverlayWithListViewController<T>(viewController: ListViewController<T>, footerView: UIView? = nil) {
-        var frame = CGRectInset(view.frame, 40, 75)
+        var frame = CGRectInset(view.frame, 50, 85)
         frame.origin.y = 50
         
-        let containingViewController = UIViewController()
+        let containingViewController = ContainingViewController(containedViewController: viewController, footerView: footerView)
         containingViewController.view.frame = frame
-        containingViewController.view.layer.cornerRadius = 12.0
-        containingViewController.view.layer.borderWidth = 1.0
-        containingViewController.view.layer.borderColor = UIColor.grayColor().CGColor
-        
-        viewController.tableView.separatorStyle = .None
-        viewController.tableView.allowsSelection = false
-        viewController.view.frame = containingViewController.view.bounds
         viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
-        containingViewController.addViewController(viewController)
-        
-        if let footerView = footerView {
-            let height: CGFloat = 40.0
-            let footerViewFrame = CGRect(x: 0, y: viewController.view.frame.size.height - height, width: viewController.view.frame.size.width, height: height)
-            footerView.frame = footerViewFrame
-            containingViewController.view.addSubview(footerView)
-            viewController.tableView.contentInset.bottom = 15
-            
-            footerView.layer.addSublayer(BorderGenerator.newTopBorder(footerView.frame.size.width, height: 1.0))
-        }
-        
-        if let overlayView = overlayView {
-            overlayView.alpha = 0.0
-            view.addSubview(overlayView)
-            UIView.animateWithDuration(animationDuration) {
-                overlayView.alpha = 1.0
-            }
-        }
+        overlayView.showOverlayViewInView(view, animationDuration: animationDuration)
         
         replaceChildViewController(presentedOverlayController, newViewController: containingViewController, animationDuration: animationDuration)
         presentedOverlayController = containingViewController
@@ -248,24 +220,28 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     func dismissOverlay() {
         if let presentedController = presentedOverlayController {
-            UIView.animateWithDuration(animationDuration, animations: {
-                self.overlayView?.alpha = 0.0
-                }, completion: { completed in
-                    self.overlayView?.removeFromSuperview()
-            })
+            overlayView.removeOverlayView(animationDuration)
             
             replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
             presentedOverlayController = nil
         }
     }
     
-    func unequipItem(button: UnequipButton) {
+    private func unequipItem(button: UnequipButton) {
         button.item.equipped = false
         updateEquippedItems()
         
         dismissOverlay()
         
         saveHero()
+    }
+    
+    private func updateGoldText() {
+        let goldString = String(hero?.inventory.gold ?? 0)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .ByTruncatingTail
+                
+        goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
     }
     
     //MARK: UICollectionViewDataSource
@@ -287,11 +263,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let stat = hero?.stats[indexPath.row]
+        guard let stat = hero?.stats[indexPath.row] else { return }
         
-        if let stat = stat {
-            presentStat(stat)
-        }
+        presentObjectInOverlay(stat)
     }
     
     //MARK: ListViewControllerDelegate
@@ -325,6 +299,126 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
+    
+    // MARK: LCKMultipeerEventListener
+    
+    func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
+        guard let object = try? NSJSONSerialization.JSONObjectWithData(message.data, options: NSJSONReadingOptions.AllowFragments) as? [String: AnyObject] else { return }
+        
+        let objectName = object?[MessageValueKey] as? String ?? ""
+        
+        switch message.type {
+            case LCKMultipeer.MessageType.Item.rawValue:
+                guard let item = ObjectProvider.itemForName(objectName) else { return }
+                
+                hero?.inventory.items.append(item)
+                presentObjectInOverlay(item)
+            case LCKMultipeer.MessageType.Skill.rawValue:
+                guard let skill = ObjectProvider.skillForName(objectName) else { return }
+                
+                hero?.skills.append(skill)
+                presentObjectInOverlay(skill)
+                break
+            case LCKMultipeer.MessageType.Spell.rawValue:
+                guard let spell = ObjectProvider.spellForName(objectName) else { return }
+                
+                hero?.spells.append(spell)
+                presentObjectInOverlay(spell)
+                break
+            case LCKMultipeer.MessageType.Gold.rawValue:
+                let goldValue = object?[MessageValueKey] as? NSNumber
+                let heroGold = hero?.inventory.gold ?? 0
+                
+                hero?.inventory.gold = heroGold + (goldValue?.longValue ?? 0)
+                updateGoldText()
+                break
+            default:
+                break
+        }
+        
+        saveHero()
+    }
+}
+
+private class ContainingViewController: UIViewController {
+    
+    let containedViewController: UITableViewController
+    let footerView: UIView?
+    let footerViewBorder = BorderGenerator.newTopBorder(0, height: 0)
+    
+    init(containedViewController: UITableViewController, footerView: UIView?) {
+        self.containedViewController = containedViewController
+        self.footerView = footerView
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.containedViewController = UITableViewController()
+        self.footerView = UIView()
+        
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.layer.cornerRadius = 12.0
+        view.layer.borderWidth = 1.0
+        view.layer.borderColor = UIColor.grayColor().CGColor
+        
+        containedViewController.tableView.separatorStyle = .None
+        containedViewController.tableView.allowsSelection = false
+        containedViewController.view.frame = view.bounds
+        
+        addViewController(containedViewController)
+        
+        if let footerView = footerView {
+            view.addSubview(footerView)
+            footerView.layer.addSublayer(footerViewBorder)
+            containedViewController.tableView.contentInset.bottom = 15
+        }
+    }
+    
+    private override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        containedViewController.view.frame = view.bounds
+        let height: CGFloat = 40.0
+        footerView?.frame = CGRect(x: 0, y: view.frame.size.height - height, width: view.frame.size.width, height: height)
+        footerViewBorder.frame = CGRect(x: 0, y: 0, width: footerView?.frame.size.width ?? 0, height: 1.0)
+    }
+}
+
+private class OverlayView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        self.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        self.userInteractionEnabled = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func showOverlayViewInView(view: UIView, animationDuration: NSTimeInterval) {
+        alpha = 0.0
+        view.addSubview(self)
+        
+        UIView.animateWithDuration(animationDuration) {
+            self.alpha = 1.0
+        }
+    }
+    
+    func removeOverlayView(animationDuration: NSTimeInterval) {
+        UIView.animateWithDuration(animationDuration, animations: {
+            self.alpha = 0.0
+        }, completion: { completed in
+            self.removeFromSuperview()
+        })
+    }
 }
 
 private class BorderGenerator {

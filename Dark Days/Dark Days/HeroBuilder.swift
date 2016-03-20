@@ -19,7 +19,7 @@ final class HeroBuilder {
     var god: God?
     
     func build() -> Hero? {
-        let inventory = Inventory(gold: 0, items: ObjectProvider.objectsForJSON("Items"))
+        let inventory = Inventory(gold: 0, items: [])
         
         var skills = [Skill]()
         if let skill = skill {
@@ -27,8 +27,10 @@ final class HeroBuilder {
         }
         
         let spells = spellsForGod(god)
-                
-        return Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: god, uniqueID: NSUUID().UUIDString)
+        let hero = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: god, uniqueID: NSUUID().UUIDString)
+        hero.currentHealth = hero.maximumHealth
+        
+        return hero
     }
         
     func increaseStatValue(value: Int, type: StatType) {

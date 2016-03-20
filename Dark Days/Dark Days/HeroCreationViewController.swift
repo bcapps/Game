@@ -11,6 +11,7 @@ import UIKit
 class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     private enum HeroCreationState: String {
+        case NameHero
         case ChooseRace
         case ChooseSkill
         case ChooseAttributes
@@ -19,27 +20,31 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
     private let heroBuilder = HeroBuilder()
 
     private var selectedStats = [Stat]()
     private var currentCreationState: HeroCreationState = .ChooseRace
+    private var heroName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         view.backgroundColor = .backgroundColor()
         
-        transitionToRaceList()
+        transitionToNameHero()
     }
     
     @IBAction func backButtonTapped(sender: AnyObject) {
         nextButton.title = "Next"
-
+        
         switch currentCreationState {
-            case .ChooseRace:
+            case .NameHero:
                 presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+            case .ChooseRace:
+                transitionToNameHero()
             case .ChooseSkill:
                 transitionToRaceList()
             case .ChooseAttributes:
@@ -59,8 +64,11 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         nextButton.enabled = false
+        backButton.title = "Back"
 
         switch currentCreationState {
+                case .NameHero:
+            transitionToRaceList()
             case .ChooseRace:
                 switch heroBuilder.race.raceType {
                     case .Human:
@@ -159,6 +167,21 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(magicTypeListViewController)
     }
     
+    private func transitionToNameHero() {
+        backButton.title = "Cancel"
+        currentCreationState = .NameHero
+        
+        guard let nameHero = UIStoryboard.nameHeroViewController() as? NameHeroViewController else { return }
+        
+        nameHero.nameFieldChanged = { name in
+            self.heroName = name
+            
+            self.nextButton.enabled = self.heroName?.isEmpty == false ?? false
+        }
+        
+        switchToViewController(nameHero)
+    }
+    
     private func transitionToRaceList() {
         currentCreationState = .ChooseRace
         
@@ -206,7 +229,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     }
     
     private func buildAndPersistHero() {
-        heroBuilder.name = "Default Name"
+        heroBuilder.name = heroName ?? "Default Name"
         
         switch heroBuilder.magicType.status {
             case .Mundane:

@@ -1,9 +1,9 @@
 [{
  "name": "Floor 1 - Salve",
  "background": "The first floor of the tower of the gods, and the start point for any adventurers seeking to challenge the gods for their title.",
- "towns": ["Town of Beginnings"]
+ "towns": ["• Town of Beginnings"]
  }, {
  "name": "Floor 2 - Makamen",
  "background": "A savage savannah, filled with wild beasts. A true wasteland bordered by harsh mountains.",
- "towns": ["Urbus", "Marome"]
+ "towns": ["• Urbus", "• Marome"]
  }]

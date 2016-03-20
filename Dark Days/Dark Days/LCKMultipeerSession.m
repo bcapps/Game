@@ -56,14 +56,14 @@
     }
 }
 
-- (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void(^)(BOOL accept))certificateHandler {
-    if ([self.delegate respondsToSelector:@selector(session:didReceiveCertificate:fromPeer:certificateHandler:)]) {
-        [self.delegate session:self didReceiveCertificate:certificate fromPeer:peerID certificateHandler:certificateHandler];
-    }
-    else if (certificateHandler) {
-        certificateHandler(YES);
-    }
-}
+//- (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void(^)(BOOL accept))certificateHandler {
+//    if ([self.delegate respondsToSelector:@selector(session:didReceiveCertificate:fromPeer:certificateHandler:)]) {
+//        [self.delegate session:self didReceiveCertificate:certificate fromPeer:peerID certificateHandler:certificateHandler];
+//    }
+//    else if (certificateHandler) {
+//        certificateHandler(YES);
+//    }
+//}
 
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
     if ([self.delegate respondsToSelector:@selector(session:peer:didChangeState:)]) {
