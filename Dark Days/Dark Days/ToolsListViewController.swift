@@ -42,17 +42,17 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         func toolViewController(delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
             case .ItemList:
-                return ListViewController<Item>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Items"))], delegate: delegate)
+                return ListViewController<Item>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Items"))], delegate: delegate)
             case .GodList:
-                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Gods"))], delegate: delegate)
+                return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Gods"))], delegate: delegate)
             case .FloorList:
-                return ListViewController<Floor>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Floors"))], delegate: delegate)
+                return ListViewController<Floor>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Floors"))], delegate: delegate)
             case .SpellList:
-                return ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Spells"))], delegate: delegate)
+                return ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate)
             case .SkillList:
-                return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Skills"))], delegate: delegate)
+                return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
-                return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Monsters"))], delegate: delegate)
+                return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
             case .Gold:
                 return nil
             }

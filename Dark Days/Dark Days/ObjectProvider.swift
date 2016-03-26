@@ -27,6 +27,10 @@ final class ObjectProvider {
         return objects
     }
     
+    static func sortedObjectsForJSON<T: Decodable where T: Nameable>(JSONName: String) -> [T] {
+        return objectsForJSON(JSONName).sort { $0.name < $1.name }
+    }
+    
     static func objectForJSON<T: Decodable>(JSONName: String) -> T? {
         let JSONDictionary = JSONDictionaryForName(JSONName)
         

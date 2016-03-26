@@ -8,7 +8,7 @@
  "name": "Basic Dagger",
  "damage": "1d4 + [DEX]",
  "effects": "",
- "flavor": "A small blade used for cutting opponents with quick strikes.",
+ "flavor": "A small blade used for cutting into opponents with quick strikes.",
  "itemSlot": "hand",
  }, {
  "name": "Basic Mace",
@@ -36,9 +36,9 @@
  "itemSlot": "hand",
  "twoHanded": true
  }, {
- "name": "Basic Mace",
+ "name": "Basic Short Sword",
  "damage": "1d4 + [STR]",
  "effects": "",
- "flavor": "A light hammer used for bludgeoning.",
+ "flavor": "A light sword used for stabbing and slashing.",
  "itemSlot": "hand"
  }]
