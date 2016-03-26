@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eNT-jL-Bs3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eNT-jL-Bs3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -39,10 +39,24 @@
                                     <action selector="textFieldChanged:" destination="eNT-jL-Bs3" eventType="editingChanged" id="4wS-fo-8qn"/>
                                 </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-gs-UUC">
+                                <rect key="frame" x="102" y="85" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <connections>
+                                    <action selector="genderSelectorChanged:" destination="eNT-jL-Bs3" eventType="primaryActionTriggered" id="GpB-8S-Kwb"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="centerX" secondItem="WnB-U1-MAs" secondAttribute="centerX" id="9JF-I5-Ser"/>
                             <constraint firstItem="1Xm-dh-Zj2" firstAttribute="top" secondItem="8dK-6q-LaX" secondAttribute="bottom" constant="10" id="XcT-Lw-m4X"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="DQ5-gs-UUC" secondAttribute="trailing" constant="10" id="Z2W-wt-Wck"/>
+                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="top" secondItem="1Xm-dh-Zj2" secondAttribute="bottom" constant="25" id="ZnB-mf-Cuv"/>
+                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WnB-U1-MAs" secondAttribute="leadingMargin" constant="10" id="pP4-Lk-Lx9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Xm-dh-Zj2" secondAttribute="trailing" constant="10" id="u8h-bi-Zdb"/>
                             <constraint firstItem="1Xm-dh-Zj2" firstAttribute="leading" secondItem="WnB-U1-MAs" secondAttribute="leadingMargin" constant="10" id="xF5-y1-Io4"/>
                         </constraints>

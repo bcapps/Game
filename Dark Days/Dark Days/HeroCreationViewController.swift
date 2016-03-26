@@ -28,6 +28,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     private var selectedStats = [Stat]()
     private var currentCreationState: HeroCreationState = .ChooseRace
     private var heroName: String?
+    private var heroGender = Gender.Male
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,11 +173,16 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         currentCreationState = .NameHero
         
         guard let nameHero = UIStoryboard.nameHeroViewController() as? NameHeroViewController else { return }
+        self.heroGender = .Male
         
         nameHero.nameFieldChanged = { name in
             self.heroName = name
             
             self.nextButton.enabled = self.heroName?.isEmpty == false ?? false
+        }
+        
+        nameHero.genderSelectionChanged = { gender in
+            self.heroGender = gender
         }
         
         switchToViewController(nameHero)
@@ -230,6 +236,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     private func buildAndPersistHero() {
         heroBuilder.name = heroName ?? "Default Name"
+        heroBuilder.gender = heroGender
         
         switch heroBuilder.magicType.status {
             case .Mundane:
