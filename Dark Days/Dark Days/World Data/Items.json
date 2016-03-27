@@ -17,12 +17,6 @@
  "flavor": "A light hammer used for bludgeoning.",
  "itemSlot": "Hand"
  }, {
- "name": "Gauntlet",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A metal glove useful for punching people. It is considered an unarmed weapon.",
- "itemSlot": "Hand"
- }, {
  "name": "Rapier",
  "damage": "1d6 + [DEX]",
  "effects": "",
@@ -43,7 +37,7 @@
  "itemSlot": "Hand"
  }, {
  "name": "Basic Longsword",
- "damage": "1d6 + [STR]",
+ "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A long sword used for stabbing.",
  "itemSlot": "Hand"
@@ -53,4 +47,10 @@
  "effects": "",
  "flavor": "Slightly worn pieces of fabric.",
  "itemSlot": "Chest"
+ }, {
+ "name": "Basic Shield",
+ "damage": "",
+ "effects": "Increases chance to avoid an attack by 1.",
+ "flavor": "A small metal shield, barely capable of fending off attacks.",
+ "itemSlot": "Hand"
  }]
