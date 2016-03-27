@@ -305,7 +305,7 @@ private extension Race {
             return [constitution, faith]
         case .Human:
             return ObjectProvider.objectsForJSON("Stats")
-        }        
+        }
     }
     
     var startingSkill: Skill? {

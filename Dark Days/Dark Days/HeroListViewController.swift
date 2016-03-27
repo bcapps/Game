@@ -32,39 +32,30 @@ final class HeroListViewController: ListViewController<Hero> {
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { action, indexPath in
-            let hero = self.objectForIndexPath(indexPath)
+            guard let hero = self.objectForIndexPath(indexPath) else { return }
             
-            if let hero = hero {
-                HeroPersistence().removeHero(hero)
-                self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
-            }
+            HeroPersistence().removeHero(hero)
+            self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
         }
         
         return [deleteAction]
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let heroVC = UIStoryboard.heroViewController()
-        
-        if let heroVC = heroVC as? HeroViewController {
-            heroVC.hero = self.objectForIndexPath(indexPath)
+        guard let heroVC = UIStoryboard.heroViewController() as? HeroViewController else { return }
+        heroVC.hero = self.objectForIndexPath(indexPath)
             
-            navigationController?.pushViewController(heroVC, animated: true)
-        }
+        navigationController?.pushViewController(heroVC, animated: true)
     }
     
     func addButtonTapped() {
-        if let heroCreationFlow = UIStoryboard.heroCreationViewController() {
-            navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
-        }
+        guard let heroCreationFlow = UIStoryboard.heroCreationViewController() else { return }
+        navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
     }
     
     func toolkitButtonTapped() {
-        let toolkitVC = UIStoryboard.toolsViewController()
-        
-        if let toolkitVC = toolkitVC {
-            navigationController?.presentViewController(toolkitVC, animated: true, completion: nil)
-        }
+        guard let toolkitVC = UIStoryboard.toolsViewController() else { return }
+        navigationController?.presentViewController(toolkitVC, animated: true, completion: nil)
     }
 }
 
