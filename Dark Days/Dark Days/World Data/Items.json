@@ -11,7 +11,7 @@
  "flavor": "A small blade used for cutting into opponents with quick strikes.",
  "itemSlot": "Hand",
  }, {
- "name": "Basic Mace",
+ "name": "Basic Hammer",
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A light hammer used for bludgeoning.",
@@ -36,10 +36,16 @@
  "itemSlot": "Hand",
  "twoHanded": true
  }, {
- "name": "Basic Short Sword",
+ "name": "Basic Shortsword",
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A light sword used for stabbing and slashing.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Basic Longsword",
+ "damage": "1d6 + [STR]",
+ "effects": "",
+ "flavor": "A long sword used for stabbing.",
  "itemSlot": "Hand"
  }, {
  "name": "Clothes",
