@@ -60,6 +60,12 @@
  "flavor": "A light piece of armor made out of animal hide.",
  "itemSlot": "Chest"
  }, {
+ "name": "Leather Boots",
+ "damage": "",
+ "effects": "Increases chance to avoid an attack by 1.",
+ "flavor": "Thin boots made out of animal hide.",
+ "itemSlot": "Boots"
+ }, {
  "name": "Faithful Robes",
  "damage": "",
  "effects": "Increases FAI by 1.",
@@ -72,9 +78,27 @@
  "flavor": "Armor fashioned from the tough hide of the Spider Queen.",
  "itemSlot": "Chest"
  }, {
+ "name": "Spider Boots",
+ "damage": "",
+ "effects": "Enables movement on non-slippery walls and ceilings.",
+ "flavor": "Boots fashions from the tough sinew of the spider queen.",
+ "itemSlot": "Boots"
+ }, {
+ "name": "Iron Helmet",
+ "damage": "",
+ "effects": "Decreases physical damage taken by 1, but redues chance to avoid an attack by 1.",
+ "flavor": "A sturdy metal helmet.",
+ "itemSlot": "Helmet"
+ }, {
  "name": "Spider Chitin",
  "damage": "",
  "effects": "",
  "flavor": "Hard shell-like material that was ripped from a spider with a tough hide.",
+ "itemSlot": ""
+ }, {
+ "name": "Gem - Topaz",
+ "damage": "",
+ "effects": "",
+ "flavor": "A valuable gem, topaz in color.",
  "itemSlot": ""
  }]
