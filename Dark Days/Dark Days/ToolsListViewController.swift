@@ -42,7 +42,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         func toolViewController(delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
             case .ItemList:
-                return ListViewController<Item>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Items"))], delegate: delegate)
+                return ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate)
             case .GodList:
                 return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Gods"))], delegate: delegate)
             case .FloorList:
