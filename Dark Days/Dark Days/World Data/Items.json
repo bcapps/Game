@@ -53,4 +53,16 @@
  "effects": "Increases chance to avoid an attack by 1.",
  "flavor": "A small metal shield, barely capable of fending off attacks.",
  "itemSlot": "Hand"
+ }, {
+ "name": "Leather Jerkin",
+ "damage": "",
+ "effects": "Decreases physical damage taken by 1.",
+ "flavor": "A light piece of armor made out of animal hide.",
+ "itemSlot": "Chest"
+ }, {
+ "name": "Faithful Robes",
+ "damage": "",
+ "effects": "Increases FAI by 1.",
+ "flavor": "Robes worn by those who have dedicated their lives to their god.",
+ "itemSlot": "Chest"
  }]
