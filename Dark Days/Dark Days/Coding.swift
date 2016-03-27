@@ -9,11 +9,11 @@
 import Foundation
 
 protocol Codeable {
-    typealias CoderType: Coder
+    associatedtype CoderType: Coder
 }
 
 protocol Coder: NSCoding {
-    typealias CodeableType = Codeable
+    associatedtype CodeableType = Codeable
     
     var value: CodeableType? { get set }
     

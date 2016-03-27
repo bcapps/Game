@@ -48,7 +48,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         view.backgroundColor = .backgroundColor()
         
         overlayView.frame = view.frame
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("dismissOverlay"))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: .dismissOverlay)
         overlayView.addGestureRecognizer(tapRecognizer)
         
         addItemSlotToEquipmentButtons()
@@ -151,7 +151,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         if item.equipped {
             button = UnequipButton(item: item)
-            button?.addTarget(self, action: Selector("unequipItem:"), forControlEvents: .TouchUpInside)
+            button?.addTarget(self, action: .unequipItem, forControlEvents: .TouchUpInside)
         }
         
         presentObjectInOverlay(item, footerView: button)
@@ -439,4 +439,9 @@ private class BorderGenerator {
         
         return border
     }
+}
+
+private extension Selector {
+    static let dismissOverlay = #selector(HeroViewController.dismissOverlay)
+    static let unequipItem = #selector(HeroViewController.unequipItem(_:))
 }

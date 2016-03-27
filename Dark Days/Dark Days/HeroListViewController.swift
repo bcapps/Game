@@ -19,9 +19,9 @@ final class HeroListViewController: ListViewController<Hero> {
         
         title = "Heroes"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addButtonTapped"))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: .addButtonTapped)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .Plain, target: self, action: Selector("toolkitButtonTapped"))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .Plain, target: self, action: .toolkitButtonTapped)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,17 +53,22 @@ final class HeroListViewController: ListViewController<Hero> {
         }
     }
     
-    internal func addButtonTapped() {
+    func addButtonTapped() {
         if let heroCreationFlow = UIStoryboard.heroCreationViewController() {
             navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
         }
     }
     
-    internal func toolkitButtonTapped() {
+    func toolkitButtonTapped() {
         let toolkitVC = UIStoryboard.toolsViewController()
         
         if let toolkitVC = toolkitVC {
             navigationController?.presentViewController(toolkitVC, animated: true, completion: nil)
         }
     }
+}
+
+private extension Selector {
+    static let addButtonTapped = #selector(HeroListViewController.addButtonTapped)
+    static let toolkitButtonTapped = #selector(HeroListViewController.toolkitButtonTapped)
 }
