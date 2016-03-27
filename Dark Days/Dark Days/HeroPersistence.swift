@@ -23,23 +23,19 @@ final class HeroPersistence {
     }
     
     func removeHero(hero: Hero) {
-        do {
-            try NSFileManager.defaultManager().removeItemAtURL(URLForHero(hero))
-        } catch {print("Hero not removed.")}
+        _ = try? NSFileManager.defaultManager().removeItemAtURL(URLForHero(hero))
     }
     
     func allPersistedHeroes() -> [Hero] {
         var heroes = [Hero]()
-
-        do {
-            let heroURLs = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(heroDirectoryURL(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0))
+        
+        guard let heroURLs = try? NSFileManager.defaultManager().contentsOfDirectoryAtURL(heroDirectoryURL(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0)) else { return [] }
+        
+        for heroURL in heroURLs {
+            guard let hero = heroForURL(heroURL) else { continue }
             
-            for heroURL in heroURLs {
-                guard let hero = heroForURL(heroURL) else { continue }
-                
-                heroes.append(hero)
-            }
-        } catch {}
+            heroes.append(hero)
+        }
         
         return heroes
     }

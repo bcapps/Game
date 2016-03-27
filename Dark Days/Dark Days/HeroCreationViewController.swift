@@ -282,11 +282,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
 
 private extension God {
     static var startingGods: [God] {
-        let optionalKazu = ObjectProvider.godForName("Kazu, God of Deceit")
-        let optionalDolo = ObjectProvider.godForName("Dolo, God of Agony")
-        let optionalShiro = ObjectProvider.godForName("Shiro, God of Hope")
-        
-        guard let kazu = optionalKazu, dolo = optionalDolo, shiro = optionalShiro else { return [] }
+        guard let kazu = ObjectProvider.godForName("Kazu, God of Deceit") else { return [] }
+        guard let dolo = ObjectProvider.godForName("Dolo, God of Agony") else { return [] }
+        guard let shiro = ObjectProvider.godForName("Shiro, God of Hope") else { return [] }
         
         return [kazu, dolo, shiro]
     }
@@ -296,24 +294,18 @@ private extension Race {
     var startingStats: [Stat] {
         switch raceType {
         case .Elf:
-            let dexterity = ObjectProvider.statForName("Dexterity")
-            let intelligence = ObjectProvider.statForName("Intelligence")
+            guard let dexterity = ObjectProvider.statForName("Dexterity") else { return [] }
+            guard let intelligence = ObjectProvider.statForName("Intelligence") else { return [] }
             
-            if let dexterity = dexterity, intelligence = intelligence {
-                return [dexterity, intelligence]
-            }
+            return [dexterity, intelligence]
         case .Dwarf:
-            let constitution = ObjectProvider.statForName("Constitution")
-            let faith = ObjectProvider.statForName("Faith")
+            guard let constitution = ObjectProvider.statForName("Constitution") else { return [] }
+            guard let faith = ObjectProvider.statForName("Faith") else { return [] }
             
-            if let constitution = constitution, faith = faith {
-                return [constitution, faith]
-            }
+            return [constitution, faith]
         case .Human:
             return ObjectProvider.objectsForJSON("Stats")
-        }
-        
-        return []
+        }        
     }
     
     var startingSkill: Skill? {
