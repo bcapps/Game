@@ -257,9 +257,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             }
         }
         
-        if let hero = heroBuilder.build() {
-            HeroPersistence().persistHero(hero)
-        }
+        guard let hero = heroBuilder.build() else { return }
+        
+        HeroPersistence().persistHero(hero)
     }
     
     private func listEdgeInsets() -> UIEdgeInsets {

@@ -53,31 +53,25 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let object = dataSource?.objectForIndexPath(indexPath)
+        guard let object = dataSource?.objectForIndexPath(indexPath) else { return nil }
         
-        if let object = object, listDelegate = listDelegate {
-            if listDelegate.canSelectObject(self, object: object) == false {
-                return nil
-            }
+        if listDelegate?.canSelectObject(self, object: object) == false {
+            return nil
         }
         
         return indexPath
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.objectForIndexPath(indexPath)
+        guard let object = dataSource?.objectForIndexPath(indexPath) else { return }
         
-        if let object = object {
-            listDelegate?.didSelectObject(self, object: object)
-        }
+        listDelegate?.didSelectObject(self, object: object)
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let object = dataSource?.objectForIndexPath(indexPath)
+        guard let object = dataSource?.objectForIndexPath(indexPath) else { return }
         
-        if let object = object {
-            listDelegate?.didDeselectObject(self, object: object)
-        }
+        listDelegate?.didDeselectObject(self, object: object)
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

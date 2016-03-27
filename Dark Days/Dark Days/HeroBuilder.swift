@@ -46,35 +46,29 @@ final class HeroBuilder {
     private func spellsForGod(god: God?) -> [Spell] {
         var spells = [Spell]()
         
-        if let name = god?.name {
-            switch name {
-            case "Shiro, God of Hope":
-                let reflect = ObjectProvider.spellForName("Reflect")
-                let ray = ObjectProvider.spellForName("Ray of Light")
-                let inspire = ObjectProvider.spellForName("Inspire")
-
-                if let reflect = reflect, ray = ray, inspire = inspire {
-                    spells.appendContentsOf([reflect, ray, inspire])
-                }
-            case "Dolo, God of Agony":
-                let bond = ObjectProvider.spellForName("Agonizing Bond")
-                let fiendfyre = ObjectProvider.spellForName("Fiendfyre")
-                let thornbind = ObjectProvider.spellForName("Thorn Bind")
-
-                if let bond = bond, fiendfyre = fiendfyre, thornbind = thornbind {
-                    spells.appendContentsOf([bond, fiendfyre, thornbind])
-                }
-            case "Kazu, God of Deceit":
-                let blind = ObjectProvider.spellForName("Blind")
-                let stalker = ObjectProvider.spellForName("Shadow Stalker")
-                let paranoia = ObjectProvider.spellForName("Paranoia")
-
-                if let blind = blind, stalker = stalker, paranoia = paranoia {
-                    spells.appendContentsOf([blind, stalker, paranoia])
-                }
-            default:
-                print("Bad God?")
-            }
+        guard let name = god?.name else { return [] }
+        
+        switch name {
+        case "Shiro, God of Hope":
+            guard let reflect = ObjectProvider.spellForName("Reflect") else { return [] }
+            guard let ray = ObjectProvider.spellForName("Ray of Light") else { return [] }
+            guard let inspire = ObjectProvider.spellForName("Inspire") else { return [] }
+            
+            spells.appendContentsOf([reflect, ray, inspire])
+        case "Dolo, God of Agony":
+            guard let bond = ObjectProvider.spellForName("Agonizing Bond") else { return [] }
+            guard let fiendfyre = ObjectProvider.spellForName("Fiendfyre") else { return [] }
+            guard let thornbind = ObjectProvider.spellForName("Thorn Bind") else { return [] }
+            
+            spells.appendContentsOf([bond, fiendfyre, thornbind])
+        case "Kazu, God of Deceit":
+            guard let blind = ObjectProvider.spellForName("Blind") else { return [] }
+            guard let stalker = ObjectProvider.spellForName("Shadow Stalker") else { return [] }
+            guard let paranoia = ObjectProvider.spellForName("Paranoia") else { return [] }
+            
+            spells.appendContentsOf([blind, stalker, paranoia])
+        default:
+            print("Bad God?")
         }
         
         return spells

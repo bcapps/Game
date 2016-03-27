@@ -119,9 +119,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
         
         for item in equippedItems {
-            if let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot) {
-                equipmentButton.item = item
-            }
+            guard let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot) else { continue }
+            
+            equipmentButton.item = item
         }
     }
     
@@ -233,12 +233,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func dismissOverlay() {
-        if let presentedController = presentedOverlayController {
-            overlayView.removeOverlayView(animationDuration)
-            
-            replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
-            presentedOverlayController = nil
-        }
+        guard let presentedController = presentedOverlayController else { return }
+        
+        overlayView.removeOverlayView(animationDuration)
+        
+        replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
+        presentedOverlayController = nil
     }
     
     func unequipItem(button: UnequipButton) {
