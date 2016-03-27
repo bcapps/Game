@@ -3,42 +3,42 @@
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A small axe. It looks sharp.",
- "itemSlot": "hand",
+ "itemSlot": "Hand",
  }, {
  "name": "Basic Dagger",
  "damage": "1d4 + [DEX]",
  "effects": "",
  "flavor": "A small blade used for cutting into opponents with quick strikes.",
- "itemSlot": "hand",
+ "itemSlot": "Hand",
  }, {
  "name": "Basic Mace",
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A light hammer used for bludgeoning.",
- "itemSlot": "hand"
+ "itemSlot": "Hand"
  }, {
  "name": "Gauntlet",
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A metal glove useful for punching people. It is considered an unarmed weapon.",
- "itemSlot": "hand"
+ "itemSlot": "Hand"
  }, {
  "name": "Rapier",
  "damage": "1d6 + [DEX]",
  "effects": "",
  "flavor": "A thin blade suited for lunging attacks.",
- "itemSlot": "hand"
+ "itemSlot": "Hand"
  }, {
  "name": "Basic Spear",
  "damage": "1d8 + [STR]",
  "effects": "",
  "flavor": "A long spear used for stabbing enemies.",
- "itemSlot": "hand",
+ "itemSlot": "Hand",
  "twoHanded": true
  }, {
  "name": "Basic Short Sword",
  "damage": "1d4 + [STR]",
  "effects": "",
  "flavor": "A light sword used for stabbing and slashing.",
- "itemSlot": "hand"
+ "itemSlot": "Hand"
  }]

@@ -23,7 +23,7 @@ class ItemCodingTests: XCTestCase {
         XCTAssertEqual(unarchivedItem?.damage, "1d4 + [STR]")
         XCTAssertEqual(unarchivedItem?.effects, "")
         XCTAssertEqual(unarchivedItem?.flavor, "A light hammer used for bludgeoning.")
-        XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.itemSlotForItemString("hand"))
+        XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.Hand)
         XCTAssertEqual(unarchivedItem?.twoHanded, false)
         XCTAssertEqual(unarchivedItem?.equipped, false)
     }

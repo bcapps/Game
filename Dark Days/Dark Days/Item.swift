@@ -16,24 +16,7 @@ enum ItemSlot: String {
     case Boots = "Boots"
     case Accessory = "Accessory"
     case Hand = "Hand"
-    
-    static func itemSlotForItemString(itemString: String) -> ItemSlot {
-        switch itemString {
-        case "helmet":
-            return .Helmet
-        case "chest":
-            return .Chest
-        case "boots":
-            return .Boots
-        case "accessory":
-            return .Accessory
-        case "hand":
-            return .Hand
-        default:
-            return .None
-        }
-    }
-    
+        
     var imageForItemSlot: UIImage? {
         get {
             return UIImage(named: self.rawValue)
@@ -63,7 +46,7 @@ final class Item: Decodable, Nameable, Codeable {
             damage: json => "damage",
             effects: json => "effects",
             flavor: json => "flavor",
-            itemSlot: ItemSlot.itemSlotForItemString(json => "itemSlot"),
+            itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: twoHanded)
     }
     
