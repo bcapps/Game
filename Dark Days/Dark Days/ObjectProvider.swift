@@ -21,12 +21,6 @@ final class ObjectProvider {
         return objectsForJSON(JSONName).sortedElementsByName
     }
     
-    static func objectForJSON<T: Decodable>(JSONName: String) -> T? {
-        guard let JSONDictionary = JSONDictionaryForName(JSONName) else { return nil }
-        
-        return try? T.decode(JSONDictionary)
-    }
-    
     static func statForName(name: String) -> Stat? {
         return objectForJSONForName("Stats", objectName: name)
     }
