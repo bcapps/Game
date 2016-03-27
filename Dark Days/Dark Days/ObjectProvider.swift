@@ -12,19 +12,9 @@ import Decodable
 final class ObjectProvider {
     
     static func objectsForJSON<T: Decodable>(JSONName: String) -> [T] {
-        let JSONArray = JSONArrayForName(JSONName)
+        guard let JSONArray = JSONArrayForName(JSONName) else { return [T]() }
         
-        var objects = [T]()
-        
-        if let JSONArray = JSONArray {
-            for JSONDictionary in JSONArray {
-                if let decodedObject: T = decodedObjectForJSONDictionary(JSONDictionary) {
-                    objects.append(decodedObject)
-                }
-            }
-        }
-        
-        return objects
+        return JSONArray.flatMap { return try? T.decode($0)}
     }
     
     static func sortedObjectsForJSON<T: Decodable where T: Nameable>(JSONName: String) -> [T] {
@@ -32,13 +22,9 @@ final class ObjectProvider {
     }
     
     static func objectForJSON<T: Decodable>(JSONName: String) -> T? {
-        let JSONDictionary = JSONDictionaryForName(JSONName)
+        guard let JSONDictionary = JSONDictionaryForName(JSONName) else { return nil }
         
-        if let JSONDictionary = JSONDictionary {
-            return decodedObjectForJSONDictionary(JSONDictionary)
-        }
-        
-        return nil
+        return try? T.decode(JSONDictionary)
     }
     
     static func statForName(name: String) -> Stat? {
@@ -83,33 +69,18 @@ final class ObjectProvider {
         return objects.filter({$0.name == objectName}).first
     }
     
-    private static func decodedObjectForJSONDictionary<T: Decodable>(JSONDictionary: [String: AnyObject]) -> T? {
-        do {
-            return try T.decode(JSONDictionary)
-        } catch {}
-        
-        return nil
-    }
-    
     private static func JSONArrayForName(JSONName: String) -> [[String: AnyObject]]? {
-        return JSONObjectForName(JSONName)
+        return JSONObjectForName(JSONName) ?? []
     }
     
     private static func JSONDictionaryForName(JSONName: String) -> [String: AnyObject]? {
-        return JSONObjectForName(JSONName)
+        return JSONObjectForName(JSONName) ?? [String: AnyObject]()
     }
     
-    private static func JSONObjectForName<T>(JSONName: String) -> T? {
-        if let path = NSBundle.mainBundle().pathForResource(JSONName, ofType: "json") {
-            if let jsonData = NSData(contentsOfFile: path) {
-                do {
-                    return try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as? T
-                } catch {}
-                
-                return nil
-            }
-        }
+    private static func JSONObjectForName<T>(JSONName: String) -> T?? {
+        guard let path = NSBundle.mainBundle().pathForResource(JSONName, ofType: "json") else { return nil }
+        guard let jsonData = NSData(contentsOfFile: path) else { return nil }
         
-        return nil
+        return try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as? T
     }
 }
