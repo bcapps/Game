@@ -41,11 +41,11 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         tableView.registerNib(InfoCell.nib, aClass: InfoCell.self, type: .Cell)
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.keyboardDismissMode = .Interactive
+
+        reloadDataSource()
         
         tableView.customize()
-        tableView.keyboardDismissMode = .Interactive
-        
-        reloadDataSource()
     }
     
     func objectForIndexPath(indexPath: NSIndexPath) -> T? {
@@ -81,28 +81,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let containingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 44))
-        containingView.backgroundColor = .backgroundColor()
+        guard let text = self.dataSource?.sectionForIndex(section).sectionTitle else { return nil }
         
-        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
-        let label = UILabel(frame: labelFrame)
-        
-        if let text = self.dataSource?.tableView(tableView, titleForHeaderInSection: section) {
-            label.attributedText = NSAttributedString.attributedStringWithHeadingAttributes(text)
-            label.textAlignment = .Center
-        }
-        
-        let separatorFrame = CGRect(x: 0, y: CGRectGetHeight(containingView.frame) - 1, width: CGRectGetWidth(containingView.frame), height: 1)
-        let separatorView = UIView(frame: separatorFrame)
-        separatorView.backgroundColor = .grayColor()
-        
-        containingView.addSubview(label)
-        containingView.addSubview(separatorView)
-        
-        return containingView
+        return ListHeaderView.headerViewWithText(text, width: tableView.frame.size.width)
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {        
         let sectionTitle = sections[section].sectionTitle ?? ""
         
         return sectionTitle.isNotEmpty ? 44 : 0
@@ -120,5 +104,27 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
                 
         tableView.dataSource = dataSource
         tableView.reloadData()
+    }
+}
+
+private class ListHeaderView: UITableViewHeaderFooterView {
+    static func headerViewWithText(text: String, width: CGFloat) -> UITableViewHeaderFooterView {
+        let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 44))
+        containingView.contentView.backgroundColor = .backgroundColor()
+        
+        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let label = UILabel(frame: labelFrame)
+        
+        label.attributedText = NSAttributedString.attributedStringWithHeadingAttributes(text)
+        label.textAlignment = .Center
+        
+        let separatorFrame = CGRect(x: 0, y: CGRectGetHeight(containingView.frame) - 1, width: CGRectGetWidth(containingView.frame), height: 1)
+        let separatorView = UIView(frame: separatorFrame)
+        separatorView.backgroundColor = .grayColor()
+        
+        containingView.addSubview(label)
+        containingView.addSubview(separatorView)
+        
+        return containingView
     }
 }
