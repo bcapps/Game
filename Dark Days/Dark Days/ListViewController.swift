@@ -104,20 +104,15 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
 private class ListHeaderView: UITableViewHeaderFooterView {
     static func headerViewWithText(text: String, width: CGFloat) -> UITableViewHeaderFooterView {
         let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 44))
-        containingView.contentView.backgroundColor = .backgroundColor()
+        containingView.contentView.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
-        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let labelFrame = CGRect(x: 0, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
         let label = UILabel(frame: labelFrame)
         
         label.attributedText = NSAttributedString.attributedStringWithHeadingAttributes(text)
         label.textAlignment = .Center
         
-        let separatorFrame = CGRect(x: 0, y: CGRectGetHeight(containingView.frame) - 1, width: CGRectGetWidth(containingView.frame), height: 1)
-        let separatorView = UIView(frame: separatorFrame)
-        separatorView.backgroundColor = .grayColor()
-        
         containingView.addSubview(label)
-        containingView.addSubview(separatorView)
         
         return containingView
     }
