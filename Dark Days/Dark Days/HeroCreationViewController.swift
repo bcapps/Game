@@ -178,7 +178,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         nameHero.nameFieldChanged = { name in
             self.heroName = name
             
-            self.nextButton.enabled = self.heroName?.isEmpty == false ?? false
+            self.nextButton.enabled = self.heroName?.isNotEmpty ?? false
         }
         
         nameHero.genderSelectionChanged = { gender in

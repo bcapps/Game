@@ -81,7 +81,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let containingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 35))
+        let containingView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 44))
         containingView.backgroundColor = .backgroundColor()
         
         let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
@@ -100,6 +100,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         containingView.addSubview(separatorView)
         
         return containingView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let sectionTitle = sections[section].sectionTitle ?? ""
+        
+        return sectionTitle.isNotEmpty ? 44 : 0
     }
     
     private func reloadDataSource() {

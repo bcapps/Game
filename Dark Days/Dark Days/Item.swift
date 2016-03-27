@@ -52,6 +52,8 @@ enum ItemSlot: String {
             }
         }
     }
+    
+    static let allValues = [Accessory, Boots, Chest, Hand, Helmet, None]
 }
 
 final class Item: Decodable, Nameable, Codeable {

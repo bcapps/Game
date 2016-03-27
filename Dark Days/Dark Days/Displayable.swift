@@ -59,7 +59,7 @@ extension MagicType: ListDisplayingGeneratable {
 extension Spell: ListDisplayingGeneratable {
     static func displayable(spell: Spell) -> ListDisplayable {
         var damage = spell.damage
-        if damage.isEmpty == false {
+        if damage.isNotEmpty {
             damage = "Damage: " + spell.damage
         }
         

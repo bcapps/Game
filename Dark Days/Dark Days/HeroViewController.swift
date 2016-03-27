@@ -160,7 +160,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
         
-        showList(items, title: "Inventory")
+        var sections = [SectionList<Item>]()
+        
+        for slot in ItemSlot.allValues {
+            sections.append(SectionList(sectionTitle: nil, objects: items.filter { $0.itemSlot == slot }))
+        }
+        
+        showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: true)        
     }
     
     private func presentItemList(itemSlot: ItemSlot) {
@@ -188,10 +194,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    private func showList<T: ListDisplayingGeneratable>(objects: [T], title: String, allowsSelection: Bool = false) {
+    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false) {
+        let sortedObjects = objects.sort { $0.name < $1.name }
         
-        let section = SectionList(sectionTitle: nil, objects: objects)
-        let list = ListViewController<T>(sections: [section], delegate: self)
+        let section = SectionList<T>(sectionTitle: nil, objects: sortedObjects)
+        
+        showListWithSections([section], title: title, allowsSelection: allowsSelection)
+    }
+    
+    private func showListWithSections<T: ListDisplayingGeneratable where T: Nameable>(sections: [SectionList<T>], title: String, allowsSelection: Bool = false) {
+        let list = ListViewController<T>(sections: sections, delegate: self)
         list.title = title
         list.tableView.allowsSelection = allowsSelection
         
@@ -227,7 +239,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
-    private func unequipItem(button: UnequipButton) {
+    func unequipItem(button: UnequipButton) {
         button.item.equipped = false
         updateEquippedItems()
         

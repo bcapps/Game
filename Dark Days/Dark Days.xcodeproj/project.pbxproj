@@ -215,6 +215,12 @@
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
+		F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
+		F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
+		F2A6482D1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
+		F2C7EAFE1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
+		F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
+		F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -343,6 +349,8 @@
 		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
+		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -501,6 +509,8 @@
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
 				C394058D1C7CAE2B00EBFD07 /* Support */,
 				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
+				F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */,
+				F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */,
 				C39ACBED1C9C9D3E004C5A6B /* ViewExtensions.swift */,
 				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
@@ -1012,6 +1022,7 @@
 			files = (
 				F25187681C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
+				F2C7EAFE1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
@@ -1052,6 +1063,7 @@
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
+				F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
@@ -1082,6 +1094,7 @@
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
 				F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */,
@@ -1096,6 +1109,7 @@
 				F25187B51C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876C1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F25187A01C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
+				F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
 				F25187721C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B921C8231FD00D6E18E /* MagicType.swift in Sources */,
 				F25187BA1C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
@@ -1154,6 +1168,7 @@
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */,
+				F2A6482D1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				F251877A1C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
@@ -1170,6 +1185,7 @@
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
+				F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
 				F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */,
 				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
