@@ -36,20 +36,7 @@ enum ItemSlot: String {
     
     var imageForItemSlot: UIImage? {
         get {
-            switch self {
-                case .Helmet:
-                    return UIImage(named: "Helmet")
-                case .Accessory:
-                    return UIImage(named: "Accessory")
-                case .Chest:
-                    return UIImage(named: "Chest")
-                case .Hand:
-                    return UIImage(named: "Hand")
-                case .Boots:
-                    return UIImage(named: "Boots")
-                case .None:
-                    return nil
-            }
+            return UIImage(named: self.rawValue)
         }
     }
     
