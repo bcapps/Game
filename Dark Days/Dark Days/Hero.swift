@@ -100,12 +100,7 @@ final class HeroCoder: NSObject, Coder {
         let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? MagicTypeCoder
         let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GodCoder
         
-        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, spells = rawSpells?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else {
-            value = nil
-            super.init()
-            
-            return nil
-        }
+        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, spells = rawSpells?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else { return nil }
         
         value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
         value?.currentHealth = aDecoder.decodeIntegerForKey(Keys.CurrentHealth.rawValue) ?? 0

@@ -40,12 +40,7 @@ final class SkillCoder: NSObject, Coder {
     init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
         
-        guard let name = rawName else {
-            value = nil
-            super.init()
-            
-            return nil
-        }
+        guard let name = rawName else { return nil }
         
         value = ObjectProvider.skillForName(name)
         

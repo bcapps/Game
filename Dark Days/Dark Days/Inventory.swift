@@ -44,12 +44,7 @@ final class InventoryCoder: NSObject, Coder {
         let rawItemCoders = aDecoder.decodeObjectForKey(Keys.Items.rawValue) as? [ItemCoder]
         let rawItems = rawItemCoders?.objects
         
-        guard let items = rawItems else {
-            value = nil
-            super.init()
-            
-            return nil
-        }
+        guard let items = rawItems else { return nil }
         
         value = Inventory(gold: gold, items: items)
         

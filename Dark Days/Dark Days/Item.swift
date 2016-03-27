@@ -79,12 +79,7 @@ final class ItemCoder: NSObject, Coder {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
         let equipped = aDecoder.decodeBoolForKey(Keys.Equipped.rawValue)
         
-        guard let name = rawName else {
-            value = nil
-            super.init()
-            
-            return nil
-        }
+        guard let name = rawName else { return nil }
         
         value = ObjectProvider.itemForName(name)
         value?.equipped = equipped

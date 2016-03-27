@@ -85,12 +85,7 @@ final class StatCoder: NSObject, Coder {
     init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
         
-        guard let name = rawName else {
-            value = nil
-            
-            super.init()
-            return nil
-        }
+        guard let name = rawName else { return nil }
         
         let stat = ObjectProvider.statForName(name)
         stat?.currentValue = aDecoder.decodeIntegerForKey(Keys.CurrentValue.rawValue)

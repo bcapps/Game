@@ -38,9 +38,7 @@ extension LCKMultipeer {
     }
     
     private func sendObjectToPeer(object: AnyObject, type: MessageType, peer: MCPeerID) -> Bool {
-        let dictionary = [MessageValueKey: object]
-        
-        guard let data = try? NSJSONSerialization.dataWithJSONObject(dictionary, options: .PrettyPrinted) else {
+        guard let data = try? NSJSONSerialization.dataWithJSONObject([MessageValueKey: object], options: .PrettyPrinted) else {
             return false
         }
         
