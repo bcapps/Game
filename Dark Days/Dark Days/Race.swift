@@ -42,9 +42,9 @@ extension Race {
             return .Human
         }
     }
-
-    var image: UIImage {
-        return UIImage(named: name) ?? UIImage()
+    
+    func imageForGender(gender: Gender) -> UIImage {
+        return UIImage(named: name + gender.rawValue) ?? UIImage()
     }
 }
 

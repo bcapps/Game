@@ -22,13 +22,13 @@ extension Hero: ListDisplayingGeneratable {
         
         let information = object.gender.rawValue + " " + object.race.name
         
-        return ListDisplayable(title: object.name, information: information, additionalInfoTitle: nil, additionalInfo: nil, subtext: subtext, image: object.race.image)
+        return ListDisplayable(title: object.name, information: information, additionalInfoTitle: nil, additionalInfo: nil, subtext: subtext, image: object.race.imageForGender(object.gender))
     }
 }
 
 extension Race: ListDisplayingGeneratable {
     static func displayable(race: Race) -> ListDisplayable {
-        return ListDisplayable(title: race.name, information: race.explanation, additionalInfoTitle: "Benefits", additionalInfo: race.benefits.joinWithSeparator("\n"), subtext: nil, image: race.image)
+        return ListDisplayable(title: race.name, information: race.explanation, additionalInfoTitle: "Benefits", additionalInfo: race.benefits.joinWithSeparator("\n"), subtext: nil, image: race.imageForGender(.Male))
     }
 }
 
