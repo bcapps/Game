@@ -94,13 +94,7 @@ struct ListDisplayable {
     let image: UIImage?
     
     static func displayableObjects<T: ListDisplayingGeneratable>(objects: [T]) -> [ListDisplayable] {
-        var displayableObjects = [ListDisplayable]()
-        
-        for object in objects {
-            displayableObjects.append(T.displayable(object))
-        }
-        
-        return displayableObjects
+        return objects.map { return T.displayable($0) }
     }
     
     static func displayableObject<T: ListDisplayingGeneratable>(object: T) -> ListDisplayable {
