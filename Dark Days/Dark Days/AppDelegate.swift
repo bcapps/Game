@@ -17,11 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.tintColor = UIColor.whiteColor()
         
-        if let navigationController = window?.rootViewController as? UINavigationController {
-            let heroListViewController = HeroListViewController(sections: [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)], delegate: nil)
-            
-            navigationController.pushViewController(heroListViewController, animated: false)
-        }
+        guard let navigationController = window?.rootViewController as? UINavigationController else { return false }
+        
+        let heroListViewController = HeroListViewController(sections: [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)], delegate: nil)
+        navigationController.pushViewController(heroListViewController, animated: false)
         
         return true
     }
