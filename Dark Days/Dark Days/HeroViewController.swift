@@ -194,10 +194,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false) {
-        let sortedObjects = objects.sort { $0.name < $1.name }
-        
-        let section = SectionList<T>(sectionTitle: nil, objects: sortedObjects)
+    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false) {        
+        let section = SectionList<T>(sectionTitle: nil, objects: objects.sortedElementsByName)
         
         showListWithSections([section], title: title, allowsSelection: allowsSelection)
     }

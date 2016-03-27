@@ -27,7 +27,7 @@ final class HeroListViewController: ListViewController<Hero> {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes())]
+        sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -36,7 +36,7 @@ final class HeroListViewController: ListViewController<Hero> {
             
             if let hero = hero {
                 HeroPersistence().removeHero(hero)
-                self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes())]
+                self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
             }
         }
         

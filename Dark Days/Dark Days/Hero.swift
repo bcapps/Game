@@ -13,7 +13,7 @@ enum Gender: String {
     case Male
 }
 
-final class Hero: Codeable {
+final class Hero: Codeable, Nameable {
     typealias CoderType = HeroCoder
     
     let name: String

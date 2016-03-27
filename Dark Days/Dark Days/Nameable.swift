@@ -11,3 +11,9 @@ import Foundation
 protocol Nameable {
     var name: String { get }
 }
+
+extension CollectionType where Generator.Element: Nameable {
+    var sortedElementsByName: [Generator.Element] {
+        return sort { $0.name < $1.name }
+    }
+}
