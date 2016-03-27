@@ -69,7 +69,7 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let peerID = peers[indexPath.row]
-
+        
         if let item = objectToSend as? Item {
             multipeer.sendItemToPeer(item, peer: peerID)
         } else if let skill = objectToSend as? Skill {

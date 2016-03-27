@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListViewControllerDelegate {
+protocol ListViewControllerDelegate: class {
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool
@@ -32,7 +32,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     
     var imageContentInset: UIEdgeInsets?
     
-    private var listDelegate: ListViewControllerDelegate?
+    private weak var listDelegate: ListViewControllerDelegate?
     private var dataSource: ListDataSource<T, InfoCell>?
     
     override func viewDidLoad() {
