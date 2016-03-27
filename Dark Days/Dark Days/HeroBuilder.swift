@@ -21,6 +21,11 @@ final class HeroBuilder {
     func build() -> Hero? {
         let inventory = Inventory(gold: 0, items: [])
         
+        if let startingItem = ObjectProvider.itemForName("Clothes") {
+            startingItem.equipped = true
+            inventory.items.append(startingItem)
+        }
+        
         var skills = [Skill]()
         if let skill = skill {
             skills.append(skill)

@@ -41,4 +41,10 @@
  "effects": "",
  "flavor": "A light sword used for stabbing and slashing.",
  "itemSlot": "Hand"
+ }, {
+ "name": "Clothes",
+ "damage": "",
+ "effects": "",
+ "flavor": "Slightly worn pieces of fabric.",
+ "itemSlot": "Chest"
  }]

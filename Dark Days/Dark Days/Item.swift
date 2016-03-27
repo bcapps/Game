@@ -16,7 +16,7 @@ enum ItemSlot: String {
     case Boots = "Boots"
     case Accessory = "Accessory"
     case Hand = "Hand"
-        
+    
     var imageForItemSlot: UIImage? {
         get {
             return UIImage(named: self.rawValue)
