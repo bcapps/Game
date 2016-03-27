@@ -65,4 +65,16 @@
  "effects": "Increases FAI by 1.",
  "flavor": "Robes worn by those who have dedicated their lives to their god.",
  "itemSlot": "Chest"
+ }, {
+ "name": "Spider Armor",
+ "damage": "",
+ "effects": "Decrease physical damage taken by 2, and increases resistance to poison by 3.",
+ "flavor": "Armor fashioned from the tough hide of the Spider Queen.",
+ "itemSlot": "Chest"
+ }, {
+ "name": "Spider Chitin",
+ "damage": "",
+ "effects": "",
+ "flavor": "Hard shell-like material that was ripped from a spider with a tough hide.",
+ "itemSlot": ""
  }]

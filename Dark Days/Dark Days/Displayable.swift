@@ -130,11 +130,13 @@ extension ListDisplayable {
                 let additionalInfo = NSAttributedString.attributedStringWithBodyAttributes(additionalInfo)
                 
                 attributedString.appendAttributedString(additionalInfo)
+                
+                if let subtext = subtext where !subtext.isEmpty {
+                    attributedString.appendAttributedString(NSAttributedString(string: "\n"))
+                }
             }
             
             if let subtext = subtext where !subtext.isEmpty {
-                attributedString.appendAttributedString(NSAttributedString(string: "\n"))
-                
                 let subtext = NSAttributedString.attributedStringWithSmallAttributes(subtext)
                 attributedString.appendAttributedString(subtext)
             }
