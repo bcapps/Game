@@ -75,7 +75,9 @@ extension God: ListDisplayingGeneratable {
 
 extension Monster: ListDisplayingGeneratable {
     static func displayable(monster: Monster) -> ListDisplayable {
-        return ListDisplayable(title: monster.name, information: monster.explanation, additionalInfoTitle: String(monster.health), additionalInfo: nil, subtext: nil, image: UIImage(named: monster.name))
+        let monsterAttackDescriptions = monster.attacks.map { return $0.name + ": " + $0.damage }
+        
+        return ListDisplayable(title: monster.name + " " + "(\(monster.health))", information: nil, additionalInfoTitle: nil, additionalInfo: monsterAttackDescriptions.joinWithSeparator("\n"), subtext: monster.explanation, image: UIImage(named: monster.name))
     }
 }
 

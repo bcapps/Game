@@ -1,9 +1,14 @@
 [{
- "name": "Zombie",
- "explanation": "A shambling creature. Fears the light.",
- "health": 10
+ "name": "Spider",
+ "explanation": "A skittering arthropod with hairy mandibles.",
+ "health": 10,
+ "attacks": [{"name": "Bite", "damage": "1d4", "weight": 80},
+             {"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 20}]
  }, {
- "name": "Ninja",
- "explanation": "A silent rogue that prowls during the night.",
- "health": 20
+ "name": "Spider Queen",
+ "explanation": "A humongous arthropod with massive legs and a tremendous abdomen.",
+ "health": 30,
+ "attacks": [{"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 60},
+             {"name": "Trample", "damage": "1d4 Large AOE", "weight": 30},
+             {"name": "Poison Spit", "damage": "1d4 poison + 1d4 poison next turn Large AOE", "weight": 10}]
  }]

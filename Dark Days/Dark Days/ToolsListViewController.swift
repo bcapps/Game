@@ -120,13 +120,9 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         navigationController?.pushViewController(peersViewController, animated: true)
     }
     
-    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        
-        if object is Item || object is Skill || object is Spell {
-            return true
-        }
-        
-        return false
+        return object is Item || object is Skill || object is Spell
     }
+    
+    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
 }

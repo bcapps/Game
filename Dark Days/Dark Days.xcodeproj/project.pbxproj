@@ -212,6 +212,9 @@
 		F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
+		F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
+		F26C01E11CAE239100907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
+		F26C01E21CAE239200907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -348,6 +351,7 @@
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
 		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
+		F26C01DF1CAE238E00907164 /* MonsterAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttack.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -657,6 +661,7 @@
 			children = (
 				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
 				F2350AFA1C7ADA6800D6E18E /* Monster.swift */,
+				F26C01DF1CAE238E00907164 /* MonsterAttack.swift */,
 			);
 			name = Monsters;
 			sourceTree = "<group>";
@@ -1026,6 +1031,7 @@
 				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
+				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
@@ -1098,6 +1104,7 @@
 				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
 				F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */,
+				F26C01E21CAE239200907164 /* MonsterAttack.swift in Sources */,
 				F25187B71C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
@@ -1174,6 +1181,7 @@
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
 				F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */,
 				C3BC40491C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */,
+				F26C01E11CAE239100907164 /* MonsterAttack.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
