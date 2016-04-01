@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 final class ToolsListViewController: UITableViewController, ListViewControllerDelegate {
     let multipeer = LCKMultipeer(multipeerUserType: .Host, peerName: "DM", serviceName: "DarkDays")
@@ -121,7 +122,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             navigationController?.pushViewController(peersViewController, animated: true)
         }
         else if let monster = object as? Monster {
+            let random = GKShuffledDistribution(forDieWithSideCount: 100).nextInt()
+            let attack = monster.attackForNumber(random)
             
+            print(attack)
         }
     }
     

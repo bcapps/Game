@@ -21,4 +21,19 @@ struct Monster: Decodable, Nameable {
             health: json => "health",
             attacks: json => "attacks")
     }
+    
+    func attackForNumber(number: Int) -> MonsterAttack? {
+        var totalAttackWeight = 0
+        
+        for attack in attacks {
+            totalAttackWeight += attack.attackWeight
+
+            if number < totalAttackWeight {
+                print(number)
+                return attack
+            }
+        }
+        
+        return nil
+    }
 }
