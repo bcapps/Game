@@ -114,14 +114,19 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     // MARK: ListViewControllerDelegate
     
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
-        let peersViewController = PeerListViewController(multipeerManager: multipeer)
-        peersViewController.objectToSend = object as Any
-        
-        navigationController?.pushViewController(peersViewController, animated: true)
+        if object is Item || object is Skill || object is Spell {
+            let peersViewController = PeerListViewController(multipeerManager: multipeer)
+            peersViewController.objectToSend = object as Any
+            
+            navigationController?.pushViewController(peersViewController, animated: true)
+        }
+        else if let monster = object as? Monster {
+            
+        }
     }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        return object is Item || object is Skill || object is Spell
+        return object is Item || object is Skill || object is Spell || object is Monster
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
