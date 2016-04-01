@@ -18,15 +18,6 @@ final class InfoCell: UITableViewCell {
         }
     }
     
-    var nameText: String? {
-        set {
-            infoNameLabel.text = newValue
-        }
-        get {
-            return infoNameLabel.text
-        }
-    }
-    
     var infoAttributedText: NSAttributedString? {
         set {
             infoTextView.attributedText = newValue
@@ -39,7 +30,6 @@ final class InfoCell: UITableViewCell {
     
     var contentInset: UIEdgeInsets?
     
-    @IBOutlet private weak var infoNameLabel: UILabel!
     @IBOutlet private weak var infoTextView: UITextView!
     @IBOutlet private weak var infoImageButton: UIButton!
     
@@ -55,16 +45,12 @@ final class InfoCell: UITableViewCell {
         infoImageButton.layer.borderWidth = 1.0
         infoImageButton.layer.masksToBounds = true
         
-        infoNameLabel.font = UIFont.headingFont()
         infoTextView.font = UIFont.bodyFont()
-        
-        infoNameLabel.textColor = .headerTextColor()
         infoTextView.textColor = .bodyTextColor()
         
         backgroundColor = .clearColor()
         
         infoImageButton.backgroundColor = backgroundColor
-        infoNameLabel.backgroundColor = backgroundColor
         infoTextView.backgroundColor = backgroundColor
         infoTextView.textContainer.lineFragmentPadding = 0
         infoTextView.textContainerInset = UIEdgeInsetsZero
@@ -77,12 +63,17 @@ final class InfoCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        infoImageButton.contentEdgeInsets = contentInset ?? UIEdgeInsets()
-
-        var exclusionRect = infoTextView.convertRect(infoImageButton.frame, fromView: self)
-        let infoLabelFrame = infoTextView.convertRect(infoNameLabel.frame, fromView: self)
+        guard infoImageButton.imageForState(.Normal) != nil else {
+            infoImageButton.hidden = true
+            return
+        }
         
-        exclusionRect.size.width += (infoLabelFrame.origin.x - infoImageButton.bounds.size.width)
+        infoImageButton.hidden = false
+        infoImageButton.contentEdgeInsets = contentInset ?? UIEdgeInsets()
+        
+        var exclusionRect = infoTextView.convertRect(infoImageButton.frame, fromView: self)
+        
+        exclusionRect.size.width += 10.0
         exclusionRect.size.height += 5.0
         
         let imageViewPath = UIBezierPath(rect: exclusionRect)

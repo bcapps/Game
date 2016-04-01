@@ -110,6 +110,13 @@ extension ListDisplayable {
         get {
             let attributedString = NSMutableAttributedString()
             
+            if let title = title where !title.isEmpty {
+                let title = NSAttributedString.attributedStringWithHeadingAttributes(title)
+                
+                attributedString.appendAttributedString(title)
+                attributedString.appendAttributedString(NSAttributedString(string: "\n"))
+            }
+            
             if let information = information where !information.isEmpty {
                 let info = NSAttributedString.attributedStringWithBodyAttributes(information)
                 

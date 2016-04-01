@@ -1,9 +1,16 @@
 [{
  "name": "Spider",
  "explanation": "A skittering arthropod with hairy mandibles.",
- "health": 10,
+ "health": 8,
  "attacks": [{"name": "Bite", "damage": "1d4", "weight": 80},
              {"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 20}]
+ },
+ {
+ "name": "Large Spider",
+ "explanation": "A tremendous spider that stands head to head with a human.",
+ "health": 12,
+ "attacks": [{"name": "Bite", "damage": "1d4", "weight": 60},
+             {"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 40}]
  }, {
  "name": "Spider Queen",
  "explanation": "A humongous arthropod with massive legs and a tremendous abdomen.",
