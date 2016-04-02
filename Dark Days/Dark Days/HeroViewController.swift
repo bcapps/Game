@@ -38,7 +38,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
     
-    private let overlayView = OverlayView()
     private var presentedOverlayController: UIViewController?
     
     deinit {
@@ -50,10 +49,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         title = hero?.name
         view.backgroundColor = .backgroundColor()
-        
-        overlayView.frame = view.frame
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: .dismissOverlay)
-        overlayView.addGestureRecognizer(tapRecognizer)
         
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
@@ -219,14 +214,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentOverlayWithListViewController<T>(viewController: ListViewController<T>, footerView: UIView? = nil) {
-        var frame = CGRectInset(view.frame, 50, 85)
-        frame.origin.y = 50
-        
         let containingViewController = ContainingViewController(containedViewController: viewController, footerView: footerView)
-        containingViewController.view.frame = frame
+        containingViewController.view.frame = view.bounds
         viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        
-        overlayView.showOverlayViewInView(view, animationDuration: animationDuration)
         
         replaceChildViewController(presentedOverlayController, newViewController: containingViewController, animationDuration: animationDuration)
         presentedOverlayController = containingViewController
@@ -234,8 +224,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     func dismissOverlay() {
         guard let presentedController = presentedOverlayController else { return }
-        
-        overlayView.removeOverlayView(animationDuration)
         
         replaceChildViewController(presentedController, newViewController: nil, animationDuration: animationDuration)
         presentedOverlayController = nil
@@ -354,98 +342,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
 }
 
-private class ContainingViewController: UIViewController {
-    
-    let containedViewController: UITableViewController
-    let footerView: UIView?
-    let footerViewBorder = BorderGenerator.newTopBorder(0, height: 0)
-    
-    init(containedViewController: UITableViewController, footerView: UIView?) {
-        self.containedViewController = containedViewController
-        self.footerView = footerView
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.containedViewController = UITableViewController()
-        self.footerView = UIView()
-        
-        super.init(coder: aDecoder)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.layer.cornerRadius = 12.0
-        view.layer.borderWidth = 1.0
-        view.layer.borderColor = UIColor.grayColor().CGColor
-        
-        containedViewController.tableView.separatorStyle = .None
-        containedViewController.tableView.allowsSelection = false
-        containedViewController.view.frame = view.bounds
-        
-        addViewController(containedViewController)
-        
-        if let footerView = footerView {
-            view.addSubview(footerView)
-            footerView.layer.addSublayer(footerViewBorder)
-            containedViewController.tableView.contentInset.bottom = 15
-        }
-    }
-    
-    private override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        containedViewController.view.frame = view.bounds
-        let height: CGFloat = 40.0
-        footerView?.frame = CGRect(x: 0, y: view.frame.size.height - height, width: view.frame.size.width, height: height)
-        footerViewBorder.frame = CGRect(x: 0, y: 0, width: footerView?.frame.size.width ?? 0, height: 1.0)
-    }
-}
-
-private class OverlayView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        self.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
-        self.userInteractionEnabled = true
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func showOverlayViewInView(view: UIView, animationDuration: NSTimeInterval) {
-        alpha = 0.0
-        view.addSubview(self)
-        
-        UIView.animateWithDuration(animationDuration) {
-            self.alpha = 1.0
-        }
-    }
-    
-    func removeOverlayView(animationDuration: NSTimeInterval) {
-        UIView.animateWithDuration(animationDuration, animations: {
-            self.alpha = 0.0
-        }, completion: { completed in
-            self.removeFromSuperview()
-        })
-    }
-}
-
-private class BorderGenerator {
-    static func newTopBorder(width: CGFloat, height: CGFloat) -> CALayer {
-        let border: CALayer = CALayer()
-        border.frame = CGRect(x: 0.0, y: 0.0, width: width, height: height)
-        border.backgroundColor = UIColor.grayColor().CGColor
-        
-        return border
-    }
-}
-
 private extension Selector {
-    static let dismissOverlay = #selector(HeroViewController.dismissOverlay)
     static let unequipItem = #selector(HeroViewController.unequipItem(_:))
 }

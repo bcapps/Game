@@ -120,12 +120,17 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             peersViewController.objectToSend = object as Any
             
             navigationController?.pushViewController(peersViewController, animated: true)
-        }
-        else if let monster = object as? Monster {
+        } else if let monster = object as? Monster {
             let random = GKShuffledDistribution(forDieWithSideCount: 100).nextInt()
             let attack = monster.attackForNumber(random)
             
-            print(attack)
+            if let attack = attack {
+                let attackDisplay = ListViewController<MonsterAttack>(sections: [SectionList(sectionTitle: nil, objects: [attack])], delegate: nil)
+            }
+            
+            guard let indexPath = listViewController.tableView.indexPathForSelectedRow else { return }
+            
+            listViewController.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
     

@@ -87,6 +87,12 @@ extension Floor: ListDisplayingGeneratable {
     }
 }
 
+extension MonsterAttack: ListDisplayingGeneratable {
+    static func displayable(attack: MonsterAttack) -> ListDisplayable {
+        return ListDisplayable(title: attack.name, information: attack.damage, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: nil)
+    }
+}
+
 struct ListDisplayable {
     let title: String?
     let information: String?
