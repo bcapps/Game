@@ -112,6 +112,47 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         }
     }
     
+    private func attackStringForAttack(attack: MonsterAttack) -> String {
+        let damage = attack.damage
+        let range = damage.startIndex..<damage.endIndex
+        
+        let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
+        let digits = NSCharacterSet.decimalDigitCharacterSet()
+
+        var damageWithNumberReplacement = String()
+        
+        for substring in damage.componentsSeparatedByString(" ") {
+            let decimalRange = substring.rangeOfCharacterFromSet(digits, options: NSStringCompareOptions(), range: nil)
+            
+            damageWithNumberReplacement.appendContentsOf(substring)
+            
+            if decimalRange != nil {
+                let separatedStrings = substring.componentsSeparatedByString("d")
+                
+                if separatedStrings.count == 2 {
+                    let damageDiceString = separatedStrings[0]
+                    let damageRollString = separatedStrings[1]
+                    
+                    if let damageDice = Int(damageDiceString), damageRoll = Int(damageRollString) {
+                        var totalDamage = 0
+                        
+                        let damageRandomizer = GKShuffledDistribution(forDieWithSideCount: damageRoll)
+                        
+                        for _ in 1...damageDice {
+                            totalDamage += damageRandomizer.nextInt()
+                        }
+                        
+                        damageWithNumberReplacement.appendContentsOf("(\(totalDamage))")
+                    }
+                }
+            }
+            
+            damageWithNumberReplacement.appendContentsOf(" ")
+        }
+        
+        return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damageWithNumberReplacement
+    }
+    
     // MARK: ListViewControllerDelegate
     
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
@@ -125,7 +166,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             let attack = monster.attackForNumber(random)
             
             if let attack = attack {
-                let attackDisplay = ListViewController<MonsterAttack>(sections: [SectionList(sectionTitle: nil, objects: [attack])], delegate: nil)
+                let controller = UIAlertController(title: attack.name, message: attackStringForAttack(attack), preferredStyle: .Alert)
+                controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+                
+                presentViewController(controller, animated: true, completion: nil)
             }
             
             guard let indexPath = listViewController.tableView.indexPathForSelectedRow else { return }
