@@ -36,7 +36,7 @@ final class Item: Decodable, Nameable, Codeable {
     let itemSlot: ItemSlot
     let twoHanded: Bool
     let statEffects: [StatEffect]
-    let resistanceEffects: [ResistanceEffect]
+    let DamageReductions: [DamageReduction]
     let avoidanceModifier: Int
     let attackModifier: Int
     
@@ -50,12 +50,12 @@ final class Item: Decodable, Nameable, Codeable {
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
             statEffects: json =>? "statEffects" ?? [],
-            resistanceEffects: json =>? "resistanceEffects" ?? [],
+            DamageReductions: json =>? "DamageReductions" ?? [],
             avoidanceModifier: json =>? "avoidanceModifier" ?? 0,
             attackModifier: json =>? "attackModifier" ?? 0)
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], resistanceEffects: [ResistanceEffect], avoidanceModifier: Int, attackModifier: Int) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], DamageReductions: [DamageReduction], avoidanceModifier: Int, attackModifier: Int) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -63,7 +63,7 @@ final class Item: Decodable, Nameable, Codeable {
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
         self.statEffects = statEffects
-        self.resistanceEffects = resistanceEffects
+        self.DamageReductions = DamageReductions
         self.avoidanceModifier = avoidanceModifier
         self.attackModifier = attackModifier
     }
