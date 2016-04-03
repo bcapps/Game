@@ -37,6 +37,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
+    var effectsViewController: EffectsTableViewController?
+    
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
     
@@ -67,6 +69,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let _ = segue.destinationViewController.view
         
         if let viewController = segue.destinationViewController as? HealthViewController {
+            viewController.hero = hero
+        } else if let viewController = segue.destinationViewController as? EffectsTableViewController {
+            effectsViewController = viewController
             viewController.hero = hero
         }
     }
@@ -122,6 +127,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
         
         collectionView.reloadData()
+        effectsViewController?.tableView?.reloadData()
     }
     
     private func freeEquipmentButtonForItemSlot(slot: ItemSlot) -> EquipmentButton? {

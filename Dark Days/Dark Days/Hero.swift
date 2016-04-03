@@ -52,6 +52,59 @@ final class Hero: Codeable, Nameable {
         return stat.currentValue + statModifierForEquippedItemsForStat(stat)
     }
     
+    func damageReductionForReductionType(type: DamageReduction.ReductionType) -> Int {
+        var reductionCounter = 0
+        
+        switch type {
+        case .Poison:
+            reductionCounter += statValueForType(.Constitution)
+        default:
+            reductionCounter += 0
+        }
+        
+        for item in inventory.equippedItems {
+            reductionCounter += item.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        return reductionCounter
+    }
+    
+    func damageAvoidanceForAvoidanceType(type: DamageAvoidance.AvoidanceType) -> Int {
+        var avoidanceCounter = 0
+        
+        switch type {
+        case .Physical:
+            avoidanceCounter += statValueForType(.Dexterity)
+        case .Magical:
+            avoidanceCounter += statValueForType(.Intelligence)
+        case .Mental:
+            avoidanceCounter += statValueForType(.Faith)
+        }
+        
+        for item in inventory.equippedItems {
+            avoidanceCounter += item.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        return avoidanceCounter
+    }
+    
+    func attackModifierForModifierType(type: AttackModifier.AttackModifierType) -> Int {
+        var attackModifier = 0
+        
+        switch type {
+        case .Physical:
+            attackModifier += statValueForType(.Strength)
+        case .Magical:
+            attackModifier += statValueForType(.Intelligence)
+        }
+        
+        for item in inventory.equippedItems {
+            attackModifier += item.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        return attackModifier
+    }
+    
     func statModifierForEquippedItemsForStat(stat: Stat) -> Int {
         for item in inventory.equippedItems {
             return item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})

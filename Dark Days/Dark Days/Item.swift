@@ -36,9 +36,9 @@ final class Item: Decodable, Nameable, Codeable {
     let itemSlot: ItemSlot
     let twoHanded: Bool
     let statEffects: [StatEffect]
-    let DamageReductions: [DamageReduction]
-    let avoidanceModifier: Int
-    let attackModifier: Int
+    let damageReductions: [DamageReduction]
+    let damageAvoidances: [DamageAvoidance]
+    let attackModifiers: [AttackModifier]
     
     var equipped = false
     
@@ -50,12 +50,12 @@ final class Item: Decodable, Nameable, Codeable {
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
             statEffects: json =>? "statEffects" ?? [],
-            DamageReductions: json =>? "damageReductions" ?? [],
-            avoidanceModifier: json =>? "avoidanceModifier" ?? 0,
-            attackModifier: json =>? "attackModifier" ?? 0)
+            damageReductions: json =>? "damageReductions" ?? [],
+            damageAvoidances: json =>? "damageAvoidances" ?? [],
+            attackModifiers: json =>? "attackModifier" ?? [])
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], DamageReductions: [DamageReduction], avoidanceModifier: Int, attackModifier: Int) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier]) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -63,9 +63,9 @@ final class Item: Decodable, Nameable, Codeable {
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
         self.statEffects = statEffects
-        self.DamageReductions = DamageReductions
-        self.avoidanceModifier = avoidanceModifier
-        self.attackModifier = attackModifier
+        self.damageReductions = damageReductions
+        self.damageAvoidances = damageAvoidances
+        self.attackModifiers = attackModifiers
     }
 }
 

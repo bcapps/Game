@@ -9,27 +9,38 @@
 import Foundation
 import Decodable
 
-enum DamageReduction: Decodable {
-    case Physical(Int)
-    case Poison(Int)
-    case Fire(Int)
-    case Cold(Int)
+struct DamageReduction: Decodable, Nameable {
+    let name: String
+    let value: Int
     
     static func decode(json: AnyObject) throws -> DamageReduction {
-        guard let name = try json => "name" as? String else { return DamageReduction.Physical(0) }
-        guard let value = try json => "value" as? Int else { return DamageReduction.Physical(0) }
-        
+        return try DamageReduction(name: json => "name",
+                                   value: json => "value")
+    }
+}
+
+extension DamageReduction {
+    enum ReductionType: String {
+        case Physical
+        case Poison
+        case Fire
+        case Cold
+    }
+    
+    static let allReductionTypes: [ReductionType] = [.Physical, .Poison, .Fire, .Cold]
+    
+    var reductionType: ReductionType {
         switch name {
         case "Physical":
-            return DamageReduction.Physical(value)
+            return .Physical
         case "Poison":
-            return DamageReduction.Poison(value)
+            return .Poison
         case "Fire":
-            return DamageReduction.Fire(value)
+            return .Fire
         case "Cold":
-            return DamageReduction.Cold(value)
+            return .Cold
         default:
-            return DamageReduction.Physical(0)
+            return .Physical
         }
     }
 }

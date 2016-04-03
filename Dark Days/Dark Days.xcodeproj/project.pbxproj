@@ -226,6 +226,18 @@
 		F26C01F11CB197C100907164 /* DamageReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* DamageReduction.swift */; };
 		F26C01F21CB197C100907164 /* DamageReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* DamageReduction.swift */; };
 		F26C01F31CB197C100907164 /* DamageReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* DamageReduction.swift */; };
+		F26C01F51CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */; };
+		F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */; };
+		F26C01F71CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */; };
+		F26C01F91CB1A16B00907164 /* EffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F81CB1A16B00907164 /* EffectCell.swift */; };
+		F26C01FA1CB1A16B00907164 /* EffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F81CB1A16B00907164 /* EffectCell.swift */; };
+		F26C01FB1CB1A16B00907164 /* EffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F81CB1A16B00907164 /* EffectCell.swift */; };
+		F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */; };
+		F26C01FE1CB1B92F00907164 /* DamageAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */; };
+		F26C01FF1CB1B92F00907164 /* DamageAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */; };
+		F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
+		F26C02021CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
+		F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -368,6 +380,10 @@
 		F26C01EC1CB1937200907164 /* StatEffectCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffectCodingTests.swift; sourceTree = "<group>"; };
 		F26C01EE1CB1938A00907164 /* StatEffectJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StatEffectJSON.json; sourceTree = "<group>"; };
 		F26C01F01CB197C100907164 /* DamageReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageReduction.swift; sourceTree = "<group>"; };
+		F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsTableViewController.swift; sourceTree = "<group>"; };
+		F26C01F81CB1A16B00907164 /* EffectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectCell.swift; sourceTree = "<group>"; };
+		F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageAvoidance.swift; sourceTree = "<group>"; };
+		F26C02001CB1D0A400907164 /* AttackModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackModifier.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -627,7 +643,9 @@
 			children = (
 				F21ECE331C7A6CD0008041E9 /* Items.json */,
 				F21ECE371C7A7254008041E9 /* Item.swift */,
+				F26C02001CB1D0A400907164 /* AttackModifier.swift */,
 				F26C01F01CB197C100907164 /* DamageReduction.swift */,
+				F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */,
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
 			);
 			name = Items;
@@ -731,6 +749,8 @@
 				F2473B1E1C83B307008FD65B /* HeroViewController.swift */,
 				F2473B201C83B328008FD65B /* HeroViewController.storyboard */,
 				F2D458171C85452300751635 /* DropdownMenuFactory.swift */,
+				F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */,
+				F26C01F81CB1A16B00907164 /* EffectCell.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -1064,6 +1084,7 @@
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
+				F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C39ACBF01C9CA0B7004C5A6B /* SendGoldViewController.swift in Sources */,
 				C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */,
@@ -1072,6 +1093,7 @@
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
 				F25187DA1C952065003AD636 /* StatCell.swift in Sources */,
+				F26C01F91CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
@@ -1086,9 +1108,11 @@
 				F251876E1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F25187621C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
+				F26C01F51CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
+				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
@@ -1135,6 +1159,7 @@
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
+				F26C02021CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F251879B1C922B9D003AD636 /* ColorExtension.swift in Sources */,
 				F25187B11C922BB3003AD636 /* ListViewController.swift in Sources */,
 				F26C01E21CAE239200907164 /* MonsterAttack.swift in Sources */,
@@ -1151,6 +1176,7 @@
 				F251876C1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F25187A01C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
 				F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
+				F26C01FA1CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F25187721C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B921C8231FD00D6E18E /* MagicType.swift in Sources */,
 				F25187BA1C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
@@ -1160,6 +1186,7 @@
 				F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
+				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
@@ -1181,6 +1208,7 @@
 				F26C01E61CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
+				F26C01FE1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,6 +1249,8 @@
 				F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */,
 				C3BC40491C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */,
 				F26C01E11CAE239100907164 /* MonsterAttack.swift in Sources */,
+				F26C01FF1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
+				F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
@@ -1241,8 +1271,10 @@
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,
 				F26C01E71CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
+				F26C01FB1CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 				C39ACBFA1C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
+				F26C01F71CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

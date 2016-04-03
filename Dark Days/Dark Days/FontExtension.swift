@@ -22,6 +22,10 @@ extension UIFont {
         return fontOfName("Avenir-Medium", size: 14)
     }
     
+    static func verySmallFont() -> UIFont {
+        return fontOfName("Avenir-Medium", size: 13)
+    }
+    
     static func heavyLargeFont() -> UIFont {
         return fontOfName("Avenir-Heavy", size: 21)
     }
