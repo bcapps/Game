@@ -42,7 +42,7 @@ final class HeroListViewController: ListViewController<Hero> {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let heroVC = UIStoryboard.heroViewController() as? HeroViewController else { return }
+        guard let heroVC = UIStoryboard.heroViewController() else { return }
         heroVC.hero = self.objectForIndexPath(indexPath)
             
         navigationController?.pushViewController(heroVC, animated: true)

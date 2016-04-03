@@ -87,15 +87,15 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             case .ChooseMagicType:
                 switch heroBuilder.magicType.status {
                     case .Mundane:
-                        buildAndPersistHero()
-                        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                        guard let hero = buildAndPersistHero() else { return }
+                        dismissAfterCreation(hero)
                     case .Gifted:
                         nextButton.title = "Done"
                         transitionToGodList()
                 }
             case .ChooseGod:
-                buildAndPersistHero()
-                presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                guard let hero = buildAndPersistHero() else { return }
+                dismissAfterCreation(hero)
         }
     }
     
@@ -234,7 +234,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(godListViewController)
     }
     
-    private func buildAndPersistHero() {
+    private func buildAndPersistHero() -> Hero? {
         heroBuilder.name = heroName ?? "Default Name"
         heroBuilder.gender = heroGender
         
@@ -257,9 +257,21 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             }
         }
         
-        guard let hero = heroBuilder.build() else { return }
+        guard let hero = heroBuilder.build() else { return nil }
         
         HeroPersistence().persistHero(hero)
+        
+        return hero
+    }
+    
+    private func dismissAfterCreation(createdHero: Hero) {
+        guard let heroVC = UIStoryboard.heroViewController() else { return }
+        heroVC.hero = createdHero
+        
+        guard let navController = presentingViewController as? UINavigationController else { return }
+        
+        navController.pushViewController(heroVC, animated: false)
+        navController.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func listEdgeInsets() -> UIEdgeInsets {

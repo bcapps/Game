@@ -14,8 +14,8 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("HeroCreation")
     }
     
-    static func heroViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("HeroViewController")
+    static func heroViewController() -> HeroViewController? {
+        return initialViewControllerFromStoryboardNamed("HeroViewController") as? HeroViewController
     }
     
     static func toolsViewController() -> UIViewController? {
