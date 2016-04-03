@@ -106,11 +106,13 @@ final class Hero: Codeable, Nameable {
     }
     
     func statModifierForEquippedItemsForStat(stat: Stat) -> Int {
+        var statModifier = 0
+        
         for item in inventory.equippedItems {
-            return item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            statModifier += item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
-        return 0
+        return statModifier
     }
     
     init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {
