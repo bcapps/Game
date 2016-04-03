@@ -50,7 +50,7 @@ final class Item: Decodable, Nameable, Codeable {
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
             statEffects: json =>? "statEffects" ?? [],
-            DamageReductions: json =>? "DamageReductions" ?? [],
+            DamageReductions: json =>? "damageReductions" ?? [],
             avoidanceModifier: json =>? "avoidanceModifier" ?? 0,
             attackModifier: json =>? "attackModifier" ?? 0)
     }

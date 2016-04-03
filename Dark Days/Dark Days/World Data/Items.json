@@ -60,7 +60,7 @@
  "effects": "Decreases physical damage taken by 1.",
  "flavor": "A light piece of armor made out of animal hide.",
  "itemSlot": "Chest",
- "DamageReductions": [{"name": "Physical", "value": 1}]
+ "damageReductions": [{"name": "Physical", "value": 1}]
  }, {
  "name": "Leather Boots",
  "damage": "",
@@ -81,7 +81,7 @@
  "effects": "Decrease physical damage taken by 2, and increases resistance to poison by 3.",
  "flavor": "Armor fashioned from the tough hide of the Spider Queen.",
  "itemSlot": "Chest",
- "DamageReductions": [{"name": "Poison", "value": 3}]
+ "damageReductions": [{"name": "Poison", "value": 3}]
  }, {
  "name": "Spider Boots",
  "damage": "",
@@ -94,7 +94,7 @@
  "effects": "Decreases physical damage taken by 1, but redues chance to avoid an attack by 1.",
  "flavor": "A sturdy metal helmet.",
  "itemSlot": "Helmet",
- "DamageReductions": [{"name": "Physical", "value": 1}],
+ "damageReductions": [{"name": "Physical", "value": 1}],
  "avoidanceModifier": -1
  }, {
  "name": "Spider Chitin",
