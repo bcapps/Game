@@ -98,6 +98,14 @@
  "damageReductions": [{"name": "Physical", "value": 1}],
  "damageAvoidances": [{"name": "Physical", "value": -1}]
  }, {
+ "name": "Iron Armor",
+ "damage": "",
+ "effects": "Decreases physical damage taken by 2, but redues chance to avoid an attack by 2.",
+ "flavor": "A sturdy metal breastplate.",
+ "itemSlot": "Chest",
+ "damageReductions": [{"name": "Physical", "value": 2}],
+ "damageAvoidances": [{"name": "Physical", "value": -2}]
+ }, {
  "name": "Spider Chitin",
  "damage": "",
  "effects": "",
