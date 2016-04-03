@@ -12,14 +12,14 @@ import XCTest
 class ItemCodingTests: XCTestCase {
 
     func testItemReceivesLatestCopy() {
-        let item = Item(name: "Basic Mace", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, statEffects: [])
+        let item = Item(name: "Basic Hammer", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, statEffects: [])
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(ItemCoder(value: item))
         let unarchivedItemCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? ItemCoder
         
         let unarchivedItem = unarchivedItemCoder?.value
         
-        XCTAssertEqual(unarchivedItem?.name, "Basic Mace")
+        XCTAssertEqual(unarchivedItem?.name, "Basic Hammer")
         XCTAssertEqual(unarchivedItem?.damage, "1d4 + [STR]")
         XCTAssertEqual(unarchivedItem?.effects, "")
         XCTAssertEqual(unarchivedItem?.flavor, "A light hammer used for bludgeoning.")

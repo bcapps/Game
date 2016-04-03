@@ -13,7 +13,7 @@ final class TestHero {
         let inventory = Inventory(gold: 0, items: [Item]())
         inventory.gold = 5000
         
-        let optionalItem1 = ObjectProvider.itemForName("Basic Mace")
+        let optionalItem1 = ObjectProvider.itemForName("Basic Hammer")
         let optionalItem2 = ObjectProvider.itemForName("Basic Dagger")
         
         let optionalStat1 = ObjectProvider.statForName("Strength")

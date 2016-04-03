@@ -31,7 +31,7 @@ class ObjectProviderTests: XCTestCase {
     func testObjectProviderProvidesItems() {
         let items: [Item] = ObjectProvider.objectsForJSON("Items")
         
-        XCTAssertEqual(items.count, 7)
+        XCTAssertEqual(items.count, 17)
     }
     
     func testObjectProviderProvidesStats() {
@@ -55,7 +55,7 @@ class ObjectProviderTests: XCTestCase {
     func testObjectProviderProvidesMonsters() {
         let monsters: [Monster] = ObjectProvider.objectsForJSON("Monsters")
         
-        XCTAssertEqual(monsters.count, 2)
+        XCTAssertEqual(monsters.count, 3)
     }
     
     func testObjectProviderProvidesSpells() {
