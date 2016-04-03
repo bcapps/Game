@@ -44,7 +44,18 @@ final class HealthViewController: UIViewController {
         healthUpButton.enabled = hero.currentHealth != hero.maximumHealth
         
         healthLabel.text = String(hero.currentHealth) + "/" + String(hero.maximumHealth)
+        healthLabel.textColor = textColor(Double(hero.currentHealth), maximumHealth: Double(hero.maximumHealth))
         
         HeroPersistence().persistHero(hero)
+    }
+    
+    private func textColor(currentHealth: Double, maximumHealth: Double) -> UIColor {
+        if currentHealth / maximumHealth < 0.33 {
+            return .redColor()
+        } else if currentHealth / maximumHealth < 0.66 {
+            return .yellowColor()
+        } else {
+            return .greenColor()
+        }
     }
 }
