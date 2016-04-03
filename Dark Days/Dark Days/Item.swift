@@ -35,28 +35,34 @@ final class Item: Decodable, Nameable, Codeable {
     let flavor: String
     let itemSlot: ItemSlot
     let twoHanded: Bool
+    let statEffects: [StatEffect]
     
     var equipped = false
     
     static func decode(json: AnyObject) throws -> Item {
         let twoHanded: Bool
+        let statEffects: [StatEffect]
+        
         do { twoHanded = try json => "twoHanded" } catch { twoHanded = false }
+        do { statEffects = try json => "statEffects" } catch { statEffects = [] }
         
         return try Item(name: json => "name",
             damage: json => "damage",
             effects: json => "effects",
             flavor: json => "flavor",
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
-            twoHanded: twoHanded)
+            twoHanded: twoHanded,
+            statEffects: statEffects)
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect]) {
         self.name = name
         self.damage = damage
         self.effects = effects
         self.flavor = flavor
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
+        self.statEffects = statEffects
     }
 }
 

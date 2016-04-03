@@ -45,9 +45,19 @@ final class Hero: Codeable, Nameable {
     }
     
     func statValueForType(statType: StatType) -> Int {
-        let stat = stats.filter { $0.statType == statType }.first
+        let optionalStat = stats.filter { $0.statType == statType }.first
         
-        return stat?.currentValue ?? 0
+        guard let stat = optionalStat else { return 0 }
+        
+        return stat.currentValue + statModifierForEquippedItemsForStat(stat)
+    }
+    
+    func statModifierForEquippedItemsForStat(stat: Stat) -> Int {
+        for item in inventory.equippedItems {
+            return item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        return 0
     }
     
     init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {

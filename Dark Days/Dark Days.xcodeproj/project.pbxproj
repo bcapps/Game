@@ -218,6 +218,9 @@
 		F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */; };
 		F26C01E61CAF4ADC00907164 /* ContainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */; };
 		F26C01E71CAF4ADC00907164 /* ContainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */; };
+		F26C01E91CB18B7600907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
+		F26C01EA1CB18C9B00907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
+		F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -356,6 +359,7 @@
 		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
 		F26C01DF1CAE238E00907164 /* MonsterAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttack.swift; sourceTree = "<group>"; };
 		F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingViewController.swift; sourceTree = "<group>"; };
+		F26C01E81CB18B7600907164 /* StatEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffect.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -613,6 +617,7 @@
 			children = (
 				F21ECE331C7A6CD0008041E9 /* Items.json */,
 				F21ECE371C7A7254008041E9 /* Item.swift */,
+				F26C01E81CB18B7600907164 /* StatEffect.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -1085,6 +1090,7 @@
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */,
+				F26C01E91CB18B7600907164 /* StatEffect.swift in Sources */,
 				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				C39ACBEE1C9C9D3E004C5A6B /* ViewExtensions.swift in Sources */,
@@ -1156,6 +1162,7 @@
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */,
 				F251879E1C922B9D003AD636 /* DismissSegue.swift in Sources */,
+				F26C01EA1CB18C9B00907164 /* StatEffect.swift in Sources */,
 				F26C01E61CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
@@ -1174,6 +1181,7 @@
 				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
 				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
 				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
+				F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,

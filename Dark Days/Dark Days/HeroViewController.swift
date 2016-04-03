@@ -258,8 +258,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StatCellIdentifier", forIndexPath: indexPath) as? StatCell
         let stat = hero?.stats[indexPath.row]
         
-        cell?.statTitle.text = stat?.shortName
-        if let value = stat?.currentValue {
+        if let stat = stat, value = hero?.statValueForType(stat.statType) {
+            cell?.statTitle.text = stat.shortName
             cell?.statValue.text = String(value)
         }
         
