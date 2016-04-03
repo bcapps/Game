@@ -341,7 +341,7 @@
         <scene sceneID="eez-Vv-P4h">
             <objects>
                 <tableViewController id="D9S-qR-6xx" customClass="EffectsTableViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="15" sectionHeaderHeight="28" sectionFooterHeight="28" id="ViZ-Mp-hi0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="15" sectionHeaderHeight="28" sectionFooterHeight="28" id="ViZ-Mp-hi0">
                         <rect key="frame" x="0.0" y="0.0" width="94.5" height="155"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

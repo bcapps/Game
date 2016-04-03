@@ -140,6 +140,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         return nil
     }
     
+    private func equipmentButtonsForItemSlot(slot: ItemSlot) -> [EquipmentButton] {
+        return equipmentButtons.filter { $0.slot == slot }
+    }
+    
     private func addMenuTapHandlers() {
         menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
             NSOperationQueue.mainQueue().addOperationWithBlock({ 
@@ -297,7 +301,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                         rightHandButton.item?.equipped = false
                     }
                 default:
-                    let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot)
+                    let equipmentButton = equipmentButtonsForItemSlot(item.itemSlot).first
                     equipmentButton?.item?.equipped = false
             }
             
