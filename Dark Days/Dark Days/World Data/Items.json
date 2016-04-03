@@ -78,7 +78,7 @@
  }, {
  "name": "Spider Armor",
  "damage": "",
- "effects": "Decrease physical damage taken by 2, and decreases posion damage taken by 3.",
+ "effects": "Decrease physical damage taken by 2, and decreases poision damage taken by 3.",
  "flavor": "Armor fashioned from the tough hide of the Spider Queen. The armor prevents even the most caustic of poisons from penetrating.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Poison", "value": 3},
