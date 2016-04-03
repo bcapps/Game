@@ -299,6 +299,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                         leftHandButton.item?.equipped = false
                     } else if let rightHandItem = rightHandButton.item where rightHandItem.twoHanded {
                         rightHandButton.item?.equipped = false
+                    } else {
+                        rightHandButton.item?.equipped = false
                     }
                 default:
                     let equipmentButton = equipmentButtonsForItemSlot(item.itemSlot).first
