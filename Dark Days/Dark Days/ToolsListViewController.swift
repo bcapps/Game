@@ -96,7 +96,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
         switch tool {
             case .Gold:
-                guard let goldViewController = UIStoryboard.sendGoldViewController() as? SendGoldViewController else { return }
+                guard let goldViewController = UIStoryboard.sendGoldViewController() else { return }
                 
                 goldViewController.sendGoldTapped = { gold in
                     let peersViewController = PeerListViewController(multipeerManager: self.multipeer)
@@ -114,7 +114,6 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     
     private func attackStringForAttack(attack: MonsterAttack) -> String {
         let damage = attack.damage
-        let range = damage.startIndex..<damage.endIndex
         
         let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
         let digits = NSCharacterSet.decimalDigitCharacterSet()

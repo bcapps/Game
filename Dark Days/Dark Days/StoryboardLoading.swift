@@ -10,24 +10,24 @@ import UIKit
 
 extension UIStoryboard {
     
-    static func heroCreationViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("HeroCreation")
+    static func heroCreationViewController() -> UINavigationController? {
+        return initialViewControllerFromStoryboardNamed("HeroCreation") as? UINavigationController
     }
     
     static func heroViewController() -> HeroViewController? {
         return initialViewControllerFromStoryboardNamed("HeroViewController") as? HeroViewController
     }
     
-    static func toolsViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("DMToolkit")
+    static func toolsViewController() -> UINavigationController? {
+        return initialViewControllerFromStoryboardNamed("DMToolkit") as? UINavigationController
     }
     
-    static func sendGoldViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("SendGold")
+    static func sendGoldViewController() -> SendGoldViewController? {
+        return initialViewControllerFromStoryboardNamed("SendGold") as? SendGoldViewController
     }
     
-    static func nameHeroViewController() -> UIViewController? {
-        return initialViewControllerFromStoryboardNamed("NameHero")
+    static func nameHeroViewController() -> NameHeroViewController? {
+        return initialViewControllerFromStoryboardNamed("NameHero") as? NameHeroViewController
     }
     
     private static func initialViewControllerFromStoryboardNamed(storyboardName: String) -> UIViewController? {

@@ -172,7 +172,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         backButton.title = "Cancel"
         currentCreationState = .NameHero
         
-        guard let nameHero = UIStoryboard.nameHeroViewController() as? NameHeroViewController else { return }
+        guard let nameHero = UIStoryboard.nameHeroViewController() else { return }
         self.heroGender = .Male
         
         nameHero.nameFieldChanged = { name in
