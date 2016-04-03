@@ -132,7 +132,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     private func addMenuTapHandlers() {
         menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
-            switch indexPath.row {
+            NSOperationQueue.mainQueue().addOperationWithBlock({ 
+                switch indexPath.row {
                 case 0:
                     self?.presentItemList()
                 case 1:
@@ -141,7 +142,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                     self?.presentsSkillsList()
                 default:
                     print("No Action")
-            }
+                }
+            })
         }
     }
     

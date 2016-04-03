@@ -11,11 +11,11 @@ AZDropdownMenu is a simple dropdown menu component that supports Swift.
 ## Screenshots
 Code used in the screencast are included in the bundled sample project.
 
-![cast](https://cloud.githubusercontent.com/assets/879197/12817575/0734865e-cb96-11e5-8b90-d3e0cea18164.gif)
+![screencast](https://cloud.githubusercontent.com/assets/879197/13528338/455c738a-e250-11e5-8671-312aa58a63e1.gif)
 
-## Usage
+## Demo Project
 
-To run the example project, clone the repo with `git clone https://github.com/Azuritul/AZDropdownMenu.git`, and run `pod install` from the Example directory first.
+To run the demo project, clone the repo with `git clone https://github.com/Azuritul/AZDropdownMenu.git`, and run `pod install` from the Example directory first.
 
 ## Requirements
 - iOS 8 or above
@@ -40,23 +40,39 @@ let titles = ["Action 1", "Action 2", "Action 3"]
 ```
 Then pass the array to the initializer
 ```swift
-let menu = AZDropdownMenu(titles: leftTitles )
+let menu = AZDropdownMenu(titles: titles)
 ```
+
+Set up so that the `UIBarButtonItem` is associated with a function that shows the menu
+```
+let button = UIBarButtonItem(image: UIImage(named: "menu_image"), style: .Plain, target: self, action: "showDropdown")
+navigationItem.leftBarButtonItem = menuButton
+```
+
 Calling `public func showMenuFromView(view:UIView)` can then show the menu.
+```swift
+func showDropdown() {
+    if (self.menu?.isDescendantOfView(self.view) == true) {
+        self.menu?.hideMenu()
+    } else {
+        self.menu?.showMenuFromView(self.view)
+    }
+}
+```
 
 The handler `public var cellTapHandler : ((indexPath:NSIndexPath) -> Void)?` would be called
 when menu item is tapped. So place code in here to do whatever you want. For example
 
 ```swift
 menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
-self?.navigationController?.pushViewController(controller, animated:true)
+    self?.navigationController?.pushViewController(controller, animated:true)
 }
 ```
 
 #### Create menu with icons
 Pass in a AZDropdownMenuItemData in the initializer: `public init(dataSource:[AZDropdownMenuItemData])` and you are good to go.
 
-> Do take a look at the sample project in this repository to get more usage of the library.
+> Take a look at the sample project in this repository to get more usage of the library.
 
 ### Configurable options
 Currently AZDropdownMenu can be customized with the following properties. More will come in the future.
@@ -73,9 +89,15 @@ Currently AZDropdownMenu can be customized with the following properties. More w
 - `menuSeparatorStyle` The separator of the menu. Default is single line.
 - `menuSeparatorColor` The color of the separator. Default is light gray.
 - `itemImagePosition` The position of image in the menu. Can be positioned before or after the text. Default is `.Prefix`.
-
+- `shouldDismissMenuOnDrag` If set to true, menu would be dismissed on drag. Default value is `false`.
 
 ## Version
+- 1.1.0
+   - Added `shouldDismissMenuOnDrag` option, menu would be dismissed on drag if this option is enabled
+   - Modified the sample project with an example using `UITableView`.
+   - Added gesture handler for the menu.
+   - Extract config struct to a separate file
+   - Update readme.
 - 1.0.0
    - Added `itemImagePosition` option, now can configure the icon position.
    - Changed icon sets and its corresponding location in the sample project.
@@ -95,13 +117,6 @@ Currently AZDropdownMenu can be customized with the following properties. More w
 
 ## Author
 Chris Wu (Azuritul), azuritul@gmail.com
-
-## Contribute
-1. Fork the repo
-2. Create your own branch with names that are easy to understand, e.g: `feature/xxx-feature`
-3. Commit changes
-4. Push branch to origin or whatever repo your name is: `git push origin feature/xxx-feature`
-5. Submit a pull request, compare against `develop` branch in the upstream repo and ensure there is no conflict between the two.
 
 ## License
 AZDropdownMenu is available under the MIT license. See the LICENSE file for more info.
