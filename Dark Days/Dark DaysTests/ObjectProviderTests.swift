@@ -10,12 +10,6 @@ import XCTest
 @testable import Dark_Days
 
 class ObjectProviderTests: XCTestCase {
-    func testObjectProviderProvidesObject() {
-        let god: God? = ObjectProvider.objectForJSON("ObjectProviderTestJSONDictionary")
-        
-        XCTAssertNotNil(god)
-    }
-
     func testObjectProviderProvidesObjects() {
         let gods: [God] = ObjectProvider.objectsForJSON("ObjectProviderTestJSONArray")
         

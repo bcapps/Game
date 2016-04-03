@@ -221,6 +221,8 @@
 		F26C01E91CB18B7600907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
 		F26C01EA1CB18C9B00907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
 		F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
+		F26C01ED1CB1937200907164 /* ItemEffectCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01EC1CB1937200907164 /* ItemEffectCodingTests.swift */; };
+		F26C01EF1CB1938A00907164 /* ItemEffectJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F26C01EE1CB1938A00907164 /* ItemEffectJSON.json */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -360,6 +362,8 @@
 		F26C01DF1CAE238E00907164 /* MonsterAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttack.swift; sourceTree = "<group>"; };
 		F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingViewController.swift; sourceTree = "<group>"; };
 		F26C01E81CB18B7600907164 /* StatEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffect.swift; sourceTree = "<group>"; };
+		F26C01EC1CB1937200907164 /* ItemEffectCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEffectCodingTests.swift; sourceTree = "<group>"; };
+		F26C01EE1CB1938A00907164 /* ItemEffectJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemEffectJSON.json; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -540,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				F21ECDD21C7A516B008041E9 /* Info.plist */,
+				F26C01EE1CB1938A00907164 /* ItemEffectJSON.json */,
 				F21ECE061C7A5F1B008041E9 /* ObjectProviderTestJSONArray.json */,
 				F21ECE071C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json */,
 				F21ECDFD1C7A5CD5008041E9 /* ObjectProviderTests.swift */,
@@ -548,6 +553,7 @@
 				F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */,
 				C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */,
 				C3AB8F461C7CF992007CE0BA /* HeroPersistenceTests.swift */,
+				F26C01EC1CB1937200907164 /* ItemEffectCodingTests.swift */,
 			);
 			path = "Dark DaysTests";
 			sourceTree = "<group>";
@@ -948,6 +954,7 @@
 				F21ECE0C1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F25187B61C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				C39ACBF51C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
+				F26C01EF1CB1938A00907164 /* ItemEffectJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1150,7 @@
 				F25187C81C937370003AD636 /* InfoCell.swift in Sources */,
 				F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
+				F26C01ED1CB1937200907164 /* ItemEffectCodingTests.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,

@@ -12,7 +12,7 @@ import XCTest
 class ItemCodingTests: XCTestCase {
 
     func testItemReceivesLatestCopy() {
-        let item = Item(name: "Basic Mace", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true)
+        let item = Item(name: "Basic Mace", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, statEffects: [])
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(ItemCoder(value: item))
         let unarchivedItemCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? ItemCoder

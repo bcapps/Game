@@ -71,7 +71,7 @@
  "effects": "Increases FAI by 1.",
  "flavor": "Robes worn by those who have dedicated their lives to their god.",
  "itemSlot": "Chest",
- "statEffects": {"stat": "FAI", "value": 1}
+ "statEffects": [{"stat": "FAI", "value": 1}]
  }, {
  "name": "Spider Armor",
  "damage": "",

@@ -18,6 +18,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     @IBOutlet weak var bootsButton: EquipmentButton!
     
     @IBOutlet var equipmentButtons: [EquipmentButton]! // swiftlint:disable:this force_unwrapping
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var goldLabel: UILabel!
     
@@ -118,6 +120,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             equipmentButton.item = item
         }
+        
+        collectionView.reloadData()
     }
     
     private func freeEquipmentButtonForItemSlot(slot: ItemSlot) -> EquipmentButton? {
