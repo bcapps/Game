@@ -223,6 +223,9 @@
 		F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01E81CB18B7600907164 /* StatEffect.swift */; };
 		F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01EC1CB1937200907164 /* StatEffectCodingTests.swift */; };
 		F26C01EF1CB1938A00907164 /* StatEffectJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F26C01EE1CB1938A00907164 /* StatEffectJSON.json */; };
+		F26C01F11CB197C100907164 /* ResistanceEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* ResistanceEffect.swift */; };
+		F26C01F21CB197C100907164 /* ResistanceEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* ResistanceEffect.swift */; };
+		F26C01F31CB197C100907164 /* ResistanceEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01F01CB197C100907164 /* ResistanceEffect.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -364,6 +367,7 @@
 		F26C01E81CB18B7600907164 /* StatEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffect.swift; sourceTree = "<group>"; };
 		F26C01EC1CB1937200907164 /* StatEffectCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffectCodingTests.swift; sourceTree = "<group>"; };
 		F26C01EE1CB1938A00907164 /* StatEffectJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StatEffectJSON.json; sourceTree = "<group>"; };
+		F26C01F01CB197C100907164 /* ResistanceEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResistanceEffect.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -623,6 +627,7 @@
 			children = (
 				F21ECE331C7A6CD0008041E9 /* Items.json */,
 				F21ECE371C7A7254008041E9 /* Item.swift */,
+				F26C01F01CB197C100907164 /* ResistanceEffect.swift */,
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
 			);
 			name = Items;
@@ -1102,6 +1107,7 @@
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				C39ACBEE1C9C9D3E004C5A6B /* ViewExtensions.swift in Sources */,
 				F2350B8D1C8231E700D6E18E /* MagicType.swift in Sources */,
+				F26C01F11CB197C100907164 /* ResistanceEffect.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
 				F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */,
@@ -1136,6 +1142,7 @@
 				C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
+				F26C01F21CB197C100907164 /* ResistanceEffect.swift in Sources */,
 				F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				C3BC40481C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */,
 				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
@@ -1192,6 +1199,7 @@
 				F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
+				F26C01F31CB197C100907164 /* ResistanceEffect.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */,
 				F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */,

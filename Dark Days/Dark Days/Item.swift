@@ -36,6 +36,9 @@ final class Item: Decodable, Nameable, Codeable {
     let itemSlot: ItemSlot
     let twoHanded: Bool
     let statEffects: [StatEffect]
+    let resistanceEffects: [ResistanceEffect]
+    let avoidanceModifier: Int
+    let attackModifier: Int
     
     var equipped = false
     
@@ -46,10 +49,13 @@ final class Item: Decodable, Nameable, Codeable {
             flavor: json => "flavor",
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
-            statEffects: json =>? "statEffects" ?? [])
+            statEffects: json =>? "statEffects" ?? [],
+            resistanceEffects: json =>? "resistanceEffects" ?? [],
+            avoidanceModifier: json =>? "avoidanceModifier" ?? 0,
+            attackModifier: json =>? "attackModifier" ?? 0)
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect]) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], resistanceEffects: [ResistanceEffect], avoidanceModifier: Int, attackModifier: Int) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -57,6 +63,9 @@ final class Item: Decodable, Nameable, Codeable {
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
         self.statEffects = statEffects
+        self.resistanceEffects = resistanceEffects
+        self.avoidanceModifier = avoidanceModifier
+        self.attackModifier = attackModifier
     }
 }
 

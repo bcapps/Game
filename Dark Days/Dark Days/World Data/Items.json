@@ -52,19 +52,22 @@
  "damage": "",
  "effects": "Increases chance to avoid an attack by 1.",
  "flavor": "A small metal shield, barely capable of fending off attacks.",
- "itemSlot": "Hand"
+ "itemSlot": "Hand",
+ "avoidanceModifier": -1
  }, {
  "name": "Leather Jerkin",
  "damage": "",
  "effects": "Decreases physical damage taken by 1.",
  "flavor": "A light piece of armor made out of animal hide.",
- "itemSlot": "Chest"
+ "itemSlot": "Chest",
+ "resistanceEffects": [{"name": "Physical", "value": 1}]
  }, {
  "name": "Leather Boots",
  "damage": "",
  "effects": "Increases chance to avoid an attack by 1.",
  "flavor": "Thin boots made out of animal hide.",
- "itemSlot": "Boots"
+ "itemSlot": "Boots",
+ "avoidanceModifier": -1
  }, {
  "name": "Faithful Robes",
  "damage": "",
@@ -77,7 +80,8 @@
  "damage": "",
  "effects": "Decrease physical damage taken by 2, and increases resistance to poison by 3.",
  "flavor": "Armor fashioned from the tough hide of the Spider Queen.",
- "itemSlot": "Chest"
+ "itemSlot": "Chest",
+ "resistanceEffects": [{"name": "Poison", "value": 3}]
  }, {
  "name": "Spider Boots",
  "damage": "",
@@ -89,7 +93,9 @@
  "damage": "",
  "effects": "Decreases physical damage taken by 1, but redues chance to avoid an attack by 1.",
  "flavor": "A sturdy metal helmet.",
- "itemSlot": "Helmet"
+ "itemSlot": "Helmet",
+ "resistanceEffects": [{"name": "Physical", "value": 1}],
+ "avoidanceModifier": -1
  }, {
  "name": "Spider Chitin",
  "damage": "",
