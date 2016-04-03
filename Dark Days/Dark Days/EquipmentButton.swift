@@ -25,7 +25,7 @@ final class EquipmentButton: UIButton {
         layer.borderWidth = 1
         layer.cornerRadius = 8.0
         
-        imageView?.tintColor = UIColor(white: 0.5, alpha: 0.7)
+        imageView?.tintColor = UIColor(white: 0.5, alpha: 0.4)
         backgroundColor = UIColor(white: 0.7, alpha: 0.15)
     }
 }
