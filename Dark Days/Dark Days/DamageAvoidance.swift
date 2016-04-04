@@ -24,6 +24,17 @@ extension DamageAvoidance {
         case Physical
         case Magical
         case Mental
+        
+        var image: UIImage? {
+            switch self {
+            case .Physical:
+                return UIImage(named: "PhysicalDamageAvoidance")
+            case .Magical:
+                return UIImage(named: "MagicalDamageAvoidance")
+            case .Mental:
+                return UIImage(named: "MentalDamageAvoidance")
+            }
+        }
     }
     
     static let allAvoidanceTypes: [AvoidanceType] = [.Physical, .Magical, .Mental]

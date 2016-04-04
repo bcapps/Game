@@ -23,6 +23,15 @@ extension AttackModifier {
     enum AttackModifierType: String {
         case Physical
         case Magical
+        
+        var image: UIImage? {
+            switch self {
+            case .Physical:
+                return UIImage(named: "PhysicalAttackModifier")
+            case .Magical:
+                return UIImage(named: "MagicalAttackModifier")
+            }
+        }
     }
     
     static let allAttackModifierTypes: [AttackModifierType] = [.Physical, .Magical]

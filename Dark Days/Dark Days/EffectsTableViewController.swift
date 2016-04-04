@@ -81,13 +81,15 @@ class EffectsTableViewController: UITableViewController {
         let avoidanceType = avoidanceTypeForIndexPath(indexPath)
         let avoidanceValue = avoidanceValueForReductionType(avoidanceType)
         
+        cell?.effectImageView.image = avoidanceType.image
         cell?.effectLabel.attributedText = NSAttributedString(string: avoidanceType.rawValue + ": " + "\(avoidanceValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func configureReductionCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
         let reductionType = reductionTypeForIndexPath(indexPath)
         let reductionValue = reductionValueForReductionType(reductionType)
-                
+        
+        cell?.effectImageView.image = reductionType.image
         cell?.effectLabel.attributedText = NSAttributedString(string: reductionType.rawValue + ": " + "\(reductionValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
@@ -95,6 +97,7 @@ class EffectsTableViewController: UITableViewController {
         let modifierType = attackModifierTypeForIndexPath(indexPath)
         let modifierValue = attackModifierValueForModifierType(modifierType)
         
+        cell?.effectImageView.image = modifierType.image
         cell?.effectLabel.attributedText = NSAttributedString(string: modifierType.rawValue + ": " + "\(modifierValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
