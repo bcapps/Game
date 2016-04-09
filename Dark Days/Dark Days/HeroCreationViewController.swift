@@ -117,8 +117,17 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         } else if let object = object as? Stat {
             selectedStats.append(object)
             
+            switch heroBuilder.race.raceType {
+            case .Human:
+                let remainingStats = 2 - selectedStats.count
+                title = "Choose Stats (\(remainingStats))"
+            default: break
+            }
+            
             if selectedStats.count < 2 && heroBuilder.race.raceType == .Human {
                 nextButton.enabled = false
+            } else {
+                title = "Stats Chosen"
             }
         } else if let object = object as? MagicType {
             switch object.status {
@@ -138,6 +147,13 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         if let object = object as? Stat {
             selectedStats.removeObject(object)
             nextButton.enabled = false
+            
+            switch heroBuilder.race.raceType {
+            case .Human:
+                let remainingStats = 2 - selectedStats.count
+                title = "Choose Stats (\(remainingStats))"
+            default: break
+            }
         }
     }
     
@@ -150,7 +166,11 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         let statListViewController = ListViewController<Stat>(sections: [section], delegate: self)
         statListViewController.tableView.allowsMultipleSelection = heroBuilder.race.raceType == .Human
         statListViewController.imageContentInset = listEdgeInsets()
-        title = "Choose Stat"
+        
+        switch heroBuilder.race.raceType {
+        case .Human: title = "Choose Stats (2)"
+        default: title = "Choose Stat"
+        }
         
         switchToViewController(statListViewController)
     }
