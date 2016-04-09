@@ -12,13 +12,14 @@ import AZDropdownMenu
 final class DropdownMenuFactory {
     
     static func heroDropdownMenu() -> AZDropdownMenu {
-        guard let inventoryImage = UIImage(named: "Inventory"), spellbookImage = UIImage(named: "Spellbook"), skillImage = UIImage(named: "Skills") else { return AZDropdownMenu(dataSource: []) }
+        guard let inventoryImage = UIImage(named: "Inventory"), spellbookImage = UIImage(named: "Spellbook"), skillImage = UIImage(named: "Skills"), effectsImage = UIImage(named: "EffectsListIcon") else { return AZDropdownMenu(dataSource: []) }
         
         let inventoryItem = AZDropdownMenuItemData(title: "Inventory", icon: inventoryImage)
         let spellbookItem = AZDropdownMenuItemData(title: "Spellbook", icon: spellbookImage)
         let skillsItem = AZDropdownMenuItemData(title: "Skills", icon: skillImage)
+        let effectsMenu = AZDropdownMenuItemData(title: "Show/Hide Effects", icon: effectsImage)
         
-        let menu = AZDropdownMenu(dataSource: [inventoryItem, spellbookItem, skillsItem])
+        let menu = AZDropdownMenu(dataSource: [inventoryItem, spellbookItem, skillsItem, effectsMenu])
         customizeMenu(menu)
         
         return menu

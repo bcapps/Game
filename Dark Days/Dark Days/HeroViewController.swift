@@ -154,6 +154,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                     self?.presentSpellsList()
                 case 2:
                     self?.presentsSkillsList()
+                case 3:
+                    guard let hidden = self?.effectsViewController?.view.hidden else { return }
+                    
+                    self?.setEffectsViewHidden(!hidden) // swiftlint:disable:this force_unwrapping
                 default:
                     print("No Action")
                 }
@@ -260,6 +264,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         paragraphStyle.lineBreakMode = .ByTruncatingTail
                 
         goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
+    }
+    
+    private func setEffectsViewHidden(hidden: Bool) {
+        effectsViewController?.view.hidden = hidden
     }
     
     //MARK: UICollectionViewDataSource

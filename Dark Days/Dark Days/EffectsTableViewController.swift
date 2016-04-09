@@ -43,11 +43,11 @@ class EffectsTableViewController: UITableViewController {
     private func titleForSection(section: Int) -> String? {
         switch section {
         case EffectSections.Attack.rawValue:
-            return "+ Attack"
+            return "Attack"
         case EffectSections.Avoidance.rawValue:
-            return "+ Avoid"
+            return "Avoid"
         case EffectSections.Reduction.rawValue:
-            return "- Reduce"
+            return "Reduce"
         default:
             return nil
         }
