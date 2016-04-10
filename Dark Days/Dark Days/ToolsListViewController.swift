@@ -182,4 +182,5 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
 }

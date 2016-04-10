@@ -26,7 +26,7 @@ enum ItemSlot: String {
     static let allValues = [Accessory, Boots, Chest, Hand, Helmet, None]
 }
 
-final class Item: Decodable, Nameable, Codeable {
+final class Item: Decodable, Nameable, Codeable, Equatable {
     typealias CoderType = ItemCoder
     
     let name: String
@@ -67,6 +67,10 @@ final class Item: Decodable, Nameable, Codeable {
         self.damageAvoidances = damageAvoidances
         self.attackModifiers = attackModifiers
     }
+}
+
+func == (lhs: Item, rhs: Item) -> Bool {
+    return lhs.name == rhs.name
 }
 
 final class ItemCoder: NSObject, Coder {

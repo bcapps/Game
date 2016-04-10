@@ -112,8 +112,8 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return "Multipeer Heroes"
-        case 1: return "Local Heroes"
+        case 0: return peers.isNotEmpty ? "Multipeer Heroes" : nil
+        case 1: return localHeroes.isNotEmpty ? "Local Heroes" : nil
         default: return nil
         }
     }

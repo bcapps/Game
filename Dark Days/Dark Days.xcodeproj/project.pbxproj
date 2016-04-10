@@ -35,6 +35,8 @@
 		C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */; };
 		C3BC40481C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */; };
 		C3BC40491C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */; };
+		F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
+		F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
@@ -304,6 +306,7 @@
 		C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
 		C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerMessaging.swift; sourceTree = "<group>"; };
 		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F2063A681CB8992900494184 /* HeroToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroToolsViewController.swift; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -751,6 +754,7 @@
 				F2D458171C85452300751635 /* DropdownMenuFactory.swift */,
 				F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */,
 				F26C01F81CB1A16B00907164 /* EffectCell.swift */,
+				F2063A681CB8992900494184 /* HeroToolsViewController.swift */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -1103,6 +1107,7 @@
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
 				F25187941C922B9B003AD636 /* DismissSegue.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
+				F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */,
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
 				F21ECE381C7A7254008041E9 /* Item.swift in Sources */,
 				F251876E1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
@@ -1200,6 +1205,7 @@
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
 				F25187B01C922BB3003AD636 /* ListDataSource.swift in Sources */,
 				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
+				F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */,

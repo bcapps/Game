@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Skill: Decodable, Nameable, Codeable {
+struct Skill: Decodable, Nameable, Codeable, Equatable {
     typealias CoderType = SkillCoder
     
     let name: String
@@ -21,6 +21,10 @@ struct Skill: Decodable, Nameable, Codeable {
             explanation: json => "explanation",
             benefit: json => "benefit")
     }
+}
+
+func == (lhs: Skill, rhs: Skill) -> Bool {
+    return lhs.name == rhs.name
 }
 
 final class SkillCoder: NSObject, Coder {

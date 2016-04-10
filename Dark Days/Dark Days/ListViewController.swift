@@ -12,6 +12,7 @@ protocol ListViewControllerDelegate: class {
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool
+    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T)
 }
 
 // custom initializer that takes objects.
@@ -72,6 +73,18 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         guard let object = dataSource?.objectForIndexPath(indexPath) else { return }
         
         listDelegate?.didDeselectObject(self, object: object)
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Remove") { action, indexPath in
+            guard let object = self.dataSource?.objectForIndexPath(indexPath) else { return }
+            
+            self.listDelegate?.removeObject(self, object: object)
+            
+            self.tableView.reloadData()
+        }
+        
+        return [deleteAction]
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

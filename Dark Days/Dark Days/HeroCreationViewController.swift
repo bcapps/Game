@@ -157,6 +157,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         }
     }
     
+    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    
     private func transitionToStatList() {
         selectedStats.removeAll()
         currentCreationState = .ChooseAttributes

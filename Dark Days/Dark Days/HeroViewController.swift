@@ -65,6 +65,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         collectionViewFlowLayout.itemSize = CGSize(width: (CGRectGetWidth(view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateGoldText()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let _ = segue.destinationViewController.view
         
@@ -158,6 +164,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                     guard let hidden = self?.effectsViewController?.view.hidden else { return }
                     
                     self?.setEffectsViewHidden(!hidden) // swiftlint:disable:this force_unwrapping
+                case 4:
+                    self?.presentHeroTools()
                 default:
                     print("No Action")
                 }
@@ -240,6 +248,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         replaceChildViewController(presentedOverlayController, newViewController: containingViewController, animationDuration: animationDuration)
         presentedOverlayController = containingViewController
+    }
+    
+    private func presentHeroTools() {
+        let tools = HeroToolsViewController()
+        tools.hero = hero
+        
+        let navController = UINavigationController(rootViewController: tools)
+        navController.navigationBar.barStyle = .Black
+        
+        presentViewController(navController, animated: true, completion: nil)
     }
     
     func dismissOverlay() {
@@ -327,6 +345,42 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
+    
+    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+        if let item = object as? Item {
+            hero?.inventory.items.removeObject(item)
+            
+            guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
+            
+            var sections = [SectionList<T>]()
+            
+            for slot in ItemSlot.allValues {
+                let slottedItems = items.filter { $0.itemSlot == slot }.filter { $0 is T}.map { $0 as! T } // swiftlint:disable:this force_cast
+                let sectionList = SectionList(sectionTitle: nil, objects: slottedItems)
+                
+                sections.append(sectionList)
+            }
+            
+            listViewController.sections = sections
+            
+        } else if let skill = object as? Skill {
+            hero?.skills.removeObject(skill)
+
+            guard let skills = hero?.skills.sortedElementsByName else { return }
+            let castedSkills = skills.filter { $0 is T }.map { $0 as! T } // swiftlint:disable:this force_cast
+            
+            listViewController.sections = [SectionList<T>(sectionTitle: nil, objects: castedSkills)]
+        } else if let spell = object as? Spell {
+            hero?.spells.removeObject(spell)
+            
+            guard let spells = hero?.spells.sortedElementsByName else { return }
+            let castedSpells = spells.filter { $0 is T }.map { $0 as! T } // swiftlint:disable:this force_cast
+            
+            listViewController.sections = [SectionList<T>(sectionTitle: nil, objects: castedSpells)]
+        }
+        
+        saveHero()
+    }
     
     // MARK: LCKMultipeerEventListener
     

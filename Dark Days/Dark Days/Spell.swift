@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct Spell: Decodable, Codeable, Nameable {
+struct Spell: Decodable, Codeable, Nameable, Equatable {
     typealias CoderType = SpellCoder
 
     let name: String
@@ -23,6 +23,10 @@ struct Spell: Decodable, Codeable, Nameable {
             effects: json => "effects",
             flavor: json => "flavor")
     }
+}
+
+func == (lhs: Spell, rhs: Spell) -> Bool {
+    return lhs.name == rhs.name
 }
 
 final class SpellCoder: NSObject, Coder {
