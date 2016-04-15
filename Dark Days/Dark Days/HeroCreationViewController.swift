@@ -19,7 +19,10 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         case ChooseGod
     }
     
-    @IBOutlet weak var nextButton: UIBarButtonItem!
+    var nextButton: UIBarButtonItem! {
+        return navigationItem.rightBarButtonItem
+    }
+    
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
@@ -130,12 +133,17 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
                 title = "Stats Chosen"
             }
         } else if let object = object as? MagicType {
+            let title: String
+            
             switch object.status {
                 case .Mundane:
-                    nextButton.title = "Done"
+                    title = "Done"
                 case .Gifted:
-                    nextButton.title = "Next"
+                    title = "Next"
             }
+            
+            let barButtonItem = UIBarButtonItem(title: title, style: .Done, target: self, action: .NextButtonTappedSelector)
+            navigationItem.setRightBarButtonItem(barButtonItem, animated: true)
 
             heroBuilder.magicType = object
         } else if let object = object as? God {
@@ -206,6 +214,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         nameHero.genderSelectionChanged = { gender in
             self.heroGender = gender
         }
+        
+        title = "Name Hero"
         
         switchToViewController(nameHero)
     }
@@ -352,4 +362,8 @@ private extension Race {
             return nil
         }
     }
+}
+
+private extension Selector {
+    static let NextButtonTappedSelector = #selector(HeroCreationViewController.nextButtonTapped(_:))
 }

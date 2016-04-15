@@ -13,12 +13,6 @@ final class StatCell: UICollectionViewCell {
     @IBOutlet weak var statTitle: UILabel!
     @IBOutlet weak var statValue: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setupStatCell()
-    }
-    
     override var highlighted: Bool {
         didSet {
             if highlighted {
@@ -27,9 +21,5 @@ final class StatCell: UICollectionViewCell {
                 alpha = 1.0
             }
         }
-    }
-    
-    private func setupStatCell() {
-        
     }
 }

@@ -47,7 +47,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.keyboardDismissMode = .Interactive
-
+        
         reloadDataSource()
         
         tableView.customize()

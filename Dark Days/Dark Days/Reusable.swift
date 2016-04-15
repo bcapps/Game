@@ -14,8 +14,7 @@ protocol Reusable {
 
 extension Reusable {
     static var reuseIdentifier: String {
-        let mirror = Mirror(reflecting: self)
-        return String(mirror.subjectType)
+        return String(Mirror(reflecting: self).subjectType)
     }
 }
 
@@ -53,7 +52,6 @@ extension UITableView {
             return dequeueReusableCellWithIdentifier(T.reuseIdentifier) as? T
         case .HeaderFooter:
             return dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as? T
-            
         }
     }
 }

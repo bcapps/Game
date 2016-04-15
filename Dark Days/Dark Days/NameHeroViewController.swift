@@ -35,6 +35,8 @@ final class NameHeroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        nameField.attributedPlaceholder = .attributedStringWithSmallAttributes("Name Hero")
         nameField.becomeFirstResponder()
     }
 }

@@ -491,8 +491,8 @@
 		C3AB8F3B1C7CF3F2007CE0BA /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F26C01E31CAF4ACE00907164 /* ContainingVC */,
 				C30460B61C7E1F8200A7DB63 /* ListViewController.swift */,
+				F26C01E31CAF4ACE00907164 /* ContainingVC */,
 				F25187811C922B15003AD636 /* DM Toolkit */,
 				F25187761C921417003AD636 /* Multipeer */,
 				F2350B941C82412600D6E18E /* Hero List */,
@@ -1407,7 +1407,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twig.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1425,7 +1425,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twig.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
 			};

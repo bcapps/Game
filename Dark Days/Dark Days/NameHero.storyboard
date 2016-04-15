@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Name Hero View Controller-->
+        <!--Name Hero-->
         <scene sceneID="nNr-bF-jYl">
             <objects>
-                <viewController id="eNT-jL-Bs3" customClass="NameHeroViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Name Hero" id="eNT-jL-Bs3" customClass="NameHeroViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8dK-6q-LaX"/>
                         <viewControllerLayoutGuide type="bottom" id="kPc-up-79N"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Xm-dh-Zj2">
-                                <rect key="frame" x="26" y="30" width="268" height="30"/>
+                                <rect key="frame" x="26" y="45" width="268" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
@@ -40,7 +40,11 @@
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-gs-UUC">
-                                <rect key="frame" x="102" y="85" width="117" height="29"/>
+                                <rect key="frame" x="85.5" y="120" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Fm2-gw-PRa"/>
+                                    <constraint firstAttribute="height" constant="34" id="gRb-Zf-pgg"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
@@ -53,10 +57,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DQ5-gs-UUC" firstAttribute="centerX" secondItem="WnB-U1-MAs" secondAttribute="centerX" id="9JF-I5-Ser"/>
-                            <constraint firstItem="1Xm-dh-Zj2" firstAttribute="top" secondItem="8dK-6q-LaX" secondAttribute="bottom" constant="10" id="XcT-Lw-m4X"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="DQ5-gs-UUC" secondAttribute="trailing" constant="10" id="Z2W-wt-Wck"/>
-                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="top" secondItem="1Xm-dh-Zj2" secondAttribute="bottom" constant="25" id="ZnB-mf-Cuv"/>
-                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WnB-U1-MAs" secondAttribute="leadingMargin" constant="10" id="pP4-Lk-Lx9"/>
+                            <constraint firstItem="1Xm-dh-Zj2" firstAttribute="top" secondItem="8dK-6q-LaX" secondAttribute="bottom" constant="25" id="XcT-Lw-m4X"/>
+                            <constraint firstItem="DQ5-gs-UUC" firstAttribute="top" secondItem="1Xm-dh-Zj2" secondAttribute="bottom" constant="45" id="ZnB-mf-Cuv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Xm-dh-Zj2" secondAttribute="trailing" constant="10" id="u8h-bi-Zdb"/>
                             <constraint firstItem="1Xm-dh-Zj2" firstAttribute="leading" secondItem="WnB-U1-MAs" secondAttribute="leadingMargin" constant="10" id="xF5-y1-Io4"/>
                         </constraints>
