@@ -22,7 +22,7 @@ final class HeroBuilder {
         let inventory = Inventory(gold: 0, items: ObjectProvider.objectsForJSON("Items"))
         
         if let startingItem = ObjectProvider.itemForName("Clothes") {
-            startingItem.equipped = true
+            startingItem.equippedSlot = .Chest
             inventory.items.append(startingItem)
         }
         

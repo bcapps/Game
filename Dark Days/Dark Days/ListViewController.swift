@@ -33,8 +33,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     
     var imageContentInset: UIEdgeInsets?
     
+    typealias DidSelectObject = (object: T) -> ()
+    
     private weak var listDelegate: ListViewControllerDelegate?
     private var dataSource: ListDataSource<T, InfoCell>?
+    
+    var didSelectClosure: DidSelectObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +69,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let object = dataSource?.objectForIndexPath(indexPath) else { return }
+        
+        didSelectClosure?(object: object)
         
         listDelegate?.didSelectObject(self, object: object)
     }

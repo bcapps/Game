@@ -10,6 +10,8 @@ import UIKit
 
 final class EquipmentButton: UIButton {
     var slot = ItemSlot.None
+    var equipmentSlot = EquipmentSlot.None
+    
     var item: Item? {
         didSet {
             if let name = item?.name {
@@ -27,5 +29,17 @@ final class EquipmentButton: UIButton {
         
         imageView?.tintColor = UIColor(white: 0.5, alpha: 0.4)
         backgroundColor = UIColor(white: 0.7, alpha: 0.15)
+    }
+}
+
+extension EquipmentButton {
+    enum EquipmentSlot: Int {
+        case None
+        case Helmet
+        case Chest
+        case Boots
+        case Accessory
+        case LeftHand
+        case RightHand
     }
 }

@@ -14,7 +14,7 @@ final class Inventory {
     
     var equippedItems: [Item] {
         get {
-            return items.filter({$0.equipped == true})
+            return items.filter({$0.equippedSlot != .None})
         }
     }
     

@@ -86,7 +86,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         if let item = button.item {
             presentItem(item)
         } else {
-            presentItemList(button.slot)
+            presentItemList(button)
         }
     }
     
@@ -111,6 +111,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         rightHandButton.slot = .Hand
         chestButton.slot = .Chest
         bootsButton.slot = .Boots
+        
+        helmetButton.equipmentSlot = .Helmet
+        accessoryButton.equipmentSlot = .Accessory
+        leftHandButton.equipmentSlot = .LeftHand
+        rightHandButton.equipmentSlot = .RightHand
+        chestButton.equipmentSlot = .Chest
+        bootsButton.equipmentSlot = .Boots
     }
     
     private func updateEquippedItems() {
@@ -127,7 +134,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
         
         for item in equippedItems {
-            guard let equipmentButton = freeEquipmentButtonForItemSlot(item.itemSlot) else { continue }
+            guard let equipmentButton = equipmentButton(item.equippedSlot) else { continue }
             
             equipmentButton.item = item
         }
@@ -136,18 +143,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         effectsViewController?.tableView?.reloadData()
     }
     
-    private func freeEquipmentButtonForItemSlot(slot: ItemSlot) -> EquipmentButton? {
-        for equipmentButton in equipmentButtons {
-            if equipmentButton.slot == slot && equipmentButton.item == nil {
-                return equipmentButton
-            }
-        }
-        
-        return nil
+    private func equipmentButton(equipmentSlot: EquipmentButton.EquipmentSlot) -> EquipmentButton? {
+        return equipmentButtons.filter { $0.equipmentSlot == equipmentSlot }.first
     }
     
-    private func equipmentButtonsForItemSlot(slot: ItemSlot) -> [EquipmentButton] {
-        return equipmentButtons.filter { $0.slot == slot }
+    private func equipmentButtons(itemSlot: ItemSlot) -> [EquipmentButton] {
+        return equipmentButtons.filter { $0.slot == itemSlot }
     }
     
     private func addMenuTapHandlers() {
@@ -176,7 +177,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentItem(item: Item) {
         var button: UnequipButton?
         
-        if item.equipped {
+        if item.equippedSlot != .None {
             button = UnequipButton(item: item)
             button?.addTarget(self, action: .unequipItem, forControlEvents: .TouchUpInside)
         }
@@ -185,7 +186,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentItemList() {
-        guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
+        guard let items = hero?.inventory.items.filter({$0.equippedSlot == .None}) else { return }
         
         var sections = [SectionList<Item>]()
         
@@ -193,13 +194,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             sections.append(SectionList(sectionTitle: nil, objects: items.filter { $0.itemSlot == slot }))
         }
         
-        showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: true)        
+        showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: false)
     }
     
-    private func presentItemList(itemSlot: ItemSlot) {
-        guard let items = hero?.inventory.items.filter({$0.itemSlot == itemSlot && $0.equipped == false}) else { return }
+    private func presentItemList(equipmentButton: EquipmentButton) {
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == equipmentButton.slot && $0.equippedSlot == .None}) else { return }
         
-        showList(items, title: itemSlot.rawValue, allowsSelection: true)
+        showList(items, title: equipmentButton.slot.rawValue, allowsSelection: true, equipmentButton: equipmentButton)
     }
     
     private func presentsSkillsList() {
@@ -221,16 +222,21 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false) {        
+    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) {
         let section = SectionList<T>(sectionTitle: nil, objects: objects.sortedElementsByName)
         
-        showListWithSections([section], title: title, allowsSelection: allowsSelection)
+        showListWithSections([section], title: title, allowsSelection: allowsSelection, equipmentButton: equipmentButton)
     }
     
-    private func showListWithSections<T: ListDisplayingGeneratable where T: Nameable>(sections: [SectionList<T>], title: String, allowsSelection: Bool = false) {
+    private func showListWithSections<T: ListDisplayingGeneratable where T: Nameable>(sections: [SectionList<T>], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) {
         let list = ListViewController<T>(sections: sections, delegate: self)
         list.title = title
         list.tableView.allowsSelection = allowsSelection
+        
+        list.didSelectClosure = { [weak self] object in
+            guard let equipmentButton = equipmentButton else { return }
+            self?.didSelectObject(object, equipmentButton: equipmentButton)
+        }
         
         presentListViewController(list)
     }
@@ -268,7 +274,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func unequipItem(button: UnequipButton) {
-        button.item.equipped = false
+        button.item.equippedSlot = .None
         updateEquippedItems()
         
         dismissOverlay()
@@ -314,26 +320,24 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     //MARK: ListViewControllerDelegate
     
-    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: ListDisplayingGeneratable>(object: T, equipmentButton: EquipmentButton) {
         if let item = object as? Item {
             switch item.itemSlot {
                 case .Hand:
                     if item.twoHanded {
-                        leftHandButton.item?.equipped = false
-                        rightHandButton.item?.equipped = false
+                        leftHandButton.item?.equippedSlot = .None
+                        rightHandButton.item?.equippedSlot = .None
                     } else if let leftHandItem = leftHandButton.item where leftHandItem.twoHanded {
-                        leftHandButton.item?.equipped = false
+                        leftHandButton.item?.equippedSlot = .None
                     } else if let rightHandItem = rightHandButton.item where rightHandItem.twoHanded {
-                        rightHandButton.item?.equipped = false
-                    } else {
-                        rightHandButton.item?.equipped = false
+                        rightHandButton.item?.equippedSlot = .None
                     }
                 default:
-                    let equipmentButton = equipmentButtonsForItemSlot(item.itemSlot).first
-                    equipmentButton?.item?.equipped = false
+                    let equipmentButton = equipmentButtons(item.itemSlot).first
+                    equipmentButton?.item?.equippedSlot = .None
             }
             
-            item.equipped = true
+            item.equippedSlot = equipmentButton.equipmentSlot
             
             updateEquippedItems()
             saveHero()
@@ -341,6 +345,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
+    
+    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
     
@@ -350,7 +356,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         if let item = object as? Item {
             hero?.inventory.items.removeObject(item)
             
-            guard let items = hero?.inventory.items.filter({$0.equipped == false}) else { return }
+            guard let items = hero?.inventory.items.filter({$0.equippedSlot == .None}) else { return }
             
             var sections = [SectionList<T>]()
             

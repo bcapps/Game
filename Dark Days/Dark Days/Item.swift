@@ -40,7 +40,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let damageAvoidances: [DamageAvoidance]
     let attackModifiers: [AttackModifier]
     
-    var equipped = false
+    var equippedSlot = EquipmentButton.EquipmentSlot.None
     
     static func decode(json: AnyObject) throws -> Item {        
         return try Item(name: json => "name",
@@ -78,7 +78,7 @@ final class ItemCoder: NSObject, Coder {
     
     private enum Keys: String {
         case Name
-        case Equipped
+        case EquippedSlot
     }
     
     var value: Item?
@@ -90,18 +90,18 @@ final class ItemCoder: NSObject, Coder {
     
     required init?(coder aDecoder: NSCoder) {
         let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let equipped = aDecoder.decodeBoolForKey(Keys.Equipped.rawValue)
+        let equipped = aDecoder.decodeIntegerForKey(Keys.EquippedSlot.rawValue)
         
         guard let name = rawName else { return nil }
         
         value = ObjectProvider.itemForName(name)
-        value?.equipped = equipped
+        value?.equippedSlot = EquipmentButton.EquipmentSlot(rawValue: equipped) ?? .None
         
         super.init()
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeBool(value?.equipped ?? false, forKey: Keys.Equipped.rawValue)
+        aCoder.encodeInteger(value?.equippedSlot.rawValue ?? EquipmentButton.EquipmentSlot.None.rawValue, forKey: Keys.EquippedSlot.rawValue)
     }
 }
