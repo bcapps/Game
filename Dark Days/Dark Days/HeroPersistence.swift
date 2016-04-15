@@ -27,17 +27,9 @@ final class HeroPersistence {
     }
     
     func allPersistedHeroes() -> [Hero] {
-        var heroes = [Hero]()
-        
         guard let heroURLs = try? NSFileManager.defaultManager().contentsOfDirectoryAtURL(heroDirectoryURL(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0)) else { return [] }
         
-        for heroURL in heroURLs {
-            guard let hero = heroForURL(heroURL) else { continue }
-            
-            heroes.append(hero)
-        }
-        
-        return heroes
+        return heroURLs.flatMap { return heroForURL($0) }
     }
     
     private func heroForURL(URL: NSURL) -> Hero? {

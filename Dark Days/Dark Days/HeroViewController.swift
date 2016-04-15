@@ -188,12 +188,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     private func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equippedSlot == .None}) else { return }
         
-        var sections = [SectionList<Item>]()
-        
-        for slot in ItemSlot.allValues {
-            sections.append(SectionList(sectionTitle: nil, objects: items.filter { $0.itemSlot == slot }))
-        }
-        
         showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: false)
     }
     

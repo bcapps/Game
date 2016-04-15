@@ -30,10 +30,6 @@ extension CollectionType where Generator.Element: Codeable, Generator.Element.Co
 
 extension CollectionType where Generator.Element: Coder, Generator.Element.CodeableType: Codeable, Generator.Element.CodeableType.CoderType == Generator.Element {
     var objects: [Generator.Element.CodeableType] {
-        let objectsAndNils = map { element in
-            return element.value
-        }
-        
-        return objectsAndNils.flatMap { $0 }
+        return flatMap { $0.value }
     }
 }
