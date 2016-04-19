@@ -22,6 +22,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var goldLabel: UILabel!
+    @IBOutlet weak var godLabel: UILabel!
     
     var multipeer: LCKMultipeer?
     
@@ -58,6 +59,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         updateEquippedItems()
         updateGoldText()
         addMenuTapHandlers()
+        
+        if let god = hero?.god {
+            godLabel.attributedText = .attributedStringWithSmallAttributes("Follower of " + god.name)
+        }
         
         let itemSpacing = collectionViewFlowLayout.minimumInteritemSpacing
         let numberOfItems = CGFloat(5)
