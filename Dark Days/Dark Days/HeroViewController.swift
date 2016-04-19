@@ -71,6 +71,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         updateGoldText()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        menu.close()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let _ = segue.destinationViewController.view
         

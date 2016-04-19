@@ -1,7 +1,7 @@
 [{
  "name": "Reflect",
  "damage": "Monster Damage + [FAI]",
- "effects": "Casts a barrier on one target ally, reflecting the next attack targeted on that ally.",
+ "effects": "Casts a barrier on one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d4 + [FAI] damage.",
  "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
  }, {
  "name": "Inspire",
@@ -16,7 +16,7 @@
  }, {
  "name": "Blind",
  "damage": "",
- "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4.",
+ "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]).",
  "flavor": "Sometimes darkness can be beautiful."
  }, {
  "name": "Shadow Stalker",
@@ -26,26 +26,26 @@
  }, {
  "name": "Paranoia",
  "damage": "1d4 + [FAI]",
- "effects": "Stuns the target for 1 round.",
+ "effects": "Stuns the target for 1 round (DC 8 + [FAI]).",
  "flavor": "My head is a very dark place. Soon yours will be as well."
  }, {
  "name": "Agonizing Bond",
  "damage": "",
- "effects": "Bonds two enemies together, and damage dealt to one, is dealt to the other as well.",
- "flavor": "Your numbers do nothing but increase my strength."
+ "effects": "Bonds two enemies together. Damage dealt to one is dealt to the other as well.",
+ "flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
  }, {
  "name": "Fiendfyre",
  "damage": "1d6 + [FAI]",
- "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action.",
+ "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]).",
  "flavor": "My fire will teach you to fear the light."
  }, {
  "name": "Dolo's Fury",
  "damage": "",
  "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points.",
- "flavor": "Monsters are real. They live inside us, and sometimes, they win."
+ "flavor": "Monsters are real. They live inside us. And sometimes, they win."
  }, {
  "name": "Thorn Bind",
  "damage": "1d4 + [FAI]",
- "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional 1d4 damage each round until they break free.",
- "flavor": "Monsters are real. They live inside us, and sometimes, they win."
+ "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional 1d4 damage each round until they break free (DC 12 + [FAI]).",
+ "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
  }]
