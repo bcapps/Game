@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,7 +54,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Send Gold" id="BdA-5N-wBe">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Send" id="pPR-wN-hfy">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Send" style="done" id="pPR-wN-hfy">
                             <connections>
                                 <action selector="sendGoldButtonTapped:" destination="PkY-Zw-3ov" id="xWr-K8-ZpS"/>
                             </connections>

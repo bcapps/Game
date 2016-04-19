@@ -17,6 +17,14 @@ final class SendGoldViewController: UIViewController {
     
     var sendGoldTapped: SendGoldButtonTappedBlock?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "Get Gold"
+        goldTextField.becomeFirstResponder()
+        goldTextField.attributedPlaceholder = .attributedStringWithSmallAttributes("0")
+    }
+    
     @IBAction func textFieldDidChange(sender: UITextField) {
         guard let text = sender.text else { return }
         sendGoldButton.enabled = !text.isEmpty
