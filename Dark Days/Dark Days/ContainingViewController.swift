@@ -32,7 +32,7 @@ class ContainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        view.backgroundColor = UIColor(white: 0.0, alpha: 0.75)
         
         insetView.layer.cornerRadius = 12.0
         insetView.layer.borderWidth = 1.0

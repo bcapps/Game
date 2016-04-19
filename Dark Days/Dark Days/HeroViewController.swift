@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AZDropdownMenu
+import REMenu
 
 final class HeroViewController: UIViewController, ListViewControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, LCKMultipeerEventListener {
     @IBOutlet weak var helmetButton: EquipmentButton!
@@ -91,11 +91,17 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
-        if menu.isDescendantOfView(view) {
-            menu.hideMenu()
+        if menu.isOpen {
+            menu.close()
         } else {
-            menu.showMenuFromView(view)
+            menu.showFromNavigationController(navigationController)
         }
+        
+//        if menu.isDescendantOfView(view) {
+//            menu.hideMenu()
+//        } else {
+//            menu.showMenuFromView(view)
+//        }
     }
     
     func saveHero() {
@@ -152,25 +158,34 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func addMenuTapHandlers() {
-        menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
-            NSOperationQueue.mainQueue().addOperationWithBlock({ 
-                switch indexPath.row {
-                case 0:
+        for (index, item) in menu.items.enumerate() {
+            guard let item = item as? REMenuItem else { continue }
+            
+            switch index {
+            case 0:
+                item.action = { [weak self] item in
                     self?.presentItemList()
-                case 1:
-                    self?.presentSpellsList()
-                case 2:
-                    self?.presentsSkillsList()
-                case 3:
-                    guard let hidden = self?.effectsViewController?.view.hidden else { return }
-                    
-                    self?.setEffectsViewHidden(!hidden) // swiftlint:disable:this force_unwrapping
-                case 4:
-                    self?.presentHeroTools()
-                default:
-                    print("No Action")
                 }
-            })
+            case 1:
+                item.action = { [weak self] item in
+                    self?.presentSpellsList()
+                }
+            case 2:
+                item.action = { [weak self] item in
+                    self?.presentsSkillsList()
+                }
+            case 3:
+                item.action = { [weak self] item in
+                    guard let hidden = self?.effectsViewController?.view.hidden else { return }
+                    self?.setEffectsViewHidden(!hidden) // swiftlint:disable:this force_unwrapping
+                }
+            case 4:
+                item.action = { [weak self] item in
+                    self?.presentHeroTools()
+                }
+            default:
+                print("No Action")
+            }
         }
     }
     

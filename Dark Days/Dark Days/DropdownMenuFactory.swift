@@ -7,30 +7,32 @@
 //
 
 import Foundation
-import AZDropdownMenu
+import REMenu
 
 final class DropdownMenuFactory {
     
-    static func heroDropdownMenu() -> AZDropdownMenu {
-        guard let inventoryImage = UIImage(named: "Inventory"), spellbookImage = UIImage(named: "Spellbook"), skillImage = UIImage(named: "Skills"), effectsImage = UIImage(named: "EffectsListIcon"), heroToolsImage = UIImage(named: "HeroTools") else { return AZDropdownMenu(dataSource: []) }
+    static func heroDropdownMenu() -> REMenu {
+        guard let inventoryImage = UIImage(named: "Inventory"), spellbookImage = UIImage(named: "Spellbook"), skillImage = UIImage(named: "Skills"), effectsImage = UIImage(named: "EffectsListIcon"), heroToolsImage = UIImage(named: "HeroTools") else { return REMenu() }
         
-        let inventoryItem = AZDropdownMenuItemData(title: "Inventory", icon: inventoryImage)
-        let spellbookItem = AZDropdownMenuItemData(title: "Spellbook", icon: spellbookImage)
-        let skillsItem = AZDropdownMenuItemData(title: "Skills", icon: skillImage)
-        let effectsMenu = AZDropdownMenuItemData(title: "Show/Hide Effects", icon: effectsImage)
-        let heroTools = AZDropdownMenuItemData(title: "Hero Tools", icon: heroToolsImage)
+        let inventoryItem = REMenuItem(title: "Inventory", subtitle: nil, image: inventoryImage, highlightedImage: nil, action: nil)
+        let spellbookItem = REMenuItem(title: "Spellbook", subtitle: nil, image: spellbookImage, highlightedImage: nil, action: nil)
+        let skillsItem = REMenuItem(title: "Skills", subtitle: nil, image: skillImage, highlightedImage: nil, action: nil)
+        let effectsMenu = REMenuItem(title: "Show/Hide Effects", subtitle: nil, image: effectsImage, highlightedImage: nil, action: nil)
+        let heroTools = REMenuItem(title: "Hero Tools", subtitle: nil, image: heroToolsImage, highlightedImage: nil, action: nil)
+
+        let menu = REMenu(items: [inventoryItem, spellbookItem, skillsItem, effectsMenu, heroTools])
         
-        let menu = AZDropdownMenu(dataSource: [inventoryItem, spellbookItem, skillsItem, effectsMenu, heroTools])
         customizeMenu(menu)
         
         return menu
     }
     
-    static func customizeMenu(menu: AZDropdownMenu) {
-        menu.itemColor = .backgroundColor()
-        menu.itemFontColor = .headerTextColor()
-        menu.itemFontName = UIFont.headingFont().fontName
-        menu.itemFontSize = UIFont.headingFont().pointSize
+    static func customizeMenu(menu: REMenu) {
+        menu.font = .headingFont()
+        menu.textColor = .headerTextColor()
+        menu.liveBlur = true
+        menu.liveBlurBackgroundStyle = .Dark
+        menu.closeAnimationDuration = 0.1
         menu.itemHeight = 54
     }
 }
