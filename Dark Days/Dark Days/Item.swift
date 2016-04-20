@@ -39,6 +39,8 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let damageReductions: [DamageReduction]
     let damageAvoidances: [DamageAvoidance]
     let attackModifiers: [AttackModifier]
+    let damageModifiers: [DamageModifier]
+    let skills: [Skill]
     
     var equippedSlot = EquipmentButton.EquipmentSlot.None
     
@@ -52,10 +54,12 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             statEffects: json =>? "statEffects" ?? [],
             damageReductions: json =>? "damageReductions" ?? [],
             damageAvoidances: json =>? "damageAvoidances" ?? [],
-            attackModifiers: json =>? "attackModifier" ?? [])
+            attackModifiers: json =>? "attackModifiers" ?? [],
+            damageModifiers: json =>? "damageModifiers" ?? [],
+            skills: json =>? "skills" ?? [])
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier]) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String]) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -66,6 +70,8 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         self.damageReductions = damageReductions
         self.damageAvoidances = damageAvoidances
         self.attackModifiers = attackModifiers
+        self.damageModifiers = damageModifiers
+        self.skills = skills.flatMap { return ObjectProvider.skillForName($0) }
     }
 }
 
@@ -73,33 +79,33 @@ func == (lhs: Item, rhs: Item) -> Bool {
     return lhs.name == rhs.name
 }
 
-extension Item: Unarchiveable {
-    static var JSONName: String {
-        return "Items"
-    }
-}
-
-
-final class ItemCoder: GenericCoder<Item> {
+final class ItemCoder: NSObject, Coder {
     private enum Keys: String {
+        case Name
         case EquippedSlot
     }
     
-    required init(value: Item) {
-        super.init(value: value)
+    var value: Item?
+    
+    init(value: Item) {
+        self.value = value
+        
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
+        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
         let equipped = aDecoder.decodeIntegerForKey(Keys.EquippedSlot.rawValue)
+        
+        guard let name = rawName else { return nil }
+        
+        value = ObjectProvider.itemForName(name)
         
         value?.equippedSlot = EquipmentButton.EquipmentSlot(rawValue: equipped) ?? .None
     }
     
-    override func encodeWithCoder(aCoder: NSCoder) {
-        super.encodeWithCoder(aCoder)
-        
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
         aCoder.encodeInteger(value?.equippedSlot.rawValue ?? EquipmentButton.EquipmentSlot.None.rawValue, forKey: Keys.EquippedSlot.rawValue)
     }
 }

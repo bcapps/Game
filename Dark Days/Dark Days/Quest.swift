@@ -10,25 +10,50 @@ import Foundation
 import Decodable
 
 struct Quest: Decodable, Codeable, Nameable, Equatable {
-    typealias CoderType = GenericCoder<Quest>
+    typealias CoderType = QuestCoder
     
     let name: String
-    let description: String
+    let explanation: String
+    let notes: String
     let rewards: [String]
     
     static func decode(json: AnyObject) throws -> Quest {
         return try Quest(name: json => "name",
-                         description: json => "description",
+                         explanation: json => "explanation",
+                         notes: json => "notes",
                          rewards: json => "rewards")
-    }
-}
-
-extension Quest: Unarchiveable {
-    static var JSONName: String {
-        return "Quests"
     }
 }
 
 func == (lhs: Quest, rhs: Quest) -> Bool {
     return lhs.name == rhs.name
+}
+
+final class QuestCoder: NSObject, Coder {
+    typealias Codeable = Quest
+    
+    private enum Keys: String {
+        case Name
+    }
+    
+    var value: Quest?
+    
+    init(value: Quest) {
+        self.value = value
+        super.init()
+    }
+    
+    init?(coder aDecoder: NSCoder) {
+        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        
+        guard let name = rawName else { return nil }
+        
+        value = ObjectProvider.questForName(name)
+        
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    }
 }

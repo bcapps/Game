@@ -93,6 +93,12 @@ extension MonsterAttack: ListDisplayingGeneratable {
     }
 }
 
+extension Quest: ListDisplayingGeneratable {
+    static func displayable(quest: Quest) -> ListDisplayable {
+        return ListDisplayable(title: quest.name, information: quest.explanation, additionalInfoTitle: "DM Notes", additionalInfo: quest.notes, subtext: quest.rewards.joinWithSeparator("\n"), image: nil)
+    }
+}
+
 struct ListDisplayable {
     let title: String?
     let information: String?

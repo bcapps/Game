@@ -221,9 +221,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentsSkillsList() {
-        guard let skills = hero?.skills else { return }
+        let itemSkills = hero?.inventory.equippedItems.flatMap { return $0.skills } ?? []
+        let heroSkills = hero?.skills ?? []
         
-        showList(skills, title: "Skills")
+        showList(itemSkills + heroSkills, title: "Skills")
     }
     
     private func presentSpellsList() {

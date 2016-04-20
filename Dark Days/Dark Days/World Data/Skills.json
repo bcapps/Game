@@ -30,4 +30,8 @@
  "name": "Human Perseverance",
  "explanation": "Sometimes there is a benefit to being at the bottom.",
  "benefit": "Anytime you make a Constitution based check, add 1 your roll."
+ }, {
+ "name": "Spider Climbing",
+ "explanation": "The sticky silk of spiders allows movement on any non slippery surface.",
+ "benefit": "Once per day, allows movement on any non slippery wall or ceiling surface."
  }]

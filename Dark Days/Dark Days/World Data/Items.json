@@ -86,9 +86,10 @@
  }, {
  "name": "Spider Boots",
  "damage": "",
- "effects": "Enables movement on non-slippery walls and ceilings.",
- "flavor": "Boots fashions from the tough sinew of the spider queen.",
- "itemSlot": "Boots"
+ "effects": "Grants the Spider Climbing skill, which allows you to walk on walls and ceilings for a limited time.",
+ "flavor": "Boots fashioned from the tough sinew of the spider queen.",
+ "itemSlot": "Boots",
+ "skills": ["Spider Climbing"]
  }, {
  "name": "Iron Helmet",
  "damage": "",
@@ -100,7 +101,7 @@
  }, {
  "name": "Iron Armor",
  "damage": "",
- "effects": "Decreases physical damage taken by 2, but redues chance to avoid an attack by 2.",
+ "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 2.",
  "flavor": "A sturdy metal breastplate.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Physical", "value": 2}],
@@ -117,4 +118,12 @@
  "effects": "",
  "flavor": "A valuable gem, topaz in color.",
  "itemSlot": ""
+ }, {
+ "name": "Vest of Fury",
+ "damage": "",
+ "effects": "Increases physical damage dealt by 2, and reduces physical damage taken by 1.",
+ "flavor": "A leather vest, dyed orange. Retrieved from the corpse of a possessed monk.",
+ "itemSlot": "Chest",
+ "damageReductions": [{"name": "Physical", "value": 1}],
+ "damageModifiers": [{"name": "Physical", "value": 2}]
  }]

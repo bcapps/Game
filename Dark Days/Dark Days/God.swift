@@ -10,7 +10,7 @@ import Foundation
 import Decodable
 
 struct God: Decodable, Nameable, Codeable {
-    typealias CoderType = GenericCoder<God>
+    typealias CoderType = GodCoder
 
     let name: String
     let background: String
@@ -25,8 +25,31 @@ struct God: Decodable, Nameable, Codeable {
     }
 }
 
-extension God: Unarchiveable {
-    static var JSONName: String {
-        return "Gods"
+final class GodCoder: NSObject, Coder {
+    typealias Codeable = God
+    
+    private enum Keys: String {
+        case Name
+    }
+    
+    var value: God?
+    
+    init(value: God) {
+        self.value = value
+        super.init()
+    }
+    
+    init?(coder aDecoder: NSCoder) {
+        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        
+        guard let name = rawName else { return nil }
+        
+        value = ObjectProvider.godForName(name)
+        
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
     }
 }

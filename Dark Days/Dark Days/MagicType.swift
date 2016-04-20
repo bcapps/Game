@@ -10,7 +10,7 @@ import Foundation
 import Decodable
 
 struct MagicType: Decodable, Codeable, Nameable {
-    typealias CoderType = GenericCoder<MagicType>
+    typealias CoderType = MagicTypeCoder
 
     let name: String
     let explanation: String
@@ -40,8 +40,31 @@ extension MagicType {
     }
 }
 
-extension MagicType: Unarchiveable {
-    static var JSONName: String {
-        return "MagicTypes"
+final class MagicTypeCoder: NSObject, Coder {
+    typealias Codeable = MagicType
+    
+    private enum Keys: String {
+        case Name
+    }
+    
+    var value: MagicType?
+    
+    init(value: MagicType) {
+        self.value = value
+        super.init()
+    }
+    
+    init?(coder aDecoder: NSCoder) {
+        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        
+        guard let name = rawName else { return nil }
+        
+        value = ObjectProvider.magicTypeForName(name)
+        
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
     }
 }

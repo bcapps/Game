@@ -9,10 +9,6 @@
 import Foundation
 import Decodable
 
-protocol Unarchiveable {
-    static var JSONName: String { get }    
-}
-
 final class ObjectProvider {
     
     static func objectsForJSON<T: Decodable>(JSONName: String) -> [T] {

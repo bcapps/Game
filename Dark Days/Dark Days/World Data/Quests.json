@@ -1,5 +1,11 @@
 [{
  "name": "Spider Slayers",
- "description": "Kill the spiders!",
- "rewards": ["Spider Chitin"]
+ "explanation": "Initiator: Guard/Tavern Patron\nRumors have spread of livestock disappearing in the night. At first it could be dismissed as wolves roaming the hillside, but more recently there have been reports of entire farms picked clean during the night, animals and men alike. Investigate the Sawyer farm for more clues.",
+ "notes":"Investigating the farm main clues include caustic fluid, and tiny spiders. Tracks lead to a cave in the hills.\nEnemies include: Spider, Large Spider, Spider Queen",
+ "rewards": ["• Spider Chitin"]
+ }, {
+ "name": "The Peaceful Monk",
+ "explanation": "Initiator: Helpful Commoner\nA hermit has taken up residence in a small cave above the town. He asked if I could bring him this basket of fruit, but I'm too busy, and I'm worried he'll run out of food if this doesn't get to him. Can you bring it to him?",
+ "notes":"The monk is NOT peaceful. He is clearly possessed/enraged by magic. Eyes glowing red.\nEnemies include: Possessed Monk.",
+ "rewards": ["• Vest of Fury"]
  }]

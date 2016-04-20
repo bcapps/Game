@@ -24,7 +24,7 @@ class UnequipButton: UIButton {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.item = Item(name: "", damage: "", effects: "", flavor: "", itemSlot: .None, twoHanded: false, statEffects: [], damageReductions: [], damageAvoidances: [], attackModifiers: [])
+        self.item = Item(name: "", damage: "", effects: "", flavor: "", itemSlot: .None, twoHanded: false, statEffects: [], damageReductions: [], damageAvoidances: [], attackModifiers: [], damageModifiers: [], skills: [])
         
         super.init(coder: aDecoder)
     }

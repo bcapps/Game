@@ -18,4 +18,10 @@
  "attacks": [{"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 60},
              {"name": "Trample", "damage": "1d4 Large AOE", "weight": 30},
              {"name": "Poison Spit", "damage": "1d4 poison + 1d4 poison next turn Large AOE", "weight": 10}]
+ }, {
+ "name": "Possessed Monk",
+ "explanation": "A monk possessed by magic. His eyes glow red.",
+ "health": 45,
+ "attacks": [{"name": "Kick", "damage": "1d4", "weight": 70},
+             {"name": "Twin-fist", "damage": "1d4+1d4", "weight": 30}]
  }]

@@ -12,11 +12,11 @@ import XCTest
 class GenericCodingTests: XCTestCase {
 
     func testGenericCodingWorks() {
-        let quest = Quest(name: "Spider Slayers", description: "Description", rewards: [])
-        let genericCoder = GenericCoder<Quest>(value: quest)
+        let quest = Quest(name: "Spider Slayers", explanation: "Description", notes: "notes", rewards: [])
+        let genericCoder = QuestCoder(value: quest)
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(genericCoder)
-        let unarchivedQuestCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? GenericCoder<Quest>
+        let unarchivedQuestCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? QuestCoder
         
         let unarchivedQuest = unarchivedQuestCoder?.value
         

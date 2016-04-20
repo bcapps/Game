@@ -244,10 +244,10 @@
 		F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
 		F28C2B0B1CC7341400E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
 		F28C2B0C1CC7341400E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
-		F28C2B0E1CC7372E00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
-		F28C2B0F1CC7375D00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
-		F28C2B101CC7375D00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
 		F28C2B121CC7379500E106DD /* GenericCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B111CC7379500E106DD /* GenericCodingTests.swift */; };
+		F28C2B141CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
+		F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
+		F28C2B161CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -397,8 +397,8 @@
 		F26C02001CB1D0A400907164 /* AttackModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackModifier.swift; sourceTree = "<group>"; };
 		F28C2B071CC732CA00E106DD /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		F28C2B091CC732DB00E106DD /* Quests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quests.json; path = "World Data/Quests.json"; sourceTree = "<group>"; };
-		F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCoder.swift; sourceTree = "<group>"; };
 		F28C2B111CC7379500E106DD /* GenericCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCodingTests.swift; sourceTree = "<group>"; };
+		F28C2B131CC7431C00E106DD /* DamageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageModifier.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -605,7 +605,6 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
-				F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */,
 				F28C2B061CC732BA00E106DD /* Quests */,
 				F2473B141C8382BE008FD65B /* Spells */,
 				F2350B8B1C8231D600D6E18E /* Magic Type */,
@@ -662,6 +661,7 @@
 				F21ECE331C7A6CD0008041E9 /* Items.json */,
 				F21ECE371C7A7254008041E9 /* Item.swift */,
 				F26C02001CB1D0A400907164 /* AttackModifier.swift */,
+				F28C2B131CC7431C00E106DD /* DamageModifier.swift */,
 				F26C01F01CB197C100907164 /* DamageReduction.swift */,
 				F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */,
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
@@ -1127,7 +1127,6 @@
 				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
-				F28C2B0E1CC7372E00E106DD /* GenericCoder.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
@@ -1158,6 +1157,7 @@
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */,
+				F28C2B141CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F26C01E91CB18B7600907164 /* StatEffect.swift in Sources */,
 				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
@@ -1218,7 +1218,6 @@
 				F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */,
-				F28C2B0F1CC7375D00E106DD /* GenericCoder.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
@@ -1229,6 +1228,7 @@
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
+				F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
@@ -1274,7 +1274,6 @@
 				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
-				F28C2B101CC7375D00E106DD /* GenericCoder.swift in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
@@ -1297,6 +1296,7 @@
 				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F25187BC1C922BB3003AD636 /* ListDataSource.swift in Sources */,
+				F28C2B161CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F21ECDFC1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
