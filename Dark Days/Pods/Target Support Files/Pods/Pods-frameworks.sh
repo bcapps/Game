@@ -84,12 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/CDRTranslucentSideBar.framework"
   install_framework "Pods/Decodable.framework"
   install_framework "Pods/REMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/CDRTranslucentSideBar.framework"
   install_framework "Pods/Decodable.framework"
   install_framework "Pods/REMenu.framework"
 fi
