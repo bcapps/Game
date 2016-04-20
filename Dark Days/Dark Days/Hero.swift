@@ -88,6 +88,23 @@ final class Hero: Codeable, Nameable {
         return avoidanceCounter
     }
     
+    func damageModifierForModifierType(type: DamageModifier.DamageModifierType) -> Int {
+        var damageModifier = 0
+        
+        switch type {
+        case .Physical:
+            damageModifier += statValueForType(.Strength)
+        case .Magical:
+            damageModifier += statValueForType(.Faith)
+        }
+        
+        for item in inventory.equippedItems {
+            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        return damageModifier
+    }
+    
     func attackModifierForModifierType(type: AttackModifier.AttackModifierType) -> Int {
         var attackModifier = 0
         

@@ -10,6 +10,7 @@ import UIKit
 
 class EffectsTableViewController: UITableViewController {
     enum EffectSections: Int {
+        case Damage
         case Attack
         case Avoidance
         case Reduction
@@ -25,6 +26,8 @@ class EffectsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
+        case EffectSections.Damage.rawValue:
+            return DamageModifier.allDamageModifierTypes.count
         case EffectSections.Attack.rawValue:
             return AttackModifier.allAttackModifierTypes.count
         case EffectSections.Avoidance.rawValue:
@@ -37,11 +40,13 @@ class EffectsTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     private func titleForSection(section: Int) -> String? {
         switch section {
+        case EffectSections.Damage.rawValue:
+            return "Damage"
         case EffectSections.Attack.rawValue:
             return "Attack"
         case EffectSections.Avoidance.rawValue:
@@ -64,6 +69,8 @@ class EffectsTableViewController: UITableViewController {
         cell?.backgroundColor = tableView.backgroundColor
         
         switch indexPath.section {
+        case EffectSections.Damage.rawValue:
+            configureDamageCellForIndexPath(cell, indexPath: indexPath)
         case EffectSections.Avoidance.rawValue:
             configureAvoidanceCellForIndexPath(cell, indexPath: indexPath)
         case EffectSections.Reduction.rawValue:
@@ -75,6 +82,14 @@ class EffectsTableViewController: UITableViewController {
         }
         
         return cell ?? UITableViewCell()
+    }
+    
+    private func configureDamageCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
+        let damageType = damageTypeForIndexPath(indexPath)
+        let damageValue = damageModifierValue(damageType)
+        
+        cell?.effectImageView.image = damageType.image
+        cell?.effectLabel.attributedText = NSAttributedString(string: damageType.rawValue + ": " + "\(damageValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func configureAvoidanceCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
@@ -99,6 +114,16 @@ class EffectsTableViewController: UITableViewController {
         
         cell?.effectImageView.image = modifierType.image
         cell?.effectLabel.attributedText = NSAttributedString(string: modifierType.rawValue + ": " + "\(modifierValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+    }
+    
+    private func damageTypeForIndexPath(indexPath: NSIndexPath) -> DamageModifier.DamageModifierType {
+        return DamageModifier.allDamageModifierTypes[indexPath.row]
+    }
+    
+    private func damageModifierValue(type: DamageModifier.DamageModifierType) -> Int {
+        guard let hero = hero else { return 0 }
+        
+        return hero.damageModifierForModifierType(type)
     }
     
     private func avoidanceTypeForIndexPath(indexPath: NSIndexPath) -> DamageAvoidance.AvoidanceType {

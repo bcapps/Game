@@ -27,14 +27,14 @@ extension DamageModifier {
         var image: UIImage? {
             switch self {
             case .Physical:
-                return UIImage(named: "PhysicalAttackModifier")
+                return UIImage(named: "PhysicalDamageModifier")
             case .Magical:
-                return UIImage(named: "MagicalAttackModifier")
+                return UIImage(named: "MagicalDamageModifier")
             }
         }
     }
     
-    static let allAttackModifierTypes: [DamageModifierType] = [.Physical, .Magical]
+    static let allDamageModifierTypes: [DamageModifierType] = [.Physical, .Magical]
     
     var attackModifierType: DamageModifierType {
         switch name {
