@@ -248,6 +248,7 @@
 		F28C2B141CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
 		F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
 		F28C2B161CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
+		F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -399,6 +400,7 @@
 		F28C2B091CC732DB00E106DD /* Quests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quests.json; path = "World Data/Quests.json"; sourceTree = "<group>"; };
 		F28C2B111CC7379500E106DD /* GenericCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCodingTests.swift; sourceTree = "<group>"; };
 		F28C2B131CC7431C00E106DD /* DamageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageModifier.swift; sourceTree = "<group>"; };
+		F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EffectsViewController.storyboard; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -770,6 +772,7 @@
 				F26C01F41CB1A0EE00907164 /* EffectsTableViewController.swift */,
 				F26C01F81CB1A16B00907164 /* EffectCell.swift */,
 				F2063A681CB8992900494184 /* HeroToolsViewController.swift */,
+				F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -981,6 +984,7 @@
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
+				F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */,
 				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,

@@ -1,12 +1,15 @@
 PODS:
+  - CDRTranslucentSideBar (1.0.3)
   - Decodable (0.4.2)
   - REMenu (1.10)
 
 DEPENDENCIES:
+  - CDRTranslucentSideBar
   - Decodable
   - REMenu
 
 SPEC CHECKSUMS:
+  CDRTranslucentSideBar: b13a1792a8c495ea8f2356846a95bf7119cec7b0
   Decodable: b1cd96ad9f722721bc98b0310952214a47f71d6a
   REMenu: 30dad195930adf6c5eeb8041e3257aa60bf9fa49
 

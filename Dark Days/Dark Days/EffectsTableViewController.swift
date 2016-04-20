@@ -89,7 +89,7 @@ class EffectsTableViewController: UITableViewController {
         let damageValue = damageModifierValue(damageType)
         
         cell?.effectImageView.image = damageType.image
-        cell?.effectLabel.attributedText = NSAttributedString(string: damageType.rawValue + ": " + "\(damageValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+        cell?.effectLabel.attributedText = NSAttributedString(string: damageType.rawValue + ": " + "\(damageValue)", attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func configureAvoidanceCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
@@ -97,7 +97,7 @@ class EffectsTableViewController: UITableViewController {
         let avoidanceValue = avoidanceValueForReductionType(avoidanceType)
         
         cell?.effectImageView.image = avoidanceType.image
-        cell?.effectLabel.attributedText = NSAttributedString(string: avoidanceType.rawValue + ": " + "\(avoidanceValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+        cell?.effectLabel.attributedText = NSAttributedString(string: avoidanceType.rawValue + ": " + "\(avoidanceValue)", attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func configureReductionCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
@@ -105,7 +105,7 @@ class EffectsTableViewController: UITableViewController {
         let reductionValue = reductionValueForReductionType(reductionType)
         
         cell?.effectImageView.image = reductionType.image
-        cell?.effectLabel.attributedText = NSAttributedString(string: reductionType.rawValue + ": " + "\(reductionValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+        cell?.effectLabel.attributedText = NSAttributedString(string: reductionType.rawValue + ": " + "\(reductionValue)", attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func configureAttackModifierCellForIndexPath(cell: EffectCell?, indexPath: NSIndexPath) {
@@ -113,7 +113,7 @@ class EffectsTableViewController: UITableViewController {
         let modifierValue = attackModifierValueForModifierType(modifierType)
         
         cell?.effectImageView.image = modifierType.image
-        cell?.effectLabel.attributedText = NSAttributedString(string: modifierType.rawValue + ": " + "\(modifierValue)", attributes: [NSFontAttributeName: UIFont.verySmallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
+        cell?.effectLabel.attributedText = NSAttributedString(string: modifierType.rawValue + ": " + "\(modifierValue)", attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
     }
     
     private func damageTypeForIndexPath(indexPath: NSIndexPath) -> DamageModifier.DamageModifierType {
@@ -159,13 +159,13 @@ class EffectsTableViewController: UITableViewController {
 
 private class EffectsHeaderView {
     static func headerViewWithText(text: String, width: CGFloat) -> UITableViewHeaderFooterView {
-        let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 30))
+        let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 40))
         containingView.contentView.backgroundColor = .backgroundColor()
         
-        let labelFrame = CGRect(x: 0, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
         let label = UILabel(frame: labelFrame)
         
-        label.attributedText =  NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()])
+        label.attributedText =  NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()])
         label.textAlignment = .Left
         
         containingView.addSubview(label)

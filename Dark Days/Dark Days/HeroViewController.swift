@@ -28,6 +28,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     var hero: Hero? {
         didSet {
+            title = hero?.name
+            
             multipeer?.stopMultipeerConnectivity()
             multipeer?.removeEventListener(self)
             
@@ -35,11 +37,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             multipeer?.startMultipeerConnectivity()
             multipeer?.addEventListener(self)
+            
+            effectsViewController?.hero = hero
         }
     }
     
-    var effectsViewController: EffectsTableViewController?
-    
+    private let effectsViewController = UIStoryboard.effectsViewController()
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
     
@@ -51,7 +54,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = hero?.name
         view.backgroundColor = .backgroundColor()
         
@@ -87,10 +90,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         if let viewController = segue.destinationViewController as? HealthViewController {
             viewController.hero = hero
-        } else if let viewController = segue.destinationViewController as? EffectsTableViewController {
-            effectsViewController = viewController
-            viewController.hero = hero
         }
+    }
+    
+    @IBAction func effectsViewButtonTapped(sender: AnyObject) {
+        guard let evc = effectsViewController else { return }
+        let container = ContainingViewController(containedViewController: evc, footerView: nil)
+        container.view.frame = view.bounds
+        
+        replaceChildViewController(presentedOverlayController, newViewController: container, animationDuration: animationDuration)
+        presentedOverlayController = container
     }
     
     @IBAction func equipmentButtonTapped(button: EquipmentButton) {
@@ -180,11 +189,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                     self?.presentsSkillsList()
                 }
             case 3:
-                item.action = { [weak self] item in
-                    guard let hidden = self?.effectsViewController?.view.hidden else { return }
-                    self?.setEffectsViewHidden(!hidden) // swiftlint:disable:this force_unwrapping
-                }
-            case 4:
                 item.action = { [weak self] item in
                     self?.presentHeroTools()
                 }

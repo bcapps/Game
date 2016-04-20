@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="utn-Rf-Hep">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Effects Table View Controller-->
+        <scene sceneID="NMl-1r-9UB">
+            <objects>
+                <tableViewController id="utn-Rf-Hep" customClass="EffectsTableViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="27" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Jq-Xx-ACA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EffectCellReuseIdentifier" id="a6R-mY-pRn" customClass="EffectCell" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="27"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a6R-mY-pRn" id="hjW-cj-EN3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="27"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="m5G-jr-3t2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="27"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRH-AN-1EJ">
+                                                    <rect key="frame" x="25" y="5" width="17" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="17" id="PPS-yO-jqh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pg-Jn-fhJ">
+                                                    <rect key="frame" x="47" y="5" width="268" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="5" left="25" bottom="5" right="5"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="m5G-jr-3t2" firstAttribute="leading" secondItem="hjW-cj-EN3" secondAttribute="leading" id="GzW-Zu-Qhz"/>
+                                        <constraint firstAttribute="trailing" secondItem="m5G-jr-3t2" secondAttribute="trailing" id="MQQ-QJ-LGk"/>
+                                        <constraint firstAttribute="bottom" secondItem="m5G-jr-3t2" secondAttribute="bottom" id="Scs-fB-HJr"/>
+                                        <constraint firstItem="m5G-jr-3t2" firstAttribute="top" secondItem="hjW-cj-EN3" secondAttribute="top" id="mgf-yp-lk4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="effectImageView" destination="ZRH-AN-1EJ" id="rti-4n-9no"/>
+                                    <outlet property="effectLabel" destination="5pg-Jn-fhJ" id="pet-p5-rP5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="utn-Rf-Hep" id="rGa-9E-Do7"/>
+                            <outlet property="delegate" destination="utn-Rf-Hep" id="YBx-NT-zdk"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="no9-LD-1o4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="894"/>
+        </scene>
+    </scenes>
+</document>
