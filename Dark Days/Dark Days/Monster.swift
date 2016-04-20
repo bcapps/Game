@@ -29,7 +29,6 @@ struct Monster: Decodable, Nameable {
             totalAttackWeight += attack.attackWeight
 
             if number < totalAttackWeight {
-                print(number)
                 return attack
             }
         }

@@ -71,12 +71,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("1")
         super.viewWillAppear(animated)
-        print("2")
 
         updateGoldText()
-        print("3")
     }
     
     override func viewWillDisappear(animated: Bool) {
