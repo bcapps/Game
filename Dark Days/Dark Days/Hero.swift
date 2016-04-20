@@ -158,12 +158,12 @@ final class HeroCoder: NSObject, Coder {
         let rawGender = aDecoder.decodeObjectForKey(Keys.Gender.rawValue) as? String
         let rawStats = aDecoder.decodeObjectForKey(Keys.Stats.rawValue) as? [StatCoder]
         let rawRace = aDecoder.decodeObjectForKey(Keys.Race.rawValue) as? RaceCoder
-        let rawSkills = aDecoder.decodeObjectForKey(Keys.Skills.rawValue) as? [SkillCoder]
-        let rawSpells = aDecoder.decodeObjectForKey(Keys.Spells.rawValue) as? [SpellCoder]
+        let rawSkills = aDecoder.decodeObjectForKey(Keys.Skills.rawValue) as? [GenericCoder<Skill>]
+        let rawSpells = aDecoder.decodeObjectForKey(Keys.Spells.rawValue) as? [GenericCoder<Spell>]
         let rawInventory = aDecoder.decodeObjectForKey(Keys.Inventory.rawValue) as? InventoryCoder
         let rawUniqueID = aDecoder.decodeObjectForKey(Keys.UniqueID.rawValue) as? String
-        let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? MagicTypeCoder
-        let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GodCoder
+        let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? GenericCoder<MagicType>
+        let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GenericCoder<God>
         
         guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, spells = rawSpells?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else { return nil }
         
@@ -189,9 +189,9 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encodeInteger(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
         
         if let god = value.god {
-            aCoder.encodeObject(GodCoder(value: god), forKey: Keys.God.rawValue)
+            aCoder.encodeObject(GenericCoder<God>(value: god), forKey: Keys.God.rawValue)
         }
         
-        aCoder.encodeObject(MagicTypeCoder(value: value.magicType), forKey: Keys.MagicType.rawValue)
+        aCoder.encodeObject(GenericCoder<MagicType>(value: value.magicType), forKey: Keys.MagicType.rawValue)
     }
 }

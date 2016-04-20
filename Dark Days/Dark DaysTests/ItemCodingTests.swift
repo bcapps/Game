@@ -12,12 +12,14 @@ import XCTest
 class ItemCodingTests: XCTestCase {
 
     func testItemReceivesLatestCopy() {
-        let item = Item(name: "Basic Hammer", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, statEffects: [], DamageReductions: [], avoidanceModifier: 0, attackModifier: 0)
-        
+        let item = Item(name: "Basic Hammer", damage: "Damage", effects: "Effects", flavor: "Flavor", itemSlot: ItemSlot.Helmet, twoHanded: true, statEffects: [], damageReductions: [], damageAvoidances: [], attackModifiers: [])
+                
         let data = NSKeyedArchiver.archivedDataWithRootObject(ItemCoder(value: item))
         let unarchivedItemCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? ItemCoder
         
         let unarchivedItem = unarchivedItemCoder?.value
+        
+        XCTAssertNotNil(unarchivedItem)
         
         XCTAssertEqual(unarchivedItem?.name, "Basic Hammer")
         XCTAssertEqual(unarchivedItem?.damage, "1d4 + [STR]")
@@ -25,6 +27,6 @@ class ItemCodingTests: XCTestCase {
         XCTAssertEqual(unarchivedItem?.flavor, "A light hammer used for bludgeoning.")
         XCTAssertEqual(unarchivedItem?.itemSlot, ItemSlot.Hand)
         XCTAssertEqual(unarchivedItem?.twoHanded, false)
-        XCTAssertEqual(unarchivedItem?.equipped, false)
+        XCTAssertEqual(unarchivedItem?.equippedSlot, EquipmentButton.EquipmentSlot.None)
     }
 }

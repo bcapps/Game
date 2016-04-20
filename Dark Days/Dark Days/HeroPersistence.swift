@@ -12,6 +12,13 @@ final class HeroPersistence {
     
     let persistenceFilename: String
     
+    private let operationQueue: NSOperationQueue = {
+        let queue = NSOperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        
+        return queue
+    }()
+    
     init(persistenceFilename: String = "Heroes") {
         self.persistenceFilename = persistenceFilename
     }

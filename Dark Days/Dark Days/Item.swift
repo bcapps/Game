@@ -73,35 +73,33 @@ func == (lhs: Item, rhs: Item) -> Bool {
     return lhs.name == rhs.name
 }
 
-final class ItemCoder: NSObject, Coder {
-    typealias CodeableType = Item
-    
+extension Item: Unarchiveable {
+    static var JSONName: String {
+        return "Items"
+    }
+}
+
+
+final class ItemCoder: GenericCoder<Item> {
     private enum Keys: String {
-        case Name
         case EquippedSlot
     }
     
-    var value: Item?
-    
-    init(value: Item) {
-        self.value = value
-        super.init()
+    required init(value: Item) {
+        super.init(value: value)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        super.init(coder: aDecoder)
+
         let equipped = aDecoder.decodeIntegerForKey(Keys.EquippedSlot.rawValue)
         
-        guard let name = rawName else { return nil }
-        
-        value = ObjectProvider.itemForName(name)
         value?.equippedSlot = EquipmentButton.EquipmentSlot(rawValue: equipped) ?? .None
-        
-        super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+        
         aCoder.encodeInteger(value?.equippedSlot.rawValue ?? EquipmentButton.EquipmentSlot.None.rawValue, forKey: Keys.EquippedSlot.rawValue)
     }
 }

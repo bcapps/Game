@@ -9,6 +9,10 @@
 import Foundation
 import Decodable
 
+protocol Unarchiveable {
+    static var JSONName: String { get }    
+}
+
 final class ObjectProvider {
     
     static func objectsForJSON<T: Decodable>(JSONName: String) -> [T] {
@@ -57,7 +61,11 @@ final class ObjectProvider {
         return objectForJSONForName("Spells", objectName: name)
     }
     
-    private static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
+    static func questForName(name: String) -> Quest? {
+        return objectForJSONForName("Quests", objectName: name)
+    }
+    
+    static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         
         return objects.filter({$0.name == objectName}).first

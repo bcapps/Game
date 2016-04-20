@@ -71,9 +71,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     override func viewWillAppear(animated: Bool) {
+        print("1")
         super.viewWillAppear(animated)
-        
+        print("2")
+
         updateGoldText()
+        print("3")
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -107,12 +110,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         } else {
             menu.showFromNavigationController(navigationController)
         }
-        
-//        if menu.isDescendantOfView(view) {
-//            menu.hideMenu()
-//        } else {
-//            menu.showMenuFromView(view)
-//        }
     }
     
     func saveHero() {

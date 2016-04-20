@@ -240,6 +240,14 @@
 		F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F26C02021CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
+		F28C2B081CC732CA00E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
+		F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
+		F28C2B0B1CC7341400E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
+		F28C2B0C1CC7341400E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
+		F28C2B0E1CC7372E00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
+		F28C2B0F1CC7375D00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
+		F28C2B101CC7375D00E106DD /* GenericCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */; };
+		F28C2B121CC7379500E106DD /* GenericCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B111CC7379500E106DD /* GenericCodingTests.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -387,6 +395,10 @@
 		F26C01F81CB1A16B00907164 /* EffectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectCell.swift; sourceTree = "<group>"; };
 		F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageAvoidance.swift; sourceTree = "<group>"; };
 		F26C02001CB1D0A400907164 /* AttackModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackModifier.swift; sourceTree = "<group>"; };
+		F28C2B071CC732CA00E106DD /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		F28C2B091CC732DB00E106DD /* Quests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quests.json; path = "World Data/Quests.json"; sourceTree = "<group>"; };
+		F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCoder.swift; sourceTree = "<group>"; };
+		F28C2B111CC7379500E106DD /* GenericCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCodingTests.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -577,6 +589,7 @@
 				C3AB8F481C7CF9B3007CE0BA /* TestHero.swift */,
 				C3AB8F461C7CF992007CE0BA /* HeroPersistenceTests.swift */,
 				F26C01EC1CB1937200907164 /* StatEffectCodingTests.swift */,
+				F28C2B111CC7379500E106DD /* GenericCodingTests.swift */,
 			);
 			path = "Dark DaysTests";
 			sourceTree = "<group>";
@@ -592,6 +605,8 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F28C2B0D1CC7372E00E106DD /* GenericCoder.swift */,
+				F28C2B061CC732BA00E106DD /* Quests */,
 				F2473B141C8382BE008FD65B /* Spells */,
 				F2350B8B1C8231D600D6E18E /* Magic Type */,
 				F21ECE291C7A6AE8008041E9 /* Items */,
@@ -821,6 +836,15 @@
 			name = ContainingVC;
 			sourceTree = "<group>";
 		};
+		F28C2B061CC732BA00E106DD /* Quests */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B071CC732CA00E106DD /* Quest.swift */,
+				F28C2B091CC732DB00E106DD /* Quests.json */,
+			);
+			name = Quests;
+			sourceTree = "<group>";
+		};
 		F29C55E31C961D2500ED386E /* Unequip Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,6 +970,7 @@
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
+				F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
 				F2473B181C8382E6008FD65B /* Spells.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
@@ -1086,6 +1111,7 @@
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
+				F28C2B081CC732CA00E106DD /* Quest.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
@@ -1101,6 +1127,7 @@
 				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F28C2B0E1CC7372E00E106DD /* GenericCoder.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
@@ -1148,10 +1175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28C2B0B1CC7341400E106DD /* Quest.swift in Sources */,
 				F25187B31C922BB3003AD636 /* HeroListViewController.swift in Sources */,
 				F25187AF1C922BB3003AD636 /* Reusable.swift in Sources */,
 				F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */,
 				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
+				F28C2B121CC7379500E106DD /* GenericCodingTests.swift in Sources */,
 				F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */,
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */,
@@ -1189,6 +1218,7 @@
 				F25187691C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */,
+				F28C2B0F1CC7375D00E106DD /* GenericCoder.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
@@ -1244,6 +1274,7 @@
 				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
+				F28C2B101CC7375D00E106DD /* GenericCoder.swift in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
@@ -1262,6 +1293,7 @@
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F25187C91C937370003AD636 /* InfoCell.swift in Sources */,
 				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
+				F28C2B0C1CC7341400E106DD /* Quest.swift in Sources */,
 				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F25187BC1C922BB3003AD636 /* ListDataSource.swift in Sources */,
