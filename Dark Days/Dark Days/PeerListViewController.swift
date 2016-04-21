@@ -14,8 +14,6 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     var objectToSend: Any?
     var goldToSend: Int?
     
-    private let localHeroes = HeroPersistence().allPersistedHeroes()
-    
     var peers: [MCPeerID] {
         get {
             return multipeer.connectedPeers.filter({$0.displayName != "DM"})
@@ -60,7 +58,6 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return peers.count
-        case 1: return localHeroes.count
         default: return 0
         }
     }
@@ -73,10 +70,6 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
             let peerID = peers[indexPath.row]
             
             cell.textLabel?.attributedText = .attributedStringWithBodyAttributes(peerID.displayName)
-        case 1:
-            let hero = localHeroes[indexPath.row]
-            
-            cell.textLabel?.attributedText = .attributedStringWithBodyAttributes(hero.name)
         default:
             print("No handling")
         }
@@ -101,8 +94,6 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
             } else if let gold = goldToSend {
                 multipeer.sendGoldToPeer(gold, peer: peerID)
             }
-        case 1:
-            print("hi")
         default:
             print("No handling")
         }
@@ -113,7 +104,6 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0: return peers.isNotEmpty ? "Multipeer Heroes" : nil
-        case 1: return localHeroes.isNotEmpty ? "Local Heroes" : nil
         default: return nil
         }
     }
