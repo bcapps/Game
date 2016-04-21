@@ -50,10 +50,10 @@
  }, {
  "name": "Basic Shield",
  "damage": "",
- "effects": "Increases chance to avoid an attack by 1.",
+ "effects": "Decreases physical damage taken by 1.",
  "flavor": "A small metal shield, barely capable of fending off attacks.",
  "itemSlot": "Hand",
- "damageAvoidances": [{"name": "Physical", "value": 1}]
+ "damageReductions": [{"name": "Physical", "value": 1}]
  }, {
  "name": "Leather Jerkin",
  "damage": "",
@@ -157,4 +157,12 @@
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Magical", "value": 1}],
  "statEffects": [{"stat": "FAI", "value": 1}]
+ }, {
+ "name": "Large Metal Shield",
+ "damage": "",
+ "effects": "Decreases physical damage taken by 2. Reduces chance to avoid an attack by 1.",
+ "flavor": "A large metal shield, difficult to carry, but provides good protection.",
+ "itemSlot": "Hand",
+ "damageReductions": [{"name": "Physical", "value": 2}],
+ "damageAvoidances": [{"name": "Physical", "value": -1}]
  }]
