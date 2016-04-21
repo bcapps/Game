@@ -48,4 +48,9 @@
  "damage": "1d4 + [FAI]",
  "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional 1d4 damage each round until they break free (DC 12 + [FAI]).",
  "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
+ }, {
+ "name": "Summon Lesser Felbeast",
+ "damage": "1d4 + [FAI]",
+ "effects": "Summons a lesser felbeast that has 1d8+ [FAI] hit points and deals FAI damage when attacking.",
+ "flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
  }]

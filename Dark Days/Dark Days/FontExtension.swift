@@ -14,6 +14,10 @@ extension UIFont {
         return fontOfName("Avenir-Black", size: 18)
     }
     
+    static func subHeadingFont() -> UIFont {
+        return fontOfName("Avenir-Black", size: 16)
+    }
+    
     static func bodyFont() -> UIFont {
         return fontOfName("Avenir-Medium", size: 16)
     }

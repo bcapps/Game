@@ -34,4 +34,12 @@
  "name": "Spider Climbing",
  "explanation": "The sticky silk of spiders allows movement on any non slippery surface.",
  "benefit": "Once per day, allows movement on any non slippery wall or ceiling surface."
+ }, {
+ "name": "Clear Mind",
+ "explanation": "Clears the thoughts of yourself and those around you.",
+ "benefit": "When used, removes all negative mental effects from you and your party. May be used once per encounter."
+ }, {
+ "name": "Illusionary Sight",
+ "explanation": "What used to be a masterful illusion, is now simply a cheap trick before your eyes.",
+ "benefit": "You gain the ability to instantly detect and see through any illusion."
  }]

@@ -249,6 +249,8 @@
 		F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
 		F28C2B161CC7431C00E106DD /* DamageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B131CC7431C00E106DD /* DamageModifier.swift */; };
 		F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */; };
+		F28C2B191CC9886E00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
+		F28C2B1A1CC9886F00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -1000,6 +1002,7 @@
 				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
+				F28C2B191CC9886E00E106DD /* Quests.json in Resources */,
 				F2350B971C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */,
@@ -1036,6 +1039,7 @@
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
+				F28C2B1A1CC9886F00E106DD /* Quests.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

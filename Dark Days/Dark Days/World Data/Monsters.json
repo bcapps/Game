@@ -24,4 +24,34 @@
  "health": 45,
  "attacks": [{"name": "Kick", "damage": "1d4", "weight": 70},
              {"name": "Twin-fist", "damage": "1d4+1d4", "weight": 30}]
+ }, {
+ "name": "Blade of Kazu",
+ "explanation": "A shrouded figure dressed in black with a long thin scabbard on his waist.",
+ "health": 20,
+ "attacks": [{"name": "Strike", "damage": "1d6", "weight": 70},
+             {"name": "Double-Strike", "damage": "1d6+1d6", "weight": 30}]
+ }, {
+ "name": "Mental Patient",
+ "explanation": "A scared individual with ragged clothes and crazed eyes.",
+ "health": 15,
+ "attacks": [{"name": "Claw", "damage": "1d4", "weight": 70},
+             {"name": "Grapple", "damage": "1d4", "weight": 30}]
+ }, {
+ "name": "Voice of Insanity",
+ "explanation": "A mass of black energy sitting in the center of the room that screams horrors.",
+ "health": 60,
+ "attacks": [{"name": "Insane Cry", "damage": "1d4 Mental damage", "weight": 100}]
+ }, {
+ "name": "The Commoner Boss",
+ "explanation": "A small commoner.",
+ "health": 50,
+ "attacks": [{"name": "Stab", "damage": "1d4", "weight": 70},
+             {"name": "Ram", "damage": "1d6", "weight": 30}]
+ }, {
+ "name": "Greater Felbeast",
+ "explanation": "A large four legged demon with several sharp horns it uses to tear the flesh off of it's enemies. It burns the ground it walks on.",
+ "health": 90,
+ "attacks": [{"name": "Claw", "damage": "1d6", "weight": 60},
+             {"name": "Maul", "damage": "1d8", "weight": 30},
+             {"name": "Bite", "damage": "1d10", "weight": 10}]
  }]

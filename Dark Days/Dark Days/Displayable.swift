@@ -141,7 +141,7 @@ extension ListDisplayable {
                 if let title = additionalInfoTitle where !title.isEmpty {
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
 
-                    let attributedTitle = NSAttributedString.attributedStringWithHeadingAttributes(title)
+                    let attributedTitle = NSAttributedString.attributedStringWithSubHeadingAttributes(title)
                     attributedString.appendAttributedString(attributedTitle)
                     attributedString.appendAttributedString(NSAttributedString(string: "\n"))
                 } else if information?.isEmpty == false {

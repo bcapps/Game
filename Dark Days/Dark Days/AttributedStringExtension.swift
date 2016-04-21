@@ -31,6 +31,10 @@ extension NSAttributedString {
         return attributedStringWithAttributes(string, color: .headerTextColor(), font: .headingFont(), paragraphStyle: nil)
     }
     
+    static func attributedStringWithSubHeadingAttributes(string: String) -> NSAttributedString {
+        return attributedStringWithAttributes(string, color: .headerTextColor(), font: .subHeadingFont(), paragraphStyle: nil)
+    }
+    
     static func attributedStringWithSmallAttributes(string: String) -> NSAttributedString {
         return attributedStringWithAttributes(string, color: .sideTextColor(), font: .smallFont(), paragraphStyle: nil)
     }

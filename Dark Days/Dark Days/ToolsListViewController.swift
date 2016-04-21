@@ -19,24 +19,27 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         case SpellList
         case SkillList
         case MonsterList
+        case Quests
         case Gold
         
         func toolName() -> String {
             switch self {
-                case .ItemList:
-                    return "Item List"
-                case .GodList:
-                    return "God List"
-                case .FloorList:
-                    return "Floor List"
-                case .SpellList:
-                    return "Spell List"
-                case .SkillList:
-                    return "Skill List"
-                case .MonsterList:
-                    return "Monster List"
-                case .Gold:
-                    return "Gold"
+            case .ItemList:
+                return "Item List"
+            case .GodList:
+                return "God List"
+            case .FloorList:
+                return "Floor List"
+            case .SpellList:
+                return "Spell List"
+            case .SkillList:
+                return "Skill List"
+            case .MonsterList:
+                return "Monster List"
+            case .Quests:
+                return "Quests"
+            case .Gold:
+                return "Gold"
             }
         }
         
@@ -54,6 +57,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
+            case .Quests:
+                return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Quests"))], delegate: delegate)
             case .Gold:
                 return nil
             }
@@ -168,7 +173,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 let controller = UIAlertController(title: attack.name, message: attackStringForAttack(attack), preferredStyle: .Alert)
                 controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
                 
-                presentViewController(controller, animated: true, completion: nil)
+                navigationController?.presentViewController(controller, animated: true, completion: nil)
             }
             
             guard let indexPath = listViewController.tableView.indexPathForSelectedRow else { return }

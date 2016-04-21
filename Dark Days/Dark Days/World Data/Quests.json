@@ -1,11 +1,41 @@
 [{
  "name": "Spider Slayers",
- "explanation": "Initiator: Guard/Tavern Patron\nRumors have spread of livestock disappearing in the night. At first it could be dismissed as wolves roaming the hillside, but more recently there have been reports of entire farms picked clean during the night, animals and men alike. Investigate the Sawyer farm for more clues.",
- "notes":"Investigating the farm main clues include caustic fluid, and tiny spiders. Tracks lead to a cave in the hills.\nEnemies include: Spider, Large Spider, Spider Queen",
+ "explanation": "Initiator: Guard or Tavern Patron\nRumors have spread of livestock disappearing in the night. At first it could be dismissed as wolves roaming the hillside, but more recently there have been reports of entire farms picked clean during the night, animals and men alike. Investigate the Sawyer farm for more clues.",
+ "notes": "Investigating the farm main clues include caustic fluid, and tiny spiders. Tracks lead to a cave in the hills.\nEnemies include: Spider, Large Spider, Spider Queen",
  "rewards": ["• Spider Chitin"]
  }, {
  "name": "The Peaceful Monk",
  "explanation": "Initiator: Helpful Commoner\nA hermit has taken up residence in a small cave above the town. He asked if I could bring him this basket of fruit, but I'm too busy, and I'm worried he'll run out of food if this doesn't get to him. Can you bring it to him?",
- "notes":"The monk is NOT peaceful. He is clearly possessed/enraged by magic. Eyes glowing red.\nEnemies include: Possessed Monk.",
+ "notes": "The monk is NOT peaceful. He is clearly possessed or enraged by magic. Eyes glowing red.\nEnemies include: Possessed Monk.",
  "rewards": ["• Vest of Fury"]
+ }, {
+ "name": "Drinking Contest",
+ "explanation": "Initiator: Tavern Patron\nA patron starts a drinking contest in the local tavern.",
+ "notes": "Several rounds of the contest:\nHuman Swill: 4\nDwarven Ale: 6\nElven Spiritwater: 8\nDemon Grog: 10\nSally's Shandy: 12",
+ "rewards": ["• 300 gold after Elven Spiritwater", "• Mug of Destiny after Sally's Shandy"]
+ }, {
+ "name": "The Blades of Kazu",
+ "explanation": "Initiator: Town Leader\nSilent knights that carry out their gods will from the shadows, said to swing their sword with such speed it is as if there are multiple blades. Seek them out. Convince them to help the people.",
+ "notes": "Blades refer to a group, not weapons. They actually do use multiple blades. The Blades are actually holed up in a temple of Kazu. You may have to fight through several of them to prove your worth.\nEnemies include: Blade of Kazu",
+ "rewards": ["• Skill: Dual Wielding"]
+ }, {
+ "name": "City of Clarity",
+ "explanation": "Initiator: Wandering or rumor.\nA city where the world's insane have been sent.",
+ "notes": "Everyone in this town is crazy. Every time you meet someone in this town, roll on a chart for their illness. Upon meeting 4 different illnesses, the numbers 759 are revealed. 975 is the correct order. In the mental facility in town, room 975, there is a panel that reveals a hidden room, 976.\nEnemies include: Mental Patient, Voice of Insanity",
+ "rewards": ["• The Believer's Knot"]
+ }, {
+ "name": "The Commoner Boss",
+ "explanation": "Initiator: Night at a tavern.\nA shady individual asks you to take part in an experiment. As precaution he gives you this liquid to drink to protect yourselves. When you go to meet him outside, you bump into a commoner with a shovel who starts a fight with you.",
+ "notes": "The liquid is actually drugs that cause hallucinations. After beating the commoner boss, you realize that you just beat the crap out of a hay bale with a pitchfork in it, in front of several scared townsfolk.\nEnemies Include: The Commoner Boss",
+ "rewards": ["• Pitchfork", "• 800 gold"]
+ }, {
+ "name": "The Illusionary Fortress",
+ "explanation": "Initiator: Local lord.\nA thief has stolen a precious jewel from the local lord. Get it back!",
+ "notes": "Come across a fortress in the wilderness, guarded by all manner of large monster. Spoiler alert, they're illusions. Walk into the fortress entrance to find a scared man.\nEnemies Include: The Commoner Boss",
+ "rewards": ["• The Jewel of Thought", "• 3000 gold"]
+ }, {
+ "name": "The Demon's Feast",
+ "explanation": "Initiator: Visiting a temple of Azoth.\nA novice is embarrassed by losing control of a demon in front of you, his master steps in. Forces novice to give you a tour. Novice eventually privately hands one of the party a piece of meat. You enter the demon cages. Novice slips out unnoticed, demon attacks your party.",
+ "notes": "Giving it the meat will satiate it and put it to sleep.\nEnemies Include: Greater Felbeast",
+ "rewards": ["• Cloak of the Demon Summoner", "• Spell: Summon Lesser Felbeast"]
  }]

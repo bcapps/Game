@@ -126,4 +126,35 @@
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Physical", "value": 1}],
  "damageModifiers": [{"name": "Physical", "value": 2}]
+ }, {
+ "name": "Mouth of Insanity",
+ "damage": "",
+ "effects": "Increases FAI by 2. Grants the Clear Mind skill, which allows you to remove negative mental effects.",
+ "flavor": "Staring at the Mouth of Insanity allows you recall the sheer terror you felt before closing it. Nothing in this world could compare to the terror it brings.",
+ "itemSlot": "Accessory",
+ "skills": ["Clear Mind"],
+ "statEffects": [{"stat": "FAI", "value": 2}]
+ }, {
+ "name": "Pitchfork",
+ "damage": "1d4 + [STR]",
+ "effects": "",
+ "flavor": "A farming tool used for picking up hay.",
+ "itemSlot": "Hand",
+ "twoHanded": true
+ }, {
+ "name": "The Jewel of Thought",
+ "damage": "",
+ "effects": "Increases INT by 2. Grants the Illusionary Sight skill, which allows you to automatically detect illusions.",
+ "flavor": "Illusion, Michael. A trick is something a whore does for money.",
+ "itemSlot": "Accessory",
+ "skills": ["Illusionary Sight"],
+ "statEffects": [{"stat": "INT", "value": 2}]
+ }, {
+ "name": "Cloak of the Demon Summoner",
+ "damage": "",
+ "effects": "Increases FAI by 1. Decrease magical damage taken by 1.",
+ "flavor": "Robes worn by the acolytes of Azoth. It is said to be made from the supple flesh of lesser demons.",
+ "itemSlot": "Chest",
+ "damageReductions": [{"name": "Magical", "value": 1}],
+ "statEffects": [{"stat": "FAI", "value": 1}]
  }]
