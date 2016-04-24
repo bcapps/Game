@@ -24,20 +24,20 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="m5G-jr-3t2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="27"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRH-AN-1EJ">
-                                                    <rect key="frame" x="25" y="5" width="17" height="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZRH-AN-1EJ">
+                                                    <rect key="frame" x="25" y="3" width="21" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="17" id="PPS-yO-jqh"/>
+                                                        <constraint firstAttribute="width" constant="21" id="PPS-yO-jqh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pg-Jn-fhJ">
-                                                    <rect key="frame" x="47" y="5" width="268" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pg-Jn-fhJ">
+                                                    <rect key="frame" x="51" y="3" width="264" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <edgeInsets key="layoutMargins" top="5" left="25" bottom="5" right="5"/>
+                                            <edgeInsets key="layoutMargins" top="3" left="25" bottom="3" right="5"/>
                                         </stackView>
                                     </subviews>
                                     <constraints>

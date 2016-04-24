@@ -22,6 +22,7 @@ struct DamageReduction: Decodable, Nameable {
 extension DamageReduction {
     enum ReductionType: String {
         case Physical
+        case Magical
         case Poison
         case Fire
         case Cold
@@ -36,16 +37,20 @@ extension DamageReduction {
                 return UIImage(named: "FireDamageReduction")
             case .Cold:
                 return UIImage(named: "ColdDamageReduction")
+            case .Magical:
+                return UIImage(named: "MagicalDamageReduction")
             }
         }
     }
     
-    static let allReductionTypes: [ReductionType] = [.Physical, .Poison, .Fire, .Cold]
+    static let allReductionTypes: [ReductionType] = [.Physical, .Magical, .Poison, .Fire, .Cold]
     
     var reductionType: ReductionType {
         switch name {
         case "Physical":
             return .Physical
+        case "Magical":
+            return .Magical
         case "Poison":
             return .Poison
         case "Fire":

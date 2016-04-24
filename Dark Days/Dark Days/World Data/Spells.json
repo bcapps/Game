@@ -6,8 +6,8 @@
  }, {
  "name": "Inspire",
  "damage": "",
- "effects": "Add 1 to all attack rolls made by your party, and reduce all physical damage taken by your party by 1.",
- "flavor": "All it takes to light the way, is one candle burning brightly in the night."
+ "effects": "Add 1 to all attack rolls made by your party.",
+ "flavor": "All it takes to light the way is one candle burning brightly in the night."
  }, {
  "name": "Ray of Light",
  "damage": "Heals 1d4 + [FAI]",
