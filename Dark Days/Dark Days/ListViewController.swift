@@ -110,6 +110,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
             let displayableObject = ListDisplayable.displayableObject(object)
             
             cell.infoImage = displayableObject.image
+            cell.accessoryImage = displayableObject.accessoryImage
             cell.infoAttributedText = displayableObject.attributedString
             cell.contentInset = self.imageContentInset ?? UIEdgeInsets()
         })

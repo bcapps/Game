@@ -22,6 +22,13 @@
                         <attributedString key="attributedText"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-ly-clA" userLabel="Accessory Image">
+                        <rect key="frame" x="279" y="8" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YmA-ly-clA" secondAttribute="height" multiplier="1:1" id="23O-rc-bI2"/>
+                            <constraint firstAttribute="width" constant="28" id="AV7-vU-PaP"/>
+                        </constraints>
+                    </imageView>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-dM-VSW" userLabel="Info Image">
                         <rect key="frame" x="13" y="8" width="56" height="56"/>
                         <constraints>
@@ -37,10 +44,14 @@
                     <constraint firstItem="g8V-3x-kFQ" firstAttribute="leading" secondItem="wI4-qv-xSV" secondAttribute="leadingMargin" constant="5" id="HKe-9h-JcS"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="cF2-dM-VSW" secondAttribute="bottom" constant="5" id="O7U-MH-Qyo"/>
                     <constraint firstAttribute="trailingMargin" secondItem="g8V-3x-kFQ" secondAttribute="trailing" constant="5" id="Pim-D3-X2N"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="YmA-ly-clA" secondAttribute="bottom" constant="5" id="ScP-Fx-8tW"/>
+                    <constraint firstItem="YmA-ly-clA" firstAttribute="top" secondItem="wI4-qv-xSV" secondAttribute="topMargin" id="eJF-nr-0a4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YmA-ly-clA" secondAttribute="trailing" constant="5" id="rk9-fn-dS9"/>
                     <constraint firstItem="g8V-3x-kFQ" firstAttribute="top" secondItem="cF2-dM-VSW" secondAttribute="top" id="sNT-bI-k7Z"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="accessoryImageView" destination="YmA-ly-clA" id="t7X-Uz-5HN"/>
                 <outlet property="infoImageButton" destination="cF2-dM-VSW" id="EgM-tf-Uf6"/>
                 <outlet property="infoTextView" destination="g8V-3x-kFQ" id="Y1a-ZQ-fLe"/>
             </connections>

@@ -44,6 +44,20 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     
     var equippedSlot = EquipmentButton.EquipmentSlot.None
     
+    var imageForItemType: UIImage? {
+        get {
+            if itemSlot == .Hand {
+                if twoHanded {
+                    return UIImage(named: "TwoHandedIcon.png")
+                }
+                
+                return UIImage(named: "RightHand")
+            }
+            
+            return UIImage(named: itemSlot.rawValue)
+        }
+    }
+    
     static func decode(json: AnyObject) throws -> Item {        
         return try Item(name: json => "name",
             damage: json => "damage",

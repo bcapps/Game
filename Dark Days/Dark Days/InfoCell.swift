@@ -18,6 +18,15 @@ final class InfoCell: UITableViewCell {
         }
     }
     
+    var accessoryImage: UIImage? {
+        set {
+            accessoryImageView.image = newValue
+        }
+        get {
+            return accessoryImageView.image
+        }
+    }
+    
     var infoAttributedText: NSAttributedString? {
         set {
             infoTextView.attributedText = newValue
@@ -30,6 +39,7 @@ final class InfoCell: UITableViewCell {
     
     var contentInset: UIEdgeInsets?
     
+    @IBOutlet private weak var accessoryImageView: UIImageView!
     @IBOutlet private weak var infoTextView: UITextView!
     @IBOutlet private weak var infoImageButton: UIButton!
     
@@ -55,6 +65,8 @@ final class InfoCell: UITableViewCell {
         infoTextView.textContainer.lineFragmentPadding = 0
         infoTextView.textContainerInset = UIEdgeInsetsZero
         
+        accessoryImageView.backgroundColor = backgroundColor
+        
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(white: 0.13, alpha: 1.0)
         selectedBackgroundView = backgroundView
@@ -70,13 +82,34 @@ final class InfoCell: UITableViewCell {
         
         infoImageButton.hidden = false
         infoImageButton.contentEdgeInsets = contentInset ?? UIEdgeInsets()
+        addImageExclusionRect()
         
+        guard accessoryImageView.image != nil else {
+            accessoryImageView.hidden = true
+            return
+        }
+        
+        accessoryImageView.hidden = false
+        addAccessoryImageExclusionRect()
+    }
+    
+    private func addImageExclusionRect() {
         var exclusionRect = infoTextView.convertRect(infoImageButton.frame, fromView: self)
-        
         exclusionRect.size.width += 10.0
         exclusionRect.size.height += 5.0
         
         let imageViewPath = UIBezierPath(rect: exclusionRect)
-        infoTextView.textContainer.exclusionPaths = [imageViewPath]        
+        
+        infoTextView.textContainer.exclusionPaths += [imageViewPath]
+    }
+    
+    private func addAccessoryImageExclusionRect() {
+        var exclusionRect = infoTextView.convertRect(accessoryImageView.frame, fromView: self)
+        exclusionRect.size.width += 20.0
+        exclusionRect.size.height += 5.0
+        
+        let accessoryImagePath = UIBezierPath(rect: exclusionRect)
+        
+        infoTextView.textContainer.exclusionPaths += [accessoryImagePath]
     }
 }
