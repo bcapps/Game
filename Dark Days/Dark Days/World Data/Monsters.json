@@ -23,13 +23,13 @@
  "explanation": "A monk possessed by magic. His eyes glow red.",
  "health": 45,
  "attacks": [{"name": "Kick", "damage": "1d4", "weight": 70},
-             {"name": "Twin-fist", "damage": "1d4+1d4", "weight": 30}]
+             {"name": "Twin-fist", "damage": "1d4 + 1d4", "weight": 30}]
  }, {
  "name": "Blade of Kazu",
  "explanation": "A shrouded figure dressed in black with a long thin scabbard on his waist.",
  "health": 20,
  "attacks": [{"name": "Strike", "damage": "1d6", "weight": 70},
-             {"name": "Double-Strike", "damage": "1d6+1d6", "weight": 30}]
+             {"name": "Double-Strike", "damage": "1d6 + 1d6", "weight": 30}]
  }, {
  "name": "Mental Patient",
  "explanation": "A scared individual with ragged clothes and crazed eyes.",

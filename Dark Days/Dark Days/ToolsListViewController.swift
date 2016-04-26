@@ -80,7 +80,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
