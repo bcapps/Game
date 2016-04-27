@@ -195,7 +195,7 @@
  "damageReductions": [{"name": "Magical", "value": 1}],
  "statEffects": [{"stat": "FAI", "value": 1}]
  }, {
- "name": "Large Metal Shield",
+ "name": "Large Iron Shield",
  "damage": "",
  "effects": "Decreases physical damage taken by 2. Reduces chance to avoid an attack by 1.",
  "flavor": "A large metal shield, difficult to carry, but provides good protection.",

@@ -79,12 +79,12 @@
 		F21ECE381C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
 		F21ECE391C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
 		F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE371C7A7254008041E9 /* Item.swift */; };
-		F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
-		F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
-		F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Floors.json */; };
-		F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
-		F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
-		F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Floor.swift */; };
+		F21ECE3D1C7A75F7008041E9 /* Towns.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Towns.json */; };
+		F21ECE3E1C7A75F7008041E9 /* Towns.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Towns.json */; };
+		F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */ = {isa = PBXBuildFile; fileRef = F21ECE3C1C7A75F7008041E9 /* Towns.json */; };
+		F21ECE411C7A7B94008041E9 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Town.swift */; };
+		F21ECE421C7A7B94008041E9 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Town.swift */; };
+		F21ECE431C7A7B94008041E9 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE401C7A7B94008041E9 /* Town.swift */; };
 		F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
 		F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
 		F21ECE481C7A7C90008041E9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE451C7A7C90008041E9 /* Hero.swift */; };
@@ -251,6 +251,10 @@
 		F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */; };
 		F28C2B191CC9886E00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
 		F28C2B1A1CC9886F00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
+		F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B1C1CD0615E00E106DD /* Merchants.json */; };
+		F28C2B1F1CD062AB00E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
+		F28C2B201CD064B900E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
+		F28C2B211CD064B900E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -340,8 +344,8 @@
 		F21ECE2F1C7A6C7F008041E9 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		F21ECE331C7A6CD0008041E9 /* Items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Items.json; path = "World Data/Items.json"; sourceTree = "<group>"; };
 		F21ECE371C7A7254008041E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		F21ECE3C1C7A75F7008041E9 /* Floors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Floors.json; path = "World Data/Floors.json"; sourceTree = "<group>"; };
-		F21ECE401C7A7B94008041E9 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		F21ECE3C1C7A75F7008041E9 /* Towns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Towns.json; path = "World Data/Towns.json"; sourceTree = "<group>"; };
+		F21ECE401C7A7B94008041E9 /* Town.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		F21ECE451C7A7C90008041E9 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 		F28C2B111CC7379500E106DD /* GenericCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCodingTests.swift; sourceTree = "<group>"; };
 		F28C2B131CC7431C00E106DD /* DamageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageModifier.swift; sourceTree = "<group>"; };
 		F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EffectsViewController.storyboard; sourceTree = "<group>"; };
+		F28C2B1C1CD0615E00E106DD /* Merchants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Merchants.json; path = "World Data/Merchants.json"; sourceTree = "<group>"; };
+		F28C2B1E1CD062AB00E106DD /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -609,6 +615,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F28C2B1B1CD0614700E106DD /* Merchants */,
 				F28C2B061CC732BA00E106DD /* Quests */,
 				F2473B141C8382BE008FD65B /* Spells */,
 				F2350B8B1C8231D600D6E18E /* Magic Type */,
@@ -685,8 +692,8 @@
 		F21ECE3B1C7A75E9008041E9 /* Floors */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE3C1C7A75F7008041E9 /* Floors.json */,
-				F21ECE401C7A7B94008041E9 /* Floor.swift */,
+				F21ECE3C1C7A75F7008041E9 /* Towns.json */,
+				F21ECE401C7A7B94008041E9 /* Town.swift */,
 			);
 			name = Floors;
 			sourceTree = "<group>";
@@ -850,6 +857,15 @@
 			name = Quests;
 			sourceTree = "<group>";
 		};
+		F28C2B1B1CD0614700E106DD /* Merchants */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B1E1CD062AB00E106DD /* Merchant.swift */,
+				F28C2B1C1CD0615E00E106DD /* Merchants.json */,
+			);
+			name = Merchants;
+			sourceTree = "<group>";
+		};
 		F29C55E31C961D2500ED386E /* Unequip Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,9 +1001,10 @@
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
-				F21ECE3D1C7A75F7008041E9 /* Floors.json in Resources */,
+				F21ECE3D1C7A75F7008041E9 /* Towns.json in Resources */,
 				F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */,
 				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
+				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 			);
@@ -999,7 +1016,7 @@
 			files = (
 				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
 				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
-				F21ECE3E1C7A75F7008041E9 /* Floors.json in Resources */,
+				F21ECE3E1C7A75F7008041E9 /* Towns.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
 				F28C2B191CC9886E00E106DD /* Quests.json in Resources */,
@@ -1024,7 +1041,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
-				F21ECE3F1C7A75F7008041E9 /* Floors.json in Resources */,
+				F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
 				F25187C21C922BB3003AD636 /* Root.storyboard in Resources */,
@@ -1115,12 +1132,13 @@
 				F25187681C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */,
 				F2C7EAFE1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
-				F21ECE411C7A7B94008041E9 /* Floor.swift in Sources */,
+				F21ECE411C7A7B94008041E9 /* Town.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F28C2B081CC732CA00E106DD /* Quest.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
+				F28C2B1F1CD062AB00E106DD /* Merchant.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
@@ -1193,7 +1211,7 @@
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F25187CC1C9373C6003AD636 /* ArrayRemoval.swift in Sources */,
 				F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */,
-				F21ECE421C7A7B94008041E9 /* Floor.swift in Sources */,
+				F21ECE421C7A7B94008041E9 /* Town.swift in Sources */,
 				F25187B21C922BB3003AD636 /* PeerListViewController.swift in Sources */,
 				F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
@@ -1227,6 +1245,7 @@
 				F2350B7F1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
+				F28C2B201CD064B900E106DD /* Merchant.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
@@ -1266,7 +1285,7 @@
 				F25187CB1C9373A1003AD636 /* HeroBuilder.swift in Sources */,
 				F25187901C922B90003AD636 /* ListViewController.swift in Sources */,
 				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
-				F21ECE431C7A7B94008041E9 /* Floor.swift in Sources */,
+				F21ECE431C7A7B94008041E9 /* Town.swift in Sources */,
 				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
@@ -1313,6 +1332,7 @@
 				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
+				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,

@@ -15,7 +15,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     enum Tool: Int {
         case ItemList
         case GodList
-        case FloorList
+        case TownList
         case SpellList
         case SkillList
         case MonsterList
@@ -28,8 +28,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return "Item List"
             case .GodList:
                 return "God List"
-            case .FloorList:
-                return "Floor List"
+            case .TownList:
+                return "Town List"
             case .SpellList:
                 return "Spell List"
             case .SkillList:
@@ -49,8 +49,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate)
             case .GodList:
                 return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Gods"))], delegate: delegate)
-            case .FloorList:
-                return ListViewController<Floor>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Floors"))], delegate: delegate)
+            case .TownList:
+                return ListViewController<Town>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Towns"))], delegate: delegate)
             case .SpellList:
                 return ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate)
             case .SkillList:
@@ -165,6 +165,12 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             peersViewController.objectToSend = object as Any
             
             navigationController?.pushViewController(peersViewController, animated: true)
+        } else if let town = object as? Town {
+            let merchants = town.merchants.flatMap { return ObjectProvider.merchantForName($0) }
+            
+            let merchantList = ListViewController<Merchant>(sections: [SectionList(sectionTitle: nil, objects: merchants)], delegate: self)
+            
+            navigationController?.pushViewController(merchantList, animated: true)
         } else if let monster = object as? Monster {
             let random = GKShuffledDistribution(forDieWithSideCount: 100).nextInt()
             let attack = monster.attackForNumber(random)
@@ -183,7 +189,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        return object is Item || object is Skill || object is Spell || object is Monster
+        return object is Item || object is Skill || object is Spell || object is Monster || object is Town
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }

@@ -9,14 +9,14 @@
 import Foundation
 import Decodable
 
-struct Floor: Decodable, Nameable {
+struct Town: Decodable, Nameable {
     let name: String
     let background: String
-    let towns: [String]
+    let merchants: [String]
     
-    static func decode(json: AnyObject) throws -> Floor {
-        return try Floor(name: json => "name",
+    static func decode(json: AnyObject) throws -> Town {
+        return try Town(name: json => "name",
             background: json => "background",
-            towns: json => "towns")
+            merchants: json => "merchants")
     }
 }

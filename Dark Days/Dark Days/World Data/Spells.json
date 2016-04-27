@@ -1,17 +1,17 @@
 [{
- "name": "Reflect",
+ "name": "Shield of Reflection",
  "damage": "Monster Damage + [FAI]",
- "effects": "Casts a barrier on one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d4 + [FAI] damage.",
+ "effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d6 + [FAI] damage.",
  "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
  }, {
  "name": "Inspire",
  "damage": "",
- "effects": "Add 1 to all attack rolls made by your party.",
+ "effects": "Add 1 to all attack rolls made by your party until the end of the encounter.",
  "flavor": "All it takes to light the way is one candle burning brightly in the night."
  }, {
- "name": "Ray of Light",
- "damage": "Heals 1d4 + [FAI]",
- "effects": "",
+ "name": "Siphon Light",
+ "damage": "1d4 + [FAI]",
+ "effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up.",
  "flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
  }, {
  "name": "Blind",
@@ -46,7 +46,7 @@
  }, {
  "name": "Thorn Bind",
  "damage": "1d4 + [FAI]",
- "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional 1d4 damage each round until they break free (DC 12 + [FAI]).",
+ "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]).",
  "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
  }, {
  "name": "Summon Lesser Felbeast",

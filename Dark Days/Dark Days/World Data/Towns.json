@@ -1,0 +1,9 @@
+[{
+ "name": "Rorrim",
+ "background": "Your hometown. A small village that consists of mostly farmers. It survives by trading its crops to the surrounding villages.",
+ "merchants": []
+ }, {
+ "name": "Hammerfell",
+ "background": "The largest town inside the Stormwall. The Lord of Stormhaven resides here.",
+ "merchants": ["Jaddic Greathand", "Vance Norton"]
+ }]

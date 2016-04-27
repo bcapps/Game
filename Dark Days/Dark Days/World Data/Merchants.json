@@ -1,0 +1,11 @@
+[{
+ "name": "Jaddic Greathand",
+ "explanation": "A dwarven weapon merchant.",
+ "location": "Hammerfell",
+ "items": ["Iron Dagger - 100g", "Iron Shortsword - 100g", "Iron Longsword - 100g", "Iron Spear - 200g", "Iron Axe - 100g", "Iron Hammer - 100g", "Rapier - 100g"]
+ }, {
+ "name": "Vance Norton",
+ "explanation": "A human armor merchant.",
+ "location": "Hammerfell",
+ "items": ["Iron Armor - 200g", "Leather Jerkin - 100g", "Large Iron Shield - 200g"]
+ }]

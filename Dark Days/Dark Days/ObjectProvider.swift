@@ -37,8 +37,8 @@ final class ObjectProvider {
         return objectForJSONForName("Items", objectName: name)
     }
     
-    static func floorForName(name: String) -> Floor? {
-        return objectForJSONForName("Floors", objectName: name)
+    static func townForName(name: String) -> Town? {
+        return objectForJSONForName("Towns", objectName: name)
     }
     
     static func godForName(name: String) -> God? {
@@ -59,6 +59,10 @@ final class ObjectProvider {
     
     static func questForName(name: String) -> Quest? {
         return objectForJSONForName("Quests", objectName: name)
+    }
+    
+    static func merchantForName(name: String) -> Merchant? {
+        return objectForJSONForName("Merchants", objectName: name)
     }
     
     static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {

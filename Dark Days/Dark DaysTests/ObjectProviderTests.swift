@@ -46,10 +46,10 @@ class ObjectProviderTests: XCTestCase {
         XCTAssertEqual(races.count, 3)
     }
     
-    func testObjectProviderProvidesFloors() {
-        let floors: [Floor] = ObjectProvider.objectsForJSON("Floors")
+    func testObjectProviderProvidesTowns() {
+        let towns: [Town] = ObjectProvider.objectsForJSON("Towns")
         
-        XCTAssertEqual(floors.count, 2)
+        XCTAssertEqual(towns.count, 2)
     }
     
     func testObjectProviderProvidesMonsters() {

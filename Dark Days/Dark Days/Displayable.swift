@@ -81,9 +81,9 @@ extension Monster: ListDisplayingGeneratable {
     }
 }
 
-extension Floor: ListDisplayingGeneratable {
-    static func displayable(floor: Floor) -> ListDisplayable {
-        return ListDisplayable(title: floor.name, information: floor.background, additionalInfoTitle: "Towns", additionalInfo: floor.towns.joinWithSeparator("\n"), subtext: nil, image: nil, accessoryImage: nil)
+extension Town: ListDisplayingGeneratable {
+    static func displayable(town: Town) -> ListDisplayable {
+        return ListDisplayable(title: town.name, information: town.background, additionalInfoTitle: "Merchants", additionalInfo: town.merchants.joinWithSeparator("\n"), subtext: nil, image: nil, accessoryImage: nil)
     }
 }
 
@@ -96,6 +96,12 @@ extension MonsterAttack: ListDisplayingGeneratable {
 extension Quest: ListDisplayingGeneratable {
     static func displayable(quest: Quest) -> ListDisplayable {
         return ListDisplayable(title: quest.name, information: quest.explanation, additionalInfoTitle: "DM Notes", additionalInfo: quest.notes, subtext: quest.rewards.joinWithSeparator("\n"), image: nil, accessoryImage: nil)
+    }
+}
+
+extension Merchant: ListDisplayingGeneratable {
+    static func displayable(merchant: Merchant) -> ListDisplayable {
+        return ListDisplayable(title: merchant.name, information: merchant.explanation, additionalInfoTitle: "Sells", additionalInfo: merchant.items.joinWithSeparator("\n"), subtext: "Located in " + merchant.location, image: nil, accessoryImage: nil)
     }
 }
 
