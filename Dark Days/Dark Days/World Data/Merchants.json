@@ -7,7 +7,7 @@
  "name": "Vance Norton",
  "explanation": "A human armor merchant.",
  "location": "Thorndale",
- "items": ["Iron Armor - 300g", "Leather Jerkin - 150g", "Large Iron Shield - 250g"]
+ "items": ["Iron Armor - 300g", "Iron Helmet - 200g", "Leather Jerkin - 150g", "Leather Hat - 150g", "Large Iron Shield - 250g"]
  }, {
  "name": "Taranath Luceran",
  "explanation": "An old elven alchemist.",
