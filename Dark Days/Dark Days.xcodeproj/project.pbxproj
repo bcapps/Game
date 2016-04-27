@@ -255,6 +255,10 @@
 		F28C2B1F1CD062AB00E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
 		F28C2B201CD064B900E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
 		F28C2B211CD064B900E106DD /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B1E1CD062AB00E106DD /* Merchant.swift */; };
+		F28C2B241CD07CA600E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
+		F28C2B261CD07CB200E106DD /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B251CD07CB200E106DD /* Notes.json */; };
+		F28C2B271CD07D4100E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
+		F28C2B281CD07D4300E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -409,6 +413,8 @@
 		F28C2B171CC7503D00E106DD /* EffectsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EffectsViewController.storyboard; sourceTree = "<group>"; };
 		F28C2B1C1CD0615E00E106DD /* Merchants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Merchants.json; path = "World Data/Merchants.json"; sourceTree = "<group>"; };
 		F28C2B1E1CD062AB00E106DD /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
+		F28C2B231CD07CA600E106DD /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F28C2B251CD07CB200E106DD /* Notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Notes.json; path = "World Data/Notes.json"; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -615,6 +621,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F28C2B221CD07C9D00E106DD /* Notes */,
 				F28C2B1B1CD0614700E106DD /* Merchants */,
 				F28C2B061CC732BA00E106DD /* Quests */,
 				F2473B141C8382BE008FD65B /* Spells */,
@@ -866,6 +873,15 @@
 			name = Merchants;
 			sourceTree = "<group>";
 		};
+		F28C2B221CD07C9D00E106DD /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B231CD07CA600E106DD /* Note.swift */,
+				F28C2B251CD07CB200E106DD /* Notes.json */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
 		F29C55E31C961D2500ED386E /* Unequip Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +1003,7 @@
 				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
+				F28C2B261CD07CB200E106DD /* Notes.json in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
@@ -1158,6 +1175,7 @@
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
 				F25187941C922B9B003AD636 /* DismissSegue.swift in Sources */,
+				F28C2B241CD07CA600E106DD /* Note.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */,
 				C3AB8F4C1C7D0745007CE0BA /* HeroCreationViewController.swift in Sources */,
@@ -1260,6 +1278,7 @@
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
+				F28C2B271CD07D4100E106DD /* Note.swift in Sources */,
 				F25187B01C922BB3003AD636 /* ListDataSource.swift in Sources */,
 				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
 				F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */,
@@ -1302,6 +1321,7 @@
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
+				F28C2B281CD07D4300E106DD /* Note.swift in Sources */,
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */,

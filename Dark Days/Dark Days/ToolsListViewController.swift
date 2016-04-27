@@ -20,6 +20,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         case SkillList
         case MonsterList
         case Quests
+        case Notes
         case Gold
         
         func toolName() -> String {
@@ -38,6 +39,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return "Monster List"
             case .Quests:
                 return "Quests"
+            case .Notes:
+                return "Notes"
             case .Gold:
                 return "Gold"
             }
@@ -59,6 +62,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
             case .Quests:
                 return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Quests"))], delegate: delegate)
+            case .Notes:
+                return ListViewController<Note>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Notes"))], delegate: delegate)
             case .Gold:
                 return nil
             }
@@ -80,7 +85,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 9
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

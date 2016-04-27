@@ -105,6 +105,12 @@ extension Merchant: ListDisplayingGeneratable {
     }
 }
 
+extension Note: ListDisplayingGeneratable {
+    static func displayable(note: Note) -> ListDisplayable {
+        return ListDisplayable(title: note.name, information: note.explanation, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: nil, accessoryImage: nil)
+    }
+}
+
 struct ListDisplayable {
     let title: String?
     let information: String?
