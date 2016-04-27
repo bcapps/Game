@@ -92,6 +92,40 @@
  "itemSlot": "Hand",
  "damageReductions": [{"name": "Physical", "value": 1}]
  }, {
+ "name": "Basic Shortbow",
+ "damage": "1d6 + [DEX] + 1",
+ "effects": "",
+ "flavor": "A small shortbow, great for rapid ranged attacks.",
+ "itemSlot": "Hand",
+ "twoHanded": true
+ }, {
+ "name": "Basic Crossbow",
+ "damage": "1d4 + [DEX]",
+ "effects": "",
+ "flavor": "A light crossbow used for precision attacks.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Crossbow",
+ "damage": "1d6 + [DEX]",
+ "effects": "",
+ "flavor": "A standard issue crossbow.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Shortbow",
+ "damage": "2d4 + [DEX] + 1",
+ "effects": "",
+ "flavor": "A standard issue shorbow.",
+ "itemSlot": "Hand",
+ "twoHanded": true
+ }, {
+ "name": "Longbow",
+ "damage": "2d4 + [DEX]",
+ "effects": "Increases chance to hit by 1.",
+ "flavor": "A standard issue longbow.",
+ "itemSlot": "Hand",
+ "twoHanded": true,
+ "attackModifiers": [{"name": "Physical", "value": 1}]
+ }, {
  "name": "Leather Jerkin",
  "damage": "",
  "effects": "Decreases physical damage taken by 1.",
