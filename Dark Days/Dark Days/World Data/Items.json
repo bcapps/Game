@@ -164,11 +164,18 @@
  }, {
  "name": "Iron Helmet",
  "damage": "",
- "effects": "Decreases physical damage taken by 1, but redues chance to avoid an attack by 1.",
+ "effects": "Decreases physical damage taken by 2, but redues chance to avoid an attack by 1.",
  "flavor": "A sturdy metal helmet.",
  "itemSlot": "Helmet",
- "damageReductions": [{"name": "Physical", "value": 1}],
+ "damageReductions": [{"name": "Physical", "value": 2}],
  "damageAvoidances": [{"name": "Physical", "value": -1}]
+ }, {
+ "name": "Leather Hat",
+ "damage": "",
+ "effects": "Decreases physical damage taken by 1",
+ "flavor": "A hardened leather helmet.",
+ "itemSlot": "Helmet",
+ "damageReductions": [{"name": "Physical", "value": 1}]
  }, {
  "name": "Iron Armor",
  "damage": "",
