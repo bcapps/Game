@@ -25,6 +25,9 @@ extension UIStoryboard {
     static func sendGoldViewController() -> SendGoldViewController? {
         return initialViewControllerFromStoryboardNamed("SendGold") as? SendGoldViewController
     }
+    static func namesViewController() -> NamesViewController? {
+        return initialViewControllerFromStoryboardNamed("Names") as? NamesViewController
+    }
     
     static func nameHeroViewController() -> NameHeroViewController? {
         return initialViewControllerFromStoryboardNamed("NameHero") as? NameHeroViewController

@@ -20,6 +20,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         case SkillList
         case MonsterList
         case Quests
+        case Names
         case Notes
         case Gold
         
@@ -39,6 +40,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return "Monster List"
             case .Quests:
                 return "Quests"
+            case .Names:
+                return "Names"
             case .Notes:
                 return "Notes"
             case .Gold:
@@ -64,6 +67,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Quests"))], delegate: delegate)
             case .Notes:
                 return ListViewController<Note>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Notes"))], delegate: delegate)
+            case .Names:
+                return nil
             case .Gold:
                 return nil
             }
@@ -85,7 +90,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 10
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -116,6 +121,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 }
                 
                 navigationController?.pushViewController(goldViewController, animated: true)
+            case .Names:
+                guard let namesViewController = UIStoryboard.namesViewController() else { return }
+            
+                navigationController?.pushViewController(namesViewController, animated: true)
             default:
                 guard let viewController = tool.toolViewController(self) else { return }
                 navigationController?.pushViewController(viewController, animated: true)

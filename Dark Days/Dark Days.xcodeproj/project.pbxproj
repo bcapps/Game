@@ -259,6 +259,39 @@
 		F28C2B261CD07CB200E106DD /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B251CD07CB200E106DD /* Notes.json */; };
 		F28C2B271CD07D4100E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
 		F28C2B281CD07D4300E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
+		F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
+		F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
+		F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
+		F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
+		F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
+		F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
+		F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
+		F28C2B391CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
+		F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
+		F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
+		F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
+		F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
+		F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
+		F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
+		F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
+		F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
+		F28C2B421CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
+		F28C2B431CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
+		F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
+		F28C2B451CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
+		F28C2B461CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
+		F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
+		F28C2B481CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
+		F28C2B491CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
+		F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
+		F28C2B4C1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
+		F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
+		F28C2B501CD0888700E106DD /* Names.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B4F1CD0888700E106DD /* Names.storyboard */; };
+		F28C2B511CD0888700E106DD /* Names.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B4F1CD0888700E106DD /* Names.storyboard */; };
+		F28C2B521CD0888700E106DD /* Names.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B4F1CD0888700E106DD /* Names.storyboard */; };
+		F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
+		F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
+		F28C2B561CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -415,6 +448,17 @@
 		F28C2B1E1CD062AB00E106DD /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		F28C2B231CD07CA600E106DD /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		F28C2B251CD07CB200E106DD /* Notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Notes.json; path = "World Data/Notes.json"; sourceTree = "<group>"; };
+		F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomDwarfFemaleNames.txt; sourceTree = "<group>"; };
+		F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomDwarfMaleNames.txt; sourceTree = "<group>"; };
+		F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomElfFemaleNames.txt; sourceTree = "<group>"; };
+		F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomElfMaleNames.txt; sourceTree = "<group>"; };
+		F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomHumanFemaleNames.txt; sourceTree = "<group>"; };
+		F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomHumanMaleNames.txt; sourceTree = "<group>"; };
+		F28C2B301CD0878700E106DD /* RandomTavernNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomTavernNames.txt; sourceTree = "<group>"; };
+		F28C2B311CD0878700E106DD /* RandomTownNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomTownNames.txt; sourceTree = "<group>"; };
+		F28C2B4A1CD0879500E106DD /* NameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameProvider.swift; sourceTree = "<group>"; };
+		F28C2B4F1CD0888700E106DD /* Names.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Names.storyboard; sourceTree = "<group>"; };
+		F28C2B531CD0889000E106DD /* NamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -621,6 +665,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F28C2B291CD0877D00E106DD /* Names */,
 				F28C2B221CD07C9D00E106DD /* Notes */,
 				F28C2B1B1CD0614700E106DD /* Merchants */,
 				F28C2B061CC732BA00E106DD /* Quests */,
@@ -882,6 +927,32 @@
 			name = Notes;
 			sourceTree = "<group>";
 		};
+		F28C2B291CD0877D00E106DD /* Names */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B4E1CD0879B00E106DD /* Data */,
+				F28C2B4A1CD0879500E106DD /* NameProvider.swift */,
+				F28C2B4F1CD0888700E106DD /* Names.storyboard */,
+				F28C2B531CD0889000E106DD /* NamesViewController.swift */,
+			);
+			name = Names;
+			sourceTree = "<group>";
+		};
+		F28C2B4E1CD0879B00E106DD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */,
+				F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */,
+				F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */,
+				F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */,
+				F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */,
+				F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */,
+				F28C2B301CD0878700E106DD /* RandomTavernNames.txt */,
+				F28C2B311CD0878700E106DD /* RandomTownNames.txt */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		F29C55E31C961D2500ED386E /* Unequip Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,10 +1073,12 @@
 			files = (
 				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
+				F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
 				F28C2B261CD07CB200E106DD /* Notes.json in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */,
@@ -1019,11 +1092,18 @@
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Towns.json in Resources */,
+				F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
 				F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */,
 				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
+				F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
 				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
+				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
+				F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
+				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
+				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
+				F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,16 +1112,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
+				F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
 				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F21ECE3E1C7A75F7008041E9 /* Towns.json in Resources */,
+				F28C2B451CD0878700E106DD /* RandomTavernNames.txt in Resources */,
+				F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
+				F28C2B421CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F28C2B191CC9886E00E106DD /* Quests.json in Resources */,
+				F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
 				F2350B971C82444800D6E18E /* Assets.xcassets in Resources */,
+				F28C2B391CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
 				F25187841C922B22003AD636 /* DMToolkit.storyboard in Resources */,
+				F28C2B481CD0878700E106DD /* RandomTownNames.txt in Resources */,
+				F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
+				F28C2B511CD0888700E106DD /* Names.storyboard in Resources */,
 				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE351C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
@@ -1058,17 +1147,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
+				F28C2B521CD0888700E106DD /* Names.storyboard in Resources */,
+				F28C2B491CD0878700E106DD /* RandomTownNames.txt in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
 				F25187C21C922BB3003AD636 /* Root.storyboard in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B981C82444800D6E18E /* Assets.xcassets in Resources */,
+				F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
+				F28C2B461CD0878700E106DD /* RandomTavernNames.txt in Resources */,
+				F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
+				F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
+				F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
 				F25187851C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				C39ACBF61C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
+				F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
 				F2473B1A1C8382EA008FD65B /* Spells.json in Resources */,
+				F28C2B431CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
@@ -1169,6 +1267,7 @@
 				F26C01F91CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
+				F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
@@ -1185,6 +1284,7 @@
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F26C01F51CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
+				F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
@@ -1264,6 +1364,7 @@
 				F26C01ED1CB1937200907164 /* StatEffectCodingTests.swift in Sources */,
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				F28C2B201CD064B900E106DD /* Merchant.swift in Sources */,
+				F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
@@ -1276,6 +1377,7 @@
 				F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
+				F28C2B4C1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
 				F28C2B271CD07D4100E106DD /* Note.swift in Sources */,
@@ -1355,12 +1457,14 @@
 				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
+				F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,
 				F26C01E71CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F26C01FB1CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 				C39ACBFA1C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F26C01F71CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
+				F28C2B561CD0889000E106DD /* NamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

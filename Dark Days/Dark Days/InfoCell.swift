@@ -58,7 +58,7 @@ final class InfoCell: UITableViewCell {
         infoTextView.font = UIFont.bodyFont()
         infoTextView.textColor = .bodyTextColor()
         
-        backgroundColor = .clearColor()
+        backgroundColor = .backgroundColor()
         
         infoImageButton.backgroundColor = backgroundColor
         infoTextView.backgroundColor = backgroundColor
