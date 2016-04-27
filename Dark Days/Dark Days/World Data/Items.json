@@ -41,6 +41,43 @@
  "effects": "",
  "flavor": "A long sword used for stabbing.",
  "itemSlot": "Hand"
+ },{
+ "name": "Iron Axe",
+ "damage": "1d6 + [STR]",
+ "effects": "",
+ "flavor": "A small axe made of high quality iron.",
+ "itemSlot": "Hand",
+ }, {
+ "name": "Iron Dagger",
+ "damage": "1d6 + [DEX]",
+ "effects": "",
+ "flavor": "A small blade made of high quality iron.",
+ "itemSlot": "Hand",
+ }, {
+ "name": "Iron Hammer",
+ "damage": "1d6 + [STR]",
+ "effects": "",
+ "flavor": "A heavy hammer made of high quality iron.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Iron Spear",
+ "damage": "2d6 + [STR]",
+ "effects": "",
+ "flavor": "An iron spear of great length.",
+ "itemSlot": "Hand",
+ "twoHanded": true
+ }, {
+ "name": "Iron Shortsword",
+ "damage": "1d6 + [STR]",
+ "effects": "",
+ "flavor": "An iron sword used for stabbing and slashing.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Iron Longsword",
+ "damage": "1d6 + [STR]",
+ "effects": "",
+ "flavor": "An iron sword used for stabbing.",
+ "itemSlot": "Hand"
  }, {
  "name": "Clothes",
  "damage": "",
@@ -165,4 +202,11 @@
  "itemSlot": "Hand",
  "damageReductions": [{"name": "Physical", "value": 2}],
  "damageAvoidances": [{"name": "Physical", "value": -1}]
+ }, {
+ "name": "Jian",
+ "damage": "1d8 + [DEX]",
+ "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit by 1.",
+ "flavor": "A short sword used for quick strikes by the Blades of Kazu.",
+ "itemSlot": "Hand",
+ "attackModifiers": [{"name": "Physical", "value": 1}]
  }]

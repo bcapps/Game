@@ -54,7 +54,7 @@ final class InfoCell: UITableViewCell {
         infoImageButton.layer.borderColor = UIColor.borderColor().CGColor
         infoImageButton.layer.borderWidth = 1.0
         infoImageButton.layer.masksToBounds = true
-        
+        infoImageButton.imageView?.contentMode = .ScaleAspectFit
         infoTextView.font = UIFont.bodyFont()
         infoTextView.textColor = .bodyTextColor()
         
