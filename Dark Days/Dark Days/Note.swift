@@ -15,6 +15,6 @@ struct Note: Decodable, Nameable {
     
     static func decode(json: AnyObject) throws -> Note {
         return try Note(name: json => "name",
-                            explanation: json => "explanation")
+                        explanation: json => "explanation")
     }
 }

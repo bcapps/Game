@@ -209,4 +209,10 @@
  "flavor": "A short sword used for quick strikes by the Blades of Kazu.",
  "itemSlot": "Hand",
  "attackModifiers": [{"name": "Physical", "value": 1}]
+ }, {
+ "name": "Small Healing Potion",
+ "damage": "",
+ "effects": "Heals the consumer for 1d4+2 of health.",
+ "flavor": "A coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+ "itemSlot": ""
  }]
