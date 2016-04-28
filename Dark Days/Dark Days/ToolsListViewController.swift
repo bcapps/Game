@@ -22,6 +22,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         case Quests
         case Names
         case Notes
+        case StatModification
         case Gold
         
         func toolName() -> String {
@@ -38,6 +39,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return "Skill List"
             case .MonsterList:
                 return "Monster List"
+            case .StatModification:
+                return "Stat Modification"
             case .Quests:
                 return "Quests"
             case .Names:
@@ -63,6 +66,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
+            case .StatModification:
+                return ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
             case .Quests:
                 return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Quests"))], delegate: delegate)
             case .Notes:
@@ -174,7 +179,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     // MARK: ListViewControllerDelegate
     
     func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
-        if object is Item || object is Skill || object is Spell {
+        if object is Item || object is Skill || object is Spell || object is Stat {
             let peersViewController = PeerListViewController(multipeerManager: multipeer)
             peersViewController.objectToSend = object as Any
             
@@ -203,7 +208,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        return object is Item || object is Skill || object is Spell || object is Monster || object is Town
+        return object is Item || object is Skill || object is Spell || object is Monster || object is Town || object is Stat
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }

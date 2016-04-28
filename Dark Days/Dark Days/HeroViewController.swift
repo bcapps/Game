@@ -77,6 +77,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         super.viewWillAppear(animated)
 
         updateGoldText()
+        collectionView.reloadData()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -438,6 +439,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 
                 hero?.inventory.gold = heroGold + (goldValue?.longValue ?? 0)
                 updateGoldText()
+                break
+            case LCKMultipeer.MessageType.Stat.rawValue:
+                guard let stat = ObjectProvider.statForName(objectName) else { return }
+                hero?.increaseStatBy(stat.statType, value: 1)
+                
+                collectionView.reloadData()
                 break
             default:
                 break

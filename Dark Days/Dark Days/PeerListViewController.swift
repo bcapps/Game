@@ -13,7 +13,7 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     let multipeer: LCKMultipeer
     var objectToSend: Any?
     var goldToSend: Int?
-    
+
     var peers: [MCPeerID] {
         get {
             return multipeer.connectedPeers.filter({$0.displayName != "DM"})
@@ -91,6 +91,8 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
                 multipeer.sendSkillToPeer(skill, peer: peerID)
             } else if let spell = objectToSend as? Spell {
                 multipeer.sendSpellToPeer(spell, peer: peerID)
+            } else if let stat = objectToSend as? Stat {
+                multipeer.sendStatToPeer(stat, peer: peerID)
             } else if let gold = goldToSend {
                 multipeer.sendGoldToPeer(gold, peer: peerID)
             }

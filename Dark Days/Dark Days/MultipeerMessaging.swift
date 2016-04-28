@@ -16,6 +16,7 @@ extension LCKMultipeer {
         case Item
         case Spell
         case Skill
+        case Stat
         case Gold
     }
     
@@ -29,6 +30,10 @@ extension LCKMultipeer {
     
     func sendSkillToPeer(skill: Skill, peer: MCPeerID) -> Bool {
         return sendObjectToPeer(skill.name, type: .Skill, peer: peer)
+    }
+    
+    func sendStatToPeer(stat: Stat, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(stat.name, type: .Stat, peer: peer)
     }
     
     func sendGoldToPeer(gold: Int, peer: MCPeerID) -> Bool {

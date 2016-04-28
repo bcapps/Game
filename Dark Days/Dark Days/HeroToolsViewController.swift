@@ -9,11 +9,15 @@
 final class HeroToolsViewController: UITableViewController, ListViewControllerDelegate {
     
     var hero: Hero?
+    var increaseStatList: ListViewController<Stat>?
+    var decreaseStatList: ListViewController<Stat>?
     
     enum Tool: Int {
         case ItemList
         case SpellList
         case SkillList
+        case IncreaseStat
+        case DecreaseStat
         case Gold
         
         func toolName() -> String {
@@ -24,6 +28,10 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
                 return "Spell List"
             case .SkillList:
                 return "Skill List"
+            case .IncreaseStat:
+                return "Increase Stat"
+            case .DecreaseStat:
+                return "Decrease Stat"
             case .Gold:
                 return "Gold"
             }
@@ -42,6 +50,14 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             case .SkillList:
                 let list = ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
                 list.title = "Get Skill"
+                return list
+            case .IncreaseStat:
+                let list = ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
+                list.title = "Increase Stat"
+                return list
+            case .DecreaseStat:
+                let list = ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
+                list.title = "Decrease Stat"
                 return list
             case .Gold:
                 return nil
@@ -62,7 +78,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -93,8 +109,18 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             }
             
             navigationController?.pushViewController(goldViewController, animated: true)
+        case .IncreaseStat:
+            guard let viewController = tool.toolViewController(self) else { return }
+            increaseStatList = viewController as? ListViewController<Stat>
+            
+            navigationController?.pushViewController(viewController, animated: true)
+        case .DecreaseStat:
+            guard let viewController = tool.toolViewController(self) else { return }
+            decreaseStatList = viewController as? ListViewController<Stat>
+            navigationController?.pushViewController(viewController, animated: true)
         default:
             guard let viewController = tool.toolViewController(self) else { return }
+            
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
@@ -120,6 +146,12 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             hero?.skills.append(skill)
         } else if let spell = object as? Spell {
             hero?.spells.append(spell)
+        } else if let stat = object as? Stat {
+            if listViewController == increaseStatList {
+                hero?.increaseStatBy(stat.statType, value: 1)
+            } else if listViewController == decreaseStatList {
+                hero?.increaseStatBy(stat.statType, value: -1)
+            }
         }
         
         saveHero()
@@ -127,7 +159,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     }
     
     func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
-        return object is Item || object is Skill || object is Spell
+        return object is Item || object is Skill || object is Spell || object is Stat
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
