@@ -43,6 +43,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private let effectsViewController = UIStoryboard.effectsViewController()
+    private var healthViewController: HealthViewController?
+    
     private let menu = DropdownMenuFactory.heroDropdownMenu()
     private let animationDuration = 0.35
     
@@ -77,6 +79,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         super.viewWillAppear(animated)
 
         updateGoldText()
+        healthViewController?.hero = hero
         collectionView.reloadData()
     }
     
@@ -90,7 +93,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let _ = segue.destinationViewController.view
         
         if let viewController = segue.destinationViewController as? HealthViewController {
-            viewController.hero = hero
+            healthViewController = viewController
+            healthViewController?.hero = hero
         }
     }
     
