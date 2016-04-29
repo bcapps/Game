@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("a6e84183c21b46adbe5d00fb530f9342")
+        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
         
         window?.tintColor = UIColor.whiteColor()
         
