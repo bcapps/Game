@@ -50,8 +50,8 @@ final class HeroBuilder {
         
         switch name {
         case "Shiro, God of Hope":
-            guard let reflect = ObjectProvider.spellForName("Reflect") else { return [] }
-            guard let ray = ObjectProvider.spellForName("Ray of Light") else { return [] }
+            guard let reflect = ObjectProvider.spellForName("Shield of Reflection") else { return [] }
+            guard let ray = ObjectProvider.spellForName("Siphon Light") else { return [] }
             guard let inspire = ObjectProvider.spellForName("Inspire") else { return [] }
             
             spells.appendContentsOf([reflect, ray, inspire])

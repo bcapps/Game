@@ -1,6 +1,6 @@
 [{
  "name": "Shield of Reflection",
- "damage": "Monster Damage + [FAI]",
+ "damage": "Deals damage equal to the prevented damage.",
  "effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d6 + [FAI] damage.",
  "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
  }, {
