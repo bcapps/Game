@@ -5,5 +5,9 @@
  }, {
  "name": "Hammerfell",
  "background": "The largest town inside the Stormwall. The Lord of Stormhaven resides here.",
- "merchants": ["Jaddic Greathand", "Vance Norton"]
+ "merchants": []
+ }, {
+ "name": "Thorndale",
+ "background": "A small town, close to the Stormwall. Most of the homes are decrepit, and it looks like most of the villagers haven't seen a bath since they were born. It holds a small inn, as well as several blacksmiths and a small alchemy shop.",
+ "merchants": ["Jaddic Greathand", "Vance Norton", "Taranath Luceran"]
  }]
