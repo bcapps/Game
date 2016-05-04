@@ -53,4 +53,14 @@
  "damage": "1d4 + [FAI]",
  "effects": "Summons a lesser felbeast that has 1d8+ [FAI] hit points and deals FAI damage when attacking.",
  "flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
+ }, {
+ "name": "Speak with the Dead",
+ "damage": "",
+ "effects": "Reanimate a corpse to speak with it. Note: this will not allow you to communicate with creatures that do not speak languages you speak.",
+ "flavor": "Not even death will keep you from me."
+ }, {
+ "name": "Arms of Morter",
+ "damage": "2d6 + [FAI]",
+ "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a large area around you.",
+ "flavor": "Death will hold you in it's everlasting embrace."
  }]
