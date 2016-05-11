@@ -21,7 +21,9 @@ final class HeroListViewController: ListViewController<Hero> {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: .addButtonTapped)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .Plain, target: self, action: .toolkitButtonTapped)
+        if false {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .Plain, target: self, action: .toolkitButtonTapped)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
