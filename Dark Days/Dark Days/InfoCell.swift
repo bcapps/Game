@@ -12,6 +12,7 @@ final class InfoCell: UITableViewCell {
     var infoImage: UIImage? {
         set {
             infoImageButton.setImage(newValue, forState: .Normal)
+            layoutIfNeeded()
         }
         get {
             return infoImageButton.imageForState(.Normal)
@@ -21,6 +22,7 @@ final class InfoCell: UITableViewCell {
     var accessoryImage: UIImage? {
         set {
             accessoryImageView.image = newValue
+            layoutIfNeeded()
         }
         get {
             return accessoryImageView.image

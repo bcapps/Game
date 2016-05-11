@@ -38,4 +38,14 @@
  "explanation": "Initiator: Visiting a temple of Azoth.\nA novice is embarrassed by losing control of a demon in front of you, his master steps in. Forces novice to give you a tour. Novice eventually privately hands one of the party a piece of meat. You enter the demon cages. Novice slips out unnoticed, demon attacks your party.",
  "notes": "Giving it the meat will satiate it and put it to sleep.\nEnemies Include: Greater Felbeast",
  "rewards": ["• Cloak of the Demon Summoner", "• Spell: Summon Lesser Felbeast"]
+ }, {
+ "name": "Afraid of the Dark",
+ "explanation": "Initiator: Come across a quaint village.\nThe village is eerily afraid of something, what you can't tell.",
+ "notes": "There are shades invading and harming children that adults can't see. Hide From Adult spell.",
+ "rewards": ["• Nightmare Blade"]
+ }, {
+ "name": "Time...",
+ "explanation": "Initiator: Enter the main temple of Vitael.\nThere will be a large statue that when approached will ask the repeated question: Time?",
+ "notes": "The response should be: Time flies, time bandits, time wounds all heals, time is infinite.\nUpon learning more and coming back, there is a chance to answer differently, repeating the first three answers, and ending with: Time ends.",
+ "rewards": ["• Infinity Ring", "• Chaos Ring"]
  }]
