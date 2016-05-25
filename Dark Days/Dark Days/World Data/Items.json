@@ -285,4 +285,10 @@
  "itemSlot": "Accessory",
  "damageModifiers": [{"name": "Physical", "value": 2},
                       {"name": "Magical", "value": 2}]
+ }, {
+ "name": "Mug of Destiny",
+ "damage": "",
+ "effects": "Once per day the mug fills with alcohol. Drinking from the mug removes any toxins or poisons from the drinker.",
+ "flavor": "A small mug made of simple wood. It smells of strong alcohol, like a bar after a rowdy night.",
+ "itemSlot": ""
  }]
