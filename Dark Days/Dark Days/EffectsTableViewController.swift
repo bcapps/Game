@@ -162,7 +162,7 @@ private class EffectsHeaderView {
         let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 40))
         containingView.contentView.backgroundColor = .backgroundColor()
         
-        let labelFrame = CGRect(x: 10, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let labelFrame = CGRect(x: 10, y: 0, width: containingView.frame.width, height: containingView.frame.height)
         let label = UILabel(frame: labelFrame)
         
         label.attributedText =  NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.headerTextColor()])

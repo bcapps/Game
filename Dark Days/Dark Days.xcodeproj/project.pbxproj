@@ -1034,7 +1034,7 @@
 				TargetAttributes = {
 					F21ECDB71C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Z7HY32X2F3;
+						DevelopmentTeam = JL4AKR8DVC;
 					};
 					F21ECDCB1C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1235,7 +1235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./swiftlint\n";
+			shellScript = "./swiftlint/bin/swiftlint lint --config ./swiftlint/bin/.swiftlint.yml\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1591,6 +1591,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
@@ -1609,6 +1610,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";

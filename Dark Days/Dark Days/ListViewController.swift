@@ -125,7 +125,7 @@ private class ListHeaderView: UITableViewHeaderFooterView {
         let containingView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: width, height: 44))
         containingView.contentView.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
-        let labelFrame = CGRect(x: 0, y: 0, width: CGRectGetWidth(containingView.frame), height: CGRectGetHeight(containingView.frame))
+        let labelFrame = CGRect(x: 0, y: 0, width: containingView.frame.width, height: containingView.frame.height)
         let label = UILabel(frame: labelFrame)
         
         label.attributedText = NSAttributedString.attributedStringWithHeadingAttributes(text)

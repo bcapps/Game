@@ -72,7 +72,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let itemSpacing = collectionViewFlowLayout.minimumInteritemSpacing
         let numberOfItems = CGFloat(5)
         
-        collectionViewFlowLayout.itemSize = CGSize(width: (CGRectGetWidth(view.frame) - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
+        collectionViewFlowLayout.itemSize = CGSize(width: (view.frame.width - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
     }
     
     override func viewWillAppear(animated: Bool) {

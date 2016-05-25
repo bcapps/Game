@@ -69,7 +69,8 @@ class ContainingViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        var frame = CGRectInset(view.bounds, 50, 85)
+        
+        var frame = view.bounds.insetBy(dx: 50, dy: 85)
         frame.origin.y = 50
         
         insetView.frame = frame
