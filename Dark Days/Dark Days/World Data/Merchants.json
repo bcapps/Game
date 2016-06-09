@@ -13,4 +13,19 @@
  "explanation": "An old elven alchemist.",
  "location": "Thorndale",
  "items": ["Small Healing Potion - 50g", "Torch - 25g"]
+ }, {
+ "name": "Harlan Burke",
+ "explanation": "A male human alchemist with narrowing eyes, and burnt fingers.",
+ "location": "Wheatfort",
+ "items": ["Small Healing Potion - 50g"]
+ }, {
+ "name": "Giles Tyne",
+ "explanation": "A male human armor merchant. He carries himself as if he was nobility, but his shop's status betrays otherwise.",
+ "location": "Wheatfort",
+ "items": ["Iron Armor - 300g", "Iron Helmet - 200g", "Leather Jerkin - 150g", "Leather Hat - 150g", "Large Iron Shield - 250g"]
+ }, {
+ "name": "Jane Rysel",
+ "explanation": "A female human weapon merchant. ",
+ "location": "Wheatfort",
+ "items": ["Iron Dagger - 200g", "Iron Shortsword - 200g", "Iron Longsword - 200g", "Iron Spear - 300g", "Iron Axe - 200g", "Iron Hammer - 200g", "Rapier - 200g", "Crossbow - 200g", "Shortbow - 300g", "Longbow - 300g"]
  }]

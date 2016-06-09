@@ -54,4 +54,22 @@
  "attacks": [{"name": "Claw", "damage": "1d6", "weight": 60},
              {"name": "Maul", "damage": "1d8", "weight": 30},
              {"name": "Bite", "damage": "1d10", "weight": 10}]
+ }, {
+ "name": "Zombie",
+ "explanation": "A mostly rotting corpse with large pieces of flesh missing.",
+ "health": 12,
+ "attacks": [{"name": "Claw", "damage": "1d4", "weight": 70},
+             {"name": "Grapple", "damage": "1d4", "weight": 30}]
+ }, {
+ "name": "Necromancer",
+ "explanation": "A thing gaunt fellow wearing dark robes.",
+ "health": 25,
+ "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
+             {"name": "Raise Dead", "damage": "Raises a zombie from a corpse.", "weight": 30}]
+ }, {
+ "name": "Master Necromancer",
+ "explanation": "",
+ "health": 65,
+ "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
+             {"name": "Arms of Morter", "damage": "1d6 medium AOE magic damage", "weight": 30}]
  }]

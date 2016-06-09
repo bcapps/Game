@@ -291,4 +291,23 @@
  "effects": "Once per day the mug fills with alcohol. Drinking from the mug removes any toxins or poisons from the drinker.",
  "flavor": "A small mug made of simple wood. It smells of strong alcohol, like a bar after a rowdy night.",
  "itemSlot": ""
+ }, {
+ "name": "Lucidity Bag",
+ "damage": "",
+ "effects": "You aren't sure what is really in this bag, or what consuming what's inside would do to you.",
+ "flavor": "Would you like a lucidity? -Taranath Luceran",
+ "itemSlot": ""
+ }, {
+ "name": "Holy Blade",
+ "damage": "1d6 + [FAI]",
+ "effects": "",
+ "flavor": "A sword that shines with a brilliant white color when striking down your enemies.",
+ "itemSlot": "Hand"
+ }, {
+ "name": "Black Robe",
+ "damage": "",
+ "effects": "Decreases magic damage taken by 1.",
+ "flavor": "Dark robes intended to be worn by the followers of Morter.",
+ "itemSlot": "Chest",
+ "damageReductions": [{"name": "Magic", "value": 1}]
  }]

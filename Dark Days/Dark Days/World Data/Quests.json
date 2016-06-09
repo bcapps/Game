@@ -48,4 +48,9 @@
  "explanation": "Initiator: Enter the main temple of Vitael.\nThere will be a large statue that when approached will ask the repeated question: Time?",
  "notes": "The response should be: Time flies, time bandits, time wounds all heals, time is infinite.\nUpon learning more and coming back, there is a chance to answer differently, repeating the first three answers, and ending with: Time ends.",
  "rewards": ["• Infinity Ring", "• Chaos Ring"]
+ }, {
+ "name": "Until Death",
+ "explanation": "Initiator: Discover from rumors that people have been disappearing.\n",
+ "notes": "Investigating the Temple of Morter should reveal catacombs underneath where the dead have started walking around. There is a rogue necromancer summoning them and stealing corpses at night. There is also a hidden room containing a Holy Sword.\n Enemies Include: Zombie, Necromancer, Master Necromancer",
+ "rewards": ["• Holy Blade", "• Spell: Arms of Morter"]
  }]
