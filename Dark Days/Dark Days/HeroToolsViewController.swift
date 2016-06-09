@@ -19,6 +19,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
         case IncreaseStat
         case DecreaseStat
         case Gold
+        case BackupCharacter
         
         func toolName() -> String {
             switch self {
@@ -34,6 +35,8 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
                 return "Decrease Stat"
             case .Gold:
                 return "Gold"
+            case .BackupCharacter:
+                return "Backup Character"
             }
         }
         
@@ -60,6 +63,8 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
                 list.title = "Decrease Stat"
                 return list
             case .Gold:
+                return nil
+            case .BackupCharacter:
                 return nil
             }
         }
@@ -109,6 +114,8 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             }
             
             navigationController?.pushViewController(goldViewController, animated: true)
+        case .BackupCharacter:
+            break
         case .IncreaseStat:
             guard let viewController = tool.toolViewController(self) else { return }
             increaseStatList = viewController as? ListViewController<Stat>
@@ -169,4 +176,13 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
 
 private extension Selector {
     static let dismiss = #selector(HeroToolsViewController.dismiss)
+}
+
+private extension Hero {
+    func export() -> NSData {
+        let heroCoder = HeroCoder(value: self)
+        let data = NSKeyedArchiver.archivedDataWithRootObject(heroCoder)
+        
+        return data
+    }
 }
