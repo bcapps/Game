@@ -16,12 +16,14 @@ struct Quest: Decodable, Codeable, Nameable, Equatable {
     let explanation: String
     let notes: String
     let rewards: [String]
+    let completed: Bool
     
     static func decode(json: AnyObject) throws -> Quest {
         return try Quest(name: json => "name",
                          explanation: json => "explanation",
                          notes: json => "notes",
-                         rewards: json => "rewards")
+                         rewards: json => "rewards",
+                         completed: json =>? "completed" ?? false)
     }
 }
 

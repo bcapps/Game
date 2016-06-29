@@ -2,7 +2,8 @@
  "name": "Spider Slayers",
  "explanation": "Initiator: Guard or Tavern Patron\nRumors have spread of livestock disappearing in the night. At first it could be dismissed as wolves roaming the hillside, but more recently there have been reports of entire farms picked clean during the night, animals and men alike. Investigate the Sawyer farm for more clues.",
  "notes": "Investigating the farm main clues include caustic fluid, and tiny spiders. Tracks lead to a cave in the hills.\nEnemies include: Spider, Large Spider, Spider Queen",
- "rewards": ["• Spider Chitin"]
+ "rewards": ["• Spider Chitin"],
+ "completed": true
  }, {
  "name": "The Peaceful Monk",
  "explanation": "Initiator: Helpful Commoner\nA hermit has taken up residence in a small cave above the town. He asked if I could bring him this basket of fruit, but I'm too busy, and I'm worried he'll run out of food if this doesn't get to him. Can you bring it to him?",
@@ -12,7 +13,8 @@
  "name": "Drinking Contest",
  "explanation": "Initiator: Tavern Patron\nA patron starts a drinking contest in the local tavern.",
  "notes": "Several rounds of the contest:\nHuman Swill: 4\nDwarven Ale: 6\nElven Spiritwater: 8\nDemon Grog: 10\nSally's Shandy: 12",
- "rewards": ["• 300 gold after Elven Spiritwater", "• Mug of Destiny after Sally's Shandy"]
+ "rewards": ["• 300 gold after Elven Spiritwater", "• Mug of Destiny after Sally's Shandy"],
+ "completed": true
  }, {
  "name": "The Blades of Kazu",
  "explanation": "Initiator: Town Leader\nSilent knights that carry out their gods will from the shadows, said to swing their sword with such speed it is as if there are multiple blades. Seek them out. Convince them to help the people.",

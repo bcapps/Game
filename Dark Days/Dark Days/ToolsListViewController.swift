@@ -69,7 +69,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             case .StatModification:
                 return ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
             case .Quests:
-                return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Quests"))], delegate: delegate)
+                let completedQuests: [Quest] = ObjectProvider.sortedObjectsForJSON("Quests").filter { $0.completed == true }
+                let upcomingQuests: [Quest] = ObjectProvider.sortedObjectsForJSON("Quests").filter { $0.completed == false }
+                
+                return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects:upcomingQuests), SectionList(sectionTitle: "Completed", objects:completedQuests)], delegate: delegate)
             case .Notes:
                 return ListViewController<Note>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Notes"))], delegate: delegate)
             case .Names:
