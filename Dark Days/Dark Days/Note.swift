@@ -12,9 +12,11 @@ import Decodable
 struct Note: Decodable, Nameable {
     let name: String
     let explanation: String
+    let completed: Bool
     
     static func decode(json: AnyObject) throws -> Note {
         return try Note(name: json => "name",
-                        explanation: json => "explanation")
+                        explanation: json => "explanation",
+                        completed: json =>? "completed" ?? false)
     }
 }
