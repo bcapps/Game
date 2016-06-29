@@ -62,5 +62,10 @@
  "name": "Arms of Morter",
  "damage": "2d6 + [FAI]",
  "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a large area around you.",
- "flavor": "Death will hold you in it's everlasting embrace."
+ "flavor": "Death will hold you in its everlasting embrace."
+ }, {
+ "name": "Confusion Cloud",
+ "damage": "",
+ "effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI].",
+ "flavor": "An illusion to bring about your confusion."
  }]

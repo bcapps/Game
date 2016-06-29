@@ -164,7 +164,7 @@
  }, {
  "name": "Iron Helmet",
  "damage": "",
- "effects": "Decreases physical damage taken by 2, but redues chance to avoid an attack by 1.",
+ "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
  "flavor": "A sturdy metal helmet.",
  "itemSlot": "Helmet",
  "damageReductions": [{"name": "Physical", "value": 2}],
@@ -309,5 +309,41 @@
  "effects": "Decreases magic damage taken by 1.",
  "flavor": "Dark robes intended to be worn by the followers of Morter.",
  "itemSlot": "Chest",
- "damageReductions": [{"name": "Magic", "value": 1}]
+ "damageReductions": [{"name": "Magical", "value": 1}]
+ }, {
+ "name": "Beholder Stalk",
+ "damage": "",
+ "effects": "A dripping eye stalk that was once attached to a horrific creature.",
+ "flavor": "",
+ "itemSlot": "",
+ }, {
+ "name": "Gazing Staff",
+ "damage": "2d4 + [FAI]",
+ "effects": "Increases magical damage dealt by 2.",
+ "flavor": "A staff topped with the eye of an otherwordly creature. Occasionaly you still think it blinks, though the creature has been long dead. Hasn't it?",
+ "itemSlot": "Hand",
+ "twoHanded": true,
+ "damageModifiers": [{"name": "Magical", "value": 2}]
+ }, {
+ "name": "Skeletal Shortbow",
+ "damage": "2d4 + [DEX]",
+ "effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",
+ "flavor": "A small bow made of raw bone, connected with the sinew of some unknown creature.",
+ "itemSlot": "Hand",
+ "twoHanded": true
+ }, {
+ "name": "Shrouded Mask",
+ "damage": "",
+ "effects": "Increases your chance to dodge a physical attack by 1. Increases your chance to hit with a physical attack by 1.",
+ "flavor": "A mask that shrouds your face, and hides you from your enemies.",
+ "itemSlot": "Helmet",
+ "damageAvoidances": [{"name": "Physical", "value": 1}],
+ "attackModifiers": [{"name": "Physical", "value": 1}]
+ }, {
+ "name": "Platemail Boots",
+ "damage": "",
+ "effects": "Reduces physical damage taken by 2.",
+ "flavor": "Sturdy boots made of fine smithed iron.",
+ "itemSlot": "Boots",
+ "damageReductions": [{"name": "Physical", "value": 2}]
  }]

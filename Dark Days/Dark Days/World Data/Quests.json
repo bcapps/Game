@@ -52,5 +52,25 @@
  "name": "Until Death",
  "explanation": "Initiator: Discover from rumors that people have been disappearing.\n",
  "notes": "Investigating the Temple of Morter should reveal catacombs underneath where the dead have started walking around. There is a rogue necromancer summoning them and stealing corpses at night. There is also a hidden room containing a Holy Sword.\n Enemies Include: Zombie, Necromancer, Master Necromancer",
- "rewards": ["• Holy Blade", "• Spell: Arms of Morter"]
+ "rewards": ["• Holy Blade", "Platemail Boots", "• Spell: Arms of Morter"]
+ }, {
+ "name": "Cult of the Unseeing Eye",
+ "explanation": "Initiator: Random temple.\n",
+ "notes": "There is a cult that has been killing all manner of creature. The cult is led by a beholder with no central eye.\n Enemies Include: Cultist, Eyeless Beholder",
+ "rewards": ["• Beholder Stalk", "• Spell: Confusion Cloud"]
+ }, {
+ "name": "Dead Farm",
+ "explanation": "Initiator: Walking out in a field you come across undead milling about.\n",
+ "notes": "The farmer is actually a friendly necromancer and has raised the dead to assist in crop growing and gathering. If you kill the undead or the farmer this has a negative impact toward the growth of the nearby town.\n Enemies Include: Zombie, Farmer",
+ "rewards": ["• Skeletal Shortbow"]
+ }, {
+ "name": "Trancing Troubadour",
+ "explanation": "Initiator: Coming across a small village.\n",
+ "notes": "An entire village is under the hypnosis effect of the mayor. He's using a magical pan flute.\n Enemies Include: Hypnotized Villager, Troubadour",
+ "rewards": ["• 2000g"]
+ }, {
+ "name": "Cult of the Gateway of the Beyond",
+ "explanation": "Initiator: Rumors of a friendly cult leading people to the afterlife.\n",
+ "notes": "There is a cult dedicated to a magical gateway. They lead people through it. The gateway speaks to the cult leaders. They coat those who go through the gateway in spices. Turns out, the gateway is actually just a mimic eating people. \n Enemies Include: Mimic",
+ "rewards": ["• Shrouded Mask"]
  }]
