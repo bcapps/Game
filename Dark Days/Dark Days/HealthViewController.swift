@@ -50,9 +50,9 @@ final class HealthViewController: UIViewController {
     }
     
     private func textColor(currentHealth: Double, maximumHealth: Double) -> UIColor {
-        if currentHealth / maximumHealth < 0.33 {
+        if currentHealth / maximumHealth < (1 / 3) {
             return .redColor()
-        } else if currentHealth / maximumHealth < 0.66 {
+        } else if currentHealth / maximumHealth < (2 / 3) {
             return .yellowColor()
         } else {
             return .greenColor()
