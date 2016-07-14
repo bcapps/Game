@@ -68,4 +68,9 @@
  "damage": "",
  "effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI].",
  "flavor": "An illusion to bring about your confusion."
+ }, {
+ "name": "Mind Warp",
+ "damage": "2d4 + [FAI]",
+ "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you.",
+ "flavor": "Would you kill your friends for me? - Incubus"
  }]

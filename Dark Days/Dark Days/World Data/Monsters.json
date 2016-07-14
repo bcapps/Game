@@ -72,4 +72,17 @@
  "health": 65,
  "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
              {"name": "Arms of Morter", "damage": "1d6 medium AOE magic damage", "weight": 30}]
+ }, {
+ "name": "Davu",
+ "explanation": "The Davu feed off the despair and agony of those in pain. They live in the nightmare realm.",
+ "health": 30,
+ "attacks": [{"name": "Nightmare Blast", "damage": "2d4 magic damage", "weight": 30},
+             {"name": "Claw", "damage": "1d6 + 2 physical damage", "weight": 70}]
+ }, {
+ "name": "Incubus",
+ "explanation": "A demon that entraps and enslaves women to do their bidding and drain their life.",
+ "health": 65,
+ "attacks": [{"name": "Mind Warp", "damage": "1d4 medium AOE mental damage", "weight": 30},
+             {"name": "Razor Claw", "damage": "1d6 + 2 physical damage", "weight": 40},
+             {"name": "Nightmare Shift", "damage": "Shifts the target into the nightmare world for a round.", "weight": 30}]
  }]
