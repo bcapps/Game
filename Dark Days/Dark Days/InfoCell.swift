@@ -58,7 +58,9 @@ final class InfoCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        addImageExclusionRect()
+        if infoImage != nil {
+            addImageExclusionRect()
+        }
         
         if accessoryImage != nil {
             addAccessoryImageExclusionRect()

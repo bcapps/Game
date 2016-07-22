@@ -62,10 +62,24 @@
              {"name": "Grapple", "damage": "1d4", "weight": 30}]
  }, {
  "name": "Necromancer",
- "explanation": "A thing gaunt fellow wearing dark robes.",
+ "explanation": "A thin gaunt fellow wearing dark robes.",
  "health": 25,
  "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
              {"name": "Raise Dead", "damage": "Raises a zombie from a corpse.", "weight": 30}]
+ }, {
+ "name": "Cultist",
+ "explanation": "A purple robed individual with pale skin.",
+ "health": 25,
+ "attacks": [{"name": "Stab", "damage": "1d6 physical damage", "weight": 70},
+             {"name": "Chant", "damage": "", "weight": 30}]
+ }, {
+ "name": "Eyeless Beholder",
+ "explanation": "A floating spheroid with a large fanged mouth with several eyestalks attached to the top of it. It appears to once have had a large central eye, but it has been cut out.",
+ "health": 95,
+ "attacks": [{"name": "Eyestalk: Charm", "damage": "Charms a person to do their bidding. DC 15 [FAI] to save.", "weight": 25},
+             {"name": "Eyestalk: Magic Ray", "damage": "2d6 + 2 magic damage", "weight": 25},
+             {"name": "Eyestalk: Acid Pool", "damage": "2d4 + 2 large AOE magic damage", "weight": 25},
+             {"name": "Eyestalk: Darkness", "damage": "Blind the target, reducing their accuracy by 4. DC 13 [FAI] to save.", "weight": 25}]
  }, {
  "name": "Master Necromancer",
  "explanation": "",

@@ -393,4 +393,10 @@
  "itemSlot": "Helmet",
  "damageReductions": [{"name": "Magical", "value": 1}],
  "damageModifiers": [{"name": "Magical", "value": 1}]
+ }, {
+ "name": "Troll Hammer",
+ "damage": "2d4 + [STR]",
+ "effects": "",
+ "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to trolls.",
+ "itemSlot": "Hand"
  }]

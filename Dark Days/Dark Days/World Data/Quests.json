@@ -87,4 +87,9 @@
  "explanation": "Initiator: Stop at a city. The next day when you wake up, it's under quarantine.\n",
  "notes": "An infection is rapidly spreading through the city. People are rioting in the streets. The city guard is doing everything it can to keep people inside so the infection doesn't spread, but even some of their own men are turning on them. There is a bottle of green mist that must be sealed off to quell the infection.\n Enemies Include: Infected Citizen, Infected Abomination",
  "rewards": ["• Spell: Infection", "• Plague Mask", "• 4 Medium Healing Potions"]
+ }, {
+ "name": "Trick or Troll",
+ "explanation": "Initiator: The city is having its annual Trick A Troll day.\n",
+ "notes": "The city keeps a troll in a cage all year long, and brings it out, only to have people compete to confuse it. At this point, the troll has been doing this for so long, it's lost what little sanity it had to begin with.\n Enemies Include: Troll Guard, Troll",
+ "rewards": ["• Troll Club", "• 500 gold"]
  }]
