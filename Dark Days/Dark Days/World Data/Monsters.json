@@ -114,4 +114,17 @@
  "attacks": [{"name": "Heal", "damage": "Heals herself for 1d6 + 2", "weight": 30},
              {"name": "Entangle", "damage": "Traps her opponent, they are unable to move until they make a pass a DC 12 [STR] check.", "weight": 25},
              {"name": "Lightning Blast", "damage": "Deals 1d4 + 2 lightning damage.", "weight": 30}]
+ }, {
+ "name": "Infected Citizen",
+ "explanation": "A normal villager infected with disease, driven mad by agony.",
+ "health": 20,
+ "attacks": [{"name": "Punch", "damage": "1d4 physical damage", "weight": 70},
+             {"name": "Acid Splash", "damage": "2d4 poison damage", "weight": 30}]
+ }, {
+ "name": "Infected Abomination",
+ "explanation": "A humongous mash of flesh and disease, the combination of many villagers writing together makes for a grotesque sight.",
+ "health": 120,
+ "attacks": [{"name": "Pound", "damage": "2d4 + 2 physical damage", "weight": 50},
+             {"name": "Stomp", "damage": "2d4 + 2 physical damage", "weight": 30},
+             {"name": "Acid Splash", "damage": "2d6 poison damage", "weight": 30}]
  }]

@@ -85,6 +85,6 @@
  }, {
  "name": "City Under Quarantine",
  "explanation": "Initiator: Stop at a city. The next day when you wake up, it's under quarantine.\n",
- "notes": "An infection is rapidly spreading through the city. People are rioting in the streets. The city guard is doing everything it can to keep people inside so the infection doesn't spread, but even some of their own men are turning on them.",
+ "notes": "An infection is rapidly spreading through the city. People are rioting in the streets. The city guard is doing everything it can to keep people inside so the infection doesn't spread, but even some of their own men are turning on them. There is a bottle of green mist that must be sealed off to quell the infection.\n Enemies Include: Infected Citizen, Infected Abomination",
  "rewards": ["• Spell: Infection", "• Plague Mask", "• 4 Medium Healing Potions"]
  }]
