@@ -18,6 +18,7 @@ final class NamesViewController: UITableViewController {
         case ElfFemale
         case Tavern
         case Town
+        case Insanity
         
         func titleForName() -> String {
             switch self {
@@ -37,6 +38,8 @@ final class NamesViewController: UITableViewController {
                 return "Tavern"
             case .Town:
                 return "Town"
+            case .Insanity:
+                return "Insanity"
             }
         }
         
@@ -58,10 +61,12 @@ final class NamesViewController: UITableViewController {
                 return NameProvider.TavernNames.randomObject() as? String
             case .Town:
                 return NameProvider.TownNames.randomObject() as? String
+            case .Insanity:
+                return InsanityProvider.Insanities.randomObject() as? String
             }
         }
         
-        static let allValues: [Names] = [.HumanMale, .HumanFemale, .DwarfMale, .DwarfFemale, .ElfMale, .ElfFemale, .Tavern, .Town]
+        static let allValues: [Names] = [.HumanMale, .HumanFemale, .DwarfMale, .DwarfFemale, .ElfMale, .ElfFemale, .Tavern, .Town, .Insanity]
     }
     
     override func viewDidLoad() {

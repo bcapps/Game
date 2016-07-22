@@ -42,4 +42,12 @@
  "name": "Illusionary Sight",
  "explanation": "What used to be a masterful illusion, is now simply a cheap trick before your eyes.",
  "benefit": "You gain the ability to instantly detect and see through any illusion."
+ }, {
+ "name": "Multishot",
+ "explanation": "What one arrow could accomplish, two can do better.",
+ "benefit": "You can fire two arrows from your bow dealing twice the amount of damage, but this reduces your attack roll by 3."
+ }, {
+ "name": "Shield Slam",
+ "explanation": "Who says my shield cannot be a weapon?",
+ "benefit": "You can use your shield to knock you opponent down. Deals [STR] damage, and your opponent must make a DC 12 - [STR] to remain standing."
  }]

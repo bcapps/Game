@@ -85,4 +85,33 @@
  "attacks": [{"name": "Mind Warp", "damage": "1d4 medium AOE mental damage", "weight": 30},
              {"name": "Razor Claw", "damage": "1d6 + 2 physical damage", "weight": 40},
              {"name": "Nightmare Shift", "damage": "Shifts the target into the nightmare world for a round.", "weight": 30}]
+ }, {
+ "name": "Gateway Mimic",
+ "explanation": "A mimickry demon that has taken the form of a gateway that eats people.",
+ "health": 100,
+ "attacks": [{"name": "Bite", "damage": "1d6 + 2 physical damage", "weight": 40},
+             {"name": "Kick", "damage": "1d4 + 3 physical damage", "weight": 40},
+             {"name": "Devour", "damage": "2d6 physical damage", "weight": 20}]
+ }, {
+ "name": "Witch Hunter",
+ "explanation": "A man dressed from head to toe in pressed black leather.",
+ "health": 32,
+ "attacks": [{"name": "Strike", "damage": "1d6 + 2 physical damage", "weight": 70},
+             {"name": "Stake Thrower", "damage": "1d6 physical damage", "weight": 30}]
+ }, {
+ "name": "Cassandra",
+ "explanation": "A plain looking woman with a white blouse and a brown smock.",
+ "health": 75,
+ "attacks": [{"name": "Fire Touch", "damage": "1d6 fire damage", "weight": 20},
+             {"name": "Frost Touch", "damage": "1d6 frost damage", "weight": 20},
+             {"name": "Poison Touch", "damage": "1d6 poison damage", "weight": 20},
+             {"name": "Lightning Touch", "damage": "1d6 lightning damage", "weight": 20},
+             {"name": "Elemental Blast", "damage": "1d4 fire damage + 1d4 cold damage + 1d4 poison damage + 1d4 lightning damage", "weight": 10}]
+ }, {
+ "name": "Teranath",
+ "explanation": "A plain looking woman with a white blouse and a brown smock.",
+ "health": 75,
+ "attacks": [{"name": "Heal", "damage": "Heals herself for 1d6 + 2", "weight": 30},
+             {"name": "Entangle", "damage": "Traps her opponent, they are unable to move until they make a pass a DC 12 [STR] check.", "weight": 25},
+             {"name": "Lightning Blast", "damage": "Deals 1d4 + 2 lightning damage.", "weight": 30}]
  }]

@@ -12,7 +12,9 @@ final class InfoCell: UITableViewCell {
     var infoImage: UIImage? {
         set {
             infoImageButton.setImage(newValue, forState: .Normal)
-            layoutIfNeeded()
+            infoImageButton.hidden = newValue == nil
+            
+            setNeedsLayout()
         }
         get {
             return infoImageButton.imageForState(.Normal)
@@ -22,7 +24,9 @@ final class InfoCell: UITableViewCell {
     var accessoryImage: UIImage? {
         set {
             accessoryImageView.image = newValue
-            layoutIfNeeded()
+            accessoryImageView.hidden = newValue == nil
+
+            setNeedsLayout()
         }
         get {
             return accessoryImageView.image
@@ -51,6 +55,16 @@ final class InfoCell: UITableViewCell {
         setupInfoCell()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        addImageExclusionRect()
+        
+        if accessoryImage != nil {
+            addAccessoryImageExclusionRect()
+        }
+    }
+    
     private func setupInfoCell() {
         infoImageButton.layer.cornerRadius = infoImageButton.bounds.height / 2.0
         infoImageButton.layer.borderColor = UIColor.borderColor().CGColor
@@ -72,27 +86,6 @@ final class InfoCell: UITableViewCell {
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(white: 0.13, alpha: 1.0)
         selectedBackgroundView = backgroundView
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        guard infoImageButton.imageForState(.Normal) != nil else {
-            infoImageButton.hidden = true
-            return
-        }
-        
-        infoImageButton.hidden = false
-        infoImageButton.contentEdgeInsets = contentInset ?? UIEdgeInsets()
-        addImageExclusionRect()
-        
-        guard accessoryImageView.image != nil else {
-            accessoryImageView.hidden = true
-            return
-        }
-        
-        accessoryImageView.hidden = false
-        addAccessoryImageExclusionRect()
     }
     
     private func addImageExclusionRect() {

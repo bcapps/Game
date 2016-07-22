@@ -26,6 +26,7 @@ extension DamageReduction {
         case Poison
         case Fire
         case Cold
+        case Lightning
         
         var image: UIImage? {
             switch self {
@@ -37,13 +38,15 @@ extension DamageReduction {
                 return UIImage(named: "FireDamageReduction")
             case .Cold:
                 return UIImage(named: "ColdDamageReduction")
+            case .Lightning:
+                return UIImage(named: "LightningDamageReduction")
             case .Magical:
                 return UIImage(named: "MagicalDamageReduction")
             }
         }
     }
     
-    static let allReductionTypes: [ReductionType] = [.Physical, .Magical, .Poison, .Fire, .Cold]
+    static let allReductionTypes: [ReductionType] = [.Physical, .Magical, .Poison, .Fire, .Cold, .Lightning]
     
     var reductionType: ReductionType {
         switch name {
@@ -57,6 +60,8 @@ extension DamageReduction {
             return .Fire
         case "Cold":
             return .Cold
+        case "Lightning":
+            return .Lightning
         default:
             return .Physical
         }

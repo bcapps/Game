@@ -302,6 +302,10 @@
 		F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
+		F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F909AC1D42A999005F8662 /* Insanities.txt */; };
+		F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
+		F2F909B01D42AA74005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
+		F2F909B11D42AA75005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -463,6 +467,8 @@
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
+		F2F909AC1D42A999005F8662 /* Insanities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Insanities.txt; sourceTree = "<group>"; };
+		F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsanityProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -665,6 +671,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F2F909A91D42A96D005F8662 /* Insanities */,
 				F28C2B291CD0877D00E106DD /* Names */,
 				F28C2B221CD07C9D00E106DD /* Notes */,
 				F28C2B1B1CD0614700E106DD /* Merchants */,
@@ -961,6 +968,15 @@
 			name = "Unequip Button";
 			sourceTree = "<group>";
 		};
+		F2F909A91D42A96D005F8662 /* Insanities */ = {
+			isa = PBXGroup;
+			children = (
+				F2F909AC1D42A999005F8662 /* Insanities.txt */,
+				F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */,
+			);
+			name = Insanities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1072,6 +1088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
+				F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */,
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
 				F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
@@ -1269,6 +1286,7 @@
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
@@ -1365,6 +1383,7 @@
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				F28C2B201CD064B900E106DD /* Merchant.swift in Sources */,
 				F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */,
+				F2F909B01D42AA74005F8662 /* InsanityProvider.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
@@ -1443,6 +1462,7 @@
 				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
 				F28C2B0C1CC7341400E106DD /* Quest.swift in Sources */,
 				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
+				F2F909B11D42AA75005F8662 /* InsanityProvider.swift in Sources */,
 				F25187A21C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F25187BC1C922BB3003AD636 /* ListDataSource.swift in Sources */,
 				F28C2B161CC7431C00E106DD /* DamageModifier.swift in Sources */,

@@ -149,7 +149,7 @@
  }, {
  "name": "Spider Armor",
  "damage": "",
- "effects": "Decrease physical damage taken by 2, and decreases poision damage taken by 3.",
+ "effects": "Decrease physical damage taken by 1, and decreases poision damage taken by 3.",
  "flavor": "Armor fashioned from the tough hide of the Spider Queen. The armor prevents even the most caustic of poisons from penetrating.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Poison", "value": 3},
@@ -179,7 +179,7 @@
  }, {
  "name": "Iron Armor",
  "damage": "",
- "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 2.",
+ "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
  "flavor": "A sturdy metal breastplate.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Physical", "value": 2}],
@@ -254,13 +254,19 @@
  "name": "Small Healing Potion",
  "damage": "",
  "effects": "Heals the consumer for 1d4+2 of health.",
- "flavor": "A coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+ "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+ "itemSlot": ""
+ }, {
+ "name": "Medium Healing Potion",
+ "damage": "",
+ "effects": "Heals the consumer for 2d4+3 of health.",
+ "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
  "itemSlot": ""
  }, {
  "name": "Nightmare Blade",
  "damage": "2d4 + [STR]",
  "effects": "On hit, chance to send your opponent into a nightmarish dream (DC 8 + [FAI]).",
- "flavor": "A blade of black iron. Just looking at it causing your spine to tingle in fear.",
+ "flavor": "A blade of black iron. Just looking at it causes your spine to tingle in fear.",
  "itemSlot": "Hand"
  }, {
  "name": "Torch",
@@ -271,12 +277,11 @@
  }, {
  "name": "Infinity Ring",
  "damage": "",
- "effects": "Reduces physical, magical, and mental damage taken by 2.",
+ "effects": "Reduces physical and magical taken by 2.",
  "flavor": "I look upon creation and I bestow to it the infinity of time. -Vitael, Lord of the Gods",
  "itemSlot": "Accessory",
  "damageReductions": [{"name": "Physical", "value": 2},
-                      {"name": "Magical", "value": 2},
-                      {"name": "Mental", "value": 2}]
+                      {"name": "Magical", "value": 2}]
  }, {
  "name": "Chaos Ring",
  "damage": "",
@@ -346,4 +351,32 @@
  "flavor": "Sturdy boots made of fine smithed iron.",
  "itemSlot": "Boots",
  "damageReductions": [{"name": "Physical", "value": 2}]
+ }, {
+ "name": "The Beginning of Idris",
+ "damage": "",
+ "effects": "A book the recounts the forging of Idris from the universe by Vitael herself.",
+ "flavor": "",
+ "itemSlot": "",
+ }, {
+ "name": "The Time Bandits",
+ "damage": "",
+ "effects": "Quite a well written piece of fiction about a group of rogues that steal treasure across time.",
+ "flavor": "",
+ "itemSlot": "",
+ }, {
+ "name": "Witch Hunter Boots",
+ "damage": "",
+ "effects": "Increases physical damage dealt by 1. Reduces magical damage taken by 1.",
+ "flavor": "Sturdy boots made of fine smithed iron.",
+ "itemSlot": "Boots",
+ "damageReductions": [{"name": "Magical", "value": 1}],
+ "damageModifiers": [{"name": "Physical", "value": 1}]
+ }, {
+ "name": "Witch Hunter Hat",
+ "damage": "",
+ "effects": "Increases your chance to hit with a physical attack by 1. Reduces magical damage taken by 1.",
+ "flavor": "Sturdy boots made of fine smithed iron.",
+ "itemSlot": "Boots",
+ "damageReductions": [{"name": "Magical", "value": 1}],
+ "attackModifiers": [{"name": "Physical", "value": 1}]
  }]

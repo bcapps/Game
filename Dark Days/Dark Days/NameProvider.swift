@@ -10,27 +10,28 @@ import Foundation
 
 struct NameProvider {
     
-    static let DwarfFemaleNames = NameProvider.arrayForFileName("RandomDwarfFemaleNames")
-    static let DwarfMaleNames = NameProvider.arrayForFileName("RandomDwarfMaleNames")
+    static let DwarfFemaleNames = NSArray.arrayForFileName("RandomDwarfFemaleNames")
+    static let DwarfMaleNames = NSArray.arrayForFileName("RandomDwarfMaleNames")
     
-    static let ElfFemaleNames = NameProvider.arrayForFileName("RandomElfFemaleNames")
-    static let ElfMaleNames = NameProvider.arrayForFileName("RandomElfMaleNames")
+    static let ElfFemaleNames = NSArray.arrayForFileName("RandomElfFemaleNames")
+    static let ElfMaleNames = NSArray.arrayForFileName("RandomElfMaleNames")
 
-    static let HumanFemaleNames = NameProvider.arrayForFileName("RandomHumanFemaleNames")
-    static let HumanMaleNames = NameProvider.arrayForFileName("RandomHumanMaleNames")
+    static let HumanFemaleNames = NSArray.arrayForFileName("RandomHumanFemaleNames")
+    static let HumanMaleNames = NSArray.arrayForFileName("RandomHumanMaleNames")
     
-    static let TavernNames = NameProvider.arrayForFileName("RandomTavernNames")
-    static let TownNames = NameProvider.arrayForFileName("RandomTownNames")
+    static let TavernNames = NSArray.arrayForFileName("RandomTavernNames")
+    static let TownNames = NSArray.arrayForFileName("RandomTownNames")
+}
+
+extension NSArray {
     
-    private static func arrayForFileName(name: String) -> NSArray {
+    static func arrayForFileName(name: String) -> NSArray {
         guard let URL = NSBundle.mainBundle().URLForResource(name, withExtension: "txt") else { return NSArray() }
         let content = try? NSString(contentsOfURL: URL, encoding: NSUTF8StringEncoding)
         
         return content?.componentsSeparatedByString("\n") ?? NSArray()
     }
-}
 
-extension NSArray {
     func randomObject() -> Element? {
         let randomIndex = Int(arc4random_uniform(UInt32(self.count)))
         

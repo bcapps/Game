@@ -21,7 +21,7 @@
  }, {
  "name": "Shadow Stalker",
  "damage": "Next physical attack gets 1d6 + [FAI]",
- "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage.",
+ "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2.",
  "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
  }, {
  "name": "Paranoia",
@@ -35,7 +35,7 @@
  "flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
  }, {
  "name": "Fiendfyre",
- "damage": "1d6 + [FAI]",
+ "damage": "1d8 + [FAI]",
  "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]).",
  "flavor": "My fire will teach you to fear the light."
  }, {
@@ -51,7 +51,7 @@
  }, {
  "name": "Summon Lesser Felbeast",
  "damage": "1d4 + [FAI]",
- "effects": "Summons a lesser felbeast that has 1d8+ [FAI] hit points and deals FAI damage when attacking.",
+ "effects": "Summons a lesser felbeast that has 1d8 + [FAI] hit points and deals FAI damage when attacking.",
  "flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
  }, {
  "name": "Speak with the Dead",
@@ -60,7 +60,7 @@
  "flavor": "Not even death will keep you from me."
  }, {
  "name": "Arms of Morter",
- "damage": "2d6 + [FAI]",
+ "damage": "2d4 + [FAI]",
  "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a large area around you.",
  "flavor": "Death will hold you in its everlasting embrace."
  }, {
@@ -70,7 +70,12 @@
  "flavor": "An illusion to bring about your confusion."
  }, {
  "name": "Mind Warp",
- "damage": "2d4 + [FAI]",
+ "damage": "1d4 + [FAI]",
  "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you.",
  "flavor": "Would you kill your friends for me? - Incubus"
+ }, {
+ "name": "Infection",
+ "damage": "Deals 1 damage each round + 1 damage for each round the target has been infected, up to your [FAI].",
+ "effects": "Infects the target with a agonizing disease born from Dolo himself. Target must make a DC 17 Consitution save to get rid of the infection.",
+ "flavor": "It's just a little cough."
  }]

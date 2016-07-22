@@ -34,7 +34,7 @@
  "name": "The Illusionary Fortress",
  "explanation": "Initiator: Local lord.\nA thief has stolen a precious jewel from the local lord. Get it back!",
  "notes": "Come across a fortress in the wilderness, guarded by all manner of large monster. Spoiler alert, they're illusions. Walk into the fortress entrance to find a scared man.\nEnemies Include: The Commoner Boss",
- "rewards": ["• The Jewel of Thought", "• 3000 gold"]
+ "rewards": ["• The Jewel of Thought", "• 6000 gold"]
  }, {
  "name": "The Demon's Feast",
  "explanation": "Initiator: Visiting a temple of Azoth.\nA novice is embarrassed by losing control of a demon in front of you, his master steps in. Forces novice to give you a tour. Novice eventually privately hands one of the party a piece of meat. You enter the demon cages. Novice slips out unnoticed, demon attacks your party.",
@@ -44,7 +44,8 @@
  "name": "Afraid of the Dark",
  "explanation": "Initiator: Come across a quaint village.\nThe village is eerily afraid of something, what you can't tell.",
  "notes": "There are shades invading and harming children that adults can't see. Hide From Adult spell.",
- "rewards": ["• Nightmare Blade"]
+ "rewards": ["• Nightmare Blade"],
+ "completed": true
  }, {
  "name": "Time...",
  "explanation": "Initiator: Enter the main temple of Vitael.\nThere will be a large statue that when approached will ask the repeated question: Time?",
@@ -54,7 +55,8 @@
  "name": "Until Death",
  "explanation": "Initiator: Discover from rumors that people have been disappearing.\n",
  "notes": "Investigating the Temple of Morter should reveal catacombs underneath where the dead have started walking around. There is a rogue necromancer summoning them and stealing corpses at night. There is also a hidden room containing a Holy Sword.\n Enemies Include: Zombie, Necromancer, Master Necromancer",
- "rewards": ["• Holy Blade", "Platemail Boots", "• Spell: Arms of Morter"]
+ "rewards": ["• Holy Blade", "Platemail Boots", "• Spell: Arms of Morter"],
+ "completed": true
  }, {
  "name": "Cult of the Unseeing Eye",
  "explanation": "Initiator: Random temple.\n",
@@ -73,6 +75,16 @@
  }, {
  "name": "Cult of the Gateway of the Beyond",
  "explanation": "Initiator: Rumors of a friendly cult leading people to the afterlife.\n",
- "notes": "There is a cult dedicated to a magical gateway. They lead people through it. The gateway speaks to the cult leaders. They coat those who go through the gateway in spices. Turns out, the gateway is actually just a mimic eating people. \n Enemies Include: Mimic",
+ "notes": "There is a cult dedicated to a magical gateway. They lead people through it. The gateway speaks to the cult leaders. They coat those who go through the gateway in spices. Turns out, the gateway is actually just a mimic eating people. \n Enemies Include: Gateway Mimic",
  "rewards": ["• Shrouded Mask"]
+ }, {
+ "name": "Witch Hunter",
+ "explanation": "Initiator: Run into a Witch Hunter.\n",
+ "notes": "A witch is someone who practices magic outside of what the gods have bestowed on mortals. They are dangerous and crafty. The witch hunters themselves are brutally merciless, granted special priveleges from towns to do their work. A woman named Cassandra, has reported strange things coming out at night from her neighbors house. This is all a ruse however, as Cassandra is an evil witch, and has framed a witch who was generally a good person. \n Enemies Include: Witch Hunter, Cassandra, Teranath",
+ "rewards": ["• 500 gold", "• Witch Hunter Boots", "• Witch Hunter Hat"]
+ }, {
+ "name": "City Under Quarantine",
+ "explanation": "Initiator: Stop at a city. The next day when you wake up, it's under quarantine.\n",
+ "notes": "An infection is rapidly spreading through the city. People are rioting in the streets. The city guard is doing everything it can to keep people inside so the infection doesn't spread, but even some of their own men are turning on them.",
+ "rewards": ["• Spell: Infection", "• Plague Mask", "• 4 Medium Healing Potions"]
  }]
