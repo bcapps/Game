@@ -114,7 +114,7 @@
  "name": "Shortbow",
  "damage": "2d4 + [DEX] + 1",
  "effects": "",
- "flavor": "A standard issue shorbow.",
+ "flavor": "A standard issue shortbow.",
  "itemSlot": "Hand",
  "twoHanded": true
  }, {
@@ -397,7 +397,7 @@
  "name": "Troll Hammer",
  "damage": "2d4 + [STR]",
  "effects": "",
- "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to trolls.",
+ "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to a troll.",
  "itemSlot": "Hand"
  }, {
  "name": "Disguise Kit",
@@ -406,4 +406,10 @@
  "flavor": "We are so accustomed to disguise ourselves to others that in the end we become disguised to ourselves.",
  "itemSlot": "",
  "inventorySkills": ["Disguise"]
+ }, {
+ "name": "The Ring of Not Gold",
+ "damage": "",
+ "effects": "",
+ "flavor": "A ring made of some substance that is certainly not gold. Given to you by Harlan Burke, a shopkeeper in the Merchant District of Wheatfort. ",
+ "itemSlot": "Accessory"
  }]
