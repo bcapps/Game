@@ -399,4 +399,11 @@
  "effects": "",
  "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to trolls.",
  "itemSlot": "Hand"
+ }, {
+ "name": "Disguise Kit",
+ "damage": "",
+ "effects": "Grants the Disguise skill, which allows you to disguise yourself.",
+ "flavor": "We are so accustomed to disguise ourselves to others that in the end we become disguised to ourselves.",
+ "itemSlot": "",
+ "inventorySkills": ["Disguise"]
  }]

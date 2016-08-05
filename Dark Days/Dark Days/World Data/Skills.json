@@ -49,5 +49,9 @@
  }, {
  "name": "Shield Slam",
  "explanation": "Who says my shield cannot be a weapon?",
- "benefit": "You can use your shield to knock you opponent down. Deals [STR] damage, and your opponent must make a DC 12 - [STR] to remain standing."
+ "benefit": "You can use your shield to knock you opponent down. Deals [STR] damage, and your opponent must make a DC 8 + [STR] check to remain standing."
+ }, {
+ "name": "Disguise",
+ "explanation": "Turns you into a completely different person.",
+ "benefit": "Allows you to disguise yourself, modifying your physical features to that of someone, or even something, else."
  }]
