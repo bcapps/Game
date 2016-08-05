@@ -60,8 +60,8 @@
  "flavor": "Not even death will keep you from me."
  }, {
  "name": "Arms of Morter",
- "damage": "2d4 + [FAI]",
- "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a large area around you.",
+ "damage": "1d6 + [FAI]",
+ "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you.",
  "flavor": "Death will hold you in its everlasting embrace."
  }, {
  "name": "Confusion Cloud",
@@ -70,7 +70,7 @@
  "flavor": "An illusion to bring about your confusion."
  }, {
  "name": "Mind Warp",
- "damage": "1d4 + [FAI]",
+ "damage": "1d4",
  "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you.",
  "flavor": "Would you kill your friends for me? - Incubus"
  }, {
@@ -93,4 +93,19 @@
  "damage": "",
  "effects": "Amplifies your voice so that it may be heard from great distances.",
  "flavor": "When the whole world is silent, even one voice becomes powerful."
+ }, {
+ "name": "Giant Form",
+ "damage": "",
+ "effects": "Doubles an ally's size, and increases its STR by 2.",
+ "flavor": "The substance of faith, is a hope in the unseen."
+ }, {
+ "name": "Holy Bolt",
+ "damage": "1d8 + [FAI]",
+ "effects": "Sends a bolt of holy energy out of your hand into the target.",
+ "flavor": "The light of Shiro shall consume you!"
+ }, {
+ "name": "Kilkennan's Gate",
+ "damage": "",
+ "effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration.",
+ "flavor": "I don't want to be here, I want to be there! - Kilkennan, Follower of Demitas"
  }]
