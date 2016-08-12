@@ -153,7 +153,7 @@
  "flavor": "Armor fashioned from the tough hide of the Spider Queen. The armor prevents even the most caustic of poisons from penetrating.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Poison", "value": 3},
-                      {"name": "Physical", "value": 2}]
+                      {"name": "Physical", "value": 1}]
  }, {
  "name": "Spider Boots",
  "damage": "",
@@ -183,7 +183,7 @@
  "flavor": "A sturdy metal breastplate.",
  "itemSlot": "Chest",
  "damageReductions": [{"name": "Physical", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -2}]
+ "damageAvoidances": [{"name": "Physical", "value": -1}]
  }, {
  "name": "Spider Chitin",
  "damage": "",
