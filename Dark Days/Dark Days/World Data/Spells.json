@@ -1,111 +1,111 @@
 [{
  "name": "Shield of Reflection",
  "damage": "Deals damage equal to the prevented damage.",
- "effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d6 + [FAI] damage.",
+ "effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d6 + [FAI] damage. (S)",
  "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
  }, {
  "name": "Inspire",
  "damage": "",
- "effects": "Add 1 to all attack rolls made by your party until the end of the encounter.",
+ "effects": "Add 1 to all attack rolls made by your party until the end of the encounter. (V)",
  "flavor": "All it takes to light the way is one candle burning brightly in the night."
  }, {
  "name": "Siphon Light",
  "damage": "1d4 + [FAI]",
- "effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up.",
+ "effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up. (SV)",
  "flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
  }, {
  "name": "Blind",
  "damage": "",
- "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]).",
+ "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]) (V).",
  "flavor": "Sometimes darkness can be beautiful."
  }, {
  "name": "Shadow Stalker",
  "damage": "Next physical attack gets 1d6 + [FAI]",
- "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2.",
+ "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. (SV)",
  "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
  }, {
  "name": "Paranoia",
  "damage": "1d4 + [FAI]",
- "effects": "Stuns the target for 1 round (DC 8 + [FAI]).",
+ "effects": "Stuns the target for 1 round (DC 8 + [FAI]). (SV)",
  "flavor": "My head is a very dark place. Soon yours will be as well."
  }, {
  "name": "Agonizing Bond",
  "damage": "",
- "effects": "Bonds two enemies together. Damage dealt to one is dealt to the other as well.",
+ "effects": "Bonds two enemies together. Damage dealt to one is dealt to the other as well. (SV)",
  "flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
  }, {
  "name": "Fiendfyre",
  "damage": "1d8 + [FAI]",
- "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]).",
+ "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]) (S).",
  "flavor": "My fire will teach you to fear the light."
  }, {
  "name": "Dolo's Fury",
  "damage": "",
- "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points.",
+ "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points. (SV)",
  "flavor": "Monsters are real. They live inside us. And sometimes, they win."
  }, {
  "name": "Thorn Bind",
  "damage": "1d4 + [FAI]",
- "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]).",
+ "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]) (S).",
  "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
  }, {
  "name": "Summon Lesser Felbeast",
  "damage": "1d4 + [FAI]",
- "effects": "Summons a lesser felbeast that has 1d8 + [FAI] hit points and deals FAI damage when attacking.",
+ "effects": "Summons a lesser felbeast that has 1d8 + [FAI] hit points and deals FAI damage when attacking. (SV)",
  "flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
  }, {
  "name": "Speak with the Dead",
  "damage": "",
- "effects": "Reanimate a corpse to speak with it. Note: this will not allow you to communicate with creatures that do not speak languages you speak.",
+ "effects": "Reanimate a corpse to speak with it. Note: this will not allow you to communicate with creatures that do not speak languages you speak. (SV)",
  "flavor": "Not even death will keep you from me."
  }, {
  "name": "Arms of Morter",
  "damage": "1d6 + [FAI]",
- "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you.",
+ "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you. (S)",
  "flavor": "Death will hold you in its everlasting embrace."
  }, {
  "name": "Confusion Cloud",
  "damage": "",
- "effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI].",
+ "effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI]. (SV)",
  "flavor": "An illusion to bring about your confusion."
  }, {
  "name": "Mind Warp",
  "damage": "1d4",
- "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you.",
+ "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you. (S)",
  "flavor": "Would you kill your friends for me? - Incubus"
  }, {
  "name": "Infection",
  "damage": "Deals 1 damage each round + 1 damage for each round the target has been infected, up to your [FAI].",
- "effects": "Infects the target with a agonizing disease born from Dolo himself. Target must make a DC 17 Consitution save to get rid of the infection.",
+ "effects": "Infects the target with a agonizing disease born from Dolo himself. Target must make a DC 17 Consitution save to get rid of the infection. (S)",
  "flavor": "It's just a little cough."
  }, {
  "name": "Unseen Servant",
  "damage": "",
  "effects": "Creates an invisible, mindless, and shapeless force that can perform simple tasks such as fetching objects or opening doors. It cannot attack, and will disperse if damaged. It's strength, the distance it can travel away from you, and its duration is tied to your FAI.",
- "flavor": "The substance of faith, is a hope in the unseen."
+ "flavor": "The substance of faith, is a hope in the unseen. (SV)"
  }, {
  "name": "Disembodied Voice",
  "damage": "",
  "effects": "Allows you to throw your voice to another location, as if speaking from there.",
- "flavor": "The substance of faith, is a hope in the unseen."
+ "flavor": "The substance of faith, is a hope in the unseen. (V)"
  }, {
  "name": "Booming Voice",
  "damage": "",
  "effects": "Amplifies your voice so that it may be heard from great distances.",
- "flavor": "When the whole world is silent, even one voice becomes powerful."
+ "flavor": "When the whole world is silent, even one voice becomes powerful. (V)"
  }, {
  "name": "Giant Form",
  "damage": "",
  "effects": "Doubles an ally's size, and increases its STR by 2.",
- "flavor": "The substance of faith, is a hope in the unseen."
+ "flavor": "The substance of faith, is a hope in the unseen. (S)"
  }, {
  "name": "Holy Bolt",
  "damage": "1d8 + [FAI]",
- "effects": "Sends a bolt of holy energy out of your hand into the target.",
+ "effects": "Sends a bolt of holy energy out of your hand into the target. (S)",
  "flavor": "The light of Shiro shall consume you!"
  }, {
  "name": "Kilkennan's Gate",
  "damage": "",
- "effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration.",
+ "effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration. (SV)",
  "flavor": "I don't want to be here, I want to be there! - Kilkennan, Follower of Demitas"
  }]
