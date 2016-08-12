@@ -54,4 +54,12 @@
  "name": "Disguise",
  "explanation": "Turns you into a completely different person.",
  "benefit": "Allows you to disguise yourself, modifying your physical features to that of someone, or even something, else."
+ }, {
+ "name": "Spider Slayer",
+ "explanation": "I've fought these before!",
+ "benefit": "Increases chance to hit spiders by 1."
+ }, {
+ "name": "Cursed Runes",
+ "explanation": "Black runes cover your arms, providing you with magical strength.",
+ "benefit": "You can choose to turn a physical attack you make, into a magical one. If you do, lose 1 health."
  }]

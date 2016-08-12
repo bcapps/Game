@@ -373,7 +373,7 @@
  "name": "Witch Hunter Boots",
  "damage": "",
  "effects": "Increases physical damage dealt by 1. Reduces magical damage taken by 1.",
- "flavor": "Sturdy boots made of fine smithed iron.",
+ "flavor": "Hard leather boots, their cuffs are sprinkled with magical wards that glow with power.",
  "itemSlot": "Boots",
  "damageReductions": [{"name": "Magical", "value": 1}],
  "damageModifiers": [{"name": "Physical", "value": 1}]
@@ -381,10 +381,18 @@
  "name": "Witch Hunter Hat",
  "damage": "",
  "effects": "Increases your chance to hit with a physical attack by 1. Reduces magical damage taken by 1.",
- "flavor": "Sturdy boots made of fine smithed iron.",
- "itemSlot": "Boots",
+ "flavor": "A leather hat that comes to a fine point in the front. Worn by the Witch Hunters of Idris as a symbol of their authority.",
+ "itemSlot": "Helmet",
  "damageReductions": [{"name": "Magical", "value": 1}],
  "attackModifiers": [{"name": "Physical", "value": 1}]
+ }, {
+ "name": "Witch Hunter Cuirass",
+ "damage": "",
+ "effects": "Reduces physical damage taken by 1. Reduces magical damage taken by 2.",
+ "flavor": "Sturdy boots made of fine smithed iron.",
+ "itemSlot": "Chest",
+ "damageReductions": [{"name": "Physical", "value": 1},
+                      {"name": "Magical", "value": 2}]
  }, {
  "name": "Plague Mask",
  "damage": "",
