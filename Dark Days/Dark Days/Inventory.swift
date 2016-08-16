@@ -18,6 +18,19 @@ final class Inventory {
         }
     }
     
+    var equippedItemSets: [ItemSet] {
+        get {
+            return ObjectProvider.objectsForJSON("ItemSets").filter { isItemSetEquipped($0) }
+        }
+    }
+    
+    private func isItemSetEquipped(itemSet: ItemSet) -> Bool {
+        let equippedItemNames = Set(equippedItems.map { $0.name })
+        let itemSetNames = Set(itemSet.itemNamesInSet)
+        
+        return itemSetNames.isSubsetOf(equippedItemNames)
+    }
+    
     init(gold: Int, items: [Item]) {
         self.gold = gold
         self.items = items

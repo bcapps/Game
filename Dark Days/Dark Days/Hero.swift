@@ -66,6 +66,10 @@ final class Hero: Codeable, Nameable {
             reductionCounter += item.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
+        for itemSet in inventory.equippedItemSets {
+            reductionCounter += itemSet.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
         return reductionCounter
     }
     
@@ -85,6 +89,10 @@ final class Hero: Codeable, Nameable {
             avoidanceCounter += item.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
+        for itemSet in inventory.equippedItemSets {
+            avoidanceCounter += itemSet.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
         return avoidanceCounter
     }
     
@@ -100,6 +108,10 @@ final class Hero: Codeable, Nameable {
         
         for item in inventory.equippedItems {
             damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        for itemSet in inventory.equippedItemSets {
+            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
         return damageModifier
@@ -119,6 +131,10 @@ final class Hero: Codeable, Nameable {
             attackModifier += item.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
+        for itemSet in inventory.equippedItemSets {
+            attackModifier += itemSet.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
         return attackModifier
     }
     
@@ -127,6 +143,10 @@ final class Hero: Codeable, Nameable {
         
         for item in inventory.equippedItems {
             statModifier += item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+        }
+        
+        for itemSet in inventory.equippedItemSets {
+            statModifier += itemSet.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
         }
         
         return statModifier

@@ -240,6 +240,7 @@
 		F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F26C02021CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
+		F2787C821D5E8D770035E45C /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
 		F28C2B081CC732CA00E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
 		F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B091CC732DB00E106DD /* Quests.json */; };
 		F28C2B0B1CC7341400E106DD /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B071CC732CA00E106DD /* Quest.swift */; };
@@ -292,6 +293,9 @@
 		F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
 		F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
 		F28C2B561CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
+		F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */ = {isa = PBXBuildFile; fileRef = F29B48501D63C2D800A92DAB /* ItemSets.json */; };
+		F29B48521D63C62A00A92DAB /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
+		F29B48531D63C62B00A92DAB /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
@@ -443,6 +447,7 @@
 		F26C01F81CB1A16B00907164 /* EffectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectCell.swift; sourceTree = "<group>"; };
 		F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageAvoidance.swift; sourceTree = "<group>"; };
 		F26C02001CB1D0A400907164 /* AttackModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackModifier.swift; sourceTree = "<group>"; };
+		F2787C811D5E8D770035E45C /* ItemSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSet.swift; sourceTree = "<group>"; };
 		F28C2B071CC732CA00E106DD /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		F28C2B091CC732DB00E106DD /* Quests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quests.json; path = "World Data/Quests.json"; sourceTree = "<group>"; };
 		F28C2B111CC7379500E106DD /* GenericCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCodingTests.swift; sourceTree = "<group>"; };
@@ -463,6 +468,7 @@
 		F28C2B4A1CD0879500E106DD /* NameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameProvider.swift; sourceTree = "<group>"; };
 		F28C2B4F1CD0888700E106DD /* Names.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Names.storyboard; sourceTree = "<group>"; };
 		F28C2B531CD0889000E106DD /* NamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
+		F29B48501D63C2D800A92DAB /* ItemSets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ItemSets.json; path = "World Data/ItemSets.json"; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -735,6 +741,8 @@
 				F26C01F01CB197C100907164 /* DamageReduction.swift */,
 				F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */,
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
+				F29B48501D63C2D800A92DAB /* ItemSets.json */,
+				F2787C811D5E8D770035E45C /* ItemSet.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -1115,6 +1123,7 @@
 				F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
 				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
+				F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */,
 				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
@@ -1292,6 +1301,7 @@
 				F21ECE4B1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				F2350AFB1C7ADA6800D6E18E /* Monster.swift in Sources */,
 				F25187941C922B9B003AD636 /* DismissSegue.swift in Sources */,
+				F2787C821D5E8D770035E45C /* ItemSet.swift in Sources */,
 				F28C2B241CD07CA600E106DD /* Note.swift in Sources */,
 				F21ECE461C7A7C90008041E9 /* Hero.swift in Sources */,
 				F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */,
@@ -1388,6 +1398,7 @@
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
+				F29B48521D63C62A00A92DAB /* ItemSet.swift in Sources */,
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
 				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
@@ -1457,6 +1468,7 @@
 				F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
+				F29B48531D63C62B00A92DAB /* ItemSet.swift in Sources */,
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F25187C91C937370003AD636 /* InfoCell.swift in Sources */,
 				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
