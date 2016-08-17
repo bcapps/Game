@@ -76,7 +76,7 @@
  }, {
  "name": "Infection",
  "damage": "Deals 1 damage each round + 1 damage for each round the target has been infected, up to your [FAI].",
- "effects": "Infects the target with a agonizing disease born from Dolo himself. Target must make a DC 17 Consitution save to get rid of the infection. (S)",
+ "effects": "Infects the target with a agonizing disease born from Dolo himself. Target must make a DC 17 Constitution save to get rid of the infection. (S)",
  "flavor": "It's just a little cough."
  }, {
  "name": "Unseen Servant",
@@ -96,8 +96,8 @@
  }, {
  "name": "Giant Form",
  "damage": "",
- "effects": "Doubles an ally's size, and increases its STR by 2.",
- "flavor": "The substance of faith, is a hope in the unseen. (S)"
+ "effects": "Doubles an ally's size, and increases its STR by 2 until the end of combat.",
+ "flavor": "The substance of faith is a hope in the unseen. (S)"
  }, {
  "name": "Holy Bolt",
  "damage": "1d8 + [FAI]",
@@ -108,4 +108,19 @@
  "damage": "",
  "effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration. (SV)",
  "flavor": "I don't want to be here, I want to be there! - Kilkennan, Follower of Demitas"
+ }, {
+ "name": "Castle of Light",
+ "damage": "",
+ "effects": "Shield yourself with the light of Shiro, preventing all damage to you until the next round. (SV)",
+ "flavor": "The faithful of Shiro have nothing to fear from the light."
+ }, {
+ "name": "Shadowstep",
+ "damage": "",
+ "effects": "Transport yourself to any location that is visible within 20 meters. (S)",
+ "flavor": "Scholars often wonder how the Blades of Kazu are able to evade capture so easily. Perhaps the ability to bend space to their will has something to do with it. - Bason, Scholar of Kazu"
+ }, {
+ "name": "Flame Rush",
+ "damage": "1d6 + [STR]",
+ "effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. (S)",
+ "flavor": "Never rush into something. Unless your on fire. Then rush into everything."
  }]

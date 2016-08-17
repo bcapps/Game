@@ -62,4 +62,8 @@
  "name": "Cursed Runes",
  "explanation": "Black runes cover your arms, providing you with magical strength.",
  "benefit": "You can choose to turn a physical attack you make, into a magical one. If you do, lose 1 health."
+ }, {
+ "name": "Mounted Combatant",
+ "explanation": "Your knowledge of four legged beasts aids you in combat.",
+ "benefit": "Increase attack rolls made while riding a four legged creature by 2. You may also choose to redirect any attack made against your mount, to you instead."
  }]
