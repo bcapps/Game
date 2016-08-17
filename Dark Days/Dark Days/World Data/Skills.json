@@ -66,4 +66,8 @@
  "name": "Mounted Combatant",
  "explanation": "Your knowledge of four legged beasts aids you in combat.",
  "benefit": "Increase attack rolls made while riding a four legged creature by 2. You may also choose to redirect any attack made against your mount, to you instead."
+ }, {
+ "name": "Bookworm",
+ "explanation": "You've spent a lot of time reading books. That has to count for something.",
+ "benefit": "Anytime you make an Intelligence based check, add 1 your roll."
  }]
