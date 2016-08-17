@@ -112,7 +112,7 @@
  "itemSlot": "Hand"
  }, {
  "name": "Shortbow",
- "damage": "2d4 + [DEX] + 1",
+ "damage": "2d4 + [DEX]",
  "effects": "",
  "flavor": "A standard issue shortbow.",
  "itemSlot": "Hand",

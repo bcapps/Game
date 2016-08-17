@@ -2,7 +2,7 @@
  "name": "Jaddic Greathand",
  "explanation": "A dwarven weapon merchant.",
  "location": "Thorndale",
- "items": ["Iron Dagger - 200g", "Iron Shortsword - 200g", "Iron Longsword - 200g", "Iron Spear - 300g", "Iron Axe - 200g", "Iron Hammer - 200g", "Rapier - 200g", "Crossbow - 200g", "Shortbow - 300g", "Longbow - 300g"]
+ "items": ["Iron Dagger - 200g", "Iron Shortsword - 200g", "Iron Longsword - 200g", "Iron Spear - 300g", "Iron Axe - 200g", "Iron Hammer - 200g", "Rapier - 200g", "Crossbow - 200g", "Shortbow - 300g", "Longbow - 400g"]
  }, {
  "name": "Vance Norton",
  "explanation": "A human armor merchant.",
@@ -27,5 +27,5 @@
  "name": "Jane Rysel",
  "explanation": "A female human weapon merchant. ",
  "location": "Wheatfort",
- "items": ["Iron Dagger - 200g", "Iron Shortsword - 200g", "Iron Longsword - 200g", "Iron Spear - 300g", "Iron Axe - 200g", "Iron Hammer - 200g", "Rapier - 200g", "Crossbow - 200g", "Shortbow - 300g", "Longbow - 300g"]
+ "items": ["Iron Dagger - 200g", "Iron Shortsword - 200g", "Iron Longsword - 200g", "Iron Spear - 300g", "Iron Axe - 200g", "Iron Hammer - 200g", "Rapier - 200g", "Crossbow - 200g", "Shortbow - 300g", "Longbow - 400g"]
  }]
