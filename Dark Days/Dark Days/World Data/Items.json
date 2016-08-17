@@ -386,7 +386,7 @@
  "damageReductions": [{"name": "Magical", "value": 1}],
  "attackModifiers": [{"name": "Physical", "value": 1}]
  }, {
- "name": "Witch Hunter Cuirass",
+ "name": "Witch Hunter Longcoat",
  "damage": "",
  "effects": "Reduces physical damage taken by 1. Reduces magical damage taken by 2.",
  "flavor": "Sturdy boots made of fine smithed iron.",

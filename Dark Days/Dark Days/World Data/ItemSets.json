@@ -1,6 +1,6 @@
 [{
  "name": "Witch Hunter",
- "itemNamesInSet": ["Witch Hunter Boots", "Witch Hunter Hat", "Witch Hunter Cuirass"],
+ "itemNamesInSet": ["Witch Hunter Boots", "Witch Hunter Hat", "Witch Hunter Longcoat"],
  "statEffects": [{"stat": "DEX", "value": 1}],
  "damageReductions": [{"name": "Magical", "value": 1}],
  }, {
