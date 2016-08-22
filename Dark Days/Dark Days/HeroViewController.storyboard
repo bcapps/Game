@@ -37,43 +37,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StatCellIdentifier" id="XDC-iQ-hux" customClass="StatCell" customModule="Dark_Days" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-Ht-NDp">
-                                                    <rect key="frame" x="0.0" y="21" width="50" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" red="0.63089037698412698" green="0.63089037698412698" blue="0.63089037698412698" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1p-VJ-NOg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                                    <color key="textColor" red="0.91569527116402116" green="0.91569527116402116" blue="0.91569527116402116" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="i1p-VJ-NOg" firstAttribute="top" secondItem="XDC-iQ-hux" secondAttribute="top" id="4Wa-oz-34z"/>
-                                            <constraint firstItem="s2h-Ht-NDp" firstAttribute="width" secondItem="XDC-iQ-hux" secondAttribute="width" id="4sW-j2-kZF"/>
-                                            <constraint firstItem="i1p-VJ-NOg" firstAttribute="width" secondItem="XDC-iQ-hux" secondAttribute="width" id="AN8-K0-22c"/>
-                                            <constraint firstItem="s2h-Ht-NDp" firstAttribute="centerX" secondItem="XDC-iQ-hux" secondAttribute="centerX" id="BHQ-vh-rBN"/>
-                                            <constraint firstItem="i1p-VJ-NOg" firstAttribute="centerX" secondItem="XDC-iQ-hux" secondAttribute="centerX" id="NIM-Ya-wX9"/>
-                                            <constraint firstItem="s2h-Ht-NDp" firstAttribute="top" secondItem="i1p-VJ-NOg" secondAttribute="bottom" id="uPR-da-8dX"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="statTitle" destination="i1p-VJ-NOg" id="WHv-ER-dJs"/>
-                                            <outlet property="statValue" destination="s2h-Ht-NDp" id="2BV-ux-iWF"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="GVh-lf-OHh" id="Q5f-fc-bvV"/>
                                     <outlet property="delegate" destination="GVh-lf-OHh" id="GKm-H1-FxO"/>

@@ -56,7 +56,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        collectionView.registerNibForClass(StatCell.self, reuseIdentifier: "StatCellIdentifier")
+        
         title = hero?.name
         view.backgroundColor = .backgroundColor()
         

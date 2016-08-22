@@ -97,6 +97,9 @@
 		F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
 		F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
 		F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
+		F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227880E1D6BA09F00324167 /* MonsterView.xib */; };
+		F22788111D6BA77600324167 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22788101D6BA77600324167 /* StatCell.xib */; };
+		F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788121D6BA93000324167 /* CollectionViewExtensions.swift */; };
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
@@ -395,6 +398,9 @@
 		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
 		F21ECE7A1C7A9D67008041E9 /* Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
+		F227880E1D6BA09F00324167 /* MonsterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonsterView.xib; sourceTree = "<group>"; };
+		F22788101D6BA77600324167 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
+		F22788121D6BA93000324167 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
@@ -633,6 +639,7 @@
 				F21ECE0E1C7A5F7E008041E9 /* Character */,
 				C394058D1C7CAE2B00EBFD07 /* Support */,
 				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
+				F22788121D6BA93000324167 /* CollectionViewExtensions.swift */,
 				F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */,
 				F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */,
 				C39ACBED1C9C9D3E004C5A6B /* ViewExtensions.swift */,
@@ -782,6 +789,14 @@
 			name = Inventory;
 			sourceTree = "<group>";
 		};
+		F227880D1D6BA09100324167 /* Monster Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F227880E1D6BA09F00324167 /* MonsterView.xib */,
+			);
+			name = "Monster Cell";
+			sourceTree = "<group>";
+		};
 		F2350AF11C7AAD0000D6E18E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +819,7 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F227880D1D6BA09100324167 /* Monster Cell */,
 				F29C55E31C961D2500ED386E /* Unequip Button */,
 				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
@@ -902,6 +918,7 @@
 		F25187D81C952059003AD636 /* Stat Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F22788101D6BA77600324167 /* StatCell.xib */,
 				F25187D91C952065003AD636 /* StatCell.swift */,
 			);
 			name = "Stat Cell";
@@ -1103,6 +1120,7 @@
 				F28C2B261CD07CB200E106DD /* Notes.json in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F22788111D6BA77600324167 /* StatCell.xib in Resources */,
 				F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
@@ -1126,6 +1144,7 @@
 				F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */,
 				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */,
+				F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
@@ -1323,6 +1342,7 @@
 				F25187711C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
 				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
+				F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */,
 				F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,

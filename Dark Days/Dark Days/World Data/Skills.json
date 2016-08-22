@@ -70,4 +70,12 @@
  "name": "Bookworm",
  "explanation": "You've spent a lot of time reading books. That has to count for something.",
  "benefit": "Anytime you make an Intelligence based check, add 1 your roll."
+ }, {
+ "name": "Drunken Strength",
+ "explanation": "If you drink enough, something good is bound to happen.",
+ "benefit": "While under the influence of alcohol, gain 2 Strength, and lose 1 Dexterity and 1 Intelligence."
+ }, {
+ "name": "Bonebreaker",
+ "explanation": "Bones, bones, break the bones. Don't miss none, in your haste. Bones, bones, break the bones. Grind them up, into paste!",
+ "benefit": "While wielding a blunt weapon, you may attempt an attack at -2 to hit to break a bone in the specified limb of an opponent. If successful, the opponent loses use of that limb, and has -2 to Dexterity."
  }]
