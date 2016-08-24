@@ -13,13 +13,27 @@ struct Monster: Decodable, Nameable {
     let name: String
     let explanation: String
     let health: Int
+    let speed: String
     let attacks: [MonsterAttack]
+    let traits: [MonsterTrait]
+    let damageImmunities: [String]
+    let conditionImmunities: [String]
+    let languages: [String]
+    let stats: [MonsterStat]
+    let type: String
     
     static func decode(json: AnyObject) throws -> Monster {
         return try Monster(name: json => "name",
             explanation: json => "explanation",
             health: json => "health",
-            attacks: json => "attacks")
+            speed: json => "speed",
+            attacks: json => "attacks",
+            traits: json => "traits" ?? [],
+            damageImmunities: json => "damageImmunities" ?? [],
+            conditionImmunities: json => "conditionImmunities" ?? [],
+            languages: json => "languages" ?? [],
+            stats: json => "stats" ?? [],
+            type: json => "type")
     }
     
     func attackForNumber(number: Int) -> MonsterAttack? {

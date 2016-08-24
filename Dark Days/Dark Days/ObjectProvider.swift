@@ -13,7 +13,7 @@ final class ObjectProvider {
     
     static func objectsForJSON<T: Decodable>(JSONName: String) -> [T] {
         guard let JSONArray = JSONArrayForName(JSONName) else { return [T]() }
-        
+
         return JSONArray.flatMap { return try? T.decode($0)}
     }
     

@@ -104,6 +104,17 @@
 		F22270861D6D6208007FEFA0 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270821D6D6208007FEFA0 /* NotoSans-Italic.ttf */; };
 		F22270871D6D6208007FEFA0 /* NotoSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270831D6D6208007FEFA0 /* NotoSans.ttf */; };
 		F22270941D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270931D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf */; };
+		F22270951D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788121D6BA93000324167 /* CollectionViewExtensions.swift */; };
+		F22270961D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788121D6BA93000324167 /* CollectionViewExtensions.swift */; };
+		F22270981D6D709C007FEFA0 /* MonsterTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22270971D6D709C007FEFA0 /* MonsterTrait.swift */; };
+		F22270991D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22270971D6D709C007FEFA0 /* MonsterTrait.swift */; };
+		F222709A1D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22270971D6D709C007FEFA0 /* MonsterTrait.swift */; };
+		F222709C1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */; };
+		F222709E1D6D7465007FEFA0 /* MonsterStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709D1D6D7465007FEFA0 /* MonsterStat.swift */; };
+		F222709F1D6D7499007FEFA0 /* MonsterStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709D1D6D7465007FEFA0 /* MonsterStat.swift */; };
+		F22270A01D6D7499007FEFA0 /* MonsterStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709D1D6D7465007FEFA0 /* MonsterStat.swift */; };
+		F22270A11D6D75E0007FEFA0 /* MonsterViewModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */; };
+		F22270A21D6D75E0007FEFA0 /* MonsterViewModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */; };
 		F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227880E1D6BA09F00324167 /* MonsterView.xib */; };
 		F22788111D6BA77600324167 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22788101D6BA77600324167 /* StatCell.xib */; };
 		F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788121D6BA93000324167 /* CollectionViewExtensions.swift */; };
@@ -419,6 +430,9 @@
 		F22270821D6D6208007FEFA0 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		F22270831D6D6208007FEFA0 /* NotoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoSans.ttf; sourceTree = "<group>"; };
 		F22270931D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MrsEavesPetiteCapsPetiteCaps.ttf; sourceTree = "<group>"; };
+		F22270971D6D709C007FEFA0 /* MonsterTrait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterTrait.swift; sourceTree = "<group>"; };
+		F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewModelTranslator.swift; sourceTree = "<group>"; };
+		F222709D1D6D7465007FEFA0 /* MonsterStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterStat.swift; sourceTree = "<group>"; };
 		F227880E1D6BA09F00324167 /* MonsterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonsterView.xib; sourceTree = "<group>"; };
 		F22788101D6BA77600324167 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
 		F22788121D6BA93000324167 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
@@ -833,6 +847,7 @@
 				F22788141D6BAA7800324167 /* MonsterView.swift */,
 				F22270761D6D5796007FEFA0 /* MonsterSeparatorView.xib */,
 				F22270741D6D578C007FEFA0 /* MonsterSeparatorView.swift */,
+				F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */,
 			);
 			name = "Monster View";
 			sourceTree = "<group>";
@@ -852,6 +867,8 @@
 				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
 				F2350AFA1C7ADA6800D6E18E /* Monster.swift */,
 				F26C01DF1CAE238E00907164 /* MonsterAttack.swift */,
+				F22270971D6D709C007FEFA0 /* MonsterTrait.swift */,
+				F222709D1D6D7465007FEFA0 /* MonsterStat.swift */,
 			);
 			name = Monsters;
 			sourceTree = "<group>";
@@ -1356,12 +1373,14 @@
 				C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
+				F222709C1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift in Sources */,
 				F25187651C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187921C922B9B003AD636 /* FontExtension.swift in Sources */,
 				F25187DA1C952065003AD636 /* StatCell.swift in Sources */,
 				F26C01F91CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */,
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
+				F222709E1D6D7465007FEFA0 /* MonsterStat.swift in Sources */,
 				F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */,
@@ -1395,6 +1414,7 @@
 				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */,
 				F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */,
+				F22270981D6D709C007FEFA0 /* MonsterTrait.swift in Sources */,
 				F22270751D6D578C007FEFA0 /* MonsterSeparatorView.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
@@ -1447,6 +1467,7 @@
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F26C01F21CB197C100907164 /* DamageReduction.swift in Sources */,
+				F22270951D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */,
 				F21ECE4C1C7A7C9D008041E9 /* Inventory.swift in Sources */,
 				C3BC40481C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */,
 				F21ECE471C7A7C90008041E9 /* Hero.swift in Sources */,
@@ -1466,6 +1487,7 @@
 				C3AB8F471C7CF992007CE0BA /* HeroPersistenceTests.swift in Sources */,
 				F28C2B201CD064B900E106DD /* Merchant.swift in Sources */,
 				F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */,
+				F22270A11D6D75E0007FEFA0 /* MonsterViewModelTranslator.swift in Sources */,
 				F2F909B01D42AA74005F8662 /* InsanityProvider.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
@@ -1475,6 +1497,7 @@
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
 				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
+				F22270991D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */,
@@ -1484,6 +1507,7 @@
 				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */,
 				F28C2B271CD07D4100E106DD /* Note.swift in Sources */,
+				F222709F1D6D7499007FEFA0 /* MonsterStat.swift in Sources */,
 				F25187B01C922BB3003AD636 /* ListDataSource.swift in Sources */,
 				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
 				F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */,
@@ -1512,7 +1536,9 @@
 				F251877C1C92270B003AD636 /* AttributedStringExtension.swift in Sources */,
 				F21ECE431C7A7B94008041E9 /* Town.swift in Sources */,
 				F2350B801C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
+				F22270A21D6D75E0007FEFA0 /* MonsterViewModelTranslator.swift in Sources */,
 				F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */,
+				F222709A1D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F26C01F31CB197C100907164 /* DamageReduction.swift in Sources */,
@@ -1522,6 +1548,7 @@
 				F25187CD1C9373C7003AD636 /* ArrayRemoval.swift in Sources */,
 				F21ECE121C7A5F8A008041E9 /* Stat.swift in Sources */,
 				C3AB8F411C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
+				F22270961D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */,
 				F25187801C922AC7003AD636 /* TableViewExtension.swift in Sources */,
 				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
@@ -1542,6 +1569,7 @@
 				F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
+				F22270A01D6D7499007FEFA0 /* MonsterStat.swift in Sources */,
 				F29B48531D63C62B00A92DAB /* ItemSet.swift in Sources */,
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F25187C91C937370003AD636 /* InfoCell.swift in Sources */,

@@ -65,9 +65,6 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             case .SkillList:
                 return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
-                
-                return UIStoryboard.monsterViewController()
-                
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
             case .StatModification:
                 return ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
@@ -197,19 +194,25 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             
             navigationController?.pushViewController(merchantList, animated: true)
         } else if let monster = object as? Monster {
-            let random = GKShuffledDistribution(forDieWithSideCount: 100).nextInt()
-            let attack = monster.attackForNumber(random)
             
-            if let attack = attack {
-                let controller = UIAlertController(title: attack.name, message: attackStringForAttack(attack), preferredStyle: .Alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
-                
-                navigationController?.presentViewController(controller, animated: true, completion: nil)
-            }
+            guard let monsterVC = UIStoryboard.monsterViewController() else { return }
+            monsterVC.monster = monster
             
-            guard let indexPath = listViewController.tableView.indexPathForSelectedRow else { return }
+            navigationController?.pushViewController(monsterVC, animated: true)
             
-            listViewController.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//            let random = GKShuffledDistribution(forDieWithSideCount: 100).nextInt()
+//            let attack = monster.attackForNumber(random)
+//            
+//            if let attack = attack {
+//                let controller = UIAlertController(title: attack.name, message: attackStringForAttack(attack), preferredStyle: .Alert)
+//                controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+//                
+//                navigationController?.presentViewController(controller, animated: true, completion: nil)
+//            }
+//            
+//            guard let indexPath = listViewController.tableView.indexPathForSelectedRow else { return }
+//            
+//            listViewController.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
     

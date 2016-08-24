@@ -11,23 +11,40 @@ import UIKit
 class MonsterView: UIScrollView {
     
     struct ViewModel {
+        
+        struct Attack {
+            let name: String
+            let description: String
+        }
+        
+        struct Trait {
+            let name: String
+            let description: String
+        }
+        
+        struct Stat {
+            let name: String
+            let value: String
+        }
+
         let name: String
         let type: String
         let health: String
         let speed: String
-        //let stats: []
         let damageImmunities: [String]
         let conditionImmunites: [String]
         let languages: [String]
-        let abilities: [String]
-        let actions: [String]
+        let stats: [Stat]
+        let attacks: [Attack]
+        let traits: [Trait]
     }
+    
+    @IBOutlet weak var statCollectionView: UICollectionView?
     
     @IBOutlet private weak var nameLabel: UILabel?
     @IBOutlet private weak var typeLabel: UILabel?
     @IBOutlet private weak var healthLabel: UILabel?
     @IBOutlet private weak var speedLabel: UILabel?
-    @IBOutlet private weak var statCollectionView: UICollectionView?
     @IBOutlet private weak var damageImmunitiesLabel: UILabel?
     @IBOutlet private weak var conditionImmunitesLabel: UILabel?
     @IBOutlet private weak var languagesLabel: UILabel?
