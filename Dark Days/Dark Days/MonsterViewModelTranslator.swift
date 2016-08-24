@@ -23,7 +23,7 @@ class MonsterViewModelTranslator {
     }
     
     private static func viewModelAttacks(forMonster monster: Monster) -> [MonsterView.ViewModel.Attack] {
-        return monster.attacks.flatMap { MonsterView.ViewModel.Attack(name: $0.name, description: $0.damage) }
+        return monster.attacks.flatMap { MonsterView.ViewModel.Attack(name: $0.name, damage: $0.damage) }
     }
     
     private static func viewModelTraits(forMonster monster: Monster) -> [MonsterView.ViewModel.Trait] {

@@ -31,14 +31,14 @@
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-8X-Gks" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="50" width="570" height="5"/>
+                            <rect key="frame" x="0.0" y="50" width="570" height="4"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="5" id="8H3-TC-JP6"/>
+                                <constraint firstAttribute="height" constant="4" id="8H3-TC-JP6"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TeV-l5-gEN">
-                            <rect key="frame" x="0.0" y="63" width="570" height="42"/>
+                            <rect key="frame" x="0.0" y="62" width="570" height="42"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krD-2Z-yXi" userLabel="Health Label">
                                     <rect key="frame" x="0.0" y="0.0" width="570" height="21"/>
@@ -55,16 +55,16 @@
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-GO-cem" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="113" width="570" height="5"/>
+                            <rect key="frame" x="0.0" y="112" width="570" height="4"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="5" id="Ncm-qN-lju"/>
+                                <constraint firstAttribute="height" constant="4" id="Ncm-qN-lju"/>
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-ie-4Jm">
-                            <rect key="frame" x="0.0" y="126" width="570" height="50"/>
+                            <rect key="frame" x="0.0" y="124" width="570" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="UVa-ip-9za"/>
+                                <constraint firstAttribute="height" constant="44" id="UVa-ip-9za"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r6t-kx-3bn">
                                 <size key="itemSize" width="50" height="50"/>
@@ -74,14 +74,14 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-cf-Ho1" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="184" width="570" height="5"/>
+                            <rect key="frame" x="0.0" y="176" width="570" height="4"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="5" id="gcJ-ca-lj3"/>
+                                <constraint firstAttribute="height" constant="4" id="gcJ-ca-lj3"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3pa-Dn-7gH">
-                            <rect key="frame" x="0.0" y="197" width="570" height="63"/>
+                            <rect key="frame" x="0.0" y="188" width="570" height="63"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-PU-t6m" userLabel="Damage Immunities Label">
                                     <rect key="frame" x="0.0" y="0.0" width="570" height="21"/>
@@ -104,20 +104,45 @@
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-G8-kOI" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="268" width="570" height="5"/>
+                            <rect key="frame" x="0.0" y="259" width="570" height="4"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="5" id="afv-8p-wZt"/>
+                                <constraint firstAttribute="height" constant="4" id="afv-8p-wZt"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-45-Oc2">
-                            <rect key="frame" x="0.0" y="281" width="570" height="289"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cW9-Kk-JUS">
+                            <rect key="frame" x="0.0" y="271" width="570" height="299"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="330" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Abilities Stack View">
-                                    <rect key="frame" x="0.0" y="0.0" width="570" height="289"/>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Actions Stack View">
-                                    <rect key="frame" x="0.0" y="289" width="570" height="0.0"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-45-Oc2">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="124"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Traits Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="570" height="30"/>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEB-78-mpf">
+                                            <rect key="frame" x="0.0" y="33" width="570" height="10"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="Lin-WD-MAi"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A8-cy-iSd" userLabel="Attack Title Label">
+                                            <rect key="frame" x="0.0" y="46" width="570" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loQ-7z-VkD">
+                                            <rect key="frame" x="0.0" y="70" width="570" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="tgH-fA-rRt"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="50" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Attacks Stack View">
+                                            <rect key="frame" x="0.0" y="74" width="570" height="50"/>
+                                        </stackView>
+                                    </subviews>
                                 </stackView>
                             </subviews>
                         </stackView>
@@ -133,8 +158,8 @@
                 <constraint firstItem="bdm-IL-dhx" firstAttribute="centerX" secondItem="pc3-Tr-qSY" secondAttribute="centerX" id="kp5-Sb-dyN"/>
             </constraints>
             <connections>
-                <outlet property="abilitiesStackView" destination="f8A-6h-wj1" id="5FE-vQ-NDe"/>
-                <outlet property="actionsStackView" destination="ldE-MW-Tlo" id="W5j-L7-BmW"/>
+                <outlet property="attackTitleLabel" destination="9A8-cy-iSd" id="JL4-iW-YrS"/>
+                <outlet property="attacksStackView" destination="ldE-MW-Tlo" id="pK2-wE-8rJ"/>
                 <outlet property="conditionImmunitesLabel" destination="Uei-e7-770" id="t2p-Kf-6tN"/>
                 <outlet property="damageImmunitiesLabel" destination="K1q-PU-t6m" id="39n-Wu-799"/>
                 <outlet property="healthLabel" destination="krD-2Z-yXi" id="cPN-yN-7cc"/>
@@ -142,6 +167,7 @@
                 <outlet property="nameLabel" destination="1dW-Qv-Ag8" id="6V8-wu-hNa"/>
                 <outlet property="speedLabel" destination="wd8-TS-nY1" id="4nP-ze-l84"/>
                 <outlet property="statCollectionView" destination="xhw-ie-4Jm" id="TgY-Ig-YpY"/>
+                <outlet property="traitsStackView" destination="f8A-6h-wj1" id="0uQ-Rp-mio"/>
                 <outlet property="typeLabel" destination="mRF-5W-Mwe" id="V7S-za-gGk"/>
             </connections>
         </scrollView>

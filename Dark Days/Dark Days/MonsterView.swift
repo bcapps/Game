@@ -14,7 +14,7 @@ class MonsterView: UIScrollView {
         
         struct Attack {
             let name: String
-            let description: String
+            let damage: String
         }
         
         struct Trait {
@@ -48,14 +48,15 @@ class MonsterView: UIScrollView {
     @IBOutlet private weak var damageImmunitiesLabel: UILabel?
     @IBOutlet private weak var conditionImmunitesLabel: UILabel?
     @IBOutlet private weak var languagesLabel: UILabel?
-    @IBOutlet private weak var abilitiesStackView: UIStackView?
-    @IBOutlet private weak var actionsStackView: UIStackView?
+    @IBOutlet private weak var traitsStackView: UIStackView?
+    @IBOutlet private weak var attacksStackView: UIStackView?
+    @IBOutlet private weak var attackTitleLabel: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        nameLabel?.font = UIFont.petiteCapsFont(ofSize: 28)
-        typeLabel?.font = UIFont.notoSansItalic(ofSize: 14)
+
+        statCollectionView?.allowsSelection = false
+        attackTitleLabel?.attributedText = attackTitleAttributedString(forTitle: "Attacks")
     }
 
     var viewModel: ViewModel? {
@@ -70,6 +71,12 @@ class MonsterView: UIScrollView {
             damageImmunitiesLabel?.attributedText = attributedText("Damage Immunities ", descriptiveText: vm.damageImmunities)
             conditionImmunitesLabel?.attributedText = attributedText("Condition Immunities ", descriptiveText: vm.conditionImmunites)
             languagesLabel?.attributedText = attributedText("Languages ", descriptiveText: vm.languages)
+            
+            attacksStackView?.removeAllSubviews()
+            attacksStackView?.addArrangedSubviews(labels(forAttacks: vm.attacks))
+            
+            traitsStackView?.removeAllSubviews()
+            traitsStackView?.addArrangedSubviews(labels(forTraits: vm.traits))
         }
     }
     
@@ -97,6 +104,31 @@ class MonsterView: UIScrollView {
         
         return NSAttributedString(string: name, attributes: attributes)
     }
+    
+    private func attackTitleAttributedString(forTitle title: String) -> NSAttributedString {
+        let attributes = [NSFontAttributeName: UIFont.petiteCapsFont(ofSize: 23), NSForegroundColorAttributeName: UIColor.headerTextColor()]
+        
+        return NSAttributedString(string: title, attributes: attributes)
+    }
+    
+    private func labels(forAttacks attacks: [ViewModel.Attack]) -> [UIButton] {
+        return attacks.flatMap {
+            let button = UIButton(type: .System)
+            button.setAttributedTitle(attributedText($0.name + " ", descriptiveText: $0.damage), forState: .Normal)
+            
+            return button
+        }
+    }
+    
+    private func labels(forTraits traits: [ViewModel.Trait]) -> [UILabel] {
+        return traits.flatMap {
+            let label = UILabel()
+            label.attributedText = attributedText($0.name + " ", descriptiveText: $0.description)
+            label.numberOfLines = 0
+            
+            return label
+        }
+    }
 }
 
 private extension NSAttributedString {
@@ -107,5 +139,20 @@ private extension NSAttributedString {
         joined.appendAttributedString(attrString2)
         
         return joined
+    }
+}
+
+private extension UIStackView {
+    
+    func addArrangedSubviews(subviews: [UIView]) {
+        for view in subviews {
+            addArrangedSubview(view)
+        }
+    }
+    
+    func removeAllSubviews() {
+        for view in subviews {
+            view.removeFromSuperview()
+        }
     }
 }
