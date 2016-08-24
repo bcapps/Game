@@ -33,6 +33,10 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("NameHero") as? NameHeroViewController
     }
     
+    static func monsterViewController() -> MonsterViewController? {
+        return initialViewControllerFromStoryboardNamed("MonsterViewController") as? MonsterViewController
+    }
+    
     static func effectsViewController() -> EffectsTableViewController? {
         return initialViewControllerFromStoryboardNamed("EffectsViewController") as? EffectsTableViewController
     }

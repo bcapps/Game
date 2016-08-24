@@ -65,6 +65,9 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
             case .SkillList:
                 return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
             case .MonsterList:
+                
+                return UIStoryboard.monsterViewController()
+                
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
             case .StatModification:
                 return ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)

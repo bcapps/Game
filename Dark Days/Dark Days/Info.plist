@@ -34,6 +34,14 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MrsEavesPetiteCapsPetiteCaps.ttf</string>
+		<string>NotoSans.ttf</string>
+		<string>NotoSans-Bold.ttf</string>
+		<string>NotoSans-Italic.ttf</string>
+		<string>NotoSans-BoldItalic.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

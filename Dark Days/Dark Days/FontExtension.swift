@@ -34,6 +34,26 @@ extension UIFont {
         return fontOfName("Avenir-Heavy", size: 21)
     }
     
+    static func petiteCapsFont(ofSize size: CGFloat) -> UIFont {
+        return fontOfName("MrsEavesPetiteCapsPetiteCaps", size: size)
+    }
+    
+    static func notoSansRegular(ofSize size: CGFloat) -> UIFont {
+        return fontOfName("NotoSans", size: size)
+    }
+    
+    static func notoSansItalic(ofSize size: CGFloat) -> UIFont {
+        return fontOfName("NotoSans-Italic", size: size)
+    }
+    
+    static func notoSansBold(ofSize size: CGFloat) -> UIFont {
+        return fontOfName("NotoSans-Bold", size: size)
+    }
+    
+    static func notoSansBoldItalic(ofSize size: CGFloat) -> UIFont {
+        return fontOfName("NotoSans-BoldItalic", size: size)
+    }
+    
     private static func fontOfName(name: String, size: CGFloat) -> UIFont {
         guard let font = UIFont(name: name, size: size) else {
             assertionFailure()

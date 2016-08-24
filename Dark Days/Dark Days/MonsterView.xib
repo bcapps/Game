@@ -6,34 +6,63 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="pc3-Tr-qSY">
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pc3-Tr-qSY" customClass="MonsterView" customModule="Dark_Days" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-IL-dhx">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-IL-dhx">
+                    <rect key="frame" x="15" y="15" width="570" height="570"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-Qv-Ag8" userLabel="Name Label">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRF-5W-Mwe" userLabel="Type Label">
-                            <rect key="frame" x="0.0" y="26" width="600" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-Gl-TWx">
+                            <rect key="frame" x="0.0" y="0.0" width="570" height="42"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-Qv-Ag8" userLabel="Name Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRF-5W-Mwe" userLabel="Type Label">
+                                    <rect key="frame" x="0.0" y="21" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-8X-Gks" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="52" width="600" height="5"/>
+                            <rect key="frame" x="0.0" y="50" width="570" height="5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="5" id="8H3-TC-JP6"/>
                             </constraints>
                         </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TeV-l5-gEN">
+                            <rect key="frame" x="0.0" y="63" width="570" height="42"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krD-2Z-yXi" userLabel="Health Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd8-TS-nY1" userLabel="Speed Label">
+                                    <rect key="frame" x="0.0" y="21" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-GO-cem" userLabel="SeparatorView">
+                            <rect key="frame" x="0.0" y="113" width="570" height="5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="Ncm-qN-lju"/>
+                            </constraints>
+                        </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-ie-4Jm">
-                            <rect key="frame" x="0.0" y="62" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="126" width="570" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="UVa-ip-9za"/>
                             </constraints>
@@ -45,52 +74,76 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-cf-Ho1" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="117" width="600" height="5"/>
+                            <rect key="frame" x="0.0" y="184" width="570" height="5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="5" id="gcJ-ca-lj3"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-PU-t6m" userLabel="Damage Immunities Label">
-                            <rect key="frame" x="0.0" y="127" width="600" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-e7-770" userLabel="Condition Immunites Label">
-                            <rect key="frame" x="0.0" y="153" width="600" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P5-4U-u6v" userLabel="Languages">
-                            <rect key="frame" x="0.0" y="179" width="600" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3pa-Dn-7gH">
+                            <rect key="frame" x="0.0" y="197" width="570" height="63"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-PU-t6m" userLabel="Damage Immunities Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-e7-770" userLabel="Condition Immunites Label">
+                                    <rect key="frame" x="0.0" y="21" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P5-4U-u6v" userLabel="Languages">
+                                    <rect key="frame" x="0.0" y="42" width="570" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-G8-kOI" userLabel="SeparatorView">
-                            <rect key="frame" x="0.0" y="205" width="600" height="5"/>
+                            <rect key="frame" x="0.0" y="268" width="570" height="5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="5" id="afv-8p-wZt"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="330" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Abilities Stack View">
-                            <rect key="frame" x="0.0" y="215" width="600" height="330"/>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Actions Stack View">
-                            <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-45-Oc2">
+                            <rect key="frame" x="0.0" y="281" width="570" height="289"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="330" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Abilities Stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="289"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Actions Stack View">
+                                    <rect key="frame" x="0.0" y="289" width="570" height="0.0"/>
+                                </stackView>
+                            </subviews>
                         </stackView>
                     </subviews>
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="height" secondItem="pc3-Tr-qSY" secondAttribute="height" id="Inj-00-mlw"/>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerY" secondItem="pc3-Tr-qSY" secondAttribute="centerY" id="KqY-Pz-WhU"/>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerX" secondItem="pc3-Tr-qSY" secondAttribute="centerX" id="gwn-tZ-k0G"/>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="width" secondItem="pc3-Tr-qSY" secondAttribute="width" id="pan-a9-zoO"/>
+                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerY" secondItem="pc3-Tr-qSY" secondAttribute="centerY" id="S22-8A-C6Y"/>
+                <constraint firstAttribute="trailing" secondItem="bdm-IL-dhx" secondAttribute="trailing" constant="15" id="UcU-OZ-kM4"/>
+                <constraint firstItem="bdm-IL-dhx" firstAttribute="top" secondItem="pc3-Tr-qSY" secondAttribute="top" constant="15" id="VXq-7x-Zt5"/>
+                <constraint firstAttribute="bottom" secondItem="bdm-IL-dhx" secondAttribute="bottom" id="ied-Ns-Vtv"/>
+                <constraint firstItem="bdm-IL-dhx" firstAttribute="leading" secondItem="pc3-Tr-qSY" secondAttribute="leading" constant="15" id="jfA-Eo-uQx"/>
+                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerX" secondItem="pc3-Tr-qSY" secondAttribute="centerX" id="kp5-Sb-dyN"/>
             </constraints>
+            <connections>
+                <outlet property="abilitiesStackView" destination="f8A-6h-wj1" id="5FE-vQ-NDe"/>
+                <outlet property="actionsStackView" destination="ldE-MW-Tlo" id="W5j-L7-BmW"/>
+                <outlet property="conditionImmunitesLabel" destination="Uei-e7-770" id="t2p-Kf-6tN"/>
+                <outlet property="damageImmunitiesLabel" destination="K1q-PU-t6m" id="39n-Wu-799"/>
+                <outlet property="healthLabel" destination="krD-2Z-yXi" id="cPN-yN-7cc"/>
+                <outlet property="languagesLabel" destination="0P5-4U-u6v" id="Xiv-7w-TJB"/>
+                <outlet property="nameLabel" destination="1dW-Qv-Ag8" id="6V8-wu-hNa"/>
+                <outlet property="speedLabel" destination="wd8-TS-nY1" id="4nP-ze-l84"/>
+                <outlet property="statCollectionView" destination="xhw-ie-4Jm" id="TgY-Ig-YpY"/>
+                <outlet property="typeLabel" destination="mRF-5W-Mwe" id="V7S-za-gGk"/>
+            </connections>
         </scrollView>
     </objects>
 </document>

@@ -97,9 +97,19 @@
 		F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
 		F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
 		F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECE7A1C7A9D67008041E9 /* Coding.swift */; };
+		F22270751D6D578C007FEFA0 /* MonsterSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22270741D6D578C007FEFA0 /* MonsterSeparatorView.swift */; };
+		F22270771D6D5796007FEFA0 /* MonsterSeparatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22270761D6D5796007FEFA0 /* MonsterSeparatorView.xib */; };
+		F22270841D6D6208007FEFA0 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270801D6D6208007FEFA0 /* NotoSans-Bold.ttf */; };
+		F22270851D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270811D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf */; };
+		F22270861D6D6208007FEFA0 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270821D6D6208007FEFA0 /* NotoSans-Italic.ttf */; };
+		F22270871D6D6208007FEFA0 /* NotoSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270831D6D6208007FEFA0 /* NotoSans.ttf */; };
+		F22270941D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22270931D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf */; };
 		F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F227880E1D6BA09F00324167 /* MonsterView.xib */; };
 		F22788111D6BA77600324167 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22788101D6BA77600324167 /* StatCell.xib */; };
 		F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788121D6BA93000324167 /* CollectionViewExtensions.swift */; };
+		F22788151D6BAA7800324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
+		F22788161D6BF21800324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
+		F22788171D6BF21E00324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
@@ -296,6 +306,10 @@
 		F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
 		F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
 		F28C2B561CD0889000E106DD /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B531CD0889000E106DD /* NamesViewController.swift */; };
+		F292C8E91D6BF30D00AB30CA /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */; };
+		F292C8EB1D6BF33A00AB30CA /* MonsterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F292C8EA1D6BF33A00AB30CA /* MonsterViewController.storyboard */; };
+		F292C8EC1D6BF39F00AB30CA /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */; };
+		F292C8ED1D6BF39F00AB30CA /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */; };
 		F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */ = {isa = PBXBuildFile; fileRef = F29B48501D63C2D800A92DAB /* ItemSets.json */; };
 		F29B48521D63C62A00A92DAB /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
 		F29B48531D63C62B00A92DAB /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
@@ -398,9 +412,17 @@
 		F21ECE4A1C7A7C9D008041E9 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
 		F21ECE7A1C7A9D67008041E9 /* Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
+		F22270741D6D578C007FEFA0 /* MonsterSeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterSeparatorView.swift; sourceTree = "<group>"; };
+		F22270761D6D5796007FEFA0 /* MonsterSeparatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonsterSeparatorView.xib; sourceTree = "<group>"; };
+		F22270801D6D6208007FEFA0 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		F22270811D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F22270821D6D6208007FEFA0 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		F22270831D6D6208007FEFA0 /* NotoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoSans.ttf; sourceTree = "<group>"; };
+		F22270931D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MrsEavesPetiteCapsPetiteCaps.ttf; sourceTree = "<group>"; };
 		F227880E1D6BA09F00324167 /* MonsterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonsterView.xib; sourceTree = "<group>"; };
 		F22788101D6BA77600324167 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
 		F22788121D6BA93000324167 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
+		F22788141D6BAA7800324167 /* MonsterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
@@ -474,6 +496,8 @@
 		F28C2B4A1CD0879500E106DD /* NameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameProvider.swift; sourceTree = "<group>"; };
 		F28C2B4F1CD0888700E106DD /* Names.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Names.storyboard; sourceTree = "<group>"; };
 		F28C2B531CD0889000E106DD /* NamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
+		F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
+		F292C8EA1D6BF33A00AB30CA /* MonsterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MonsterViewController.storyboard; sourceTree = "<group>"; };
 		F29B48501D63C2D800A92DAB /* ItemSets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ItemSets.json; path = "World Data/ItemSets.json"; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
@@ -529,6 +553,7 @@
 		C394058D1C7CAE2B00EBFD07 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F22270791D6D5A0B007FEFA0 /* Fonts */,
 				F25187531C92138B003AD636 /* Dark Days-Bridging-Header.h */,
 				F25187541C92138B003AD636 /* Dark DaysTests-Bridging-Header.h */,
 				F25187551C92138B003AD636 /* Dark DaysUITests-Bridging-Header.h */,
@@ -789,12 +814,27 @@
 			name = Inventory;
 			sourceTree = "<group>";
 		};
-		F227880D1D6BA09100324167 /* Monster Cell */ = {
+		F22270791D6D5A0B007FEFA0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F22270801D6D6208007FEFA0 /* NotoSans-Bold.ttf */,
+				F22270811D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf */,
+				F22270821D6D6208007FEFA0 /* NotoSans-Italic.ttf */,
+				F22270831D6D6208007FEFA0 /* NotoSans.ttf */,
+				F22270931D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		F227880D1D6BA09100324167 /* Monster View */ = {
 			isa = PBXGroup;
 			children = (
 				F227880E1D6BA09F00324167 /* MonsterView.xib */,
+				F22788141D6BAA7800324167 /* MonsterView.swift */,
+				F22270761D6D5796007FEFA0 /* MonsterSeparatorView.xib */,
+				F22270741D6D578C007FEFA0 /* MonsterSeparatorView.swift */,
 			);
-			name = "Monster Cell";
+			name = "Monster View";
 			sourceTree = "<group>";
 		};
 		F2350AF11C7AAD0000D6E18E /* Persistence */ = {
@@ -819,7 +859,7 @@
 		F2350B021C7BCEA700D6E18E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F227880D1D6BA09100324167 /* Monster Cell */,
+				F227880D1D6BA09100324167 /* Monster View */,
 				F29C55E31C961D2500ED386E /* Unequip Button */,
 				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
@@ -911,6 +951,8 @@
 				F251878B1C922B6D003AD636 /* ToolsListViewController.swift */,
 				C39ACBEB1C9C9B95004C5A6B /* SendGold.storyboard */,
 				C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */,
+				F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */,
+				F292C8EA1D6BF33A00AB30CA /* MonsterViewController.storyboard */,
 			);
 			name = "DM Toolkit";
 			sourceTree = "<group>";
@@ -1112,6 +1154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22270941D6D6A7F007FEFA0 /* MrsEavesPetiteCapsPetiteCaps.ttf in Resources */,
 				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */,
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
@@ -1134,17 +1177,23 @@
 				F21ECE2C1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE1C1C7A662E008041E9 /* Gods.json in Resources */,
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
+				F22270861D6D6208007FEFA0 /* NotoSans-Italic.ttf in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Towns.json in Resources */,
 				F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
+				F22270851D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf in Resources */,
 				F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */,
 				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
+				F292C8EB1D6BF33A00AB30CA /* MonsterViewController.storyboard in Resources */,
 				F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
 				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */,
 				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */,
+				F22270871D6D6208007FEFA0 /* NotoSans.ttf in Resources */,
 				F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */,
+				F22270771D6D5796007FEFA0 /* MonsterSeparatorView.xib in Resources */,
+				F22270841D6D6208007FEFA0 /* NotoSans-Bold.ttf in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
@@ -1298,6 +1347,7 @@
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F28C2B081CC732CA00E106DD /* Quest.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
+				F292C8E91D6BF30D00AB30CA /* MonsterViewController.swift in Sources */,
 				F28C2B1F1CD062AB00E106DD /* Merchant.swift in Sources */,
 				F251876B1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
@@ -1336,6 +1386,7 @@
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
+				F22788151D6BAA7800324167 /* MonsterView.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
 				F2350B0A1C7BD0EE00D6E18E /* Reusable.swift in Sources */,
 				C39ACBF81C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
@@ -1344,6 +1395,7 @@
 				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */,
 				F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */,
+				F22270751D6D578C007FEFA0 /* MonsterSeparatorView.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
 				F21ECE181C7A65F1008041E9 /* Race.swift in Sources */,
 				F21ECE4F1C7A7E0E008041E9 /* Nameable.swift in Sources */,
@@ -1382,6 +1434,7 @@
 				F251876F1C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
+				F292C8EC1D6BF39F00AB30CA /* MonsterViewController.swift in Sources */,
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
@@ -1437,6 +1490,7 @@
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */,
+				F22788161D6BF21800324167 /* MonsterView.swift in Sources */,
 				F251879E1C922B9D003AD636 /* DismissSegue.swift in Sources */,
 				F26C01EA1CB18C9B00907164 /* StatEffect.swift in Sources */,
 				F26C01E61CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
@@ -1492,6 +1546,7 @@
 				F25187731C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F25187C91C937370003AD636 /* InfoCell.swift in Sources */,
 				F251876A1C92138C003AD636 /* LCKMultipeerMessageSender.m in Sources */,
+				F292C8ED1D6BF39F00AB30CA /* MonsterViewController.swift in Sources */,
 				F28C2B0C1CC7341400E106DD /* Quest.swift in Sources */,
 				F25187C11C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				F2F909B11D42AA75005F8662 /* InsanityProvider.swift in Sources */,
@@ -1505,6 +1560,7 @@
 				F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */,
 				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
+				F22788171D6BF21E00324167 /* MonsterView.swift in Sources */,
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,

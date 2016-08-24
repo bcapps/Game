@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZSm-4Y-isI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Monster View Controller-->
+        <scene sceneID="Vb3-rg-uDN">
+            <objects>
+                <viewController id="ZSm-4Y-isI" customClass="MonsterViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wy2-Bj-Vjo"/>
+                        <viewControllerLayoutGuide type="bottom" id="N6M-o2-DlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lqr-gI-sgL" customClass="MonsterView" customModule="Dark_Days" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ds-oe-a3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="-15"/>
+        </scene>
+    </scenes>
+</document>
