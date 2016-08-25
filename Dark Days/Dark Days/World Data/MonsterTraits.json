@@ -2,6 +2,9 @@
   "name": "Limb Senses",
   "explanation": "Limbs have increased sensitivity, allowing for increased perception when enemies are moving on a surface connected with the limbs."
 }, {
-  "name": "Limb Senses",
-  "explanation": "Limbs have increased sensitivity, allowing for increased perception when enemies are moving on a surface connected with the limbs."
-}]
+  "name": "Antimagic Aura",
+  "explanation": "An invisible barrier surrounds this creature and its equipment. It is impervious to most magical effects including spells, spell-like abilities, and supernatural abilities. It prevents the functioning of any magic items or spells within its confines, thus preventing the target from casting spells or using spell-like abilities or magic items for the duration."
+ }, {
+ "name": "Dark Energy Absorption",
+ "explanation": "Any dark energy that the creature is affected by, is instead absorbed healing the creature by the same damage that would have been dealt."
+ }]

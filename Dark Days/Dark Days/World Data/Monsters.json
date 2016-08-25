@@ -246,7 +246,7 @@
  "health": 30,
  "type": "humanoid, outsider",
  "speed": "30",
- "traits": [],
+ "traits": ["Dark Energy Absorption"],
  "damageImmunities": [],
  "conditionImmunities": [],
  "languages": [],
