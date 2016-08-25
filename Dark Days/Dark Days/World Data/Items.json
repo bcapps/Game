@@ -263,6 +263,12 @@
  "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
  "itemSlot": ""
  }, {
+ "name": "Greater Healing Potion",
+ "damage": "",
+ "effects": "Heals the consumer for 3d4+4 of health.",
+ "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+ "itemSlot": ""
+ }, {
  "name": "Nightmare Blade",
  "damage": "2d4 + [STR]",
  "effects": "On hit, chance to send your opponent into a nightmarish dream (DC 8 + [FAI]).",
