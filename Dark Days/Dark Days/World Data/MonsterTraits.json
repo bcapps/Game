@@ -1,10 +1,61 @@
 [{
-  "name": "Limb Senses",
-  "explanation": "Limbs have increased sensitivity, allowing for increased perception when enemies are moving on a surface connected with the limbs."
+  "name": "Web Sense",
+  "explanation": "While in contact with a web, the [%name%] knows the exact location of any other creature in contact with the same web."
 }, {
   "name": "Antimagic Aura",
-  "explanation": "An invisible barrier surrounds this creature and its equipment. It is impervious to most magical effects including spells, spell-like abilities, and supernatural abilities. It prevents the functioning of any magic items or spells within its confines, thus preventing the target from casting spells or using spell-like abilities or magic items for the duration."
+  "explanation": "An invisible barrier surrounds the [%name%] and its equipment. It is impervious to most magical effects including spells, spell-like abilities, and supernatural abilities. It prevents the functioning of any magic items or spells within its confines, thus preventing the target from casting spells or using spell-like abilities or magic items for the duration."
  }, {
  "name": "Dark Energy Absorption",
- "explanation": "Any dark energy that the creature is affected by, is instead absorbed healing the creature by the same damage that would have been dealt."
+ "explanation": "Any dark energy that the [%name%] is affected by, is instead absorbed healing the [%name%] by the same damage that would have been dealt."
+ }, {
+ "name": "Amphibious",
+ "explanation": "The [%name%] can breathe air and water."
+ }, {
+ "name": "Magic Resistance",
+ "explanation": "The [%name%] gains +2 to resist magical effects."
+ }, {
+ "name": "Lie Detector",
+ "explanation": "The [%name%] will know if it's lied to."
+ }, {
+ "name": "Heated Body",
+ "explanation": "Any creature that touches [%name%], or hits it with a melee attack, takes 1d8 fire damage."
+ }, {
+ "name": "Sense Magic",
+ "explanation": "The [%name%] will know if magic is used within 120 feet of it."
+ }, {
+ "name": "Shapechanger",
+ "explanation": "The [%name%] can change into a creature of similar size. All attributes remain the same, only appearances change."
+ }, {
+ "name": "Fey Ancestry",
+ "explanation": "The [%name%] gets +2 to resist being charmed, and magic can't put the [%name%] to sleep."
+ }, {
+ "name": "Poison Resistance",
+ "explanation": "The [%name%] gets +2 to resist poison effects."
+ }, {
+ "name": "Keen Smell",
+ "explanation": "The [%name%] gets +2 to perception checks that rely on smell."
+ }, {
+ "name": "Keen Sight",
+ "explanation": "The [%name%] gets +2 to perception checks that rely on sight."
+ }, {
+ "name": "Keen Hearing",
+ "explanation": "The [%name%] gets +2 to perception checks that rely on hearing."
+ }, {
+ "name": "Telepathic Bond",
+ "explanation": "The [%name%] can communicate telepathically with creatures of the same type, or their master."
+ }, {
+ "name": "Beserk",
+ "explanation": "Whenever the [%name%] starts its turn with 25% of its hitpoints or fewer the [%name%] goes beserk. On each of its turns while berserk, the [%name%] attacks the nearest creature it can see. This lasts until it is killed, or regains all of its hit points."
+ }, {
+ "name": "Lesser Regeneration",
+ "explanation": "At the start of each turn, [%name%] regains hit points equal to its CON."
+ }, {
+ "name": "Barbed Hide",
+ "explanation": "At the start of each turn, [%name%] deals 1d10 physical damage to any creature grappling it."
+ }, {
+ "name": "Speak with Beasts",
+ "explanation": "The [%name%] can speak with beasts as if they shared a common language."
+ }, {
+ "name": "Burrower",
+ "explanation": "The [%name%] can burrow through non-magical earth and stone without disturbing the material it moves through."
  }]

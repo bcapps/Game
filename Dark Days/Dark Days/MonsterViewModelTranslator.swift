@@ -27,6 +27,9 @@ class MonsterViewModelTranslator {
     }
     
     private static func viewModelTraits(forMonster monster: Monster) -> [MonsterView.ViewModel.Trait] {
-        return monster.traits.flatMap { MonsterView.ViewModel.Trait(name: $0.name, description: $0.explanation) }
+        return monster.traits.flatMap {
+            let explanation = $0.explanation.stringByReplacingOccurrencesOfString("[%name%]", withString: monster.name)
+            return MonsterView.ViewModel.Trait(name: $0.name, description: explanation)
+        }
     }
 }
