@@ -434,4 +434,21 @@
            {"name": "FAI", "value": 0}],
  "attacks": [{"name": "Slash", "damage": "1d8 physical damage", "weight": 90},
              {"name": "Impale", "damage": "2d6 physical damage", "weight": 10}]
+ }, {
+ "name": "Snel",
+ "explanation": "A medium size creature with a lithe skinny figure, with lightning speed. Its keen eyes and smell make it an excellent tracker. Primarily used in assassinations.",
+ "health": 40,
+ "type": "aberration",
+ "speed": "30",
+ "traits": ["Magic Resistance", "Stealth", "Sneak Attack", "Keen Sight", "Keen Smell"],
+ "damageImmunities": ["—"],
+ "conditionImmunities": ["—"],
+ "languages": ["common"],
+ "stats": [{"name": "STR", "value": 2},
+           {"name": "DEX", "value": 5},
+           {"name": "CON", "value": 3},
+           {"name": "INT", "value": 2},
+           {"name": "FAI", "value": 0}],
+ "attacks": [{"name": "Stab", "damage": "1d8 physical damage", "weight": 80},
+             {"name": "Blink", "damage": "1d6 physical damage", "weight": 20}]
  }]

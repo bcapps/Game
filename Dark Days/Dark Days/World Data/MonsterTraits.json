@@ -73,4 +73,10 @@
  }, {
  "name": "Toxic",
  "explanation": "Anyone that ends their turn next to the [%name%] must make a DC 12 CON save, or take 5 poison damage."
+ }, {
+ "name": "Stealth",
+ "explanation": "The [%name%] can move so silently it is nearly impossible to detect. Gain +4 to any stealth checks it makes."
+ }, {
+ "name": "Sneak Attack",
+ "explanation": "When making a surprise attack, the [%name%] rolls an extra 1d6 damage dice."
  }]
