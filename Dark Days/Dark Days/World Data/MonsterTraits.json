@@ -41,10 +41,13 @@
  "name": "Keen Hearing",
  "explanation": "The [%name%] gets +2 to perception checks that rely on hearing."
  }, {
+ "name": "Keen Taste",
+ "explanation": "The [%name%] gets +2 to perception checks that rely on taste."
+ }, {
  "name": "Telepathic Bond",
  "explanation": "The [%name%] can communicate telepathically with creatures of the same type, or their master."
  }, {
- "name": "Beserk",
+ "name": "Berserk",
  "explanation": "Whenever the [%name%] starts its turn with 25% of its hitpoints or fewer the [%name%] goes beserk. On each of its turns while berserk, the [%name%] attacks the nearest creature it can see. This lasts until it is killed, or regains all of its hit points."
  }, {
  "name": "Lesser Regeneration",
@@ -58,4 +61,16 @@
  }, {
  "name": "Burrower",
  "explanation": "The [%name%] can burrow through non-magical earth and stone without disturbing the material it moves through."
+ }, {
+ "name": "Sunlight Sensitivity",
+ "explanation": "The [%name%] gets -2 to perception checks requiring sight, and gets -2 on all attack rolls."
+ }, {
+ "name": "Sea Legs",
+ "explanation": "The [%name%] gets +2 to dodge attacks when on a boat."
+ }, {
+ "name": "Unnatural Magic",
+ "explanation": "The [%name%] can cast spells that do not rely on the power of the gods."
+ }, {
+ "name": "Toxic",
+ "explanation": "Anyone that ends their turn next to the [%name%] must make a DC 12 CON save, or take 5 poison damage."
  }]

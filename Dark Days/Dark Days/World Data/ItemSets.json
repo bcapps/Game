@@ -4,6 +4,12 @@
  "statEffects": [{"stat": "DEX", "value": 1}],
  "damageReductions": [{"name": "Magical", "value": 1}],
  }, {
+ "name": "Dark Iron",
+ "itemNamesInSet": ["Dark Iron Sabatons", "Dark Iron Helm", "Dark Iron Breastplate"],
+ "statEffects": [{"stat": "STR", "value": 1}],
+ "damageReductions": [{"name": "Physical", "value": 2},
+                      {"name": "Fire", "value": 2}]
+ }, {
  "name": "Test Set",
  "itemNamesInSet": ["X", "Y", "Z"],
  "statEffects": [{"stat": "DEX", "value": 1}],
