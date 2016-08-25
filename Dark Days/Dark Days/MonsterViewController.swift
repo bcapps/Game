@@ -41,7 +41,7 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
             guard let monster = self.monster else { return }
             guard let attack = monster.attack(forName: attack.name) else { return }
             
-            let controller = UIAlertController(title: attack.name, message: self.attackStringForAttack(attack), preferredStyle: .Alert)
+            let controller = UIAlertController(title: attack.name, message: attack.attackString, preferredStyle: .Alert)
             controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
             
             self.navigationController?.presentViewController(controller, animated: true, completion: nil)
@@ -61,44 +61,46 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         return cell ?? UICollectionViewCell()
     }
-    
-    private func attackStringForAttack(attack: MonsterAttack) -> String {
-        let damage = attack.damage
-        
-        let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
-        let digits = NSCharacterSet.decimalDigitCharacterSet()
-        
-        var damageWithNumberReplacement = String()
-        
-        for substring in damage.componentsSeparatedByString(" ") {
-            let decimalRange = substring.rangeOfCharacterFromSet(digits, options: NSStringCompareOptions(), range: nil)
+}
+
+private extension MonsterAttack {
+    var attackString: String {
+        get {
+            let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
+            let digits = NSCharacterSet.decimalDigitCharacterSet()
             
-            damageWithNumberReplacement.appendContentsOf(substring)
+            var damageWithNumberReplacement = String()
             
-            if decimalRange != nil {
-                let separatedStrings = substring.componentsSeparatedByString("d")
+            for substring in damage.componentsSeparatedByString(" ") {
+                let decimalRange = substring.rangeOfCharacterFromSet(digits, options: NSStringCompareOptions(), range: nil)
                 
-                if separatedStrings.count == 2 {
-                    let damageDiceString = separatedStrings[0]
-                    let damageRollString = separatedStrings[1]
+                damageWithNumberReplacement.appendContentsOf(substring)
+                
+                if decimalRange != nil {
+                    let separatedStrings = substring.componentsSeparatedByString("d")
                     
-                    if let damageDice = Int(damageDiceString), damageRoll = Int(damageRollString) {
-                        var totalDamage = 0
+                    if separatedStrings.count == 2 {
+                        let damageDiceString = separatedStrings[0]
+                        let damageRollString = separatedStrings[1]
                         
-                        let damageRandomizer = GKShuffledDistribution(forDieWithSideCount: damageRoll)
-                        
-                        for _ in 1...damageDice {
-                            totalDamage += damageRandomizer.nextInt()
+                        if let damageDice = Int(damageDiceString), damageRoll = Int(damageRollString) {
+                            var totalDamage = 0
+                            
+                            let damageRandomizer = GKShuffledDistribution(forDieWithSideCount: damageRoll)
+                            
+                            for _ in 1...damageDice {
+                                totalDamage += damageRandomizer.nextInt()
+                            }
+                            
+                            damageWithNumberReplacement.appendContentsOf("(\(totalDamage))")
                         }
-                        
-                        damageWithNumberReplacement.appendContentsOf("(\(totalDamage))")
                     }
                 }
+                
+                damageWithNumberReplacement.appendContentsOf(" ")
             }
             
-            damageWithNumberReplacement.appendContentsOf(" ")
+            return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damageWithNumberReplacement
         }
-        
-        return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damageWithNumberReplacement
     }
 }

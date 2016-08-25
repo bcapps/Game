@@ -327,6 +327,7 @@
 		F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
 		F29C55EB1C96311F00ED386E /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C55E81C96311700ED386E /* HealthViewController.swift */; };
+		F2A4BC811D6E88BE000E4728 /* MonsterTraits.json in Resources */ = {isa = PBXBuildFile; fileRef = F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */; };
 		F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
 		F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
 		F2A6482D1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
@@ -514,6 +515,7 @@
 		F292C8EA1D6BF33A00AB30CA /* MonsterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MonsterViewController.storyboard; sourceTree = "<group>"; };
 		F29B48501D63C2D800A92DAB /* ItemSets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ItemSets.json; path = "World Data/ItemSets.json"; sourceTree = "<group>"; };
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MonsterTraits.json; path = "World Data/MonsterTraits.json"; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 		F2350AF91C7ADA5600D6E18E /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */,
 				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
 				F2350AFA1C7ADA6800D6E18E /* Monster.swift */,
 				F26C01DF1CAE238E00907164 /* MonsterAttack.swift */,
@@ -1177,6 +1180,7 @@
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
 				F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
+				F2A4BC811D6E88BE000E4728 /* MonsterTraits.json in Resources */,
 				F28C2B261CD07CB200E106DD /* Notes.json in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
