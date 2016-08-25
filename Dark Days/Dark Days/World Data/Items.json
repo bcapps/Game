@@ -447,4 +447,10 @@
  "damageReductions": [{"name": "Physical", "value": 4},
                       {"name": "Fire", "value": 2}],
  "damageAvoidances": [{"name": "Physical", "value": -2}]
+ }, {
+ "name": "Parryfish Ledger",
+ "damage": "",
+ "effects": "A ledger holding information on the accounts of the Parryfish at the time it was docked in Wheatfort.",
+ "flavor": "",
+ "itemSlot": "",
  }]

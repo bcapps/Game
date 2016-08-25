@@ -58,6 +58,8 @@ final class InfoCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        infoTextView.textContainer.exclusionPaths = []
+        
         if infoImage != nil {
             addImageExclusionRect()
         }
