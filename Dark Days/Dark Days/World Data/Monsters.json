@@ -417,4 +417,21 @@
            {"name": "FAI", "value": 0}],
  "attacks": [{"name": "Slash", "damage": "1d6 physical damage", "weight": 90},
              {"name": "Molotov", "damage": "2d4 + 2 medium AOE fire damage", "weight": 10}]
+ }, {
+ "name": "Town Guard",
+ "explanation": "A simple town guard.",
+ "health": 50,
+ "type": "humanoid",
+ "speed": "30",
+ "traits": ["Magic Resistance"],
+ "damageImmunities": ["—"],
+ "conditionImmunities": ["—"],
+ "languages": ["common"],
+ "stats": [{"name": "STR", "value": 2},
+           {"name": "DEX", "value": 2},
+           {"name": "CON", "value": 3},
+           {"name": "INT", "value": 0},
+           {"name": "FAI", "value": 0}],
+ "attacks": [{"name": "Slash", "damage": "1d8 physical damage", "weight": 90},
+             {"name": "Impale", "damage": "2d6 physical damage", "weight": 10}]
  }]
