@@ -58,7 +58,7 @@ class MonsterView: UIScrollView {
         statCollectionView?.allowsSelection = false
         attackTitleLabel?.attributedText = attackTitleAttributedString(forTitle: "Attacks")
     }
-
+    
     var viewModel: ViewModel? {
         didSet {
             guard let vm = viewModel else { return }
@@ -80,6 +80,8 @@ class MonsterView: UIScrollView {
         }
     }
     
+    var attackTapped: (ViewModel.Attack -> Void)?
+    
     private func attributedText(heading: String, descriptiveText: String) -> NSAttributedString {
         return attributedText(heading, descriptiveText: [descriptiveText])
     }
@@ -92,11 +94,11 @@ class MonsterView: UIScrollView {
     }
     
     private func subHeadingAttributes() -> [String: AnyObject] {
-        return [NSFontAttributeName: UIFont.notoSansBold(ofSize: 15), NSForegroundColorAttributeName: UIColor.headerTextColor()]
+        return [NSFontAttributeName: UIFont.notoSansBold(ofSize: 16), NSForegroundColorAttributeName: UIColor.headerTextColor()]
     }
     
     private func descriptiveTextAttributes() -> [String: AnyObject] {
-        return [NSFontAttributeName: UIFont.notoSansRegular(ofSize: 15), NSForegroundColorAttributeName: UIColor.bodyTextColor()]
+        return [NSFontAttributeName: UIFont.notoSansRegular(ofSize: 14), NSForegroundColorAttributeName: UIColor.bodyTextColor()]
     }
     
     private func nameAttributedString(forName name: String) -> NSAttributedString {
@@ -113,9 +115,10 @@ class MonsterView: UIScrollView {
     
     private func labels(forAttacks attacks: [ViewModel.Attack]) -> [UIButton] {
         return attacks.flatMap {
-            let button = UIButton(type: .System)
+            let button = AttackButton(type: .System)
+            button.attack = $0
             button.setAttributedTitle(attributedText($0.name + " ", descriptiveText: $0.damage), forState: .Normal)
-            
+            button.addTarget(self, action: .ActionButtonSelector, forControlEvents: .TouchUpInside)
             return button
         }
     }
@@ -129,6 +132,19 @@ class MonsterView: UIScrollView {
             return label
         }
     }
+    
+    @objc private func attackButtonTapped(button: AttackButton) {
+        guard let attack = button.attack else { return }
+        attackTapped?(attack)
+    }
+}
+
+private class AttackButton: UIButton {
+    var attack: MonsterView.ViewModel.Attack?
+}
+
+private extension Selector {
+    static let ActionButtonSelector = #selector(MonsterView.attackButtonTapped(_:))
 }
 
 private extension NSAttributedString {
