@@ -79,4 +79,13 @@
  }, {
  "name": "Sneak Attack",
  "explanation": "When making a surprise attack, the [%name%] rolls an extra 1d6 damage dice."
+ }, {
+ "name": "Levitation",
+ "explanation": "The [%name%] moves by levitating through the air."
+ }, {
+ "name": "Detect Invisiblity",
+ "explanation": "The [%name%] is able to detect invisible creatures."
+ }, {
+ "name": "Illusory",
+ "explanation": "The [%name%] can create false copies of itself, using those to draw the attention of its foes."
  }]
