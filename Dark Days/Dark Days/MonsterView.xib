@@ -10,8 +10,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-IL-dhx">
-                    <rect key="frame" x="15" y="15" width="570" height="570"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bdm-IL-dhx">
+                    <rect key="frame" x="15" y="15" width="570" height="395"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-Gl-TWx">
                             <rect key="frame" x="0.0" y="0.0" width="570" height="42"/>
@@ -110,13 +110,13 @@
                                 <constraint firstAttribute="height" constant="4" id="afv-8p-wZt"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cW9-Kk-JUS">
-                            <rect key="frame" x="0.0" y="271" width="570" height="299"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="999" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cW9-Kk-JUS">
+                            <rect key="frame" x="0.0" y="271" width="570" height="124"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-45-Oc2">
+                                <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="999" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-45-Oc2">
                                     <rect key="frame" x="0.0" y="0.0" width="570" height="124"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Traits Stack View">
+                                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6h-wj1" userLabel="Traits Stack View">
                                             <rect key="frame" x="0.0" y="0.0" width="570" height="30"/>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEB-78-mpf">
@@ -139,7 +139,7 @@
                                                 <constraint firstAttribute="height" constant="1" id="tgH-fA-rRt"/>
                                             </constraints>
                                         </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="50" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Attacks Stack View">
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="999" placeholderIntrinsicWidth="570" placeholderIntrinsicHeight="50" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-MW-Tlo" userLabel="Attacks Stack View">
                                             <rect key="frame" x="0.0" y="74" width="570" height="50"/>
                                         </stackView>
                                     </subviews>
@@ -150,13 +150,14 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerY" secondItem="pc3-Tr-qSY" secondAttribute="centerY" id="S22-8A-C6Y"/>
+                <constraint firstAttribute="bottom" secondItem="cW9-Kk-JUS" secondAttribute="bottom" id="DuO-1J-Fbg"/>
                 <constraint firstAttribute="trailing" secondItem="bdm-IL-dhx" secondAttribute="trailing" constant="15" id="UcU-OZ-kM4"/>
                 <constraint firstItem="bdm-IL-dhx" firstAttribute="top" secondItem="pc3-Tr-qSY" secondAttribute="top" constant="15" id="VXq-7x-Zt5"/>
+                <constraint firstItem="bdm-IL-dhx" firstAttribute="width" secondItem="pc3-Tr-qSY" secondAttribute="width" constant="-30" id="f3a-G2-4ND"/>
                 <constraint firstAttribute="bottom" secondItem="bdm-IL-dhx" secondAttribute="bottom" id="ied-Ns-Vtv"/>
                 <constraint firstItem="bdm-IL-dhx" firstAttribute="leading" secondItem="pc3-Tr-qSY" secondAttribute="leading" constant="15" id="jfA-Eo-uQx"/>
-                <constraint firstItem="bdm-IL-dhx" firstAttribute="centerX" secondItem="pc3-Tr-qSY" secondAttribute="centerX" id="kp5-Sb-dyN"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="attackTitleLabel" destination="9A8-cy-iSd" id="JL4-iW-YrS"/>
                 <outlet property="attacksStackView" destination="ldE-MW-Tlo" id="pK2-wE-8rJ"/>

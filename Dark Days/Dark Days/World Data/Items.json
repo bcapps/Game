@@ -459,4 +459,10 @@
  "effects": "A ledger holding information on the accounts of the Parryfish at the time it was docked in Wheatfort.",
  "flavor": "",
  "itemSlot": "",
+ }, {
+ "name": "Rags",
+ "damage": "",
+ "effects": "Rough cloth that has been mended time and time again. The garment must be more dirt than cloth at this point.",
+ "flavor": "",
+ "itemSlot": "",
  }]
