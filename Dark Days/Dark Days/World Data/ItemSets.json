@@ -10,6 +10,14 @@
  "damageReductions": [{"name": "Physical", "value": 2},
                       {"name": "Fire", "value": 2}]
  }, {
+ "name": "Summoner Garb",
+ "itemNamesInSet": ["Cloak of the Demon Summoner", "Helm of the Demon King", "Demon Boots"],
+ "statEffects": [{"stat": "DEX", "value": 1}],
+ "damageReductions": [{"name": "Magical", "value": 1}],
+ "damageAvoidances": [{"name": "Physical", "value": 1}],
+ "attackModifiers": [{"name": "Magical", "value": 1}],
+ "damageModifiers": [{"name": "Magical", "value": 1}]
+ }, {
  "name": "Test Set",
  "itemNamesInSet": ["X", "Y", "Z"],
  "statEffects": [{"stat": "DEX", "value": 1}],

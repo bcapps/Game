@@ -464,5 +464,13 @@
  "damage": "",
  "effects": "Rough cloth that has been mended time and time again. The garment must be more dirt than cloth at this point.",
  "flavor": "",
- "itemSlot": "",
+ "itemSlot": "Chest",
+ }, {
+ "name": "Slaughter Staff",
+ "damage": "1d4",
+ "effects": "Increases magical damage dealt by 1. Stabbing a creature with the curved tips at the top of the staff, and coating it in blood increases the amount of magical damage dealt by 2.",
+ "flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
+ "itemSlot": "Hand",
+ "twoHanded": true,
+ "damageModifiers": [{"name": "Magical", "value": 1}]
  }]
