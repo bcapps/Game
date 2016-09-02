@@ -95,17 +95,33 @@
  "damageImmunities": ["—"],
  "conditionImmunities": ["—"],
  "languages": ["common"],
- "stats": [{"name": "STR", "value": 4},
+ "stats": [{"name": "STR", "value": 3},
            {"name": "DEX", "value": -1},
            {"name": "CON", "value": -1},
            {"name": "INT", "value": -1},
            {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Claw", "damage": "1d4", "weight": 70},
-             {"name": "Grapple", "damage": "1d4", "weight": 30}]
+ "attacks": [{"name": "Claw", "damage": "1d4 physical damage", "weight": 70},
+             {"name": "Grapple", "damage": "1d4 physical damage", "weight": 30}]
+ }, {
+ "name": "Flesh Golem",
+ "explanation": "A large muscular humanoid looking creature. It commands great strength, and is resistant to most conditions.",
+ "health": 85,
+ "type": "large humanoid, golem",
+ "speed": "15",
+ "traits": [],
+ "damageImmunities": ["poison"],
+ "conditionImmunities": ["poisoned", "diseased", "confusion", "paralysis", "bleeding"],
+ "languages": ["—"],
+ "stats": [{"name": "STR", "value": 4},
+           {"name": "DEX", "value": -2},
+           {"name": "CON", "value": 3},
+           {"name": "INT", "value": -1},
+           {"name": "FAI", "value": -1}],
+ "attacks": [{"name": "Punch", "damage": "1d6 physical damage", "weight": 100}]
  }, {
  "name": "Voice of Insanity",
  "explanation": "A mass of black energy sitting in the center of the room that screams horrors.",
- "health": 60,
+ "health": 100,
  "type": "aberration",
  "speed": "0",
  "traits": [],
@@ -500,12 +516,11 @@
            {"name": "CON", "value": 2},
            {"name": "INT", "value": 0},
            {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Pound", "damage": "1d8 physical damage", "weight": 50},
-             {"name": "Kick", "damage": "2d6 physical damage", "weight": 50}]
+ "attacks": [{"name": "Poke", "damage": "1d8 physical damage", "weight": 100}]
  }, {
  "name": "Sister of Slaughter",
  "explanation": "A pale woman with thick black hair.",
- "health": 25,
+ "health": 30,
  "type": "humanoid",
  "speed": "30",
  "traits": ["Unnatural Magic", "Fey Ancestry", "Sense Magic", "Heated Body", "Toxic"],

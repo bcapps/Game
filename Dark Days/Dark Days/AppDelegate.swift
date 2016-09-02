@@ -13,13 +13,9 @@ import HockeySDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private let crashManager = CrashManager(identifier: "a6e84183c21b46adbe5d00fb530f9342")
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("a6e84183c21b46adbe5d00fb530f9342")
-        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
-        BITHockeyManager.sharedHockeyManager().startManager()
-        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
         
         window?.tintColor = UIColor.whiteColor()
         

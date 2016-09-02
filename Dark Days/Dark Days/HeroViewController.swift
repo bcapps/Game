@@ -30,13 +30,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         didSet {
             title = hero?.name
             
-            multipeer?.stopMultipeerConnectivity()
-            multipeer?.removeEventListener(self)
-            
-            multipeer = LCKMultipeer(multipeerUserType: .Client, peerName: hero?.name ?? "No Name", serviceName: "DarkDays")
-            
-            multipeer?.startMultipeerConnectivity()
-            multipeer?.addEventListener(self)
+//            multipeer?.stopMultipeerConnectivity()
+//            multipeer?.removeEventListener(self)
+//            
+//            multipeer = LCKMultipeer(multipeerUserType: .Client, peerName: hero?.name ?? "No Name", serviceName: "DarkDays")
+//            
+//            multipeer?.startMultipeerConnectivity()
+//            multipeer?.addEventListener(self)
             
             effectsViewController?.hero = hero
         }

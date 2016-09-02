@@ -84,7 +84,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     }
     
     deinit {
-        multipeer.stopMultipeerConnectivity()
+        //multipeer.stopMultipeerConnectivity()
     }
     
     override func viewDidLoad() {
@@ -94,7 +94,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
         tableView.customize()
         
-        multipeer.startMultipeerConnectivity()
+        //multipeer.startMultipeerConnectivity()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
