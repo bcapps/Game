@@ -1,9 +1,9 @@
 [{
  "name": "Gifted",
- "explanation": "The gods have granted you power beyond imagination. Your faith in them is as unwavering as your will.",
- "benefits": ["• Grants the ability to use magic.", "• Increases your Faith by 1."]
+ "explanation": "Your faith in the gods is as unwavering as your will. You dedicated your life to the gods, and it has been rewarded.",
+ "benefits": ["• Grants 3 additional magic spells on creation.", "• Increases your Faith by 1."]
  }, {
  "name": "Mundane",
- "explanation": "Without the use of magic, you learned to endure the hardships of the environment around you. All your physical traits have been enhanced through hard work and dedication.",
+ "explanation": "You grew up without faith, learning to endure the hardships of the environment around you. All your physical traits have been enhanced through hard work and dedication.",
  "benefits": ["• Increases Strength by 1.", "• Increases Constitution by 1.", "• Increases Dexterity by 1."]
  }]

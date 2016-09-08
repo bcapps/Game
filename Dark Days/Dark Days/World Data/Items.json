@@ -1,476 +1,689 @@
-[{
- "name": "Basic Axe",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A small axe. It looks sharp.",
- "itemSlot": "Hand",
- }, {
- "name": "Basic Dagger",
- "damage": "1d4 + [DEX]",
- "effects": "",
- "flavor": "A small blade used for cutting into opponents with quick strikes.",
- "itemSlot": "Hand",
- }, {
- "name": "Basic Hammer",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A light hammer used for bludgeoning.",
- "itemSlot": "Hand"
- }, {
- "name": "Rapier",
- "damage": "1d6 + [DEX]",
- "effects": "",
- "flavor": "A thin blade suited for lunging attacks.",
- "itemSlot": "Hand"
- }, {
- "name": "Basic Spear",
- "damage": "1d8 + [STR]",
- "effects": "",
- "flavor": "A long spear used for stabbing enemies.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "Basic Shortsword",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A light sword used for stabbing and slashing.",
- "itemSlot": "Hand"
- }, {
- "name": "Basic Longsword",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A long sword used for stabbing.",
- "itemSlot": "Hand"
- },{
- "name": "Iron Axe",
- "damage": "1d6 + [STR]",
- "effects": "",
- "flavor": "A small axe made of high quality iron.",
- "itemSlot": "Hand",
- }, {
- "name": "Iron Dagger",
- "damage": "1d6 + [DEX]",
- "effects": "",
- "flavor": "A small blade made of high quality iron.",
- "itemSlot": "Hand",
- }, {
- "name": "Iron Hammer",
- "damage": "1d6 + [STR]",
- "effects": "",
- "flavor": "A heavy hammer made of high quality iron.",
- "itemSlot": "Hand"
- }, {
- "name": "Iron Spear",
- "damage": "2d6 + [STR]",
- "effects": "",
- "flavor": "An iron spear of great length.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "Iron Shortsword",
- "damage": "1d6 + [STR]",
- "effects": "",
- "flavor": "An iron sword used for stabbing and slashing.",
- "itemSlot": "Hand"
- }, {
- "name": "Iron Longsword",
- "damage": "1d6 + [STR]",
- "effects": "",
- "flavor": "An iron sword used for stabbing.",
- "itemSlot": "Hand"
- }, {
- "name": "Clothes",
- "damage": "",
- "effects": "",
- "flavor": "Slightly worn pieces of fabric.",
- "itemSlot": "Chest"
- }, {
- "name": "Basic Shield",
- "damage": "",
- "effects": "Decreases physical damage taken by 1.",
- "flavor": "A small metal shield, barely capable of fending off attacks.",
- "itemSlot": "Hand",
- "damageReductions": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Basic Shortbow",
- "damage": "1d6 + [DEX] + 1",
- "effects": "",
- "flavor": "A small shortbow, great for rapid ranged attacks.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "Basic Crossbow",
- "damage": "1d4 + [DEX]",
- "effects": "",
- "flavor": "A light crossbow used for precision attacks.",
- "itemSlot": "Hand"
- }, {
- "name": "Crossbow",
- "damage": "1d6 + [DEX]",
- "effects": "",
- "flavor": "A standard issue crossbow.",
- "itemSlot": "Hand"
- }, {
- "name": "Shortbow",
- "damage": "2d4 + [DEX]",
- "effects": "",
- "flavor": "A standard issue shortbow.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "Longbow",
- "damage": "2d4 + [DEX]",
- "effects": "Increases chance to hit by 1.",
- "flavor": "A standard issue longbow.",
- "itemSlot": "Hand",
- "twoHanded": true,
- "attackModifiers": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Leather Jerkin",
- "damage": "",
- "effects": "Decreases physical damage taken by 1.",
- "flavor": "A light piece of armor made out of animal hide.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Leather Boots",
- "damage": "",
- "effects": "Increases chance to avoid an attack by 1.",
- "flavor": "Thin boots made out of animal hide.",
- "itemSlot": "Boots",
- "damageAvoidances": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Faithful Robes",
- "damage": "",
- "effects": "Increases FAI by 1.",
- "flavor": "Robes worn by those who have dedicated their lives to their god.",
- "itemSlot": "Chest",
- "statEffects": [{"stat": "FAI", "value": 1}]
- }, {
- "name": "Spider Armor",
- "damage": "",
- "effects": "Decrease physical damage taken by 1, and decreases poision damage taken by 3.",
- "flavor": "Armor fashioned from the tough hide of the Spider Queen. The armor prevents even the most caustic of poisons from penetrating.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Poison", "value": 3},
-                      {"name": "Physical", "value": 1}]
- }, {
- "name": "Spider Boots",
- "damage": "",
- "effects": "Grants the Spider Climbing skill, which allows you to walk on walls and ceilings for a limited time.",
- "flavor": "Boots fashioned from the tough sinew of the spider queen.",
- "itemSlot": "Boots",
- "skills": ["Spider Climbing"]
- }, {
- "name": "Iron Helmet",
- "damage": "",
- "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
- "flavor": "A sturdy metal helmet.",
- "itemSlot": "Helmet",
- "damageReductions": [{"name": "Physical", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -1}]
- }, {
- "name": "Leather Hat",
- "damage": "",
- "effects": "Decreases physical damage taken by 1",
- "flavor": "A hardened leather helmet.",
- "itemSlot": "Helmet",
- "damageReductions": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Iron Armor",
- "damage": "",
- "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
- "flavor": "A sturdy metal breastplate.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Physical", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -1}]
- }, {
- "name": "Spider Chitin",
- "damage": "",
- "effects": "",
- "flavor": "Hard shell-like material that was ripped from a spider with a tough hide.",
- "itemSlot": ""
- }, {
- "name": "Gem - Topaz",
- "damage": "",
- "effects": "",
- "flavor": "A valuable gem, topaz in color.",
- "itemSlot": ""
- }, {
- "name": "Vest of Fury",
- "damage": "",
- "effects": "Increases physical damage dealt by 2, and reduces physical damage taken by 1.",
- "flavor": "A leather vest, dyed orange. Retrieved from the corpse of a possessed monk.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Physical", "value": 1}],
- "damageModifiers": [{"name": "Physical", "value": 2}]
- }, {
- "name": "Mouth of Insanity",
- "damage": "",
- "effects": "Increases FAI by 2. Grants the Clear Mind skill, which allows you to remove negative mental effects.",
- "flavor": "Staring at the Mouth of Insanity allows you recall the sheer terror you felt before closing it. Nothing in this world could compare to the terror it brings.",
- "itemSlot": "Accessory",
- "skills": ["Clear Mind"],
- "statEffects": [{"stat": "FAI", "value": 2}]
- }, {
- "name": "Pitchfork",
- "damage": "1d4 + [STR]",
- "effects": "",
- "flavor": "A farming tool used for picking up hay.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "The Jewel of Thought",
- "damage": "",
- "effects": "Increases INT by 2. Grants the Illusionary Sight skill, which allows you to automatically detect illusions.",
- "flavor": "Illusion, Michael. A trick is something a whore does for money.",
- "itemSlot": "Accessory",
- "skills": ["Illusionary Sight"],
- "statEffects": [{"stat": "INT", "value": 2}]
- }, {
- "name": "Cloak of the Demon Summoner",
- "damage": "",
- "effects": "Increases FAI by 1. Decrease magical damage taken by 1.",
- "flavor": "Robes worn by the acolytes of Azoth. It is said to be made from the supple flesh of lesser demons.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Magical", "value": 1}],
- "statEffects": [{"stat": "FAI", "value": 1}]
- }, {
- "name": "Large Iron Shield",
- "damage": "",
- "effects": "Decreases physical damage taken by 2. Reduces chance to avoid an attack by 1.",
- "flavor": "A large metal shield, difficult to carry, but provides good protection.",
- "itemSlot": "Hand",
- "damageReductions": [{"name": "Physical", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -1}]
- }, {
- "name": "Jian",
- "damage": "1d8 + [DEX]",
- "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit by 1.",
- "flavor": "A short sword used for quick strikes by the Blades of Kazu.",
- "itemSlot": "Hand",
- "attackModifiers": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Small Healing Potion",
- "damage": "",
- "effects": "Heals the consumer for 1d4+2 of health.",
- "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- "itemSlot": ""
- }, {
- "name": "Medium Healing Potion",
- "damage": "",
- "effects": "Heals the consumer for 2d4+3 of health.",
- "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- "itemSlot": ""
- }, {
- "name": "Greater Healing Potion",
- "damage": "",
- "effects": "Heals the consumer for 3d4+4 of health.",
- "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- "itemSlot": ""
- }, {
- "name": "Nightmare Blade",
- "damage": "2d4 + [STR]",
- "effects": "On hit, chance to send your opponent into a nightmarish dream (DC 8 + [FAI]).",
- "flavor": "A blade of black iron. Just looking at it causes your spine to tingle in fear.",
- "itemSlot": "Hand"
- }, {
- "name": "Torch",
- "damage": "",
- "effects": "Lights the surrounding area, allowing you to see more easily.",
- "flavor": "",
- "itemSlot": "Hand"
- }, {
- "name": "Infinity Ring",
- "damage": "",
- "effects": "Reduces physical, magical, and elemental damage taken by 1.",
- "flavor": "I look upon creation and I bestow to it the infinity of time. -Vitael, Lord of the Gods",
- "itemSlot": "Accessory",
- "damageReductions": [{"name": "Physical", "value": 1},
-                      {"name": "Magical", "value": 1},
-                      {"name": "Poison", "value": 1},
-                      {"name": "Cold", "value": 1},
-                      {"name": "Fire", "value": 1},
-                      {"name": "Lightning", "value": 1}]
- }, {
- "name": "Chaos Ring",
- "damage": "",
- "effects": "Increases physical and magical damage dealt by 1. Increases your chance to hit with a physical or magical attack by 1. ",
- "flavor": "Time can't hold me. It can't hold anyone. -Odro, God of Chaos",
- "itemSlot": "Accessory",
- "damageModifiers": [{"name": "Physical", "value": 1},
-                     {"name": "Magical", "value": 1}],
- "attackModifiers": [{"name": "Physical", "value": 1},
-                     {"name": "Magical", "value": 1}]
- }, {
- "name": "Mug of Destiny",
- "damage": "",
- "effects": "Once per day the mug fills with alcohol. Drinking from the mug removes any toxins or poisons from the drinker.",
- "flavor": "A small mug made of simple wood. It smells of strong alcohol, like a bar after a rowdy night.",
- "itemSlot": ""
- }, {
- "name": "Lucidity Bag",
- "damage": "",
- "effects": "You aren't sure what is really in this bag, or what consuming what's inside would do to you.",
- "flavor": "Would you like a lucidity? -Taranath Luceran",
- "itemSlot": ""
- }, {
- "name": "Holy Blade",
- "damage": "1d6 + [FAI]",
- "effects": "",
- "flavor": "A sword that shines with a brilliant white color when striking down your enemies.",
- "itemSlot": "Hand"
- }, {
- "name": "Black Robe",
- "damage": "",
- "effects": "Decreases magic damage taken by 1.",
- "flavor": "Dark robes intended to be worn by the followers of Morter.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Magical", "value": 1}]
- }, {
- "name": "Beholder Stalk",
- "damage": "",
- "effects": "A dripping eye stalk that was once attached to a horrific creature.",
- "flavor": "",
- "itemSlot": "",
- }, {
- "name": "Gazing Staff",
- "damage": "2d4 + [FAI]",
- "effects": "Increases magical damage dealt by 2.",
- "flavor": "A staff topped with the eye of an otherwordly creature. Occasionaly you still think it blinks, though the creature has been long dead. Hasn't it?",
- "itemSlot": "Hand",
- "twoHanded": true,
- "damageModifiers": [{"name": "Magical", "value": 2}]
- }, {
- "name": "Skeletal Shortbow",
- "damage": "2d4 + [DEX]",
- "effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",
- "flavor": "A small bow made of raw bone, connected with the sinew of some unknown creature.",
- "itemSlot": "Hand",
- "twoHanded": true
- }, {
- "name": "Shrouded Mask",
- "damage": "",
- "effects": "Increases your chance to dodge a physical attack by 1. Increases your chance to hit with a physical attack by 1.",
- "flavor": "A mask that shrouds your face, and hides you from your enemies.",
- "itemSlot": "Helmet",
- "damageAvoidances": [{"name": "Physical", "value": 1}],
- "attackModifiers": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Platemail Boots",
- "damage": "",
- "effects": "Reduces physical damage taken by 2.",
- "flavor": "Sturdy boots made of fine smithed iron.",
- "itemSlot": "Boots",
- "damageReductions": [{"name": "Physical", "value": 2}]
- }, {
- "name": "The Beginning of Idris",
- "damage": "",
- "effects": "A book the recounts the forging of Idris from the universe by Vitael herself.",
- "flavor": "",
- "itemSlot": "",
- }, {
- "name": "The Time Bandits",
- "damage": "",
- "effects": "Quite a well written piece of fiction about a group of rogues that steal treasure across time.",
- "flavor": "",
- "itemSlot": "",
- }, {
- "name": "Witch Hunter Boots",
- "damage": "",
- "effects": "Increases physical damage dealt by 1. Reduces magical damage taken by 1.",
- "flavor": "Hard leather boots, their cuffs are sprinkled with magical wards that glow with power.",
- "itemSlot": "Boots",
- "damageReductions": [{"name": "Magical", "value": 1}],
- "damageModifiers": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Witch Hunter Hat",
- "damage": "",
- "effects": "Increases your chance to hit with a physical attack by 1. Reduces magical damage taken by 1.",
- "flavor": "A leather hat that comes to a fine point in the front. Worn by the Witch Hunters of Idris as a symbol of their authority.",
- "itemSlot": "Helmet",
- "damageReductions": [{"name": "Magical", "value": 1}],
- "attackModifiers": [{"name": "Physical", "value": 1}]
- }, {
- "name": "Witch Hunter Longcoat",
- "damage": "",
- "effects": "Reduces physical damage taken by 1. Reduces magical damage taken by 2.",
- "flavor": "Sturdy boots made of fine smithed iron.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Physical", "value": 1},
-                      {"name": "Magical", "value": 2}]
- }, {
- "name": "Plague Mask",
- "damage": "",
- "effects": "Increases magic damage dealt by 1. Decreases magic damage taken by 1.",
- "flavor": "A mask that, while not effective at preventing the plague, is quite effective at terrifying your enemies.",
- "itemSlot": "Helmet",
- "damageReductions": [{"name": "Magical", "value": 1}],
- "damageModifiers": [{"name": "Magical", "value": 1}]
- }, {
- "name": "Troll Hammer",
- "damage": "2d6 + [STR]",
- "effects": "",
- "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to a troll.",
- "itemSlot": "Hand"
- }, {
- "name": "Disguise Kit",
- "damage": "",
- "effects": "Grants the Disguise skill, which allows you to disguise yourself.",
- "flavor": "We are so accustomed to disguise ourselves to others that in the end we become disguised to ourselves.",
- "itemSlot": "",
- "inventorySkills": ["Disguise"]
- }, {
- "name": "The Ring of Not Gold",
- "damage": "",
- "effects": "",
- "flavor": "A ring made of some substance that is certainly not gold. Given to you by Harlan Burke, a shopkeeper in the Merchant District of Wheatfort. ",
- "itemSlot": "Accessory"
- }, {
- "name": "Dark Iron Breastplate",
- "damage": "",
- "effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
- "flavor": "A breastplate forged from the dark iron deep underground. Wearers of this armor are known for their strength in combat.",
- "itemSlot": "Chest",
- "damageReductions": [{"name": "Physical", "value": 4},
-                      {"name": "Fire", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -2}]
- }, {
- "name": "Dark Iron Helm",
- "damage": "",
- "effects": "Decreases physical damage taken by 3, but reduces chance to avoid an attack by 1. Reduces fire damage taken by 1.",
- "flavor": "A dark black helmet, with deep red trimming. This helmet was forged in the molten steel of a deep dwarven citadel.",
- "itemSlot": "Helmet",
- "damageReductions": [{"name": "Physical", "value": 3},
-                      {"name": "Fire", "value": 1}],
- "damageAvoidances": [{"name": "Physical", "value": -1}]
- }, {
- "name": "Dark Iron Sabatons",
- "damage": "",
- "effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
- "flavor": "Leg guards that are impervious to most flame, as well as physical attack.",
- "itemSlot": "Boots",
- "damageReductions": [{"name": "Physical", "value": 4},
-                      {"name": "Fire", "value": 2}],
- "damageAvoidances": [{"name": "Physical", "value": -2}]
- }, {
- "name": "Parryfish Ledger",
- "damage": "",
- "effects": "A ledger holding information on the accounts of the Parryfish at the time it was docked in Wheatfort.",
- "flavor": "",
- "itemSlot": "",
- }, {
- "name": "Rags",
- "damage": "",
- "effects": "Rough cloth that has been mended time and time again. The garment must be more dirt than cloth at this point.",
- "flavor": "",
- "itemSlot": "Chest",
- }, {
- "name": "Slaughter Staff",
- "damage": "1d4",
- "effects": "Increases magical damage dealt by 1. Stabbing a creature with the curved tips at the top of the staff, and coating it in blood increases the amount of magical damage dealt by 2.",
- "flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
- "itemSlot": "Hand",
- "twoHanded": true,
- "damageModifiers": [{"name": "Magical", "value": 1}]
- }]
+ [{
+  "name": "Basic Axe",
+  "damage": "1d4 + [STR]",
+  "effects": "",
+  "flavor": "A small axe. It looks sharp.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Basic Dagger",
+  "damage": "1d4 + [DEX]",
+  "effects": "",
+  "flavor": "A small blade used for cutting into opponents with quick strikes.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Basic Hammer",
+  "damage": "1d4 + [STR]",
+  "effects": "",
+  "flavor": "A light hammer used for bludgeoning.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Rapier",
+  "damage": "1d6 + [DEX]",
+  "effects": "",
+  "flavor": "A thin blade suited for lunging attacks.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Basic Spear",
+  "damage": "1d8 + [STR]",
+  "effects": "",
+  "flavor": "A long spear used for stabbing enemies.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "Basic Shortsword",
+  "damage": "1d4 + [STR]",
+  "effects": "",
+  "flavor": "A light sword used for stabbing and slashing.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Basic Longsword",
+  "damage": "1d4 + [STR]",
+  "effects": "",
+  "flavor": "A long sword used for stabbing.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Iron Axe",
+  "damage": "1d6 + [STR]",
+  "effects": "",
+  "flavor": "A small axe made of high quality iron.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Iron Dagger",
+  "damage": "1d6 + [DEX]",
+  "effects": "",
+  "flavor": "A small blade made of high quality iron.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Iron Hammer",
+  "damage": "1d6 + [STR]",
+  "effects": "",
+  "flavor": "A heavy hammer made of high quality iron.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Iron Spear",
+  "damage": "2d6 + [STR]",
+  "effects": "",
+  "flavor": "An iron spear of great length.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "Iron Shortsword",
+  "damage": "1d6 + [STR]",
+  "effects": "",
+  "flavor": "An iron sword used for stabbing and slashing.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Iron Longsword",
+  "damage": "1d6 + [STR]",
+  "effects": "",
+  "flavor": "An iron sword used for stabbing.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Clothes",
+  "damage": "",
+  "effects": "",
+  "flavor": "Slightly worn pieces of fabric.",
+  "itemSlot": "Chest"
+  }, {
+  "name": "Basic Shield",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 1.",
+  "flavor": "A small metal shield, barely capable of fending off attacks.",
+  "itemSlot": "Hand",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Basic Shortbow",
+  "damage": "1d6 + [DEX] + 1",
+  "effects": "",
+  "flavor": "A small shortbow, great for rapid ranged attacks.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "Basic Crossbow",
+  "damage": "1d4 + [DEX]",
+  "effects": "",
+  "flavor": "A light crossbow used for precision attacks.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Crossbow",
+  "damage": "1d6 + [DEX]",
+  "effects": "",
+  "flavor": "A standard issue crossbow.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Shortbow",
+  "damage": "2d4 + [DEX]",
+  "effects": "",
+  "flavor": "A standard issue shortbow.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "Longbow",
+  "damage": "2d4 + [DEX]",
+  "effects": "Increases chance to hit by 1.",
+  "flavor": "A standard issue longbow.",
+  "itemSlot": "Hand",
+  "twoHanded": true,
+  "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Leather Jerkin",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 1.",
+  "flavor": "A light piece of armor made out of animal hide.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Leather Boots",
+  "damage": "",
+  "effects": "Increases chance to avoid an attack by 1.",
+  "flavor": "Thin boots made out of animal hide.",
+  "itemSlot": "Boots",
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Faithful Robes",
+  "damage": "",
+  "effects": "Increases FAI by 1.",
+  "flavor": "Robes worn by those who have dedicated their lives to their god.",
+  "itemSlot": "Chest",
+  "statEffects": [{
+                  "stat": "FAI",
+                  "value": 1
+                  }]
+  }, {
+  "name": "Spider Armor",
+  "damage": "",
+  "effects": "Decrease physical damage taken by 1, and decreases poision damage taken by 3.",
+  "flavor": "Armor fashioned from the tough hide of the Spider Queen. The armor prevents even the most caustic of poisons from penetrating.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Poison",
+                       "value": 3
+                       }, {
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Spider Boots",
+  "damage": "",
+  "effects": "Grants the Spider Climbing skill, which allows you to walk on walls and ceilings for a limited time.",
+  "flavor": "Boots fashioned from the tough sinew of the spider queen.",
+  "itemSlot": "Boots",
+  "skills": ["Spider Climbing"]
+  }, {
+  "name": "Iron Helmet",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
+  "flavor": "A sturdy metal helmet.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 2
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -1
+                       }]
+  }, {
+  "name": "Leather Hat",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 1",
+  "flavor": "A hardened leather helmet.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Iron Armor",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 2, but reduces chance to avoid an attack by 1.",
+  "flavor": "A sturdy metal breastplate.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 2
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -1
+                       }]
+  }, {
+  "name": "Spider Chitin",
+  "damage": "",
+  "effects": "",
+  "flavor": "Hard shell-like material that was ripped from a spider with a tough hide.",
+  "itemSlot": ""
+  }, {
+  "name": "Gem - Topaz",
+  "damage": "",
+  "effects": "",
+  "flavor": "A valuable gem, topaz in color.",
+  "itemSlot": ""
+  }, {
+  "name": "Vest of Fury",
+  "damage": "",
+  "effects": "Increases physical damage dealt by 2, and reduces physical damage taken by 1.",
+  "flavor": "A leather vest, dyed orange. Retrieved from the corpse of a possessed monk.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }],
+  "damageModifiers": [{
+                      "name": "Physical",
+                      "value": 2
+                      }]
+  }, {
+  "name": "Mouth of Insanity",
+  "damage": "",
+  "effects": "Increases FAI by 2. Grants the Clear Mind skill, which allows you to remove negative mental effects.",
+  "flavor": "Staring at the Mouth of Insanity allows you recall the sheer terror you felt before closing it. Nothing in this world could compare to the terror it brings.",
+  "itemSlot": "Accessory",
+  "skills": ["Clear Mind"],
+  "statEffects": [{
+                  "stat": "FAI",
+                  "value": 2
+                  }]
+  }, {
+  "name": "Pitchfork",
+  "damage": "1d4 + [STR]",
+  "effects": "",
+  "flavor": "A farming tool used for picking up hay.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "The Jewel of Thought",
+  "damage": "",
+  "effects": "Increases INT by 2. Grants the Illusionary Sight skill, which allows you to automatically detect illusions.",
+  "flavor": "Illusion, Michael. A trick is something a whore does for money.",
+  "itemSlot": "Accessory",
+  "skills": ["Illusionary Sight"],
+  "statEffects": [{
+                  "stat": "INT",
+                  "value": 2
+                  }]
+  }, {
+  "name": "Cloak of the Demon Summoner",
+  "damage": "",
+  "effects": "Increases FAI by 1. Decrease magical damage taken by 1.",
+  "flavor": "Robes worn by the acolytes of Azoth. It is said to be made from the supple flesh of lesser demons.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Magical",
+                       "value": 1
+                       }],
+  "statEffects": [{
+                  "stat": "FAI",
+                  "value": 1
+                  }]
+  }, {
+  "name": "Large Iron Shield",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 2. Reduces chance to avoid an attack by 1.",
+  "flavor": "A large metal shield, difficult to carry, but provides good protection.",
+  "itemSlot": "Hand",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 2
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -1
+                       }]
+  }, {
+  "name": "Jian",
+  "damage": "1d8 + [DEX]",
+  "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit by 1.",
+  "flavor": "A short sword used for quick strikes by the Blades of Kazu.",
+  "itemSlot": "Hand",
+  "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Small Healing Potion",
+  "damage": "",
+  "effects": "Heals the consumer for 1d4+2 of health.",
+  "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+  "itemSlot": ""
+  }, {
+  "name": "Medium Healing Potion",
+  "damage": "",
+  "effects": "Heals the consumer for 2d4+3 of health.",
+  "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+  "itemSlot": ""
+  }, {
+  "name": "Greater Healing Potion",
+  "damage": "",
+  "effects": "Heals the consumer for 3d4+4 of health.",
+  "flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
+  "itemSlot": ""
+  }, {
+  "name": "Nightmare Blade",
+  "damage": "2d4 + [STR]",
+  "effects": "On hit, chance to send your opponent into a nightmarish dream (DC 8 + [FAI]).",
+  "flavor": "A blade of black iron. Just looking at it causes your spine to tingle in fear.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Torch",
+  "damage": "",
+  "effects": "Lights the surrounding area, allowing you to see more easily.",
+  "flavor": "",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Infinity Ring",
+  "damage": "",
+  "effects": "Reduces physical, magical, and elemental damage taken by 1.",
+  "flavor": "I look upon creation and I bestow to it the infinity of time. -Vitael, Lord of the Gods",
+  "itemSlot": "Accessory",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }, {
+                       "name": "Magical",
+                       "value": 1
+                       }, {
+                       "name": "Poison",
+                       "value": 1
+                       }, {
+                       "name": "Cold",
+                       "value": 1
+                       }, {
+                       "name": "Fire",
+                       "value": 1
+                       }, {
+                       "name": "Lightning",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Chaos Ring",
+  "damage": "",
+  "effects": "Increases physical and magical damage dealt by 1. Increases your chance to hit with a physical or magical attack by 1. ",
+  "flavor": "Time can't hold me. It can't hold anyone. -Odro, God of Chaos",
+  "itemSlot": "Accessory",
+  "damageModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }, {
+                      "name": "Magical",
+                      "value": 1
+                      }],
+  "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }, {
+                      "name": "Magical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Mug of Destiny",
+  "damage": "",
+  "effects": "Once per day the mug fills with alcohol. Drinking from the mug removes any toxins or poisons from the drinker.",
+  "flavor": "A small mug made of simple wood. It smells of strong alcohol, like a bar after a rowdy night.",
+  "itemSlot": ""
+  }, {
+  "name": "Lucidity Bag",
+  "damage": "",
+  "effects": "You aren't sure what is really in this bag, or what consuming what's inside would do to you.",
+  "flavor": "Would you like a lucidity? -Taranath Luceran",
+  "itemSlot": ""
+  }, {
+  "name": "Holy Blade",
+  "damage": "1d6 + [FAI]",
+  "effects": "",
+  "flavor": "A sword that shines with a brilliant white color when striking down your enemies.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Black Robe",
+  "damage": "",
+  "effects": "Decreases magic damage taken by 1.",
+  "flavor": "Dark robes intended to be worn by the followers of Morter.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Magical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Beholder Stalk",
+  "damage": "",
+  "effects": "A dripping eye stalk that was once attached to a horrific creature.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Gazing Staff",
+  "damage": "2d4 + [FAI]",
+  "effects": "Increases magical damage dealt by 2.",
+  "flavor": "A staff topped with the eye of an otherwordly creature. Occasionaly you still think it blinks, though the creature has been long dead. Hasn't it?",
+  "itemSlot": "Hand",
+  "twoHanded": true,
+  "damageModifiers": [{
+                      "name": "Magical",
+                      "value": 2
+                      }]
+  }, {
+  "name": "Skeletal Shortbow",
+  "damage": "2d4 + [DEX]",
+  "effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",
+  "flavor": "A small bow made of raw bone, connected with the sinew of some unknown creature.",
+  "itemSlot": "Hand",
+  "twoHanded": true
+  }, {
+  "name": "Shrouded Mask",
+  "damage": "",
+  "effects": "Increases your chance to dodge a physical attack by 1. Increases your chance to hit with a physical attack by 1.",
+  "flavor": "A mask that shrouds your face, and hides you from your enemies.",
+  "itemSlot": "Helmet",
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": 1
+                       }],
+  "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Platemail Boots",
+  "damage": "",
+  "effects": "Reduces physical damage taken by 2.",
+  "flavor": "Sturdy boots made of fine smithed iron.",
+  "itemSlot": "Boots",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 2
+                       }]
+  }, {
+  "name": "The Beginning of Idris",
+  "damage": "",
+  "effects": "A book the recounts the forging of Idris from the universe by Vitael herself.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "The Time Bandits",
+  "damage": "",
+  "effects": "Quite a well written piece of fiction about a group of rogues that steal treasure across time.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Witch Hunter Boots",
+  "damage": "",
+  "effects": "Increases physical damage dealt by 1. Reduces magical damage taken by 1.",
+  "flavor": "Hard leather boots, their cuffs are sprinkled with magical wards that glow with power.",
+  "itemSlot": "Boots",
+  "damageReductions": [{
+                       "name": "Magical",
+                       "value": 1
+                       }],
+  "damageModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Witch Hunter Hat",
+  "damage": "",
+  "effects": "Increases your chance to hit with a physical attack by 1. Reduces magical damage taken by 1.",
+  "flavor": "A leather hat that comes to a fine point in the front. Worn by the Witch Hunters of Idris as a symbol of their authority.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Magical",
+                       "value": 1
+                       }],
+  "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Witch Hunter Longcoat",
+  "damage": "",
+  "effects": "Reduces physical damage taken by 1. Reduces magical damage taken by 2.",
+  "flavor": "Sturdy boots made of fine smithed iron.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }, {
+                       "name": "Magical",
+                       "value": 2
+                       }]
+  }, {
+  "name": "Plague Mask",
+  "damage": "",
+  "effects": "Increases magic damage dealt by 1. Decreases magic damage taken by 1.",
+  "flavor": "A mask that, while not effective at preventing the plague, is quite effective at terrifying your enemies.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Magical",
+                       "value": 1
+                       }],
+  "damageModifiers": [{
+                      "name": "Magical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Troll Hammer",
+  "damage": "2d6 + [STR]",
+  "effects": "",
+  "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to a troll.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Disguise Kit",
+  "damage": "",
+  "effects": "Grants the Disguise skill, which allows you to disguise yourself.",
+  "flavor": "We are so accustomed to disguise ourselves to others that in the end we become disguised to ourselves.",
+  "itemSlot": "",
+  "inventorySkills": ["Disguise"]
+  }, {
+  "name": "The Ring of Not Gold",
+  "damage": "",
+  "effects": "",
+  "flavor": "A ring made of some substance that is certainly not gold. Given to you by Harlan Burke, a shopkeeper in the Merchant District of Wheatfort. ",
+  "itemSlot": "Accessory"
+  }, {
+  "name": "Dark Iron Breastplate",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
+  "flavor": "A breastplate forged from the dark iron deep underground. Wearers of this armor are known for their strength in combat.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 4
+                       }, {
+                       "name": "Fire",
+                       "value": 2
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -2
+                       }]
+  }, {
+  "name": "Dark Iron Helm",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 3, but reduces chance to avoid an attack by 1. Reduces fire damage taken by 1.",
+  "flavor": "A dark black helmet, with deep red trimming. This helmet was forged in the molten steel of a deep dwarven citadel.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 3
+                       }, {
+                       "name": "Fire",
+                       "value": 1
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -1
+                       }]
+  }, {
+  "name": "Dark Iron Sabatons",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
+  "flavor": "Leg guards that are impervious to most flame, as well as physical attack.",
+  "itemSlot": "Boots",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 4
+                       }, {
+                       "name": "Fire",
+                       "value": 2
+                       }],
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": -2
+                       }]
+  }, {
+  "name": "Parryfish Ledger",
+  "damage": "",
+  "effects": "A ledger holding information on the accounts of the Parryfish at the time it was docked in Wheatfort.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Rags",
+  "damage": "",
+  "effects": "Rough cloth that has been mended time and time again. The garment must be more dirt than cloth at this point.",
+  "flavor": "",
+  "itemSlot": "Chest"
+  }, {
+  "name": "Slaughter Staff",
+  "damage": "1d4",
+  "effects": "Increases magical damage dealt by 1. Stabbing a creature with the curved tips at the top of the staff, and coating it in blood increases the amount of magical damage dealt by 2.",
+  "flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
+  "itemSlot": "Hand",
+  "twoHanded": true,
+  "damageModifiers": [{
+                      "name": "Magical",
+                      "value": 1
+                      }]
+  }, {
+  "name": "Helm of the Demon King",
+  "damage": "",
+  "effects": "Increases control over summoned demons, granting them an additional +2 to damage rolls. Reduces physical and magical damage taken by 1.",
+  "flavor": "An iron helm forged in demon fire, covered in magical runes, with thick horns of a felhound adorning the sides.",
+  "itemSlot": "Helmet",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }, {
+                       "name": "Magical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Demon Hide Boots",
+  "damage": "1d6 + [STR] + [DEX]",
+  "effects": "Once per turn you may make an extra attack, kicking your foes with the Demon Hide Boots as a weapon.",
+  "flavor": "Heavy boots made from tempered demon skin, adorned with the teeth and bones of lesser demonic creatures. Priests of Azoth were renowned for their prowess on the battlefield, as they fought side by side with their feared demon beasts, using powerful boots as their weapons.",
+  "itemSlot": "Boots"
+  }, {
+  "name": "Key to the 9th Floor",
+  "damage": "",
+  "effects": "An old metal key, with intricate ornamentation. It appears to be quite rusted. You've been told that it goes to the 9th floor of the old mental asylum in the City of Clarity.",
+  "flavor": "To open that which has been closed, is to invite insanity itself upon the world.",
+  "itemSlot": ""
+  }, {
+  "name": "Mother's Locket",
+  "damage": "",
+  "effects": "",
+  "flavor": "An old locket, with a faded impression of a young child inside.",
+  "itemSlot": "Accessory"
+  }, {
+  "name": "Antique Sword",
+  "damage": "1d4",
+  "effects": "",
+  "flavor": "An old longsword. This blade was once used in the Battle of the Demon Lord against the legions of Azoth.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Demon's Edge",
+  "damage": "1d8 + [STR]",
+  "effects": "This blade deals an extra 1d8 damage to demons, and has a +2 to attack rolls made against demons.",
+  "flavor": "Demon flesh is as hard as stone, but with the right materials, it can be cut like butter.",
+  "itemSlot": "Hand"
+  }, {
+  "name": "Black Leather Jerkin",
+  "damage": "",
+  "effects": "Decreases physical damage taken by 1.",
+  "flavor": "A light piece of armor made out of animal hide.",
+  "itemSlot": "Chest",
+  "damageReductions": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }, {
+  "name": "Black Leather Boots",
+  "damage": "",
+  "effects": "Increases chance to avoid an attack by 1.",
+  "flavor": "Thin boots made out of animal hide.",
+  "itemSlot": "Boots",
+  "damageAvoidances": [{
+                       "name": "Physical",
+                       "value": 1
+                       }]
+  }]
