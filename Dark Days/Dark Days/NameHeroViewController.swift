@@ -10,25 +10,25 @@ import UIKit
 
 final class NameHeroViewController: UIViewController {
     
-    typealias NameFieldTextChanged = (text: String) -> Void
-    typealias GenderSelectionChanged = (newGender: Gender) -> Void
+    typealias NameFieldTextChanged = (_ text: String) -> Void
+    typealias GenderSelectionChanged = (_ newGender: Gender) -> Void
     
     @IBOutlet weak var nameField: UITextField!
     
     var nameFieldChanged: NameFieldTextChanged?
     var genderSelectionChanged: GenderSelectionChanged?
     
-    @IBAction func textFieldChanged(sender: UITextField) {
-        nameFieldChanged?(text: sender.text ?? "")
+    @IBAction func textFieldChanged(_ sender: UITextField) {
+        nameFieldChanged?(sender.text ?? "")
     }
     
-    @IBAction func genderSelectorChanged(sender: UISegmentedControl) {
+    @IBAction func genderSelectorChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 1:
-            genderSelectionChanged?(newGender: .Female)
+            genderSelectionChanged?(.Female)
         case 0: fallthrough
         default:
-            genderSelectionChanged?(newGender: .Male)
+            genderSelectionChanged?(.Male)
         }
     }
     

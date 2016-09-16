@@ -17,7 +17,7 @@ struct Spell: Decodable, Codeable, Nameable, Equatable {
     let effects: String
     let flavor: String
     
-    static func decode(json: AnyObject) throws -> Spell {
+    static func decode(_ json: Any) throws -> Spell {
         return try Spell(name: json => "name",
             damage: json => "damage",
             effects: json => "effects",
@@ -32,7 +32,7 @@ func == (lhs: Spell, rhs: Spell) -> Bool {
 final class SpellCoder: NSObject, Coder {
     typealias Codeable = Spell
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -44,7 +44,7 @@ final class SpellCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -53,7 +53,7 @@ final class SpellCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

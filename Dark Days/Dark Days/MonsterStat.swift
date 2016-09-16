@@ -13,7 +13,7 @@ struct MonsterStat: Decodable, Nameable {
     let name: String
     let value: Int
     
-    static func decode(json: AnyObject) throws -> MonsterStat {
+    static func decode(_ json: Any) throws -> MonsterStat {
         return try MonsterStat(name: json => "name",
                                value: json => "value")
     }

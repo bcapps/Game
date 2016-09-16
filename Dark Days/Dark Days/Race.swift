@@ -16,7 +16,7 @@ struct Race: Decodable, Nameable, Codeable {
     let explanation: String
     let benefits: [String]
     
-    static func decode(json: AnyObject) throws -> Race {
+    static func decode(_ json: Any) throws -> Race {
         return try Race(
             name: json => "name",
             explanation: json => "explanation",
@@ -43,7 +43,7 @@ extension Race {
         }
     }
     
-    func imageForGender(gender: Gender) -> UIImage {
+    func imageForGender(_ gender: Gender) -> UIImage {
         return UIImage(named: name + gender.rawValue) ?? UIImage()
     }
 }
@@ -51,7 +51,7 @@ extension Race {
 final class RaceCoder: NSObject, Coder {
     typealias CodeableType = Race
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -63,7 +63,7 @@ final class RaceCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -72,7 +72,7 @@ final class RaceCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

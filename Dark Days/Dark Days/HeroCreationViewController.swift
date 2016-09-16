@@ -10,7 +10,7 @@ import UIKit
 
 class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
-    private enum HeroCreationState: String {
+    fileprivate enum HeroCreationState: String {
         case NameHero
         case ChooseRace
         case ChooseSkill
@@ -26,12 +26,12 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
-    private let heroBuilder = HeroBuilder()
+    fileprivate let heroBuilder = HeroBuilder()
 
-    private var selectedStats = [Stat]()
-    private var currentCreationState: HeroCreationState = .ChooseRace
-    private var heroName: String?
-    private var heroGender = Gender.Male
+    fileprivate var selectedStats = [Stat]()
+    fileprivate var currentCreationState: HeroCreationState = .ChooseRace
+    fileprivate var heroName: String?
+    fileprivate var heroGender = Gender.Male
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,12 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         transitionToNameHero()
     }
     
-    @IBAction func backButtonTapped(sender: AnyObject) {
+    @IBAction func backButtonTapped(_ sender: AnyObject) {
         nextButton.title = "Next"
         
         switch currentCreationState {
             case .NameHero:
-                presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                presentingViewController?.dismiss(animated: true, completion: nil)
             case .ChooseRace:
                 transitionToNameHero()
             case .ChooseSkill:
@@ -63,11 +63,11 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
                 transitionToMagicTypeList()
         }
         
-        nextButton.enabled = false
+        nextButton.isEnabled = false
     }
     
-    @IBAction func nextButtonTapped(sender: AnyObject) {
-        nextButton.enabled = false
+    @IBAction func nextButtonTapped(_ sender: AnyObject) {
+        nextButton.isEnabled = false
         backButton.title = "Back"
 
         switch currentCreationState {
@@ -102,7 +102,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         }
     }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool {
         if currentCreationState == .ChooseAttributes && heroBuilder.race.raceType == .Human {
             return selectedStats.count < 2
         }
@@ -110,8 +110,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         return true
     }
     
-    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
-        nextButton.enabled = true
+    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
+        nextButton.isEnabled = true
         
         if let object = object as? Race {
             heroBuilder.race = object
@@ -128,7 +128,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
             }
             
             if selectedStats.count < 2 && heroBuilder.race.raceType == .Human {
-                nextButton.enabled = false
+                nextButton.isEnabled = false
             } else {
                 title = "Stats Chosen"
             }
@@ -142,8 +142,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
                     title = "Next"
             }
             
-            let barButtonItem = UIBarButtonItem(title: title, style: .Done, target: self, action: .NextButtonTappedSelector)
-            navigationItem.setRightBarButtonItem(barButtonItem, animated: true)
+            let barButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: .NextButtonTappedSelector)
+            navigationItem.setRightBarButton(barButtonItem, animated: true)
 
             heroBuilder.magicType = object
         } else if let object = object as? God {
@@ -151,10 +151,10 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         }
     }
     
-    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         if let object = object as? Stat {
             selectedStats.removeObject(object)
-            nextButton.enabled = false
+            nextButton.isEnabled = false
             
             switch heroBuilder.race.raceType {
             case .Human:
@@ -165,9 +165,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         }
     }
     
-    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
-    private func transitionToStatList() {
+    fileprivate func transitionToStatList() {
         selectedStats.removeAll()
         currentCreationState = .ChooseAttributes
         
@@ -185,7 +185,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(statListViewController)
     }
     
-    private func transitionToMagicTypeList() {
+    fileprivate func transitionToMagicTypeList() {
         currentCreationState = .ChooseMagicType
         
         let section = SectionList<MagicType>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("MagicTypes"))
@@ -198,7 +198,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(magicTypeListViewController)
     }
     
-    private func transitionToNameHero() {
+    fileprivate func transitionToNameHero() {
         backButton.title = "Cancel"
         currentCreationState = .NameHero
         
@@ -208,7 +208,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         nameHero.nameFieldChanged = { name in
             self.heroName = name
             
-            self.nextButton.enabled = self.heroName?.isNotEmpty ?? false
+            self.nextButton.isEnabled = self.heroName?.isNotEmpty ?? false
         }
         
         nameHero.genderSelectionChanged = { gender in
@@ -220,7 +220,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(nameHero)
     }
     
-    private func transitionToRaceList() {
+    fileprivate func transitionToRaceList() {
         currentCreationState = .ChooseRace
         
         let section = SectionList<Race>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Races"))
@@ -231,7 +231,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(raceListViewController)
     }
     
-    private func transitionToSkillList() {
+    fileprivate func transitionToSkillList() {
         currentCreationState = .ChooseSkill
         
         var startingSkills = [Skill]()
@@ -241,8 +241,8 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         let feint = ObjectProvider.skillForName("Feint")
         let powerattack = ObjectProvider.skillForName("Power Attack")
         
-        if let human = human, warcry = warcry, feint = feint, powerattack = powerattack {
-            startingSkills.appendContentsOf([human, warcry, feint, powerattack])
+        if let human = human, let warcry = warcry, let feint = feint, let powerattack = powerattack {
+            startingSkills.append(contentsOf: [human, warcry, feint, powerattack])
         }
         
         let section = SectionList<Skill>(sectionTitle: nil, objects: startingSkills)
@@ -254,7 +254,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(skillListViewController)
     }
     
-    private func transitionToGodList() {
+    fileprivate func transitionToGodList() {
         currentCreationState = .ChooseGod
         
         let section = SectionList<God>(sectionTitle: nil, objects: God.startingGods)
@@ -266,7 +266,7 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(godListViewController)
     }
     
-    private func buildAndPersistHero() -> Hero? {
+    fileprivate func buildAndPersistHero() -> Hero? {
         heroBuilder.name = heroName ?? "Default Name"
         heroBuilder.gender = heroGender
         
@@ -296,21 +296,21 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         return hero
     }
     
-    private func dismissAfterCreation(createdHero: Hero) {
+    fileprivate func dismissAfterCreation(_ createdHero: Hero) {
         guard let heroVC = UIStoryboard.heroViewController() else { return }
         heroVC.hero = createdHero
         
         guard let navController = presentingViewController as? UINavigationController else { return }
         
         navController.pushViewController(heroVC, animated: false)
-        navController.dismissViewControllerAnimated(true, completion: nil)
+        navController.dismiss(animated: true, completion: nil)
     }
     
-    private func listEdgeInsets() -> UIEdgeInsets {
+    fileprivate func listEdgeInsets() -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
     
-    private func switchToViewController(viewController: UIViewController) {
+    fileprivate func switchToViewController(_ viewController: UIViewController) {
         if let currentChildViewController = self.childViewControllers.first {
             replaceChildViewController(currentChildViewController, newViewController: viewController, animationDuration: 0.4)
         } else {

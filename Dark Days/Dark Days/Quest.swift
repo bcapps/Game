@@ -18,7 +18,7 @@ struct Quest: Decodable, Codeable, Nameable, Equatable {
     let rewards: [String]
     let completed: Bool
     
-    static func decode(json: AnyObject) throws -> Quest {
+    static func decode(_ json: Any) throws -> Quest {
         return try Quest(name: json => "name",
                          explanation: json => "explanation",
                          notes: json => "notes",
@@ -34,7 +34,7 @@ func == (lhs: Quest, rhs: Quest) -> Bool {
 final class QuestCoder: NSObject, Coder {
     typealias Codeable = Quest
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -46,7 +46,7 @@ final class QuestCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -55,7 +55,7 @@ final class QuestCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

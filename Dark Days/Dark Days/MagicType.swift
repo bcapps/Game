@@ -16,7 +16,7 @@ struct MagicType: Decodable, Codeable, Nameable {
     let explanation: String
     let benefits: [String]
     
-    static func decode(json: AnyObject) throws -> MagicType {
+    static func decode(_ json: Any) throws -> MagicType {
         return try MagicType(name: json => "name",
             explanation: json => "explanation",
             benefits: json => "benefits")
@@ -43,7 +43,7 @@ extension MagicType {
 final class MagicTypeCoder: NSObject, Coder {
     typealias Codeable = MagicType
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -55,7 +55,7 @@ final class MagicTypeCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -64,7 +64,7 @@ final class MagicTypeCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

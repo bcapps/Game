@@ -21,15 +21,15 @@ final class HealthViewController: UIViewController {
     @IBOutlet weak var healthUpButton: UIButton!
     @IBOutlet weak var healthDownButton: UIButton!
     
-    @IBAction private func healthUp(sender: AnyObject) {
+    @IBAction fileprivate func healthUp(_ sender: AnyObject) {
         adjustHealthByValue(1)
     }
     
-    @IBAction private func healthDown(sender: AnyObject) {
+    @IBAction fileprivate func healthDown(_ sender: AnyObject) {
         adjustHealthByValue(-1)
     }
     
-    private func adjustHealthByValue(value: Int) {
+    fileprivate func adjustHealthByValue(_ value: Int) {
         guard let hero = hero else { return }
         
         if hero.currentHealth + value > hero.maximumHealth {
@@ -40,8 +40,8 @@ final class HealthViewController: UIViewController {
             hero.currentHealth = hero.currentHealth + value
         }
         
-        healthDownButton.enabled = hero.currentHealth != 0
-        healthUpButton.enabled = hero.currentHealth != hero.maximumHealth
+        healthDownButton.isEnabled = hero.currentHealth != 0
+        healthUpButton.isEnabled = hero.currentHealth != hero.maximumHealth
         
         healthLabel.text = String(hero.currentHealth) + "/" + String(hero.maximumHealth)
         healthLabel.textColor = textColor(Double(hero.currentHealth), maximumHealth: Double(hero.maximumHealth))
@@ -49,13 +49,13 @@ final class HealthViewController: UIViewController {
         HeroPersistence().persistHero(hero)
     }
     
-    private func textColor(currentHealth: Double, maximumHealth: Double) -> UIColor {
+    fileprivate func textColor(_ currentHealth: Double, maximumHealth: Double) -> UIColor {
         if currentHealth / maximumHealth < (1 / 3) {
-            return .redColor()
+            return UIColor.red
         } else if currentHealth / maximumHealth < (2 / 3) {
-            return .yellowColor()
+            return UIColor.yellow
         } else {
-            return .greenColor()
+            return UIColor.green
         }
     }
 }

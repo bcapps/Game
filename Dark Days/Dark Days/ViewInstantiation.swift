@@ -10,9 +10,9 @@ import UIKit
 
 extension UIView {
     static var nib: UINib {
-        let className = NSStringFromClass(self).componentsSeparatedByString(".").last ?? ""
+        let className = NSStringFromClass(self).components(separatedBy: ".").last ?? ""
         
-        return UINib(nibName: className, bundle: NSBundle.mainBundle())
+        return UINib(nibName: className, bundle: Bundle.main)
     }
     
     
@@ -27,8 +27,8 @@ extension UIView {
      
      - returns: A view of the generic class type from a nib.
      */
-    static func instantiateViewFromNib<T: UIView>(nibName: String) -> T? {
-        return UINib(nibName: nibName, bundle: nil).instantiateWithOwner(nil, options: nil).first as? T
+    static func instantiateViewFromNib<T: UIView>(_ nibName: String) -> T? {
+        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? T
     }
     
     /**
@@ -47,11 +47,11 @@ extension UIView {
      
      - returns: A view loaded from a nib, with all of its constraints recreated. Return this return value from `awakeFromCoder:`.
      */
-    func viewFromNib(nibName: String?) -> UIView? {
+    func viewFromNib(_ nibName: String?) -> UIView? {
         // In this case, the method has already been called and will recurse. Return `self` so this does not happen.
         guard subviews.isEmpty else { return self }
         
-        let name = nibName ?? self.dynamicType.defaultNibName()
+        let name = nibName ?? type(of: self).defaultNibName()
         
         let nibView: UIView? = UIView.instantiateViewFromNib(name)
         guard let view = nibView else { return nil }
@@ -59,7 +59,7 @@ extension UIView {
         view.frame = frame
         view.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
         view.autoresizingMask = autoresizingMask
-        view.userInteractionEnabled = userInteractionEnabled
+        view.isUserInteractionEnabled = isUserInteractionEnabled
         
         constraints.forEach { constraint in
             let firstItem = constraint.firstItem as? UIView == self ? view : constraint.firstItem
@@ -76,7 +76,7 @@ extension UIView {
         return view
     }
     
-    private static func className() -> String {
-        return String(self)
+    fileprivate static func className() -> String {
+        return String(describing: self)
     }
 }

@@ -54,11 +54,11 @@ extension UIFont {
         return fontOfName("NotoSans-BoldItalic", size: size)
     }
     
-    private static func fontOfName(name: String, size: CGFloat) -> UIFont {
+    fileprivate static func fontOfName(_ name: String, size: CGFloat) -> UIFont {
         guard let font = UIFont(name: name, size: size) else {
             assertionFailure()
             
-            return UIFont.boldSystemFontOfSize(size)
+            return UIFont.boldSystemFont(ofSize: size)
         }
         
         return font

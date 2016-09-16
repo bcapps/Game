@@ -11,82 +11,82 @@ import Decodable
 
 final class ObjectProvider {
     
-    static func objectsForJSON<T: Decodable>(JSONName: String) -> [T] {
+    static func objectsForJSON<T: Decodable>(_ JSONName: String) -> [T] {
         guard let JSONArray = JSONArrayForName(JSONName) else { return [T]() }
 
         return JSONArray.flatMap { return try? T.decode($0)}
     }
     
-    static func sortedObjectsForJSON<T: Decodable where T: Nameable>(JSONName: String) -> [T] {
+    static func sortedObjectsForJSON<T: Decodable & Nameable>(_ JSONName: String) -> [T] {
         return objectsForJSON(JSONName).sortedElementsByName
     }
     
-    static func statForName(name: String) -> Stat? {
+    static func statForName(_ name: String) -> Stat? {
         return objectForJSONForName("Stats", objectName: name)
     }
     
-    static func raceForName(name: String) -> Race? {
+    static func raceForName(_ name: String) -> Race? {
         return objectForJSONForName("Races", objectName: name)
     }
     
-    static func skillForName(name: String) -> Skill? {
+    static func skillForName(_ name: String) -> Skill? {
         return objectForJSONForName("Skills", objectName: name)
     }
     
-    static func itemForName(name: String) -> Item? {
+    static func itemForName(_ name: String) -> Item? {
         return objectForJSONForName("Items", objectName: name)
     }
     
-    static func townForName(name: String) -> Town? {
+    static func townForName(_ name: String) -> Town? {
         return objectForJSONForName("Towns", objectName: name)
     }
     
-    static func godForName(name: String) -> God? {
+    static func godForName(_ name: String) -> God? {
         return objectForJSONForName("Gods", objectName: name)
     }
     
-    static func monsterForName(name: String) -> Monster? {
+    static func monsterForName(_ name: String) -> Monster? {
         return objectForJSONForName("Monsters", objectName: name)
     }
     
-    static func magicTypeForName(name: String) -> MagicType? {
+    static func magicTypeForName(_ name: String) -> MagicType? {
         return objectForJSONForName("MagicTypes", objectName: name)
     }
     
-    static func spellForName(name: String) -> Spell? {
+    static func spellForName(_ name: String) -> Spell? {
         return objectForJSONForName("Spells", objectName: name)
     }
     
-    static func questForName(name: String) -> Quest? {
+    static func questForName(_ name: String) -> Quest? {
         return objectForJSONForName("Quests", objectName: name)
     }
     
-    static func merchantForName(name: String) -> Merchant? {
+    static func merchantForName(_ name: String) -> Merchant? {
         return objectForJSONForName("Merchants", objectName: name)
     }
     
-    static func monsterTraitForName(name: String) -> MonsterTrait? {
+    static func monsterTraitForName(_ name: String) -> MonsterTrait? {
         return objectForJSONForName("MonsterTraits", objectName: name)
     }
     
-    static func objectForJSONForName<T where T:Decodable, T:Nameable>(JSONName: String, objectName: String) -> T? {
+    static func objectForJSONForName<T: Decodable & Nameable>(_ JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         
         return objects.filter({$0.name == objectName}).first
     }
     
-    private static func JSONArrayForName(JSONName: String) -> [[String: AnyObject]]? {
+    fileprivate static func JSONArrayForName(_ JSONName: String) -> [[String: AnyObject]]? {
         return JSONObjectForName(JSONName) ?? []
     }
     
-    private static func JSONDictionaryForName(JSONName: String) -> [String: AnyObject]? {
+    fileprivate static func JSONDictionaryForName(_ JSONName: String) -> [String: AnyObject]? {
         return JSONObjectForName(JSONName) ?? [String: AnyObject]()
     }
     
-    private static func JSONObjectForName<T>(JSONName: String) -> T?? {
-        guard let path = NSBundle.mainBundle().pathForResource(JSONName, ofType: "json") else { return nil }
-        guard let jsonData = NSData(contentsOfFile: path) else { return nil }
+    fileprivate static func JSONObjectForName<T>(_ JSONName: String) -> T?? {
+        guard let path = Bundle.main.path(forResource: JSONName, ofType: "json") else { return nil }
+        guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return nil }
         
-        return try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as? T
+        return try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? T
     }
 }

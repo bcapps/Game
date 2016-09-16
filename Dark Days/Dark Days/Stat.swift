@@ -52,7 +52,7 @@ final class Stat: Decodable, Nameable, Codeable, Equatable {
         self.currentValue = currentValue
     }
     
-    static func decode(json: AnyObject) throws -> Stat {
+    static func decode(_ json: Any) throws -> Stat {
         return try Stat(
             name: json => "name",
             shortName: json => "shortName",
@@ -70,7 +70,7 @@ func == (lhs: Stat, rhs: Stat) -> Bool {
 final class StatCoder: NSObject, Coder {
     typealias Codeable = Stat
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
         case CurrentValue
     }
@@ -83,20 +83,20 @@ final class StatCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
         let stat = ObjectProvider.statForName(name)
-        stat?.currentValue = aDecoder.decodeIntegerForKey(Keys.CurrentValue.rawValue)
+        stat?.currentValue = aDecoder.decodeInteger(forKey: Keys.CurrentValue.rawValue)
         
         value = stat
         
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeInteger(value?.currentValue ?? 0, forKey: Keys.CurrentValue.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
+        aCoder.encode(value?.currentValue ?? 0, forKey: Keys.CurrentValue.rawValue)
     }
 }

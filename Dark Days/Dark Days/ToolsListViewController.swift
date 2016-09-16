@@ -10,74 +10,74 @@ import UIKit
 import GameplayKit
 
 final class ToolsListViewController: UITableViewController, ListViewControllerDelegate {
-    let multipeer = LCKMultipeer(multipeerUserType: .Host, peerName: "DM", serviceName: "DarkDays")
+    let multipeer = LCKMultipeer(multipeerUserType: .host, peerName: "DM", serviceName: "DarkDays")
     
     enum Tool: Int {
-        case ItemList
-        case GodList
-        case TownList
-        case SpellList
-        case SkillList
-        case MonsterList
-        case Quests
-        case Names
-        case Notes
-        case StatModification
-        case Gold
+        case itemList
+        case godList
+        case townList
+        case spellList
+        case skillList
+        case monsterList
+        case quests
+        case names
+        case notes
+        case statModification
+        case gold
         
         func toolName() -> String {
             switch self {
-            case .ItemList:
+            case .itemList:
                 return "Item List"
-            case .GodList:
+            case .godList:
                 return "God List"
-            case .TownList:
+            case .townList:
                 return "Town List"
-            case .SpellList:
+            case .spellList:
                 return "Spell List"
-            case .SkillList:
+            case .skillList:
                 return "Skill List"
-            case .MonsterList:
+            case .monsterList:
                 return "Monster List"
-            case .StatModification:
+            case .statModification:
                 return "Stat Modification"
-            case .Quests:
+            case .quests:
                 return "Quests"
-            case .Names:
+            case .names:
                 return "Names"
-            case .Notes:
+            case .notes:
                 return "Notes"
-            case .Gold:
+            case .gold:
                 return "Gold"
             }
         }
         
-        func toolViewController(delegate: ListViewControllerDelegate) -> UIViewController? {
+        func toolViewController(_ delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
-            case .ItemList:
+            case .itemList:
                 return ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate)
-            case .GodList:
+            case .godList:
                 return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Gods"))], delegate: delegate)
-            case .TownList:
+            case .townList:
                 return ListViewController<Town>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Towns"))], delegate: delegate)
-            case .SpellList:
+            case .spellList:
                 return ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate)
-            case .SkillList:
+            case .skillList:
                 return ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
-            case .MonsterList:
+            case .monsterList:
                 return ListViewController<Monster>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Monsters"))], delegate: delegate)
-            case .StatModification:
+            case .statModification:
                 return ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
-            case .Quests:
+            case .quests:
                 let completedQuests: [Quest] = ObjectProvider.sortedObjectsForJSON("Quests").filter { $0.completed == true }
                 let upcomingQuests: [Quest] = ObjectProvider.sortedObjectsForJSON("Quests").filter { $0.completed == false }
                 
                 return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects:upcomingQuests), SectionList(sectionTitle: "Completed", objects:completedQuests)], delegate: delegate)
-            case .Notes:
+            case .notes:
                 return ListViewController<Note>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Notes"))], delegate: delegate)
-            case .Names:
+            case .names:
                 return nil
-            case .Gold:
+            case .gold:
                 return nil
             }
         }
@@ -90,35 +90,35 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
         
         tableView.customize()
         
         //multipeer.startMultipeerConnectivity()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 11
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(UITableViewCell.self), forIndexPath: indexPath) ?? UITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(UITableViewCell.self), for: indexPath) 
         
-        if let text = Tool(rawValue: indexPath.row)?.toolName() {
+        if let text = Tool(rawValue: (indexPath as NSIndexPath).row)?.toolName() {
             cell.textLabel?.attributedText = .attributedStringWithHeadingAttributes(text)
         }
         
-        cell.selectionStyle = .Gray
+        cell.selectionStyle = .gray
         cell.backgroundColor = .backgroundColor()
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let tool = Tool(rawValue: indexPath.row) else { return }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let tool = Tool(rawValue: (indexPath as NSIndexPath).row) else { return }
         
         switch tool {
-            case .Gold:
+            case .gold:
                 guard let goldViewController = UIStoryboard.sendGoldViewController() else { return }
                 
                 goldViewController.sendGoldTapped = { gold in
@@ -129,7 +129,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 }
                 
                 navigationController?.pushViewController(goldViewController, animated: true)
-            case .Names:
+            case .names:
                 guard let namesViewController = UIStoryboard.namesViewController() else { return }
             
                 navigationController?.pushViewController(namesViewController, animated: true)
@@ -141,7 +141,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         
     // MARK: ListViewControllerDelegate
     
-    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         if object is Item || object is Skill || object is Spell || object is Stat {
             let peersViewController = PeerListViewController(multipeerManager: multipeer)
             peersViewController.objectToSend = object as Any
@@ -162,10 +162,10 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         }
     }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool {
         return object is Item || object is Skill || object is Spell || object is Monster || object is Town || object is Stat
     }
     
-    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
-    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
+    func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
 }

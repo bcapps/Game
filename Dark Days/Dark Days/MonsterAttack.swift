@@ -14,7 +14,7 @@ struct MonsterAttack: Decodable, Nameable {
     let damage: String
     let attackWeight: Int
     
-    static func decode(json: AnyObject) throws -> MonsterAttack {
+    static func decode(_ json: Any) throws -> MonsterAttack {
         return try MonsterAttack(name: json => "name",
                            damage: json => "damage",
                            attackWeight: json => "weight")

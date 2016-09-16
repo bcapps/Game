@@ -14,7 +14,7 @@ final class Inventory {
     
     var equippedItems: [Item] {
         get {
-            return items.filter({$0.equippedSlot != .None})
+            return items.filter({$0.equippedSlot != .none})
         }
     }
     
@@ -24,11 +24,11 @@ final class Inventory {
         }
     }
     
-    private func isItemSetEquipped(itemSet: ItemSet) -> Bool {
+    fileprivate func isItemSetEquipped(_ itemSet: ItemSet) -> Bool {
         let equippedItemNames = Set(equippedItems.map { $0.name })
         let itemSetNames = Set(itemSet.itemNamesInSet)
         
-        return itemSetNames.isSubsetOf(equippedItemNames)
+        return itemSetNames.isSubset(of: equippedItemNames)
     }
     
     init(gold: Int, items: [Item]) {
@@ -40,7 +40,7 @@ final class Inventory {
 final class InventoryCoder: NSObject, Coder {
     typealias CodeableType = Inventory
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Gold
         case Items
     }
@@ -53,8 +53,8 @@ final class InventoryCoder: NSObject, Coder {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let gold = aDecoder.decodeIntegerForKey(Keys.Gold.rawValue)
-        let rawItemCoders = aDecoder.decodeObjectForKey(Keys.Items.rawValue) as? [ItemCoder]
+        let gold = aDecoder.decodeInteger(forKey: Keys.Gold.rawValue)
+        let rawItemCoders = aDecoder.decodeObject(forKey: Keys.Items.rawValue) as? [ItemCoder]
         let rawItems = rawItemCoders?.objects
         
         guard let items = rawItems else { return nil }
@@ -64,8 +64,8 @@ final class InventoryCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.items.coders, forKey: Keys.Items.rawValue)
-        aCoder.encodeInteger(value?.gold ?? 0, forKey: Keys.Gold.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.items.coders, forKey: Keys.Items.rawValue)
+        aCoder.encode(value?.gold ?? 0, forKey: Keys.Gold.rawValue)
     }
 }

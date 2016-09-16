@@ -41,16 +41,16 @@ class MonsterView: UIScrollView {
     
     @IBOutlet weak var statCollectionView: UICollectionView?
     
-    @IBOutlet private weak var nameLabel: UILabel?
-    @IBOutlet private weak var typeLabel: UILabel?
-    @IBOutlet private weak var healthLabel: UILabel?
-    @IBOutlet private weak var speedLabel: UILabel?
-    @IBOutlet private weak var damageImmunitiesLabel: UILabel?
-    @IBOutlet private weak var conditionImmunitesLabel: UILabel?
-    @IBOutlet private weak var languagesLabel: UILabel?
-    @IBOutlet private weak var traitsStackView: UIStackView?
-    @IBOutlet private weak var attacksStackView: UIStackView?
-    @IBOutlet private weak var attackTitleLabel: UILabel?
+    @IBOutlet fileprivate weak var nameLabel: UILabel?
+    @IBOutlet fileprivate weak var typeLabel: UILabel?
+    @IBOutlet fileprivate weak var healthLabel: UILabel?
+    @IBOutlet fileprivate weak var speedLabel: UILabel?
+    @IBOutlet fileprivate weak var damageImmunitiesLabel: UILabel?
+    @IBOutlet fileprivate weak var conditionImmunitesLabel: UILabel?
+    @IBOutlet fileprivate weak var languagesLabel: UILabel?
+    @IBOutlet fileprivate weak var traitsStackView: UIStackView?
+    @IBOutlet fileprivate weak var attacksStackView: UIStackView?
+    @IBOutlet fileprivate weak var attackTitleLabel: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -80,50 +80,50 @@ class MonsterView: UIScrollView {
         }
     }
     
-    var attackTapped: (ViewModel.Attack -> Void)?
+    var attackTapped: ((ViewModel.Attack) -> Void)?
     
-    private func attributedText(heading: String, descriptiveText: String) -> NSAttributedString {
+    fileprivate func attributedText(_ heading: String, descriptiveText: String) -> NSAttributedString {
         return attributedText(heading, descriptiveText: [descriptiveText])
     }
     
-    private func attributedText(heading: String, descriptiveText: [String]) -> NSAttributedString {
+    fileprivate func attributedText(_ heading: String, descriptiveText: [String]) -> NSAttributedString {
         let subHeading = NSAttributedString(string: heading, attributes: subHeadingAttributes())
-        let descriptiveText = NSAttributedString(string: descriptiveText.joinWithSeparator(", "), attributes: descriptiveTextAttributes())
+        let descriptiveText = NSAttributedString(string: descriptiveText.joined(separator: ", "), attributes: descriptiveTextAttributes())
         
         return NSAttributedString.joinAttributedStrings(subHeading, attrString2: descriptiveText)
     }
     
-    private func subHeadingAttributes() -> [String: AnyObject] {
+    fileprivate func subHeadingAttributes() -> [String: AnyObject] {
         return [NSFontAttributeName: UIFont.notoSansBold(ofSize: 16), NSForegroundColorAttributeName: UIColor.headerTextColor()]
     }
     
-    private func descriptiveTextAttributes() -> [String: AnyObject] {
+    fileprivate func descriptiveTextAttributes() -> [String: AnyObject] {
         return [NSFontAttributeName: UIFont.notoSansRegular(ofSize: 14), NSForegroundColorAttributeName: UIColor.bodyTextColor()]
     }
     
-    private func nameAttributedString(forName name: String) -> NSAttributedString {
+    fileprivate func nameAttributedString(forName name: String) -> NSAttributedString {
         let attributes = [NSFontAttributeName: UIFont.petiteCapsFont(ofSize: 28), NSForegroundColorAttributeName: UIColor.headerTextColor()]
         
         return NSAttributedString(string: name, attributes: attributes)
     }
     
-    private func attackTitleAttributedString(forTitle title: String) -> NSAttributedString {
+    fileprivate func attackTitleAttributedString(forTitle title: String) -> NSAttributedString {
         let attributes = [NSFontAttributeName: UIFont.petiteCapsFont(ofSize: 23), NSForegroundColorAttributeName: UIColor.headerTextColor()]
         
         return NSAttributedString(string: title, attributes: attributes)
     }
     
-    private func labels(forAttacks attacks: [ViewModel.Attack]) -> [UIButton] {
+    fileprivate func labels(forAttacks attacks: [ViewModel.Attack]) -> [UIButton] {
         return attacks.flatMap {
-            let button = AttackButton(type: .System)
+            let button = AttackButton(type: .system)
             button.attack = $0
-            button.setAttributedTitle(attributedText($0.name + " ", descriptiveText: $0.damage), forState: .Normal)
-            button.addTarget(self, action: .ActionButtonSelector, forControlEvents: .TouchUpInside)
+            button.setAttributedTitle(attributedText($0.name + " ", descriptiveText: $0.damage), for: UIControlState())
+            button.addTarget(self, action: .ActionButtonSelector, for: .touchUpInside)
             return button
         }
     }
     
-    private func labels(forTraits traits: [ViewModel.Trait]) -> [UILabel] {
+    fileprivate func labels(forTraits traits: [ViewModel.Trait]) -> [UILabel] {
         return traits.flatMap {
             let label = UILabel()
             label.attributedText = attributedText($0.name + " ", descriptiveText: $0.description)
@@ -133,7 +133,7 @@ class MonsterView: UIScrollView {
         }
     }
     
-    @objc private func attackButtonTapped(button: AttackButton) {
+    @objc fileprivate func attackButtonTapped(_ button: AttackButton) {
         guard let attack = button.attack else { return }
         attackTapped?(attack)
     }
@@ -149,10 +149,10 @@ private extension Selector {
 
 private extension NSAttributedString {
     
-    static func joinAttributedStrings(attrString1: NSAttributedString, attrString2: NSAttributedString) -> NSAttributedString {
+    static func joinAttributedStrings(_ attrString1: NSAttributedString, attrString2: NSAttributedString) -> NSAttributedString {
         let joined = NSMutableAttributedString()
-        joined.appendAttributedString(attrString1)
-        joined.appendAttributedString(attrString2)
+        joined.append(attrString1)
+        joined.append(attrString2)
         
         return joined
     }
@@ -160,7 +160,7 @@ private extension NSAttributedString {
 
 private extension UIStackView {
     
-    func addArrangedSubviews(subviews: [UIView]) {
+    func addArrangedSubviews(_ subviews: [UIView]) {
         for view in subviews {
             addArrangedSubview(view)
         }

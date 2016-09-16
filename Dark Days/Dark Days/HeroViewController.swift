@@ -42,16 +42,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
-    private let effectsViewController = UIStoryboard.effectsViewController()
-    private var healthViewController: HealthViewController?
+    fileprivate let effectsViewController = UIStoryboard.effectsViewController()
+    fileprivate var healthViewController: HealthViewController?
     
-    private let menu = DropdownMenuFactory.heroDropdownMenu()
-    private let animationDuration = 0.35
+    fileprivate let menu = DropdownMenuFactory.heroDropdownMenu()
+    fileprivate let animationDuration = 0.35
     
-    private var presentedOverlayController: UIViewController?
+    fileprivate var presentedOverlayController: UIViewController?
     
     deinit {
-        multipeer?.stopMultipeerConnectivity()
+        multipeer?.stopConnectivity()
     }
     
     override func viewDidLoad() {
@@ -77,7 +77,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         collectionViewFlowLayout.itemSize = CGSize(width: (view.frame.width - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         updateGoldText()
@@ -85,22 +85,22 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         collectionView.reloadData()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         menu.close()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let _ = segue.destinationViewController.view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let _ = segue.destination.view
         
-        if let viewController = segue.destinationViewController as? HealthViewController {
+        if let viewController = segue.destination as? HealthViewController {
             healthViewController = viewController
             healthViewController?.hero = hero
         }
     }
     
-    @IBAction func effectsViewButtonTapped(sender: AnyObject) {
+    @IBAction func effectsViewButtonTapped(_ sender: AnyObject) {
         guard let evc = effectsViewController else { return }
         let container = ContainingViewController(containedViewController: evc, footerView: nil)
         container.view.frame = view.bounds
@@ -109,7 +109,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentedOverlayController = container
     }
     
-    @IBAction func equipmentButtonTapped(button: EquipmentButton) {
+    @IBAction func equipmentButtonTapped(_ button: EquipmentButton) {
         if let item = button.item {
             presentItem(item)
         } else {
@@ -117,11 +117,11 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
-    @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
+    @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
         if menu.isOpen {
             menu.close()
         } else {
-            menu.showFromNavigationController(navigationController)
+            menu.show(from: navigationController)
         }
     }
     
@@ -131,7 +131,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         HeroPersistence().persistHero(hero)
     }
     
-    private func addItemSlotToEquipmentButtons() {
+    fileprivate func addItemSlotToEquipmentButtons() {
         helmetButton.slot = .Helmet
         accessoryButton.slot = .Accessory
         leftHandButton.slot = .Hand
@@ -139,24 +139,24 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         chestButton.slot = .Chest
         bootsButton.slot = .Boots
         
-        helmetButton.equipmentSlot = .Helmet
-        accessoryButton.equipmentSlot = .Accessory
-        leftHandButton.equipmentSlot = .LeftHand
-        rightHandButton.equipmentSlot = .RightHand
-        chestButton.equipmentSlot = .Chest
-        bootsButton.equipmentSlot = .Boots
+        helmetButton.equipmentSlot = .helmet
+        accessoryButton.equipmentSlot = .accessory
+        leftHandButton.equipmentSlot = .leftHand
+        rightHandButton.equipmentSlot = .rightHand
+        chestButton.equipmentSlot = .chest
+        bootsButton.equipmentSlot = .boots
     }
     
-    private func updateEquippedItems() {
+    fileprivate func updateEquippedItems() {
         guard let equippedItems = hero?.inventory.equippedItems else { return }
         
         for equipmentButton in equipmentButtons {
             equipmentButton.item = nil
             
             if equipmentButton == leftHandButton {
-                equipmentButton.setImage(UIImage(named: "LeftHand"), forState: .Normal)
+                equipmentButton.setImage(UIImage(named: "LeftHand"), for: UIControlState())
             } else if equipmentButton == rightHandButton {
-                equipmentButton.setImage(UIImage(named: "RightHand"), forState: .Normal)
+                equipmentButton.setImage(UIImage(named: "RightHand"), for: UIControlState())
             }
         }
         
@@ -170,16 +170,16 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         effectsViewController?.tableView?.reloadData()
     }
     
-    private func equipmentButton(equipmentSlot: EquipmentButton.EquipmentSlot) -> EquipmentButton? {
+    fileprivate func equipmentButton(_ equipmentSlot: EquipmentButton.EquipmentSlot) -> EquipmentButton? {
         return equipmentButtons.filter { $0.equipmentSlot == equipmentSlot }.first
     }
     
-    private func equipmentButtons(itemSlot: ItemSlot) -> [EquipmentButton] {
+    fileprivate func equipmentButtons(_ itemSlot: ItemSlot) -> [EquipmentButton] {
         return equipmentButtons.filter { $0.slot == itemSlot }
     }
     
-    private func addMenuTapHandlers() {
-        for (index, item) in menu.items.enumerate() {
+    fileprivate func addMenuTapHandlers() {
+        for (index, item) in menu.items.enumerated() {
             guard let item = item as? REMenuItem else { continue }
             
             switch index {
@@ -205,30 +205,30 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
     }
     
-    private func presentItem(item: Item) {
+    fileprivate func presentItem(_ item: Item) {
         var button: UnequipButton?
         
-        if item.equippedSlot != .None {
+        if item.equippedSlot != .none {
             button = UnequipButton(item: item)
-            button?.addTarget(self, action: .unequipItem, forControlEvents: .TouchUpInside)
+            button?.addTarget(self, action: .unequipItem, for: .touchUpInside)
         }
         
         presentObjectInOverlay(item, footerView: button)
     }
     
-    private func presentItemList() {
-        guard let items = hero?.inventory.items.filter({$0.equippedSlot == .None}) else { return }
+    fileprivate func presentItemList() {
+        guard let items = hero?.inventory.items.filter({$0.equippedSlot == .none}) else { return }
         
         showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: false)
     }
     
-    private func presentItemList(equipmentButton: EquipmentButton) {
-        guard let items = hero?.inventory.items.filter({$0.itemSlot == equipmentButton.slot && $0.equippedSlot == .None}) else { return }
+    fileprivate func presentItemList(_ equipmentButton: EquipmentButton) {
+        guard let items = hero?.inventory.items.filter({$0.itemSlot == equipmentButton.slot && $0.equippedSlot == .none}) else { return }
         
         showList(items, title: equipmentButton.slot.rawValue, allowsSelection: true, equipmentButton: equipmentButton)
     }
     
-    private func presentsSkillsList() {
+    fileprivate func presentsSkillsList() {
         let itemSkills = hero?.inventory.equippedItems.flatMap { return $0.skills } ?? []
         let inventorySkills = hero?.inventory.items.flatMap { return $0.inventorySkills } ?? []
         let heroSkills = hero?.skills ?? []
@@ -236,26 +236,26 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         showList(itemSkills + heroSkills + inventorySkills, title: "Skills")
     }
     
-    private func presentSpellsList() {
+    fileprivate func presentSpellsList() {
         guard let spells = hero?.spells else { return }
         
         showList(spells, title: "Spellbook")
     }
     
-    private func presentObjectInOverlay<T: ListDisplayingGeneratable>(object: T, footerView: UIView? = nil) {
+    fileprivate func presentObjectInOverlay<T: ListDisplayingGeneratable>(_ object: T, footerView: UIView? = nil) {
         let section = SectionList(sectionTitle: nil, objects: [object])
         let list = ListViewController<T>(sections: [section], delegate: nil)
         
         presentOverlayWithListViewController(list, footerView: footerView)
     }
     
-    private func showList<T: ListDisplayingGeneratable where T: Nameable>(objects: [T], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) {
+    fileprivate func showList<T: ListDisplayingGeneratable>(_ objects: [T], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) where T: Nameable {
         let section = SectionList<T>(sectionTitle: nil, objects: objects.sortedElementsByName)
         
         showListWithSections([section], title: title, allowsSelection: allowsSelection, equipmentButton: equipmentButton)
     }
     
-    private func showListWithSections<T: ListDisplayingGeneratable where T: Nameable>(sections: [SectionList<T>], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) {
+    fileprivate func showListWithSections<T: ListDisplayingGeneratable>(_ sections: [SectionList<T>], title: String, allowsSelection: Bool = false, equipmentButton: EquipmentButton? = nil) where T: Nameable {
         let list = ListViewController<T>(sections: sections, delegate: self)
         list.title = title
         list.tableView.allowsSelection = allowsSelection
@@ -268,13 +268,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentListViewController(list)
     }
     
-    private func presentListViewController<T>(viewController: ListViewController<T>) {
+    fileprivate func presentListViewController<T>(_ viewController: ListViewController<T>) {
         viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func presentOverlayWithListViewController<T>(viewController: ListViewController<T>, footerView: UIView? = nil) {
+    fileprivate func presentOverlayWithListViewController<T>(_ viewController: ListViewController<T>, footerView: UIView? = nil) {
         let containingViewController = ContainingViewController(containedViewController: viewController, footerView: footerView)
         containingViewController.view.frame = view.bounds
         viewController.imageContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -283,14 +283,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentedOverlayController = containingViewController
     }
     
-    private func presentHeroTools() {
+    fileprivate func presentHeroTools() {
         let tools = HeroToolsViewController()
         tools.hero = hero
         
         let navController = UINavigationController(rootViewController: tools)
-        navController.navigationBar.barStyle = .Black
+        navController.navigationBar.barStyle = .black
         
-        presentViewController(navController, animated: true, completion: nil)
+        present(navController, animated: true, completion: nil)
     }
     
     func dismissOverlay() {
@@ -300,8 +300,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentedOverlayController = nil
     }
     
-    func unequipItem(button: UnequipButton) {
-        button.item.equippedSlot = .None
+    func unequipItem(_ button: UnequipButton) {
+        button.item.equippedSlot = .none
         updateEquippedItems()
         
         dismissOverlay()
@@ -309,29 +309,29 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         saveHero()
     }
     
-    private func updateGoldText() {
+    fileprivate func updateGoldText() {
         let goldString = String(hero?.inventory.gold ?? 0)
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = .ByTruncatingTail
+        paragraphStyle.lineBreakMode = .byTruncatingTail
                 
         goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
     }
     
-    private func setEffectsViewHidden(hidden: Bool) {
-        effectsViewController?.view.hidden = hidden
+    fileprivate func setEffectsViewHidden(_ hidden: Bool) {
+        effectsViewController?.view.isHidden = hidden
     }
     
     //MARK: UICollectionViewDataSource
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StatCellIdentifier", forIndexPath: indexPath) as? StatCell
-        let stat = hero?.stats[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StatCellIdentifier", for: indexPath) as? StatCell
+        let stat = hero?.stats[(indexPath as NSIndexPath).row]
         
-        if let stat = stat, value = hero?.statValueForType(stat.statType) {
+        if let stat = stat, let value = hero?.statValueForType(stat.statType) {
             cell?.statTitle.text = stat.shortName
             cell?.statValue.text = String(value)
         }
@@ -339,29 +339,29 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         return cell ?? UICollectionViewCell()
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        guard let stat = hero?.stats[indexPath.row] else { return }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let stat = hero?.stats[(indexPath as NSIndexPath).row] else { return }
         
         presentObjectInOverlay(stat)
     }
     
     //MARK: ListViewControllerDelegate
     
-    func didSelectObject<T: ListDisplayingGeneratable>(object: T, equipmentButton: EquipmentButton) {
+    func didSelectObject<T: ListDisplayingGeneratable>(_ object: T, equipmentButton: EquipmentButton) {
         if let item = object as? Item {
             switch item.itemSlot {
                 case .Hand:
                     if item.twoHanded {
-                        leftHandButton.item?.equippedSlot = .None
-                        rightHandButton.item?.equippedSlot = .None
-                    } else if let leftHandItem = leftHandButton.item where leftHandItem.twoHanded {
-                        leftHandButton.item?.equippedSlot = .None
-                    } else if let rightHandItem = rightHandButton.item where rightHandItem.twoHanded {
-                        rightHandButton.item?.equippedSlot = .None
+                        leftHandButton.item?.equippedSlot = .none
+                        rightHandButton.item?.equippedSlot = .none
+                    } else if let leftHandItem = leftHandButton.item, leftHandItem.twoHanded {
+                        leftHandButton.item?.equippedSlot = .none
+                    } else if let rightHandItem = rightHandButton.item, rightHandItem.twoHanded {
+                        rightHandButton.item?.equippedSlot = .none
                     }
                 default:
                     let equipmentButton = equipmentButtons(item.itemSlot).first
-                    equipmentButton?.item?.equippedSlot = .None
+                    equipmentButton?.item?.equippedSlot = .none
             }
             
             item.equippedSlot = equipmentButton.equipmentSlot
@@ -369,21 +369,21 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             updateEquippedItems()
             saveHero()
             
-            self.navigationController?.popViewControllerAnimated(true)
+            _ = navigationController?.popViewController(animated: true)
         }
     }
     
-    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
-    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool { return true }
+    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool { return true }
     
-    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {
             hero?.inventory.items.removeObject(item)
             
-            guard let items = hero?.inventory.items.filter({$0.equippedSlot == .None}) else { return }
+            guard let items = hero?.inventory.items.filter({$0.equippedSlot == .none}) else { return }
             
             var sections = [SectionList<T>]()
             
@@ -417,37 +417,37 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     // MARK: LCKMultipeerEventListener
     
-    func multipeer(multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
-        guard let object = try? NSJSONSerialization.JSONObjectWithData(message.data, options: NSJSONReadingOptions.AllowFragments) as? [String: AnyObject] else { return }
+    func multipeer(_ multipeer: LCKMultipeer, receivedMessage message: LCKMultipeerMessage, fromPeer peer: MCPeerID) {
+        guard let object = try? JSONSerialization.jsonObject(with: message.data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: AnyObject] else { return }
         
         let objectName = object?[MessageValueKey] as? String ?? ""
         
         switch message.type {
-            case LCKMultipeer.MessageType.Item.rawValue:
+            case LCKMultipeer.MessageType.item.rawValue:
                 guard let item = ObjectProvider.itemForName(objectName) else { return }
                 
                 hero?.inventory.items.append(item)
                 presentObjectInOverlay(item)
-            case LCKMultipeer.MessageType.Skill.rawValue:
+            case LCKMultipeer.MessageType.skill.rawValue:
                 guard let skill = ObjectProvider.skillForName(objectName) else { return }
                 
                 hero?.skills.append(skill)
                 presentObjectInOverlay(skill)
                 break
-            case LCKMultipeer.MessageType.Spell.rawValue:
+            case LCKMultipeer.MessageType.spell.rawValue:
                 guard let spell = ObjectProvider.spellForName(objectName) else { return }
                 
                 hero?.spells.append(spell)
                 presentObjectInOverlay(spell)
                 break
-            case LCKMultipeer.MessageType.Gold.rawValue:
+            case LCKMultipeer.MessageType.gold.rawValue:
                 let goldValue = object?[MessageValueKey] as? NSNumber
                 let heroGold = hero?.inventory.gold ?? 0
                 
-                hero?.inventory.gold = heroGold + (goldValue?.longValue ?? 0)
+                hero?.inventory.gold = heroGold + (goldValue?.intValue ?? 0)
                 updateGoldText()
                 break
-            case LCKMultipeer.MessageType.Stat.rawValue:
+            case LCKMultipeer.MessageType.stat.rawValue:
                 guard let stat = ObjectProvider.statForName(objectName) else { return }
                 hero?.increaseStatBy(stat.statType, value: 1)
                 

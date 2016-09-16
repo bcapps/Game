@@ -13,7 +13,7 @@ struct DamageReduction: Decodable, Nameable {
     let name: String
     let value: Int
     
-    static func decode(json: AnyObject) throws -> DamageReduction {
+    static func decode(_ json: Any) throws -> DamageReduction {
         return try DamageReduction(name: json => "name",
                                    value: json => "value")
     }

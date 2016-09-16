@@ -36,20 +36,20 @@ class ContainingViewController: UIViewController {
         
         insetView.layer.cornerRadius = 12.0
         insetView.layer.borderWidth = 1.0
-        insetView.layer.borderColor = UIColor.grayColor().CGColor
+        insetView.layer.borderColor = UIColor.gray.cgColor
         
         view.addSubview(insetView)
         
-        containedViewController.tableView.separatorStyle = .None
+        containedViewController.tableView.separatorStyle = .none
         containedViewController.tableView.allowsSelection = false
         
         addChildViewController(containedViewController)
         insetView.addSubview(containedViewController.view)
-        containedViewController.didMoveToParentViewController(self)
+        containedViewController.didMove(toParentViewController: self)
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: .dismissOverlay)
         view.addGestureRecognizer(tapRecognizer)
-        view.userInteractionEnabled = true
+        view.isUserInteractionEnabled = true
         
         if let footerView = footerView {
             insetView.addSubview(footerView)
@@ -59,11 +59,11 @@ class ContainingViewController: UIViewController {
     }
     
     func dismissOverlay() {
-        UIView.animateWithDuration(0.35, animations: {
+        UIView.animate(withDuration: 0.35, animations: {
             self.view.alpha = 0.0
-        }) { (completed) in
+        }, completion: { (completed) in
             self.removeViewController(self)
-        }
+        }) 
     }
     
     override func viewDidLayoutSubviews() {
@@ -82,10 +82,10 @@ class ContainingViewController: UIViewController {
 }
 
 private class BorderGenerator {
-    static func newTopBorder(width: CGFloat, height: CGFloat) -> CALayer {
+    static func newTopBorder(_ width: CGFloat, height: CGFloat) -> CALayer {
         let border: CALayer = CALayer()
         border.frame = CGRect(x: 0.0, y: 0.0, width: width, height: height)
-        border.backgroundColor = UIColor.grayColor().CGColor
+        border.backgroundColor = UIColor.gray.cgColor
         
         return border
     }

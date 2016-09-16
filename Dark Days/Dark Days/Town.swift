@@ -14,7 +14,7 @@ struct Town: Decodable, Nameable {
     let background: String
     let merchants: [String]
     
-    static func decode(json: AnyObject) throws -> Town {
+    static func decode(_ json: Any) throws -> Town {
         return try Town(name: json => "name",
             background: json => "background",
             merchants: json => "merchants")

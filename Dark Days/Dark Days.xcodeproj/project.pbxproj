@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192061302A0CAD9080A4CAE /* Pods.framework */; };
+		483F18742655FB2076074AB1 /* Pods_defaults_Dark_DaysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF6D44A5BEE6B0B58DAEF40 /* Pods_defaults_Dark_DaysTests.framework */; };
+		4BB140A15CFEC1D306D495B3 /* Pods_defaults_Dark_Days.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A3F35C219285C892E58E2A /* Pods_defaults_Dark_Days.framework */; };
 		C30460B71C7E1F8200A7DB63 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30460B61C7E1F8200A7DB63 /* ListViewController.swift */; };
 		C39405911C7CAE7900EBFD07 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39405901C7CAE7900EBFD07 /* InfoCell.xib */; };
 		C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39405921C7CAF2900EBFD07 /* InfoCell.swift */; };
@@ -374,7 +375,13 @@
 
 /* Begin PBXFileReference section */
 		2192061302A0CAD9080A4CAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3DF6D44A5BEE6B0B58DAEF40 /* Pods_defaults_Dark_DaysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_Dark_DaysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B59AEC78975DCA643095DE7 /* Pods_Dark_Days.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Days.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A3F35C219285C892E58E2A /* Pods_defaults_Dark_Days.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_Dark_Days.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F206107DA263C97D611475D /* Pods-defaults-Dark Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Dark Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-Dark Days/Pods-defaults-Dark Days.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE6CD08AC34CE471ACBE19F /* Pods-defaults-Dark DaysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Dark DaysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-Dark DaysTests/Pods-defaults-Dark DaysTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D6492ED4D2C461EF8820621 /* Pods-Dark Days.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Days.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Days/Pods-Dark Days.release.xcconfig"; sourceTree = "<group>"; };
+		9FF83E5E588087C35891E0E4 /* Pods-defaults-Dark Days.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Dark Days.release.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-Dark Days/Pods-defaults-Dark Days.release.xcconfig"; sourceTree = "<group>"; };
 		C30460B11C7E101500A7DB63 /* ChildControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildControllerExtension.swift; sourceTree = "<group>"; };
 		C30460B61C7E1F8200A7DB63 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C39405901C7CAE7900EBFD07 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
@@ -395,7 +402,7 @@
 		C3AB8F541C7D0D65007CE0BA /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
 		C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerMessaging.swift; sourceTree = "<group>"; };
-		E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C3C32770AA179F26D97485EF /* Pods-Dark Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Days/Pods-Dark Days.debug.xcconfig"; sourceTree = "<group>"; };
 		F2063A681CB8992900494184 /* HeroToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroToolsViewController.swift; sourceTree = "<group>"; };
 		F216E9A11D7A2AFB0039F07B /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -523,6 +530,7 @@
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 		F2F909AC1D42A999005F8662 /* Insanities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Insanities.txt; sourceTree = "<group>"; };
 		F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsanityProvider.swift; sourceTree = "<group>"; };
+		F5BA59F3EEBDEE72CD692389 /* Pods-defaults-Dark DaysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Dark DaysTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-Dark DaysTests/Pods-defaults-Dark DaysTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -530,7 +538,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB83BDA861134F93338DBEFF /* Pods.framework in Frameworks */,
+				4BB140A15CFEC1D306D495B3 /* Pods_defaults_Dark_Days.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +546,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483F18742655FB2076074AB1 /* Pods_defaults_Dark_DaysTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,15 +564,22 @@
 			isa = PBXGroup;
 			children = (
 				2192061302A0CAD9080A4CAE /* Pods.framework */,
+				6B59AEC78975DCA643095DE7 /* Pods_Dark_Days.framework */,
+				78A3F35C219285C892E58E2A /* Pods_defaults_Dark_Days.framework */,
+				3DF6D44A5BEE6B0B58DAEF40 /* Pods_defaults_Dark_DaysTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84E799EDE252FC176C767087 /* Pods */ = {
+		0F66F9B7FE332425222175EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */,
-				AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */,
+				C3C32770AA179F26D97485EF /* Pods-Dark Days.debug.xcconfig */,
+				9D6492ED4D2C461EF8820621 /* Pods-Dark Days.release.xcconfig */,
+				7F206107DA263C97D611475D /* Pods-defaults-Dark Days.debug.xcconfig */,
+				9FF83E5E588087C35891E0E4 /* Pods-defaults-Dark Days.release.xcconfig */,
+				8CE6CD08AC34CE471ACBE19F /* Pods-defaults-Dark DaysTests.debug.xcconfig */,
+				F5BA59F3EEBDEE72CD692389 /* Pods-defaults-Dark DaysTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -654,8 +670,8 @@
 				F21ECDCF1C7A516B008041E9 /* Dark DaysTests */,
 				F21ECDDA1C7A516B008041E9 /* Dark DaysUITests */,
 				F21ECDB91C7A516B008041E9 /* Products */,
-				84E799EDE252FC176C767087 /* Pods */,
 				0AA39A6022C0E5ED665DD3C1 /* Frameworks */,
+				0F66F9B7FE332425222175EF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1074,14 +1090,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F21ECDE01C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark Days" */;
 			buildPhases = (
-				0CA5C1C7BFB3A0626FCCDC13 /* Check Pods Manifest.lock */,
+				FCA9080F96E8A9EC9D104167 /* [CP] Check Pods Manifest.lock */,
 				F21ECDB41C7A516B008041E9 /* Sources */,
 				F21ECDB51C7A516B008041E9 /* Frameworks */,
 				F21ECDB61C7A516B008041E9 /* Resources */,
 				F2350B241C7C10E400D6E18E /* Embed Frameworks */,
-				23FE5ABCF5F5E21ED390C3F3 /* Embed Pods Frameworks */,
-				542C8716EE993FFFF5BE1F31 /* Copy Pods Resources */,
 				F25187C51C936E55003AD636 /* Swift Lint */,
+				8F67FBA46D6B9ECB2889FCBF /* [CP] Embed Pods Frameworks */,
+				CBCF0E9750562404C272182E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1096,9 +1112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F21ECDE31C7A516B008041E9 /* Build configuration list for PBXNativeTarget "Dark DaysTests" */;
 			buildPhases = (
+				56312B0AE5B039E191434C85 /* [CP] Check Pods Manifest.lock */,
 				F21ECDC81C7A516B008041E9 /* Sources */,
 				F21ECDC91C7A516B008041E9 /* Frameworks */,
 				F21ECDCA1C7A516B008041E9 /* Resources */,
+				010849F255B2F01FFFBDDBB5 /* [CP] Embed Pods Frameworks */,
+				38E9FB3F48BEFF3683F9A618 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1135,15 +1154,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Lickability;
 				TargetAttributes = {
 					F21ECDB71C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = JL4AKR8DVC;
+						LastSwiftMigration = 0800;
 					};
 					F21ECDCB1C7A516B008041E9 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F21ECDB71C7A516B008041E9;
 					};
 					F21ECDD61C7A516B008041E9 = {
@@ -1296,49 +1317,79 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CA5C1C7BFB3A0626FCCDC13 /* Check Pods Manifest.lock */ = {
+		010849F255B2F01FFFBDDBB5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-defaults-Dark DaysTests/Pods-defaults-Dark DaysTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		23FE5ABCF5F5E21ED390C3F3 /* Embed Pods Frameworks */ = {
+		38E9FB3F48BEFF3683F9A618 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-defaults-Dark DaysTests/Pods-defaults-Dark DaysTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		542C8716EE993FFFF5BE1F31 /* Copy Pods Resources */ = {
+		56312B0AE5B039E191434C85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F67FBA46D6B9ECB2889FCBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-defaults-Dark Days/Pods-defaults-Dark Days-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBCF0E9750562404C272182E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-defaults-Dark Days/Pods-defaults-Dark Days-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F25187C51C936E55003AD636 /* Swift Lint */ = {
@@ -1354,6 +1405,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./swiftlint/bin/swiftlint lint --config ./swiftlint/bin/.swiftlint.yml\n";
+		};
+		FCA9080F96E8A9EC9D104167 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1652,8 +1718,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1681,6 +1749,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1698,8 +1767,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1719,6 +1790,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1726,7 +1799,7 @@
 		};
 		F21ECDE11C7A516B008041E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2ECBEDBB5B255105B4C8752 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7F206107DA263C97D611475D /* Pods-defaults-Dark Days.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1740,12 +1813,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F21ECDE21C7A516B008041E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF5EACA02CF05E8972D615FA /* Pods.release.xcconfig */;
+			baseConfigurationReference = 9FF83E5E588087C35891E0E4 /* Pods-defaults-Dark Days.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1758,11 +1832,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		F21ECDE41C7A516B008041E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CE6CD08AC34CE471ACBE19F /* Pods-defaults-Dark DaysTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1773,12 +1849,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Debug;
 		};
 		F21ECDE51C7A516B008041E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5BA59F3EEBDEE72CD692389 /* Pods-defaults-Dark DaysTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1788,6 +1866,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Release;

@@ -25,7 +25,7 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     required init?(coder aDecoder: NSCoder) {
         self.multipeer = LCKMultipeer()
         
-        super.init(style: .Plain)
+        super.init(style: .plain)
     }
     
     // MARK: UIViewController
@@ -33,12 +33,12 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
         tableView.customize()
         
         title = "Peer List"
         
-        multipeer.addEventListener(self)
+        multipeer.add(self)
     }
     
     // MARK: PeerListViewController
@@ -46,28 +46,28 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     init(multipeerManager: LCKMultipeer) {
         self.multipeer = multipeerManager
         
-        super.init(style: .Plain)
+        super.init(style: .plain)
     }
     
     // MARK: UITableViewDataSource
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return peers.count
         default: return 0
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(UITableViewCell.self)) ?? UITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(UITableViewCell.self)) ?? UITableViewCell()
         
-        switch indexPath.section {
+        switch (indexPath as NSIndexPath).section {
         case 0:
-            let peerID = peers[indexPath.row]
+            let peerID = peers[(indexPath as NSIndexPath).row]
             
             cell.textLabel?.attributedText = .attributedStringWithBodyAttributes(peerID.displayName)
         default:
@@ -75,35 +75,35 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
         }
         
         cell.backgroundColor = .backgroundColor()
-        cell.selectionStyle = .Gray
+        cell.selectionStyle = .gray
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.section {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath as NSIndexPath).section {
         case 0:
-            let peerID = peers[indexPath.row]
+            let peerID = peers[(indexPath as NSIndexPath).row]
             
             if let item = objectToSend as? Item {
-                multipeer.sendItemToPeer(item, peer: peerID)
+                _ = multipeer.sendItemToPeer(item, peer: peerID)
             } else if let skill = objectToSend as? Skill {
-                multipeer.sendSkillToPeer(skill, peer: peerID)
+                _ = multipeer.sendSkillToPeer(skill, peer: peerID)
             } else if let spell = objectToSend as? Spell {
-                multipeer.sendSpellToPeer(spell, peer: peerID)
+                _ = multipeer.sendSpellToPeer(spell, peer: peerID)
             } else if let stat = objectToSend as? Stat {
-                multipeer.sendStatToPeer(stat, peer: peerID)
+                _ = multipeer.sendStatToPeer(stat, peer: peerID)
             } else if let gold = goldToSend {
-                multipeer.sendGoldToPeer(gold, peer: peerID)
+                _ = multipeer.sendGoldToPeer(gold, peer: peerID)
             }
         default:
             print("No handling")
         }
         
-        navigationController?.popViewControllerAnimated(true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0: return peers.isNotEmpty ? "Multipeer Heroes" : nil
         default: return nil
@@ -112,7 +112,7 @@ final class PeerListViewController: UITableViewController, LCKMultipeerEventList
     
     // MARK: LCKMultipeerEventListener
     
-    func multipeer(multipeer: LCKMultipeer, connectedPeersStateDidChange connectedPeers: [AnyObject]) {
+    private func multipeer(_ multipeer: LCKMultipeer, connectedPeersStateDidChange connectedPeers: [AnyObject]) {
         tableView.reloadData()
     }
 }

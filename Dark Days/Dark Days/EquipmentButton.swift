@@ -10,37 +10,37 @@ import UIKit
 
 final class EquipmentButton: UIButton {
     var slot = ItemSlot.None
-    var equipmentSlot = EquipmentSlot.None
+    var equipmentSlot = EquipmentSlot.none
     
     var item: Item? {
         didSet {
             if let name = item?.name {
-                setImage(UIImage(named: name), forState: .Normal)
+                setImage(UIImage(named: name), for: UIControlState())
             } else {
-                setImage(slot.imageForItemSlot, forState: .Normal)
+                setImage(slot.imageForItemSlot, for: UIControlState())
             }
         }
     }
     
     override func awakeFromNib() {
-        layer.borderColor = UIColor.borderColor().CGColor
+        layer.borderColor = UIColor.borderColor().cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 8.0
         
         imageView?.tintColor = UIColor(white: 0.5, alpha: 0.4)
-        imageView?.contentMode = .ScaleAspectFit
+        imageView?.contentMode = .scaleAspectFit
         backgroundColor = UIColor(white: 0.7, alpha: 0.15)
     }
 }
 
 extension EquipmentButton {
     enum EquipmentSlot: Int {
-        case None
-        case Helmet
-        case Chest
-        case Boots
-        case Accessory
-        case LeftHand
-        case RightHand
+        case none
+        case helmet
+        case chest
+        case boots
+        case accessory
+        case leftHand
+        case rightHand
     }
 }

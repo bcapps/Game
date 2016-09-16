@@ -1,0 +1,6 @@
+framework module Pods_defaults_Dark_DaysTests {
+  umbrella header "Pods-defaults-Dark DaysTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

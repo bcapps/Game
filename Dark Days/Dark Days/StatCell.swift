@@ -13,9 +13,9 @@ final class StatCell: UICollectionViewCell {
     @IBOutlet weak var statTitle: UILabel!
     @IBOutlet weak var statValue: UILabel!
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
-            if highlighted {
+            if isHighlighted {
                 alpha = 0.5
             } else {
                 alpha = 1.0

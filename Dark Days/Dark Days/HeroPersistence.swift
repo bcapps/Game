@@ -12,8 +12,8 @@ final class HeroPersistence {
     
     let persistenceFilename: String
     
-    private let operationQueue: NSOperationQueue = {
-        let queue = NSOperationQueue()
+    fileprivate let operationQueue: OperationQueue = {
+        let queue = OperationQueue()
         queue.maxConcurrentOperationCount = 1
         
         return queue
@@ -23,48 +23,46 @@ final class HeroPersistence {
         self.persistenceFilename = persistenceFilename
     }
     
-    func persistHero(hero: Hero) {
-        let archivedHeroCoder = NSKeyedArchiver.archivedDataWithRootObject(HeroCoder(value: hero))
+    func persistHero(_ hero: Hero) {
+        let archivedHeroCoder = NSKeyedArchiver.archivedData(withRootObject: HeroCoder(value: hero))
         
-        archivedHeroCoder.writeToURL(URLForHero(hero), atomically: true)
+        try? archivedHeroCoder.write(to: URLForHero(hero), options: [.atomic])
     }
     
-    func removeHero(hero: Hero) {
-        _ = try? NSFileManager.defaultManager().removeItemAtURL(URLForHero(hero))
+    func removeHero(_ hero: Hero) {
+        _ = try? FileManager.default.removeItem(at: URLForHero(hero))
     }
     
     func allPersistedHeroes() -> [Hero] {
-        guard let heroURLs = try? NSFileManager.defaultManager().contentsOfDirectoryAtURL(heroDirectoryURL(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(rawValue: 0)) else { return [] }
+        guard let heroURLs = try? FileManager.default.contentsOfDirectory(at: heroDirectoryURL(), includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions(rawValue: 0)) else { return [] }
         
         return heroURLs.flatMap { return heroForURL($0) }
     }
     
-    private func heroForURL(URL: NSURL) -> Hero? {
-        guard let path = URL.path else { return nil }
-        
-        let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? HeroCoder
+    fileprivate func heroForURL(_ URL: Foundation.URL) -> Hero? {
+        let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObject(withFile: URL.path) as? HeroCoder
         
         return unarchivedHeroCoder?.value
     }
     
-    private func URLForHero(hero: Hero) -> NSURL {
-        return heroDirectoryURL().URLByAppendingPathComponent(hero.uniqueID + ".hero")
+    fileprivate func URLForHero(_ hero: Hero) -> URL {
+        return heroDirectoryURL().appendingPathComponent(hero.uniqueID + ".hero")
     }
     
-    private func heroDirectoryURL() -> NSURL {
-        let heroDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.URLByAppendingPathComponent(persistenceFilename, isDirectory: true)
+    fileprivate func heroDirectoryURL() -> URL {
+        let heroDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(persistenceFilename, isDirectory: true)
         
         guard let directoryPath = heroDirectoryURL?.path else {
             assertionFailure()
-            return NSURL()
+            return URL(fileURLWithPath: "")
         }
         
-        if NSFileManager.defaultManager().fileExistsAtPath(directoryPath) == false {
+        if FileManager.default.fileExists(atPath: directoryPath) == false {
             do {
-                try NSFileManager.defaultManager().createDirectoryAtPath(directoryPath, withIntermediateDirectories: true, attributes: nil)
+                try FileManager.default.createDirectory(atPath: directoryPath, withIntermediateDirectories: true, attributes: nil)
             } catch {print("Hero Directory Not Created")}
         }
         
-        return heroDirectoryURL ?? NSURL()
+        return heroDirectoryURL ?? URL(fileURLWithPath: "")
     }
 }

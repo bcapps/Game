@@ -22,7 +22,7 @@ struct Monster: Decodable, Nameable {
     let stats: [MonsterStat]
     let type: String
     
-    static func decode(json: AnyObject) throws -> Monster {
+    static func decode(_ json: Any) throws -> Monster {
         let traits: [String] = try json => "traits"
         let monsterTraits = traits.flatMap { ObjectProvider.monsterTraitForName($0) }
         
@@ -31,7 +31,7 @@ struct Monster: Decodable, Nameable {
             health: json => "health",
             speed: json => "speed",
             attacks: json => "attacks",
-            traits: monsterTraits ?? [],
+            traits: monsterTraits,
             damageImmunities: json =>? "damageImmunities" ?? [],
             conditionImmunities: json =>? "conditionImmunities" ?? [],
             languages: json =>? "languages" ?? [],

@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     static func backgroundColor() -> UIColor {
-        return .blackColor()
+        return black
     }
     
     static func headerTextColor() -> UIColor {

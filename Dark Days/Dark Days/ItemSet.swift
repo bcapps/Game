@@ -19,7 +19,7 @@ struct ItemSet: Decodable {
     let attackModifiers: [AttackModifier]
     let damageModifiers: [DamageModifier]
     
-    static func decode(json: AnyObject) throws -> ItemSet {
+    static func decode(_ json: Any) throws -> ItemSet {
         return try ItemSet(name: json => "name",
                            itemNamesInSet: json => "itemNamesInSet",
                            statEffects: json =>? "statEffects" ?? [],

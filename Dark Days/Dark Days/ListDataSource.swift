@@ -13,43 +13,43 @@ struct SectionList<T> {
     let objects: [T]
 }
 
-final class ListDataSource<T, U where U: UITableViewCell>: NSObject, UITableViewDataSource {
+final class ListDataSource<T, U>: NSObject, UITableViewDataSource where U: UITableViewCell {
     
-    typealias TableViewCellConfigureBlock = (cell: U, object: T) -> Void
+    typealias TableViewCellConfigureBlock = (_ cell: U, _ object: T) -> Void
 
-    private let sections: [SectionList<T>]
-    private let configureCell: TableViewCellConfigureBlock
+    fileprivate let sections: [SectionList<T>]
+    fileprivate let configureCell: TableViewCellConfigureBlock
     
-    init(sections: [SectionList<T>], configureCell: TableViewCellConfigureBlock) {
+    init(sections: [SectionList<T>], configureCell: @escaping TableViewCellConfigureBlock) {
         self.sections = sections
         self.configureCell = configureCell
         
         super.init()
     }
     
-    func objectForIndexPath(indexPath: NSIndexPath) -> T? {
-        return self.sections[indexPath.section].objects[indexPath.row]
+    func objectForIndexPath(_ indexPath: IndexPath) -> T? {
+        return self.sections[(indexPath as NSIndexPath).section].objects[(indexPath as NSIndexPath).row]
     }
     
-    func sectionForIndex(index: Int) -> SectionList<T> {
+    func sectionForIndex(_ index: Int) -> SectionList<T> {
         return self.sections[index]
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.sections[section].objects.count
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.sections.count
     }
         
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let object = self.sections[indexPath.section].objects[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let object = self.sections[(indexPath as NSIndexPath).section].objects[(indexPath as NSIndexPath).row]
         
-        let cell = tableView.dequeueReusableCell(U.self, type: .Cell)
+        let cell = tableView.dequeueReusableCell(U.self, type: .cell)
         
         if let cell = cell {
-            configureCell(cell: cell, object: object)
+            configureCell(cell, object)
         }
         
         return cell ?? UITableViewCell()

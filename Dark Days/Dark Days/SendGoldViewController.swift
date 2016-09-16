@@ -13,7 +13,7 @@ final class SendGoldViewController: UIViewController {
     @IBOutlet weak var sendGoldButton: UIBarButtonItem!
     @IBOutlet weak var goldTextField: UITextField!
     
-    typealias SendGoldButtonTappedBlock = (gold: Int) -> Void
+    typealias SendGoldButtonTappedBlock = (_ gold: Int) -> Void
     
     var sendGoldTapped: SendGoldButtonTappedBlock?
     
@@ -25,14 +25,14 @@ final class SendGoldViewController: UIViewController {
         goldTextField.attributedPlaceholder = .attributedStringWithSmallAttributes("0")
     }
     
-    @IBAction func textFieldDidChange(sender: UITextField) {
+    @IBAction func textFieldDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }
-        sendGoldButton.enabled = !text.isEmpty
+        sendGoldButton.isEnabled = !text.isEmpty
     }
     
-    @IBAction func sendGoldButtonTapped(sender: UIBarButtonItem) {
+    @IBAction func sendGoldButtonTapped(_ sender: UIBarButtonItem) {
         let gold = Int(goldTextField.text ?? "0") ?? 0
         
-        sendGoldTapped?(gold: gold)
+        sendGoldTapped?(gold)
     }
 }

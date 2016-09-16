@@ -43,7 +43,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let skills: [Skill]
     let inventorySkills: [Skill]
     
-    var equippedSlot = EquipmentButton.EquipmentSlot.None
+    var equippedSlot = EquipmentButton.EquipmentSlot.none
     
     var imageForItemType: UIImage? {
         get {
@@ -59,7 +59,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         }
     }
     
-    static func decode(json: AnyObject) throws -> Item {        
+    static func decode(_ json: Any) throws -> Item {        
         return try Item(name: json => "name",
             damage: json => "damage",
             effects: json => "effects",
@@ -97,7 +97,7 @@ func == (lhs: Item, rhs: Item) -> Bool {
 }
 
 final class ItemCoder: NSObject, Coder {
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
         case EquippedSlot
     }
@@ -111,18 +111,18 @@ final class ItemCoder: NSObject, Coder {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let equipped = aDecoder.decodeIntegerForKey(Keys.EquippedSlot.rawValue)
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
+        let equipped = aDecoder.decodeInteger(forKey: Keys.EquippedSlot.rawValue)
         
         guard let name = rawName else { return nil }
         
         value = ObjectProvider.itemForName(name)
         
-        value?.equippedSlot = EquipmentButton.EquipmentSlot(rawValue: equipped) ?? .None
+        value?.equippedSlot = EquipmentButton.EquipmentSlot(rawValue: equipped) ?? .none
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeInteger(value?.equippedSlot.rawValue ?? EquipmentButton.EquipmentSlot.None.rawValue, forKey: Keys.EquippedSlot.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
+        aCoder.encode(value?.equippedSlot.rawValue ?? EquipmentButton.EquipmentSlot.none.rawValue, forKey: Keys.EquippedSlot.rawValue)
     }
 }

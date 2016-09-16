@@ -17,10 +17,10 @@ class UnequipButton: UIButton {
         super.init(frame: CGRect())
 
         backgroundColor = .backgroundColor()
-        setTitle("Unequip", forState: .Normal)
+        setTitle("Unequip", for: UIControlState())
         titleLabel?.font = UIFont.bodyFont()
-        setTitleColor(UIColor.redColor(), forState: .Normal)
-        setTitleColor(UIColor.redColor().colorWithAlphaComponent(0.7), forState: .Highlighted)
+        setTitleColor(UIColor.red, for: UIControlState())
+        setTitleColor(UIColor.red.withAlphaComponent(0.7), for: .highlighted)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -20,8 +20,8 @@ class InventoryPersistenceTests: XCTestCase {
         sut.gold = 5000
         
         let ic = InventoryCoder(value: sut)
-        let data = NSKeyedArchiver.archivedDataWithRootObject(ic)
-        let unarchivedIC = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? InventoryCoder
+        let data = NSKeyedArchiver.archivedData(withRootObject: ic)
+        let unarchivedIC = NSKeyedUnarchiver.unarchiveObject(with: data) as? InventoryCoder
         
         let inventory = unarchivedIC?.value
         let firstItem = inventory?.items.first

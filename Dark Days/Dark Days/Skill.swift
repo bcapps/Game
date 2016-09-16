@@ -16,7 +16,7 @@ struct Skill: Decodable, Nameable, Codeable, Equatable {
     let explanation: String
     let benefit: String
     
-    static func decode(json: AnyObject) throws -> Skill {
+    static func decode(_ json: Any) throws -> Skill {
         return try Skill(name: json => "name",
             explanation: json => "explanation",
             benefit: json => "benefit")
@@ -30,7 +30,7 @@ func == (lhs: Skill, rhs: Skill) -> Bool {
 final class SkillCoder: NSObject, Coder {
     typealias Codeable = Skill
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -42,7 +42,7 @@ final class SkillCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -51,7 +51,7 @@ final class SkillCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

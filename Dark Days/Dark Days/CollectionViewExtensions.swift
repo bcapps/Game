@@ -19,8 +19,8 @@ extension UICollectionView {
      - parameter cellClass:         The class of the collection view cell to register.
      - parameter reuseIdentifier:   The reuse identifier for the cell.
      */
-    func registerNibForClass(cellClass: UICollectionViewCell.Type, reuseIdentifier: String) {
-        registerNib(UINib(nibName: cellClass.defaultNibName(), bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+    func registerNibForClass(_ cellClass: UICollectionViewCell.Type, reuseIdentifier: String) {
+        register(UINib(nibName: cellClass.defaultNibName(), bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
     /**
@@ -30,7 +30,7 @@ extension UICollectionView {
      - parameter elementKind:            The kind of supplementary view to create.
      - parameter identifier:             The reuse identifier for the collection reusable view.
      */
-    func registerNibForClass(supplementaryViewClass: UICollectionReusableView.Type, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) {
-        registerNib(UINib(nibName: supplementaryViewClass.defaultNibName(), bundle: nil), forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
+    func registerNibForClass(_ supplementaryViewClass: UICollectionReusableView.Type, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) {
+        register(UINib(nibName: supplementaryViewClass.defaultNibName(), bundle: nil), forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
     }
 }

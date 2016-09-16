@@ -13,7 +13,7 @@ struct StatEffect: Decodable {
     let stat: String
     let value: Int
     
-    static func decode(json: AnyObject) throws -> StatEffect {
+    static func decode(_ json: Any) throws -> StatEffect {
         return try StatEffect(stat: json => "stat",
                               value: json => "value")
     }

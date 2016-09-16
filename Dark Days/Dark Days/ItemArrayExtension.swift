@@ -13,9 +13,11 @@ extension Array where Element: Item {
         var sections = [SectionList<Item>]()
         
         for slot in ItemSlot.allValues {
-            guard let items: [Item] = self.filter({ $0.itemSlot == slot }) where items.isNotEmpty else { continue }
+            let items: [Item] = self.filter({ $0.itemSlot == slot })
             
-            sections.append(SectionList(sectionTitle: slot.rawValue, objects: items))
+            if items.isNotEmpty {
+                sections.append(SectionList(sectionTitle: slot.rawValue, objects: items))
+            }
         }
         
         return sections

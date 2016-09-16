@@ -9,32 +9,32 @@
 import UIKit
 
 extension UIViewController {
-    func addViewController(viewController: UIViewController) {
+    func addViewController(_ viewController: UIViewController) {
         addChildViewController(viewController)
         view.addSubview(viewController.view)
-        viewController.didMoveToParentViewController(self)
+        viewController.didMove(toParentViewController: self)
     }
 
-    func removeViewController(viewController: UIViewController) {
-        viewController.willMoveToParentViewController(nil)
+    func removeViewController(_ viewController: UIViewController) {
+        viewController.willMove(toParentViewController: nil)
         viewController.view.removeFromSuperview()
         viewController.removeFromParentViewController()
     }
     
-    func replaceChildViewController(currentViewController: UIViewController?, newViewController: UIViewController?, animationDuration: NSTimeInterval) {
+    func replaceChildViewController(_ currentViewController: UIViewController?, newViewController: UIViewController?, animationDuration: TimeInterval) {
         
         if let newViewController = newViewController {
             newViewController.view.alpha = 0.0
             addViewController(newViewController)
         }
         
-        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
+        UIView.animate(withDuration: animationDuration, animations: { () -> Void in
             currentViewController?.view.alpha = 0.0
             newViewController?.view.alpha = 1.0
-        }) { completed in
+        }, completion: { completed in
             if let currentViewController = currentViewController {
                 self.removeViewController(currentViewController)
             }
-        }
+        }) 
     }    
 }

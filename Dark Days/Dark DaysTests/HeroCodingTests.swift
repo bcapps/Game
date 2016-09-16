@@ -16,8 +16,8 @@ class HeroCodingTests: XCTestCase {
         
         guard let hero = optionalHero else { XCTFail(); return }
         
-        let data = NSKeyedArchiver.archivedDataWithRootObject(HeroCoder(value: hero))
-        let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? HeroCoder
+        let data = NSKeyedArchiver.archivedData(withRootObject: HeroCoder(value: hero))
+        let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObject(with: data) as? HeroCoder
         
         let sut = unarchivedHeroCoder?.value
         

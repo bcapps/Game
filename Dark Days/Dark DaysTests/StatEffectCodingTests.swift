@@ -12,9 +12,9 @@ import XCTest
 class ItemEffectCodingTests: XCTestCase {
 
     func testStatEffectCodingWorks() {
-        guard let JSONURL = NSBundle(forClass: self.dynamicType).URLForResource("StatEffectJSON", withExtension: "json") else { return }
-        guard let data = NSData(contentsOfURL: JSONURL) else { return }
-        guard let JSON = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) else { return }
+        guard let JSONURL = Bundle(for: type(of: self)).url(forResource: "StatEffectJSON", withExtension: "json") else { return }
+        guard let data = try? Data(contentsOf: JSONURL) else { return }
+        guard let JSON = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else { return }
         
         let itemEffect = try? StatEffect.decode(JSON)
         

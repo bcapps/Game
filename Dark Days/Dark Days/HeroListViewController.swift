@@ -14,26 +14,30 @@ final class HeroListViewController: ListViewController<Hero> {
         super.init(sections: sections, delegate: delegate)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Heroes"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: .addButtonTapped)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: .addButtonTapped)
         
         if false {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .Plain, target: self, action: .toolkitButtonTapped)
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .plain, target: self, action: .toolkitButtonTapped)
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { action, indexPath in
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { action, indexPath in
             guard let hero = self.objectForIndexPath(indexPath) else { return }
             
             HeroPersistence().removeHero(hero)
@@ -43,7 +47,7 @@ final class HeroListViewController: ListViewController<Hero> {
         return [deleteAction]
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let heroVC = UIStoryboard.heroViewController() else { return }
         heroVC.hero = self.objectForIndexPath(indexPath)
             
@@ -52,12 +56,12 @@ final class HeroListViewController: ListViewController<Hero> {
     
     func addButtonTapped() {
         guard let heroCreationFlow = UIStoryboard.heroCreationViewController() else { return }
-        navigationController?.presentViewController(heroCreationFlow, animated: true, completion: nil)
+        navigationController?.present(heroCreationFlow, animated: true, completion: nil)
     }
     
     func toolkitButtonTapped() {
         guard let toolkitVC = UIStoryboard.toolsViewController() else { return }
-        navigationController?.presentViewController(toolkitVC, animated: true, completion: nil)
+        navigationController?.present(toolkitVC, animated: true, completion: nil)
     }
 }
 

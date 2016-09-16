@@ -13,58 +13,58 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     var decreaseStatList: ListViewController<Stat>?
     
     enum Tool: Int {
-        case ItemList
-        case SpellList
-        case SkillList
-        case IncreaseStat
-        case DecreaseStat
-        case Gold
-        case BackupCharacter
+        case itemList
+        case spellList
+        case skillList
+        case increaseStat
+        case decreaseStat
+        case gold
+        case backupCharacter
         
         func toolName() -> String {
             switch self {
-            case .ItemList:
+            case .itemList:
                 return "Item List"
-            case .SpellList:
+            case .spellList:
                 return "Spell List"
-            case .SkillList:
+            case .skillList:
                 return "Skill List"
-            case .IncreaseStat:
+            case .increaseStat:
                 return "Increase Stat"
-            case .DecreaseStat:
+            case .decreaseStat:
                 return "Decrease Stat"
-            case .Gold:
+            case .gold:
                 return "Gold"
-            case .BackupCharacter:
+            case .backupCharacter:
                 return "Backup Character"
             }
         }
         
-        func toolViewController(delegate: ListViewControllerDelegate) -> UIViewController? {
+        func toolViewController(_ delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
-            case .ItemList:
+            case .itemList:
                 let list = ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate)
                 list.title = "Get Item"
                 return list
-            case .SpellList:
+            case .spellList:
                 let list = ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate)
                 list.title = "Get Spell"
                 return list
-            case .SkillList:
+            case .skillList:
                 let list = ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
                 list.title = "Get Skill"
                 return list
-            case .IncreaseStat:
+            case .increaseStat:
                 let list = ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
                 list.title = "Increase Stat"
                 return list
-            case .DecreaseStat:
+            case .decreaseStat:
                 let list = ListViewController<Stat>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Stats"))], delegate: delegate)
                 list.title = "Decrease Stat"
                 return list
-            case .Gold:
+            case .gold:
                 return nil
-            case .BackupCharacter:
+            case .backupCharacter:
                 return nil
             }
         }
@@ -75,53 +75,53 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
         
         title = "Hero Tools"
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: NSStringFromClass(UITableViewCell.self))
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: .dismiss)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: .dismiss)
         
         tableView.customize()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(UITableViewCell.self), forIndexPath: indexPath) ?? UITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(UITableViewCell.self), for: indexPath) 
         
-        if let text = Tool(rawValue: indexPath.row)?.toolName() {
+        if let text = Tool(rawValue: (indexPath as NSIndexPath).row)?.toolName() {
             cell.textLabel?.attributedText = .attributedStringWithHeadingAttributes(text)
         }
         
-        cell.selectionStyle = .Gray
+        cell.selectionStyle = .gray
         cell.backgroundColor = .backgroundColor()
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let tool = Tool(rawValue: indexPath.row) else { return }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let tool = Tool(rawValue: (indexPath as NSIndexPath).row) else { return }
         
         switch tool {
-        case .Gold:
+        case .gold:
             guard let goldViewController = UIStoryboard.sendGoldViewController() else { return }
             
             goldViewController.sendGoldTapped = { [weak self] gold in
                 self?.hero?.inventory.gold += gold
                 
                 self?.saveHero()
-                self?.dismiss()
+                self?.dismissHeroTools()
             }
             
             navigationController?.pushViewController(goldViewController, animated: true)
-        case .BackupCharacter:
+        case .backupCharacter:
             break
-        case .IncreaseStat:
+        case .increaseStat:
             guard let viewController = tool.toolViewController(self) else { return }
             increaseStatList = viewController as? ListViewController<Stat>
             
             navigationController?.pushViewController(viewController, animated: true)
-        case .DecreaseStat:
+        case .decreaseStat:
             guard let viewController = tool.toolViewController(self) else { return }
             decreaseStatList = viewController as? ListViewController<Stat>
             navigationController?.pushViewController(viewController, animated: true)
@@ -132,13 +132,13 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
         }
     }
     
-    func dismiss() {
-        navigationController?.dismissViewControllerAnimated(true) {
+    func dismissHeroTools() {
+        navigationController?.dismiss(animated: true) {
             print("Finished")
         }
     }
     
-    private func saveHero() {
+    fileprivate func saveHero() {
         guard let hero = hero else { return }
         
         HeroPersistence().persistHero(hero)
@@ -146,7 +146,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     
     // MARK: ListViewControllerDelegate
     
-    func didSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) {
+    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {
             hero?.inventory.items.append(item)
         } else if let skill = object as? Skill {
@@ -162,26 +162,26 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
         }
         
         saveHero()
-        dismiss()
+        dismissHeroTools()
     }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) -> Bool {
+    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool {
         return object is Item || object is Skill || object is Spell || object is Stat
     }
     
-    func didDeselectObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
-    func removeObject<T: ListDisplayingGeneratable>(listViewController: ListViewController<T>, object: T) { }
+    func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
 }
 
 private extension Selector {
-    static let dismiss = #selector(HeroToolsViewController.dismiss)
+    static let dismiss = #selector(HeroToolsViewController.dismissHeroTools)
 }
 
 private extension Hero {
-    func export() -> NSData {
+    func export() -> Data {
         let heroCoder = HeroCoder(value: self)
-        let data = NSKeyedArchiver.archivedDataWithRootObject(heroCoder)
+        let data = NSKeyedArchiver.archivedData(withRootObject: heroCoder)
         
         return data
     }

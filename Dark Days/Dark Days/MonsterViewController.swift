@@ -18,7 +18,7 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
-    private var monsterView: MonsterView {
+    fileprivate var monsterView: MonsterView {
         get {
             return view as! MonsterView // swiftlint:disable:this force_cast
         }
@@ -41,20 +41,20 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
             guard let monster = self.monster else { return }
             guard let attack = monster.attack(forName: attack.name) else { return }
             
-            let controller = UIAlertController(title: attack.name, message: attack.attackString, preferredStyle: .Alert)
-            controller.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+            let controller = UIAlertController(title: attack.name, message: attack.attackString, preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
             
-            self.navigationController?.presentViewController(controller, animated: true, completion: nil)
+            self.navigationController?.present(controller, animated: true, completion: nil)
         }
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StatCellIdentifier", forIndexPath: indexPath) as? StatCell
-        let stat = monsterView.viewModel?.stats[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StatCellIdentifier", for: indexPath) as? StatCell
+        let stat = monsterView.viewModel?.stats[(indexPath as NSIndexPath).row]
         
         cell?.statTitle.text = stat?.name
         cell?.statValue.text = stat?.value
@@ -67,23 +67,23 @@ private extension MonsterAttack {
     var attackString: String {
         get {
             let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
-            let digits = NSCharacterSet.decimalDigitCharacterSet()
+            let digits = CharacterSet.decimalDigits
             
             var damageWithNumberReplacement = String()
             
-            for substring in damage.componentsSeparatedByString(" ") {
-                let decimalRange = substring.rangeOfCharacterFromSet(digits, options: NSStringCompareOptions(), range: nil)
+            for substring in damage.components(separatedBy: " ") {
+                let decimalRange = substring.rangeOfCharacter(from: digits, options: NSString.CompareOptions(), range: nil)
                 
-                damageWithNumberReplacement.appendContentsOf(substring)
+                damageWithNumberReplacement.append(substring)
                 
                 if decimalRange != nil {
-                    let separatedStrings = substring.componentsSeparatedByString("d")
+                    let separatedStrings = substring.components(separatedBy: "d")
                     
                     if separatedStrings.count == 2 {
                         let damageDiceString = separatedStrings[0]
                         let damageRollString = separatedStrings[1]
                         
-                        if let damageDice = Int(damageDiceString), damageRoll = Int(damageRollString) {
+                        if let damageDice = Int(damageDiceString), let damageRoll = Int(damageRollString) {
                             var totalDamage = 0
                             
                             let damageRandomizer = GKShuffledDistribution(forDieWithSideCount: damageRoll)
@@ -92,12 +92,12 @@ private extension MonsterAttack {
                                 totalDamage += damageRandomizer.nextInt()
                             }
                             
-                            damageWithNumberReplacement.appendContentsOf("(\(totalDamage))")
+                            damageWithNumberReplacement.append("(\(totalDamage))")
                         }
                     }
                 }
                 
-                damageWithNumberReplacement.appendContentsOf(" ")
+                damageWithNumberReplacement.append(" ")
             }
             
             return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damageWithNumberReplacement

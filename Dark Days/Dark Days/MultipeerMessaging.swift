@@ -13,42 +13,42 @@ let MessageValueKey = "value"
 extension LCKMultipeer {
     
     enum MessageType: UInt {
-        case Item
-        case Spell
-        case Skill
-        case Stat
-        case Gold
+        case item
+        case spell
+        case skill
+        case stat
+        case gold
     }
     
-    func sendItemToPeer(item: Item, peer: MCPeerID) -> Bool {
-        return sendObjectToPeer(item.name, type: .Item, peer: peer)
+    func sendItemToPeer(_ item: Item, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(item.name as AnyObject, type: .item, peer: peer)
     }
     
-    func sendSpellToPeer(spell: Spell, peer: MCPeerID) -> Bool {
-        return sendObjectToPeer(spell.name, type: .Spell, peer: peer)
+    func sendSpellToPeer(_ spell: Spell, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(spell.name as AnyObject, type: .spell, peer: peer)
     }
     
-    func sendSkillToPeer(skill: Skill, peer: MCPeerID) -> Bool {
-        return sendObjectToPeer(skill.name, type: .Skill, peer: peer)
+    func sendSkillToPeer(_ skill: Skill, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(skill.name as AnyObject, type: .skill, peer: peer)
     }
     
-    func sendStatToPeer(stat: Stat, peer: MCPeerID) -> Bool {
-        return sendObjectToPeer(stat.name, type: .Stat, peer: peer)
+    func sendStatToPeer(_ stat: Stat, peer: MCPeerID) -> Bool {
+        return sendObjectToPeer(stat.name as AnyObject, type: .stat, peer: peer)
     }
     
-    func sendGoldToPeer(gold: Int, peer: MCPeerID) -> Bool {
-        let gold = NSNumber(integer: gold)
+    func sendGoldToPeer(_ gold: Int, peer: MCPeerID) -> Bool {
+        let gold = NSNumber(value: gold as Int)
         
-        return sendObjectToPeer(gold, type: .Gold, peer: peer)
+        return sendObjectToPeer(gold, type: .gold, peer: peer)
     }
     
-    private func sendObjectToPeer(object: AnyObject, type: MessageType, peer: MCPeerID) -> Bool {
-        guard let data = try? NSJSONSerialization.dataWithJSONObject([MessageValueKey: object], options: .PrettyPrinted) else {
+    fileprivate func sendObjectToPeer(_ object: AnyObject, type: MessageType, peer: MCPeerID) -> Bool {
+        guard let data = try? JSONSerialization.data(withJSONObject: [MessageValueKey: object], options: .prettyPrinted) else {
             return false
         }
         
         let message = LCKMultipeerMessage(messageType: type.rawValue, messageData: data)
         
-        return sendMessage(message, toPeer: peer)
+        return send(message, toPeer: peer)
     }
 }

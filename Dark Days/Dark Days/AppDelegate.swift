@@ -13,11 +13,11 @@ import HockeySDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private let crashManager = CrashManager(identifier: "a6e84183c21b46adbe5d00fb530f9342")
+    fileprivate let crashManager = CrashManager(identifier: "a6e84183c21b46adbe5d00fb530f9342")
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window?.tintColor = UIColor.whiteColor()
+        window?.tintColor = UIColor.white
         
         guard let navigationController = window?.rootViewController as? UINavigationController else { return false }
         

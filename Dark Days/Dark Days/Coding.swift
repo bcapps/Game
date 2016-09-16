@@ -20,16 +20,17 @@ protocol Coder: NSCoding {
     init(value: CodeableType)
 }
 
-extension CollectionType where Generator.Element: Codeable, Generator.Element.CoderType.CodeableType == Generator.Element, Generator.Element.CoderType: Coder {
-    var coders: [Generator.Element.CoderType] {
+extension Collection where Iterator.Element: Codeable, Iterator.Element.CoderType.CodeableType == Iterator.Element, Iterator.Element.CoderType: Coder {
+    var coders: [Iterator.Element.CoderType] {
         return map { element in
-            return Generator.Element.CoderType(value: element)
+            return Iterator.Element.CoderType(value: element)
         }
     }
 }
 
-extension CollectionType where Generator.Element: Coder, Generator.Element.CodeableType: Codeable, Generator.Element.CodeableType.CoderType == Generator.Element {
-    var objects: [Generator.Element.CodeableType] {
+extension Collection where Iterator.Element: Coder, Iterator.Element.CodeableType: Codeable {
+    //, Iterator.Element.CodeableType.CoderType == Iterator.Element
+    var objects: [Iterator.Element.CodeableType] {
         return flatMap { $0.value }
     }
 }

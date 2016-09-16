@@ -9,64 +9,64 @@
 import Foundation
 
 final class NamesViewController: UITableViewController {
-    private enum Names: Int {
-        case HumanMale
-        case HumanFemale
-        case DwarfMale
-        case DwarfFemale
-        case ElfMale
-        case ElfFemale
-        case Tavern
-        case Town
-        case Insanity
+    fileprivate enum Names: Int {
+        case humanMale
+        case humanFemale
+        case dwarfMale
+        case dwarfFemale
+        case elfMale
+        case elfFemale
+        case tavern
+        case town
+        case insanity
         
         func titleForName() -> String {
             switch self {
-            case .HumanFemale:
+            case .humanFemale:
                 return "Human Female"
-            case .HumanMale:
+            case .humanMale:
                 return "Human Male"
-            case .DwarfFemale:
+            case .dwarfFemale:
                 return "Dwarf Female"
-            case .DwarfMale:
+            case .dwarfMale:
                 return "Dwarf Male"
-            case .ElfFemale:
+            case .elfFemale:
                 return "Elf Female"
-            case .ElfMale:
+            case .elfMale:
                 return "Elf Male"
-            case .Tavern:
+            case .tavern:
                 return "Tavern"
-            case .Town:
+            case .town:
                 return "Town"
-            case .Insanity:
+            case .insanity:
                 return "Insanity"
             }
         }
         
         func nameForType() -> String? {
             switch self {
-            case .HumanFemale:
+            case .humanFemale:
                 return NameProvider.HumanFemaleNames.randomObject() as? String
-            case .HumanMale:
+            case .humanMale:
                 return NameProvider.HumanMaleNames.randomObject() as? String
-            case .DwarfFemale:
+            case .dwarfFemale:
                 return NameProvider.DwarfFemaleNames.randomObject() as? String
-            case .DwarfMale:
+            case .dwarfMale:
                 return NameProvider.DwarfMaleNames.randomObject() as? String
-            case .ElfFemale:
+            case .elfFemale:
                 return NameProvider.ElfFemaleNames.randomObject() as? String
-            case .ElfMale:
+            case .elfMale:
                 return NameProvider.ElfMaleNames.randomObject() as? String
-            case .Tavern:
+            case .tavern:
                 return NameProvider.TavernNames.randomObject() as? String
-            case .Town:
+            case .town:
                 return NameProvider.TownNames.randomObject() as? String
-            case .Insanity:
+            case .insanity:
                 return InsanityProvider.Insanities.randomObject() as? String
             }
         }
         
-        static let allValues: [Names] = [.HumanMale, .HumanFemale, .DwarfMale, .DwarfFemale, .ElfMale, .ElfFemale, .Tavern, .Town, .Insanity]
+        static let allValues: [Names] = [.humanMale, .humanFemale, .dwarfMale, .dwarfFemale, .elfMale, .elfFemale, .tavern, .town, .insanity]
     }
     
     override func viewDidLoad() {
@@ -75,32 +75,32 @@ final class NamesViewController: UITableViewController {
         tableView.customize()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Names.allValues.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
         
-        let nameType = Names.allValues[indexPath.row]
+        let nameType = Names.allValues[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.attributedText = .attributedStringWithHeadingAttributes(nameType.titleForName())
         cell.backgroundColor = .backgroundColor()
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let nameType = Names.allValues[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nameType = Names.allValues[(indexPath as NSIndexPath).row]
         let randomName = nameType.nameForType()
         
-        let alertController = UIAlertController(title: randomName, message: nil, preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Destructive) { action in
+        let alertController = UIAlertController(title: randomName, message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { action in
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
         alertController.addAction(cancelAction)
         
-        navigationController?.presentViewController(alertController, animated: true, completion: nil)
+        navigationController?.present(alertController, animated: true, completion: nil)
     }
 }

@@ -16,7 +16,7 @@ struct God: Decodable, Nameable, Codeable {
     let background: String
     let responsibilties: [String]
     
-    static func decode(json: AnyObject) throws -> God {
+    static func decode(_ json: Any) throws -> God {
         return try God(
             name: json => "name",
             background: json => "background",
@@ -28,7 +28,7 @@ struct God: Decodable, Nameable, Codeable {
 final class GodCoder: NSObject, Coder {
     typealias Codeable = God
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
     }
     
@@ -40,7 +40,7 @@ final class GodCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
         
         guard let name = rawName else { return nil }
         
@@ -49,7 +49,7 @@ final class GodCoder: NSObject, Coder {
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(value?.name, forKey: Keys.Name.rawValue)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(value?.name, forKey: Keys.Name.rawValue)
     }
 }

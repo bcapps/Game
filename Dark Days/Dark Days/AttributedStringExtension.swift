@@ -10,7 +10,7 @@ import UIKit
 
 extension NSAttributedString {
     
-    static func attributedStringWithAttributes(string: String, color: UIColor?, font: UIFont?, paragraphStyle: NSParagraphStyle?) -> NSAttributedString {
+    static func attributedStringWithAttributes(_ string: String, color: UIColor?, font: UIFont?, paragraphStyle: NSParagraphStyle?) -> NSAttributedString {
         
         var attributes = [String: AnyObject]()
         attributes[NSForegroundColorAttributeName] = color
@@ -20,22 +20,22 @@ extension NSAttributedString {
         return NSAttributedString(string: string, attributes: attributes)
     }
     
-    static func attributedStringWithBodyAttributes(string: String) -> NSAttributedString {
+    static func attributedStringWithBodyAttributes(_ string: String) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 0.85
 
         return attributedStringWithAttributes(string, color: .bodyTextColor(), font: .bodyFont(), paragraphStyle: paragraphStyle)
     }
     
-    static func attributedStringWithHeadingAttributes(string: String) -> NSAttributedString {
+    static func attributedStringWithHeadingAttributes(_ string: String) -> NSAttributedString {
         return attributedStringWithAttributes(string, color: .headerTextColor(), font: .headingFont(), paragraphStyle: nil)
     }
     
-    static func attributedStringWithSubHeadingAttributes(string: String) -> NSAttributedString {
+    static func attributedStringWithSubHeadingAttributes(_ string: String) -> NSAttributedString {
         return attributedStringWithAttributes(string, color: .headerTextColor(), font: .subHeadingFont(), paragraphStyle: nil)
     }
     
-    static func attributedStringWithSmallAttributes(string: String) -> NSAttributedString {
+    static func attributedStringWithSmallAttributes(_ string: String) -> NSAttributedString {
         return attributedStringWithAttributes(string, color: .sideTextColor(), font: .smallFont(), paragraphStyle: nil)
     }
 }

@@ -25,18 +25,18 @@ struct NameProvider {
 
 extension NSArray {
     
-    static func arrayForFileName(name: String) -> NSArray {
-        guard let URL = NSBundle.mainBundle().URLForResource(name, withExtension: "txt") else { return NSArray() }
-        let content = try? NSString(contentsOfURL: URL, encoding: NSUTF8StringEncoding)
+    static func arrayForFileName(_ name: String) -> NSArray {
+        guard let URL = Bundle.main.url(forResource: name, withExtension: "txt") else { return NSArray() }
+        let content = try? NSString(contentsOf: URL, encoding: String.Encoding.utf8.rawValue)
         
-        return content?.componentsSeparatedByString("\n") ?? NSArray()
+        return content?.components(separatedBy: "\n") as NSArray? ?? NSArray()
     }
 
     func randomObject() -> Element? {
         let randomIndex = Int(arc4random_uniform(UInt32(self.count)))
         
         if randomIndex < self.count {
-            return self.objectAtIndex(randomIndex)
+            return self.object(at: randomIndex)
         }
         
         return nil

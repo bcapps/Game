@@ -10,7 +10,7 @@ import UIKit
 
 class MonsterSeparatorView: UIView {
     
-    override func awakeAfterUsingCoder(aDecoder: NSCoder) -> AnyObject? {
+    override func awakeAfter(using aDecoder: NSCoder) -> Any? {
         return viewFromNib(nil)
     }
 }

@@ -1,5 +1,5 @@
 PODS:
-  - Decodable (0.4.2)
+  - Decodable (0.5)
   - HockeySDK (4.0.0):
     - HockeySDK/AllFeaturesLib (= 4.0.0)
   - HockeySDK/AllFeaturesLib (4.0.0)
@@ -11,8 +11,10 @@ DEPENDENCIES:
   - REMenu
 
 SPEC CHECKSUMS:
-  Decodable: b1cd96ad9f722721bc98b0310952214a47f71d6a
+  Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
   HockeySDK: 6d9076ec15fb48512ec5b01fc27ec9c684106898
   REMenu: 30dad195930adf6c5eeb8041e3257aa60bf9fa49
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 71b2cd2c7e2d8e6351c9fca4d218b8b149859d1f
+
+COCOAPODS: 1.1.0.rc.2

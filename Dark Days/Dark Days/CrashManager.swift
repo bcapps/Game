@@ -12,9 +12,9 @@ import HockeySDK
 final class CrashManager {
     
     init(identifier: String) {
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier(identifier)
-        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
-        BITHockeyManager.sharedHockeyManager().startManager()
-        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+        BITHockeyManager.shared().configure(withIdentifier: identifier)
+        BITHockeyManager.shared().crashManager.crashManagerStatus = .autoSend
+        BITHockeyManager.shared().start()
+        BITHockeyManager.shared().authenticator.authenticateInstallation()
     }
 }

@@ -41,7 +41,7 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("EffectsViewController") as? EffectsTableViewController
     }
     
-    private static func initialViewControllerFromStoryboardNamed(storyboardName: String) -> UIViewController? {
-        return UIStoryboard(name: storyboardName, bundle: NSBundle.mainBundle()).instantiateInitialViewController()
+    fileprivate static func initialViewControllerFromStoryboardNamed(_ storyboardName: String) -> UIViewController? {
+        return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateInitialViewController()
     }
 }

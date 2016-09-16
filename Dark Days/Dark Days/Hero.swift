@@ -38,13 +38,13 @@ final class Hero: Codeable, Nameable {
         }
     }
     
-    func increaseStatBy(statType: StatType, value: Int) {
+    func increaseStatBy(_ statType: StatType, value: Int) {
         let statToIncrease = stats.filter { $0.statType == statType }.first
         
         statToIncrease?.currentValue += value
     }
     
-    func statValueForType(statType: StatType) -> Int {
+    func statValueForType(_ statType: StatType) -> Int {
         let optionalStat = stats.filter { $0.statType == statType }.first
         
         guard let stat = optionalStat else { return 0 }
@@ -52,7 +52,7 @@ final class Hero: Codeable, Nameable {
         return stat.currentValue + statModifierForEquippedItemsForStat(stat)
     }
     
-    func damageReductionForReductionType(type: DamageReduction.ReductionType) -> Int {
+    func damageReductionForReductionType(_ type: DamageReduction.ReductionType) -> Int {
         var reductionCounter = 0
         
         switch type {
@@ -63,17 +63,17 @@ final class Hero: Codeable, Nameable {
         }
         
         for item in inventory.equippedItems {
-            reductionCounter += item.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            reductionCounter += item.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            reductionCounter += itemSet.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            reductionCounter += itemSet.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return reductionCounter
     }
     
-    func damageAvoidanceForAvoidanceType(type: DamageAvoidance.AvoidanceType) -> Int {
+    func damageAvoidanceForAvoidanceType(_ type: DamageAvoidance.AvoidanceType) -> Int {
         var avoidanceCounter = 0
         
         switch type {
@@ -86,17 +86,17 @@ final class Hero: Codeable, Nameable {
         }
         
         for item in inventory.equippedItems {
-            avoidanceCounter += item.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            avoidanceCounter += item.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            avoidanceCounter += itemSet.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            avoidanceCounter += itemSet.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return avoidanceCounter
     }
     
-    func damageModifierForModifierType(type: DamageModifier.DamageModifierType) -> Int {
+    func damageModifierForModifierType(_ type: DamageModifier.DamageModifierType) -> Int {
         var damageModifier = 0
         
         switch type {
@@ -107,17 +107,17 @@ final class Hero: Codeable, Nameable {
         }
         
         for item in inventory.equippedItems {
-            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return damageModifier
     }
     
-    func attackModifierForModifierType(type: AttackModifier.AttackModifierType) -> Int {
+    func attackModifierForModifierType(_ type: AttackModifier.AttackModifierType) -> Int {
         var attackModifier = 0
         
         switch type {
@@ -128,25 +128,25 @@ final class Hero: Codeable, Nameable {
         }
         
         for item in inventory.equippedItems {
-            attackModifier += item.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            attackModifier += item.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            attackModifier += itemSet.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            attackModifier += itemSet.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return attackModifier
     }
     
-    func statModifierForEquippedItemsForStat(stat: Stat) -> Int {
+    func statModifierForEquippedItemsForStat(_ stat: Stat) -> Int {
         var statModifier = 0
         
         for item in inventory.equippedItems {
-            statModifier += item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            statModifier += item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            statModifier += itemSet.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, combine: {$0 + $1})
+            statModifier += itemSet.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return statModifier
@@ -169,7 +169,7 @@ final class Hero: Codeable, Nameable {
 final class HeroCoder: NSObject, Coder {
     typealias CodeableType = Hero
     
-    private enum Keys: String {
+    fileprivate enum Keys: String {
         case Name
         case Gender
         case Inventory
@@ -191,44 +191,44 @@ final class HeroCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObjectForKey(Keys.Name.rawValue) as? String
-        let rawGender = aDecoder.decodeObjectForKey(Keys.Gender.rawValue) as? String
-        let rawStats = aDecoder.decodeObjectForKey(Keys.Stats.rawValue) as? [StatCoder]
-        let rawRace = aDecoder.decodeObjectForKey(Keys.Race.rawValue) as? RaceCoder
-        let rawSkills = aDecoder.decodeObjectForKey(Keys.Skills.rawValue) as? [SkillCoder]
-        let rawSpells = aDecoder.decodeObjectForKey(Keys.Spells.rawValue) as? [SpellCoder]
-        let rawInventory = aDecoder.decodeObjectForKey(Keys.Inventory.rawValue) as? InventoryCoder
-        let rawUniqueID = aDecoder.decodeObjectForKey(Keys.UniqueID.rawValue) as? String
-        let rawMagicType = aDecoder.decodeObjectForKey(Keys.MagicType.rawValue) as? MagicTypeCoder
-        let rawGod = aDecoder.decodeObjectForKey(Keys.God.rawValue) as? GodCoder
+        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
+        let rawGender = aDecoder.decodeObject(forKey: Keys.Gender.rawValue) as? String
+        let rawStats = aDecoder.decodeObject(forKey: Keys.Stats.rawValue) as? [StatCoder]
+        let rawRace = aDecoder.decodeObject(forKey: Keys.Race.rawValue) as? RaceCoder
+        let rawSkills = aDecoder.decodeObject(forKey: Keys.Skills.rawValue) as? [SkillCoder]
+        let rawSpells = aDecoder.decodeObject(forKey: Keys.Spells.rawValue) as? [SpellCoder]
+        let rawInventory = aDecoder.decodeObject(forKey: Keys.Inventory.rawValue) as? InventoryCoder
+        let rawUniqueID = aDecoder.decodeObject(forKey: Keys.UniqueID.rawValue) as? String
+        let rawMagicType = aDecoder.decodeObject(forKey: Keys.MagicType.rawValue) as? MagicTypeCoder
+        let rawGod = aDecoder.decodeObject(forKey: Keys.God.rawValue) as? GodCoder
         
-        guard let name = rawName, gender = Gender(rawValue: rawGender ?? ""), stats = rawStats?.objects, race = rawRace?.value, skills = rawSkills?.objects, spells = rawSpells?.objects, inventory = rawInventory?.value, magicType = rawMagicType?.value, uniqueID = rawUniqueID else { return nil }
+        guard let name = rawName, let gender = Gender(rawValue: rawGender ?? ""), let stats = rawStats?.objects, let race = rawRace?.value, let skills = rawSkills?.objects, let spells = rawSpells?.objects, let inventory = rawInventory?.value, let magicType = rawMagicType?.value, let uniqueID = rawUniqueID else { return nil }
         
         value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
-        value?.currentHealth = aDecoder.decodeIntegerForKey(Keys.CurrentHealth.rawValue) ?? 0
+        value?.currentHealth = aDecoder.decodeInteger(forKey: Keys.CurrentHealth.rawValue) 
         
         super.init()
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
         guard let value = value else {
             return
         }
         
-        aCoder.encodeObject(value.name, forKey: Keys.Name.rawValue)
-        aCoder.encodeObject(value.gender.rawValue, forKey: Keys.Gender.rawValue)
-        aCoder.encodeObject(value.stats.coders, forKey: Keys.Stats.rawValue)
-        aCoder.encodeObject(RaceCoder(value: value.race), forKey: Keys.Race.rawValue)
-        aCoder.encodeObject(value.skills.coders, forKey: Keys.Skills.rawValue)
-        aCoder.encodeObject(value.spells.coders, forKey: Keys.Spells.rawValue)
-        aCoder.encodeObject(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
-        aCoder.encodeObject(value.uniqueID, forKey: Keys.UniqueID.rawValue)
-        aCoder.encodeInteger(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
+        aCoder.encode(value.name, forKey: Keys.Name.rawValue)
+        aCoder.encode(value.gender.rawValue, forKey: Keys.Gender.rawValue)
+        aCoder.encode(value.stats.coders, forKey: Keys.Stats.rawValue)
+        aCoder.encode(RaceCoder(value: value.race), forKey: Keys.Race.rawValue)
+        aCoder.encode(value.skills.coders, forKey: Keys.Skills.rawValue)
+        aCoder.encode(value.spells.coders, forKey: Keys.Spells.rawValue)
+        aCoder.encode(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
+        aCoder.encode(value.uniqueID, forKey: Keys.UniqueID.rawValue)
+        aCoder.encode(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
         
         if let god = value.god {
-            aCoder.encodeObject(GodCoder(value: god), forKey: Keys.God.rawValue)
+            aCoder.encode(GodCoder(value: god), forKey: Keys.God.rawValue)
         }
         
-        aCoder.encodeObject(MagicTypeCoder(value: value.magicType), forKey: Keys.MagicType.rawValue)
+        aCoder.encode(MagicTypeCoder(value: value.magicType), forKey: Keys.MagicType.rawValue)
     }
 }

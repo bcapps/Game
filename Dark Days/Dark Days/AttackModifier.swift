@@ -13,7 +13,7 @@ struct AttackModifier: Decodable, Nameable {
     let name: String
     let value: Int
     
-    static func decode(json: AnyObject) throws -> AttackModifier {
+    static func decode(_ json: Any) throws -> AttackModifier {
         return try AttackModifier(name: json => "name",
                                    value: json => "value")
     }

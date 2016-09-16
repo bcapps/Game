@@ -42,7 +42,7 @@ final class TestHero {
         let optionalMagicType = ObjectProvider.magicTypeForName("Mundane")
         let optionalGod = ObjectProvider.godForName("Dolo, God of Agony")
         
-        guard let item1 = optionalItem1, item2 = optionalItem2, stat1 = optionalStat1, stat2 = optionalStat2, stat3 = optionalStat3, stat4 = optionalStat4, stat5 = optionalStat5, race = optionalRace, skill = optionalSkill, skill2 = optionalSkill2, spell = optionalSpell, spell2 = optionalSpell2, magicType = optionalMagicType, god = optionalGod else {
+        guard let item1 = optionalItem1, let item2 = optionalItem2, let stat1 = optionalStat1, let stat2 = optionalStat2, let stat3 = optionalStat3, let stat4 = optionalStat4, let stat5 = optionalStat5, let race = optionalRace, let skill = optionalSkill, let skill2 = optionalSkill2, let spell = optionalSpell, let spell2 = optionalSpell2, let magicType = optionalMagicType, let god = optionalGod else {
             
             return nil
         }
@@ -50,6 +50,6 @@ final class TestHero {
         inventory.items.append(item1)
         inventory.items.append(item2)
         
-        return Hero(name: "Twig", gender: Gender.Male, inventory: inventory, stats: [stat1, stat2, stat3, stat4, stat5], race: race, skills: [skill, skill2], spells: [spell, spell2], magicType: magicType, god: god, uniqueID: NSUUID().UUIDString)
+        return Hero(name: "Twig", gender: Gender.Male, inventory: inventory, stats: [stat1, stat2, stat3, stat4, stat5], race: race, skills: [skill, skill2], spells: [spell, spell2], magicType: magicType, god: god, uniqueID: UUID().uuidString)
     }
 }

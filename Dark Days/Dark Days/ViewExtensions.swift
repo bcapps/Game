@@ -22,10 +22,10 @@ extension UIView {
         get {
             guard let borderColor = layer.borderColor else { return UIColor() }
             
-            return UIColor(CGColor: borderColor)
+            return UIColor(cgColor: borderColor)
         }
         set {
-            layer.borderColor = newValue.CGColor
+            layer.borderColor = newValue.cgColor
         }
     }
     

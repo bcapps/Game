@@ -4,6 +4,12 @@ use_frameworks!
 
 platform :ios, '9.0'
 
-pod 'Decodable'
-pod 'REMenu'
-pod 'HockeySDK'
+abstract_target 'defaults' do
+    pod 'Decodable'
+    pod 'HockeySDK'
+    pod 'REMenu'
+
+    target 'Dark Days'
+    target 'Dark DaysTests'
+
+end
