@@ -615,7 +615,7 @@
   }, {
   "name": "Slaughter Staff",
   "damage": "1d4",
-  "effects": "Increases magical damage dealt by 1. Stabbing a creature with the curved tips at the top of the staff, and coating it in blood increases the amount of magical damage dealt by 2.",
+  "effects": "Increases magical damage dealt by 1. Coating the tips of the curved staff in blood increases the amount of magical damage dealt by 2 for the duration of an encounter. The blood is absorbed by this action.",
   "flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
   "itemSlot": "Hand",
   "twoHanded": true,
@@ -686,4 +686,10 @@
                        "name": "Physical",
                        "value": 1
                        }]
+  }, {
+  "name": "Slaughter Ring",
+  "damage": "",
+  "effects": "Grants the wearer the ability to ",
+  "flavor": "A ring that glows purple. You can hear the echo of souls trapped in the ring screaming in agony.",
+  "itemSlot": "Accessory"
   }]

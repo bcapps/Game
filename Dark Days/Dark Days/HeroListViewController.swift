@@ -25,7 +25,7 @@ final class HeroListViewController: ListViewController<Hero> {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: .addButtonTapped)
         
-        if false {
+        if true {
             navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Toolkit"), style: .plain, target: self, action: .toolkitButtonTapped)
         }
     }

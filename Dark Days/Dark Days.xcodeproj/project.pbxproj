@@ -336,6 +336,7 @@
 		F2C7EAFE1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
+		F2CAE31F1D8CA542005584E3 /* HeroImportURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
 		F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F909AC1D42A999005F8662 /* Insanities.txt */; };
 		F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
@@ -527,6 +528,7 @@
 		F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MonsterTraits.json; path = "World Data/MonsterTraits.json"; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
+		F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroImportURLHandler.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
 		F2F909AC1D42A999005F8662 /* Insanities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Insanities.txt; sourceTree = "<group>"; };
 		F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsanityProvider.swift; sourceTree = "<group>"; };
@@ -706,6 +708,7 @@
 				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
 				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
 				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
+				F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */,
 				F216E9A11D7A2AFB0039F07B /* CrashManager.swift */,
 				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
 				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
@@ -1475,6 +1478,7 @@
 				F26C01F51CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
 				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
 				F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */,
+				F2CAE31F1D8CA542005584E3 /* HeroImportURLHandler.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
@@ -1803,7 +1807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = JL4AKR8DVC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
@@ -1823,7 +1827,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = JL4AKR8DVC;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";

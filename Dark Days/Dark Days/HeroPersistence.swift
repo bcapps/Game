@@ -33,20 +33,20 @@ final class HeroPersistence {
         _ = try? FileManager.default.removeItem(at: URLForHero(hero))
     }
     
+    func URLForHero(_ hero: Hero) -> URL {
+        return heroDirectoryURL().appendingPathComponent(hero.uniqueID + ".hero")
+    }
+    
     func allPersistedHeroes() -> [Hero] {
         guard let heroURLs = try? FileManager.default.contentsOfDirectory(at: heroDirectoryURL(), includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions(rawValue: 0)) else { return [] }
         
         return heroURLs.flatMap { return heroForURL($0) }
     }
     
-    fileprivate func heroForURL(_ URL: Foundation.URL) -> Hero? {
+    func heroForURL(_ URL: Foundation.URL) -> Hero? {
         let unarchivedHeroCoder = NSKeyedUnarchiver.unarchiveObject(withFile: URL.path) as? HeroCoder
         
         return unarchivedHeroCoder?.value
-    }
-    
-    fileprivate func URLForHero(_ hero: Hero) -> URL {
-        return heroDirectoryURL().appendingPathComponent(hero.uniqueID + ".hero")
     }
     
     fileprivate func heroDirectoryURL() -> URL {

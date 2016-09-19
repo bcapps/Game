@@ -6,6 +6,8 @@
 //  Copyright © 2016 Lickability. All rights reserved.
 //
 
+import MessageUI
+
 final class HeroToolsViewController: UITableViewController, ListViewControllerDelegate {
     
     var hero: Hero?
@@ -115,6 +117,16 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             
             navigationController?.pushViewController(goldViewController, animated: true)
         case .backupCharacter:
+            guard let hero = hero else { return }
+            let URL = HeroPersistence().URLForHero(hero)
+            guard let data = try? Data(contentsOf: URL) else { return }
+            
+            let mailCompose = MFMailComposeViewController(rootViewController: self)
+            mailCompose.mailComposeDelegate = self
+            mailCompose.addAttachmentData(data, mimeType: "application/octet-stream", fileName: hero.name)
+            
+            navigationController?.show(mailCompose, sender: self)
+            
             break
         case .increaseStat:
             guard let viewController = tool.toolViewController(self) else { return }
@@ -172,6 +184,12 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
     func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
+}
+
+extension HeroToolsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        print("HI")
+    }
 }
 
 private extension Selector {
