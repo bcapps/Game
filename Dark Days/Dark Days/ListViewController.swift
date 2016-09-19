@@ -15,8 +15,6 @@ protocol ListViewControllerDelegate: class {
     func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T)
 }
 
-// custom initializer that takes objects.
-
 class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {    
     init(sections: [SectionList<T>], delegate: ListViewControllerDelegate?) {
         self.sections = sections
