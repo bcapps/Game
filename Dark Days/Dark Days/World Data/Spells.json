@@ -123,4 +123,19 @@
  "damage": "1d6 + [STR]",
  "effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. (V)",
  "flavor": "Never rush into something. Unless your on fire. Then rush into everything."
+ }, {
+ "name": "Empowered Shadow Stalker",
+ "damage": "Next physical attack gets 1d8 + [FAI]",
+ "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. The doppelganger mimics your movements, including any attacks you make at half damage. (SV)",
+ "flavor": "Now even the darkness has become your enemy. -Saz'rac, Priest of Kazu"
+ }, {
+ "name": "Featherfall",
+ "damage": "",
+ "effects": "One target ally becomes light as a feather, falling at a much slower rate than normal until landing. (V)",
+ "flavor": "Light as a feather, free as a bird."
+ }, {
+ "name": "Conjure Darkness",
+ "damage": "",
+ "effects": "A magical darkness is created in a medium sized area within sight. You are able to see perfectly inside this darkness. Any creature caught inside the magical darkness will take a -2 to their chance to dodge. (S)",
+ "flavor": "The domain of darkness is terrifying. Not for the known, but for the unknown. The might be. Anything is possible when everything is stripped away."
  }]

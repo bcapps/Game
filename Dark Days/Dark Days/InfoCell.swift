@@ -11,13 +11,13 @@ import UIKit
 final class InfoCell: UITableViewCell {
     var infoImage: UIImage? {
         set {
-            infoImageButton.setImage(newValue, for: UIControlState())
-            infoImageButton.isHidden = newValue == nil
-            
+            infoImageView.image = newValue
+            infoImageView.isHidden = newValue == nil
+
             setNeedsLayout()
         }
         get {
-            return infoImageButton.image(for: UIControlState())
+            return infoImageView.image
         }
     }
     
@@ -47,7 +47,7 @@ final class InfoCell: UITableViewCell {
     
     @IBOutlet fileprivate weak var accessoryImageView: UIImageView!
     @IBOutlet fileprivate weak var infoTextView: UITextView!
-    @IBOutlet fileprivate weak var infoImageButton: UIButton!
+    @IBOutlet fileprivate weak var infoImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,27 +60,28 @@ final class InfoCell: UITableViewCell {
         
         infoTextView.textContainer.exclusionPaths = []
         
-        if infoImage != nil {
+        if !infoImageView.isHidden {
             addImageExclusionRect()
         }
         
-        if accessoryImage != nil {
+        if !accessoryImageView.isHidden {
             addAccessoryImageExclusionRect()
         }
+        
+        infoImageView.layer.cornerRadius = infoImageView.bounds.height / 2.0
     }
     
-    fileprivate func setupInfoCell() {
-        infoImageButton.layer.cornerRadius = infoImageButton.bounds.height / 2.0
-        infoImageButton.layer.borderColor = UIColor.borderColor().cgColor
-        infoImageButton.layer.borderWidth = 1.0
-        infoImageButton.layer.masksToBounds = true
-        infoImageButton.imageView?.contentMode = .scaleAspectFit
-        infoTextView.font = UIFont.bodyFont()
+    private func setupInfoCell() {
+        infoImageView.layer.borderColor = UIColor.borderColor().cgColor
+        infoImageView.layer.borderWidth = 1.0
+        infoImageView.layer.masksToBounds = true
+        infoImageView.contentMode = .scaleAspectFit
+        infoTextView.font = .bodyFont()
         infoTextView.textColor = .bodyTextColor()
         
         backgroundColor = .backgroundColor()
         
-        infoImageButton.backgroundColor = backgroundColor
+        infoImageView.backgroundColor = backgroundColor
         infoTextView.backgroundColor = backgroundColor
         infoTextView.textContainer.lineFragmentPadding = 0
         infoTextView.textContainerInset = UIEdgeInsets.zero
@@ -92,18 +93,16 @@ final class InfoCell: UITableViewCell {
         selectedBackgroundView = backgroundView
     }
     
-    fileprivate func addImageExclusionRect() {
-        var exclusionRect = infoTextView.convert(infoImageButton.frame, from: self)
-        exclusionRect.size.width += 10.0
-        exclusionRect.size.height += 5.0
+    private func addImageExclusionRect() {
+        let exclusionRect = CGRect(x: 0, y: 0, width: infoImageView.frame.maxX + 5, height: infoImageView.frame.maxY + 5)
         
         let imageViewPath = UIBezierPath(rect: exclusionRect)
         
         infoTextView.textContainer.exclusionPaths += [imageViewPath]
     }
     
-    fileprivate func addAccessoryImageExclusionRect() {
-        var exclusionRect = infoTextView.convert(accessoryImageView.frame, from: self)
+    private func addAccessoryImageExclusionRect() {
+        var exclusionRect = convert(accessoryImageView.frame, to: infoTextView)
         exclusionRect.size.width += 20.0
         exclusionRect.size.height += 5.0
         
