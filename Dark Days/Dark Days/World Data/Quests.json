@@ -50,7 +50,8 @@
  "name": "Time...",
  "explanation": "Initiator: Enter the main temple of Vitael.\nThere will be a large statue that when approached will ask the repeated question: Time?",
  "notes": "The response should be: Time flies, time bandits, time wounds all heals, time is infinite.\nUpon learning more and coming back, there is a chance to answer differently, repeating the first three answers, and ending with: Time ends.",
- "rewards": ["• Infinity Ring", "• Chaos Ring"]
+ "rewards": ["• Infinity Ring", "• Chaos Ring"],
+ "completed": true
  }, {
  "name": "Until Death",
  "explanation": "Initiator: Discover from rumors that people have been disappearing.\n",
@@ -66,7 +67,8 @@
  "name": "Dead Farm",
  "explanation": "Initiator: Walking out in a field you come across undead milling about.\n",
  "notes": "The farmer is actually a friendly necromancer and has raised the dead to assist in crop growing and gathering. If you kill the undead or the farmer this has a negative impact toward the growth of the nearby town.\n Enemies Include: Zombie, Farmer",
- "rewards": ["• Skeletal Shortbow"]
+ "rewards": ["• Skeletal Shortbow"],
+ "completed": true
  }, {
  "name": "Trancing Troubadour",
  "explanation": "Initiator: Coming across a small village.\n",

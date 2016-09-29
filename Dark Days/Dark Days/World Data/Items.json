@@ -686,4 +686,10 @@
                        "name": "Physical",
                        "value": 1
                        }]
+  }, {
+  "name": "Quicksilver Ore",
+  "damage": "",
+  "effects": "",
+  "flavor": "The ore itself looks like it flows and reshapes itself, while remaining firmly solid in your hand.",
+  "itemSlot": ""
   }]
