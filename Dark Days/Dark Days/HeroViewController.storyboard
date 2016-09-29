@@ -151,6 +151,11 @@
                                     <action selector="effectsViewButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="ZWh-Zh-HZp"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-Bd-Kyf">
+                                <connections>
+                                    <segue destination="7H7-ZF-SX4" kind="embed" id="NFt-jJ-8Qe"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -162,6 +167,7 @@
                             <constraint firstItem="L7B-62-nce" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="5" id="9iI-bs-hE4"/>
                             <constraint firstItem="J0T-dk-RFJ" firstAttribute="width" secondItem="BdS-UO-7gL" secondAttribute="width" id="CFR-D3-GJE"/>
                             <constraint firstItem="J0T-dk-RFJ" firstAttribute="top" secondItem="L7B-62-nce" secondAttribute="bottom" constant="5" id="D9w-mR-e4r"/>
+                            <constraint firstItem="H5F-ib-KGt" firstAttribute="leading" secondItem="lf9-Bd-Kyf" secondAttribute="trailing" constant="-20" id="F89-ta-SPK"/>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="width" secondItem="3ao-dt-idE" secondAttribute="height" multiplier="1:1" id="K1s-up-HCP"/>
                             <constraint firstItem="BdS-UO-7gL" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="Ltg-cg-eHd"/>
                             <constraint firstItem="ZjN-eG-abz" firstAttribute="leading" secondItem="lDs-B1-mLe" secondAttribute="trailing" constant="10" id="O3m-Vq-h4L"/>
@@ -174,7 +180,9 @@
                             <constraint firstItem="J0T-dk-RFJ" firstAttribute="centerX" secondItem="BdS-UO-7gL" secondAttribute="centerX" id="WWw-0G-laB"/>
                             <constraint firstItem="BdS-UO-7gL" firstAttribute="width" secondItem="dmw-nJ-ihR" secondAttribute="width" id="Yj5-hv-Kxq"/>
                             <constraint firstItem="6MH-he-zNu" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="bottom" constant="40" id="aHM-F5-AjM"/>
+                            <constraint firstItem="lf9-Bd-Kyf" firstAttribute="leading" secondItem="dmw-nJ-ihR" secondAttribute="leadingMargin" id="aUA-JH-EqP"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="bUQ-oe-6yS"/>
+                            <constraint firstItem="lf9-Bd-Kyf" firstAttribute="top" secondItem="58g-mR-vui" secondAttribute="bottom" constant="10" id="cDP-h1-VIt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L7B-62-nce" secondAttribute="trailing" id="dkf-AU-vp3"/>
                             <constraint firstItem="mtJ-Xr-kK0" firstAttribute="leading" secondItem="dmw-nJ-ihR" secondAttribute="leadingMargin" id="gDe-sG-XF6"/>
                             <constraint firstItem="n0R-I4-t9L" firstAttribute="top" secondItem="LMS-Zp-1oA" secondAttribute="bottom" constant="10" id="gIm-3D-mRi"/>
@@ -182,6 +190,7 @@
                             <constraint firstItem="H5F-ib-KGt" firstAttribute="centerX" secondItem="dmw-nJ-ihR" secondAttribute="centerX" id="jvo-39-PCv"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="centerX" secondItem="H5F-ib-KGt" secondAttribute="centerX" id="kko-zf-KJa"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="lPz-zz-78M"/>
+                            <constraint firstItem="mtJ-Xr-kK0" firstAttribute="top" secondItem="lf9-Bd-Kyf" secondAttribute="bottom" constant="10" id="lfY-Tf-1Kv"/>
                             <constraint firstItem="58g-mR-vui" firstAttribute="leading" secondItem="H5F-ib-KGt" secondAttribute="leading" constant="-25" id="scb-EJ-mDA"/>
                             <constraint firstItem="LMS-Zp-1oA" firstAttribute="centerY" secondItem="H5F-ib-KGt" secondAttribute="centerY" id="vpO-Gm-SkJ"/>
                             <constraint firstItem="tWM-Zd-iTa" firstAttribute="bottom" secondItem="H5F-ib-KGt" secondAttribute="bottom" constant="-10" id="y1u-75-PdT"/>
@@ -216,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bN-FQ-RKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="308"/>
+            <point key="canvasLocation" x="576.79999999999995" y="307.1964017991005"/>
         </scene>
         <!--Health View Controller-->
         <scene sceneID="8H8-1C-XXr">
@@ -287,6 +296,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUg-J1-O54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1136" y="307"/>
+        </scene>
+        <!--Item Set List View Controller-->
+        <scene sceneID="wb0-cN-zXE">
+            <objects>
+                <tableViewController id="7H7-ZF-SX4" customClass="ItemSetListViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P62-ry-SbI">
+                        <rect key="frame" x="0.0" y="0.0" width="94" height="216"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rh8-iy-hYz">
+                                <rect key="frame" x="0.0" y="28" width="94" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh8-iy-hYz" id="1Ch-kF-mHV">
+                                    <frame key="frameInset" width="94" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7H7-ZF-SX4" id="hgw-jJ-3nq"/>
+                            <outlet property="delegate" destination="7H7-ZF-SX4" id="HgE-5s-Lri"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgb-fs-wDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="819"/>
         </scene>
     </scenes>
     <resources>

@@ -92,11 +92,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let _ = segue.destination.view
+        _ = segue.destination.view
         
         if let viewController = segue.destination as? HealthViewController {
             healthViewController = viewController
             healthViewController?.hero = hero
+        } else if let viewController = segue.destination as? ItemSetListViewController {
+            viewController.hero = hero
         }
     }
     
