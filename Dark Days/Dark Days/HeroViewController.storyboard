@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GVh-lf-OHh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GVh-lf-OHh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Hero View Controller-->
@@ -15,19 +16,17 @@
                         <viewControllerLayoutGuide type="bottom" id="lNS-tN-AT4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dmw-nJ-ihR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0T-dk-RFJ">
-                                <rect key="frame" x="0.0" y="431" width="320" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="9i7-Nm-53s"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BdS-UO-7gL">
-                                <rect key="frame" x="0.0" y="435" width="320" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5z3-tM-L94"/>
                                 </constraints>
@@ -44,13 +43,11 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SilhoutteMale" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-ib-KGt" userLabel="Character Silhouette">
-                                <rect key="frame" x="96" y="30" width="128" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H5F-ib-KGt" secondAttribute="height" multiplier="1:2.7972" id="mlc-zM-2V7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-B1-mLe" userLabel="HelmetButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="133" y="30" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="JqS-tT-Ofc"/>
                                     <constraint firstAttribute="width" secondItem="lDs-B1-mLe" secondAttribute="height" multiplier="1:1" id="rkV-Dk-XHd"/>
@@ -61,7 +58,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ao-dt-idE" userLabel="AccessoryButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="38" y="30" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="9SB-uA-hjA"/>
                                     <constraint firstAttribute="width" secondItem="3ao-dt-idE" secondAttribute="height" multiplier="1:1" id="GTM-M1-RaW"/>
@@ -72,7 +68,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-Zp-1oA" userLabel="LeftHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="194" y="182" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dul-Tm-cZS"/>
                                     <constraint firstAttribute="width" secondItem="LMS-Zp-1oA" secondAttribute="height" multiplier="1:1" id="jjP-91-bsI"/>
@@ -83,7 +78,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-mR-vui" userLabel="RightHandButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="71" y="182" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="i6n-CV-R7r"/>
                                     <constraint firstAttribute="width" secondItem="58g-mR-vui" secondAttribute="height" multiplier="1:1" id="rc4-a8-WeH"/>
@@ -94,7 +88,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-he-zNu" userLabel="ChestButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="133" y="125" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6MH-he-zNu" secondAttribute="height" multiplier="1:1" id="7Os-bT-OsL"/>
                                     <constraint firstAttribute="height" constant="55" id="oPu-FD-2Be"/>
@@ -105,7 +98,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Zd-iTa" userLabel="BootsButton" customClass="EquipmentButton" customModule="Dark_Days" customModuleProvider="target">
-                                <rect key="frame" x="133" y="325" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="VC5-h6-Mw0"/>
                                     <constraint firstAttribute="width" secondItem="tWM-Zd-iTa" secondAttribute="height" multiplier="1:1" id="Xbx-or-Lf4"/>
@@ -116,7 +108,6 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-I4-t9L">
-                                <rect key="frame" x="224" y="247" width="70" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="gcp-yX-q5V"/>
                                     <constraint firstAttribute="height" constant="120" id="myN-2V-YIl"/>
@@ -126,27 +117,22 @@
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZjN-eG-abz">
-                                <rect key="frame" x="198" y="30" width="106" height="50"/>
                                 <subviews>
                                     <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-VZ-KT4">
-                                        <rect key="frame" x="0.0" y="0.0" width="28" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coins" translatesAutoresizingMaskIntoConstraints="NO" id="raQ-w8-D9P">
-                                        <rect key="frame" x="33" y="0.0" width="35" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="fR7-mD-jnT"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIW-ZV-Wic">
-                                        <rect key="frame" x="73" y="0.0" width="0.0" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SM-rq-Hq9">
-                                        <rect key="frame" x="78" y="0.0" width="28" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -154,21 +140,19 @@
                                     <constraint firstAttribute="height" constant="50" id="INB-xQ-6Em"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7B-62-nce" userLabel="God Label">
-                                <rect key="frame" x="121" y="395" width="183" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7B-62-nce" userLabel="God Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-Xr-kK0" userLabel="Effects View Button">
-                                <rect key="frame" x="16" y="380" width="36" height="36"/>
                                 <state key="normal" image="EffectsListIcon"/>
                                 <connections>
                                     <action selector="effectsViewButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="ZWh-Zh-HZp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3ao-dt-idE" firstAttribute="top" secondItem="lDs-B1-mLe" secondAttribute="top" id="2xu-sr-5sJ"/>
                             <constraint firstItem="lDs-B1-mLe" firstAttribute="top" secondItem="H5F-ib-KGt" secondAttribute="top" id="4Jr-Ia-U2f"/>
@@ -211,7 +195,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="accessoryButton" destination="3ao-dt-idE" id="k6f-lz-qBK"/>
                         <outlet property="bootsButton" destination="tWM-Zd-iTa" id="3dm-8e-mNb"/>
@@ -248,7 +231,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-Ey-x7V" userLabel="Health Up">
-                                <rect key="frame" x="14" y="0.0" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="IFc-Zm-Asd"/>
                                     <constraint firstAttribute="width" secondItem="jqL-Ey-x7V" secondAttribute="height" multiplier="1.75:1" id="XSJ-XL-euG"/>
@@ -259,7 +241,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-w3-e9b" userLabel="Health Down">
-                                <rect key="frame" x="14" y="96" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="dJb-ig-UZP"/>
                                     <constraint firstAttribute="width" secondItem="iZk-w3-e9b" secondAttribute="height" multiplier="1.75:1" id="guf-UR-51H"/>
@@ -270,23 +251,21 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4cj-SR-PAw" userLabel="Heart Image View">
-                                <rect key="frame" x="0.0" y="24" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4cj-SR-PAw" secondAttribute="height" multiplier="1:1" id="DFH-zZ-SRb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-Xr-7fL" userLabel="Health Label">
-                                <rect key="frame" x="14" y="44" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="UYY-Oi-7hY"/>
                                     <constraint firstAttribute="height" constant="21" id="qwI-XQ-OZz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jqL-Ey-x7V" firstAttribute="centerX" secondItem="ETK-8e-uLC" secondAttribute="centerX" id="DlG-a0-s13"/>
                             <constraint firstItem="iZk-w3-e9b" firstAttribute="centerX" secondItem="ETK-8e-uLC" secondAttribute="centerX" id="Iya-XQ-S1J"/>
@@ -307,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUg-J1-O54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="308"/>
+            <point key="canvasLocation" x="1136" y="307"/>
         </scene>
     </scenes>
     <resources>
