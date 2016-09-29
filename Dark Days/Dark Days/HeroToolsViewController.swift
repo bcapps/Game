@@ -85,7 +85,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -121,11 +121,13 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
             let URL = HeroPersistence().URLForHero(hero)
             guard let data = try? Data(contentsOf: URL) else { return }
             
-            let mailCompose = MFMailComposeViewController(rootViewController: self)
-            mailCompose.mailComposeDelegate = self
-            mailCompose.addAttachmentData(data, mimeType: "application/octet-stream", fileName: hero.name)
+            let fileName = hero.name + ".hero"
             
-            navigationController?.show(mailCompose, sender: self)
+            let mailCompose = MFMailComposeViewController()
+            mailCompose.mailComposeDelegate = self
+            mailCompose.addAttachmentData(data, mimeType: "application/octet-stream", fileName: fileName)
+            mailCompose.setSubject("Dark Days Backup - " + hero.name)
+            present(mailCompose, animated: true, completion: nil)
             
             break
         case .increaseStat:
@@ -188,7 +190,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
 
 extension HeroToolsViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        print("HI")
+        dismiss(animated: true, completion: nil)
     }
 }
 

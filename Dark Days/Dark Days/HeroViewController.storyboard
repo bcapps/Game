@@ -302,19 +302,9 @@
             <objects>
                 <tableViewController id="7H7-ZF-SX4" customClass="ItemSetListViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P62-ry-SbI">
-                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="216"/>
+                        <rect key="frame" x="0.0" y="0.0" width="94" height="216"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rh8-iy-hYz">
-                                <rect key="frame" x="0.0" y="28" width="93.5" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh8-iy-hYz" id="1Ch-kF-mHV">
-                                    <frame key="frameInset" width="93.5" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="7H7-ZF-SX4" id="hgw-jJ-3nq"/>
                             <outlet property="delegate" destination="7H7-ZF-SX4" id="HgE-5s-Lri"/>

@@ -33,7 +33,7 @@ final class HeroListViewController: ListViewController<Hero> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
+        refreshHeroList()
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -41,7 +41,7 @@ final class HeroListViewController: ListViewController<Hero> {
             guard let hero = self.objectForIndexPath(indexPath) else { return }
             
             HeroPersistence().removeHero(hero)
-            self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
+            self.refreshHeroList()
         }
         
         return [deleteAction]
@@ -62,6 +62,10 @@ final class HeroListViewController: ListViewController<Hero> {
     func toolkitButtonTapped() {
         guard let toolkitVC = UIStoryboard.toolsViewController() else { return }
         navigationController?.present(toolkitVC, animated: true, completion: nil)
+    }
+    
+    func refreshHeroList() {
+        self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
     }
 }
 
