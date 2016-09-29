@@ -22,6 +22,8 @@ class EffectsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .backgroundColor()
+        tableView.estimatedSectionHeaderHeight = 40
+        tableView.estimatedRowHeight = 40
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
