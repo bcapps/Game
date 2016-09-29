@@ -1813,6 +1813,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F206107DA263C97D611475D /* Pods-defaults-Dark Days.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = JL4AKR8DVC;
@@ -1833,6 +1834,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FF83E5E588087C35891E0E4 /* Pods-defaults-Dark Days.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = JL4AKR8DVC;
@@ -1852,6 +1854,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CE6CD08AC34CE471ACBE19F /* Pods-defaults-Dark DaysTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1870,6 +1873,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5BA59F3EEBDEE72CD692389 /* Pods-defaults-Dark DaysTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
