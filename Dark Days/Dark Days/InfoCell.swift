@@ -15,6 +15,7 @@ final class InfoCell: UITableViewCell {
             infoImageView.isHidden = newValue == nil
 
             setNeedsLayout()
+            layoutIfNeeded()
         }
         get {
             return infoImageView.image
@@ -27,6 +28,7 @@ final class InfoCell: UITableViewCell {
             accessoryImageView.isHidden = newValue == nil
 
             setNeedsLayout()
+            layoutIfNeeded()
         }
         get {
             return accessoryImageView.image
@@ -36,6 +38,8 @@ final class InfoCell: UITableViewCell {
     var infoAttributedText: NSAttributedString? {
         set {
             infoTextView.attributedText = newValue
+            
+            setNeedsLayout()
             layoutIfNeeded()
         }
         get {
@@ -103,7 +107,7 @@ final class InfoCell: UITableViewCell {
     
     private func addAccessoryImageExclusionRect() {
         var exclusionRect = convert(accessoryImageView.frame, to: infoTextView)
-        exclusionRect.size.width += 20.0
+        exclusionRect.size.width = frame.size.width - exclusionRect.origin.x
         exclusionRect.size.height += 5.0
         
         let accessoryImagePath = UIBezierPath(rect: exclusionRect)
