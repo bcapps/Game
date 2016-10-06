@@ -55,6 +55,16 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         tableView.customize()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Super hack to fix info cells being cutoff due to exclusion paths.
+        let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
+            self.tableView.reloadData()
+        })
+    }
+    
     func objectForIndexPath(_ indexPath: IndexPath) -> T? {
         return self.dataSource?.objectForIndexPath(indexPath)
     }
