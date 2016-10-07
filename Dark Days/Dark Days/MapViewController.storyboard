@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="agy-k9-tQI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--World Map-->
+        <scene sceneID="FSe-Ae-6XP">
+            <objects>
+                <viewController title="World Map" id="agy-k9-tQI" customClass="MapViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="psR-d8-1Lg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZSD-32-77e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kxx-5Y-1Ld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="gQo-XB-l3r">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="World Map" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-At-acT"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pGd-At-acT" firstAttribute="width" secondItem="gQo-XB-l3r" secondAttribute="width" id="1yu-H3-ybv"/>
+                                    <constraint firstAttribute="trailing" secondItem="pGd-At-acT" secondAttribute="trailing" id="LpN-LB-tty"/>
+                                    <constraint firstAttribute="bottom" secondItem="pGd-At-acT" secondAttribute="bottom" id="PS7-wz-wPo"/>
+                                    <constraint firstItem="pGd-At-acT" firstAttribute="height" secondItem="gQo-XB-l3r" secondAttribute="height" id="hX0-mn-ymC"/>
+                                    <constraint firstItem="pGd-At-acT" firstAttribute="top" secondItem="gQo-XB-l3r" secondAttribute="top" id="szh-Wh-994"/>
+                                    <constraint firstItem="pGd-At-acT" firstAttribute="leading" secondItem="gQo-XB-l3r" secondAttribute="leading" id="wuj-mX-eEI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="agy-k9-tQI" id="RdP-mb-ueg"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="gQo-XB-l3r" secondAttribute="bottom" id="0US-0i-g6i"/>
+                            <constraint firstItem="gQo-XB-l3r" firstAttribute="leading" secondItem="Kxx-5Y-1Ld" secondAttribute="leading" id="Uv5-Am-hGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="gQo-XB-l3r" secondAttribute="trailing" id="sxV-h6-PiE"/>
+                            <constraint firstItem="gQo-XB-l3r" firstAttribute="top" secondItem="Kxx-5Y-1Ld" secondAttribute="topMargin" id="up6-gU-raS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="pGd-At-acT" id="pmn-Bd-r02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YjT-ef-91L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="World Map" width="16" height="16"/>
+    </resources>
+</document>

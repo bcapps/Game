@@ -20,6 +20,7 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
         case skillList
         case monsterList
         case quests
+        case map
         case names
         case notes
         case statModification
@@ -43,6 +44,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 return "Stat Modification"
             case .quests:
                 return "Quests"
+            case .map:
+                return "World Map"
             case .names:
                 return "Names"
             case .notes:
@@ -73,6 +76,8 @@ final class ToolsListViewController: UITableViewController, ListViewControllerDe
                 let upcomingQuests: [Quest] = ObjectProvider.sortedObjectsForJSON("Quests").filter { $0.completed == false }
                 
                 return ListViewController<Quest>(sections: [SectionList(sectionTitle: nil, objects:upcomingQuests), SectionList(sectionTitle: "Completed", objects:completedQuests)], delegate: delegate)
+            case .map:
+                return UIStoryboard.mapViewController()
             case .notes:
                 return ListViewController<Note>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Notes"))], delegate: delegate)
             case .names:

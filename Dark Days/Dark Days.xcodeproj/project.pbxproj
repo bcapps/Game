@@ -336,6 +336,10 @@
 		F2A6482B1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
 		F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
 		F2A6482D1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */; };
+		F2B571BC1DA71DBB0026B696 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B571BB1DA71DBB0026B696 /* MapViewController.swift */; };
+		F2B571BE1DA71E1F0026B696 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B571BD1DA71E1F0026B696 /* MapViewController.storyboard */; };
+		F2B571BF1DA71F8E0026B696 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B571BB1DA71DBB0026B696 /* MapViewController.swift */; };
+		F2B571C01DA71F8E0026B696 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B571BB1DA71DBB0026B696 /* MapViewController.swift */; };
 		F2C7EAFE1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2C7EAFF1CA75AC3007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
@@ -531,6 +535,8 @@
 		F29C55E81C96311700ED386E /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MonsterTraits.json; path = "World Data/MonsterTraits.json"; sourceTree = "<group>"; };
 		F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemArrayExtension.swift; sourceTree = "<group>"; };
+		F2B571BB1DA71DBB0026B696 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F2B571BD1DA71E1F0026B696 /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
 		F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroImportURLHandler.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
@@ -1000,6 +1006,8 @@
 				C39ACBEF1C9CA0B7004C5A6B /* SendGoldViewController.swift */,
 				F292C8E81D6BF30D00AB30CA /* MonsterViewController.swift */,
 				F292C8EA1D6BF33A00AB30CA /* MonsterViewController.storyboard */,
+				F2B571BB1DA71DBB0026B696 /* MapViewController.swift */,
+				F2B571BD1DA71E1F0026B696 /* MapViewController.storyboard */,
 			);
 			name = "DM Toolkit";
 			sourceTree = "<group>";
@@ -1248,6 +1256,7 @@
 				F22270771D6D5796007FEFA0 /* MonsterSeparatorView.xib in Resources */,
 				F22270841D6D6208007FEFA0 /* NotoSans-Bold.ttf in Resources */,
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
+				F2B571BE1DA71E1F0026B696 /* MapViewController.storyboard in Resources */,
 				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
 				F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
@@ -1485,6 +1494,7 @@
 				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
 				F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F2CAE31F1D8CA542005584E3 /* HeroImportURLHandler.swift in Sources */,
+				F2B571BC1DA71DBB0026B696 /* MapViewController.swift in Sources */,
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
@@ -1578,6 +1588,7 @@
 				F25187661C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
 				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
 				F29B48521D63C62A00A92DAB /* ItemSet.swift in Sources */,
+				F2B571BF1DA71F8E0026B696 /* MapViewController.swift in Sources */,
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
 				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
@@ -1671,6 +1682,7 @@
 				F25187BE1C922BB3003AD636 /* EquipmentButton.swift in Sources */,
 				F25187A41C922B9D003AD636 /* StoryboardLoading.swift in Sources */,
 				F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */,
+				F2B571C01DA71F8E0026B696 /* MapViewController.swift in Sources */,
 				F25187DC1C9520D3003AD636 /* StatCell.swift in Sources */,
 				F251878E1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F21ECE1A1C7A65F1008041E9 /* Race.swift in Sources */,
