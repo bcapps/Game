@@ -45,7 +45,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     fileprivate let effectsViewController = UIStoryboard.effectsViewController()
     fileprivate var healthViewController: HealthViewController?
     
-    fileprivate let menu = DropdownMenuFactory.heroDropdownMenu()
+    fileprivate var menu: REMenu?
     fileprivate let animationDuration = 0.35
     
     fileprivate var presentedOverlayController: UIViewController?
@@ -65,7 +65,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         addItemSlotToEquipmentButtons()
         updateEquippedItems()
         updateGoldText()
-        addMenuTapHandlers()
         
         if let god = hero?.god {
             godLabel.attributedText = .attributedStringWithSmallAttributes("Follower of " + god.name)
@@ -75,6 +74,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let numberOfItems = CGFloat(5)
         
         collectionViewFlowLayout.itemSize = CGSize(width: (view.frame.width - (itemSpacing * numberOfItems)) / numberOfItems, height: 45)
+        
+        updateMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,12 +84,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         updateGoldText()
         healthViewController?.hero = hero
         collectionView.reloadData()
+        updateMenu()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        menu.close()
+        menu?.close()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,6 +102,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         } else if let viewController = segue.destination as? ItemSetListViewController {
             viewController.hero = hero
         }
+    }
+    
+    private func updateMenu() {
+        guard let hero = hero else { return }
+        menu = DropdownMenuFactory.heroDropdownMenu(hero: hero)
+        addMenuTapHandlers()
     }
     
     @IBAction func effectsViewButtonTapped(_ sender: AnyObject) {
@@ -120,7 +128,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
-        if menu.isOpen {
+        guard let menu = menu else { return }
+        
+        if menu.isOpen == true {
             menu.close()
         } else {
             menu.show(from: navigationController)
@@ -181,28 +191,33 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     fileprivate func addMenuTapHandlers() {
-        for (index, item) in menu.items.enumerated() {
+        guard let menu = menu else { return }
+        
+        for item in menu.items {
             guard let item = item as? REMenuItem else { continue }
+            guard let tag = MenuItemTag(rawValue: item.tag) else { continue }
             
-            switch index {
-            case 0:
+            switch tag {
+            case .inventory:
                 item.action = { [weak self] item in
                     self?.presentItemList()
                 }
-            case 1:
+            case .spellbook:
                 item.action = { [weak self] item in
                     self?.presentSpellsList()
                 }
-            case 2:
+            case .skillsItem:
                 item.action = { [weak self] item in
                     self?.presentsSkillsList()
                 }
-            case 3:
+            case .heroTools:
                 item.action = { [weak self] item in
                     self?.presentHeroTools()
                 }
-            default:
-                print("No Action")
+            case .worldMap:
+                item.action = { [weak self] item in
+                    self?.presentWorldMap()
+                }
             }
         }
     }
@@ -242,6 +257,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         guard let spells = hero?.spells else { return }
         
         showList(spells, title: "Spellbook")
+    }
+    
+    fileprivate func presentWorldMap() {
+        guard let mapViewController = UIStoryboard.mapViewController() else { return }
+        
+        navigationController?.show(mapViewController, sender: self)
     }
     
     fileprivate func presentObjectInOverlay<T: ListDisplayingGeneratable>(_ object: T, footerView: UIView? = nil) {

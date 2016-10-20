@@ -692,4 +692,22 @@
   "effects": "",
   "flavor": "The ore itself looks like it flows and reshapes itself, while remaining firmly solid in your hand.",
   "itemSlot": ""
+  }, {
+  "name": "Life of Vitael",
+  "damage": "",
+  "effects": "A book that describes the history of Vitael.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Demon Summoning Rituals",
+  "damage": "",
+  "effects": "A book that holds information on the summoning of demons.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Map of Idris",
+  "damage": "",
+  "effects": "A map that details the known world of Idris.",
+  "flavor": "",
+  "itemSlot": ""
   }]
