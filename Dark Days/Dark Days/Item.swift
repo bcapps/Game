@@ -42,6 +42,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let damageModifiers: [DamageModifier]
     let skills: [Skill]
     let inventorySkills: [Skill]
+    let spells: [Spell]
     
     var equippedSlot = EquipmentButton.EquipmentSlot.none
     
@@ -72,10 +73,11 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             attackModifiers: json =>? "attackModifiers" ?? [],
             damageModifiers: json =>? "damageModifiers" ?? [],
             skills: json =>? "skills" ?? [],
-            inventorySkills: json =>? "inventorySkills" ?? [])
+            inventorySkills: json =>? "inventorySkills" ?? [],
+            spells: json =>? "spells" ?? [])
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String]) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -89,6 +91,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         self.damageModifiers = damageModifiers
         self.skills = skills.flatMap { return ObjectProvider.skillForName($0) }
         self.inventorySkills = inventorySkills.flatMap { return ObjectProvider.skillForName($0) }
+        self.spells = spells.flatMap { return ObjectProvider.spellForName($0) }
     }
 }
 

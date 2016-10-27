@@ -15,12 +15,13 @@ enum MenuItemTag: Int {
     case skillsItem
     case heroTools
     case worldMap
+    case loreBook
 }
 
 final class DropdownMenuFactory {
     
     static func heroDropdownMenu(hero: Hero) -> REMenu {
-        guard let inventoryImage = UIImage(named: "Inventory"), let spellbookImage = UIImage(named: "Spellbook"), let skillImage = UIImage(named: "Skills"), let heroToolsImage = UIImage(named: "HeroTools"), let worldMapImage = UIImage(named: "WorldMapIcon") else { return REMenu() }
+        guard let inventoryImage = UIImage(named: "Inventory"), let spellbookImage = UIImage(named: "Spellbook"), let skillImage = UIImage(named: "Skills"), let heroToolsImage = UIImage(named: "HeroTools"), let worldMapImage = UIImage(named: "LoreIcon") else { return REMenu() }
         
         let inventoryItem: REMenuItem = REMenuItem(title: "Inventory", subtitle: "", image: inventoryImage, highlightedImage: nil, action: nil)
         inventoryItem.tag = MenuItemTag.inventory.rawValue
@@ -37,7 +38,10 @@ final class DropdownMenuFactory {
         let worldMap: REMenuItem = REMenuItem(title: "World Map", subtitle: "", image: worldMapImage, highlightedImage: nil, action: nil)
         worldMap.tag = MenuItemTag.worldMap.rawValue
 
-        var items: [REMenuItem] = [inventoryItem, spellbookItem, skillsItem]
+        let loreBook: REMenuItem = REMenuItem(title: "Lore", subtitle: "", image: worldMapImage, highlightedImage: nil, action: nil)
+        loreBook.tag = MenuItemTag.loreBook.rawValue
+        
+        var items: [REMenuItem] = [inventoryItem, spellbookItem, skillsItem, loreBook]
         
         if let item = ObjectProvider.itemForName("Map of Idris"), hero.inventory.items.contains(item) {
             items.append(worldMap)

@@ -39,6 +39,12 @@
 		F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
 		F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
 		F216E9A21D7A2AFB0039F07B /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216E9A11D7A2AFB0039F07B /* CrashManager.swift */; };
+		F219726C1DBA4A390025F0C8 /* Lore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219726B1DBA4A390025F0C8 /* Lore.swift */; };
+		F219726F1DBA4A7A0025F0C8 /* Lore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219726B1DBA4A390025F0C8 /* Lore.swift */; };
+		F21972701DBA4A7A0025F0C8 /* Lore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219726B1DBA4A390025F0C8 /* Lore.swift */; };
+		F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
+		F21972741DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
+		F21972751DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
 		F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */; };
 		F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21ECDC41C7A516B008041E9 /* LaunchScreen.storyboard */; };
 		F21ECDF61C7A5778008041E9 /* God.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21ECDF51C7A5777008041E9 /* God.swift */; };
@@ -413,6 +419,8 @@
 		C3C32770AA179F26D97485EF /* Pods-Dark Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Days/Pods-Dark Days.debug.xcconfig"; sourceTree = "<group>"; };
 		F2063A681CB8992900494184 /* HeroToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroToolsViewController.swift; sourceTree = "<group>"; };
 		F216E9A11D7A2AFB0039F07B /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
+		F219726B1DBA4A390025F0C8 /* Lore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lore.swift; sourceTree = "<group>"; };
+		F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoreBookViewController.swift; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21ECDC51C7A516B008041E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -658,8 +666,9 @@
 				F25187761C921417003AD636 /* Multipeer */,
 				F2350B941C82412600D6E18E /* Hero List */,
 				F2473B1D1C83B2FB008FD65B /* Hero */,
-				C394059D1C7CB68500EBFD07 /* Root */,
 				C3AB8F3C1C7CF403007CE0BA /* Hero Creation */,
+				F21972691DBA49E00025F0C8 /* Lore Book */,
+				C394059D1C7CB68500EBFD07 /* Root */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -673,6 +682,22 @@
 				C3AB8F4B1C7D0745007CE0BA /* HeroCreationViewController.swift */,
 			);
 			name = "Hero Creation";
+			sourceTree = "<group>";
+		};
+		F21972691DBA49E00025F0C8 /* Lore Book */ = {
+			isa = PBXGroup;
+			children = (
+				F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */,
+			);
+			name = "Lore Book";
+			sourceTree = "<group>";
+		};
+		F219726A1DBA4A1D0025F0C8 /* Lore */ = {
+			isa = PBXGroup;
+			children = (
+				F219726B1DBA4A390025F0C8 /* Lore.swift */,
+			);
+			name = Lore;
 			sourceTree = "<group>";
 		};
 		F21ECDAF1C7A516B008041E9 = {
@@ -757,6 +782,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F219726A1DBA4A1D0025F0C8 /* Lore */,
 				F2F909A91D42A96D005F8662 /* Insanities */,
 				F28C2B291CD0877D00E106DD /* Names */,
 				F28C2B221CD07C9D00E106DD /* Notes */,
@@ -1460,6 +1486,7 @@
 				F26C01FD1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 				F2350B7E1C7C187100D6E18E /* ViewInstantiation.swift in Sources */,
 				C39ACBF01C9CA0B7004C5A6B /* SendGoldViewController.swift in Sources */,
+				F219726C1DBA4A390025F0C8 /* Lore.swift in Sources */,
 				C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
@@ -1473,6 +1500,7 @@
 				F21ECE101C7A5F8A008041E9 /* Stat.swift in Sources */,
 				F222709E1D6D7465007FEFA0 /* MonsterStat.swift in Sources */,
 				F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */,
+				F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
@@ -1533,6 +1561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F219726F1DBA4A7A0025F0C8 /* Lore.swift in Sources */,
 				F28C2B0B1CC7341400E106DD /* Quest.swift in Sources */,
 				F25187B31C922BB3003AD636 /* HeroListViewController.swift in Sources */,
 				F25187AF1C922BB3003AD636 /* Reusable.swift in Sources */,
@@ -1591,6 +1620,7 @@
 				F2B571BF1DA71F8E0026B696 /* MapViewController.swift in Sources */,
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
 				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
+				F21972741DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F25187631C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F22270991D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
@@ -1647,6 +1677,7 @@
 				F22270961D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */,
 				F25187801C922AC7003AD636 /* TableViewExtension.swift in Sources */,
 				F25187671C92138C003AD636 /* LCKMultipeerMessage.m in Sources */,
+				F21972701DBA4A7A0025F0C8 /* Lore.swift in Sources */,
 				F25187BF1C922BB3003AD636 /* HeroViewController.swift in Sources */,
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
@@ -1690,6 +1721,7 @@
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F21972751DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,

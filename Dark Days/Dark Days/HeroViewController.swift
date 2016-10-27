@@ -218,6 +218,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 item.action = { [weak self] item in
                     self?.presentWorldMap()
                 }
+            case .loreBook:
+                item.action = { [weak self] item in
+                    self?.presentLoreBook()
+                }
             }
         }
     }
@@ -254,15 +258,23 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     fileprivate func presentSpellsList() {
-        guard let spells = hero?.spells else { return }
+        let spells = hero?.spells ?? []
+        let itemSpells = hero?.inventory.items.flatMap { return $0.spells } ?? []
+        let itemSetSpells = hero?.inventory.equippedItemSets.flatMap { return $0.spells } ?? []
         
-        showList(spells, title: "Spellbook")
+        showList(spells + itemSpells + itemSetSpells, title: "Spellbook")
     }
     
     fileprivate func presentWorldMap() {
         guard let mapViewController = UIStoryboard.mapViewController() else { return }
         
         navigationController?.show(mapViewController, sender: self)
+    }
+    
+    fileprivate func presentLoreBook() {
+        let loreBookViewController = LoreBookViewController()
+        
+        navigationController?.show(loreBookViewController, sender: self)
     }
     
     fileprivate func presentObjectInOverlay<T: ListDisplayingGeneratable>(_ object: T, footerView: UIView? = nil) {

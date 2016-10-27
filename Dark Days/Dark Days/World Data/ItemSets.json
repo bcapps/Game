@@ -22,6 +22,14 @@
  "attackModifiers": [{"name": "Magical", "value": 1}],
  "damageModifiers": [{"name": "Magical", "value": 1}]
  }, {
+ "name": "Blades of Kazu",
+ "itemNamesInSet": ["Jian", "Sen"],
+ "statEffects": [{"stat": "DEX", "value": 1},
+                 {"stat": "STR", "value": 1}],
+ "attackModifiers": [{"name": "Physical", "value": 1}],
+ "damageModifiers": [{"name": "Physical", "value": 1}],
+ "spells": ["Empowered Shadow Stalker"]
+ }, {
  "name": "Test Set",
  "itemNamesInSet": ["X", "Y", "Z"],
  "statEffects": [{"stat": "DEX", "value": 1}],

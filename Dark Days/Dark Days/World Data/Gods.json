@@ -1,10 +1,10 @@
 [{
  "name": "Vitael, God of Life",
- "background": "Creates all living things.",
- "responsibilities": ["• Nature", "• Life", "• Portals"]
+ "background": "If it is alive, it is because of Vitael. Vitael was once the singular god of Idris. She created the world itself. Out of her, all other gods were made. She gifted them aspects of herself, leaving only life within her power. Inevitably, most of the other gods would turn on Vitael, starting a war that ravaged Idris for hundreds of years.",
+ "responsibilities": ["• Nature", "• Life"]
  }, {
  "name": "Morter, God of Death",
- "background": "Ferries those who die to the afterlife.",
+ "background": "Death is simply an extension of life to Morter. He looks after the souls of those who have shed their mortal bodies. Morter himself has never been seen, instead using avatars to convey his will. Followers of Morter believe that there is a planned time for everyone to die, and to interrupt that in any way is the greatest sin.",
  "responsibilities": ["• Death"]
  }, {
  "name": "Shiro, God of Hope",
@@ -16,26 +16,26 @@
  "responsibilities": ["• Pain", "• Suffering", "• Torture", "• Curses"]
  }, {
  "name": "Demitas, God of Greed",
- "background": "Tempts the living with material possessions.",
- "responsibilities": ["• Treasure", "• Items"]
+ "background": "Demitas was a human before he was elevated to burden Vitael's greed. In life he was a crazed beggar, envious of what others had. Now, he tempts mortals with material possessions, trying to lure them into the same crazed state as he once was. Demitas has used his magic to gain more precious items, most noteably by creating the portals that link different places on the living plane. The placement of these portals are expensive, and their use is assuredly not free. If the god of greed wants it, you can be sure that it is valuable.",
+ "responsibilities": ["• Treasure", "• Items", "• Portals"]
  }, {
  "name": "Kazu, God of Deceit",
  "background": "Tricks mortals through lies and deception. Kazu rarely interacts with the world directly, preferring to stick to the shadows and manipulating events through trickery. Those who follow Kazu will be granted control over the mind through illusion and deceit.",
  "responsibilities": ["• Traps", "• Tricks", "• Lies"]
  }, {
  "name": "Azoth, God of Demons",
- "background": "Unleashes wicked horrors upon the world.",
+ "background": "Azoth is most known for unleashing wicked horrors upon the world. He does not do so out of malice, but boredom. He enjoys watching mortals subjugate demons, only to inevitably lose control of them and be broken, either physically or mentally. In times of peace, he is known for summoning armies of demons upon the mortal plane to create strife. The most notable of these battles saw Azoth take part in the battle himself, killing thousands before finally being banished back to the twisted realm he resides in.",
  "responsibilities": ["• Demons", "• War"]
  }, {
  "name": "Torel, God of Mercy",
- "background": "Shows compassion and provides escape for those suffering.",
+ "background": "Shows compassion and provides escape for those suffering. Those who wish to commit suicide often seek priests of Torel for assistance. They have many magical poisons they employ to make the journey to the afterlife as quick and painless as possible. For the right price, the priests of Torel can also ensure that the resurrection of your eternal soul is all but impossible. By shrouding a soul in Torel's grace, they can prevent all but the strongest of resurrections from taking hold. Torel herself is considered to be one of the weaker gods, and she rarely shows herself to even her most devoted subjects.",
  "responsibilities": ["• Poisons", "• Suicide"]
  }, {
  "name": "Odro, God of Chaos",
- "background": "Spins the wishes of gods and mortals to his own design.",
+ "background": "Odro considers himself to be the cleverest of Gods. He delights in throwing confusion into the plans of both enemies and \"friends\". During the Godswar, Odro was seen fighting on both sides, aiding whoever he thought to be losing at the time. Scholars believe, that if not for Odro, the other gods may have been successful at overthrowing Vitael.",
  "responsibilities": ["• Chaos", "• Disorder", "• Confusion"]
  }, {
  "name": "Verrat, God of Betrayal",
- "background": "Waits for the opportune moment to strike.",
- "responsibilities": ["• Treachery"]
+ "background": "Verrat, the God of Betrayal, also known as Verrat the Hidden, waits for the opportune moment to strike. Followers of Verrat are scarce, and are often scorned when they prosthelytize openly. They value knowledge above all else, as they see it as their greatest tool. Verrat himself often goes unseen for centuries at a time, only appearing to assist in the most gruesome of treacheries.",
+ "responsibilities": ["• Treachery", "• Knowledge"]
  }]

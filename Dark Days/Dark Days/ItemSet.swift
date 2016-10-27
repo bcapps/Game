@@ -18,14 +18,19 @@ struct ItemSet: Decodable {
     let damageAvoidances: [DamageAvoidance]
     let attackModifiers: [AttackModifier]
     let damageModifiers: [DamageModifier]
+    let spells: [Spell]
     
     static func decode(_ json: Any) throws -> ItemSet {
+        let spellStrings: [String]? = try json =>? "spells"
+        let spells = spellStrings?.flatMap { ObjectProvider.spellForName($0) }
+        
         return try ItemSet(name: json => "name",
                            itemNamesInSet: json => "itemNamesInSet",
                            statEffects: json =>? "statEffects" ?? [],
                            damageReductions: json =>? "damageReductions" ?? [],
                            damageAvoidances: json =>? "damageAvoidances" ?? [],
                            attackModifiers: json =>? "attackModifiers" ?? [],
-                           damageModifiers: json =>? "damageModifiers" ?? [])
+                           damageModifiers: json =>? "damageModifiers" ?? [],
+                           spells: spells ?? [])
     }
 }

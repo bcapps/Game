@@ -306,9 +306,19 @@
   "name": "Jian",
   "damage": "1d8 + [DEX]",
   "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit by 2.",
-  "flavor": "A short sword used for quick strikes by the Blades of Kazu.",
+  "flavor": "A short sword used for quick strikes by the Blades of Kazu. Given to initiates of the Blades.",
   "itemSlot": "Hand",
   "attackModifiers": [{
+                      "name": "Physical",
+                      "value": 2
+                      }]
+  }, {
+  "name": "Sen",
+  "damage": "1d10 + [DEX]",
+  "effects": "The Sen is an extremely sharp blade, increase damage done by its strikes by 2.",
+  "flavor": "A short sword used for killing by the Blades of Kazu. Given to those who ascend past initiate in the Blades.",
+  "itemSlot": "Hand",
+  "damageModifiers": [{
                       "name": "Physical",
                       "value": 2
                       }]
@@ -708,6 +718,12 @@
   "name": "Map of Idris",
   "damage": "",
   "effects": "A map that details the known world of Idris.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Angler Tips & Tricks",
+  "damage": "",
+  "effects": "A short book that describes the best way to go about catching fish. Written by Pat Nagle.",
   "flavor": "",
   "itemSlot": ""
   }]

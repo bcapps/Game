@@ -147,9 +147,7 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
     }
     
     func dismissHeroTools() {
-        navigationController?.dismiss(animated: true) {
-            print("Finished")
-        }
+        navigationController?.dismiss(animated: true)
     }
     
     fileprivate func saveHero() {
