@@ -56,6 +56,9 @@
  "name": "Barbed Hide",
  "explanation": "At the start of each turn, [%name%] deals 1d10 physical damage to any creature grappling it."
  }, {
+ "name": "Dark Poison",
+ "explanation": "Creatures affected by [%name%]'s poison are healed by negative energy, and harmed by positive energy."
+ }, {
  "name": "Speak with Beasts",
  "explanation": "The [%name%] can speak with beasts as if they shared a common language."
  }, {

@@ -603,15 +603,14 @@
            {"name": "FAI", "value": 0}],
  "attacks": [{"name": "Poison Spit", "damage": "2d6 poison damage.", "weight": 30},
              {"name": "Smack", "damage": "2d6 physical damage.", "weight": 30},
-             {"name": "Summon Skeleton", "damage": "", "weight": 20},
-             {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 14 STR check to break.", "weight": 20}]
+             {"name": "Summon Skeleton", "damage": "", "weight": 20}]
  }, {
- "name": "Corpse Spider",
- "explanation": "A humongous hairy arthropod with massive legs and a tremendous abdomen.",
+ "name": "Tomb Spider",
+ "explanation": "A humongous spindly arthropod with long legs and a small abdomen.",
  "health": 80,
  "type": "huge undead vermin",
  "speed": "30",
- "traits": ["Web Sense", "Dark Energy Absorption"],
+ "traits": ["Web Sense", "Dark Energy Absorption", "Dark Poison"],
  "damageImmunities": ["poison"],
  "conditionImmunities": ["poisoned"],
  "languages": ["—"],
@@ -620,9 +619,10 @@
            {"name": "CON", "value": 0},
            {"name": "INT", "value": 4},
            {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Infest", "damage": "Injects spider eggs into a fresh wound. DC 12 CON to avoid spiders bursting from you causing 3d6 physical damage and spawning 3 spiders.", "weight": 60},
-             {"name": "Trample", "damage": "1d4 Large AOE", "weight": 30},
-             {"name": "Poison Spit", "damage": "1d4 poison + 1d4 poison next turn Large AOE", "weight": 10}]
+ "attacks": [{"name": "Bite", "damage": "2d4 physical damage + 2d4 poison next turn, DC 13 check to avoid.", "weight": 50},
+             {"name": "Poison Spit", "damage": "2d4 poison + 2d4 poison next turn Large AOE.", "weight": 30},
+             ,
+             {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 17 STR check to break. Web has 12 health.", "weight": 20}]
  }, {
  "name": "Spider Infested Humanoid",
  "explanation": "A bloated rotting corpse with spider eggs embedded inside. Bursts open upon death spawning 1d4 spiders.",
