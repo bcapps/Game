@@ -235,7 +235,7 @@
   "name": "Vest of Fury",
   "damage": "",
   "effects": "Increases physical damage dealt by 2, and reduces physical damage taken by 1.",
-  "flavor": "A leather vest, dyed orange. Retrieved from the corpse of a possessed monk.",
+  "flavor": "A leather vest, dyed orange. Commonly found among in the ranks of the priests of Dolo.",
   "itemSlot": "Chest",
   "damageReductions": [{
                        "name": "Physical",

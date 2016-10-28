@@ -23,6 +23,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var goldLabel: UILabel!
     @IBOutlet weak var godLabel: UILabel!
+    @IBOutlet weak var itemSetListButton: UIButton!
     
     var multipeer: LCKMultipeer?
     
@@ -85,6 +86,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         healthViewController?.hero = hero
         collectionView.reloadData()
         updateMenu()
+        itemSetListButton.isHidden = hero?.inventory.equippedItemSets.isEmpty == true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -117,6 +119,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         replaceChildViewController(presentedOverlayController, newViewController: container, animationDuration: animationDuration)
         presentedOverlayController = container
+    }
+    
+    @IBAction func itemSetButtonTapped(_ sender: AnyObject) {
+        presentEquippedItemSetList()
     }
     
     @IBAction func equipmentButtonTapped(_ button: EquipmentButton) {
@@ -263,6 +269,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let itemSetSpells = hero?.inventory.equippedItemSets.flatMap { return $0.spells } ?? []
         
         showList(spells + itemSpells + itemSetSpells, title: "Spellbook")
+    }
+    
+    fileprivate func presentEquippedItemSetList() {
+        let itemSets = hero?.inventory.equippedItemSets ?? []
+        
+        showList(itemSets, title: "Equipped Sets")
     }
     
     fileprivate func presentWorldMap() {

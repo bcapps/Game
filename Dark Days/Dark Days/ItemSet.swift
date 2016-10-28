@@ -9,7 +9,7 @@
 import Foundation
 import Decodable
 
-struct ItemSet: Decodable {
+struct ItemSet: Decodable, Nameable {
     
     let name: String
     let itemNamesInSet: [String]

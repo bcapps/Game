@@ -138,4 +138,9 @@
  "damage": "",
  "effects": "A magical darkness is created in a medium sized area within sight. You are able to see perfectly inside this darkness. Any creature caught inside the magical darkness will take a -2 to their chance to dodge. (S)",
  "flavor": "The domain of darkness is terrifying. Not for the known, but for the unknown. The might be. Anything is possible when everything is stripped away."
+ }, {
+ "name": "Summon Skeleton",
+ "damage": "1d6 + [FAI]",
+ "effects": "Summons a skeleton that has 3d8 + [FAI] hit points (SV). Drains [FAI] hit points from the caster.",
+ "flavor": "Undeath is just another form of life."
  }]

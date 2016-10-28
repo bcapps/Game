@@ -94,4 +94,9 @@
  "explanation": "Initiator: The city is having its annual Trick A Troll day.\n",
  "notes": "The city keeps a troll in a cage all year long, and brings it out, only to have people compete to confuse it. At this point, the troll has been doing this for so long, it's lost what little sanity it had to begin with.\n Enemies Include: Troll Guard, Troll",
  "rewards": ["• Troll Club", "• 500 gold"]
+ }, {
+ "name": "Haunted House",
+ "explanation": "Initiator: You come upon a haunted house.\n",
+ "notes": "You come upon a haunted house. If you attempt to circumvent it, you find yourself walking back up the hill towards it.\n Enemies Include: Aranae, Corpse Spider, Spider Infested Human",
+ "rewards": ["• Spell: Summon Skeleton", "• Quicksilver Ore", "• 200 gold"]
  }]
