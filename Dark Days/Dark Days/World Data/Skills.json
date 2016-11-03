@@ -82,4 +82,20 @@
  "name": "Darkvision",
  "explanation": "All I see is darkness. Oh, my hood is down.",
  "benefit": "Allows sight into non-magical darkness when no other light source is around."
+ }, {
+ "name": "Hammer Swing",
+ "explanation": "The nail that sticks out gets hammered. Nonsense. They all get hammered! -Dwarven Warbreaker",
+ "benefit": "Strike each enemy in an arc in front of you with your weapon. This attack automatically hits and deals an addition [STR] damage. Useable once per encounter. Must be wielding a blunt weapon."
+ }, {
+ "name": "Ever Faithful",
+ "explanation": "Your unwavering faith in the gods has granted you their favor.",
+ "benefit": "Once per encounter you may re-roll any die once. You must take the new roll."
+ }, {
+ "name": "Thread the Needle",
+ "explanation": "The straightest arrow will always find its way.",
+ "benefit": "Fire an arrow through up to 3 targets standing in a line, but this reduces your attack roll by 2."
+ }, {
+ "name": "Trip",
+ "explanation": "ON YOUR KNEES!",
+ "benefit": "The target must make a DC 10 + STR check to avoid being tripped. The target must have legs."
  }]

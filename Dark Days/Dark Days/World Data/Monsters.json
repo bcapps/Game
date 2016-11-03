@@ -621,7 +621,6 @@
            {"name": "FAI", "value": 0}],
  "attacks": [{"name": "Bite", "damage": "2d4 physical damage + 2d4 poison next turn, DC 13 check to avoid.", "weight": 50},
              {"name": "Poison Spit", "damage": "2d4 poison + 2d4 poison next turn Large AOE.", "weight": 30},
-             ,
              {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 17 STR check to break. Web has 12 health.", "weight": 20}]
  }, {
  "name": "Spider Infested Humanoid",
@@ -640,4 +639,21 @@
            {"name": "FAI", "value": 0}],
  "attacks": [{"name": "Claw", "damage": "1d6", "weight": 70},
              {"name": "Grapple", "damage": "1d6", "weight": 30}]
+ }, {
+ "name": "Phase Spider",
+ "explanation": "A spindly arthropod colored with a blue hue and a white underbelly with long legs and a small abdomen.",
+ "health": 45,
+ "type": "large vermin",
+ "speed": "30",
+ "traits": ["Web Sense", "Phasing"],
+ "damageImmunities": ["poison"],
+ "conditionImmunities": ["poisoned"],
+ "languages": ["—"],
+ "stats": [{"name": "STR", "value": 2},
+           {"name": "DEX", "value": 3},
+           {"name": "CON", "value": 0},
+           {"name": "INT", "value": 2},
+           {"name": "FAI", "value": 0}],
+ "attacks": [{"name": "Poison Bite", "damage": "2d4 physical damage, DC 11 check to resist 2d8 poison damage. If you would be killed by the poison damage, you are paralyzed at 1 health for the next hour.", "weight": 50},
+             {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 14 STR check to break. Web has 12 health.", "weight": 50}]
  }]

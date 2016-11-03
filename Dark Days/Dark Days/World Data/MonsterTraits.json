@@ -91,4 +91,7 @@
  }, {
  "name": "Illusory",
  "explanation": "The [%name%] can create false copies of itself, using those to draw the attention of its foes."
+ }, {
+ "name": "Phasing",
+ "explanation": "The [%name%] can, as a bonus action, phase between the material and ethereal plane."
  }]

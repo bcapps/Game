@@ -16,7 +16,7 @@
  }, {
  "name": "Blind",
  "damage": "",
- "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]) (V).",
+ "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]). (V)",
  "flavor": "Sometimes darkness can be beautiful."
  }, {
  "name": "Shadow Stalker",
@@ -36,7 +36,7 @@
  }, {
  "name": "Fiendfyre",
  "damage": "1d8 + [FAI]",
- "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]) (S).",
+ "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]). (S)",
  "flavor": "My fire will teach you to fear the light."
  }, {
  "name": "Dolo's Fury",
@@ -46,7 +46,7 @@
  }, {
  "name": "Thorn Bind",
  "damage": "1d4 + [FAI]",
- "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]) (S).",
+ "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]). (S)",
  "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
  }, {
  "name": "Summon Lesser Felbeast",
@@ -141,6 +141,21 @@
  }, {
  "name": "Summon Skeleton",
  "damage": "1d6 + [FAI]",
- "effects": "Summons a skeleton that has 3d8 + [FAI] hit points (SV). Drains [FAI] hit points from the caster.",
+ "effects": "Summons a skeleton that has 3d8 + [FAI] hit points. Drains [FAI] hit points from the caster. (SV)",
  "flavor": "Undeath is just another form of life."
+ }, {
+ "name": "Torture",
+ "damage": "1d6 + [FAI]",
+ "effects": "Summon metal spikes that drill into a targets extremities. The target must make a DC 10 CON check to not drop what they are holding and a DC 10 CON check to not fall down. (SV)",
+ "flavor": "Suffering is not optional."
+ }, {
+ "name": "Poison Breath",
+ "damage": "1d6 + [FAI] poison damage",
+ "effects": "Breath a heavy mist of poison in a cone in front of you. The target must make a DC 12 CON check to resist the poison. (S)",
+ "flavor": "Suffering is not optional."
+ }, {
+ "name": "Astral Message",
+ "damage": "",
+ "effects": "Creates a spiritual bird that carries a single sentence message to another person by conjuring their image in your mind. The duration the bird can travel is longer based on your faith. (SV)",
+ "flavor": "Light as a feather, free as a bird."
  }]
