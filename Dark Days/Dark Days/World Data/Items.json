@@ -726,4 +726,16 @@
   "effects": "A short book that describes the best way to go about catching fish. Written by Pat Nagle.",
   "flavor": "",
   "itemSlot": ""
+  }, {
+  "name": "Doll",
+  "damage": "",
+  "effects": "A small dirty children's doll.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Old Fishing Pole",
+  "damage": "",
+  "effects": "Nothing more than a small stick with some string attached.",
+  "flavor": "",
+  "itemSlot": ""
   }]
