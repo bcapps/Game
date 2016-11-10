@@ -125,6 +125,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         presentEquippedItemSetList()
     }
     
+    @IBAction func statusEffectListButtonTapped(_ sender: AnyObject) {
+        presentStatusEffectList()
+    }
+    
     @IBAction func equipmentButtonTapped(_ button: EquipmentButton) {
         if let item = button.item {
             presentItem(item)
@@ -275,6 +279,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let itemSets = hero?.inventory.equippedItemSets ?? []
         
         showList(itemSets, title: "Equipped Sets")
+    }
+    
+    private func presentStatusEffectList() {
+        
     }
     
     fileprivate func presentWorldMap() {

@@ -157,7 +157,7 @@
   "effects": "Increases FAI by 1.",
   "flavor": "Robes worn by those who have dedicated their lives to their god.",
   "itemSlot": "Chest",
-  "statEffects": [{
+  "statModifiers": [{
                   "stat": "FAI",
                   "value": 1
                   }]
@@ -252,7 +252,7 @@
   "flavor": "Staring at the Mouth of Insanity allows you recall the sheer terror you felt before closing it. Nothing in this world could compare to the terror it brings.",
   "itemSlot": "Accessory",
   "skills": ["Clear Mind"],
-  "statEffects": [{
+  "statModifiers": [{
                   "stat": "FAI",
                   "value": 2
                   }]
@@ -270,7 +270,7 @@
   "flavor": "Illusion, Michael. A trick is something a whore does for money.",
   "itemSlot": "Accessory",
   "skills": ["Illusionary Sight"],
-  "statEffects": [{
+  "statModifiers": [{
                   "stat": "INT",
                   "value": 2
                   }]
@@ -284,7 +284,7 @@
                        "name": "Magical",
                        "value": 1
                        }],
-  "statEffects": [{
+  "statModifiers": [{
                   "stat": "FAI",
                   "value": 1
                   }]
@@ -736,6 +736,18 @@
   "name": "Old Fishing Pole",
   "damage": "",
   "effects": "Nothing more than a small stick with some string attached.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Dark Iron Hook",
+  "damage": "",
+  "effects": "A well forged hook made of the finest dark iron.",
+  "flavor": "",
+  "itemSlot": ""
+  }, {
+  "name": "Deep Spider Line",
+  "damage": "",
+  "effects": "A strong fishing line crafted from the silk of a Deep Spider.",
   "flavor": "",
   "itemSlot": ""
   }]

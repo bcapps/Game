@@ -69,6 +69,10 @@ final class ObjectProvider {
         return objectForJSONForName("MonsterTraits", objectName: name)
     }
     
+    static func statusEffectForName(_ name: String) -> StatusEffect? {
+        return objectForJSONForName("StatusEffects", objectName: name)
+    }
+    
     static func objectForJSONForName<T: Decodable & Nameable>(_ JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         

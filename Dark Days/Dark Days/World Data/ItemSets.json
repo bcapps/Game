@@ -1,19 +1,19 @@
 [{
  "name": "Witch Hunter",
  "itemNamesInSet": ["Witch Hunter Boots", "Witch Hunter Hat", "Witch Hunter Longcoat"],
- "statEffects": [{"stat": "DEX", "value": 2},
+ "statModifiers": [{"stat": "DEX", "value": 2},
                  {"stat": "CON", "value": 1}],
  "damageReductions": [{"name": "Magical", "value": 3}],
  }, {
  "name": "Dark Iron",
  "itemNamesInSet": ["Dark Iron Sabatons", "Dark Iron Helm", "Dark Iron Breastplate"],
- "statEffects": [{"stat": "STR", "value": 1}],
+ "statModifiers": [{"stat": "STR", "value": 1}],
  "damageReductions": [{"name": "Physical", "value": 2},
                       {"name": "Fire", "value": 2}]
  }, {
  "name": "Chosen of Azoth",
  "itemNamesInSet": ["Demon Armor", "Helm of the Demon King", "Demon Hide Boots"],
- "statEffects": [{"stat": "DEX", "value": 1},
+ "statModifiers": [{"stat": "DEX", "value": 1},
                  {"stat": "STR", "value": 1},
                  {"stat": "FAI", "value": 1},
                  {"stat": "CON", "value": 1}],
@@ -24,7 +24,7 @@
  }, {
  "name": "Blades of Kazu",
  "itemNamesInSet": ["Jian", "Sen"],
- "statEffects": [{"stat": "DEX", "value": 1},
+ "statModifiers": [{"stat": "DEX", "value": 1},
                  {"stat": "STR", "value": 1}],
  "attackModifiers": [{"name": "Physical", "value": 1}],
  "damageModifiers": [{"name": "Physical", "value": 1}],
@@ -32,7 +32,7 @@
  }, {
  "name": "Test Set",
  "itemNamesInSet": ["X", "Y", "Z"],
- "statEffects": [{"stat": "DEX", "value": 1}],
+ "statModifiers": [{"stat": "DEX", "value": 1}],
  "damageReductions": [{"name": "Magical", "value": 1}],
  "damageAvoidances": [{"name": "Physical", "value": 1}],
  "attackModifiers": [{"name": "Magical", "value": 1}],

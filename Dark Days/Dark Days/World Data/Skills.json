@@ -84,7 +84,7 @@
  "benefit": "Allows sight into non-magical darkness when no other light source is around."
  }, {
  "name": "Hammer Swing",
- "explanation": "The nail that sticks out gets hammered. Nonsense. They all get hammered! -Dwarven Warbreaker",
+ "explanation": "They say the nail that sticks out gets hammered. Nonsense! They all get hammered! -Dwarven Warbreaker",
  "benefit": "Strike each enemy in an arc in front of you with your weapon. This attack automatically hits and deals an addition [STR] damage. Useable once per encounter. Must be wielding a blunt weapon."
  }, {
  "name": "Ever Faithful",

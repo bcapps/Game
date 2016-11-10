@@ -118,7 +118,7 @@ extension ItemSet: ListDisplayingGeneratable {
         infos.append(contentsOf: itemSet.damageModifiers.flatMap({ $0.name + " Damage +" + String($0.value)}))
         
         let infoString = infos.joined(separator: "\n")
-        let statString = itemSet.statEffects.flatMap({ $0.stat + " +" + String($0.value) }).joined(separator: "\n")
+        let statString = itemSet.statModifiers.flatMap({ $0.stat + " +" + String($0.value) }).joined(separator: "\n")
         let spellString = itemSet.spells.flatMap({ "Spell: " + $0.name }).joined(separator: "\n")
         
         return ListDisplayable(title: itemSet.name, information: statString + "\n\n" + infoString, additionalInfoTitle: nil, additionalInfo: spellString, subtext: nil, image: nil, accessoryImage: nil)

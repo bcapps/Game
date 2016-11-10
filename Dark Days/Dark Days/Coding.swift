@@ -29,7 +29,6 @@ extension Collection where Iterator.Element: Codeable, Iterator.Element.CoderTyp
 }
 
 extension Collection where Iterator.Element: Coder, Iterator.Element.CodeableType: Codeable {
-    //, Iterator.Element.CodeableType.CoderType == Iterator.Element
     var objects: [Iterator.Element.CodeableType] {
         return flatMap { $0.value }
     }

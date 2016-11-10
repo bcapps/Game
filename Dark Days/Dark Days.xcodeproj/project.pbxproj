@@ -154,6 +154,10 @@
 		F2350B961C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
 		F2350B971C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
 		F2350B981C82444800D6E18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2350B951C82444800D6E18E /* Assets.xcassets */; };
+		F24482971DCD3A1600D9E5E5 /* StatusEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */; };
+		F24482981DCD3A4800D9E5E5 /* StatusEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */; };
+		F24482991DCD3A4800D9E5E5 /* StatusEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */; };
+		F244829B1DCD3B0500D9E5E5 /* StatusEffects.json in Resources */ = {isa = PBXBuildFile; fileRef = F244829A1DCD3B0500D9E5E5 /* StatusEffects.json */; };
 		F2473B161C8382C9008FD65B /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2473B151C8382C9008FD65B /* Spell.swift */; };
 		F2473B181C8382E6008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
 		F2473B191C8382E9008FD65B /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F2473B171C8382E6008FD65B /* Spells.json */; };
@@ -480,6 +484,8 @@
 		F2350B8C1C8231E700D6E18E /* MagicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicType.swift; sourceTree = "<group>"; };
 		F2350B8E1C8231FB00D6E18E /* MagicTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MagicTypes.json; path = "World Data/MagicTypes.json"; sourceTree = "<group>"; };
 		F2350B951C82444800D6E18E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusEffect.swift; sourceTree = "<group>"; };
+		F244829A1DCD3B0500D9E5E5 /* StatusEffects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StatusEffects.json; path = "World Data/StatusEffects.json"; sourceTree = "<group>"; };
 		F2473B151C8382C9008FD65B /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		F2473B171C8382E6008FD65B /* Spells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Spells.json; path = "World Data/Spells.json"; sourceTree = "<group>"; };
 		F2473B1E1C83B307008FD65B /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
@@ -782,6 +788,7 @@
 		F21ECDEF1C7A5341008041E9 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				F24482951DCD3A0C00D9E5E5 /* Status Effects */,
 				F219726A1DBA4A1D0025F0C8 /* Lore */,
 				F2F909A91D42A96D005F8662 /* Insanities */,
 				F28C2B291CD0877D00E106DD /* Names */,
@@ -960,6 +967,15 @@
 				F2350B051C7BCEE800D6E18E /* HeroListViewController.swift */,
 			);
 			name = "Hero List";
+			sourceTree = "<group>";
+		};
+		F24482951DCD3A0C00D9E5E5 /* Status Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */,
+				F244829A1DCD3B0500D9E5E5 /* StatusEffects.json */,
+			);
+			name = "Status Effects";
 			sourceTree = "<group>";
 		};
 		F2473B141C8382BE008FD65B /* Spells */ = {
@@ -1250,6 +1266,7 @@
 				F28C2B261CD07CB200E106DD /* Notes.json in Resources */,
 				F21ECE341C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
+				F244829B1DCD3B0500D9E5E5 /* StatusEffects.json in Resources */,
 				F22788111D6BA77600324167 /* StatCell.xib in Resources */,
 				F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
@@ -1501,6 +1518,7 @@
 				F222709E1D6D7465007FEFA0 /* MonsterStat.swift in Sources */,
 				F28C2B541CD0889000E106DD /* NamesViewController.swift in Sources */,
 				F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
+				F24482971DCD3A1600D9E5E5 /* StatusEffect.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
@@ -1588,6 +1606,7 @@
 				F25187B71C922BB3003AD636 /* DropdownMenuFactory.swift in Sources */,
 				C3AB8F401C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F21ECE501C7A7E0E008041E9 /* Nameable.swift in Sources */,
+				F24482981DCD3A4800D9E5E5 /* StatusEffect.swift in Sources */,
 				F21ECDF71C7A5778008041E9 /* God.swift in Sources */,
 				F26C01F21CB197C100907164 /* DamageReduction.swift in Sources */,
 				F22270951D6D7038007FEFA0 /* CollectionViewExtensions.swift in Sources */,
@@ -1726,6 +1745,7 @@
 				F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,
 				F26C01E71CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
+				F24482991DCD3A4800D9E5E5 /* StatusEffect.swift in Sources */,
 				F26C01FB1CB1A16B00907164 /* EffectCell.swift in Sources */,
 				F251877E1C922756003AD636 /* ColorExtension.swift in Sources */,
 				C39ACBFA1C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,

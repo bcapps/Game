@@ -35,7 +35,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let flavor: String
     let itemSlot: ItemSlot
     let twoHanded: Bool
-    let statEffects: [StatEffect]
+    let statModifiers: [StatModifier]
     let damageReductions: [DamageReduction]
     let damageAvoidances: [DamageAvoidance]
     let attackModifiers: [AttackModifier]
@@ -67,7 +67,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             flavor: json => "flavor",
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
-            statEffects: json =>? "statEffects" ?? [],
+            statModifiers: json =>? "statModifiers" ?? [],
             damageReductions: json =>? "damageReductions" ?? [],
             damageAvoidances: json =>? "damageAvoidances" ?? [],
             attackModifiers: json =>? "attackModifiers" ?? [],
@@ -77,14 +77,14 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             spells: json =>? "spells" ?? [])
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statEffects: [StatEffect], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statModifiers: [StatModifier], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
         self.name = name
         self.damage = damage
         self.effects = effects
         self.flavor = flavor
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
-        self.statEffects = statEffects
+        self.statModifiers = statModifiers
         self.damageReductions = damageReductions
         self.damageAvoidances = damageAvoidances
         self.attackModifiers = attackModifiers

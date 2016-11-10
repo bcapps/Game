@@ -44,9 +44,7 @@ final class SpellCoder: NSObject, Coder {
     }
     
     init?(coder aDecoder: NSCoder) {
-        let rawName = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String
-        
-        guard let name = rawName else { return nil }
+        guard let name = aDecoder.decodeObject(forKey: Keys.Name.rawValue) as? String else { return nil }
         
         value = ObjectProvider.spellForName(name)
         

@@ -9,12 +9,12 @@
 import Foundation
 import Decodable
 
-struct StatEffect: Decodable {
+struct StatModifier: Decodable {
     let stat: String
     let value: Int
     
-    static func decode(_ json: Any) throws -> StatEffect {
-        return try StatEffect(stat: json => "stat",
+    static func decode(_ json: Any) throws -> StatModifier {
+        return try StatModifier(stat: json => "stat",
                               value: json => "value")
     }
 }

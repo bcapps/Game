@@ -142,11 +142,11 @@ final class Hero: Codeable, Nameable {
         var statModifier = 0
         
         for item in inventory.equippedItems {
-            statModifier += item.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
+            statModifier += item.statModifiers.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         for itemSet in inventory.equippedItemSets {
-            statModifier += itemSet.statEffects.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
+            statModifier += itemSet.statModifiers.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return statModifier

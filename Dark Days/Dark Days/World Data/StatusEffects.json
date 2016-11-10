@@ -1,0 +1,20 @@
+ [{
+  "name": "Weakened",
+  "statModifiers": [{"stat": "STR", "value": -2}],
+  }, {
+  "name": "Inspired",
+  "attackModifiers": [{"name": "Physical", "value": 1},
+                      {"name": "Magical", "value": 1}],
+  }, {
+  "name": "Giant Form",
+  "statModifiers": [{"stat": "STR", "value": 2}]
+  }, {
+  "name": "X",
+  "damageReductions": [{"name": "Magical", "value": 1}],
+  }, {
+  "name": "Y",
+  "damageAvoidances": [{"name": "Physical", "value": -1}],
+  }, {
+  "name": "Z",
+  "damageModifiers": [{"name": "Physical", "value": 2}]
+  }]
