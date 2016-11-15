@@ -45,6 +45,10 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("MapViewController") as? MapViewController
     }
     
+    static func statusEffectsViewController() -> StatusesCollectionViewController? {
+        return initialViewControllerFromStoryboardNamed("StatusesCollectionViewController") as? StatusesCollectionViewController
+    }
+    
     fileprivate static func initialViewControllerFromStoryboardNamed(_ storyboardName: String) -> UIViewController? {
         return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateInitialViewController()
     }

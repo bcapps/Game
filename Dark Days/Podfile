@@ -8,7 +8,8 @@ abstract_target 'defaults' do
     pod 'Decodable'
     pod 'HockeySDK'
     pod 'REMenu'
-
+    pod 'BEMCheckBox'
+    
     target 'Dark Days'
     target 'Dark DaysTests'
 

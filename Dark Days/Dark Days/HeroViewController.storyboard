@@ -175,7 +175,7 @@
                                     <action selector="itemSetButtonTapped:" destination="GVh-lf-OHh" eventType="touchUpInside" id="H89-XM-8Y3"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pil-ho-AAs" userLabel="Status Effect List Button">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pil-ho-AAs" userLabel="Status Effect List Button">
                                 <rect key="frame" x="319" y="565" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pil-ho-AAs" secondAttribute="height" multiplier="1:1" id="cWa-Yh-Ics"/>

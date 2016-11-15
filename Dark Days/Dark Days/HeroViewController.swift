@@ -282,7 +282,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     private func presentStatusEffectList() {
+        guard let statusEffectList = UIStoryboard.statusEffectsViewController() else { return }
         
+        navigationController?.show(statusEffectList, sender: self)
     }
     
     fileprivate func presentWorldMap() {
