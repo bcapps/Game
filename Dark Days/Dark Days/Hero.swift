@@ -32,7 +32,7 @@ final class Hero: Codeable, Nameable {
     var maximumHealth: Int {
         get {
             if let constitution = stats.filter({$0.statType == .Constitution}).first {
-                return 10 + (constitution.currentValue * 3)
+                return 10 + (constitution.currentValue * 4)
             }
             
             return 10
@@ -58,7 +58,7 @@ final class Hero: Codeable, Nameable {
         
         switch type {
         case .Poison:
-            reductionCounter += statValueForType(.Constitution)
+            reductionCounter += statValueForType(.Constitution) / 2
         default:
             reductionCounter += 0
         }
