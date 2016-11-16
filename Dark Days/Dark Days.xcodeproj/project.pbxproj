@@ -38,6 +38,7 @@
 		C3BC40491C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */; };
 		F2063A691CB8992900494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
 		F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2063A681CB8992900494184 /* HeroToolsViewController.swift */; };
+		F20B7D061DDBCF6D0024E2FC /* StatusEffectLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7D051DDBCF6D0024E2FC /* StatusEffectLayout.swift */; };
 		F216E9A21D7A2AFB0039F07B /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216E9A11D7A2AFB0039F07B /* CrashManager.swift */; };
 		F219726C1DBA4A390025F0C8 /* Lore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219726B1DBA4A390025F0C8 /* Lore.swift */; };
 		F219726F1DBA4A7A0025F0C8 /* Lore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219726B1DBA4A390025F0C8 /* Lore.swift */; };
@@ -429,6 +430,7 @@
 		C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerMessaging.swift; sourceTree = "<group>"; };
 		C3C32770AA179F26D97485EF /* Pods-Dark Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Days/Pods-Dark Days.debug.xcconfig"; sourceTree = "<group>"; };
 		F2063A681CB8992900494184 /* HeroToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroToolsViewController.swift; sourceTree = "<group>"; };
+		F20B7D051DDBCF6D0024E2FC /* StatusEffectLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusEffectLayout.swift; sourceTree = "<group>"; };
 		F216E9A11D7A2AFB0039F07B /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		F219726B1DBA4A390025F0C8 /* Lore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lore.swift; sourceTree = "<group>"; };
 		F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoreBookViewController.swift; sourceTree = "<group>"; };
@@ -1147,6 +1149,7 @@
 				F2A888291DDA630800E5B479 /* StatusesCollectionViewController.storyboard */,
 				F2A888211DDA622000E5B479 /* StatusesCollectionViewController.swift */,
 				F2A888251DDA62BC00E5B479 /* StatusEffectCell.swift */,
+				F20B7D051DDBCF6D0024E2FC /* StatusEffectLayout.swift */,
 			);
 			name = "Status Effects";
 			sourceTree = "<group>";
@@ -1550,6 +1553,7 @@
 				F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F24482971DCD3A1600D9E5E5 /* StatusEffect.swift in Sources */,
 				F21ECDFA1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
+				F20B7D061DDBCF6D0024E2FC /* StatusEffectLayout.swift in Sources */,
 				F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */,
 				F26C01E51CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F25187911C922B9B003AD636 /* ColorExtension.swift in Sources */,
@@ -1862,7 +1866,7 @@
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1904,7 +1908,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1926,7 +1930,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1945,7 +1948,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1962,7 +1964,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Debug;
@@ -1979,7 +1980,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-DaysTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark DaysTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Days.app/Dark Days";
 			};
 			name = Release;

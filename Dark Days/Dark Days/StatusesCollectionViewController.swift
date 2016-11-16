@@ -11,11 +11,17 @@ import UIKit
 final class StatusesCollectionViewController: UICollectionViewController {
     let statuses: [StatusEffect] = ObjectProvider.objectsForJSON("StatusEffects")
     
+    var hero: Hero? {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView?.collectionViewLayout = StatusEffectLayout()
         collectionView?.backgroundColor = .backgroundColor()
-        //collectionView.estimatedRowHeight = 40
     }
 }
 
@@ -33,7 +39,29 @@ extension StatusesCollectionViewController {
         
         cell?.backgroundColor = collectionView.backgroundColor
         cell?.nameLabel.attributedText = NSAttributedString(string: status.name, attributes: [NSFontAttributeName: UIFont.smallFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor()])
-
+        cell?.checkBox.setOn(hero?.currentStatusEffects.contains(status) ?? false, animated: false)
+        
         return cell ?? UICollectionViewCell()
+    }
+}
+
+extension StatusesCollectionViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) as? StatusEffectCell else { return }
+        guard let hero = hero else { return }
+        
+        var enableBox: Bool = true
+        let status = statuses[indexPath.row]
+
+        if hero.currentStatusEffects.contains(status) {
+            enableBox = false
+            hero.currentStatusEffects.removeObject(status)
+        } else {
+            enableBox = true
+            hero.currentStatusEffects.append(status)
+        }
+        
+        selectedCell.checkBox.setOn(enableBox, animated: true)
     }
 }

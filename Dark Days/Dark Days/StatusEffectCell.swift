@@ -12,4 +12,11 @@ import BEMCheckBox
 final class StatusEffectCell: UICollectionViewCell {
     @IBOutlet weak var checkBox: BEMCheckBox!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        checkBox.onAnimationType = .bounce
+        checkBox.offAnimationType = .bounce
+    }
 }

@@ -38,12 +38,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
 //            
 //            multipeer?.startMultipeerConnectivity()
 //            multipeer?.addEventListener(self)
-            
-            effectsViewController?.hero = hero
         }
     }
     
-    fileprivate let effectsViewController = UIStoryboard.effectsViewController()
     fileprivate var healthViewController: HealthViewController?
     
     fileprivate var menu: REMenu?
@@ -113,7 +110,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     @IBAction func effectsViewButtonTapped(_ sender: AnyObject) {
-        guard let evc = effectsViewController else { return }
+        guard let evc = UIStoryboard.effectsViewController() else { return }
+        evc.hero = hero
+        
         let container = ContainingViewController(containedViewController: evc, footerView: nil)
         container.view.frame = view.bounds
         
@@ -126,6 +125,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     @IBAction func statusEffectListButtonTapped(_ sender: AnyObject) {
+        
         presentStatusEffectList()
     }
     
@@ -189,7 +189,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         }
         
         collectionView.reloadData()
-        effectsViewController?.tableView?.reloadData()
     }
     
     fileprivate func equipmentButton(_ equipmentSlot: EquipmentButton.EquipmentSlot) -> EquipmentButton? {
@@ -283,6 +282,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     private func presentStatusEffectList() {
         guard let statusEffectList = UIStoryboard.statusEffectsViewController() else { return }
+        statusEffectList.hero = hero
         
         navigationController?.show(statusEffectList, sender: self)
     }
@@ -372,10 +372,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         paragraphStyle.lineBreakMode = .byTruncatingTail
                 
         goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
-    }
-    
-    fileprivate func setEffectsViewHidden(_ hidden: Bool) {
-        effectsViewController?.view.isHidden = hidden
     }
     
     //MARK: UICollectionViewDataSource

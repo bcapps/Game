@@ -27,6 +27,7 @@ final class Hero: Codeable, Nameable {
     let god: God?
     let uniqueID: String
     
+    var currentStatusEffects: [StatusEffect] = []
     var currentHealth: Int = 0
     var maximumHealth: Int {
         get {
@@ -49,7 +50,7 @@ final class Hero: Codeable, Nameable {
         
         guard let stat = optionalStat else { return 0 }
         
-        return stat.currentValue + statModifierForEquippedItemsForStat(stat)
+        return stat.currentValue + statModifierForEquippedItemsForStat(stat) + statModifierForCurrentStatuses(forStat: stat)
     }
     
     func damageReductionForReductionType(_ type: DamageReduction.ReductionType) -> Int {
@@ -68,6 +69,10 @@ final class Hero: Codeable, Nameable {
         
         for itemSet in inventory.equippedItemSets {
             reductionCounter += itemSet.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
+        for status in currentStatusEffects {
+            reductionCounter += status.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return reductionCounter
@@ -93,6 +98,10 @@ final class Hero: Codeable, Nameable {
             avoidanceCounter += itemSet.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
+        for status in currentStatusEffects {
+            avoidanceCounter += status.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
         return avoidanceCounter
     }
     
@@ -112,6 +121,10 @@ final class Hero: Codeable, Nameable {
         
         for itemSet in inventory.equippedItemSets {
             damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
+        for status in currentStatusEffects {
+            damageModifier += status.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
         return damageModifier
@@ -135,6 +148,10 @@ final class Hero: Codeable, Nameable {
             attackModifier += itemSet.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
         }
         
+        for status in currentStatusEffects {
+            attackModifier += status.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
         return attackModifier
     }
     
@@ -150,6 +167,10 @@ final class Hero: Codeable, Nameable {
         }
         
         return statModifier
+    }
+    
+    func statModifierForCurrentStatuses(forStat stat: Stat) -> Int {
+        return currentStatusEffects.map { $0.statModifiers }.joined().filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
     }
     
     init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {
@@ -181,6 +202,7 @@ final class HeroCoder: NSObject, Coder {
         case God
         case UniqueID
         case CurrentHealth
+        case CurrentStatusEffects
     }
     
     var value: Hero?
@@ -201,11 +223,13 @@ final class HeroCoder: NSObject, Coder {
         let rawUniqueID = aDecoder.decodeObject(forKey: Keys.UniqueID.rawValue) as? String
         let rawMagicType = aDecoder.decodeObject(forKey: Keys.MagicType.rawValue) as? MagicTypeCoder
         let rawGod = aDecoder.decodeObject(forKey: Keys.God.rawValue) as? GodCoder
+        let rawStatusEffects = aDecoder.decodeObject(forKey: Keys.CurrentStatusEffects.rawValue) as? [StatusEffectCoder]
         
         guard let name = rawName, let gender = Gender(rawValue: rawGender ?? ""), let stats = rawStats?.objects, let race = rawRace?.value, let skills = rawSkills?.objects, let spells = rawSpells?.objects, let inventory = rawInventory?.value, let magicType = rawMagicType?.value, let uniqueID = rawUniqueID else { return nil }
         
         value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
         value?.currentHealth = aDecoder.decodeInteger(forKey: Keys.CurrentHealth.rawValue) 
+        value?.currentStatusEffects = rawStatusEffects?.objects ?? []
         
         super.init()
     }
@@ -224,6 +248,7 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encode(InventoryCoder(value: value.inventory), forKey: Keys.Inventory.rawValue)
         aCoder.encode(value.uniqueID, forKey: Keys.UniqueID.rawValue)
         aCoder.encode(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
+        aCoder.encode(value.currentStatusEffects.coders, forKey: Keys.CurrentStatusEffects.rawValue)
         
         if let god = value.god {
             aCoder.encode(GodCoder(value: god), forKey: Keys.God.rawValue)
