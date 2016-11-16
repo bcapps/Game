@@ -20,7 +20,7 @@ final class StatusesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.collectionViewLayout = StatusEffectLayout()
+        collectionView?.collectionViewLayout = ColumnLayout(numberOfColumns: 3, rowHeight: 75)
         collectionView?.backgroundColor = .backgroundColor()
     }
 }

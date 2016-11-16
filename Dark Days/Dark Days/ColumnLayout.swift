@@ -8,15 +8,26 @@
 
 import Foundation
 
-public class StatusEffectLayout: UICollectionViewFlowLayout {
+public class ColumnLayout: UICollectionViewFlowLayout {
     
-    override init() {
+    private let numberOfColumns: CGFloat
+    private let rowHeight: Int
+    
+    init(numberOfColumns: CGFloat, rowHeight: Int) {
+        self.numberOfColumns = numberOfColumns
+        self.rowHeight = rowHeight
+        
         super.init()
+
         setupLayout()
     }
     
     required public init?(coder aDecoder: NSCoder) {
+        numberOfColumns = 1
+        rowHeight = 75
+        
         super.init(coder: aDecoder)
+        
         setupLayout()
     }
     
@@ -29,12 +40,10 @@ public class StatusEffectLayout: UICollectionViewFlowLayout {
     override public var itemSize: CGSize {
         set { }
         get {
-            let numberOfColumns: CGFloat = 3
-            
             let totalSpace = sectionInset.left + sectionInset.right + (minimumInteritemSpacing * (numberOfColumns - 1))
             let width = Int((collectionView?.bounds.width ?? 0 - totalSpace) / numberOfColumns)
             
-            return CGSize(width: width, height: 75)
+            return CGSize(width: width, height: rowHeight)
         }
     }
 }

@@ -12,11 +12,18 @@ final class LoreBookViewController: UITableViewController {
     
     enum LoreType: Int {
         case god
+        case calendar
+        
+        static var numberOfLoreTypes: Int {
+            return 2
+        }
         
         var loreTypeDisplayString: String {
             switch self {
             case .god:
                 return "The Gods of Idris"
+            case .calendar:
+                return "Calendar"
             }
         }
         
@@ -24,6 +31,8 @@ final class LoreBookViewController: UITableViewController {
             switch self {
             case .god:
                 return ListViewController<God>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Gods"))], delegate: nil)
+            case .calendar:
+                return UIStoryboard.calendarViewController()
             }
         }
     }
@@ -39,7 +48,7 @@ final class LoreBookViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return LoreType.numberOfLoreTypes
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

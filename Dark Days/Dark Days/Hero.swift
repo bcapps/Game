@@ -58,7 +58,7 @@ final class Hero: Codeable, Nameable {
         
         switch type {
         case .Poison:
-            reductionCounter += statValueForType(.Constitution) / 2
+            reductionCounter += Int(ceil(Double(statValueForType(.Constitution)) / 2))
         default:
             reductionCounter += 0
         }

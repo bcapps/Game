@@ -79,11 +79,11 @@ final class ObjectProvider {
         return objects.filter({$0.name == objectName}).first
     }
     
-    fileprivate static func JSONArrayForName(_ JSONName: String) -> [[String: AnyObject]]? {
+    static func JSONArrayForName(_ JSONName: String) -> [[String: AnyObject]]? {
         return JSONObjectForName(JSONName) ?? []
     }
     
-    fileprivate static func JSONDictionaryForName(_ JSONName: String) -> [String: AnyObject]? {
+    static func JSONDictionaryForName(_ JSONName: String) -> [String: AnyObject]? {
         return JSONObjectForName(JSONName) ?? [String: AnyObject]()
     }
     

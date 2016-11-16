@@ -49,6 +49,14 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("StatusesCollectionViewController") as? StatusesCollectionViewController
     }
     
+    static func calendarViewController() -> CalendarViewController? {
+        return initialViewControllerFromStoryboardNamed("CalendarViewController") as? CalendarViewController
+    }
+    
+    static func monthViewController() -> MonthViewController? {
+        return initialViewControllerFromStoryboardNamed("MonthViewController") as? MonthViewController
+    }
+    
     fileprivate static func initialViewControllerFromStoryboardNamed(_ storyboardName: String) -> UIViewController? {
         return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateInitialViewController()
     }

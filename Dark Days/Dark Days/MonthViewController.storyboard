@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bq1-Qr-W4O">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Month View Controller-->
+        <scene sceneID="4Sa-7W-wN9">
+            <objects>
+                <collectionViewController id="Bq1-Qr-W4O" customClass="MonthViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="9OW-nT-Iwf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NCB-7Q-LD8">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DayCellReuseIdentifier" id="e1I-zJ-v8q" customClass="MonthDayCell" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm9-4f-fQ1">
+                                            <rect key="frame" x="11" y="11" width="28" height="28"/>
+                                            <color key="backgroundColor" red="0.9392816424369812" green="0.93943887948989868" blue="0.93926090002059937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfe-tg-TWY">
+                                            <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="nfe-tg-TWY" secondAttribute="trailing" id="Pyr-tO-2VR"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="nfe-tg-TWY" secondAttribute="bottom" id="cF4-Xk-XxH"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="pm9-4f-fQ1" secondAttribute="bottom" constant="3" id="iSn-CV-oBi"/>
+                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="leading" secondItem="e1I-zJ-v8q" secondAttribute="leadingMargin" constant="3" id="kc3-LR-Zpd"/>
+                                    <constraint firstItem="nfe-tg-TWY" firstAttribute="leading" secondItem="e1I-zJ-v8q" secondAttribute="leadingMargin" id="qZU-Yb-F6j"/>
+                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="top" secondItem="e1I-zJ-v8q" secondAttribute="topMargin" constant="3" id="szJ-jN-dP1"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="pm9-4f-fQ1" secondAttribute="trailing" constant="3" id="uXn-zD-XaZ"/>
+                                    <constraint firstItem="nfe-tg-TWY" firstAttribute="top" secondItem="e1I-zJ-v8q" secondAttribute="topMargin" id="xVi-vz-xdC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dayNumberLabel" destination="nfe-tg-TWY" id="TdS-h8-5aP"/>
+                                    <outlet property="highlightView" destination="pm9-4f-fQ1" id="WvK-jE-elr"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MonthHeaderReuseIdentifier" id="Hws-DO-6CP" customClass="MonthHeaderView" customModule="Dark_Days" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3t-A6-zHh">
+                                    <rect key="frame" x="8" y="8" width="359" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="s3t-A6-zHh" firstAttribute="top" secondItem="Hws-DO-6CP" secondAttribute="topMargin" id="4ji-ei-YJ2"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="s3t-A6-zHh" secondAttribute="bottom" id="MCB-wX-byg"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="s3t-A6-zHh" secondAttribute="trailing" id="hgH-ym-V9t"/>
+                                <constraint firstItem="s3t-A6-zHh" firstAttribute="leading" secondItem="Hws-DO-6CP" secondAttribute="leadingMargin" id="wbh-Tp-uob"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="monthNameLabel" destination="s3t-A6-zHh" id="9fz-Ct-Y9o"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="Bq1-Qr-W4O" id="Ti2-7u-nY9"/>
+                            <outlet property="delegate" destination="Bq1-Qr-W4O" id="6jH-3F-vhA"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gny-gK-ky3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="-161"/>
+        </scene>
+    </scenes>
+</document>

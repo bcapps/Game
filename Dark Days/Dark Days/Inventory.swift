@@ -20,8 +20,6 @@ final class Inventory {
     
     var equippedItemSets: [ItemSet] {
         get {
-            let x: [ItemSet] = ObjectProvider.objectsForJSON("ItemSets")
-            print(x)
             return ObjectProvider.objectsForJSON("ItemSets").filter { isItemSetEquipped($0) }
         }
     }
