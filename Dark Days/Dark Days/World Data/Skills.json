@@ -110,4 +110,8 @@
  "name": "Bloodletting",
  "explanation": "The fresh crimson rain upon the ground can create a beautiful tapestry.",
  "benefit": "Slice at an enemy several times, opening its major veins. Every time the enemy moves it will take 1d6 physical damage until its wounds are closed, or it dies. Must be wielding a sharp weapon."
+ }, {
+ "name": "Meditation",
+ "explanation": "The calm mind, makes for a calm body.",
+ "benefit": "Once per day, you may take a brief rest to restore 1/2 of your health. You may not be in combat while meditating."
  }]

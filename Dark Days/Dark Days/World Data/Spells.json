@@ -158,4 +158,9 @@
  "damage": "",
  "effects": "Creates a spiritual bird that carries a single sentence message to another person by conjuring their image in your mind. The duration the bird can travel is longer based on your faith. (SV)",
  "flavor": "Light as a feather, free as a bird."
+ }, {
+ "name": "Silence",
+ "damage": "",
+ "effects": "Silences a single target creature, preventing them from speaking or casting spells with a verbal component. This lasts until the end of the encounter. (SV)",
+ "flavor": "I'm sorry? What was that? Felbeast got your tongue?"
  }]
