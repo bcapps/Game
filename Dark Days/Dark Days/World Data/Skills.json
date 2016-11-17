@@ -77,7 +77,7 @@
  }, {
  "name": "Bonebreaker",
  "explanation": "Bones, bones, break the bones. Don't miss none, in your haste. Bones, bones, break the bones. Grind them up, into paste!",
- "benefit": "While wielding a blunt weapon, you may attempt an attack at -2 to hit to break a bone in the specified limb of an opponent. If successful, the opponent loses use of that limb, and has -2 to Dexterity."
+ "benefit": "While wielding a blunt weapon, you may attempt an attack at -2 to hit to break a bone in the specified limb of an opponent. If successful, the opponent loses use of that limb, and has -3 to Dexterity."
  }, {
  "name": "Darkvision",
  "explanation": "All I see is darkness. Oh, my hood is down.",
@@ -98,4 +98,16 @@
  "name": "Trip",
  "explanation": "ON YOUR KNEES!",
  "benefit": "The target must make a DC 10 + STR check to avoid being tripped. The target must have legs."
+ }, {
+ "name": "Hack",
+ "explanation": "The dwarves are savage creatures. They'll hack your legs out from under you, just to get to your head.",
+ "benefit": "Chop at an enemies legs, crippling the enemy which reduces their movement by half and their chance to dodge by 2. Must be wielding a sharp weapon."
+ }, {
+ "name": "Backstab",
+ "explanation": "Some say it's a cowards move. I say, whoever's still alive won the fight.",
+ "benefit": "Roll an extra 1d4 damage when attacking an enemy from behind. Must be wielding a dagger. The enemy must have a back to roll for this extra damage."
+ }, {
+ "name": "Bloodletting",
+ "explanation": "The fresh crimson rain upon the ground can create a beautiful tapestry.",
+ "benefit": "Slice at an enemy several times, opening its major veins. Every time the enemy moves it will take 1d6 physical damage until its wounds are closed, or it dies. Must be wielding a sharp weapon."
  }]
