@@ -16,6 +16,9 @@ final class StatusEffectCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        checkBox.onTintColor = .white
+        checkBox.onCheckColor = .white
+        
         checkBox.onAnimationType = .bounce
         checkBox.offAnimationType = .bounce
     }
