@@ -114,4 +114,8 @@
  "name": "Meditation",
  "explanation": "The calm mind, makes for a calm body.",
  "benefit": "Once per day, you may take a brief rest to restore 1/2 of your health. You may not be in combat while meditating."
+ }, {
+ "name": "Aggressive Bellow",
+ "explanation": "A common defense in nature is to make yourself appear more threatening. Let's hope for your sake, you actually are.",
+ "benefit": "Once per encounter, you let out a piercing howl that forces all enemies within 10 yards to make an DC 15 + INT check, or be forced to attack you."
  }]

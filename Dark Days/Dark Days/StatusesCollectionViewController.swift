@@ -9,7 +9,7 @@
 import UIKit
 
 final class StatusesCollectionViewController: UICollectionViewController {
-    let statuses: [StatusEffect] = ObjectProvider.objectsForJSON("StatusEffects")
+    let statuses: [StatusEffect] = ObjectProvider.objectsForJSON("StatusEffects").sorted { $0.name < $1.name }
     
     var hero: Hero? {
         didSet {

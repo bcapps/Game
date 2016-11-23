@@ -162,5 +162,20 @@
  "name": "Silence",
  "damage": "",
  "effects": "Silences a single target creature, preventing them from speaking or casting spells with a verbal component. This lasts until the end of the encounter. (SV)",
- "flavor": "I'm sorry? What was that? Felbeast got your tongue?"
+ "flavor": "I'm sorry? What was that? Snel got your tongue?"
+ }, {
+ "name": "Demitas's Greed",
+ "damage": "",
+ "effects": "Once per encounter, for the encounter, you may imbue your attacks with powerful magic that allow you to create money out of blood. If you get the killing blow on any creature, roll a d20. (SV)\n 1-5:  5 gold\n 6-10:  20 gold.\n 11-15:  40 gold.\n 16-19:  80 gold.\n 20:  150 gold.",
+ "flavor": "Gold is only good if it's drenched in blood. That's how you know it's real."
+ }, {
+ "name": "Chaotic Rage",
+ "damage": "",
+ "effects": "Once per day, conjure and consume a chemical potion that has a random effect on you. Roll a d4. (S)\n1: You cannot be stunned, charmed, or poisoned for an entire day.\n2: You can attack twice on your next two turns.\n3: Your speed increases to unnatural levels, adding +2 to your chance to avoid attacks.\n4: Regain 2d4 hit points immediately, and 2d6 hit points at the start of your next turn.",
+ "flavor": "Variety is the spice of life!"
+ }, {
+ "name": "Flame Guard",
+ "damage": "",
+ "effects": "Once per encounter, for the encounter, surround yourself with a wave of fire. This grants you an immunity to fire damage. Any enemy that attempts to strike you with a melee weapon, must make a DC 11 DEX check to avoid being burned for 1d8 fire damage. (SV)",
+ "flavor": "An enemy will not be allowed to approach without difficulty."
  }]
