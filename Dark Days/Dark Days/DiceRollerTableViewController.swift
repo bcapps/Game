@@ -10,7 +10,7 @@ import UIKit
 
 final class DiceRollerTableViewController: UITableViewController {
     
-    var currentDiceTotals: [Dice: Int] = [.d2:0, .d4:0, .d6:0, .d8:0, .d10:0, .d12:0, .d20:0]
+    var currentDiceTotals: [Dice: Int] = [.d2:1, .d4:1, .d6:1, .d8:1, .d10:1, .d12:1, .d20:1]
     var currentDiceResults: [Dice: Int] = [.d2:0, .d4:0, .d6:0, .d8:0, .d10:0, .d12:0, .d20:0]
     
     override func viewDidLoad() {
@@ -25,6 +25,12 @@ final class DiceRollerTableViewController: UITableViewController {
     
     @IBAction func rollButtonTapped(_ sender: UIBarButtonItem) {
         rollAllDice()
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == .motionShake {
+            rollAllDice()
+        }
     }
     
     private func rollAllDice() {

@@ -23,7 +23,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3yK-hR-R18">
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3yK-hR-R18">
                             <rect key="frame" x="19.5" y="45" width="94" height="29"/>
                             <connections>
                                 <action selector="stepperValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="oYP-vs-hy9"/>
