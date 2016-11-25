@@ -57,6 +57,10 @@ extension UIStoryboard {
         return initialViewControllerFromStoryboardNamed("MonthViewController") as? MonthViewController
     }
     
+    static func diceRollerViewController() -> DiceRollerTableViewController? {
+        return initialViewControllerFromStoryboardNamed("DiceRollerTableViewController") as? DiceRollerTableViewController
+    }
+    
     fileprivate static func initialViewControllerFromStoryboardNamed(_ storyboardName: String) -> UIViewController? {
         return UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateInitialViewController()
     }

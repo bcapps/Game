@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yyr-AR-Qgl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dice Roller-->
+        <scene sceneID="JVX-Ko-2IW">
+            <objects>
+                <tableViewController id="yyr-AR-Qgl" customClass="DiceRollerTableViewController" customModule="Dark_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2ej-Hy-axs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiceRollerCell" rowHeight="80" id="cVW-Hx-yFV" customClass="DiceRollerCell" customModule="Dark_Days" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cVW-Hx-yFV" id="zPq-8A-qa7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LSn-DX-TbR">
+                                            <rect key="frame" x="8" y="8" width="359" height="44"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oIS-XO-JsJ" customClass="DiceStepperView" customModule="Dark_Days" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="0.0" width="208" height="44"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="44" image="d20" translatesAutoresizingMaskIntoConstraints="NO" id="eRh-x0-aDX">
+                                                    <rect key="frame" x="233" y="0.0" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="eRh-x0-aDX" secondAttribute="height" multiplier="1:1" id="5ue-UJ-k1m"/>
+                                                        <constraint firstAttribute="width" constant="44" id="bKh-rk-ZPI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8P-rh-Jqv">
+                                                    <rect key="frame" x="292" y="0.0" width="47" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="20"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LSn-DX-TbR" secondAttribute="trailing" id="ArB-KG-hRp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="LSn-DX-TbR" secondAttribute="bottom" id="KdN-2i-SJT"/>
+                                        <constraint firstItem="LSn-DX-TbR" firstAttribute="top" secondItem="zPq-8A-qa7" secondAttribute="topMargin" id="qms-Wp-mcU"/>
+                                        <constraint firstItem="LSn-DX-TbR" firstAttribute="leading" secondItem="zPq-8A-qa7" secondAttribute="leadingMargin" id="tqQ-Rr-q9Q"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="diceImageView" destination="eRh-x0-aDX" id="6hJ-hv-6Zj"/>
+                                    <outlet property="diceStepperView" destination="oIS-XO-JsJ" id="R4v-HT-hmb"/>
+                                    <outlet property="numberRolledLabel" destination="B8P-rh-Jqv" id="1m9-5I-Ojn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yyr-AR-Qgl" id="q5A-by-d7Q"/>
+                            <outlet property="delegate" destination="yyr-AR-Qgl" id="bEU-zi-GS0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dice Roller" id="Rsh-ND-nPZ">
+                        <barButtonItem key="rightBarButtonItem" title="Roll" id="NT3-kw-KAW">
+                            <connections>
+                                <action selector="rollButtonTapped:" destination="yyr-AR-Qgl" id="oAu-hM-lcK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guJ-Pe-Psd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="167"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="d20" width="16" height="16"/>
+    </resources>
+</document>

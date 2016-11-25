@@ -266,6 +266,21 @@
 		F25187DE1C961132003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
 		F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25187DD1C961132003AD636 /* UnequipButton.swift */; };
+		F2649E6C1DE7C19C00BD820C /* DiceRoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6B1DE7C19C00BD820C /* DiceRoller.swift */; };
+		F2649E6D1DE7C38F00BD820C /* DiceRoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6B1DE7C19C00BD820C /* DiceRoller.swift */; };
+		F2649E6E1DE7C38F00BD820C /* DiceRoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6B1DE7C19C00BD820C /* DiceRoller.swift */; };
+		F2649E701DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6F1DE7C40A00BD820C /* DiceRollerTableViewController.swift */; };
+		F2649E711DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6F1DE7C40A00BD820C /* DiceRollerTableViewController.swift */; };
+		F2649E721DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E6F1DE7C40A00BD820C /* DiceRollerTableViewController.swift */; };
+		F2649E741DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2649E731DE7C41800BD820C /* DiceRollerTableViewController.storyboard */; };
+		F2649E751DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2649E731DE7C41800BD820C /* DiceRollerTableViewController.storyboard */; };
+		F2649E761DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2649E731DE7C41800BD820C /* DiceRollerTableViewController.storyboard */; };
+		F2649E781DE7CD8600BD820C /* DiceRollerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E771DE7CD8600BD820C /* DiceRollerCell.swift */; };
+		F2649E791DE7CD8600BD820C /* DiceRollerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E771DE7CD8600BD820C /* DiceRollerCell.swift */; };
+		F2649E7A1DE7CD8600BD820C /* DiceRollerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649E771DE7CD8600BD820C /* DiceRollerCell.swift */; };
+		F2649E7D1DE7DA8000BD820C /* DiceStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2649E7C1DE7DA8000BD820C /* DiceStepperView.xib */; };
+		F2649E7E1DE7DA8000BD820C /* DiceStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2649E7C1DE7DA8000BD820C /* DiceStepperView.xib */; };
+		F2649E7F1DE7DA8000BD820C /* DiceStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2649E7C1DE7DA8000BD820C /* DiceStepperView.xib */; };
 		F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
 		F26C01E11CAE239100907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
 		F26C01E21CAE239200907164 /* MonsterAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C01DF1CAE238E00907164 /* MonsterAttack.swift */; };
@@ -541,6 +556,11 @@
 		F251878B1C922B6D003AD636 /* ToolsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsListViewController.swift; sourceTree = "<group>"; };
 		F25187D91C952065003AD636 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		F25187DD1C961132003AD636 /* UnequipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnequipButton.swift; sourceTree = "<group>"; };
+		F2649E6B1DE7C19C00BD820C /* DiceRoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRoller.swift; sourceTree = "<group>"; };
+		F2649E6F1DE7C40A00BD820C /* DiceRollerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRollerTableViewController.swift; sourceTree = "<group>"; };
+		F2649E731DE7C41800BD820C /* DiceRollerTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiceRollerTableViewController.storyboard; sourceTree = "<group>"; };
+		F2649E771DE7CD8600BD820C /* DiceRollerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRollerCell.swift; sourceTree = "<group>"; };
+		F2649E7C1DE7DA8000BD820C /* DiceStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiceStepperView.xib; sourceTree = "<group>"; };
 		F26C01DF1CAE238E00907164 /* MonsterAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttack.swift; sourceTree = "<group>"; };
 		F26C01E41CAF4ADC00907164 /* ContainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingViewController.swift; sourceTree = "<group>"; };
 		F26C01E81CB18B7600907164 /* StatEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatEffect.swift; sourceTree = "<group>"; };
@@ -1039,6 +1059,7 @@
 		F2473B1D1C83B2FB008FD65B /* Hero */ = {
 			isa = PBXGroup;
 			children = (
+				F2649E7B1DE7CD8A00BD820C /* Dice Roller */,
 				F2A888281DDA62D600E5B479 /* Modifiers */,
 				F2A888271DDA62C200E5B479 /* Status Effects */,
 				F29C55E81C96311700ED386E /* HealthViewController.swift */,
@@ -1109,6 +1130,18 @@
 				F25187D91C952065003AD636 /* StatCell.swift */,
 			);
 			name = "Stat Cell";
+			sourceTree = "<group>";
+		};
+		F2649E7B1DE7CD8A00BD820C /* Dice Roller */ = {
+			isa = PBXGroup;
+			children = (
+				F2649E6B1DE7C19C00BD820C /* DiceRoller.swift */,
+				F2649E771DE7CD8600BD820C /* DiceRollerCell.swift */,
+				F2649E6F1DE7C40A00BD820C /* DiceRollerTableViewController.swift */,
+				F2649E731DE7C41800BD820C /* DiceRollerTableViewController.storyboard */,
+				F2649E7C1DE7DA8000BD820C /* DiceStepperView.xib */,
+			);
+			name = "Dice Roller";
 			sourceTree = "<group>";
 		};
 		F26C01E31CAF4ACE00907164 /* ContainingVC */ = {
@@ -1345,6 +1378,7 @@
 				F28C2B0A1CC732DB00E106DD /* Quests.json in Resources */,
 				F2A8882A1DDA630800E5B479 /* StatusesCollectionViewController.storyboard in Resources */,
 				F2350AFD1C7ADAFA00D6E18E /* Monsters.json in Resources */,
+				F2649E7D1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F2473B181C8382E6008FD65B /* Spells.json in Resources */,
 				C3AB8F4E1C7D0753007CE0BA /* HeroCreation.storyboard in Resources */,
 				F2473B211C83B328008FD65B /* HeroViewController.storyboard in Resources */,
@@ -1376,6 +1410,7 @@
 				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
 				F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
+				F2649E741DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,6 +1421,7 @@
 				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
 				F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
 				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
+				F2649E7E1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F21ECE3E1C7A75F7008041E9 /* Towns.json in Resources */,
 				F28C2B451CD0878700E106DD /* RandomTavernNames.txt in Resources */,
 				F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
@@ -1403,6 +1439,7 @@
 				F28C2B481CD0878700E106DD /* RandomTownNames.txt in Resources */,
 				F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
 				F28C2B511CD0888700E106DD /* Names.storyboard in Resources */,
+				F2649E751DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,
 				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
 				F21ECE351C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE251C7A6634008041E9 /* Stats.json in Resources */,
@@ -1421,6 +1458,7 @@
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				F28C2B521CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B491CD0878700E106DD /* RandomTownNames.txt in Resources */,
+				F2649E7F1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE231C7A6634008041E9 /* Races.json in Resources */,
@@ -1441,6 +1479,7 @@
 				F28C2B431CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
+				F2649E761DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,
 				F25187C31C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F21ECE0D1C7A5F1C008041E9 /* ObjectProviderTestJSONDictionary.json in Resources */,
 				F28C2B1A1CC9886F00E106DD /* Quests.json in Resources */,
@@ -1567,6 +1606,7 @@
 				F21ECE411C7A7B94008041E9 /* Town.swift in Sources */,
 				F2350B881C81555900D6E18E /* ArrayRemoval.swift in Sources */,
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
+				F2649E781DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F20B7D1F1DDC2E260024E2FC /* MonthHeaderView.swift in Sources */,
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F28C2B081CC732CA00E106DD /* Quest.swift in Sources */,
@@ -1622,6 +1662,7 @@
 				F21ECDF61C7A5778008041E9 /* God.swift in Sources */,
 				F251878C1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F26C02011CB1D0A400907164 /* AttackModifier.swift in Sources */,
+				F2649E701DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */,
 				F21ECE7B1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F22788151D6BAA7800324167 /* MonsterView.swift in Sources */,
 				F2473B231C83B606008FD65B /* EquipmentButton.swift in Sources */,
@@ -1633,6 +1674,7 @@
 				F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */,
 				F20B7D111DDC294A0024E2FC /* MonthDayCell.swift in Sources */,
 				F29C55E91C96311700ED386E /* HealthViewController.swift in Sources */,
+				F2649E6C1DE7C19C00BD820C /* DiceRoller.swift in Sources */,
 				F22270981D6D709C007FEFA0 /* MonsterTrait.swift in Sources */,
 				F22270751D6D578C007FEFA0 /* MonsterSeparatorView.swift in Sources */,
 				F2350B061C7BCEE800D6E18E /* HeroListViewController.swift in Sources */,
@@ -1665,6 +1707,7 @@
 				F251877B1C92270A003AD636 /* AttributedStringExtension.swift in Sources */,
 				F2350AFF1C7ADB9B00D6E18E /* Monster.swift in Sources */,
 				F2A8882D1DDA667000E5B479 /* StatusEffectCell.swift in Sources */,
+				F2649E791DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F28C2B121CC7379500E106DD /* GenericCodingTests.swift in Sources */,
 				F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */,
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
@@ -1720,6 +1763,7 @@
 				F251879D1C922B9D003AD636 /* TableViewExtension.swift in Sources */,
 				F29B48521D63C62A00A92DAB /* ItemSet.swift in Sources */,
 				F2B571BF1DA71F8E0026B696 /* MapViewController.swift in Sources */,
+				F2649E711DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */,
 				F25187CA1C9373A0003AD636 /* HeroBuilder.swift in Sources */,
 				F25187C61C937366003AD636 /* Displayable.swift in Sources */,
 				F21972741DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
@@ -1731,6 +1775,7 @@
 				F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F20B7D181DDC29FE0024E2FC /* MonthDayCell.swift in Sources */,
 				F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */,
+				F2649E6D1DE7C38F00BD820C /* DiceRoller.swift in Sources */,
 				F21ECE311C7A6C7F008041E9 /* Skill.swift in Sources */,
 				F28C2B4C1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187B41C922BB3003AD636 /* EquipmentButton.swift in Sources */,
@@ -1786,10 +1831,12 @@
 				F28C2B281CD07D4300E106DD /* Note.swift in Sources */,
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
+				F2649E6E1DE7C38F00BD820C /* DiceRoller.swift in Sources */,
 				C3AB8F4A1C7CFA27007CE0BA /* Monster.swift in Sources */,
 				F2A6482D1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				F251877A1C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F21ECE321C7A6C7F008041E9 /* Skill.swift in Sources */,
+				F2649E721DE7C40A00BD820C /* DiceRollerTableViewController.swift in Sources */,
 				F21ECE3A1C7A7254008041E9 /* Item.swift in Sources */,
 				F2473B1B1C8382EC008FD65B /* Spell.swift in Sources */,
 				C3BC40491C9C5EEB0073677C /* MultipeerMessaging.swift in Sources */,
@@ -1826,6 +1873,7 @@
 				F25187701C92138C003AD636 /* LCKServiceAdvertiser.m in Sources */,
 				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
+				F2649E7A1DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F21972751DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */,

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DiceStepperView" customModule="Dark_Days" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8t6-Km-ISA">
+                    <rect key="frame" x="0.0" y="0.0" width="133" height="74"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjx-sC-p5i">
+                            <rect key="frame" x="61.5" y="0.0" width="10.5" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3yK-hR-R18">
+                            <rect key="frame" x="19.5" y="45" width="94" height="29"/>
+                            <connections>
+                                <action selector="stepperValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="oYP-vs-hy9"/>
+                            </connections>
+                        </stepper>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8t6-Km-ISA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5i8-2S-lBa"/>
+                <constraint firstItem="8t6-Km-ISA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CJ9-6J-BMS"/>
+                <constraint firstAttribute="bottom" secondItem="8t6-Km-ISA" secondAttribute="bottom" id="HVU-L6-MUh"/>
+                <constraint firstAttribute="trailing" secondItem="8t6-Km-ISA" secondAttribute="trailing" id="b6g-tD-HbA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="diceCountLabel" destination="pjx-sC-p5i" id="NKJ-4C-BKs"/>
+                <outlet property="diceCountStepper" destination="3yK-hR-R18" id="UYV-sy-yBt"/>
+            </connections>
+            <point key="canvasLocation" x="-86.5" y="-243"/>
+        </view>
+    </objects>
+</document>

@@ -34,6 +34,10 @@ extension UIFont {
         return fontOfName("Avenir-Heavy", size: 21)
     }
     
+    static func heavyExtraLargeFont() -> UIFont {
+        return fontOfName("Avenir-Heavy", size: 27)
+    }
+    
     static func petiteCapsFont(ofSize size: CGFloat) -> UIFont {
         return fontOfName("MrsEavesPetiteCapsPetiteCaps", size: size)
     }

@@ -125,8 +125,11 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     @IBAction func statusEffectListButtonTapped(_ sender: AnyObject) {
-        
         presentStatusEffectList()
+    }
+    
+    @IBAction func diceRollerButtonTapped(_ sender: AnyObject) {
+        presentDiceRoller()
     }
     
     @IBAction func equipmentButtonTapped(_ button: EquipmentButton) {
@@ -297,6 +300,12 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let loreBookViewController = LoreBookViewController()
         
         navigationController?.show(loreBookViewController, sender: self)
+    }
+    
+    private func presentDiceRoller() {
+        guard let diceRollerViewController = UIStoryboard.diceRollerViewController() else { return }
+        
+        navigationController?.show(diceRollerViewController, sender: self)
     }
     
     fileprivate func presentObjectInOverlay<T: ListDisplayingGeneratable>(_ object: T, footerView: UIView? = nil) {

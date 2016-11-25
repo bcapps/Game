@@ -66,7 +66,7 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
 private extension MonsterAttack {
     var attackString: String {
         get {
-            let attackRoll = GKShuffledDistribution(forDieWithSideCount: 20).nextInt()
+            let attackRoll = DiceRoller.roll(dice: .d20)
             let digits = CharacterSet.decimalDigits
             
             var damageWithNumberReplacement = String()
