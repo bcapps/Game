@@ -178,4 +178,9 @@
  "damage": "",
  "effects": "Once per encounter, for the encounter, surround yourself with a wave of fire. This grants you an immunity to fire damage. Any enemy that attempts to strike you with a melee weapon, must make a DC 11 DEX check to avoid being burned for 1d8 fire damage. (SV)",
  "flavor": "An enemy will not be allowed to approach without difficulty."
+ }, {
+ "name": "Nightmare",
+ "damage": "",
+ "effects": "Once per encounter, you can attempt to send a creature into a deep and contagious sleep. If the target fails a DC 13 INT check, they are put into a deep sleep taking 2d6 + [FAI] magic damage. At the start of their turn they can attempt a DC 13 INT check to break the nightmare, or continue sleeping and take 1d6 + [FAI] magic damage. Any creature that touches the sleeping creature, wakes it, and must make the same INT check to avoid succumbing to the nightmare. (SV)",
+ "flavor": "The sleeping sickness has been known to ravage entire towns, as mothers could not help but comfort their children as the faded into darkness."
  }]
