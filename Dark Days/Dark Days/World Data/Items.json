@@ -750,4 +750,10 @@
   "effects": "A strong fishing line crafted from the silk of a Deep Spider.",
   "flavor": "",
   "itemSlot": ""
+  }, {
+  "name": "Blade of Revan'kan",
+  "damage": "1d10 + [DEX]",
+  "effects": "On successful hit, causes the target to begin bleeding. The target takes 1d4 damage from the bleed at the start of their turn, and they must make DC 12 CON check to stop the bleeding.",
+  "flavor": "A light short blade curved with sharp hooks on the side. The sharp hooks on the side maximize the wound as the dagger rips the flesh from its victim on its way out.",
+  "itemSlot": "Hand"
   }]

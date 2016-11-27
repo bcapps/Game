@@ -8,7 +8,8 @@
  "name": "The Peaceful Monk",
  "explanation": "Initiator: Helpful Commoner\nA hermit has taken up residence in a small cave above the town. He asked if I could bring him this basket of fruit, but I'm too busy, and I'm worried he'll run out of food if this doesn't get to him. Can you bring it to him?",
  "notes": "The monk is NOT peaceful. He is clearly possessed or enraged by magic. Eyes glowing red.\nEnemies include: Possessed Monk.",
- "rewards": ["• Vest of Fury"]
+ "rewards": [],
+ "completed": true
  }, {
  "name": "Drinking Contest",
  "explanation": "Initiator: Tavern Patron\nA patron starts a drinking contest in the local tavern.",
@@ -56,7 +57,7 @@
  "name": "Until Death",
  "explanation": "Initiator: Discover from rumors that people have been disappearing.\n",
  "notes": "Investigating the Temple of Morter should reveal catacombs underneath where the dead have started walking around. There is a rogue necromancer summoning them and stealing corpses at night. There is also a hidden room containing a Holy Sword.\n Enemies Include: Zombie, Necromancer, Master Necromancer",
- "rewards": ["• Holy Blade", "Platemail Boots", "• Spell: Arms of Morter"],
+ "rewards": ["• Holy Blade", "• Platemail Boots", "• Spell: Arms of Morter"],
  "completed": true
  }, {
  "name": "Cult of the Unseeing Eye",
@@ -78,7 +79,8 @@
  "name": "Cult of the Gateway of the Beyond",
  "explanation": "Initiator: Rumors of a friendly cult leading people to the afterlife.\n",
  "notes": "There is a cult dedicated to a magical gateway. They lead people through it. The gateway speaks to the cult leaders. They coat those who go through the gateway in spices. Turns out, the gateway is actually just a mimic eating people. \n Enemies Include: Gateway Mimic",
- "rewards": ["• Shrouded Mask"]
+ "rewards": ["• Shrouded Mask"],
+ "completed": true
  }, {
  "name": "Witch Hunter",
  "explanation": "Initiator: Run into a Witch Hunter.\n",
@@ -98,5 +100,6 @@
  "name": "Haunted House",
  "explanation": "Initiator: You come upon a haunted house.\n",
  "notes": "You come upon a house. If you attempt to circumvent it, you find yourself walking back up the hill towards it. 3 Floors. Ground Floor: You are greeted by an old man (Louis Stanford). He invites you to sit and have dinner with him inside. Dinner goes fairly smoothly, regardless if anyone eats or not. He invites you to stay the night, and cautions you against going outside, or the creatures (Phase Spiders) will get you. During the night you hear the screams of a small child. You find her in the main foyer passed out with tiny bite marks all over her body. Louis shows up and is baffled about who she is or how she got in, since the door is still locked. Inevitably someone will suggest the basement. Louis asks anyone who ate at dinner to come with him as he shows them the basement. Spoiler alert: Dinner was drugged! Web wrapped in the basement now. \n Enemies Include: Aranae, Tomb Spider, Spider Infested Human, Phase Spider",
- "rewards": ["• Spell: Summon Skeleton", "• Quicksilver Ore", "• 200 gold"]
+ "rewards": ["• Spell: Summon Skeleton", "• Quicksilver Ore", "• 200 gold"],
+ "completed": true
  }]

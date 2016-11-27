@@ -54,6 +54,9 @@
 		F20B7D1D1DDC2C6F0024E2FC /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20B7D1C1DDC2C6F0024E2FC /* CalendarViewController.storyboard */; };
 		F20B7D1F1DDC2E260024E2FC /* MonthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7D1E1DDC2E260024E2FC /* MonthHeaderView.swift */; };
 		F20B7D211DDC3AF40024E2FC /* CurrentMonthInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F20B7D201DDC3AF40024E2FC /* CurrentMonthInfo.json */; };
+		F21539901DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
+		F21539911DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
+		F21539921DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
 		F216E9A21D7A2AFB0039F07B /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216E9A11D7A2AFB0039F07B /* CrashManager.swift */; };
 		F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
 		F21972741DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
@@ -467,6 +470,7 @@
 		F20B7D1C1DDC2C6F0024E2FC /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
 		F20B7D1E1DDC2E260024E2FC /* MonthHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderView.swift; sourceTree = "<group>"; };
 		F20B7D201DDC3AF40024E2FC /* CurrentMonthInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CurrentMonthInfo.json; path = "World Data/CurrentMonthInfo.json"; sourceTree = "<group>"; };
+		F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterFormatter.swift; sourceTree = "<group>"; };
 		F216E9A11D7A2AFB0039F07B /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoreBookViewController.swift; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1006,6 +1010,7 @@
 				F26C01DF1CAE238E00907164 /* MonsterAttack.swift */,
 				F22270971D6D709C007FEFA0 /* MonsterTrait.swift */,
 				F222709D1D6D7465007FEFA0 /* MonsterStat.swift */,
+				F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */,
 			);
 			name = Monsters;
 			sourceTree = "<group>";
@@ -1608,6 +1613,7 @@
 				F2350B821C7D3F2500D6E18E /* Displayable.swift in Sources */,
 				F2649E781DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F20B7D1F1DDC2E260024E2FC /* MonthHeaderView.swift in Sources */,
+				F21539901DEAA19E0013C65E /* MonsterFormatter.swift in Sources */,
 				F26C01E01CAE238E00907164 /* MonsterAttack.swift in Sources */,
 				F28C2B081CC732CA00E106DD /* Quest.swift in Sources */,
 				F25187961C922B9B003AD636 /* StoryboardLoading.swift in Sources */,
@@ -1709,6 +1715,7 @@
 				F2A8882D1DDA667000E5B479 /* StatusEffectCell.swift in Sources */,
 				F2649E791DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F28C2B121CC7379500E106DD /* GenericCodingTests.swift in Sources */,
+				F21539911DEAA19E0013C65E /* MonsterFormatter.swift in Sources */,
 				F25187DF1C9611B4003AD636 /* UnequipButton.swift in Sources */,
 				F251878D1C922B6D003AD636 /* ToolsListViewController.swift in Sources */,
 				F20B7D161DDC29FA0024E2FC /* MonthViewController.swift in Sources */,
@@ -1875,6 +1882,7 @@
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2649E7A1DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
 				F21972751DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
+				F21539921DEAA19E0013C65E /* MonsterFormatter.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,
 				F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F25187E01C9611B5003AD636 /* UnequipButton.swift in Sources */,

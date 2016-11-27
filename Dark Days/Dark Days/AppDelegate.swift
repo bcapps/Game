@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController = window?.rootViewController as? UINavigationController
         
         heroListViewController = HeroListViewController(sections: [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)], delegate: nil)
-        
+                
         guard let heroListViewController = heroListViewController else { return false }
         navigationController?.pushViewController(heroListViewController, animated: false)
         
