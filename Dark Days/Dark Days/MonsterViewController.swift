@@ -68,39 +68,8 @@ private extension MonsterAttack {
         get {
             let attackRoll = DiceRoller.roll(dice: .d20)
             let digits = CharacterSet.decimalDigits
-            
-            var damageWithNumberReplacement = String()
-            
-            for substring in damage.components(separatedBy: " ") {
-                let decimalRange = substring.rangeOfCharacter(from: digits, options: NSString.CompareOptions(), range: nil)
-                
-                damageWithNumberReplacement.append(substring)
-                
-                if decimalRange != nil {
-                    let separatedStrings = substring.components(separatedBy: "d")
-                    
-                    if separatedStrings.count == 2 {
-                        let damageDiceString = separatedStrings[0]
-                        let damageRollString = separatedStrings[1]
                         
-                        if let damageDice = Int(damageDiceString), let damageRoll = Int(damageRollString) {
-                            var totalDamage = 0
-                            
-                            let damageRandomizer = GKShuffledDistribution(forDieWithSideCount: damageRoll)
-                            
-                            for _ in 1...damageDice {
-                                totalDamage += damageRandomizer.nextInt()
-                            }
-                            
-                            damageWithNumberReplacement.append("(\(totalDamage))")
-                        }
-                    }
-                }
-                
-                damageWithNumberReplacement.append(" ")
-            }
-            
-            return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damageWithNumberReplacement
+            return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damage.replaceDamageStringWithRealDamage()
         }
     }
 }

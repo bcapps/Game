@@ -241,9 +241,26 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     fileprivate func presentItem(_ item: Item) {
         var button: UnequipButton?
         
+        let buttonStackView = ButtonStackView()
+        
+        buttonStackView.addButton(title: "Attack", tapHandler: {
+            guard let hero = self.hero else { return }
+            
+            let modifier = item.ranged ? hero.attackModifierForModifierType(.Ranged) : hero.attackModifierForModifierType(.Melee)
+            let attackResult = DiceRoller.roll(dice: .d20) + modifier
+            //let damageResult = item.damage
+            //showController("Attack!", String(result))
+        })
+        
         if item.equippedSlot != .none {
             button = UnequipButton(item: item)
             button?.addTarget(self, action: .unequipItem, for: .touchUpInside)
+            
+            buttonStackView.addButton(title: "Unequip", tapHandler: {
+                guard let unequipButton = button else { return }
+                
+                self.unequipItem(unequipButton)
+            })
         }
         
         presentObjectInOverlay(item, footerView: button)
