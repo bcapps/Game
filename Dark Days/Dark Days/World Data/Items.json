@@ -100,26 +100,30 @@
   "effects": "",
   "flavor": "A small shortbow, great for rapid ranged attacks.",
   "itemSlot": "Hand",
-  "twoHanded": true
+  "twoHanded": true,
+  "ranged": true
   }, {
   "name": "Basic Crossbow",
   "damage": "1d4 + [DEX]",
   "effects": "",
   "flavor": "A light crossbow used for precision attacks.",
-  "itemSlot": "Hand"
+  "itemSlot": "Hand",
+  "ranged": true
   }, {
   "name": "Crossbow",
   "damage": "1d6 + [DEX]",
   "effects": "",
   "flavor": "A standard issue crossbow.",
-  "itemSlot": "Hand"
+  "itemSlot": "Hand",
+  "ranged": true
   }, {
   "name": "Shortbow",
   "damage": "2d4 + [DEX]",
   "effects": "",
   "flavor": "A standard issue shortbow.",
   "itemSlot": "Hand",
-  "twoHanded": true
+  "twoHanded": true,
+  "ranged": true
   }, {
   "name": "Longbow",
   "damage": "2d4 + [DEX]",
@@ -127,6 +131,7 @@
   "flavor": "A standard issue longbow.",
   "itemSlot": "Hand",
   "twoHanded": true,
+  "ranged": true,
   "attackModifiers": [{
                       "name": "PhysicalRanged",
                       "value": 1
@@ -451,7 +456,8 @@
   "effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",
   "flavor": "A small bow made of raw bone, connected with the sinew of some unknown creature.",
   "itemSlot": "Hand",
-  "twoHanded": true
+  "twoHanded": true,
+  "ranged": true
   }, {
   "name": "Shrouded Mask",
   "damage": "",
