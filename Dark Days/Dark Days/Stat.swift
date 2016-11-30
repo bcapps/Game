@@ -16,19 +16,9 @@ enum StatType: String {
     case Constitution
     case Intelligence
     case Faith
-}
-
-final class Stat: Decodable, Nameable, Codeable, Equatable {
-    typealias CoderType = StatCoder
     
-    let name: String
-    let shortName: String
-    let explanation: String
-    let benefits: [String]
-    var currentValue: Int = 0
-    
-    var statType: StatType {
-        switch name {
+    static func statTypeForString(string: String) -> StatType {
+        switch string {
         case "Strength":
             return .Strength
         case "Dexterity":
@@ -42,6 +32,37 @@ final class Stat: Decodable, Nameable, Codeable, Equatable {
         default:
             return .Strength
         }
+    }
+    
+    static func statTypeForShortName(string: String) -> StatType {
+        switch string {
+        case "STR":
+            return .Strength
+        case "DEX":
+            return .Dexterity
+        case "CON":
+            return .Constitution
+        case "INT":
+            return .Intelligence
+        case "FAI":
+            return .Faith
+        default:
+            return .Strength
+        }
+    }
+}
+
+final class Stat: Decodable, Nameable, Codeable, Equatable {
+    typealias CoderType = StatCoder
+    
+    let name: String
+    let shortName: String
+    let explanation: String
+    let benefits: [String]
+    var currentValue: Int = 0
+    
+    var statType: StatType {
+        return StatType.statTypeForString(string: name)
     }
     
     init(name: String, shortName: String, explanation: String, benefits: [String], currentValue: Int) {

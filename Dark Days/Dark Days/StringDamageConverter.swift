@@ -14,6 +14,7 @@ extension String {
     func replaceDamageStringWithRealDamage() -> String {
         var damageWithNumberReplacement = String()
         let digits = CharacterSet.decimalDigits
+        let whitespace = CharacterSet.whitespacesAndNewlines
         
         for substring in self.components(separatedBy: " ") {
             let decimalRange = substring.rangeOfCharacter(from: digits, options: NSString.CompareOptions(), range: nil)
@@ -36,9 +37,20 @@ extension String {
                         
                         damageWithNumberReplacement.append("\(totalDamage)")
                     }
+                } else if separatedStrings.count == 1 {
+                    let range = damageWithNumberReplacement.startIndex..<damageWithNumberReplacement.endIndex
+
+                    damageWithNumberReplacement.enumerateSubstrings(in: range, options: .reverse, { (substring, subrange, enclosingRange, stop) in
+                        guard let substring = substring?.trimmingCharacters(in: whitespace) else { stop = true; return }
+                        let newValue = (Int(substring) ?? 0) + (Int(separatedStrings[0]) ?? 0)
+                        damageWithNumberReplacement.replaceSubrange(subrange, with: String(newValue))
+                        stop = true
+                    })
                 } else {
                     damageWithNumberReplacement.append(substring)
                 }
+            } else if substring == "+" {
+                continue
             } else {
                 damageWithNumberReplacement.append(substring)
             }
@@ -46,6 +58,6 @@ extension String {
             damageWithNumberReplacement.append(" ")
         }
         
-        return damageWithNumberReplacement
+        return damageWithNumberReplacement.trimmingCharacters(in: whitespace)
     }
 }

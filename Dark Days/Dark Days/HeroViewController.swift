@@ -239,31 +239,38 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     fileprivate func presentItem(_ item: Item) {
-        var button: UnequipButton?
-        
         let buttonStackView = ButtonStackView()
+        buttonStackView.axis = .vertical
         
-        buttonStackView.addButton(title: "Attack", tapHandler: {
-            guard let hero = self.hero else { return }
-            
-            let modifier = item.ranged ? hero.attackModifierForModifierType(.Ranged) : hero.attackModifierForModifierType(.Melee)
-            let attackResult = DiceRoller.roll(dice: .d20) + modifier
-            //let damageResult = item.damage
-            //showController("Attack!", String(result))
-        })
-        
-        if item.equippedSlot != .none {
-            button = UnequipButton(item: item)
-            button?.addTarget(self, action: .unequipItem, for: .touchUpInside)
-            
-            buttonStackView.addButton(title: "Unequip", tapHandler: {
-                guard let unequipButton = button else { return }
+        if item.damage.isNotEmpty {
+            buttonStackView.addButton(title: "Attack", tapHandler: {
+                guard let hero = self.hero else { return }
                 
-                self.unequipItem(unequipButton)
+                let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+                let heroAttackModifier = item.ranged ? hero.attackModifierForModifierType(.Ranged) : hero.attackModifierForModifierType(.Melee)
+                
+                let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+                
+                let itemDamageRoll = Int(item.damage.replaceDamageStringWithRealDamage()) ?? 0
+                let heroDamageModifier = hero.damageModifier(forItem: item, modifierType: .Physical)
+                
+                let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
+                let damageResult = String(format: "Damage: %@", String(itemDamageRoll + heroDamageModifier))
+                
+                self.showAlertController(title: "Attack", message: attackResult + "\n" + damageResult)
             })
         }
         
-        presentObjectInOverlay(item, footerView: button)
+        if item.equippedSlot != .none {
+            let button = UnequipButton(item: item)
+            button.addTarget(self, action: .unequipItem, for: .touchUpInside)
+            
+            buttonStackView.addButton(title: "Unequip", tapHandler: {
+                self.unequipItem(button)
+            })
+        }
+        
+        presentObjectInOverlay(item, footerView: buttonStackView)
     }
     
     fileprivate func presentItemList() {
@@ -400,6 +407,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         goldLabel.attributedText = NSAttributedString(string: goldString, attributes: [NSFontAttributeName: UIFont.bodyFont(), NSForegroundColorAttributeName: UIColor.bodyTextColor(), NSParagraphStyleAttributeName: paragraphStyle])
     }
     
+    private func showAlertController(title: String, message: String) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Done", style: .cancel) { _ in })
+        
+        dismissOverlay()
+        navigationController?.present(controller, animated: true, completion: nil)
+    }
+    
     //MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -425,19 +440,11 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let buttonStackView = ButtonStackView()
         buttonStackView.axis = .vertical
         
-        let showController: (String, String) -> (Void) = { title, message in
-            let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "Done", style: .cancel) { _ in })
-
-            self.dismissOverlay()
-            self.navigationController?.present(controller, animated: true, completion: nil)
-        }
-        
         let rollCheckTitle = String(format:"Roll %@ Check", stat.name)
         buttonStackView.addButton(title: rollCheckTitle, tapHandler: {
             let result = DiceRoller.roll(dice: .d20) + stat.currentValue
             
-            showController(rollCheckTitle, String(result))
+            self.showAlertController(title: rollCheckTitle, message: String(result))
         })
         
         switch stat.statType {
@@ -446,7 +453,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Melee)
                 
-                showController(attackRollTitle, String(result))
+                self.showAlertController(title: attackRollTitle, message: String(result))
             })
 
         case .Dexterity:
@@ -455,14 +462,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Ranged)
                 
-                showController(attackRollTitle, String(result))
+                self.showAlertController(title: attackRollTitle, message: String(result))
             })
             
             let avoidRollTitle = "Avoid Physical Attack Roll"
             buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Physical)
                 
-                showController(avoidRollTitle, String(result))
+                self.showAlertController(title: avoidRollTitle, message: String(result))
             })
         case .Constitution: break
         case .Intelligence:
@@ -471,14 +478,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Magical)
                 
-                showController(attackRollTitle, String(result))
+                self.showAlertController(title: attackRollTitle, message: String(result))
             })
             
             let avoidRollTitle = "Avoid Magical Attack Roll"
             buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Magical)
                 
-                showController(avoidRollTitle, String(result))
+                self.showAlertController(title: avoidRollTitle, message: String(result))
             })
         case .Faith:
             
@@ -486,7 +493,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Mental)
                 
-                showController(avoidRollTitle, String(result))
+                self.showAlertController(title: avoidRollTitle, message: String(result))
             })
         }
         

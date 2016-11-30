@@ -36,6 +36,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let itemSlot: ItemSlot
     let twoHanded: Bool
     let ranged: Bool
+    let damageStat: StatType
     let statModifiers: [StatModifier]
     let damageReductions: [DamageReduction]
     let damageAvoidances: [DamageAvoidance]
@@ -61,7 +62,10 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         }
     }
     
-    static func decode(_ json: Any) throws -> Item {        
+    static func decode(_ json: Any) throws -> Item {
+        let statName: String? = try json =>? "damageStat"
+        let statType = StatType.statTypeForShortName(string: statName ?? "STR")
+
         return try Item(name: json => "name",
             damage: json => "damage",
             effects: json => "effects",
@@ -69,6 +73,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
             ranged: json =>? "ranged" ?? false,
+            damageStat: statType,
             statModifiers: json =>? "statModifiers" ?? [],
             damageReductions: json =>? "damageReductions" ?? [],
             damageAvoidances: json =>? "damageAvoidances" ?? [],
@@ -79,7 +84,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             spells: json =>? "spells" ?? [])
     }
     
-    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, ranged: Bool, statModifiers: [StatModifier], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
+    init(name: String, damage: String, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, ranged: Bool, damageStat: StatType, statModifiers: [StatModifier], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
         self.name = name
         self.damage = damage
         self.effects = effects
@@ -87,6 +92,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
         self.ranged = ranged
+        self.damageStat = damageStat
         self.statModifiers = statModifiers
         self.damageReductions = damageReductions
         self.damageAvoidances = damageAvoidances

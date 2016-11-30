@@ -67,8 +67,7 @@ private extension MonsterAttack {
     var attackString: String {
         get {
             let attackRoll = DiceRoller.roll(dice: .d20)
-            let digits = CharacterSet.decimalDigits
-                        
+            
             return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damage.replaceDamageStringWithRealDamage()
         }
     }

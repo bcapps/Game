@@ -105,6 +105,24 @@ final class Hero: Codeable, Nameable {
         return avoidanceCounter
     }
     
+    func damageModifier(forItem item: Item, modifierType type: DamageModifier.DamageModifierType) -> Int {
+        var damageModifier = statValueForType(item.damageStat)
+        
+        for item in inventory.equippedItems {
+            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
+        for itemSet in inventory.equippedItemSets {
+            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
+        for status in currentStatusEffects {
+            damageModifier += status.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
+        }
+        
+        return damageModifier
+    }
+    
     func damageModifierForModifierType(_ type: DamageModifier.DamageModifierType) -> Int {
         var damageModifier = 0
         

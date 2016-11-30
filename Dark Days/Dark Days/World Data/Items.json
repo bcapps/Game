@@ -1,80 +1,80 @@
  [{
   "name": "Basic Axe",
-  "damage": "1d4 + [STR]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A small axe. It looks sharp.",
   "itemSlot": "Hand"
   }, {
   "name": "Basic Dagger",
-  "damage": "1d4 + [DEX]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A small blade used for cutting into opponents with quick strikes.",
   "itemSlot": "Hand"
   }, {
   "name": "Basic Hammer",
-  "damage": "1d4 + [STR]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A light hammer used for bludgeoning.",
   "itemSlot": "Hand"
   }, {
   "name": "Rapier",
-  "damage": "1d6 + [DEX]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "A thin blade suited for lunging attacks.",
   "itemSlot": "Hand"
   }, {
   "name": "Basic Spear",
-  "damage": "1d8 + [STR]",
+  "damage": "1d8",
   "effects": "",
   "flavor": "A long spear used for stabbing enemies.",
   "itemSlot": "Hand",
   "twoHanded": true
   }, {
   "name": "Basic Shortsword",
-  "damage": "1d4 + [STR]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A light sword used for stabbing and slashing.",
   "itemSlot": "Hand"
   }, {
   "name": "Basic Longsword",
-  "damage": "1d4 + [STR]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A long sword used for stabbing.",
   "itemSlot": "Hand"
   }, {
   "name": "Iron Axe",
-  "damage": "1d6 + [STR]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "A small axe made of high quality iron.",
   "itemSlot": "Hand"
   }, {
   "name": "Iron Dagger",
-  "damage": "1d6 + [DEX]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "A small blade made of high quality iron.",
   "itemSlot": "Hand"
   }, {
   "name": "Iron Hammer",
-  "damage": "1d6 + [STR]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "A heavy hammer made of high quality iron.",
   "itemSlot": "Hand"
   }, {
   "name": "Iron Spear",
-  "damage": "2d6 + [STR]",
+  "damage": "2d6",
   "effects": "",
   "flavor": "An iron spear of great length.",
   "itemSlot": "Hand",
   "twoHanded": true
   }, {
   "name": "Iron Shortsword",
-  "damage": "1d6 + [STR]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "An iron sword used for stabbing and slashing.",
   "itemSlot": "Hand"
   }, {
   "name": "Iron Longsword",
-  "damage": "1d6 + [STR]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "An iron sword used for stabbing.",
   "itemSlot": "Hand"
@@ -96,42 +96,47 @@
                        }]
   }, {
   "name": "Basic Shortbow",
-  "damage": "1d6 + [DEX] + 1",
+  "damage": "1d6 + 1",
   "effects": "",
   "flavor": "A small shortbow, great for rapid ranged attacks.",
   "itemSlot": "Hand",
   "twoHanded": true,
-  "ranged": true
+  "ranged": true,
+  "damageStat": "DEX"
   }, {
   "name": "Basic Crossbow",
-  "damage": "1d4 + [DEX]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A light crossbow used for precision attacks.",
   "itemSlot": "Hand",
-  "ranged": true
+  "ranged": true,
+  "damageStat": "DEX"
   }, {
   "name": "Crossbow",
-  "damage": "1d6 + [DEX]",
+  "damage": "1d6",
   "effects": "",
   "flavor": "A standard issue crossbow.",
   "itemSlot": "Hand",
-  "ranged": true
+  "ranged": true,
+  "damageStat": "DEX"
   }, {
   "name": "Shortbow",
-  "damage": "2d4 + [DEX]",
+  "damage": "2d4",
   "effects": "",
   "flavor": "A standard issue shortbow.",
   "itemSlot": "Hand",
   "twoHanded": true,
-  "ranged": true
+  "ranged": true,
+  "damageStat": "DEX"
   }, {
   "name": "Longbow",
-  "damage": "2d4 + [DEX]",
+  "damage": "2d4",
   "effects": "Increases chance to hit with a ranged attack by 1.",
   "flavor": "A standard issue longbow.",
   "itemSlot": "Hand",
   "twoHanded": true,
   "ranged": true,
+  "damageStat": "DEX",
   "attackModifiers": [{
                       "name": "PhysicalRanged",
                       "value": 1
@@ -263,7 +268,7 @@
                   }]
   }, {
   "name": "Pitchfork",
-  "damage": "1d4 + [STR]",
+  "damage": "1d4",
   "effects": "",
   "flavor": "A farming tool used for picking up hay.",
   "itemSlot": "Hand",
@@ -309,7 +314,7 @@
                        }]
   }, {
   "name": "Jian",
-  "damage": "1d8 + [DEX]",
+  "damage": "1d8",
   "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit with a melee attack by 2.",
   "flavor": "A short sword used for quick strikes by the Blades of Kazu. Given to initiates of the Blades.",
   "itemSlot": "Hand",
@@ -319,7 +324,7 @@
                       }]
   }, {
   "name": "Sen",
-  "damage": "1d10 + [DEX]",
+  "damage": "1d10",
   "effects": "The Sen is an extremely sharp blade, increase damage done by its strikes by 2.",
   "flavor": "A short sword used for killing by the Blades of Kazu. Given to those who ascend past initiate in the Blades.",
   "itemSlot": "Hand",
@@ -347,7 +352,7 @@
   "itemSlot": ""
   }, {
   "name": "Nightmare Blade",
-  "damage": "2d4 + [STR]",
+  "damage": "2d4",
   "effects": "On hit, chance to send your opponent into a nightmarish dream (DC 8 + [FAI]).",
   "flavor": "A blade of black iron. Just looking at it causes your spine to tingle in fear.",
   "itemSlot": "Hand"
@@ -419,10 +424,11 @@
   "itemSlot": ""
   }, {
   "name": "Holy Blade",
-  "damage": "1d6 + [FAI]",
-  "effects": "",
+  "damage": "1d6",
+  "effects": "The Holy Blade's damage is affected by your FAI stat instead of your STR stat.",
   "flavor": "A sword that shines with a brilliant white color when striking down your enemies.",
-  "itemSlot": "Hand"
+  "itemSlot": "Hand",
+  "damageStat": "FAI"
   }, {
   "name": "Black Robe",
   "damage": "",
@@ -441,23 +447,25 @@
   "itemSlot": ""
   }, {
   "name": "Gazing Staff",
-  "damage": "2d4 + [FAI]",
-  "effects": "Increases magical damage dealt by 2.",
+  "damage": "2d4",
+  "effects": "Increases magical damage dealt by 2. The Gazing Staff's damage is affected by your FAI stat instead of your STR stat.",
   "flavor": "A staff topped with the eye of an otherwordly creature. Occasionaly you still think it blinks, though the creature has been long dead. Hasn't it?",
   "itemSlot": "Hand",
   "twoHanded": true,
+  "damageStat": "FAI",
   "damageModifiers": [{
                       "name": "Magical",
                       "value": 2
                       }]
   }, {
   "name": "Skeletal Shortbow",
-  "damage": "2d4 + [DEX]",
+  "damage": "2d4",
   "effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",
   "flavor": "A small bow made of raw bone, connected with the sinew of some unknown creature.",
   "itemSlot": "Hand",
   "twoHanded": true,
-  "ranged": true
+  "ranged": true,
+  "damageStat": "DEX"
   }, {
   "name": "Shrouded Mask",
   "damage": "",
@@ -557,7 +565,7 @@
                       }]
   }, {
   "name": "Troll Hammer",
-  "damage": "2d6 + [STR]",
+  "damage": "2d6",
   "effects": "",
   "flavor": "A massive hammer made out of the bone of a large troll. You received this for your kindness to a troll.",
   "itemSlot": "Hand"
@@ -640,10 +648,11 @@
   }, {
   "name": "Slaughter Staff",
   "damage": "1d4",
-  "effects": "Increases magical damage dealt by 1. Coating the tips of the curved staff in blood increases the amount of magical damage dealt by 2 for the duration of an encounter. The blood is absorbed by this action.",
+  "effects": "Increases magical damage dealt by 1. Coating the tips of the curved staff in blood increases the amount of magical damage dealt by 2 for the duration of an encounter. The blood is absorbed by this action. The Slaught Staff's damage is affected by your FAI stat instead of your STR stat.",
   "flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
   "itemSlot": "Hand",
   "twoHanded": true,
+  "damageStat": "FAI",
   "damageModifiers": [{
                       "name": "Magical",
                       "value": 1
@@ -663,7 +672,7 @@
                        }]
   }, {
   "name": "Demon Hide Boots",
-  "damage": "1d6 + [STR] + [DEX]",
+  "damage": "1d6",
   "effects": "Once per turn you may make an extra attack, kicking your foes with the Demon Hide Boots as a weapon.",
   "flavor": "Heavy boots made from tempered demon skin, adorned with the teeth and bones of lesser demonic creatures. Priests of Azoth were renowned for their prowess on the battlefield, as they fought side by side with their feared demon beasts, using powerful boots as their weapons.",
   "itemSlot": "Boots"
@@ -687,7 +696,7 @@
   "itemSlot": "Hand"
   }, {
   "name": "Demon's Edge",
-  "damage": "1d8 + [STR]",
+  "damage": "1d8",
   "effects": "This blade deals an extra 1d8 damage to demons, and has a +2 to attack rolls made against demons.",
   "flavor": "Demon flesh is as hard as stone, but with the right materials, it can be cut like butter.",
   "itemSlot": "Hand"
@@ -767,7 +776,7 @@
   "itemSlot": ""
   }, {
   "name": "Blade of Revan'kan",
-  "damage": "1d10 + [DEX]",
+  "damage": "1d10",
   "effects": "On successful hit, causes the target to begin bleeding. The target takes 1d4 damage from the bleed at the start of their turn, and they must make DC 12 CON check to stop the bleeding.",
   "flavor": "A light short blade curved with sharp hooks on the side. The sharp hooks on the side maximize the wound as the dagger rips the flesh from its victim on its way out.",
   "itemSlot": "Hand"
