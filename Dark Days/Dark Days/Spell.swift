@@ -13,12 +13,17 @@ struct Spell: Decodable, Codeable, Nameable, Equatable {
     typealias CoderType = SpellCoder
 
     let name: String
+    let damageType: StatType
     let damage: String
     let effects: String
     let flavor: String
     
     static func decode(_ json: Any) throws -> Spell {
+        let statName: String? = try json =>? "damageStat"
+        let statType = StatType.statTypeForShortName(string: statName ?? "FAI")
+
         return try Spell(name: json => "name",
+            damageType: statType,
             damage: json => "damage",
             effects: json => "effects",
             flavor: json => "flavor")

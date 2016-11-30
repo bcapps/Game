@@ -10,6 +10,14 @@ import UIKit
 
 final class ButtonStackView: UIStackView {
     
+    func addButton(attributedTitle: NSAttributedString, tapHandler: @escaping ((Void) -> Void)) {
+        let button = ClosureButton(type: .system)
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.closure = tapHandler
+        
+        addArrangedSubview(button)
+    }
+    
     func addButton(title: String, tapHandler: @escaping ((Void) -> Void)) {
         let button = ClosureButton(type: .system)
         button.setTitle(title, for: .normal)

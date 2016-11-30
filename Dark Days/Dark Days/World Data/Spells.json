@@ -10,7 +10,7 @@
  "flavor": "All it takes to light the way is one candle burning brightly in the night."
  }, {
  "name": "Siphon Light",
- "damage": "1d4 + [FAI]",
+ "damage": "1d4",
  "effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up. (SV)",
  "flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
  }, {
@@ -20,12 +20,12 @@
  "flavor": "Sometimes darkness can be beautiful."
  }, {
  "name": "Shadow Stalker",
- "damage": "Next physical attack gets 1d6 + [FAI]",
+ "damage": "1d6",
  "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. (SV)",
  "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
  }, {
  "name": "Paranoia",
- "damage": "1d4 + [FAI]",
+ "damage": "1d4",
  "effects": "Stuns the target for 1 round (DC 8 + [FAI]). (SV)",
  "flavor": "My head is a very dark place. Soon yours will be as well."
  }, {
@@ -35,7 +35,7 @@
  "flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
  }, {
  "name": "Fiendfyre",
- "damage": "1d8 + [FAI]",
+ "damage": "1d8",
  "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]). (S)",
  "flavor": "My fire will teach you to fear the light."
  }, {
@@ -45,7 +45,7 @@
  "flavor": "Monsters are real. They live inside us. And sometimes, they win."
  }, {
  "name": "Thorn Bind",
- "damage": "1d4 + [FAI]",
+ "damage": "1d4",
  "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]). (S)",
  "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
  }, {
@@ -60,7 +60,7 @@
  "flavor": "Not even death will keep you from me."
  }, {
  "name": "Arms of Morter",
- "damage": "1d6 + [FAI]",
+ "damage": "1d6",
  "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you. (S)",
  "flavor": "Death will hold you in its everlasting embrace."
  }, {
@@ -100,7 +100,7 @@
  "flavor": "The substance of faith is a hope in the unseen."
  }, {
  "name": "Holy Bolt",
- "damage": "1d8 + [FAI]",
+ "damage": "1d8",
  "effects": "Sends a bolt of holy energy out of your hand into the target. (S)",
  "flavor": "The light of Shiro shall consume you!"
  }, {
@@ -120,12 +120,13 @@
  "flavor": "Scholars often wonder how the Blades of Kazu are able to evade capture so easily. Perhaps the ability to bend space to their will has something to do with it. - Bason, Scholar of Kazu"
  }, {
  "name": "Flame Rush",
- "damage": "1d6 + [STR]",
- "effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. (V)",
+ "damage": "1d6",
+ "damageStat": "STR",
+ "effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. Deals fire damage. (V)",
  "flavor": "Never rush into something. Unless your on fire. Then rush into everything."
  }, {
  "name": "Empowered Shadow Stalker",
- "damage": "Next physical attack gets 1d8 + [FAI]",
+ "damage": "1d8",
  "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. The doppelganger mimics your movements, including any attacks you make at half damage. (SV)",
  "flavor": "Now even the darkness has become your enemy. -Saz'rac, Priest of Kazu"
  }, {
@@ -140,18 +141,18 @@
  "flavor": "The domain of darkness is terrifying. Not for the known, but for the unknown. The might be. Anything is possible when everything is stripped away."
  }, {
  "name": "Summon Skeleton",
- "damage": "1d6 + [FAI]",
- "effects": "Summons a skeleton that has 3d8 + [FAI] hit points. Drains [FAI] hit points from the caster. (SV)",
+ "damage": "",
+ "effects": "Summons a skeleton that has 3d8 + [FAI] hit points. The skeleton deals [STR] damage on attack and has a +2 chance to hit. Drains [FAI] hit points from the caster. (SV)",
  "flavor": "Undeath is just another form of life."
  }, {
  "name": "Torture",
- "damage": "1d6 + [FAI]",
+ "damage": "1d6",
  "effects": "Summon metal spikes that drill into a targets extremities. The target must make a DC 10 CON check to not drop what they are holding and a DC 10 CON check to not fall down. (SV)",
  "flavor": "Suffering is not optional."
  }, {
  "name": "Poison Breath",
- "damage": "1d6 + [FAI] poison damage",
- "effects": "Breath a heavy mist of poison in a cone in front of you. The target must make a DC 12 CON check to resist the poison. (S)",
+ "damage": "1d6",
+ "effects": "Breath a heavy mist of poison in a cone in front of you. The target must make a DC 12 CON check to resist the poison. Deals poison damage. (S)",
  "flavor": "Suffering is not optional."
  }, {
  "name": "Astral Message",

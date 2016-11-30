@@ -84,7 +84,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController {
         
         didSelectClosure?(object)
         
-        listDelegate?.didSelectObject(self, object: object)
+        listDelegate?.didSelectObject(self, object: object)        
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

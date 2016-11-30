@@ -265,7 +265,8 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             let button = UnequipButton(item: item)
             button.addTarget(self, action: .unequipItem, for: .touchUpInside)
             
-            buttonStackView.addButton(title: "Unequip", tapHandler: {
+            let unequipTitle = NSAttributedString(string: "Unequip", attributes: [NSForegroundColorAttributeName: UIColor.red])
+            buttonStackView.addButton(attributedTitle: unequipTitle, tapHandler: {
                 self.unequipItem(button)
             })
         }
@@ -298,7 +299,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let itemSpells = hero?.inventory.items.flatMap { return $0.spells } ?? []
         let itemSetSpells = hero?.inventory.equippedItemSets.flatMap { return $0.spells } ?? []
         
-        showList(spells + itemSpells + itemSetSpells, title: "Spellbook")
+        showList(spells + itemSpells + itemSetSpells, title: "Spellbook", allowsSelection: true)
     }
     
     fileprivate func presentEquippedItemSetList() {
@@ -351,7 +352,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         list.tableView.allowsSelection = allowsSelection
         
         list.didSelectClosure = { [weak self] object in
-            guard let equipmentButton = equipmentButton else { return }
             self?.didSelectObject(object, equipmentButton: equipmentButton)
         }
         
@@ -502,8 +502,10 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     
     //MARK: ListViewControllerDelegate
     
-    func didSelectObject<T: ListDisplayingGeneratable>(_ object: T, equipmentButton: EquipmentButton) {
+    func didSelectObject<T: ListDisplayingGeneratable>(_ object: T, equipmentButton: EquipmentButton?) {
         if let item = object as? Item {
+            guard let equipmentButton = equipmentButton else { return }
+            
             switch item.itemSlot {
                 case .Hand:
                     if item.twoHanded {
@@ -525,10 +527,32 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             saveHero()
             
             _ = navigationController?.popViewController(animated: true)
+        } else if let spell = object as? Spell {
+            guard let hero = hero else { return }
+            
+            let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+            let heroAttackModifier = hero.attackModifierForModifierType(.Magical)
+            
+            let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+            
+            let spellDamageRoll = Int(spell.damage.replaceDamageStringWithRealDamage()) ?? 0
+            let heroDamageModifier = hero.damageModifier(forSpell: spell, modifierType: .Magical)
+            
+            let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
+            var damageResult = ""
+            
+            if spell.damage.isNotEmpty {
+                damageResult = String(format: "Damage: %@", String(spellDamageRoll + heroDamageModifier))
+            }
+            
+            showAlertController(title: "Attack", message: attackResult + "\n" + damageResult)
         }
     }
     
-    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
+    func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
+        guard let selectedIndexPath = listViewController.tableView.indexPathForSelectedRow else { return }
+        listViewController.tableView.deselectRow(at: selectedIndexPath, animated: true)
+    }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
