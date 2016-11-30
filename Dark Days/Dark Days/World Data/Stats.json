@@ -2,7 +2,7 @@
  "name": "Strength",
  "shortName": "STR",
  "explanation": "Strength measures your character’s muscle and physical power.",
- "benefits": ["• Increases damage dealt with melee or thrown weapons.", "• Increases chance to hit with melee weapons."]
+ "benefits": ["• Increases damage dealt with weapons.", "• Increases chance to hit with melee weapons."]
  }, {
  "name": "Dexterity",
  "shortName": "DEX",

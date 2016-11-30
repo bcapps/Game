@@ -57,6 +57,9 @@
 		F21539901DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
 		F21539911DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
 		F21539921DEAA19E0013C65E /* MonsterFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */; };
+		F21539941DECCBA80013C65E /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21539931DECCBA80013C65E /* ButtonStackView.swift */; };
+		F21539951DECCBA80013C65E /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21539931DECCBA80013C65E /* ButtonStackView.swift */; };
+		F21539961DECCBA80013C65E /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21539931DECCBA80013C65E /* ButtonStackView.swift */; };
 		F216E9A21D7A2AFB0039F07B /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216E9A11D7A2AFB0039F07B /* CrashManager.swift */; };
 		F21972731DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
 		F21972741DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */; };
@@ -471,6 +474,7 @@
 		F20B7D1E1DDC2E260024E2FC /* MonthHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderView.swift; sourceTree = "<group>"; };
 		F20B7D201DDC3AF40024E2FC /* CurrentMonthInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CurrentMonthInfo.json; path = "World Data/CurrentMonthInfo.json"; sourceTree = "<group>"; };
 		F215398F1DEAA19E0013C65E /* MonsterFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterFormatter.swift; sourceTree = "<group>"; };
+		F21539931DECCBA80013C65E /* ButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStackView.swift; sourceTree = "<group>"; };
 		F216E9A11D7A2AFB0039F07B /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		F21972721DBA4AEE0025F0C8 /* LoreBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoreBookViewController.swift; sourceTree = "<group>"; };
 		F21ECDB81C7A516B008041E9 /* Dark Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1022,6 +1026,7 @@
 				F29C55E31C961D2500ED386E /* Unequip Button */,
 				F25187D81C952059003AD636 /* Stat Cell */,
 				C394058F1C7CAE5F00EBFD07 /* Info Cell */,
+				F21539931DECCBA80013C65E /* ButtonStackView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1698,6 +1703,7 @@
 				F26C01F11CB197C100907164 /* DamageReduction.swift in Sources */,
 				C39405931C7CAF2900EBFD07 /* InfoCell.swift in Sources */,
 				C3AB8F5A1C7DFC99007CE0BA /* AttributedStringExtension.swift in Sources */,
+				F21539941DECCBA80013C65E /* ButtonStackView.swift in Sources */,
 				F2473B1F1C83B307008FD65B /* HeroViewController.swift in Sources */,
 				F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */,
 			);
@@ -1800,6 +1806,7 @@
 				F26C01EA1CB18C9B00907164 /* StatEffect.swift in Sources */,
 				F26C01E61CAF4ADC00907164 /* ContainingViewController.swift in Sources */,
 				F29C55EA1C96311F00ED386E /* HealthViewController.swift in Sources */,
+				F21539951DECCBA80013C65E /* ButtonStackView.swift in Sources */,
 				F21ECE191C7A65F1008041E9 /* Race.swift in Sources */,
 				F26C01FE1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 			);
@@ -1821,6 +1828,7 @@
 				F26C01EB1CB18C9C00907164 /* StatEffect.swift in Sources */,
 				F222709A1D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */,
 				F21ECE511C7A7E0E008041E9 /* Nameable.swift in Sources */,
+				F21539961DECCBA80013C65E /* ButtonStackView.swift in Sources */,
 				F21ECDF81C7A5778008041E9 /* God.swift in Sources */,
 				F26C01F31CB197C100907164 /* DamageReduction.swift in Sources */,
 				F21ECE4D1C7A7C9D008041E9 /* Inventory.swift in Sources */,

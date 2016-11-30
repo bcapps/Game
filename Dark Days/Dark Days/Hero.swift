@@ -134,8 +134,10 @@ final class Hero: Codeable, Nameable {
         var attackModifier = 0
         
         switch type {
-        case .Physical:
+        case .Melee:
             attackModifier += statValueForType(.Strength)
+        case .Ranged:
+            attackModifier += statValueForType(.Dexterity)
         case .Magical:
             attackModifier += statValueForType(.Intelligence)
         }

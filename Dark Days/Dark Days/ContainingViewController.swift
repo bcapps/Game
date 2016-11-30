@@ -75,7 +75,7 @@ class ContainingViewController: UIViewController {
         insetView.frame = frame
         
         containedViewController.view.frame = insetView.bounds
-        let height: CGFloat = 40.0
+        let height: CGFloat = footerView?.systemLayoutSizeFitting(insetView.frame.size).height ?? 0
         footerView?.frame = CGRect(x: 0, y: insetView.frame.size.height - height, width: insetView.frame.size.width, height: height)
         footerViewBorder.frame = CGRect(x: 0, y: 0, width: footerView?.frame.size.width ?? 0, height: 1.0)
     }

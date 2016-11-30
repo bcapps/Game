@@ -123,12 +123,12 @@
   }, {
   "name": "Longbow",
   "damage": "2d4 + [DEX]",
-  "effects": "Increases chance to hit by 1.",
+  "effects": "Increases chance to hit with a ranged attack by 1.",
   "flavor": "A standard issue longbow.",
   "itemSlot": "Hand",
   "twoHanded": true,
   "attackModifiers": [{
-                      "name": "Physical",
+                      "name": "PhysicalRanged",
                       "value": 1
                       }]
   }, {
@@ -305,11 +305,11 @@
   }, {
   "name": "Jian",
   "damage": "1d8 + [DEX]",
-  "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit by 2.",
+  "effects": "The Jian's length allows for more precise strikes, increasing your chance to hit with a melee attack by 2.",
   "flavor": "A short sword used for quick strikes by the Blades of Kazu. Given to initiates of the Blades.",
   "itemSlot": "Hand",
   "attackModifiers": [{
-                      "name": "Physical",
+                      "name": "Melee",
                       "value": 2
                       }]
   }, {
@@ -391,7 +391,10 @@
                       "value": 1
                       }],
   "attackModifiers": [{
-                      "name": "Physical",
+                      "name": "Melee",
+                      "value": 1
+                      }, {
+                      "name": "Ranged",
                       "value": 1
                       }, {
                       "name": "Magical",
@@ -460,7 +463,10 @@
                        "value": 1
                        }],
   "attackModifiers": [{
-                      "name": "Physical",
+                      "name": "Melee",
+                      "value": 1
+                      }, {
+                      "name": "Ranged",
                       "value": 1
                       }]
   }, {
@@ -510,7 +516,10 @@
                        "value": 1
                        }],
   "attackModifiers": [{
-                      "name": "Physical",
+                      "name": "Melee",
+                      "value": 1
+                      }, {
+                      "name": "Ranged",
                       "value": 1
                       }]
   }, {

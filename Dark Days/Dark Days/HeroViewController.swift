@@ -402,9 +402,60 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let stat = hero?.stats[(indexPath as NSIndexPath).row] else { return }
+        guard let hero = hero else { return }
+        let stat = hero.stats[(indexPath as NSIndexPath).row]
         
-        presentObjectInOverlay(stat)
+        let buttonStackView = ButtonStackView()
+        buttonStackView.axis = .vertical
+        
+        buttonStackView.addButton(title: String(format:"Roll %@ Check", stat.name), tapHandler: {
+            let result = DiceRoller.roll(dice: .d20) + stat.currentValue
+            
+            print(result)
+        })
+        
+        switch stat.statType {
+        case .Strength:
+            buttonStackView.addButton(title: String(format:"Melee Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Melee)
+                
+                print(result)
+            })
+
+        case .Dexterity:
+            buttonStackView.addButton(title: String(format:"Ranged Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Ranged)
+                
+                print(result)
+            })
+            
+            buttonStackView.addButton(title: String(format:"Avoid Physical Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Physical)
+                
+                print(result)
+            })
+        case .Constitution: break
+        case .Intelligence:
+            buttonStackView.addButton(title: String(format:"Magical Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Magical)
+                
+                print(result)
+            })
+            
+            buttonStackView.addButton(title: String(format:"Avoid Magical Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Magical)
+                
+                print(result)
+            })
+        case .Faith:
+            buttonStackView.addButton(title: String(format:"Avoid Mental Attack Roll", stat.name), tapHandler: {
+                let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Mental)
+                
+                print(result)
+            })
+        }
+        
+        presentObjectInOverlay(stat, footerView: buttonStackView)
     }
     
     //MARK: ListViewControllerDelegate

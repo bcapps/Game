@@ -26,7 +26,7 @@
  "itemNamesInSet": ["Jian", "Sen"],
  "statModifiers": [{"stat": "DEX", "value": 1},
                  {"stat": "STR", "value": 1}],
- "attackModifiers": [{"name": "Physical", "value": 1}],
+ "attackModifiers": [{"name": "Melee", "value": 1}],
  "damageModifiers": [{"name": "Physical", "value": 1}],
  "spells": ["Empowered Shadow Stalker"]
  }, {

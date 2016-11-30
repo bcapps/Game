@@ -21,29 +21,34 @@ struct AttackModifier: Decodable, Nameable {
 
 extension AttackModifier {
     enum AttackModifierType: String {
-        case Physical
+        case Melee
+        case Ranged
         case Magical
         
         var image: UIImage? {
             switch self {
-            case .Physical:
-                return UIImage(named: "PhysicalAttackModifier")
+            case .Melee:
+                return UIImage(named: "MeleeAttackModifier")
+            case .Ranged:
+                return UIImage(named: "RangedAttackModifier")
             case .Magical:
                 return UIImage(named: "MagicalAttackModifier")
             }
         }
     }
     
-    static let allAttackModifierTypes: [AttackModifierType] = [.Physical, .Magical]
+    static let allAttackModifierTypes: [AttackModifierType] = [.Melee, .Ranged, .Magical]
     
     var attackModifierType: AttackModifierType {
         switch name {
-        case "Physical":
-            return .Physical
+        case "Melee":
+            return .Melee
+        case "Ranged":
+            return .Ranged
         case "Magical":
             return .Magical
         default:
-            return .Physical
+            return .Melee
         }
     }
 }

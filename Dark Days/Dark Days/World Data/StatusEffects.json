@@ -3,14 +3,16 @@
   "statModifiers": [{"stat": "STR", "value": -2}]
   }, {
   "name": "Inspired",
-  "attackModifiers": [{"name": "Physical", "value": 1},
+  "attackModifiers": [{"name": "Melee", "value": 1},
+                      {"name": "Ranged", "value": 1},
                       {"name": "Magical", "value": 1}]
   }, {
   "name": "Giant Form",
   "statModifiers": [{"stat": "STR", "value": 2}]
   }, {
   "name": "Blinded",
-  "attackModifiers": [{"name": "Physical", "value": -4}]
+  "attackModifiers": [{"name": "Melee", "value": -4},
+                      {"name": "Ranged", "value": -4}]
   }, {
   "name": "Crippled",
   "damageAvoidances": [{"name": "Physical", "value": -2}]
