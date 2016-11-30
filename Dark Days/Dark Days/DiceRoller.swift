@@ -65,7 +65,7 @@ enum Dice: Int {
 final class DiceRoller {
     
     static func roll(dice: Dice, count: Int = 1) -> Int {
-        let distribution = GKShuffledDistribution(forDieWithSideCount: dice.upperValue)
+        let distribution = GKRandomDistribution(forDieWithSideCount: dice.upperValue)
         
         var value = 0
         

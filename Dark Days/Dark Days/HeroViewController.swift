@@ -408,50 +408,68 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let buttonStackView = ButtonStackView()
         buttonStackView.axis = .vertical
         
-        buttonStackView.addButton(title: String(format:"Roll %@ Check", stat.name), tapHandler: {
+        let showController: (String, String) -> (Void) = { title, message in
+            let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Done", style: .cancel) { _ in })
+
+            self.dismissOverlay()
+            self.navigationController?.present(controller, animated: true, completion: nil)
+        }
+        
+        let rollCheckTitle = String(format:"Roll %@ Check", stat.name)
+        buttonStackView.addButton(title: rollCheckTitle, tapHandler: {
             let result = DiceRoller.roll(dice: .d20) + stat.currentValue
             
-            print(result)
+            showController(rollCheckTitle, String(result))
         })
         
         switch stat.statType {
         case .Strength:
-            buttonStackView.addButton(title: String(format:"Melee Attack Roll", stat.name), tapHandler: {
+            let attackRollTitle = "Melee Attack Roll"
+            buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Melee)
                 
-                print(result)
+                showController(attackRollTitle, String(result))
             })
 
         case .Dexterity:
-            buttonStackView.addButton(title: String(format:"Ranged Attack Roll", stat.name), tapHandler: {
+            
+            let attackRollTitle = "Ranged Attack Roll"
+            buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Ranged)
                 
-                print(result)
+                showController(attackRollTitle, String(result))
             })
             
-            buttonStackView.addButton(title: String(format:"Avoid Physical Attack Roll", stat.name), tapHandler: {
+            let avoidRollTitle = "Avoid Physical Attack Roll"
+            buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Physical)
                 
-                print(result)
+                showController(avoidRollTitle, String(result))
             })
         case .Constitution: break
         case .Intelligence:
-            buttonStackView.addButton(title: String(format:"Magical Attack Roll", stat.name), tapHandler: {
+            
+            let attackRollTitle = "Magical Attack Roll"
+            buttonStackView.addButton(title: attackRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Magical)
                 
-                print(result)
+                showController(attackRollTitle, String(result))
             })
             
-            buttonStackView.addButton(title: String(format:"Avoid Magical Attack Roll", stat.name), tapHandler: {
+            let avoidRollTitle = "Avoid Magical Attack Roll"
+            buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Magical)
                 
-                print(result)
+                showController(avoidRollTitle, String(result))
             })
         case .Faith:
-            buttonStackView.addButton(title: String(format:"Avoid Mental Attack Roll", stat.name), tapHandler: {
+            
+            let avoidRollTitle = "Avoid Mental Attack Roll"
+            buttonStackView.addButton(title: avoidRollTitle, tapHandler: {
                 let result = DiceRoller.roll(dice: .d20) + hero.damageAvoidanceForAvoidanceType(.Mental)
                 
-                print(result)
+                showController(avoidRollTitle, String(result))
             })
         }
         
