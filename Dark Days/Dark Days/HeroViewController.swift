@@ -445,7 +445,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         
         let rollCheckTitle = String(format:"Roll %@ Check", stat.name)
         buttonStackView.addButton(title: rollCheckTitle, tapHandler: {
-            let result = DiceRoller.roll(dice: .d20) + stat.currentValue
+            let result = DiceRoller.roll(dice: .d20) + hero.statValueForType(stat.statType)
             
             self.showAlertController(title: rollCheckTitle, message: String(result))
         })
