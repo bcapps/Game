@@ -880,7 +880,17 @@
  	"effects": "A strong fishing line crafted from the silk of a Deep Spider.",
  	"flavor": "",
  	"itemSlot": ""
- }, {
+  }, {
+ 	"name": "Golden Apple",
+ 	"effects": "A crisp apple that takes different depending on who eats it.",
+ 	"flavor": "Countfeit in many cities, the golden apple is often used by the less reputable to determine where ones allegiances might lie.",
+ 	"itemSlot": ""
+  }, {
+ 	"name": "Distracting Coin",
+ 	"effects": "Flipping this coin can capture the attention of anyone looking at it, causing them to be entranced by the coin. They must make a DC 16 INT check, or they will be completely distracted by the coin, and much less likely to notice what is going on around them.",
+ 	"flavor": "The coin seeks the attention, it bathes in it. It's desire to be seen can consume the holder, until attention is all they seek as well.",
+ 	"itemSlot": ""
+  }, {
  	"name": "Blade of Revan'kan",
  	"attack": {
  		"damageDiceNumber": 1,
