@@ -160,33 +160,24 @@ final class Hero: Codeable, Nameable {
             attackModifier += statValueForType(.Intelligence)
         }
         
-        for item in inventory.equippedItems {
-            attackModifier += item.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let itemModifiers = inventory.equippedItems.map { $0.attackModifiers }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.attackModifiers }.flatMap { $0 }
+        let statusEffectModifiers = currentStatusEffects.map { $0.attackModifiers }.flatMap { $0 }
         
-        for itemSet in inventory.equippedItemSets {
-            attackModifier += itemSet.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let attackModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers
         
-        for status in currentStatusEffects {
-            attackModifier += status.attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        attackModifier += attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, +)
         
         return attackModifier
     }
     
     func statModifierForEquippedItemsForStat(_ stat: Stat) -> Int {
-        var statModifier = 0
+        let itemModifiers = inventory.equippedItems.map { $0.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
         
-        for item in inventory.equippedItems {
-            statModifier += item.statModifiers.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let statModifiers = itemModifiers + itemSetModifiers
         
-        for itemSet in inventory.equippedItemSets {
-            statModifier += itemSet.statModifiers.filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
-        
-        return statModifier
+        return statModifiers.map { $0.value }.reduce(0, +)
     }
     
     func statModifierForCurrentStatuses(forStat stat: Stat) -> Int {
