@@ -38,21 +38,7 @@ struct Monster: Decodable, Nameable {
             stats: json => "stats" ?? [],
             type: json => "type")
     }
-    
-    func attack(forNumber number: Int) -> MonsterAttack? {
-        var totalAttackWeight = 0
         
-        for attack in attacks {
-            totalAttackWeight += attack.attackWeight
-
-            if number < totalAttackWeight {
-                return attack
-            }
-        }
-        
-        return nil
-    }
-    
     func attack(forName name: String) -> MonsterAttack? {
         return attacks.filter { $0.name == name }.first
     }

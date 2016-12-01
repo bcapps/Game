@@ -37,7 +37,7 @@ final class MonsterFormatter {
                 return "> ***" + $0.name + "*** " + explanation
             }.joined(separator: "\n>\n") + "\n"
             string += "> ### Actions" + "\n"
-            string += monster.attacks.flatMap { "> ***" + $0.name + "*** " + $0.damage }.joined(separator: "\n>\n")
+            string += monster.attacks.flatMap { "> ***" + $0.name + "*** " + $0.attack.damageText }.joined(separator: "\n>\n")
             
             formattedStrings.append(string + "\n")
         }

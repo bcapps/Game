@@ -11,12 +11,10 @@ import Decodable
 
 struct MonsterAttack: Decodable, Nameable {
     let name: String
-    let damage: String
-    let attackWeight: Int
+    let attack: Attack
     
     static func decode(_ json: Any) throws -> MonsterAttack {
         return try MonsterAttack(name: json => "name",
-                           damage: json => "damage",
-                           attackWeight: json => "weight")
+                               attack: json => "attack")
     }
 }

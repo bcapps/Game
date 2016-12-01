@@ -89,7 +89,7 @@ extension Town: ListDisplayingGeneratable {
 
 extension MonsterAttack: ListDisplayingGeneratable {
     static func displayable(_ attack: MonsterAttack) -> ListDisplayable {
-        return ListDisplayable(title: attack.name, information: attack.damage, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: nil, accessoryImage: nil)
+        return ListDisplayable(title: attack.name, information: attack.attack.damageText, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: nil, accessoryImage: nil)
     }
 }
 

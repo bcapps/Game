@@ -177,7 +177,7 @@
  		"damageDiceValue": 6,
  		"additionalDamage": 1,
  		"damageText": "1d6",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "",
@@ -190,7 +190,7 @@
  		"damageDiceNumber": 1,
  		"damageDiceValue": 4,
  		"damageText": "1d4",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "",
@@ -202,7 +202,7 @@
  		"damageDiceNumber": 1,
  		"damageDiceValue": 6,
  		"damageText": "1d6",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "",
@@ -214,7 +214,7 @@
  		"damageDiceNumber": 2,
  		"damageDiceValue": 4,
  		"damageText": "2d4",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "",
@@ -227,7 +227,7 @@
  		"damageDiceNumber": 2,
  		"damageDiceValue": 4,
  		"damageText": "2d4",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "Increases chance to hit with a ranged attack by 1.",
@@ -569,7 +569,7 @@
  		"damageDiceNumber": 1,
  		"damageDiceValue": 4,
  		"damageText": "2d4",
- 		"damageStat": "DEX",
+ 		"damageStat": "STR",
  		"attackType": "Ranged"
  	},
  	"effects": "The bow is so light, you can fire off two arrows in the time it would normally take to fire one. Roll each attack and damage separately.",

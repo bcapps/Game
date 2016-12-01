@@ -41,7 +41,8 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
             guard let monster = self.monster else { return }
             guard let attack = monster.attack(forName: attack.name) else { return }
             
-            let controller = UIAlertController(title: attack.name, message: attack.attackString, preferredStyle: .alert)
+            let message = attack.attackStringForMonster(monster: monster)
+            let controller = UIAlertController(title: attack.name, message: message, preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
             
             self.navigationController?.present(controller, animated: true, completion: nil)
@@ -64,11 +65,38 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
 }
 
 private extension MonsterAttack {
-    var attackString: String {
-        get {
-            let attackRoll = DiceRoller.roll(dice: .d20)
-            
-            return "Attack Roll: \(attackRoll)" + "\n" + "Damage Roll: " + damage.replaceDamageStringWithRealDamage()
+    
+    func attackStringForMonster(monster: Monster) -> String {
+        let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+        let attackModifier = monster.attackModifier(forAttackType: attack.attackType)
+        
+        let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+        
+        let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
+        let attackDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
+        let damageModifier = monster.damageModifier(forAttack: attack)
+        
+        let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + attackModifier), naturalText)
+        let damageResult = String(format: "Damage: %@", String(attackDamageRoll + damageModifier))
+        
+        return attackResult + "\n" + damageResult
+    }
+}
+
+private extension Monster {
+    
+    func damageModifier(forAttack attack: Attack) -> Int {
+        return stats.filter { $0.name == attack.damageStat.shortName }.first?.value ?? 0
+    }
+    
+    func attackModifier(forAttackType type: AttackModifierType) -> Int {
+        switch type {
+        case .Melee:
+            return stats.filter { $0.name == "STR" }.first?.value ?? 0
+        case .Ranged:
+            return stats.filter { $0.name == "DEX" }.first?.value ?? 0
+        case .Magical:
+            return stats.filter { $0.name == "INT" }.first?.value ?? 0
         }
     }
 }

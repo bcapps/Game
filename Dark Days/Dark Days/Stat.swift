@@ -17,6 +17,21 @@ enum StatType: String {
     case Intelligence
     case Faith
     
+    var shortName: String {
+        switch self {
+        case .Strength:
+            return "STR"
+        case .Dexterity:
+            return "DEX"
+        case .Constitution:
+            return "CON"
+        case .Intelligence:
+            return "INT"
+        case .Faith:
+            return "FAI"
+        }
+    }
+    
     static func statTypeForString(string: String) -> StatType {
         switch string {
         case "Strength":

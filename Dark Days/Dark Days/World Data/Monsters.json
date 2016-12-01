@@ -1,659 +1,1802 @@
 [{
- "name": "Spider",
- "explanation": "A skittering arthropod with hairy mandibles.",
- "health": 8,
- "type": "vermin",
- "speed": "30",
- "traits": ["Web Sense"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": -1},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Bite", "damage": "1d4", "weight": 80},
-             {"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 20}]
- },
- {
- "name": "Large Spider",
- "explanation": "A tremendous spider that stands head to head with a human.",
- "health": 12,
- "type": "large vermin",
- "speed": "30",
- "traits": ["Web Sense"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": -1},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Bite", "damage": "1d4", "weight": 60},
-             {"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 40}]
- }, {
- "name": "Spider Queen",
- "explanation": "A humongous arthropod with massive legs and a tremendous abdomen.",
- "health": 30,
- "type": "huge vermin",
- "speed": "30",
- "traits": ["Web Sense"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 3},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Poison Bite", "damage": "1d4 + 1d4 poison next turn", "weight": 60},
-             {"name": "Trample", "damage": "1d4 Large AOE", "weight": 30},
-             {"name": "Poison Spit", "damage": "1d4 poison + 1d4 poison next turn Large AOE", "weight": 10}]
- }, {
- "name": "Possessed Monk",
- "explanation": "A monk possessed by magic. His eyes glow red.",
- "health": 45,
- "type": "humanoid",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["frightened", "stunned", "charmed"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Kick", "damage": "1d4", "weight": 70},
-             {"name": "Twin-fist", "damage": "1d4 + 1d4", "weight": 30}]
- }, {
- "name": "Blade of Kazu",
- "explanation": "A shrouded figure dressed in black with a long thin scabbard on his waist.",
- "health": 20,
- "type": "humanoid",
- "speed": "40",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["stunned"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 3},
-           {"name": "DEX", "value": 4},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Strike", "damage": "1d6", "weight": 70},
-             {"name": "Double-Strike", "damage": "1d6 + 1d6", "weight": 30}]
- }, {
- "name": "Mental Patient",
- "explanation": "A scared individual with ragged clothes and crazed eyes.",
- "health": 15,
- "type": "humanoid",
- "speed": "20",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 3},
-           {"name": "DEX", "value": -1},
-           {"name": "CON", "value": -1},
-           {"name": "INT", "value": -1},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Claw", "damage": "1d4 physical damage", "weight": 70},
-             {"name": "Grapple", "damage": "1d4 physical damage", "weight": 30}]
- }, {
- "name": "Flesh Golem",
- "explanation": "A large muscular humanoid looking creature. It commands great strength, and is resistant to most conditions.",
- "health": 85,
- "type": "large humanoid, golem",
- "speed": "15",
- "traits": [],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned", "diseased", "confusion", "paralysis", "bleeding"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 4},
-           {"name": "DEX", "value": -2},
-           {"name": "CON", "value": 3},
-           {"name": "INT", "value": -1},
-           {"name": "FAI", "value": -1}],
- "attacks": [{"name": "Punch", "damage": "1d6 physical damage", "weight": 100}]
- }, {
- "name": "Voice of Insanity",
- "explanation": "A mass of black energy sitting in the center of the room that screams horrors.",
- "health": 100,
- "type": "aberration",
- "speed": "0",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 4},
-           {"name": "FAI", "value": 4}],
- "attacks": [{"name": "Insane Cry", "damage": "1d4 Mental damage", "weight": 100}]
- }, {
- "name": "The Commoner Boss",
- "explanation": "A small commoner.",
- "health": 50,
- "type": "humanoid",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Stab", "damage": "1d4", "weight": 70},
-             {"name": "Ram", "damage": "1d6", "weight": 30}]
- }, {
- "name": "Greater Felbeast",
- "explanation": "A large four legged demon with several sharp horns it uses to tear the flesh off of it's enemies. It burns the ground it walks on.",
- "health": 90,
- "type": "magical beast",
- "speed": "30",
- "traits": ["Barbed Hide"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 2}],
- "attacks": [{"name": "Claw", "damage": "1d6", "weight": 60},
-             {"name": "Maul", "damage": "1d8", "weight": 30},
-             {"name": "Bite", "damage": "1d10", "weight": 10}]
- }, {
- "name": "Zombie",
- "explanation": "A mostly rotting corpse with large pieces of flesh missing.",
- "health": 12,
- "type": "undead",
- "speed": "15",
- "traits": [],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": -2},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Claw", "damage": "1d4", "weight": 70},
-             {"name": "Grapple", "damage": "1d4", "weight": 30}]
- }, {
- "name": "Skeleton",
- "explanation": "An ashen red collection of bones in a humanoid shape. Wielding a sword or a mace.",
- "health": 22,
- "type": "undead",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Hit", "damage": "1d6", "weight": 100}]
- }, {
- "name": "Necromancer",
- "explanation": "A thin gaunt fellow wearing dark robes.",
- "health": 25,
- "type": "humanoid",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 1},
-           {"name": "FAI", "value": 2}],
- "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
-             {"name": "Raise Dead", "damage": "Raises a zombie from a corpse.", "weight": 30}]
- }, {
- "name": "Cultist",
- "explanation": "A purple robed individual with pale skin.",
- "health": 25,
- "type": "humanoid",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 1},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Stab", "damage": "1d6 physical damage", "weight": 70},
-             {"name": "Chant", "damage": "", "weight": 30}]
- }, {
- "name": "Eyeless Gauth",
- "explanation": "A floating spheroid with a large fanged mouth with several eyestalks attached to the top of it. It appears to once have had a large central eye, but it has been cut out.",
- "health": 95,
- "type": "small aberration",
- "speed": "25",
- "traits": ["Keen Sight", "Sense Magic"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 4},
-           {"name": "FAI", "value": 4}],
- "attacks": [{"name": "Eyestalk: Charm", "damage": "Charms a person to do their bidding. DC 15 [FAI] to save.", "weight": 25},
-             {"name": "Eyestalk: Magic Ray", "damage": "2d6 + 2 magic damage", "weight": 25},
-             {"name": "Eyestalk: Acid Pool", "damage": "2d4 + 2 large AOE magic damage", "weight": 25},
-             {"name": "Eyestalk: Darkness", "damage": "Blind the target, reducing their accuracy by 4. DC 13 [FAI] to save.", "weight": 25}]
- }, {
- "name": "Master Necromancer",
- "explanation": "An overpoweringly dark individual, covered in black robes and cowl.",
- "health": 65,
- "type": "humanoid",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["dark"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Dark Bolt", "damage": "1d6 magic damage", "weight": 70},
-             {"name": "Arms of Morter", "damage": "1d6 medium AOE magic damage", "weight": 30}]
- }, {
- "name": "Davu",
- "explanation": "The Davu feed off the despair and agony of those in pain. They live in the nightmare realm.",
- "health": 30,
- "type": "humanoid, outsider",
- "speed": "30",
- "traits": ["Dark Energy Absorption"],
- "damageImmunities": ["dark"],
- "conditionImmunities": ["blind"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 2}],
- "attacks": [{"name": "Nightmare Blast", "damage": "2d4 magic damage", "weight": 30},
-             {"name": "Claw", "damage": "1d6 + 2 physical damage", "weight": 70}]
- }, {
- "name": "Incubus",
- "explanation": "A demon that entraps and enslaves women to do their bidding and drain their life.",
- "health": 65,
- "type": "humanoid, outsider",
- "speed": "30",
- "traits": [],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Mind Warp", "damage": "1d4 medium AOE mental damage", "weight": 30},
-             {"name": "Razor Claw", "damage": "1d6 + 2 physical damage", "weight": 40},
-             {"name": "Nightmare Shift", "damage": "Shifts the target into the nightmare world for a round.", "weight": 30}]
- }, {
- "name": "Gateway Mimic",
- "explanation": "A mimickry demon that has taken the form of a gateway that eats people.",
- "health": 100,
- "type": "aberration",
- "speed": "15",
- "traits": ["Shapechanger", "Keen Taste"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 3},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Bite", "damage": "1d6 + 2 physical damage", "weight": 40},
-             {"name": "Kick", "damage": "1d4 + 3 physical damage", "weight": 40},
-             {"name": "Devour", "damage": "2d6 physical damage", "weight": 20}]
- }, {
- "name": "Witch Hunter",
- "explanation": "A man dressed from head to toe in pressed black leather.",
- "health": 32,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Sense Magic"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 2}],
- "attacks": [{"name": "Strike", "damage": "1d6 + 2 physical damage", "weight": 70},
-             {"name": "Stake Thrower", "damage": "1d6 physical damage", "weight": 30}]
- }, {
- "name": "Cassandra",
- "explanation": "A plain looking woman with a white blouse and a brown smock.",
- "health": 75,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Unnatural Magic"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 3},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Fire Touch", "damage": "1d6 fire damage", "weight": 20},
-             {"name": "Frost Touch", "damage": "1d6 frost damage", "weight": 20},
-             {"name": "Poison Touch", "damage": "1d6 poison damage", "weight": 20},
-             {"name": "Lightning Touch", "damage": "1d6 lightning damage", "weight": 20},
-             {"name": "Elemental Blast", "damage": "1d4 fire damage + 1d4 cold damage + 1d4 poison damage + 1d4 lightning damage", "weight": 10}]
- }, {
- "name": "Teranath",
- "explanation": "A plain looking woman with a white blouse and a brown smock.",
- "health": 75,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Unnatural Magic"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 0},
-           {"name": "DEX", "value": 0},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 3},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Heal", "damage": "Heals herself for 1d6 + 2", "weight": 30},
-             {"name": "Entangle", "damage": "Traps her opponent, they are unable to move until they make a pass a DC 12 [STR] check.", "weight": 25},
-             {"name": "Lightning Blast", "damage": "Deals 1d4 + 2 lightning damage.", "weight": 30}]
- }, {
- "name": "Infected Citizen",
- "explanation": "A normal villager infected with disease, driven mad by agony.",
- "health": 20,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Toxic"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": -1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Punch", "damage": "1d4 physical damage", "weight": 70},
-             {"name": "Acid Splash", "damage": "2d4 poison damage", "weight": 30}]
- }, {
- "name": "Infected Abomination",
- "explanation": "A humongous mash of flesh and disease, the combination of many villagers writing together makes for a grotesque sight.",
- "health": 120,
- "type": "huge aberration",
- "speed": "30",
- "traits": ["Toxic"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 4},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Pound", "damage": "2d4 + 2 physical damage", "weight": 50},
-             {"name": "Stomp", "damage": "2d4 + 2 physical damage", "weight": 30},
-             {"name": "Acid Splash", "damage": "2d6 poison damage", "weight": 30}]
- }, {
- "name": "Sailor",
- "explanation": "A deckhand of a ship.",
- "health": 20,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Sea Legs"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Slash", "damage": "1d6 physical damage", "weight": 90},
-             {"name": "Molotov", "damage": "2d4 + 2 medium AOE fire damage", "weight": 10}]
- }, {
- "name": "Sea Captain",
- "explanation": "The captain of a ship.",
- "health": 35,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Sea Legs", "Poison Resistance"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 1},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Slash", "damage": "1d6 physical damage", "weight": 90},
-             {"name": "Molotov", "damage": "2d4 + 2 medium AOE fire damage", "weight": 10}]
- }, {
- "name": "Town Guard",
- "explanation": "A simple town guard.",
- "health": 50,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Magic Resistance"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 3},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Slash", "damage": "1d8 physical damage", "weight": 90},
-             {"name": "Impale", "damage": "2d6 physical damage", "weight": 10}]
- }, {
- "name": "Snel",
- "explanation": "A medium size creature with a lithe skinny figure, with lightning speed. Its keen eyes and smell make it an excellent tracker. Primarily used in assassinations.",
- "health": 45,
- "type": "aberration",
- "speed": "30",
- "traits": ["Magic Resistance", "Stealth", "Sneak Attack", "Keen Sight", "Keen Smell"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 5},
-           {"name": "CON", "value": 3},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Stab", "damage": "1d8 physical damage", "weight": 80},
-             {"name": "Blink", "damage": "1d6 physical damage", "weight": 20}]
- }, {
- "name": "Orb of Detection",
- "explanation": "A small orb used by followers of Vitael to aid in the detection of magic.",
- "health": 15,
- "type": "magical creature",
- "speed": "30",
- "traits": ["Magic Resistance", "Levitation", "Sense Magic", "Detect Invisiblity"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["frightened", "stunned", "charmed", "sleep", "blind", "deafened"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 5},
-           {"name": "CON", "value": 3},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Stab", "damage": "1d8 physical damage", "weight": 80},
-             {"name": "Blink", "damage": "1d6 physical damage", "weight": 20}]
- }, {
- "name": "Denton Reeves, \"Mayor\" of Clarity",
- "explanation": "A giant of a man, borderline psychotic. The apparent mayor of Clarity.",
- "health": 75,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Berserk", "Lie Detector"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 4},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 3},
-           {"name": "INT", "value": -1},
-           {"name": "FAI", "value": -1}],
- "attacks": [{"name": "Pound", "damage": "1d8 physical damage", "weight": 50},
-             {"name": "Kick", "damage": "2d6 physical damage", "weight": 50}]
- }, {
- "name": "Kal Moro, Captain of Rat Troop 7",
- "explanation": "A thin man. Years of lucidity addiction have left him a hallucinatory mess. Wields an iron spear and thick iron shield.",
- "health": 60,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Stealth", "Keen Smell"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 3},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Poke", "damage": "1d8 physical damage", "weight": 100}]
- }, {
- "name": "Sister of Slaughter",
- "explanation": "A pale woman with thick black hair.",
- "health": 30,
- "type": "humanoid",
- "speed": "30",
- "traits": ["Unnatural Magic", "Fey Ancestry", "Sense Magic", "Heated Body", "Toxic"],
- "damageImmunities": ["—"],
- "conditionImmunities": ["—"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": -1},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 3},
-           {"name": "FAI", "value": 3}],
- "attacks": [{"name": "Elemental Blast", "damage": "1d4 + [FAI] magic damage", "weight": 20},
-             {"name": "Charm", "damage": "Attempts to charm an enemy. They must make a [FAI] save of 10+ to resist.", "weight": 20},
-             {"name": "Focus", "damage": "Direct attacks towards an enemy.", "weight": 20},
-             {"name": "Flame Dash", "damage": "1d4 + [FAI] fire damage", "weight": 20},
-             {"name": "Poison Spit", "damage": "1d4 + [FAI] poison damage", "weight": 20}]
- }, {
- "name": "Troll",
- "explanation": "A large dark brown-ish creature. Mostly humanoid in shape, it has great strength, but low intelligence.",
- "health": 120,
- "type": "large humanoid",
- "speed": "30",
- "traits": [""],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["troll", "common"],
- "stats": [{"name": "STR", "value": 4},
-           {"name": "DEX", "value": 1},
-           {"name": "CON", "value": 4},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Club", "damage": "2d6 + 2 physical damage.", "weight": 70},
-             {"name": "Regenerate", "damage": "Heals 2d4 damage.", "weight": 30}]
- }, {
- "name": "Troll Guard",
- "explanation": "A large dark brown-ish creature. Mostly humanoid in shape, it has great strength, but low intelligence.",
- "health": 35,
- "type": "humanoid",
- "speed": "30",
- "traits": [""],
- "damageImmunities": [""],
- "conditionImmunities": [""],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 2},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 1},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Poke", "damage": "2d4 physical damage.", "weight": 70}]
- }, {
- "name": "Aranae",
- "explanation": "A humanoid shapeshifter. Their true form is a hybrid between spider and human. They can shapeshift at will back and forth between either form.",
- "health": 85,
- "type": "humanoid, vermin",
- "speed": "30",
- "traits": ["Shapechanger"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["common"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 3},
-           {"name": "CON", "value": 2},
-           {"name": "INT", "value": 1},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Poison Spit", "damage": "2d6 poison damage.", "weight": 30},
-             {"name": "Smack", "damage": "2d6 physical damage.", "weight": 30},
-             {"name": "Summon Skeleton", "damage": "", "weight": 20}]
- }, {
- "name": "Tomb Spider",
- "explanation": "A humongous spindly arthropod with long legs and a small abdomen.",
- "health": 80,
- "type": "huge undead vermin",
- "speed": "30",
- "traits": ["Web Sense", "Dark Energy Absorption", "Dark Poison"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 3},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 4},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Bite", "damage": "2d4 physical damage + 2d4 poison next turn, DC 13 check to avoid.", "weight": 50},
-             {"name": "Poison Spit", "damage": "2d4 poison + 2d4 poison next turn Large AOE.", "weight": 30},
-             {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 17 STR check to break. Web has 12 health.", "weight": 20}]
- }, {
- "name": "Spider Infested Humanoid",
- "explanation": "A bloated rotting corpse with spider eggs embedded inside. Bursts open upon death spawning 1d4 spiders.",
- "health": 24,
- "type": "undead",
- "speed": "15",
- "traits": [],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 1},
-           {"name": "DEX", "value": -2},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 0},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Claw", "damage": "1d6", "weight": 70},
-             {"name": "Grapple", "damage": "1d6", "weight": 30}]
- }, {
- "name": "Phase Spider",
- "explanation": "A spindly arthropod colored with a blue hue and a white underbelly with long legs and a small abdomen.",
- "health": 45,
- "type": "large vermin",
- "speed": "30",
- "traits": ["Web Sense", "Phasing"],
- "damageImmunities": ["poison"],
- "conditionImmunities": ["poisoned"],
- "languages": ["—"],
- "stats": [{"name": "STR", "value": 2},
-           {"name": "DEX", "value": 3},
-           {"name": "CON", "value": 0},
-           {"name": "INT", "value": 2},
-           {"name": "FAI", "value": 0}],
- "attacks": [{"name": "Poison Bite", "damage": "2d4 physical damage, DC 11 check to resist 2d8 poison damage. If you would be killed by the poison damage, you are paralyzed at 1 health for the next hour.", "weight": 50},
-             {"name": "Web Wrap", "damage": "1d6 physical damage, wraps target DC 14 STR check to break. Web has 12 health.", "weight": 50}]
- }]
+	"name": "Spider",
+	"explanation": "A skittering arthropod with hairy mandibles.",
+	"health": 8,
+	"type": "vermin",
+	"speed": "30",
+	"traits": ["Web Sense"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": -1
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Bite",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Poison Bite",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "1d4 + 1d4 poison next turn",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Large Spider",
+	"explanation": "A tremendous spider that stands head to head with a human.",
+	"health": 12,
+	"type": "large vermin",
+	"speed": "30",
+	"traits": ["Web Sense"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": -1
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Bite",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Poison Bite",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "1d4 + 1d4 poison next turn",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Spider Queen",
+	"explanation": "A humongous arthropod with massive legs and a tremendous abdomen.",
+	"health": 30,
+	"type": "huge vermin",
+	"speed": "30",
+	"traits": ["Web Sense"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 3
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Poison Bite",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "1d4 + 1d4 poison next turn",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Trample",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4 large AOE",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Poison Spit",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "1d4 poison + 1d4 poison next turn large AOE",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Possessed Monk",
+	"explanation": "A monk possessed by magic. His eyes glow red.",
+	"health": 45,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["frightened", "stunned", "charmed"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Kick",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Twin-fist",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Blade of Kazu",
+	"explanation": "A shrouded figure dressed in black with a long thin scabbard on his waist.",
+	"health": 20,
+	"type": "humanoid",
+	"speed": "40",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["stunned"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 3
+	}, {
+		"name": "DEX",
+		"value": 4
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Strike",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Double-Strike",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Mental Patient",
+	"explanation": "A scared individual with ragged clothes and crazed eyes.",
+	"health": 15,
+	"type": "humanoid",
+	"speed": "20",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 3
+	}, {
+		"name": "DEX",
+		"value": -1
+	}, {
+		"name": "CON",
+		"value": -1
+	}, {
+		"name": "INT",
+		"value": -1
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Grapple",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Flesh Golem",
+	"explanation": "A large muscular humanoid looking creature. It commands great strength, and is resistant to most conditions.",
+	"health": 85,
+	"type": "large humanoid, golem",
+	"speed": "15",
+	"traits": [],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned", "diseased", "confusion", "paralysis", "bleeding"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 4
+	}, {
+		"name": "DEX",
+		"value": -2
+	}, {
+		"name": "CON",
+		"value": 3
+	}, {
+		"name": "INT",
+		"value": -1
+	}, {
+		"name": "FAI",
+		"value": -1
+	}],
+	"attacks": [{
+		"name": "Punch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Voice of Insanity",
+	"explanation": "A mass of black energy sitting in the center of the room that screams horrors.",
+	"health": 100,
+	"type": "aberration",
+	"speed": "0",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 4
+	}, {
+		"name": "FAI",
+		"value": 4
+	}],
+	"attacks": [{
+		"name": "Insane Cry",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4 mental damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "The Commoner Boss",
+	"explanation": "A small commoner.",
+	"health": 50,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Stab",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Ram",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Greater Felbeast",
+	"explanation": "A large four legged demon with several sharp horns it uses to tear the flesh off of it's enemies. It burns the ground it walks on.",
+	"health": 90,
+	"type": "magical beast",
+	"speed": "30",
+	"traits": ["Barbed Hide"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 2
+	}],
+	"attacks": [{
+		"name": "Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Maul",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 8,
+			"damageText": "1d8",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Bite",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 10,
+			"damageText": "1d10",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Zombie",
+	"explanation": "A mostly rotting corpse with large pieces of flesh missing.",
+	"health": 12,
+	"type": "undead",
+	"speed": "15",
+	"traits": [],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": -2
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Grapple",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Skeleton",
+	"explanation": "An ashen red collection of bones in a humanoid shape. Wielding a sword or a mace.",
+	"health": 22,
+	"type": "undead",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Hit",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Necromancer",
+	"explanation": "A thin gaunt fellow wearing dark robes.",
+	"health": 25,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 1
+	}, {
+		"name": "FAI",
+		"value": 2
+	}],
+	"attacks": [{
+		"name": "Dark Bolt",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Raise Dead",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Raises a zombie from the dead.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Cultist",
+	"explanation": "A purple robed individual with pale skin.",
+	"health": 25,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 1
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Chant",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Eyeless Gauth",
+	"explanation": "A floating spheroid with a large fanged mouth with several eyestalks attached to the top of it. It appears to once have had a large central eye, but it has been cut out.",
+	"health": 95,
+	"type": "small aberration",
+	"speed": "25",
+	"traits": ["Keen Sight", "Sense Magic"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 4
+	}, {
+		"name": "FAI",
+		"value": 4
+	}],
+	"attacks": [{
+		"name": "Eyestalk: Charm",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Charms a person to do their bidding. DC 15 [FAI] to save.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Eyestalk: Magic Ray",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "2d6 + 2",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Eyestalk: Acid Pool",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4 + 2 medium AOE.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Eyestalk: Darkness",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Blind the target, reducing their accuracy by 4. DC 13 [FAI] to save.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Master Necromancer",
+	"explanation": "An overpoweringly dark individual, covered in black robes and cowl.",
+	"health": 65,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["dark"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Dark Bolt",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Arms of Morter",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 medium AOE damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Davu",
+	"explanation": "The Davu feed off the despair and agony of those in pain. They live in the nightmare realm.",
+	"health": 30,
+	"type": "humanoid, outsider",
+	"speed": "30",
+	"traits": ["Dark Energy Absorption"],
+	"damageImmunities": ["dark"],
+	"conditionImmunities": ["blind"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 2
+	}],
+	"attacks": [{
+		"name": "Nightmare Blast",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "1d6 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Incubus",
+	"explanation": "A demon that entraps and enslaves women to do their bidding and drain their life.",
+	"health": 65,
+	"type": "humanoid, outsider",
+	"speed": "30",
+	"traits": [],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Mind Warp",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Razor Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "1d6 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Nightmare Shift",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Shifts the target into the nightmare world for a round.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Gateway Mimic",
+	"explanation": "A mimickry demon that has taken the form of a gateway that eats people.",
+	"health": 100,
+	"type": "aberration",
+	"speed": "15",
+	"traits": ["Shapechanger", "Keen Taste"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 3
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Bite",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "1d6 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Kick",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"additionalDamage": 3,
+			"damageText": "1d4 + 3",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Devour",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Witch Hunter",
+	"explanation": "A man dressed from head to toe in pressed black leather.",
+	"health": 32,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Sense Magic"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 2
+	}],
+	"attacks": [{
+		"name": "Strike",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Stake Thrower",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Cassandra",
+	"explanation": "A plain looking woman with a white blouse and a brown smock.",
+	"health": 75,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Unnatural Magic"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 3
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Fire Touch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 fire damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Frost Touch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 frost damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Poison Touch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 poison damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Lightning Touch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 lightning damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Elemental Blast",
+		"attack": {
+			"damageDiceNumber": 4,
+			"damageDiceValue": 4,
+			"damageText": "1d4 fire damage + 1d4 cold damage + 1d4 poison damage + 1d4 lightning damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Teranath",
+	"explanation": "A plain looking woman with a white blouse and a brown smock.",
+	"health": 75,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Unnatural Magic"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 0
+	}, {
+		"name": "DEX",
+		"value": 0
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 3
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Heal",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "Heals herself for 1d6 + 2",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Entangle",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Traps the opponent in roots. They are unable to move until they pass a DC 12 [STR] check.",
+			"damageStat": "FAI",
+			"attackType": "magical"
+		}
+	}, {
+		"name": "Lightning Blast",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"additionalDamage": 2,
+			"damageText": "1d4 + 2",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Infected Citizen",
+	"explanation": "A normal villager infected with disease, driven mad by agony.",
+	"health": 20,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Toxic"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": -1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Punch",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Acid Splash",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Infected Abomination",
+	"explanation": "A humongous mash of flesh and disease, the combination of many villagers writing together makes for a grotesque sight.",
+	"health": 120,
+	"type": "huge aberration",
+	"speed": "30",
+	"traits": ["Toxic"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 4
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Pound",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"additionalDamage": 2,
+			"damageText": "2d4 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Stomp",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"additionalDamage": 2,
+			"damageText": "2d4 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Acid Splash",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Sailor",
+	"explanation": "A deckhand of a ship.",
+	"health": 20,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Sea Legs"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Slash",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Molotov",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Sea Captain",
+	"explanation": "The captain of a ship.",
+	"health": 35,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Sea Legs", "Poison Resistance"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 1
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Slash",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Molotov",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"additionalDamage": 2,
+			"damageText": "2d4 + 2",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}]
+}, {
+	"name": "Town Guard",
+	"explanation": "A simple town guard.",
+	"health": 50,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Magic Resistance"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 3
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Slash",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 8,
+			"damageText": "1d8",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Impale",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Snel",
+	"explanation": "A medium size creature with a lithe skinny figure, with lightning speed. Its keen eyes and smell make it an excellent tracker. Primarily used in assassinations.",
+	"health": 45,
+	"type": "aberration",
+	"speed": "30",
+	"traits": ["Magic Resistance", "Stealth", "Sneak Attack", "Keen Sight", "Keen Smell"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 5
+	}, {
+		"name": "CON",
+		"value": 3
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Stab",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 8,
+			"damageText": "1d8",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Blink",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Orb of Detection",
+	"explanation": "A small orb used by followers of Vitael to aid in the detection of magic.",
+	"health": 15,
+	"type": "magical creature",
+	"speed": "30",
+	"traits": ["Magic Resistance", "Levitation", "Sense Magic", "Detect Invisiblity"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["frightened", "stunned", "charmed", "sleep", "blind", "deafened"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 5
+	}, {
+		"name": "CON",
+		"value": 3
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": []
+}, {
+	"name": "Denton Reeves, \"Mayor\" of Clarity",
+	"explanation": "A giant of a man, borderline psychotic. The apparent mayor of Clarity.",
+	"health": 75,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Berserk", "Lie Detector"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 4
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 3
+	}, {
+		"name": "INT",
+		"value": -1
+	}, {
+		"name": "FAI",
+		"value": -1
+	}],
+	"attacks": [{
+		"name": "Pound",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 8,
+			"damageText": "1d8",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Kick",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Kal Moro, Captain of Rat Troop 7",
+	"explanation": "A thin man. Years of lucidity addiction have left him a hallucinatory mess. Wields an iron spear and thick iron shield.",
+	"health": 60,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Stealth", "Keen Smell"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 3
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Poke",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 8,
+			"damageText": "1d8",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Sister of Slaughter",
+	"explanation": "A pale woman with thick black hair.",
+	"health": 30,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": ["Unnatural Magic", "Fey Ancestry", "Sense Magic", "Heated Body", "Toxic"],
+	"damageImmunities": ["—"],
+	"conditionImmunities": ["—"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": -1
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 3
+	}, {
+		"name": "FAI",
+		"value": 3
+	}],
+	"attacks": [{
+		"name": "Elemental Blast",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Charm",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Attempts to charm an enemy. They must make a [FAI] save of 10+ to resist.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Focus",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Direct attacks toward an enemy.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Flame Dash",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4 fire damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}, {
+		"name": "Poison Spit",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 4,
+			"damageText": "1d4 poison damage",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Troll",
+	"explanation": "A large dark brown-ish creature. Mostly humanoid in shape, it has great strength, but low intelligence.",
+	"health": 120,
+	"type": "large humanoid",
+	"speed": "30",
+	"traits": [""],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["troll", "common"],
+	"stats": [{
+		"name": "STR",
+		"value": 4
+	}, {
+		"name": "DEX",
+		"value": 1
+	}, {
+		"name": "CON",
+		"value": 4
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Club",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"additionalDamage": 2,
+			"damageText": "2d6 + 2",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Regenerate",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "Heals 2d4",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Troll Guard",
+	"explanation": "A large dark brown-ish creature. Mostly humanoid in shape, it has great strength, but low intelligence.",
+	"health": 35,
+	"type": "humanoid",
+	"speed": "30",
+	"traits": [""],
+	"damageImmunities": [""],
+	"conditionImmunities": [""],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 2
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 1
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Poke",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Aranae",
+	"explanation": "A humanoid shapeshifter. Their true form is a hybrid between spider and human. They can shapeshift at will back and forth between either form.",
+	"health": 85,
+	"type": "humanoid, vermin",
+	"speed": "30",
+	"traits": ["Shapechanger"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["common"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 3
+	}, {
+		"name": "CON",
+		"value": 2
+	}, {
+		"name": "INT",
+		"value": 1
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Poison Spit",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 6,
+			"damageText": "2d6",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}, {
+		"name": "Smack",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Summon Skeleton",
+		"attack": {
+			"damageDiceNumber": 0,
+			"damageDiceValue": 0,
+			"damageText": "Summons a lesser skeleton.",
+			"damageStat": "FAI",
+			"attackType": "Magical"
+		}
+	}]
+}, {
+	"name": "Tomb Spider",
+	"explanation": "A humongous spindly arthropod with long legs and a small abdomen.",
+	"health": 80,
+	"type": "huge undead vermin",
+	"speed": "30",
+	"traits": ["Web Sense", "Dark Energy Absorption", "Dark Poison"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 3
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 4
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Bite",
+		"attack": {
+			"damageDiceNumber": 4,
+			"damageDiceValue": 4,
+			"damageText": "2d4 physical and 2d4 poison next turn, DC 13 CON check to avoid poison.",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Poison Spit",
+		"attack": {
+			"damageDiceNumber": 4,
+			"damageDiceValue": 4,
+			"damageText": "2d4 poison damage and 2d4 poison damage next turn, DC 13 CON check to avoid poison.",
+			"damageStat": "STR",
+			"attackType": "Ranged"
+		}
+	}, {
+		"name": "Web Wrap",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6, DC 17 STR check to break web. Webbing has 12 health.",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Spider Infested Humanoid",
+	"explanation": "A bloated rotting corpse with spider eggs embedded inside. Bursts open upon death spawning 1d4 spiders.",
+	"health": 24,
+	"type": "undead",
+	"speed": "15",
+	"traits": [],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 1
+	}, {
+		"name": "DEX",
+		"value": -2
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 0
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Claw",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Grapple",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}, {
+	"name": "Phase Spider",
+	"explanation": "A spindly arthropod colored with a blue hue and a white underbelly with long legs and a small abdomen.",
+	"health": 45,
+	"type": "large vermin",
+	"speed": "30",
+	"traits": ["Web Sense", "Phasing"],
+	"damageImmunities": ["poison"],
+	"conditionImmunities": ["poisoned"],
+	"languages": ["—"],
+	"stats": [{
+		"name": "STR",
+		"value": 2
+	}, {
+		"name": "DEX",
+		"value": 3
+	}, {
+		"name": "CON",
+		"value": 0
+	}, {
+		"name": "INT",
+		"value": 2
+	}, {
+		"name": "FAI",
+		"value": 0
+	}],
+	"attacks": [{
+		"name": "Poison Bite",
+		"attack": {
+			"damageDiceNumber": 2,
+			"damageDiceValue": 4,
+			"damageText": "2d4 physical damage, DC 11 check to resist 2d8 poison damage. If you would be killed by the poison damage, you are paralyzed at 1 health for the next hour.",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}, {
+		"name": "Web Wrap",
+		"attack": {
+			"damageDiceNumber": 1,
+			"damageDiceValue": 6,
+			"damageText": "1d6 physical damage, wraps target DC 14 STR check to break. Web has 12 health.",
+			"damageStat": "STR",
+			"attackType": "Melee"
+		}
+	}]
+}]
