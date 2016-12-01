@@ -148,11 +148,11 @@ class EffectsTableViewController: UITableViewController {
         return hero.damageReductionForReductionType(type)
     }
     
-    fileprivate func attackModifierTypeForIndexPath(_ indexPath: IndexPath) -> AttackModifier.AttackModifierType {
+    fileprivate func attackModifierTypeForIndexPath(_ indexPath: IndexPath) -> AttackModifierType {
         return AttackModifier.allAttackModifierTypes[(indexPath as NSIndexPath).row]
     }
     
-    fileprivate func attackModifierValueForModifierType(_ type: AttackModifier.AttackModifierType) -> Int {
+    fileprivate func attackModifierValueForModifierType(_ type: AttackModifierType) -> Int {
         guard let hero = hero else { return 0 }
         
         return hero.attackModifierForModifierType(type)

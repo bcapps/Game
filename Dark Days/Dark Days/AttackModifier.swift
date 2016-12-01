@@ -9,6 +9,36 @@
 import Foundation
 import Decodable
 
+enum AttackModifierType: String {
+    case Melee
+    case Ranged
+    case Magical
+    
+    var image: UIImage? {
+        switch self {
+        case .Melee:
+            return UIImage(named: "MeleeAttackModifier")
+        case .Ranged:
+            return UIImage(named: "RangedAttackModifier")
+        case .Magical:
+            return UIImage(named: "MagicalAttackModifier")
+        }
+    }
+    
+    static func attackModifierTypeForName(name: String) -> AttackModifierType {
+        switch name {
+        case "Melee":
+            return .Melee
+        case "Ranged":
+            return .Ranged
+        case "Magical":
+            return .Magical
+        default:
+            return .Melee
+        }
+    }
+}
+
 struct AttackModifier: Decodable, Nameable {
     let name: String
     let value: Int
@@ -20,35 +50,9 @@ struct AttackModifier: Decodable, Nameable {
 }
 
 extension AttackModifier {
-    enum AttackModifierType: String {
-        case Melee
-        case Ranged
-        case Magical
-        
-        var image: UIImage? {
-            switch self {
-            case .Melee:
-                return UIImage(named: "MeleeAttackModifier")
-            case .Ranged:
-                return UIImage(named: "RangedAttackModifier")
-            case .Magical:
-                return UIImage(named: "MagicalAttackModifier")
-            }
-        }
-    }
-    
     static let allAttackModifierTypes: [AttackModifierType] = [.Melee, .Ranged, .Magical]
     
     var attackModifierType: AttackModifierType {
-        switch name {
-        case "Melee":
-            return .Melee
-        case "Ranged":
-            return .Ranged
-        case "Magical":
-            return .Magical
-        default:
-            return .Melee
-        }
+        return AttackModifierType.attackModifierTypeForName(name: name)
     }
 }

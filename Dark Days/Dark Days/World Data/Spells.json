@@ -1,187 +1,233 @@
 [{
- "name": "Shield of Reflection",
- "damage": "Deals damage equal to the prevented damage.",
- "effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents up to 1d6 + [FAI] damage. (S)",
- "flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
- }, {
- "name": "Inspire",
- "damage": "",
- "effects": "Add 1 to all attack rolls made by your party until the end of the encounter. (V)",
- "flavor": "All it takes to light the way is one candle burning brightly in the night."
- }, {
- "name": "Siphon Light",
- "damage": "1d4",
- "effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up. (SV)",
- "flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
- }, {
- "name": "Blind",
- "damage": "",
- "effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]). (V)",
- "flavor": "Sometimes darkness can be beautiful."
- }, {
- "name": "Shadow Stalker",
- "damage": "1d6",
- "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. (SV)",
- "flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
- }, {
- "name": "Paranoia",
- "damage": "1d4",
- "effects": "Stuns the target for 1 round (DC 8 + [FAI]). (SV)",
- "flavor": "My head is a very dark place. Soon yours will be as well."
- }, {
- "name": "Agonizing Bond",
- "damage": "",
- "effects": "Bonds two enemies together. Damage dealt to one is dealt to the other as well. (SV)",
- "flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
- }, {
- "name": "Fiendfyre",
- "damage": "1d8",
- "effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]). (S)",
- "flavor": "My fire will teach you to fear the light."
- }, {
- "name": "Dolo's Fury",
- "damage": "",
- "effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points. (SV)",
- "flavor": "Monsters are real. They live inside us. And sometimes, they win."
- }, {
- "name": "Thorn Bind",
- "damage": "1d4",
- "effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]). (S)",
- "flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
- }, {
- "name": "Summon Lesser Felbeast",
- "damage": "1d4 + [FAI]",
- "effects": "Summons a lesser felbeast that has 1d8 + [FAI] hit points and deals FAI damage when attacking. (SV)",
- "flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
- }, {
- "name": "Speak with the Dead",
- "damage": "",
- "effects": "Reanimate a corpse to speak with it. Note: this will not allow you to communicate with creatures that do not speak languages you speak. (SV)",
- "flavor": "Not even death will keep you from me."
- }, {
- "name": "Arms of Morter",
- "damage": "1d6",
- "effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you. (S)",
- "flavor": "Death will hold you in its everlasting embrace."
- }, {
- "name": "Confusion Cloud",
- "damage": "",
- "effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI]. (SV)",
- "flavor": "An illusion to bring about your confusion."
- }, {
- "name": "Mind Warp",
- "damage": "1d4",
- "effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you. (S)",
- "flavor": "Would you kill your friends for me? - Incubus"
- }, {
- "name": "Infection",
- "damage": "Deals 1 damage each round + 1 damage for each round the target has been infected, up to [FAI] number of rounds.",
- "effects": "Infects the target with an agonizing disease born from Dolo himself. Target must make a DC 17 Constitution save to get rid of the infection. (S)",
- "flavor": "It's just a little cough."
- }, {
- "name": "Unseen Servant",
- "damage": "",
- "effects": "Creates an invisible, mindless, and shapeless force that can perform simple tasks such as fetching objects or opening doors. It cannot attack, and will disperse if damaged. It's strength, the distance it can travel away from you, and its duration is tied to your FAI. (SV)",
- "flavor": "The substance of faith, is a hope in the unseen."
- }, {
- "name": "Disembodied Voice",
- "damage": "",
- "effects": "Allows you to throw your voice to another location, as if speaking from there. (V)",
- "flavor": "The substance of faith, is a hope in the unseen."
- }, {
- "name": "Booming Voice",
- "damage": "",
- "effects": "Amplifies your voice so that it may be heard from great distances. (V)",
- "flavor": "When the whole world is silent, even one voice becomes powerful."
- }, {
- "name": "Giant Form",
- "damage": "",
- "effects": "Doubles an ally's size, and increases its STR by 2 until the end of combat. (S)",
- "flavor": "The substance of faith is a hope in the unseen."
- }, {
- "name": "Holy Bolt",
- "damage": "1d8",
- "effects": "Sends a bolt of holy energy out of your hand into the target. (S)",
- "flavor": "The light of Shiro shall consume you!"
- }, {
- "name": "Kilkennan's Temporary Gate",
- "damage": "",
- "effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration. (SV)",
- "flavor": "I don't want to be here, I want to be there! - Kilkennan, Follower of Demitas"
- }, {
- "name": "Castle of Light",
- "damage": "",
- "effects": "Shield yourself with the light of Shiro, preventing all damage to you until the next round. Castle of Light prevents all actions while under its effects. (SV)",
- "flavor": "The faithful of Shiro have nothing to fear from the light."
- }, {
- "name": "Shadowstep",
- "damage": "",
- "effects": "Transport yourself to any location that is visible within 20 meters. (S)",
- "flavor": "Scholars often wonder how the Blades of Kazu are able to evade capture so easily. Perhaps the ability to bend space to their will has something to do with it. - Bason, Scholar of Kazu"
- }, {
- "name": "Flame Rush",
- "damage": "1d6",
- "damageStat": "STR",
- "effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. Deals fire damage. (V)",
- "flavor": "Never rush into something. Unless your on fire. Then rush into everything."
- }, {
- "name": "Empowered Shadow Stalker",
- "damage": "1d8",
- "effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. The doppelganger mimics your movements, including any attacks you make at half damage. (SV)",
- "flavor": "Now even the darkness has become your enemy. -Saz'rac, Priest of Kazu"
- }, {
- "name": "Featherfall",
- "damage": "",
- "effects": "One target ally becomes light as a feather, falling at a much slower rate than normal until landing. (V)",
- "flavor": "Light as a feather, free as a bird."
- }, {
- "name": "Conjure Darkness",
- "damage": "",
- "effects": "A magical darkness is created in a medium sized area within sight. You are able to see perfectly inside this darkness. Any creature caught inside the magical darkness will take a -2 to their chance to dodge. (S)",
- "flavor": "The domain of darkness is terrifying. Not for the known, but for the unknown. The might be. Anything is possible when everything is stripped away."
- }, {
- "name": "Summon Skeleton",
- "damage": "",
- "effects": "Summons a skeleton that has 3d8 + [FAI] hit points. The skeleton deals [STR] damage on attack and has a +2 chance to hit. Drains [FAI] hit points from the caster. (SV)",
- "flavor": "Undeath is just another form of life."
- }, {
- "name": "Torture",
- "damage": "1d6",
- "effects": "Summon metal spikes that drill into a targets extremities. The target must make a DC 10 CON check to not drop what they are holding and a DC 10 CON check to not fall down. (SV)",
- "flavor": "Suffering is not optional."
- }, {
- "name": "Poison Breath",
- "damage": "1d6",
- "effects": "Breath a heavy mist of poison in a cone in front of you. The target must make a DC 12 CON check to resist the poison. Deals poison damage. (S)",
- "flavor": "Suffering is not optional."
- }, {
- "name": "Astral Message",
- "damage": "",
- "effects": "Creates a spiritual bird that carries a single sentence message to another person by conjuring their image in your mind. The duration the bird can travel is longer based on your faith. (SV)",
- "flavor": "Light as a feather, free as a bird."
- }, {
- "name": "Silence",
- "damage": "",
- "effects": "Silences a single target creature, preventing them from speaking or casting spells with a verbal component. This lasts until the end of the encounter. (SV)",
- "flavor": "I'm sorry? What was that? Snel got your tongue?"
- }, {
- "name": "Demitas's Greed",
- "damage": "",
- "effects": "Once per encounter, for the encounter, you may imbue your attacks with powerful magic that allow you to create money out of blood. If you get the killing blow on any creature, roll a d20. (SV)\n 1-5:  5 gold\n 6-10:  20 gold.\n 11-15:  40 gold.\n 16-19:  80 gold.\n 20:  150 gold.",
- "flavor": "Gold is only good if it's drenched in blood. That's how you know it's real."
- }, {
- "name": "Chaotic Rage",
- "damage": "",
- "effects": "Once per day, conjure and consume a chemical potion that has a random effect on you. Roll a d4. (S)\n1: You cannot be stunned, charmed, or poisoned for an entire day.\n2: You can attack twice on your next two turns.\n3: Your speed increases to unnatural levels, adding +2 to your chance to avoid attacks.\n4: Regain 2d4 hit points immediately, and 2d6 hit points at the start of your next turn.",
- "flavor": "Variety is the spice of life!"
- }, {
- "name": "Flame Guard",
- "damage": "",
- "effects": "Once per encounter, for the encounter, surround yourself with a wave of fire. This grants you an immunity to fire damage. Any enemy that attempts to strike you with a melee weapon, must make a DC 11 DEX check to avoid being burned for 1d8 fire damage. (SV)",
- "flavor": "An enemy will not be allowed to approach without difficulty."
- }, {
- "name": "Nightmare",
- "damage": "",
- "effects": "Once per encounter, you can attempt to send a creature into a deep and contagious sleep. If the target fails a DC 13 INT check, they are put into a deep sleep taking 2d6 + [FAI] magic damage. At the start of their turn they can attempt a DC 13 INT check to break the nightmare, or continue sleeping and take 1d6 + [FAI] magic damage. Any creature that touches the sleeping creature, wakes it, and must make the same INT check to avoid succumbing to the nightmare. (SV)",
- "flavor": "The sleeping sickness has been known to ravage entire towns, as mothers could not help but comfort their children as the faded into darkness."
- }]
+	"name": "Shield of Reflection",
+	"effects": "Casts a barrier on up to one target ally, reflecting the next attack targeted on that ally. Prevents and reflects up to 1d6 + [FAI] damage. (S)",
+	"flavor": "When the hordes are upon you, Shiro's faithful shall stand ever vigilant as the waves crash upon the stone, and are dispersed. -Krul, Priest of Shiro"
+}, {
+	"name": "Inspire",
+	"effects": "Add 1 to all attack rolls made by your party until the end of the encounter. (V)",
+	"flavor": "All it takes to light the way is one candle burning brightly in the night."
+}, {
+	"name": "Siphon Light",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 4,
+		"damageText": "1d4",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Steal the life force of another creature and siphon it into an ally, healing them for half the damage done, rounded up. (SV)",
+	"flavor": "Hope is never so distant that a single ray of light cannot give those in darkness a way out."
+}, {
+	"name": "Blind",
+	"effects": "Blinds the target with spheres of darkness, reducing their attack rolls by 4 (DC 8 + [FAI]). (V)",
+	"flavor": "Sometimes darkness can be beautiful."
+}, {
+	"name": "Shadow Stalker",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 6,
+		"damageText": "1d6",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. (SV)",
+	"flavor": "The darkness that surrounds you cannot hurt you. But I will. -Saz'rac, Priest of Kazu"
+}, {
+	"name": "Paranoia",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 4,
+		"damageText": "1d4",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Stuns the target for 1 round (DC 8 + [FAI]). (SV)",
+	"flavor": "My head is a very dark place. Soon yours will be as well."
+}, {
+	"name": "Agonizing Bond",
+	"effects": "Bonds two enemies together. Damage dealt to one is dealt to the other as well. (SV)",
+	"flavor": "Your numbers do nothing but increase my strength. -Tenkan, Priest of Dolo"
+}, {
+	"name": "Fiendfyre",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 8,
+		"damageText": "1d8",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Deals damage in a small area. Has a chance to set enemies on fire, dealing 1d4 fire damage to the enemy when they take an action (DC 10 + [FAI]). (S)",
+	"flavor": "My fire will teach you to fear the light."
+}, {
+	"name": "Dolo's Fury",
+	"effects": "Your body erupts in a fury of fire and blood. You lose control of yourself attacking anyone within melee reach for 3d6 + [FAI] damage each round. After attacking, roll a d20:\n 1-10: Your fury ends, your body crumbles into its natural state. You lose 1 hit point.\n 11-17: Lose 1 hit point.\n 18-20: Lose 2 hit points. (SV)",
+	"flavor": "Monsters are real. They live inside us. And sometimes, they win."
+}, {
+	"name": "Thorn Bind",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 4,
+		"damageText": "1d4",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Wraps the target enemy in magical thorns, preventing their movement and dealing an additional [FAI] damage each round until they break free (DC 12 + [FAI]). (S)",
+	"flavor": "Thorns that hold you to the ground, thorns that keep you solidly bound."
+}, {
+	"name": "Summon Lesser Felbeast",
+	"effects": "Summons a lesser felbeast that has 1d8 + [FAI] hit points and deals FAI damage when attacking. (SV)",
+	"flavor": "Never come between a felbeast and its prey, unless you wish to become its prey."
+}, {
+	"name": "Speak with the Dead",
+	"effects": "Reanimate a corpse to speak with it. Note: this will not allow you to communicate with creatures that do not speak languages you speak. (SV)",
+	"flavor": "Not even death will keep you from me."
+}, {
+	"name": "Arms of Morter",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 6,
+		"damageText": "1d6",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Invoking the power of the God of Death, dark energy spews forth from your arms striking all enemies in a medium area around you. (S)",
+	"flavor": "Death will hold you in its everlasting embrace."
+}, {
+	"name": "Confusion Cloud",
+	"effects": "Casts a thin cloud of magic over an area that reduces an opponents ability to react. Any friend or foe inside the cloud has their chance to hit with an attack reduced by [FAI], and their chance to dodge an attack reduced by [FAI]. (SV)",
+	"flavor": "An illusion to bring about your confusion."
+}, {
+	"name": "Mind Warp",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 4,
+		"damageText": "1d4",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Assault the minds of enemies around you causing them great mental harm. Deals damage in a small area around you. (S)",
+	"flavor": "Would you kill your friends for me? - Incubus"
+}, {
+	"name": "Infection",
+	"effects": "Infects the target with an agonizing disease born from Dolo himself. Each round, the target must make a DC 17 Constitution save to get rid of the infection, otherwise they take 1 damage for each round they have been infected. (S)",
+	"flavor": "It's just a little cough."
+}, {
+	"name": "Unseen Servant",
+	"effects": "Creates an invisible, mindless, and shapeless force that can perform simple tasks such as fetching objects or opening doors. It cannot attack, and will disperse if damaged. It's strength, the distance it can travel away from you, and its duration is tied to your FAI. (SV)",
+	"flavor": "The substance of faith, is a hope in the unseen."
+}, {
+	"name": "Disembodied Voice",
+	"effects": "Allows you to throw your voice to another location, as if speaking from there. (V)",
+	"flavor": "The substance of faith, is a hope in the unseen."
+}, {
+	"name": "Booming Voice",
+	"effects": "Amplifies your voice so that it may be heard from great distances. (V)",
+	"flavor": "When the whole world is silent, even one voice becomes powerful."
+}, {
+	"name": "Giant Form",
+	"effects": "Doubles an ally's size, and increases its STR by 2 until the end of combat. (S)",
+	"flavor": "The substance of faith is a hope in the unseen."
+}, {
+	"name": "Holy Bolt",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 8,
+		"damageText": "1d8",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Sends a bolt of holy energy out of your hand into the target. (S)",
+	"flavor": "The light of Shiro shall consume you!"
+}, {
+	"name": "Kilkennan's Temporary Gate",
+	"effects": "Creates a magical portal that allows travel to any permanent Kilkennan's Gate that you have previously attuned with. The gate will remain open for a short duration. (SV)",
+	"flavor": "I don't want to be here, I want to be there! - Kilkennan, Follower of Demitas"
+}, {
+	"name": "Castle of Light",
+	"effects": "Shield yourself with the light of Shiro, preventing all damage to you until the next round. Castle of Light prevents all actions while under its effects. (SV)",
+	"flavor": "The faithful of Shiro have nothing to fear from the light."
+}, {
+	"name": "Shadowstep",
+	"effects": "Transport yourself to any location that is visible within 20 meters. (S)",
+	"flavor": "Scholars often wonder how the Blades of Kazu are able to evade capture so easily. Perhaps the ability to bend space to their will has something to do with it. - Bason, Scholar of Kazu"
+}, {
+	"name": "Flame Rush",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 6,
+		"damageText": "1d6",
+		"damageStat": "STR",
+		"attackType": "Magical"
+	},
+	"effects": "A burst of flame propels you violently towards a location. Only deals damage if you are not adjacent to the location. Deals fire damage. (V)",
+	"flavor": "Never rush into something. Unless your on fire. Then rush into everything."
+}, {
+	"name": "Empowered Shadow Stalker",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 8,
+		"damageText": "1d8",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "You fade into darkness replaced by a doppelganger made of pure darkness. Your next attack brings you out of the shadows dealing additional damage and increases you chance to hit by 2. The doppelganger mimics your movements, including any attacks you make at half damage. (SV)",
+	"flavor": "Now even the darkness has become your enemy. -Saz'rac, Priest of Kazu"
+}, {
+	"name": "Featherfall",
+	"effects": "One target ally becomes light as a feather, falling at a much slower rate than normal until landing. (V)",
+	"flavor": "Light as a feather, free as a bird."
+}, {
+	"name": "Conjure Darkness",
+	"effects": "A magical darkness is created in a medium sized area within sight. You are able to see perfectly inside this darkness. Any creature caught inside the magical darkness will take a -2 to their chance to dodge. (S)",
+	"flavor": "The domain of darkness is terrifying. Not for the known, but for the unknown. The might be. Anything is possible when everything is stripped away."
+}, {
+	"name": "Summon Skeleton",
+	"effects": "Summons a skeleton that has 3d8 + [FAI] hit points. The skeleton deals [STR] damage on attack and has a +2 chance to hit. Drains [FAI] hit points from the caster. (SV)",
+	"flavor": "Undeath is just another form of life."
+}, {
+	"name": "Torture",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 6,
+		"damageText": "1d6",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Summon metal spikes that drill into a targets extremities. The target must make a DC 10 CON check to not drop what they are holding and a DC 10 CON check to not fall down. (SV)",
+	"flavor": "Suffering is not optional."
+}, {
+	"name": "Poison Breath",
+	"attack": {
+		"damageDiceNumber": 1,
+		"damageDiceValue": 6,
+		"damageText": "1d6",
+		"damageStat": "FAI",
+		"attackType": "Magical"
+	},
+	"effects": "Breath a heavy mist of poison in a cone in front of you. The target must make a DC 12 CON check to resist the poison. Deals poison damage. (S)",
+	"flavor": "Suffering is not optional."
+}, {
+	"name": "Astral Message",
+	"effects": "Creates a spiritual bird that carries a single sentence message to another person by conjuring their image in your mind. The duration the bird can travel is longer based on your faith. (SV)",
+	"flavor": "Light as a feather, free as a bird."
+}, {
+	"name": "Silence",
+	"effects": "Silences a single target creature, preventing them from speaking or casting spells with a verbal component. This lasts until the end of the encounter. (SV)",
+	"flavor": "I'm sorry? What was that? Snel got your tongue?"
+}, {
+	"name": "Demitas's Greed",
+	"effects": "Once per encounter, for the encounter, you may imbue your attacks with powerful magic that allow you to create money out of blood. If you get the killing blow on any creature, roll a d20. (SV)\n 1-5:  5 gold\n 6-10:  20 gold.\n 11-15:  40 gold.\n 16-19:  80 gold.\n 20:  150 gold.",
+	"flavor": "Gold is only good if it's drenched in blood. That's how you know it's real."
+}, {
+	"name": "Chaotic Rage",
+	"effects": "Once per day, conjure and consume a chemical potion that has a random effect on you. Roll a d4. (S)\n1: You cannot be stunned, charmed, or poisoned for an entire day.\n2: You can attack twice on your next two turns.\n3: Your speed increases to unnatural levels, adding +2 to your chance to avoid attacks.\n4: Regain 2d4 hit points immediately, and 2d6 hit points at the start of your next turn.",
+	"flavor": "Variety is the spice of life!"
+}, {
+	"name": "Flame Guard",
+	"effects": "Once per encounter, for the encounter, surround yourself with a wave of fire. This grants you an immunity to fire damage. Any enemy that attempts to strike you with a melee weapon, must make a DC 11 DEX check to avoid being burned for 1d8 fire damage. (SV)",
+	"flavor": "An enemy will not be allowed to approach without difficulty."
+}, {
+	"name": "Nightmare",
+	"effects": "Once per encounter, you can attempt to send a creature into a deep and contagious sleep. If the target fails a DC 13 INT check, they are put into a deep sleep taking 2d6 + [FAI] magic damage. At the start of their turn they can attempt a DC 13 INT check to break the nightmare, or continue sleeping and take 1d6 + [FAI] magic damage. Any creature that touches the sleeping creature, wakes it, and must make the same INT check to avoid succumbing to the nightmare. (SV)",
+	"flavor": "The sleeping sickness has been known to ravage entire towns, as mothers could not help but comfort their children as the faded into darkness."
+}]

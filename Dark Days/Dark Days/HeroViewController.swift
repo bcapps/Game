@@ -242,17 +242,18 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         let buttonStackView = ButtonStackView()
         buttonStackView.axis = .vertical
         
-        if item.damage.isNotEmpty {
+        if let attack = item.attack {
             buttonStackView.addButton(title: "Attack", tapHandler: {
                 guard let hero = self.hero else { return }
                 
                 let attackDiceRoll = (DiceRoller.roll(dice: .d20))
-                let heroAttackModifier = item.ranged ? hero.attackModifierForModifierType(.Ranged) : hero.attackModifierForModifierType(.Melee)
+                let heroAttackModifier = hero.attackModifierForModifierType(attack.attackType)
                 
                 let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
                 
-                let itemDamageRoll = Int(item.damage.replaceDamageStringWithRealDamage()) ?? 0
-                let heroDamageModifier = hero.damageModifier(forItem: item, modifierType: .Physical)
+                let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
+                let itemDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
+                let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Physical)
                 
                 let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
                 let damageResult = String(format: "Damage: %@", String(itemDamageRoll + heroDamageModifier))
@@ -535,13 +536,14 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
             
-            let spellDamageRoll = Int(spell.damage.replaceDamageStringWithRealDamage()) ?? 0
-            let heroDamageModifier = hero.damageModifier(forSpell: spell, modifierType: .Magical)
-            
             let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
             var damageResult = ""
             
-            if spell.damage.isNotEmpty {
+            if let attack = spell.attack {
+                let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
+                let spellDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
+                let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Magical)
+
                 damageResult = String(format: "Damage: %@", String(spellDamageRoll + heroDamageModifier))
             }
             

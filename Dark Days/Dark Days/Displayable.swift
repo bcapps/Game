@@ -34,7 +34,9 @@ extension Race: ListDisplayingGeneratable {
 
 extension Item: ListDisplayingGeneratable {
     static func displayable(_ item: Item) -> ListDisplayable {
-        return ListDisplayable(title: item.name, information: item.damage, additionalInfoTitle: nil, additionalInfo: item.effects, subtext: item.flavor, image: UIImage(named: item.name), accessoryImage: item.imageForItemType)
+        let damageText = item.attack?.damageText ?? ""
+        
+        return ListDisplayable(title: item.name, information: damageText, additionalInfoTitle: nil, additionalInfo: item.effects, subtext: item.flavor, image: UIImage(named: item.name), accessoryImage: item.imageForItemType)
     }
 }
 
@@ -58,12 +60,12 @@ extension MagicType: ListDisplayingGeneratable {
 
 extension Spell: ListDisplayingGeneratable {
     static func displayable(_ spell: Spell) -> ListDisplayable {
-        var damage = spell.damage
-        if damage.isNotEmpty {
-            damage = "Damage: " + spell.damage
+        var damageText = ""
+        if let damage = spell.attack?.damageText {
+            damageText = "Damage: " + damage
         }
         
-        return ListDisplayable(title: spell.name, information: damage, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name), accessoryImage: nil)
+        return ListDisplayable(title: spell.name, information: damageText, additionalInfoTitle: nil, additionalInfo: spell.effects, subtext: spell.flavor, image: UIImage(named: spell.name), accessoryImage: nil)
     }
 }
 
