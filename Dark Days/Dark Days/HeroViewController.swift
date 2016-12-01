@@ -243,7 +243,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         buttonStackView.axis = .vertical
         
         if let attack = item.attack {
-            buttonStackView.addButton(title: "Attack", tapHandler: {
+            let attackTitle = NSAttributedString(string: "Attack", attributes: [NSForegroundColorAttributeName: UIColor.headerTextColor(), NSFontAttributeName: UIFont.headingFont()])
+
+            buttonStackView.addButton(attributedTitle: attackTitle, tapHandler: {
                 guard let hero = self.hero else { return }
                 
                 let attackDiceRoll = (DiceRoller.roll(dice: .d20))
@@ -547,7 +549,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 damageResult = String(format: "Damage: %@", String(spellDamageRoll + heroDamageModifier))
             }
             
-            showAlertController(title: "Attack", message: attackResult + "\n" + damageResult)
+            showAlertController(title: "Cast", message: attackResult + "\n" + damageResult)
         }
     }
     
