@@ -314,9 +314,6 @@
 		F26C02021CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C02001CB1D0A400907164 /* AttackModifier.swift */; };
 		F2787C821D5E8D770035E45C /* ItemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2787C811D5E8D770035E45C /* ItemSet.swift */; };
-		F284C6531DEF77000070EB05 /* StringDamageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6521DEF77000070EB05 /* StringDamageConverter.swift */; };
-		F284C6541DEF77040070EB05 /* StringDamageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6521DEF77000070EB05 /* StringDamageConverter.swift */; };
-		F284C6551DEF77050070EB05 /* StringDamageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6521DEF77000070EB05 /* StringDamageConverter.swift */; };
 		F284C6571DF013D60070EB05 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6561DF013D60070EB05 /* Attack.swift */; };
 		F284C6581DF01AF20070EB05 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6561DF013D60070EB05 /* Attack.swift */; };
 		F284C6591DF01AF30070EB05 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284C6561DF013D60070EB05 /* Attack.swift */; };
@@ -586,7 +583,6 @@
 		F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageAvoidance.swift; sourceTree = "<group>"; };
 		F26C02001CB1D0A400907164 /* AttackModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackModifier.swift; sourceTree = "<group>"; };
 		F2787C811D5E8D770035E45C /* ItemSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSet.swift; sourceTree = "<group>"; };
-		F284C6521DEF77000070EB05 /* StringDamageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDamageConverter.swift; sourceTree = "<group>"; };
 		F284C6561DF013D60070EB05 /* Attack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
 		F28C2B071CC732CA00E106DD /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		F28C2B091CC732DB00E106DD /* Quests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Quests.json; path = "World Data/Quests.json"; sourceTree = "<group>"; };
@@ -839,7 +835,6 @@
 				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
 				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
 				C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */,
-				F284C6521DEF77000070EB05 /* StringDamageConverter.swift */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -1677,7 +1672,6 @@
 				F25187621C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				F2350B011C7BCAF200D6E18E /* HeroBuilder.swift in Sources */,
 				F26C01F51CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
-				F284C6531DEF77000070EB05 /* StringDamageConverter.swift in Sources */,
 				F25187931C922B9B003AD636 /* TableViewExtension.swift in Sources */,
 				F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */,
 				F2CAE31F1D8CA542005584E3 /* HeroImportURLHandler.swift in Sources */,
@@ -1782,7 +1776,6 @@
 				F28C2B201CD064B900E106DD /* Merchant.swift in Sources */,
 				F28C2B551CD0889000E106DD /* NamesViewController.swift in Sources */,
 				F22270A11D6D75E0007FEFA0 /* MonsterViewModelTranslator.swift in Sources */,
-				F284C6551DEF77050070EB05 /* StringDamageConverter.swift in Sources */,
 				F2F909B01D42AA74005F8662 /* InsanityProvider.swift in Sources */,
 				C39ACBF11C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F26C01F61CB1A0EE00907164 /* EffectsTableViewController.swift in Sources */,
@@ -1858,7 +1851,6 @@
 				F251876D1C92138C003AD636 /* LCKMultipeerSession.m in Sources */,
 				F21ECE7D1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F28C2B281CD07D4300E106DD /* Note.swift in Sources */,
-				F284C6541DEF77040070EB05 /* StringDamageConverter.swift in Sources */,
 				F25187641C92138C003AD636 /* LCKMultipeer.m in Sources */,
 				C39ACBF21C9CA2A9004C5A6B /* SendGoldViewController.swift in Sources */,
 				F2649E6E1DE7C38F00BD820C /* DiceRoller.swift in Sources */,
