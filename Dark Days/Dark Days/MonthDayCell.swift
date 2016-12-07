@@ -15,6 +15,6 @@ final class MonthDayCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        highlightView.layer.cornerRadius = highlightView.bounds.height / 2.0
+        highlightView.layer.cornerRadius = highlightView.bounds.width / 2.0
     }
 }

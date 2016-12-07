@@ -5,7 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,9 +33,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm9-4f-fQ1">
-                                            <rect key="frame" x="11" y="11" width="28" height="28"/>
+                                        <view clipsSubviews="YES" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm9-4f-fQ1">
+                                            <rect key="frame" x="10.5" y="10.5" width="30" height="30"/>
                                             <color key="backgroundColor" red="0.9392816424369812" green="0.93943887948989868" blue="0.93926090002059937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="pm9-4f-fQ1" secondAttribute="height" multiplier="1:1" id="L28-8G-aAy"/>
+                                            </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfe-tg-TWY">
                                             <rect key="frame" x="8" y="8" width="34" height="34"/>
@@ -44,13 +49,12 @@
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="centerY" secondItem="e1I-zJ-v8q" secondAttribute="centerY" id="1BL-zd-5Av"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="nfe-tg-TWY" secondAttribute="trailing" id="Pyr-tO-2VR"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="nfe-tg-TWY" secondAttribute="bottom" id="cF4-Xk-XxH"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="pm9-4f-fQ1" secondAttribute="bottom" constant="3" id="iSn-CV-oBi"/>
-                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="leading" secondItem="e1I-zJ-v8q" secondAttribute="leadingMargin" constant="3" id="kc3-LR-Zpd"/>
+                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="width" secondItem="e1I-zJ-v8q" secondAttribute="width" multiplier="0.6" id="djv-PK-e1Q"/>
                                     <constraint firstItem="nfe-tg-TWY" firstAttribute="leading" secondItem="e1I-zJ-v8q" secondAttribute="leadingMargin" id="qZU-Yb-F6j"/>
-                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="top" secondItem="e1I-zJ-v8q" secondAttribute="topMargin" constant="3" id="szJ-jN-dP1"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="pm9-4f-fQ1" secondAttribute="trailing" constant="3" id="uXn-zD-XaZ"/>
+                                    <constraint firstItem="pm9-4f-fQ1" firstAttribute="centerX" secondItem="e1I-zJ-v8q" secondAttribute="centerX" id="t8d-7W-4Sa"/>
                                     <constraint firstItem="nfe-tg-TWY" firstAttribute="top" secondItem="e1I-zJ-v8q" secondAttribute="topMargin" id="xVi-vz-xdC"/>
                                 </constraints>
                                 <connections>
