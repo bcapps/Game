@@ -9,9 +9,10 @@
 import UIKit
 
 final class ButtonStackView: UIStackView {
-    
+        
     func addButton(attributedTitle: NSAttributedString, tapHandler: @escaping ((Void) -> Void)) {
         let button = ClosureButton(type: .system)
+        button.backgroundColor = .backgroundColor()
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.closure = tapHandler
         
@@ -20,6 +21,7 @@ final class ButtonStackView: UIStackView {
     
     func addButton(title: String, tapHandler: @escaping ((Void) -> Void)) {
         let button = ClosureButton(type: .system)
+        button.backgroundColor = .backgroundColor()
         button.setTitle(title, for: .normal)
         button.closure = tapHandler
         

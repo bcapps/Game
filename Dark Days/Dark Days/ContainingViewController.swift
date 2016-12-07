@@ -54,7 +54,6 @@ class ContainingViewController: UIViewController {
         if let footerView = footerView {
             insetView.addSubview(footerView)
             footerView.layer.addSublayer(footerViewBorder)
-            containedViewController.tableView.contentInset.bottom = 15
         }
     }
     
@@ -78,6 +77,8 @@ class ContainingViewController: UIViewController {
         let height: CGFloat = footerView?.systemLayoutSizeFitting(insetView.frame.size).height ?? 0
         footerView?.frame = CGRect(x: 0, y: insetView.frame.size.height - height, width: insetView.frame.size.width, height: height)
         footerViewBorder.frame = CGRect(x: 0, y: 0, width: footerView?.frame.size.width ?? 0, height: 1.0)
+        
+        containedViewController.tableView.contentInset.bottom = height
     }
 }
 
