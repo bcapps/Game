@@ -540,7 +540,7 @@
  	}
  }, {
  	"name": "Chaos Ring",
- 	"effects": "Increases physical and magical damage dealt by 1. Increases your chance to hit with a physical or magical attack by 1. ",
+ 	"effects": "Increases physical and magical damage by 1. Increases your chance to hit with a physical or magical attack by 1. ",
  	"flavor": "Time can't hold me. It can't hold anyone. -Odro, God of Chaos",
  	"itemSlot": "Accessory",
  	"heroEffectGroup": {
@@ -611,12 +611,15 @@
  		"damageStat": "FAI",
  		"attackType": "Melee"
  	},
- 	"effects": "Increases magical damage dealt by 2. The Gazing Staff's damage is affected by your FAI stat instead of your STR stat.",
+ 	"effects": "Increases magical damage and chance to hit with magic by 2. The Gazing Staff's damage is affected by your FAI stat instead of your STR stat.",
  	"flavor": "A staff topped with the eye of an otherwordly creature. Occasionaly you still think it blinks, though the creature has been long dead. Hasn't it?",
  	"itemSlot": "Hand",
  	"twoHanded": true,
  	"heroEffectGroup": {
-
+        "attackModifiers": [{
+            "name": "Magical",
+            "value": 2
+        }],
  		"damageModifiers": [{
  			"name": "Magical",
  			"value": 2
@@ -841,7 +844,7 @@
  		"damageStat": "FAI",
  		"attackType": "Melee"
  	},
- 	"effects": "Increases magical damage dealt by 1. Coating the tips of the curved staff in blood increases the amount of magical damage dealt by 2 for the duration of an encounter. The blood is absorbed by this action. The Slaught Staff's damage is affected by your FAI stat instead of your STR stat.",
+ 	"effects": "Increases magical damage by 1. Coating the tips of the curved staff in blood increases the amount of magical damage dealt by 2 for the duration of an encounter. The blood is absorbed by this action. The Slaughter Staff's damage is affected by your FAI stat instead of your STR stat.",
  	"flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful dark energy emanates from the staff.",
  	"itemSlot": "Hand",
  	"twoHanded": true,
@@ -1000,4 +1003,23 @@
  	"effects": "On successful hit, causes the target to begin bleeding. The target takes 1d4 damage from the bleed at the start of their turn, and they must make DC 12 CON check to stop the bleeding.",
  	"flavor": "A light short blade curved with sharp hooks on the side. The sharp hooks on the side maximize the wound as the dagger rips the flesh from its victim on its way out.",
  	"itemSlot": "Hand"
+ }, {
+ 	"name": "Staff of Righteousness",
+ 	"attack": {
+ 		"damageDiceNumber": 1,
+ 		"damageDiceValue": 6,
+ 		"damageText": "1d6",
+ 		"damageStat": "FAI",
+ 		"attackType": "Melee"
+ 	},
+ 	"effects": "Increases magical damage by 2. The Staff of Righteousness's damage is affected by your FAI stat instead of your STR stat. Once per day, you may expel the energies of the staff to grant all nearby allies +3 to avoid physical and resist magical attacks.",
+ 	"flavor": "A short staff light blue in color, with several curved bone tips at the top. Powerful holy energy emanates from the staff.",
+ 	"itemSlot": "Hand",
+ 	"twoHanded": true,
+ 	"heroEffectGroup": {
+ 		"damageModifiers": [{
+ 			"name": "Magical",
+ 			"value": 2
+ 		}]
+ 	}
  }]
