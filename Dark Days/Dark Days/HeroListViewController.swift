@@ -10,7 +10,7 @@ import UIKit
 
 final class HeroListViewController: ListViewController<Hero> {
     
-    override init(sections: [SectionList<Hero>], delegate: ListViewControllerDelegate?) {
+    override init(sections: [SectionList<Hero>], delegate: ListViewControllerDelegate?, searchable: Bool = false) {
         super.init(sections: sections, delegate: delegate)
     }
     

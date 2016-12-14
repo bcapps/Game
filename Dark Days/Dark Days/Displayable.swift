@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListDisplayingGeneratable {
+protocol ListDisplayingGeneratable: Nameable {
     static func displayable(_ object: Self) -> ListDisplayable
 }
 

@@ -45,15 +45,15 @@ final class HeroToolsViewController: UITableViewController, ListViewControllerDe
         func toolViewController(_ delegate: ListViewControllerDelegate) -> UIViewController? {
             switch self {
             case .itemList:
-                let list = ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate)
+                let list = ListViewController<Item>(sections: ObjectProvider.sortedObjectsForJSON("Items").sectionedItems, delegate: delegate, searchable: true)
                 list.title = "Get Item"
                 return list
             case .spellList:
-                let list = ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate)
+                let list = ListViewController<Spell>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Spells"))], delegate: delegate, searchable: true)
                 list.title = "Get Spell"
                 return list
             case .skillList:
-                let list = ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate)
+                let list = ListViewController<Skill>(sections: [SectionList(sectionTitle: nil, objects: ObjectProvider.sortedObjectsForJSON("Skills"))], delegate: delegate, searchable: true)
                 list.title = "Get Skill"
                 return list
             case .increaseStat:
