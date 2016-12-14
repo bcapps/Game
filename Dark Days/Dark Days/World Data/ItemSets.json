@@ -1,40 +1,113 @@
 [{
- "name": "Witch Hunter",
- "itemNamesInSet": ["Witch Hunter Boots", "Witch Hunter Hat", "Witch Hunter Longcoat"],
- "statModifiers": [{"stat": "DEX", "value": 2},
-                 {"stat": "CON", "value": 1}],
- "damageReductions": [{"name": "Magical", "value": 3}],
- }, {
- "name": "Dark Iron",
- "itemNamesInSet": ["Dark Iron Sabatons", "Dark Iron Helm", "Dark Iron Breastplate"],
- "statModifiers": [{"stat": "STR", "value": 1}],
- "damageReductions": [{"name": "Physical", "value": 2},
-                      {"name": "Fire", "value": 2}]
- }, {
- "name": "Chosen of Azoth",
- "itemNamesInSet": ["Demon Armor", "Helm of the Demon King", "Demon Hide Boots"],
- "statModifiers": [{"stat": "DEX", "value": 1},
-                 {"stat": "STR", "value": 1},
-                 {"stat": "FAI", "value": 1},
-                 {"stat": "CON", "value": 1}],
- "damageReductions": [{"name": "Magical", "value": 1}],
- "damageAvoidances": [{"name": "Physical", "value": 1}],
- "attackModifiers": [{"name": "Magical", "value": 1}],
- "damageModifiers": [{"name": "Magical", "value": 1}]
- }, {
- "name": "Blades of Kazu",
- "itemNamesInSet": ["Jian", "Sen"],
- "statModifiers": [{"stat": "DEX", "value": 1},
-                 {"stat": "STR", "value": 1}],
- "attackModifiers": [{"name": "Melee", "value": 1}],
- "damageModifiers": [{"name": "Physical", "value": 1}],
- "spells": ["Empowered Shadow Stalker"]
- }, {
- "name": "Test Set",
- "itemNamesInSet": ["X", "Y", "Z"],
- "statModifiers": [{"stat": "DEX", "value": 1}],
- "damageReductions": [{"name": "Magical", "value": 1}],
- "damageAvoidances": [{"name": "Physical", "value": 1}],
- "attackModifiers": [{"name": "Magical", "value": 1}],
- "damageModifiers": [{"name": "Magical", "value": 1}]
- }]
+	"name": "Witch Hunter",
+	"itemNamesInSet": ["Witch Hunter Boots", "Witch Hunter Hat", "Witch Hunter Longcoat"],
+	"heroEffectGroup": {
+		"statModifiers": [{
+			"stat": "DEX",
+			"value": 2
+		}, {
+			"stat": "CON",
+			"value": 1
+		}],
+		"damageReductions": [{
+			"name": "Magical",
+			"value": 3
+		}]
+	}
+}, {
+	"name": "Dark Iron",
+	"itemNamesInSet": ["Dark Iron Sabatons", "Dark Iron Helm", "Dark Iron Breastplate"],
+	"heroEffectGroup": {
+		"statModifiers": [{
+			"stat": "STR",
+			"value": 1
+		}],
+		"damageReductions": [{
+			"name": "Physical",
+			"value": 2
+		}, {
+			"name": "Fire",
+			"value": 2
+		}]
+	}
+}, {
+	"name": "Chosen of Azoth",
+	"itemNamesInSet": ["Demon Armor", "Helm of the Demon King", "Demon Hide Boots"],
+	"heroEffectGroup": {
+		"statModifiers": [{
+			"stat": "DEX",
+			"value": 1
+		}, {
+			"stat": "STR",
+			"value": 1
+		}, {
+			"stat": "FAI",
+			"value": 1
+		}, {
+			"stat": "CON",
+			"value": 1
+		}],
+		"damageReductions": [{
+			"name": "Magical",
+			"value": 1
+		}],
+		"damageAvoidances": [{
+			"name": "Physical",
+			"value": 1
+		}],
+		"attackModifiers": [{
+			"name": "Magical",
+			"value": 1
+		}],
+		"damageModifiers": [{
+			"name": "Magical",
+			"value": 1
+		}]
+	}
+}, {
+	"name": "Blades of Kazu",
+	"itemNamesInSet": ["Jian", "Sen"],
+	"heroEffectGroup": {
+		"statModifiers": [{
+			"stat": "DEX",
+			"value": 1
+		}, {
+			"stat": "STR",
+			"value": 1
+		}],
+		"attackModifiers": [{
+			"name": "Melee",
+			"value": 1
+		}],
+		"damageModifiers": [{
+			"name": "Physical",
+			"value": 1
+		}]
+	},
+	"spells": ["Empowered Shadow Stalker"]
+}, {
+	"name": "Test Set",
+	"itemNamesInSet": ["X", "Y", "Z"],
+	"heroEffectGroup": {
+		"statModifiers": [{
+			"stat": "DEX",
+			"value": 1
+		}],
+		"damageReductions": [{
+			"name": "Magical",
+			"value": 1
+		}],
+		"damageAvoidances": [{
+			"name": "Physical",
+			"value": 1
+		}],
+		"attackModifiers": [{
+			"name": "Magical",
+			"value": 1
+		}],
+		"damageModifiers": [{
+			"name": "Magical",
+			"value": 1
+		}]
+	}
+}]

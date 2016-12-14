@@ -35,11 +35,7 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let flavor: String
     let itemSlot: ItemSlot
     let twoHanded: Bool
-    let statModifiers: [StatModifier]
-    let damageReductions: [DamageReduction]
-    let damageAvoidances: [DamageAvoidance]
-    let attackModifiers: [AttackModifier]
-    let damageModifiers: [DamageModifier]
+    let heroEffectGroup: HeroEffectGroup
     let skills: [Skill]
     let inventorySkills: [Skill]
     let spells: [Spell]
@@ -67,28 +63,20 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             flavor: json => "flavor",
             itemSlot: ItemSlot(rawValue: json => "itemSlot") ?? .None,
             twoHanded: json =>? "twoHanded" ?? false,
-            statModifiers: json =>? "statModifiers" ?? [],
-            damageReductions: json =>? "damageReductions" ?? [],
-            damageAvoidances: json =>? "damageAvoidances" ?? [],
-            attackModifiers: json =>? "attackModifiers" ?? [],
-            damageModifiers: json =>? "damageModifiers" ?? [],
+            heroEffectGroup: json =>? "heroEffectGroup" ?? HeroEffectGroup(),
             skills: json =>? "skills" ?? [],
             inventorySkills: json =>? "inventorySkills" ?? [],
             spells: json =>? "spells" ?? [])
     }
     
-    init(name: String, attack: Attack?, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, statModifiers: [StatModifier], damageReductions: [DamageReduction], damageAvoidances: [DamageAvoidance], attackModifiers: [AttackModifier], damageModifiers: [DamageModifier], skills: [String], inventorySkills: [String], spells: [String]) {
+    init(name: String, attack: Attack?, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, heroEffectGroup: HeroEffectGroup, skills: [String], inventorySkills: [String], spells: [String]) {
         self.name = name
         self.attack = attack
         self.effects = effects
         self.flavor = flavor
         self.itemSlot = itemSlot
         self.twoHanded = twoHanded
-        self.statModifiers = statModifiers
-        self.damageReductions = damageReductions
-        self.damageAvoidances = damageAvoidances
-        self.attackModifiers = attackModifiers
-        self.damageModifiers = damageModifiers
+        self.heroEffectGroup = heroEffectGroup
         self.skills = skills.flatMap { return ObjectProvider.skillForName($0) }
         self.inventorySkills = inventorySkills.flatMap { return ObjectProvider.skillForName($0) }
         self.spells = spells.flatMap { return ObjectProvider.spellForName($0) }

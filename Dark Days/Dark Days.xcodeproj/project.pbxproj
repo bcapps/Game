@@ -148,6 +148,9 @@
 		F22788151D6BAA7800324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
 		F22788161D6BF21800324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
 		F22788171D6BF21E00324167 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22788141D6BAA7800324167 /* MonsterView.swift */; };
+		F22F1C601E010FEF00B1F863 /* HeroEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F1C5F1E010FEF00B1F863 /* HeroEffect.swift */; };
+		F22F1C611E010FEF00B1F863 /* HeroEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F1C5F1E010FEF00B1F863 /* HeroEffect.swift */; };
+		F22F1C621E010FEF00B1F863 /* HeroEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F1C5F1E010FEF00B1F863 /* HeroEffect.swift */; };
 		F2350AF31C7AAD4800D6E18E /* InventoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */; };
 		F2350AF61C7AD51000D6E18E /* ItemCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */; };
 		F2350AF81C7AD60700D6E18E /* HeroCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */; };
@@ -522,6 +525,7 @@
 		F22788101D6BA77600324167 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
 		F22788121D6BA93000324167 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
 		F22788141D6BAA7800324167 /* MonsterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
+		F22F1C5F1E010FEF00B1F863 /* HeroEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroEffect.swift; sourceTree = "<group>"; };
 		F2350AF21C7AAD4800D6E18E /* InventoryPersistenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPersistenceTests.swift; sourceTree = "<group>"; };
 		F2350AF51C7AD51000D6E18E /* ItemCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCodingTests.swift; sourceTree = "<group>"; };
 		F2350AF71C7AD60700D6E18E /* HeroCodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCodingTests.swift; sourceTree = "<group>"; };
@@ -870,6 +874,7 @@
 			isa = PBXGroup;
 			children = (
 				F284C6561DF013D60070EB05 /* Attack.swift */,
+				F22F1C5E1E010FDD00B1F863 /* Hero Effects */,
 				F24482951DCD3A0C00D9E5E5 /* Status Effects */,
 				F219726A1DBA4A1D0025F0C8 /* Lore */,
 				F2F909A91D42A96D005F8662 /* Insanities */,
@@ -999,6 +1004,14 @@
 				F222709B1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift */,
 			);
 			name = "Monster View";
+			sourceTree = "<group>";
+		};
+		F22F1C5E1E010FDD00B1F863 /* Hero Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F22F1C5F1E010FEF00B1F863 /* HeroEffect.swift */,
+			);
+			name = "Hero Effects";
 			sourceTree = "<group>";
 		};
 		F2350AF11C7AAD0000D6E18E /* Persistence */ = {
@@ -1635,6 +1648,7 @@
 				C39ACBF01C9CA0B7004C5A6B /* SendGoldViewController.swift in Sources */,
 				C3AEC0211C9C4B5400859F98 /* MultipeerMessaging.swift in Sources */,
 				F21ECE301C7A6C7F008041E9 /* Skill.swift in Sources */,
+				F22F1C601E010FEF00B1F863 /* HeroEffect.swift in Sources */,
 				C3AB8F3F1C7CF5B2007CE0BA /* HeroPersistence.swift in Sources */,
 				F222709C1D6D741F007FEFA0 /* MonsterViewModelTranslator.swift in Sources */,
 				F216E9A21D7A2AFB0039F07B /* CrashManager.swift in Sources */,
@@ -1739,6 +1753,7 @@
 				C3AB8F491C7CF9B3007CE0BA /* TestHero.swift in Sources */,
 				F2473B1C1C8382EC008FD65B /* Spell.swift in Sources */,
 				F292C8EC1D6BF39F00AB30CA /* MonsterViewController.swift in Sources */,
+				F22F1C611E010FEF00B1F863 /* HeroEffect.swift in Sources */,
 				F251879F1C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2A6482C1CA758270006DBA8 /* ItemArrayExtension.swift in Sources */,
 				C39ACBF91C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
@@ -1897,6 +1912,7 @@
 				F28C2B211CD064B900E106DD /* Merchant.swift in Sources */,
 				F25187A31C922B9D003AD636 /* ChildControllerExtension.swift in Sources */,
 				F2649E7A1DE7CD8600BD820C /* DiceRollerCell.swift in Sources */,
+				F22F1C621E010FEF00B1F863 /* HeroEffect.swift in Sources */,
 				F21972751DBA4AEE0025F0C8 /* LoreBookViewController.swift in Sources */,
 				F21539921DEAA19E0013C65E /* MonsterFormatter.swift in Sources */,
 				F25187C71C937366003AD636 /* Displayable.swift in Sources */,

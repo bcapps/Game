@@ -13,19 +13,11 @@ struct StatusEffect: Decodable, Codeable, Nameable, Equatable {
     typealias CoderType = StatusEffectCoder
     
     let name: String
-    let statModifiers: [StatModifier]
-    let damageReductions: [DamageReduction]
-    let damageAvoidances: [DamageAvoidance]
-    let attackModifiers: [AttackModifier]
-    let damageModifiers: [DamageModifier]
+    let heroEffectGroup: HeroEffectGroup
     
     static func decode(_ json: Any) throws -> StatusEffect {
         return try StatusEffect(name: json => "name",
-                                statModifiers: json =>? "statModifiers" ?? [],
-                                damageReductions: json =>? "damageReductions" ?? [],
-                                damageAvoidances: json =>? "damageAvoidances" ?? [],
-                                attackModifiers: json =>? "attackModifiers" ?? [],
-                                damageModifiers: json =>? "damageModifiers" ?? [])
+                                heroEffectGroup: json => "heroEffectGroup")
     }
 }
 

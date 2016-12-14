@@ -394,7 +394,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     }
     
     func unequipItem(_ button: UnequipButton) {
-        button.item.equippedSlot = .none
+        button.item?.equippedSlot = .none
         updateEquippedItems()
         
         dismissOverlay()

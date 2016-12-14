@@ -9,7 +9,7 @@
 import UIKit
 
 class UnequipButton: UIButton {
-    let item: Item
+    var item: Item?
     
     init(item: Item) {
         self.item = item
@@ -21,11 +21,9 @@ class UnequipButton: UIButton {
         titleLabel?.font = UIFont.bodyFont()
         setTitleColor(UIColor.red, for: UIControlState())
         setTitleColor(UIColor.red.withAlphaComponent(0.7), for: .highlighted)
-    }
+    }    
     
     required init?(coder aDecoder: NSCoder) {
-        self.item = Item(name: "", attack: nil, effects: "", flavor: "", itemSlot: .None, twoHanded: false, statModifiers: [], damageReductions: [], damageAvoidances: [], attackModifiers: [], damageModifiers: [], skills: [], inventorySkills: [], spells: [])
-        
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -1,121 +1,127 @@
 [{
- "name": "Elven Accuracy",
- "explanation": "The elves sharp eyesight makes difficult shots easier.",
- "benefit": "The first time you miss in combat, reroll your attack roll."
- }, {
- "name": "Dwarven Resilience",
- "explanation": "Dwarven mines and goblin raids have tempered your flesh, making it more difficult to hurt you.",
- "benefit": "The first time you are struck in combat, reduce the damage you take by your constitution value."
- }, {
- "name": "Dual Wielding",
- "explanation": "You know what they say. Two in the hand is worth more than one in the bush.",
- "benefit": "Allows you to wield two one-handed weapons at once, and strike with both at the same time."
- }, {
- "name": "Spellsunder",
- "explanation": "There is nothing your sword can't cut, not even the gods themselves.",
- "benefit": "Allows you to slice magical energy with you blade, rendering it inneffective. Add an additional 2 to rolls made to resist damaging magic."
- }, {
- "name": "War Cry",
- "explanation": "The thundering sound of your voice resonates against the shields of your enemies, striking fear into their very soul.",
- "benefit": "Reduces attack rolls made by enemies by 1."
- }, {
- "name": "Feint",
- "explanation": "If you can't swing your blade properly, don't swing it at all.",
- "benefit": "If you dodge a physical attack made by an enemy, you may move to their side. If you do, your next physical attack deals an additional [STR + DEX] damage."
- }, {
- "name": "Power Attack",
- "explanation": "One shot, one kill.",
- "benefit": "Deals an increased [STR * 2] damage, but reduces your attack roll by 3."
- }, {
- "name": "Human Perseverance",
- "explanation": "Sometimes there is a benefit to being at the bottom.",
- "benefit": "Anytime you make a Constitution based check, add 1 your roll."
- }, {
- "name": "Spider Climbing",
- "explanation": "The sticky silk of spiders allows movement on any non slippery surface.",
- "benefit": "Once per day, allows movement on any non slippery wall or ceiling surface."
- }, {
- "name": "Clear Mind",
- "explanation": "Clears the thoughts of yourself and those around you.",
- "benefit": "When used, removes all negative mental effects from you and your party. May be used once per encounter."
- }, {
- "name": "Illusionary Sight",
- "explanation": "What used to be a masterful illusion, is now simply a cheap trick before your eyes.",
- "benefit": "You gain the ability to instantly detect and see through any illusion."
- }, {
- "name": "Multishot",
- "explanation": "What one arrow could accomplish, two can do better.",
- "benefit": "You can fire two arrows from your bow dealing twice the amount of damage, but this reduces your attack roll by 3."
- }, {
- "name": "Shield Slam",
- "explanation": "Who says my shield cannot be a weapon?",
- "benefit": "You can use your shield to knock you opponent down. Deals [STR] damage, and your opponent must make a DC 8 + [STR] check to remain standing."
- }, {
- "name": "Disguise",
- "explanation": "Turns you into a completely different person.",
- "benefit": "Allows you to disguise yourself, modifying your physical features to that of someone, or even something, else."
- }, {
- "name": "Spider Slayer",
- "explanation": "I've fought these before!",
- "benefit": "Increases chance to hit spiders by 1."
- }, {
- "name": "Cursed Runes",
- "explanation": "Black runes cover your arms, providing you with magical strength.",
- "benefit": "You can choose to turn a physical attack you make, into a magical one. If you do, lose 1 health."
- }, {
- "name": "Mounted Combatant",
- "explanation": "Your knowledge of four legged beasts aids you in combat.",
- "benefit": "Increase attack rolls made while riding a four legged creature by 2. You may also choose to redirect any non-suprise attack made against your mount, to yourself instead."
- }, {
- "name": "Bookworm",
- "explanation": "You've spent a lot of time reading books. That has to count for something.",
- "benefit": "Anytime you make an Intelligence based check, add 1 your roll."
- }, {
- "name": "Drunken Strength",
- "explanation": "If you drink enough, something good is bound to happen.",
- "benefit": "While under the influence of alcohol, gain 2 Strength, and lose 1 Dexterity and 1 Intelligence."
- }, {
- "name": "Bonebreaker",
- "explanation": "Bones, bones, break the bones. Don't miss none, in your haste. Bones, bones, break the bones. Grind them up, into paste!",
- "benefit": "While wielding a blunt weapon, you may attempt an attack at -2 to hit to break a bone in the specified limb of an opponent. If successful, the opponent loses use of that limb, and has -3 to Dexterity."
- }, {
- "name": "Darkvision",
- "explanation": "All I see is darkness. Oh, my hood is down.",
- "benefit": "Allows sight into non-magical darkness when no other light source is around."
- }, {
- "name": "Hammer Swing",
- "explanation": "They say the nail that sticks out gets hammered. Nonsense! They all get hammered! -Dwarven Warbreaker",
- "benefit": "Strike each enemy in an arc in front of you with your weapon. This attack automatically hits and deals an addition [STR] damage. Useable once per encounter. Must be wielding a blunt weapon."
- }, {
- "name": "Ever Faithful",
- "explanation": "Your unwavering faith in the gods has granted you their favor.",
- "benefit": "Once per encounter you may re-roll any die once. You must take the new roll."
- }, {
- "name": "Thread the Needle",
- "explanation": "The straightest arrow will always find its way.",
- "benefit": "Fire an arrow through up to 3 targets standing in a line, but this reduces your attack roll by 2."
- }, {
- "name": "Trip",
- "explanation": "ON YOUR KNEES!",
- "benefit": "The target must make a DC 10 + STR check to avoid being tripped. The target must have legs."
- }, {
- "name": "Hack",
- "explanation": "The dwarves are savage creatures. They'll hack your legs out from under you, just to get to your head.",
- "benefit": "Chop at an enemies legs, crippling the enemy which reduces their movement by half and their chance to dodge by 2. Must be wielding a sharp weapon."
- }, {
- "name": "Backstab",
- "explanation": "Some say it's a cowards move. I say, whoever's still alive won the fight.",
- "benefit": "Roll an extra 1d4 damage when attacking an enemy from behind. Must be wielding a dagger. The enemy must have a back to roll for this extra damage."
- }, {
- "name": "Bloodletting",
- "explanation": "The fresh crimson rain upon the ground can create a beautiful tapestry.",
- "benefit": "Slice at an enemy several times, opening its major veins. Every time the enemy moves it will take 1d6 physical damage until its wounds are closed, or it dies. Must be wielding a sharp weapon."
- }, {
- "name": "Meditation",
- "explanation": "The calm mind, makes for a calm body.",
- "benefit": "Once per day, you may take a brief rest to restore 1/2 of your health. You may not be in combat while meditating."
- }, {
- "name": "Aggressive Bellow",
- "explanation": "A common defense in nature is to make yourself appear more threatening. Let's hope for your sake, you actually are.",
- "benefit": "Once per encounter, you let out a piercing howl that forces all enemies within 10 yards to make an DC 15 + INT check, or be forced to attack you."
- }]
+	"name": "Elven Accuracy",
+	"explanation": "The elves sharp eyesight makes difficult shots easier.",
+	"benefit": "The first time you miss in combat, reroll your attack roll."
+}, {
+	"name": "Dwarven Resilience",
+	"explanation": "Dwarven mines and goblin raids have tempered your flesh, making it more difficult to hurt you.",
+	"benefit": "The first time you are struck in combat, reduce the damage you take by your constitution value."
+}, {
+	"name": "Dual Wielding",
+	"explanation": "You know what they say. Two in the hand is worth more than one in the bush.",
+	"benefit": "Allows you to wield two one-handed weapons at once, and strike with both at the same time."
+}, {
+	"name": "Spellsunder",
+	"explanation": "There is nothing your weapon can't cut, not even the gods themselves.",
+	"benefit": "Allows you to slice magical energy with your weapon, rendering it inneffective. Add an additional 2 to rolls made to resist damaging magic.",
+	"heroEffectGroup": {
+		"damageAvoidances": [{
+			"name": "Magical",
+			"value": 2
+		}]
+	}
+}, {
+	"name": "War Cry",
+	"explanation": "The thundering sound of your voice resonates against the shields of your enemies, striking fear into their very soul.",
+	"benefit": "Reduces attack rolls made by enemies by 1."
+}, {
+	"name": "Feint",
+	"explanation": "If you can't swing your blade properly, don't swing it at all.",
+	"benefit": "If you dodge a physical attack made by an enemy, you may move to their side. If you do, your next physical attack deals an additional [STR + DEX] damage."
+}, {
+	"name": "Power Attack",
+	"explanation": "One shot, one kill.",
+	"benefit": "Deals an increased [STR * 2] damage, but reduces your attack roll by 3."
+}, {
+	"name": "Human Perseverance",
+	"explanation": "Sometimes there is a benefit to being at the bottom.",
+	"benefit": "Anytime you make a Constitution based check, add 1 your roll."
+}, {
+	"name": "Spider Climbing",
+	"explanation": "The sticky silk of spiders allows movement on any non slippery surface.",
+	"benefit": "Once per day, allows movement on any non slippery wall or ceiling surface."
+}, {
+	"name": "Clear Mind",
+	"explanation": "Clears the thoughts of yourself and those around you.",
+	"benefit": "When used, removes all negative mental effects from you and your party. May be used once per encounter."
+}, {
+	"name": "Illusionary Sight",
+	"explanation": "What used to be a masterful illusion, is now simply a cheap trick before your eyes.",
+	"benefit": "You gain the ability to instantly detect and see through any illusion."
+}, {
+	"name": "Multishot",
+	"explanation": "What one arrow could accomplish, two can do better.",
+	"benefit": "You can fire two arrows from your bow dealing twice the amount of damage, but this reduces your attack roll by 3."
+}, {
+	"name": "Shield Slam",
+	"explanation": "Who says my shield cannot be a weapon?",
+	"benefit": "You can use your shield to knock you opponent down. Deals [STR] damage, and your opponent must make a DC 8 + [STR] check to remain standing."
+}, {
+	"name": "Disguise",
+	"explanation": "Turns you into a completely different person.",
+	"benefit": "Allows you to disguise yourself, modifying your physical features to that of someone, or even something, else."
+}, {
+	"name": "Spider Slayer",
+	"explanation": "I've fought these before!",
+	"benefit": "Increases chance to hit spiders by 1."
+}, {
+	"name": "Cursed Runes",
+	"explanation": "Black runes cover your arms, providing you with magical strength.",
+	"benefit": "You can choose to turn a physical attack you make, into a magical one. If you do, lose 1 health."
+}, {
+	"name": "Mounted Combatant",
+	"explanation": "Your knowledge of four legged beasts aids you in combat.",
+	"benefit": "Increase attack rolls made while riding a four legged creature by 2. You may also choose to redirect any non-suprise attack made against your mount, to yourself instead."
+}, {
+	"name": "Bookworm",
+	"explanation": "You've spent a lot of time reading books. That has to count for something.",
+	"benefit": "Anytime you make an Intelligence based check, add 1 your roll."
+}, {
+	"name": "Drunken Strength",
+	"explanation": "If you drink enough, something good is bound to happen.",
+	"benefit": "While under the influence of alcohol, gain 2 Strength, and lose 1 Dexterity and 1 Intelligence."
+}, {
+	"name": "Bonebreaker",
+	"explanation": "Bones, bones, break the bones. Don't miss none, in your haste. Bones, bones, break the bones. Grind them up, into paste!",
+	"benefit": "While wielding a blunt weapon, you may attempt an attack at -2 to hit to break a bone in the specified limb of an opponent. If successful, the opponent loses use of that limb, and has -3 to Dexterity."
+}, {
+	"name": "Darkvision",
+	"explanation": "All I see is darkness. Oh, my hood is down.",
+	"benefit": "Allows sight into non-magical darkness when no other light source is around."
+}, {
+	"name": "Hammer Swing",
+	"explanation": "They say the nail that sticks out gets hammered. Nonsense! They all get hammered! -Dwarven Warbreaker",
+	"benefit": "Strike each enemy in an arc in front of you with your weapon. This attack automatically hits and deals an addition [STR] damage. Useable once per encounter. Must be wielding a blunt weapon."
+}, {
+	"name": "Ever Faithful",
+	"explanation": "Your unwavering faith in the gods has granted you their favor.",
+	"benefit": "Once per encounter you may re-roll any die once. You must take the new roll."
+}, {
+	"name": "Thread the Needle",
+	"explanation": "The straightest arrow will always find its way.",
+	"benefit": "Fire an arrow through up to 3 targets standing in a line, but this reduces your attack roll by 2."
+}, {
+	"name": "Trip",
+	"explanation": "ON YOUR KNEES!",
+	"benefit": "The target must make a DC 10 + STR check to avoid being tripped. The target must have legs."
+}, {
+	"name": "Hack",
+	"explanation": "The dwarves are savage creatures. They'll hack your legs out from under you, just to get to your head.",
+	"benefit": "Chop at an enemies legs, crippling the enemy which reduces their movement by half and their chance to dodge by 2. Must be wielding a sharp weapon."
+}, {
+	"name": "Backstab",
+	"explanation": "Some say it's a cowards move. I say, whoever's still alive won the fight.",
+	"benefit": "Roll an extra 1d4 damage when attacking an enemy from behind. Must be wielding a dagger. The enemy must have a back to roll for this extra damage."
+}, {
+	"name": "Bloodletting",
+	"explanation": "The fresh crimson rain upon the ground can create a beautiful tapestry.",
+	"benefit": "Slice at an enemy several times, opening its major veins. Every time the enemy moves it will take 1d6 physical damage until its wounds are closed, or it dies. Must be wielding a sharp weapon."
+}, {
+	"name": "Meditation",
+	"explanation": "The calm mind, makes for a calm body.",
+	"benefit": "Once per day, you may take a brief rest to restore 1/2 of your health. You may not be in combat while meditating."
+}, {
+	"name": "Aggressive Bellow",
+	"explanation": "A common defense in nature is to make yourself appear more threatening. Let's hope for your sake, you actually are.",
+	"benefit": "Once per encounter, you let out a piercing howl that forces all enemies within 10 yards to make an DC 15 + INT check, or be forced to attack you."
+}]

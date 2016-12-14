@@ -13,11 +13,7 @@ struct ItemSet: Decodable, Nameable {
     
     let name: String
     let itemNamesInSet: [String]
-    let statModifiers: [StatModifier]
-    let damageReductions: [DamageReduction]
-    let damageAvoidances: [DamageAvoidance]
-    let attackModifiers: [AttackModifier]
-    let damageModifiers: [DamageModifier]
+    let heroEffectGroup: HeroEffectGroup
     let spells: [Spell]
     
     static func decode(_ json: Any) throws -> ItemSet {
@@ -26,11 +22,7 @@ struct ItemSet: Decodable, Nameable {
         
         return try ItemSet(name: json => "name",
                            itemNamesInSet: json => "itemNamesInSet",
-                           statModifiers: json =>? "statModifiers" ?? [],
-                           damageReductions: json =>? "damageReductions" ?? [],
-                           damageAvoidances: json =>? "damageAvoidances" ?? [],
-                           attackModifiers: json =>? "attackModifiers" ?? [],
-                           damageModifiers: json =>? "damageModifiers" ?? [],
+                           heroEffectGroup: json => "heroEffectGroup",
                            spells: spells ?? [])
     }
 }

@@ -15,11 +15,13 @@ struct Skill: Decodable, Nameable, Codeable, Equatable {
     let name: String
     let explanation: String
     let benefit: String
+    let heroEffectGroup: HeroEffectGroup?
     
     static func decode(_ json: Any) throws -> Skill {
         return try Skill(name: json => "name",
             explanation: json => "explanation",
-            benefit: json => "benefit")
+            benefit: json => "benefit",
+            heroEffectGroup: json =>? "heroEffectGroup")
     }
 }
 

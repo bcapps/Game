@@ -50,7 +50,7 @@ final class Hero: Codeable, Nameable {
         
         guard let stat = optionalStat else { return 0 }
         
-        return stat.currentValue + statModifierForEquippedItemsForStat(stat) + statModifierForCurrentStatuses(forStat: stat)
+        return stat.currentValue + statModifierForEquippedItemsForStat(stat) + statModifierForCurrentStatuses(forStat: stat) + statModifierForSkills(forStat: stat)
     }
     
     func damageReductionForReductionType(_ type: DamageReduction.ReductionType) -> Int {
@@ -63,17 +63,14 @@ final class Hero: Codeable, Nameable {
             reductionCounter += 0
         }
         
-        for item in inventory.equippedItems {
-            reductionCounter += item.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let itemModifiers = inventory.equippedItems.map { $0.heroEffectGroup.damageReductions }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.heroEffectGroup.damageReductions }.flatMap { $0 }
+        let statusEffectModifiers = currentStatusEffects.map { $0.heroEffectGroup.damageReductions }.flatMap { $0 }
+        let skillModifiers = skills.flatMap { $0.heroEffectGroup?.damageReductions }.flatMap { $0 }
         
-        for itemSet in inventory.equippedItemSets {
-            reductionCounter += itemSet.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
-        
-        for status in currentStatusEffects {
-            reductionCounter += status.damageReductions.filter { $0.reductionType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let reductionModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers + skillModifiers
+
+        reductionCounter += reductionModifiers.filter { $0.reductionType == type }.map { $0.value }.reduce(0, +)
         
         return reductionCounter
     }
@@ -90,62 +87,46 @@ final class Hero: Codeable, Nameable {
             avoidanceCounter += statValueForType(.Faith)
         }
         
-        for item in inventory.equippedItems {
-            avoidanceCounter += item.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let itemModifiers = inventory.equippedItems.map { $0.heroEffectGroup.damageAvoidances }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.heroEffectGroup.damageAvoidances }.flatMap { $0 }
+        let statusEffectModifiers = currentStatusEffects.map { $0.heroEffectGroup.damageAvoidances }.flatMap { $0 }
+        let skillModifiers = skills.flatMap { $0.heroEffectGroup?.damageAvoidances }.flatMap { $0 }
         
-        for itemSet in inventory.equippedItemSets {
-            avoidanceCounter += itemSet.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let avoidanceModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers + skillModifiers
         
-        for status in currentStatusEffects {
-            avoidanceCounter += status.damageAvoidances.filter { $0.avoidanceType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        avoidanceCounter += avoidanceModifiers.filter { $0.avoidanceType == type }.map { $0.value }.reduce(0, +)
         
         return avoidanceCounter
     }
         
     func damageModifier(forAttack attack: Attack, modifierType type: DamageModifier.DamageModifierType) -> Int {
-        var damageModifier = statValueForType(attack.damageStat)
-        
-        for item in inventory.equippedItems {
-            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
-        
-        for itemSet in inventory.equippedItemSets {
-            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
-        
-        for status in currentStatusEffects {
-            damageModifier += status.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
-        
-        return damageModifier
+        return damageModifierForStatType(statType: attack.damageStat, type: type)
     }
     
     func damageModifierForModifierType(_ type: DamageModifier.DamageModifierType) -> Int {
-        var damageModifier = 0
+        let statType: StatType
         
         switch type {
         case .Physical:
-            damageModifier += statValueForType(.Strength)
+            statType = .Strength
         case .Magical:
-            damageModifier += statValueForType(.Faith)
+            statType = .Faith
         }
         
-        for item in inventory.equippedItems {
-            damageModifier += item.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        return damageModifierForStatType(statType: statType, type: type)
+    }
+    
+    private func damageModifierForStatType(statType: StatType, type: DamageModifier.DamageModifierType) -> Int {
+        let itemModifiers = inventory.equippedItems.map { $0.heroEffectGroup.damageModifiers }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.heroEffectGroup.damageModifiers }.flatMap { $0 }
+        let statusEffectModifiers = currentStatusEffects.map { $0.heroEffectGroup.damageModifiers }.flatMap { $0 }
+        let skillModifiers = skills.flatMap { $0.heroEffectGroup?.damageModifiers }.flatMap { $0 }
         
-        for itemSet in inventory.equippedItemSets {
-            damageModifier += itemSet.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let damageModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers + skillModifiers
         
-        for status in currentStatusEffects {
-            damageModifier += status.damageModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, {$0 + $1})
-        }
+        let damageModifier = damageModifiers.filter { $0.attackModifierType == type }.map { $0.value }.reduce(0, +)
         
-        return damageModifier
+        return damageModifier + statValueForType(statType)
     }
     
     func attackModifierForModifierType(_ type: AttackModifierType) -> Int {
@@ -160,20 +141,21 @@ final class Hero: Codeable, Nameable {
             attackModifier += statValueForType(.Intelligence)
         }
         
-        let itemModifiers = inventory.equippedItems.map { $0.attackModifiers }.flatMap { $0 }
-        let itemSetModifiers = inventory.equippedItemSets.map { $0.attackModifiers }.flatMap { $0 }
-        let statusEffectModifiers = currentStatusEffects.map { $0.attackModifiers }.flatMap { $0 }
+        let itemModifiers = inventory.equippedItems.map { $0.heroEffectGroup.attackModifiers }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.heroEffectGroup.attackModifiers }.flatMap { $0 }
+        let statusEffectModifiers = currentStatusEffects.map { $0.heroEffectGroup.attackModifiers }.flatMap { $0 }
+        let skillModifiers = skills.flatMap { $0.heroEffectGroup?.attackModifiers }.flatMap { $0 }
         
-        let attackModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers
+        let attackModifiers = itemModifiers + itemSetModifiers + statusEffectModifiers + skillModifiers
         
-        attackModifier += attackModifiers.filter { $0.attackModifierType == type }.map { return $0.value }.reduce(0, +)
+        attackModifier += attackModifiers.filter { $0.attackModifierType == type }.map { $0.value }.reduce(0, +)
         
         return attackModifier
     }
     
     func statModifierForEquippedItemsForStat(_ stat: Stat) -> Int {
-        let itemModifiers = inventory.equippedItems.map { $0.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
-        let itemSetModifiers = inventory.equippedItemSets.map { $0.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
+        let itemModifiers = inventory.equippedItems.map { $0.heroEffectGroup.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
+        let itemSetModifiers = inventory.equippedItemSets.map { $0.heroEffectGroup.statModifiers }.flatMap { $0 }.filter { $0.stat == stat.shortName }.flatMap { $0 }
         
         let statModifiers = itemModifiers + itemSetModifiers
         
@@ -181,7 +163,11 @@ final class Hero: Codeable, Nameable {
     }
     
     func statModifierForCurrentStatuses(forStat stat: Stat) -> Int {
-        return currentStatusEffects.map { $0.statModifiers }.joined().filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
+        return currentStatusEffects.map { $0.heroEffectGroup.statModifiers }.joined().filter { $0.stat == stat.shortName }.map { return $0.value }.reduce(0, {$0 + $1})
+    }
+    
+    func statModifierForSkills(forStat stat: Stat) -> Int {
+        return skills.flatMap { $0.heroEffectGroup?.statModifiers }.joined().filter { $0.stat == stat.shortName }.map { $0.value }.reduce(0, +)
     }
     
     init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {
