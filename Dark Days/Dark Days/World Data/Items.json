@@ -771,7 +771,7 @@
  }, {
  	"name": "Dark Iron Breastplate",
  	"effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
- 	"flavor": "A breastplate forged from the dark iron deep underground. Wearers of this armor are known for their strength in combat.",
+ 	"flavor": "A breastplate forged from the dark iron deep underground. Wearers of this armor are known for their strength in combat. Magically augmented to reduce the effect of fire on the wearer.",
  	"itemSlot": "Chest",
  	"heroEffectGroup": {
 
@@ -790,7 +790,7 @@
  }, {
  	"name": "Dark Iron Helm",
  	"effects": "Decreases physical damage taken by 3, but reduces chance to avoid an attack by 1. Reduces fire damage taken by 1.",
- 	"flavor": "A dark black helmet, with deep red trimming. This helmet was forged in the molten steel of a deep dwarven citadel.",
+ 	"flavor": "A dark black helmet, with deep red trimming. This helmet was forged in the molten steel of a deep dwarven citadel. It has been magically augmented to keep flames away from your face.",
  	"itemSlot": "Helmet",
  	"heroEffectGroup": {
 
@@ -808,14 +808,14 @@
  	}
  }, {
  	"name": "Dark Iron Sabatons",
- 	"effects": "Decreases physical damage taken by 4, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
- 	"flavor": "Leg guards that are impervious to most flame, as well as physical attack.",
+ 	"effects": "Decreases physical damage taken by 3, but reduces chance to avoid an attack by 2. Reduces fire damage taken by 2.",
+ 	"flavor": "Leg guards that have been augmented to be impervious to most flame, as well as physical attack.",
  	"itemSlot": "Boots",
  	"heroEffectGroup": {
 
  		"damageReductions": [{
  			"name": "Physical",
- 			"value": 4
+ 			"value": 3
  		}, {
  			"name": "Fire",
  			"value": 2
@@ -941,7 +941,17 @@
  	"effects": "",
  	"flavor": "The ore itself looks like it flows and reshapes itself, while remaining firmly solid in your hand.",
  	"itemSlot": ""
- }, {
+  }, {
+ 	"name": "Dark Iron Ore",
+ 	"effects": "",
+ 	"flavor": "A pitch black piece of ore, famed for being able to be refined by dwarves dwelling in the Dark Mountain. The ore is notoriously difficult to work with, and is almost useless in all but a master craftsmen's hands.",
+ 	"itemSlot": ""
+  }, {
+ 	"name": "Fire Dust",
+ 	"effects": "",
+ 	"flavor": "Magically augmented dust harvested from creatures from the depths of flame.",
+ 	"itemSlot": ""
+  }, {
  	"name": "Life of Vitael",
  	"effects": "A book that describes the history of Vitael.",
  	"flavor": "",
