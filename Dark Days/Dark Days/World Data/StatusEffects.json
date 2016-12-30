@@ -1,19 +1,51 @@
- [{
-  "name": "Weakened",
-  "statModifiers": [{"stat": "STR", "value": -2}]
-  }, {
-  "name": "Inspired",
-  "attackModifiers": [{"name": "Melee", "value": 1},
-                      {"name": "Ranged", "value": 1},
-                      {"name": "Magical", "value": 1}]
-  }, {
-  "name": "Giant Form",
-  "statModifiers": [{"stat": "STR", "value": 2}]
-  }, {
-  "name": "Blinded",
-  "attackModifiers": [{"name": "Melee", "value": -4},
-                      {"name": "Ranged", "value": -4}]
-  }, {
-  "name": "Crippled",
-  "damageAvoidances": [{"name": "Physical", "value": -2}]
-  }]
+[{
+ "name": "Weakened",
+ "heroEffectGroup": {
+ "statModifiers": [{
+                   "stat": "STR",
+                   "value": -2
+                   }]
+ }
+ }, {
+ "name": "Inspired",
+ "heroEffectGroup": {
+ "attackModifiers": [{
+                     "name": "Melee",
+                     "value": 1
+                     }, {
+                     "name": "Ranged",
+                     "value": 1
+                     }, {
+                     "name": "Magical",
+                     "value": 1
+                     }]
+ }
+ }, {
+ "name": "Giant Form",
+ "heroEffectGroup": {
+ "statModifiers": [{
+                   "stat": "STR",
+                   "value": 2
+                   }]
+ }
+ }, {
+ "name": "Blinded",
+ "heroEffectGroup": {
+ "attackModifiers": [{
+                     "name": "Melee",
+                     "value": -4
+                     }, {
+                     "name": "Ranged",
+                     "value": -4
+                     }]
+ }
+ }, {
+ "name": "Crippled",
+ "heroEffectGroup": {
+ 
+ "damageAvoidances": [{
+                      "name": "Physical",
+                      "value": -2
+                      }]
+ }
+ }]
