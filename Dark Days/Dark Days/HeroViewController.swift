@@ -251,7 +251,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
                 let attackDiceRoll = (DiceRoller.roll(dice: .d20))
                 let heroAttackModifier = hero.attackModifierForModifierType(attack.attackType)
                 
-                let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+                let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
                 
                 let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
                 let itemDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
@@ -536,7 +536,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             let attackDiceRoll = (DiceRoller.roll(dice: .d20))
             let heroAttackModifier = hero.attackModifierForModifierType(.Magical)
             
-            let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+            let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
             
             let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
             var damageResult = ""

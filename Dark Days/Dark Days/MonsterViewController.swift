@@ -70,7 +70,7 @@ private extension MonsterAttack {
         let attackDiceRoll = (DiceRoller.roll(dice: .d20))
         let attackModifier = monster.attackModifier(forAttackType: attack.attackType)
         
-        let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : ""
+        let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
         
         let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
         let attackDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
