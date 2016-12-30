@@ -156,6 +156,79 @@
  	"effects": "",
  	"flavor": "An iron sword used for stabbing.",
  	"itemSlot": "Hand"
+  }, {
+  "name": "Steel Axe",
+  "attack": {
+  "damageDiceNumber": 1,
+  "damageDiceValue": 8,
+  "damageText": "1d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A small axe made of high quality steel.",
+ 	"itemSlot": "Hand"
+  }, {
+ 	"name": "Steel Dagger",
+ 	"attack": {
+  "damageDiceNumber": 1,
+  "damageDiceValue": 8,
+  "damageText": "1d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A small blade made of high quality steel.",
+ 	"itemSlot": "Hand"
+  }, {
+ 	"name": "Steel Hammer",
+ 	"attack": {
+  "damageDiceNumber": 1,
+  "damageDiceValue": 8,
+  "damageText": "1d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A heavy hammer made of high quality steel.",
+ 	"itemSlot": "Hand"
+  }, {
+ 	"name": "Steel Spear",
+ 	"attack": {
+  "damageDiceNumber": 2,
+  "damageDiceValue": 8,
+  "damageText": "2d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A steel spear of great length.",
+ 	"itemSlot": "Hand",
+ 	"twoHanded": true
+  }, {
+ 	"name": "Steel Shortsword",
+ 	"attack": {
+  "damageDiceNumber": 1,
+  "damageDiceValue": 8,
+  "damageText": "1d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A steel sword used for stabbing and slashing.",
+ 	"itemSlot": "Hand"
+  }, {
+ 	"name": "Steel Longsword",
+ 	"attack": {
+  "damageDiceNumber": 1,
+  "damageDiceValue": 8,
+  "damageText": "1d8",
+  "damageStat": "STR",
+  "attackType": "Melee"
+ 	},
+ 	"effects": "",
+ 	"flavor": "A steel sword used for stabbing.",
+ 	"itemSlot": "Hand"
  }, {
  	"name": "Clothes",
  	"effects": "",
