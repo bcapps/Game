@@ -248,13 +248,13 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(attributedTitle: attackTitle, tapHandler: {
                 guard let hero = self.hero else { return }
                 
-                let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+                let attackDiceRoll = DiceRoller.roll(dice: .d20)
                 let heroAttackModifier = hero.attackModifierForModifierType(attack.attackType)
                 
                 let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
                 
                 let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
-                let itemDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
+                let itemDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber) + (attack.additionalDamage ?? 0)
                 let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Physical)
                 
                 let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
@@ -280,7 +280,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     fileprivate func presentItemList() {
         guard let items = hero?.inventory.items.filter({$0.equippedSlot == .none}) else { return }
         
-        showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: false)
+        showListWithSections(items.sectionedItems, title: "Inventory", allowsSelection: true)
     }
     
     fileprivate func presentItemList(_ equipmentButton: EquipmentButton) {
@@ -533,7 +533,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         } else if let spell = object as? Spell {
             guard let hero = hero else { return }
             
-            let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+            let attackDiceRoll = DiceRoller.roll(dice: .d20)
             let heroAttackModifier = hero.attackModifierForModifierType(.Magical)
             
             let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
@@ -543,7 +543,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             if let attack = spell.attack {
                 let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
-                let spellDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
+                let spellDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber) + (attack.additionalDamage ?? 0)
                 let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Magical)
 
                 damageResult = String(format: "Damage: %@", String(spellDamageRoll + heroDamageModifier))
@@ -556,11 +556,41 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         guard let selectedIndexPath = listViewController.tableView.indexPathForSelectedRow else { return }
         listViewController.tableView.deselectRow(at: selectedIndexPath, animated: true)
+        
+        if let item = object as? Item {
+            let alertController = UIAlertController(title: "Use Item?", message: String(format: "Are you sure you want to use a %@?", item.name), preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let accept = UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+                guard let itemUse = item.itemUse else { return }
+                
+                let dice = Dice.diceForUpperValue(value: itemUse.damageDiceValue)
+                let useRoll = DiceRoller.roll(dice: dice, count: itemUse.damageDiceNumber)
+                let modifier = itemUse.additionalDamage ?? 0
+                
+                let result = useRoll + modifier
+                
+                if item.consumable {
+                    self?.hero?.inventory.items.removeObject(item)
+                }
+            })
+            
+            alertController.addAction(cancel)
+            alertController.addAction(accept)
+            
+            navigationController?.present(alertController, animated: true, completion: nil)
+        }
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
-    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool { return true }
+    func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool {
+        if let item = object as? Item {
+            return item.usable
+        }
+        
+        return true
+    }
     
     func removeObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         if let item = object as? Item {

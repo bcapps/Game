@@ -556,17 +556,38 @@
  	"name": "Small Healing Potion",
  	"effects": "Heals the consumer for 1d4+2 of health.",
  	"flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- 	"itemSlot": ""
+ 	"itemSlot": "",
+    "consumable": true,
+    "usable": true,
+    "itemUse": {
+        "damageDiceNumber": 1,
+        "damageDiceValue": 4,
+        "additionalDamage": 2
+    }
  }, {
  	"name": "Medium Healing Potion",
  	"effects": "Heals the consumer for 2d4+3 of health.",
  	"flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- 	"itemSlot": ""
+ 	"itemSlot": "",
+    "consumable": true,
+    "usable": true,
+    "itemUse": {
+        "damageDiceNumber": 2,
+        "damageDiceValue": 4,
+        "additionalDamage": 3
+    }
  }, {
  	"name": "Greater Healing Potion",
  	"effects": "Heals the consumer for 3d4+4 of health.",
  	"flavor": "A red liquid with a coarse viscous texture, with the pleasant aftertaste of cinnamon.",
- 	"itemSlot": ""
+ 	"itemSlot": "",
+    "consumable": true,
+    "usable": true,
+    "itemUse": {
+        "damageDiceNumber": 3,
+        "damageDiceValue": 4,
+        "additionalDamage": 4
+    }
  }, {
  	"name": "Nightmare Blade",
  	"attack": {

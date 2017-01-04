@@ -90,6 +90,12 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController, U
         return self.dataSource?.objectForIndexPath(indexPath)
     }
     
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        guard let object = dataSource?.objectForIndexPath(indexPath) else { return false }
+
+        return listDelegate?.canSelectObject(self, object: object) ?? true
+    }
+    
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         guard let object = dataSource?.objectForIndexPath(indexPath) else { return nil }
         

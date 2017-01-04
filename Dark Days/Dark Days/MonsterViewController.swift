@@ -67,7 +67,7 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
 private extension MonsterAttack {
     
     func attackStringForMonster(monster: Monster) -> String {
-        let attackDiceRoll = (DiceRoller.roll(dice: .d20))
+        let attackDiceRoll = DiceRoller.roll(dice: .d20)
         let attackModifier = monster.attackModifier(forAttackType: attack.attackType)
         
         let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""

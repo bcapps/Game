@@ -39,6 +39,9 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
     let skills: [Skill]
     let inventorySkills: [Skill]
     let spells: [Spell]
+    let consumable: Bool
+    let usable: Bool
+    let itemUse: ItemUse?
     
     var equippedSlot = EquipmentButton.EquipmentSlot.none
     
@@ -66,10 +69,13 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
             heroEffectGroup: json =>? "heroEffectGroup" ?? HeroEffectGroup(),
             skills: json =>? "skills" ?? [],
             inventorySkills: json =>? "inventorySkills" ?? [],
-            spells: json =>? "spells" ?? [])
+            spells: json =>? "spells" ?? [],
+            consumable: json =>? "consumable" ?? false,
+            usable: json =>? "usable" ?? false,
+            itemUse: json =>? "itemUse")
     }
     
-    init(name: String, attack: Attack?, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, heroEffectGroup: HeroEffectGroup, skills: [String], inventorySkills: [String], spells: [String]) {
+    init(name: String, attack: Attack?, effects: String, flavor: String, itemSlot: ItemSlot, twoHanded: Bool, heroEffectGroup: HeroEffectGroup, skills: [String], inventorySkills: [String], spells: [String], consumable: Bool, usable: Bool, itemUse: ItemUse?) {
         self.name = name
         self.attack = attack
         self.effects = effects
@@ -80,6 +86,9 @@ final class Item: Decodable, Nameable, Codeable, Equatable {
         self.skills = skills.flatMap { return ObjectProvider.skillForName($0) }
         self.inventorySkills = inventorySkills.flatMap { return ObjectProvider.skillForName($0) }
         self.spells = spells.flatMap { return ObjectProvider.spellForName($0) }
+        self.consumable = consumable
+        self.usable = usable
+        self.itemUse = itemUse
     }
 }
 

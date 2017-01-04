@@ -402,6 +402,8 @@
 		F2C7EB001CA75AC4007E26BF /* CollectionTypeNotEmptyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */; };
 		F2CAE31F1D8CA542005584E3 /* HeroImportURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */; };
 		F2D458181C85452300751635 /* DropdownMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D458171C85452300751635 /* DropdownMenuFactory.swift */; };
+		F2DA4D101E1DB77A00125599 /* ItemUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA4D0F1E1DB77A00125599 /* ItemUse.swift */; };
+		F2DA4D111E1DB85D00125599 /* ItemUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA4D0F1E1DB77A00125599 /* ItemUse.swift */; };
 		F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F909AC1D42A999005F8662 /* Insanities.txt */; };
 		F2F909AF1D42A9B9005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
 		F2F909B01D42AA74005F8662 /* InsanityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */; };
@@ -622,6 +624,7 @@
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
 		F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroImportURLHandler.swift; sourceTree = "<group>"; };
 		F2D458171C85452300751635 /* DropdownMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuFactory.swift; sourceTree = "<group>"; };
+		F2DA4D0F1E1DB77A00125599 /* ItemUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemUse.swift; sourceTree = "<group>"; };
 		F2F909AC1D42A999005F8662 /* Insanities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Insanities.txt; sourceTree = "<group>"; };
 		F2F909AE1D42A9B9005F8662 /* InsanityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsanityProvider.swift; sourceTree = "<group>"; };
 		F5BA59F3EEBDEE72CD692389 /* Pods-defaults-Dark DaysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Dark DaysTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-defaults-Dark DaysTests/Pods-defaults-Dark DaysTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -943,6 +946,7 @@
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
 				F29B48501D63C2D800A92DAB /* ItemSets.json */,
 				F2787C811D5E8D770035E45C /* ItemSet.swift */,
+				F2DA4D0F1E1DB77A00125599 /* ItemUse.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -1716,6 +1720,7 @@
 				F25187951C922B9B003AD636 /* ChildControllerExtension.swift in Sources */,
 				F28C2B141CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F26C01E91CB18B7600907164 /* StatEffect.swift in Sources */,
+				F2DA4D101E1DB77A00125599 /* ItemUse.swift in Sources */,
 				F2473B161C8382C9008FD65B /* Spell.swift in Sources */,
 				F21ECDBC1C7A516B008041E9 /* AppDelegate.swift in Sources */,
 				C39ACBEE1C9C9D3E004C5A6B /* ViewExtensions.swift in Sources */,
@@ -1821,6 +1826,7 @@
 				F251879C1C922B9D003AD636 /* FontExtension.swift in Sources */,
 				F2063A6A1CB89AB200494184 /* HeroToolsViewController.swift in Sources */,
 				F21ECE391C7A7254008041E9 /* Item.swift in Sources */,
+				F2DA4D111E1DB85D00125599 /* ItemUse.swift in Sources */,
 				F21ECDFB1C7A580C008041E9 /* ObjectProvider.swift in Sources */,
 				F25187DB1C9520D2003AD636 /* StatCell.swift in Sources */,
 				F22788161D6BF21800324167 /* MonsterView.swift in Sources */,
@@ -2062,11 +2068,11 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Dark Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Onone";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
 		};
@@ -2086,6 +2092,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lickability.Dark-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dark Days/Dark Days-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
