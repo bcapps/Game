@@ -129,7 +129,7 @@ final class Hero: Codeable, Nameable {
         return damageModifier + statValueForType(statType)
     }
     
-    func attackModifierForModifierType(_ type: AttackModifierType) -> Int {
+    func attackModifier(forAttackType type: AttackModifierType) -> Int {
         var attackModifier = 0
         
         switch type {

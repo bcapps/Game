@@ -248,19 +248,9 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             buttonStackView.addButton(attributedTitle: attackTitle, tapHandler: {
                 guard let hero = self.hero else { return }
                 
-                let attackDiceRoll = DiceRoller.roll(dice: .d20)
-                let heroAttackModifier = hero.attackModifierForModifierType(attack.attackType)
+                let result = DiceRoller.rollAttack(forHero: hero, attack: attack)
                 
-                let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
-                
-                let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
-                let itemDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber) + (attack.additionalDamage ?? 0)
-                let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Physical)
-                
-                let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
-                let damageResult = String(format: "Damage: %@", String(itemDamageRoll + heroDamageModifier))
-                
-                self.showAlertController(title: "Attack", message: attackResult + "\n" + damageResult)
+                self.showAlertController(title: "Attack", message: result.attackRollText + "\n" + result.damageRollText)
             })
         }
         
@@ -454,7 +444,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         case .Strength:
             let attackRollTitle = "Melee Attack Roll"
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
-                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Melee)
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifier(forAttackType: .Melee)
                 
                 self.showAlertController(title: attackRollTitle, message: String(result))
             })
@@ -463,7 +453,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             let attackRollTitle = "Ranged Attack Roll"
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
-                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Ranged)
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifier(forAttackType: .Ranged)
                 
                 self.showAlertController(title: attackRollTitle, message: String(result))
             })
@@ -479,7 +469,7 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
             
             let attackRollTitle = "Magical Attack Roll"
             buttonStackView.addButton(title: attackRollTitle, tapHandler: {
-                let result = DiceRoller.roll(dice: .d20) + hero.attackModifierForModifierType(.Magical)
+                let result = DiceRoller.roll(dice: .d20) + hero.attackModifier(forAttackType: .Magical)
                 
                 self.showAlertController(title: attackRollTitle, message: String(result))
             })
@@ -533,23 +523,19 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         } else if let spell = object as? Spell {
             guard let hero = hero else { return }
             
-            let attackDiceRoll = DiceRoller.roll(dice: .d20)
-            let heroAttackModifier = hero.attackModifierForModifierType(.Magical)
-            
-            let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
-            
-            let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + heroAttackModifier), naturalText)
-            var damageResult = ""
+            let message: String
             
             if let attack = spell.attack {
-                let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
-                let spellDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber) + (attack.additionalDamage ?? 0)
-                let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: .Magical)
-
-                damageResult = String(format: "Damage: %@", String(spellDamageRoll + heroDamageModifier))
+                let result = DiceRoller.rollAttack(forHero: hero, attack: attack)
+                
+                message = result.attackRollText + "\n" + result.damageRollText
+            } else {
+                let result = DiceRoller.rollNonDamageAttack(forHero: hero, attackType: .Magical)
+                
+                message = result.attackRollText
             }
             
-            showAlertController(title: "Cast", message: attackResult + "\n" + damageResult)
+            showAlertController(title: "Cast", message: message)
         }
     }
     

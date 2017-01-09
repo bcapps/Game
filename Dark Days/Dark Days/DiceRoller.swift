@@ -85,6 +85,90 @@ enum Dice: Int {
 
 final class DiceRoller {
     
+    struct RollResult {
+        let naturalAttackRoll: Int
+        let attackRoll: Int
+        let damageRoll: Int
+        
+        var isNatural20: Bool {
+            return naturalAttackRoll == 20
+        }
+        
+        var isNatural1: Bool {
+            return naturalAttackRoll == 1
+        }
+        
+        var attackRollText: String {
+            let baseString = String(format: "Attack Roll: %@", String(attackRoll))
+            if isNatural20 {
+                return baseString + " (Natural 20!)"
+            } else if isNatural1 {
+                return baseString + " (Natural 1!)"
+            }
+            
+            return baseString
+        }
+        
+        var damageRollText: String {
+            return String(format: "Damage: %@", String(damageRoll))
+        }
+    }
+    
+    static func rollNonDamageAttack(forHero hero: Hero, attackType: AttackModifierType) -> RollResult {
+        let attackDiceRoll = DiceRoller.roll(dice: .d20)
+        let heroAttackModifier = hero.attackModifier(forAttackType: attackType)
+        
+        let combinedAttackRoll = attackDiceRoll + heroAttackModifier
+        
+        return RollResult(naturalAttackRoll: attackDiceRoll, attackRoll: combinedAttackRoll, damageRoll: 0)
+    }
+    
+    static func rollAttack(forHero hero: Hero, attack: Attack) -> RollResult {
+        let attackDiceRoll = DiceRoller.roll(dice: .d20)
+        let heroAttackModifier = hero.attackModifier(forAttackType: attack.attackType)
+        
+        let combinedAttackRoll = attackDiceRoll + heroAttackModifier
+        
+        let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
+        let damageModifierType: DamageModifier.DamageModifierType = (attack.attackType == .Melee || attack.attackType == .Ranged) ? .Physical : .Magical
+        let heroDamageModifier = hero.damageModifier(forAttack: attack, modifierType: damageModifierType)
+        
+        var damage: Int = 0
+        
+        switch attackDiceRoll {
+        case 20:
+            damage = maxRoll(dice: dice, count: attack.damageDiceNumber) + heroDamageModifier + (attack.additionalDamage ?? 0)
+        default:
+            damage = roll(dice: dice, count: attack.damageDiceNumber) + (attack.additionalDamage ?? 0) + heroDamageModifier
+        }
+        
+        return RollResult(naturalAttackRoll: attackDiceRoll, attackRoll: combinedAttackRoll, damageRoll: damage)
+    }
+    
+    static func rollAttack(forMonster monster: Monster, attack: Attack) -> RollResult {
+        let attackDiceRoll = DiceRoller.roll(dice: .d20)
+        let attackModifier = monster.attackModifier(forAttackType: attack.attackType)
+        let combinedAttackRoll = attackDiceRoll + attackModifier
+        
+        let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
+        let damageModifier = monster.damageModifier(forAttack: attack)
+        
+        var damage: Int = 0
+        
+        switch attackDiceRoll {
+        case 20:
+            damage = DiceRoller.maxRoll(dice: dice, count: attack.damageDiceNumber) + damageModifier
+        default:
+            damage = roll(dice: dice, count: attack.damageDiceNumber) + damageModifier
+        }
+        
+        return RollResult(naturalAttackRoll: attackDiceRoll, attackRoll: combinedAttackRoll, damageRoll: damage)
+    }
+    
+    static func maxRoll(dice: Dice, count: Int = 1) -> Int {
+        return dice.upperValue * count
+    }
+    
     static func roll(dice: Dice, count: Int = 1) -> Int {
         let distribution = GKRandomDistribution(forDieWithSideCount: dice.upperValue)
         

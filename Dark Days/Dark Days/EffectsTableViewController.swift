@@ -155,7 +155,7 @@ class EffectsTableViewController: UITableViewController {
     fileprivate func attackModifierValueForModifierType(_ type: AttackModifierType) -> Int {
         guard let hero = hero else { return 0 }
         
-        return hero.attackModifierForModifierType(type)
+        return hero.attackModifier(forAttackType: type)
     }
 }
 

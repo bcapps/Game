@@ -1345,7 +1345,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Lickability;
 				TargetAttributes = {
 					F21ECDB71C7A516B008041E9 = {

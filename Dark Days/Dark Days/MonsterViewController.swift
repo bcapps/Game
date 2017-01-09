@@ -67,23 +67,13 @@ class MonsterViewController: UIViewController, UICollectionViewDelegate, UIColle
 private extension MonsterAttack {
     
     func attackStringForMonster(monster: Monster) -> String {
-        let attackDiceRoll = DiceRoller.roll(dice: .d20)
-        let attackModifier = monster.attackModifier(forAttackType: attack.attackType)
+        let result = DiceRoller.rollAttack(forMonster: monster, attack: attack)
         
-        let naturalText = attackDiceRoll == 20 ? " (Natural 20!)" : attackDiceRoll == 1 ? " (Natural 1!)" : ""
-        
-        let dice = Dice.diceForUpperValue(value: attack.damageDiceValue)
-        let attackDamageRoll = DiceRoller.roll(dice: dice, count: attack.damageDiceNumber)
-        let damageModifier = monster.damageModifier(forAttack: attack)
-        
-        let attackResult = String(format: "Attack Roll: %@%@", String(attackDiceRoll + attackModifier), naturalText)
-        let damageResult = String(format: "Damage: %@", String(attackDamageRoll + damageModifier))
-        
-        return attackResult + "\n" + damageResult
+        return result.attackRollText + "\n" + result.damageRollText
     }
 }
 
-private extension Monster {
+extension Monster {
     
     func damageModifier(forAttack attack: Attack) -> Int {
         return stats.filter { $0.name == attack.damageStat.shortName }.first?.value ?? 0
