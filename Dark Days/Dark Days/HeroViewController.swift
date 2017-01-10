@@ -543,29 +543,29 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
         guard let selectedIndexPath = listViewController.tableView.indexPathForSelectedRow else { return }
         listViewController.tableView.deselectRow(at: selectedIndexPath, animated: true)
         
-        if let item = object as? Item {
-            let alertController = UIAlertController(title: "Use Item?", message: String(format: "Are you sure you want to use a %@?", item.name), preferredStyle: .alert)
-            
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            let accept = UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
-                guard let itemUse = item.itemUse else { return }
-                
-                let dice = Dice.diceForUpperValue(value: itemUse.damageDiceValue)
-                let useRoll = DiceRoller.roll(dice: dice, count: itemUse.damageDiceNumber)
-                let modifier = itemUse.additionalDamage ?? 0
-                
-                let result = useRoll + modifier
-                
-                if item.consumable {
-                    self?.hero?.inventory.items.removeObject(item)
-                }
-            })
-            
-            alertController.addAction(cancel)
-            alertController.addAction(accept)
-            
-            navigationController?.present(alertController, animated: true, completion: nil)
-        }
+//        if let item = object as? Item {
+//            let alertController = UIAlertController(title: "Use Item?", message: String(format: "Are you sure you want to use a %@?", item.name), preferredStyle: .alert)
+//            
+//            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//            let accept = UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+//                guard let itemUse = item.itemUse else { return }
+//                
+//                let dice = Dice.diceForUpperValue(value: itemUse.damageDiceValue)
+//                let useRoll = DiceRoller.roll(dice: dice, count: itemUse.damageDiceNumber)
+//                let modifier = itemUse.additionalDamage ?? 0
+//                
+//                let result = useRoll + modifier
+//                
+//                if item.consumable {
+//                    self?.hero?.inventory.items.removeObject(item)
+//                }
+//            })
+//            
+//            alertController.addAction(cancel)
+//            alertController.addAction(accept)
+//            
+//            navigationController?.present(alertController, animated: true, completion: nil)
+//        }
     }
     
     func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }

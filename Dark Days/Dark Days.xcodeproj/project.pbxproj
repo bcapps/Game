@@ -339,30 +339,30 @@
 		F28C2B261CD07CB200E106DD /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B251CD07CB200E106DD /* Notes.json */; };
 		F28C2B271CD07D4100E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
 		F28C2B281CD07D4300E106DD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B231CD07CA600E106DD /* Note.swift */; };
-		F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
-		F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
-		F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */; };
-		F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
-		F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
-		F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */; };
-		F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
-		F28C2B391CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
-		F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */; };
-		F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
-		F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
-		F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */; };
-		F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
-		F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
-		F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */; };
-		F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
-		F28C2B421CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
-		F28C2B431CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */; };
-		F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
-		F28C2B451CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
-		F28C2B461CD0878700E106DD /* RandomTavernNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.txt */; };
-		F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
-		F28C2B481CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
-		F28C2B491CD0878700E106DD /* RandomTownNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.txt */; };
+		F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.json */; };
+		F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.json */; };
+		F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.json */; };
+		F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.json */; };
+		F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.json */; };
+		F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.json */; };
+		F28C2B381CD0878700E106DD /* RandomElfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.json */; };
+		F28C2B391CD0878700E106DD /* RandomElfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.json */; };
+		F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.json */; };
+		F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.json */; };
+		F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.json */; };
+		F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.json */; };
+		F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.json */; };
+		F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.json */; };
+		F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.json */; };
+		F28C2B411CD0878700E106DD /* RandomHumanMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.json */; };
+		F28C2B421CD0878700E106DD /* RandomHumanMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.json */; };
+		F28C2B431CD0878700E106DD /* RandomHumanMaleNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.json */; };
+		F28C2B441CD0878700E106DD /* RandomTavernNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.json */; };
+		F28C2B451CD0878700E106DD /* RandomTavernNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.json */; };
+		F28C2B461CD0878700E106DD /* RandomTavernNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B301CD0878700E106DD /* RandomTavernNames.json */; };
+		F28C2B471CD0878700E106DD /* RandomTownNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.json */; };
+		F28C2B481CD0878700E106DD /* RandomTownNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.json */; };
+		F28C2B491CD0878700E106DD /* RandomTownNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F28C2B311CD0878700E106DD /* RandomTownNames.json */; };
 		F28C2B4B1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
 		F28C2B4C1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
 		F28C2B4D1CD0879500E106DD /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C2B4A1CD0879500E106DD /* NameProvider.swift */; };
@@ -599,14 +599,14 @@
 		F28C2B1E1CD062AB00E106DD /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		F28C2B231CD07CA600E106DD /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		F28C2B251CD07CB200E106DD /* Notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Notes.json; path = "World Data/Notes.json"; sourceTree = "<group>"; };
-		F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomDwarfFemaleNames.txt; sourceTree = "<group>"; };
-		F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomDwarfMaleNames.txt; sourceTree = "<group>"; };
-		F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomElfFemaleNames.txt; sourceTree = "<group>"; };
-		F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomElfMaleNames.txt; sourceTree = "<group>"; };
-		F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomHumanFemaleNames.txt; sourceTree = "<group>"; };
-		F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomHumanMaleNames.txt; sourceTree = "<group>"; };
-		F28C2B301CD0878700E106DD /* RandomTavernNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomTavernNames.txt; sourceTree = "<group>"; };
-		F28C2B311CD0878700E106DD /* RandomTownNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomTownNames.txt; sourceTree = "<group>"; };
+		F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomDwarfFemaleNames.json; sourceTree = "<group>"; };
+		F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomDwarfMaleNames.json; sourceTree = "<group>"; };
+		F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomElfFemaleNames.json; sourceTree = "<group>"; };
+		F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomElfMaleNames.json; sourceTree = "<group>"; };
+		F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomHumanFemaleNames.json; sourceTree = "<group>"; };
+		F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomHumanMaleNames.json; sourceTree = "<group>"; };
+		F28C2B301CD0878700E106DD /* RandomTavernNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomTavernNames.json; sourceTree = "<group>"; };
+		F28C2B311CD0878700E106DD /* RandomTownNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandomTownNames.json; sourceTree = "<group>"; };
 		F28C2B4A1CD0879500E106DD /* NameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameProvider.swift; sourceTree = "<group>"; };
 		F28C2B4F1CD0888700E106DD /* Names.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Names.storyboard; sourceTree = "<group>"; };
 		F28C2B531CD0889000E106DD /* NamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
@@ -787,8 +787,6 @@
 		F219726A1DBA4A1D0025F0C8 /* Lore */ = {
 			isa = PBXGroup;
 			children = (
-				F20B7D201DDC3AF40024E2FC /* CurrentMonthInfo.json */,
-				F20B7D0E1DDC22780024E2FC /* Months.json */,
 				F20B7D0C1DDC22120024E2FC /* Month.swift */,
 			);
 			name = Lore;
@@ -819,29 +817,8 @@
 		F21ECDBA1C7A516B008041E9 /* Dark Days */ = {
 			isa = PBXGroup;
 			children = (
-				F25187521C92137C003AD636 /* Multipeer Backend */,
-				C39405941C7CB10100EBFD07 /* UI Customization */,
-				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
-				C3AB8F3B1C7CF3F2007CE0BA /* View Controller */,
-				F2350B021C7BCEA700D6E18E /* View */,
-				F2350AF11C7AAD0000D6E18E /* Persistence */,
-				F21ECDEF1C7A5341008041E9 /* World */,
-				F21ECE0E1C7A5F7E008041E9 /* Character */,
-				C394058D1C7CAE2B00EBFD07 /* Support */,
-				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
-				F22788121D6BA93000324167 /* CollectionViewExtensions.swift */,
-				F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */,
-				F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */,
-				C39ACBED1C9C9D3E004C5A6B /* ViewExtensions.swift */,
-				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
-				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
-				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
-				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
-				F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */,
-				F216E9A11D7A2AFB0039F07B /* CrashManager.swift */,
-				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
-				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
-				C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */,
+				F2B310531E2598C900C99F39 /* Campaign Setting */,
+				F2B310521E2598C500C99F39 /* Application */,
 			);
 			path = "Dark Days";
 			sourceTree = "<group>";
@@ -899,7 +876,6 @@
 		F21ECDF01C7A537D008041E9 /* Gods */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE1B1C7A662E008041E9 /* Gods.json */,
 				F21ECDF51C7A5777008041E9 /* God.swift */,
 			);
 			name = Gods;
@@ -919,7 +895,6 @@
 		F21ECE271C7A6AB1008041E9 /* Race */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE1F1C7A6634008041E9 /* Races.json */,
 				F21ECE171C7A65F1008041E9 /* Race.swift */,
 			);
 			name = Race;
@@ -928,7 +903,6 @@
 		F21ECE281C7A6AB8008041E9 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE201C7A6634008041E9 /* Stats.json */,
 				F21ECE0F1C7A5F8A008041E9 /* Stat.swift */,
 			);
 			name = Stats;
@@ -937,14 +911,12 @@
 		F21ECE291C7A6AE8008041E9 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE331C7A6CD0008041E9 /* Items.json */,
 				F21ECE371C7A7254008041E9 /* Item.swift */,
 				F26C02001CB1D0A400907164 /* AttackModifier.swift */,
 				F28C2B131CC7431C00E106DD /* DamageModifier.swift */,
 				F26C01F01CB197C100907164 /* DamageReduction.swift */,
 				F26C01FC1CB1B92F00907164 /* DamageAvoidance.swift */,
 				F26C01E81CB18B7600907164 /* StatEffect.swift */,
-				F29B48501D63C2D800A92DAB /* ItemSets.json */,
 				F2787C811D5E8D770035E45C /* ItemSet.swift */,
 				F2DA4D0F1E1DB77A00125599 /* ItemUse.swift */,
 			);
@@ -954,7 +926,6 @@
 		F21ECE2A1C7A6AEC008041E9 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE2B1C7A6B05008041E9 /* Skills.json */,
 				F21ECE2F1C7A6C7F008041E9 /* Skill.swift */,
 			);
 			name = Skills;
@@ -963,7 +934,6 @@
 		F21ECE3B1C7A75E9008041E9 /* Floors */ = {
 			isa = PBXGroup;
 			children = (
-				F21ECE3C1C7A75F7008041E9 /* Towns.json */,
 				F21ECE401C7A7B94008041E9 /* Town.swift */,
 			);
 			name = Floors;
@@ -1030,8 +1000,6 @@
 		F2350AF91C7ADA5600D6E18E /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
-				F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */,
-				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
 				F2350AFA1C7ADA6800D6E18E /* Monster.swift */,
 				F26C01DF1CAE238E00907164 /* MonsterAttack.swift */,
 				F22270971D6D709C007FEFA0 /* MonsterTrait.swift */,
@@ -1056,7 +1024,6 @@
 		F2350B8B1C8231D600D6E18E /* Magic Type */ = {
 			isa = PBXGroup;
 			children = (
-				F2350B8E1C8231FB00D6E18E /* MagicTypes.json */,
 				F2350B8C1C8231E700D6E18E /* MagicType.swift */,
 			);
 			name = "Magic Type";
@@ -1074,7 +1041,6 @@
 			isa = PBXGroup;
 			children = (
 				F24482961DCD3A1600D9E5E5 /* StatusEffect.swift */,
-				F244829A1DCD3B0500D9E5E5 /* StatusEffects.json */,
 			);
 			name = "Status Effects";
 			sourceTree = "<group>";
@@ -1083,7 +1049,6 @@
 			isa = PBXGroup;
 			children = (
 				F2473B151C8382C9008FD65B /* Spell.swift */,
-				F2473B171C8382E6008FD65B /* Spells.json */,
 			);
 			name = Spells;
 			sourceTree = "<group>";
@@ -1188,7 +1153,6 @@
 			isa = PBXGroup;
 			children = (
 				F28C2B071CC732CA00E106DD /* Quest.swift */,
-				F28C2B091CC732DB00E106DD /* Quests.json */,
 			);
 			name = Quests;
 			sourceTree = "<group>";
@@ -1197,7 +1161,6 @@
 			isa = PBXGroup;
 			children = (
 				F28C2B1E1CD062AB00E106DD /* Merchant.swift */,
-				F28C2B1C1CD0615E00E106DD /* Merchants.json */,
 			);
 			name = Merchants;
 			sourceTree = "<group>";
@@ -1206,7 +1169,6 @@
 			isa = PBXGroup;
 			children = (
 				F28C2B231CD07CA600E106DD /* Note.swift */,
-				F28C2B251CD07CB200E106DD /* Notes.json */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -1225,14 +1187,6 @@
 		F28C2B4E1CD0879B00E106DD /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.txt */,
-				F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.txt */,
-				F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.txt */,
-				F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.txt */,
-				F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.txt */,
-				F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.txt */,
-				F28C2B301CD0878700E106DD /* RandomTavernNames.txt */,
-				F28C2B311CD0878700E106DD /* RandomTownNames.txt */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1263,6 +1217,84 @@
 				F26C01F81CB1A16B00907164 /* EffectCell.swift */,
 			);
 			name = Modifiers;
+			sourceTree = "<group>";
+		};
+		F2B310501E25943000C99F39 /* Dark Days OG */ = {
+			isa = PBXGroup;
+			children = (
+				F2B310511E2598A800C99F39 /* Names */,
+				F21ECE201C7A6634008041E9 /* Stats.json */,
+				F21ECE1F1C7A6634008041E9 /* Races.json */,
+				F244829A1DCD3B0500D9E5E5 /* StatusEffects.json */,
+				F20B7D201DDC3AF40024E2FC /* CurrentMonthInfo.json */,
+				F20B7D0E1DDC22780024E2FC /* Months.json */,
+				F28C2B251CD07CB200E106DD /* Notes.json */,
+				F28C2B1C1CD0615E00E106DD /* Merchants.json */,
+				F28C2B091CC732DB00E106DD /* Quests.json */,
+				F2473B171C8382E6008FD65B /* Spells.json */,
+				F2350B8E1C8231FB00D6E18E /* MagicTypes.json */,
+				F21ECE331C7A6CD0008041E9 /* Items.json */,
+				F29B48501D63C2D800A92DAB /* ItemSets.json */,
+				F21ECE2B1C7A6B05008041E9 /* Skills.json */,
+				F2A4BC801D6E88BE000E4728 /* MonsterTraits.json */,
+				F2350AFC1C7ADAFA00D6E18E /* Monsters.json */,
+				F21ECE3C1C7A75F7008041E9 /* Towns.json */,
+				F21ECE1B1C7A662E008041E9 /* Gods.json */,
+			);
+			name = "Dark Days OG";
+			sourceTree = "<group>";
+		};
+		F2B310511E2598A800C99F39 /* Names */ = {
+			isa = PBXGroup;
+			children = (
+				F28C2B2A1CD0878700E106DD /* RandomDwarfFemaleNames.json */,
+				F28C2B2B1CD0878700E106DD /* RandomDwarfMaleNames.json */,
+				F28C2B2C1CD0878700E106DD /* RandomElfFemaleNames.json */,
+				F28C2B2D1CD0878700E106DD /* RandomElfMaleNames.json */,
+				F28C2B2E1CD0878700E106DD /* RandomHumanFemaleNames.json */,
+				F28C2B2F1CD0878700E106DD /* RandomHumanMaleNames.json */,
+				F28C2B301CD0878700E106DD /* RandomTavernNames.json */,
+				F28C2B311CD0878700E106DD /* RandomTownNames.json */,
+			);
+			name = Names;
+			sourceTree = "<group>";
+		};
+		F2B310521E2598C500C99F39 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F25187521C92137C003AD636 /* Multipeer Backend */,
+				C39405941C7CB10100EBFD07 /* UI Customization */,
+				C394058E1C7CAE3B00EBFD07 /* Table View Extension */,
+				C3AB8F3B1C7CF3F2007CE0BA /* View Controller */,
+				F2350B021C7BCEA700D6E18E /* View */,
+				F2350AF11C7AAD0000D6E18E /* Persistence */,
+				F21ECDEF1C7A5341008041E9 /* World */,
+				F21ECE0E1C7A5F7E008041E9 /* Character */,
+				C394058D1C7CAE2B00EBFD07 /* Support */,
+				F2350B7D1C7C187100D6E18E /* ViewInstantiation.swift */,
+				F22788121D6BA93000324167 /* CollectionViewExtensions.swift */,
+				F2A6482A1CA758270006DBA8 /* ItemArrayExtension.swift */,
+				F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */,
+				C39ACBED1C9C9D3E004C5A6B /* ViewExtensions.swift */,
+				F21ECDF91C7A580C008041E9 /* ObjectProvider.swift */,
+				F21ECE4E1C7A7E0E008041E9 /* Nameable.swift */,
+				F2350B811C7D3F2500D6E18E /* Displayable.swift */,
+				F21ECDBB1C7A516B008041E9 /* AppDelegate.swift */,
+				F2CAE31E1D8CA542005584E3 /* HeroImportURLHandler.swift */,
+				F216E9A11D7A2AFB0039F07B /* CrashManager.swift */,
+				C3AB8F591C7DFC99007CE0BA /* AttributedStringExtension.swift */,
+				F2350B871C81555900D6E18E /* ArrayRemoval.swift */,
+				C3AEC0201C9C4B5400859F98 /* MultipeerMessaging.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		F2B310531E2598C900C99F39 /* Campaign Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F2B310501E25943000C99F39 /* Dark Days OG */,
+			);
+			name = "Campaign Setting";
 			sourceTree = "<group>";
 		};
 		F2F909A91D42A96D005F8662 /* Insanities */ = {
@@ -1393,7 +1425,7 @@
 				F25187831C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				F2F909AD1D42A999005F8662 /* Insanities.txt in Resources */,
 				C39ACBEC1C9C9B95004C5A6B /* SendGold.storyboard in Resources */,
-				F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
+				F28C2B351CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */,
 				F20B7D151DDC29D00024E2FC /* MonthViewController.storyboard in Resources */,
 				C394059F1C7CB69F00EBFD07 /* Root.storyboard in Resources */,
 				F2A4BC811D6E88BE000E4728 /* MonsterTraits.json in Resources */,
@@ -1403,7 +1435,7 @@
 				F21ECDC61C7A516B008041E9 /* LaunchScreen.storyboard in Resources */,
 				F244829B1DCD3B0500D9E5E5 /* StatusEffects.json in Resources */,
 				F22788111D6BA77600324167 /* StatCell.xib in Resources */,
-				F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
+				F28C2B3B1CD0878700E106DD /* RandomElfMaleNames.json in Resources */,
 				F21ECE241C7A6634008041E9 /* Stats.json in Resources */,
 				F21ECE211C7A6634008041E9 /* Races.json in Resources */,
 				F20B7D1D1DDC2C6F0024E2FC /* CalendarViewController.storyboard in Resources */,
@@ -1421,18 +1453,18 @@
 				F2350B8F1C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F22270861D6D6208007FEFA0 /* NotoSans-Italic.ttf in Resources */,
 				F21ECE3D1C7A75F7008041E9 /* Towns.json in Resources */,
-				F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
+				F28C2B3E1CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */,
 				F22270851D6D6208007FEFA0 /* NotoSans-BoldItalic.ttf in Resources */,
 				F20B7D0F1DDC22780024E2FC /* Months.json in Resources */,
 				F28C2B181CC7503D00E106DD /* EffectsViewController.storyboard in Resources */,
 				C39ACBF41C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F292C8EB1D6BF33A00AB30CA /* MonsterViewController.storyboard in Resources */,
-				F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
+				F28C2B321CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */,
 				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */,
-				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
-				F28C2B441CD0878700E106DD /* RandomTavernNames.txt in Resources */,
+				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.json in Resources */,
+				F28C2B441CD0878700E106DD /* RandomTavernNames.json in Resources */,
 				F22270871D6D6208007FEFA0 /* NotoSans.ttf in Resources */,
 				F227880F1D6BA09F00324167 /* MonsterView.xib in Resources */,
 				F22270771D6D5796007FEFA0 /* MonsterSeparatorView.xib in Resources */,
@@ -1440,8 +1472,8 @@
 				F21ECE081C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2B571BE1DA71E1F0026B696 /* MapViewController.storyboard in Resources */,
 				F28C2B501CD0888700E106DD /* Names.storyboard in Resources */,
-				F28C2B471CD0878700E106DD /* RandomTownNames.txt in Resources */,
-				F28C2B381CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
+				F28C2B471CD0878700E106DD /* RandomTownNames.json in Resources */,
+				F28C2B381CD0878700E106DD /* RandomElfFemaleNames.json in Resources */,
 				F2649E741DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1451,25 +1483,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25187B81C922BB3003AD636 /* Root.storyboard in Resources */,
-				F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
+				F28C2B361CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */,
 				F25187B91C922BB3003AD636 /* HeroCreation.storyboard in Resources */,
 				F2649E7E1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F21ECE3E1C7A75F7008041E9 /* Towns.json in Resources */,
-				F28C2B451CD0878700E106DD /* RandomTavernNames.txt in Resources */,
-				F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
+				F28C2B451CD0878700E106DD /* RandomTavernNames.json in Resources */,
+				F28C2B3C1CD0878700E106DD /* RandomElfMaleNames.json in Resources */,
 				F21ECE221C7A6634008041E9 /* Races.json in Resources */,
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
-				F28C2B421CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
+				F28C2B421CD0878700E106DD /* RandomHumanMaleNames.json in Resources */,
 				F28C2B191CC9886E00E106DD /* Quests.json in Resources */,
-				F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
+				F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */,
 				F2350B971C82444800D6E18E /* Assets.xcassets in Resources */,
-				F28C2B391CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
+				F28C2B391CD0878700E106DD /* RandomElfFemaleNames.json in Resources */,
 				F21ECE091C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B901C8231FB00D6E18E /* MagicTypes.json in Resources */,
 				F21ECE1D1C7A662E008041E9 /* Gods.json in Resources */,
 				F25187841C922B22003AD636 /* DMToolkit.storyboard in Resources */,
-				F28C2B481CD0878700E106DD /* RandomTownNames.txt in Resources */,
-				F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
+				F28C2B481CD0878700E106DD /* RandomTownNames.json in Resources */,
+				F28C2B331CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */,
 				F28C2B511CD0888700E106DD /* Names.storyboard in Resources */,
 				F2649E751DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,
 				F21ECE2D1C7A6B05008041E9 /* Skills.json in Resources */,
@@ -1489,7 +1521,7 @@
 			files = (
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				F28C2B521CD0888700E106DD /* Names.storyboard in Resources */,
-				F28C2B491CD0878700E106DD /* RandomTownNames.txt in Resources */,
+				F28C2B491CD0878700E106DD /* RandomTownNames.json in Resources */,
 				F2649E7F1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
@@ -1497,18 +1529,18 @@
 				F25187C21C922BB3003AD636 /* Root.storyboard in Resources */,
 				F21ECE0A1C7A5F1C008041E9 /* ObjectProviderTestJSONArray.json in Resources */,
 				F2350B981C82444800D6E18E /* Assets.xcassets in Resources */,
-				F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.txt in Resources */,
-				F28C2B461CD0878700E106DD /* RandomTavernNames.txt in Resources */,
-				F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.txt in Resources */,
-				F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.txt in Resources */,
-				F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.txt in Resources */,
+				F28C2B371CD0878700E106DD /* RandomDwarfMaleNames.json in Resources */,
+				F28C2B461CD0878700E106DD /* RandomTavernNames.json in Resources */,
+				F28C2B3A1CD0878700E106DD /* RandomElfFemaleNames.json in Resources */,
+				F28C2B341CD0878700E106DD /* RandomDwarfFemaleNames.json in Resources */,
+				F28C2B401CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */,
 				F21ECE1E1C7A662E008041E9 /* Gods.json in Resources */,
 				F25187851C922B22003AD636 /* DMToolkit.storyboard in Resources */,
 				C39ACBF61C9CA8EB004C5A6B /* NameHero.storyboard in Resources */,
 				F21ECE2E1C7A6B05008041E9 /* Skills.json in Resources */,
-				F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.txt in Resources */,
+				F28C2B3D1CD0878700E106DD /* RandomElfMaleNames.json in Resources */,
 				F2473B1A1C8382EA008FD65B /* Spells.json in Resources */,
-				F28C2B431CD0878700E106DD /* RandomHumanMaleNames.txt in Resources */,
+				F28C2B431CD0878700E106DD /* RandomHumanMaleNames.json in Resources */,
 				F21ECE361C7A6CD0008041E9 /* Items.json in Resources */,
 				F21ECE261C7A6634008041E9 /* Stats.json in Resources */,
 				F2649E761DE7C41800BD820C /* DiceRollerTableViewController.storyboard in Resources */,

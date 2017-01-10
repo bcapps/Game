@@ -87,7 +87,7 @@ final class ObjectProvider {
         return JSONObjectForName(JSONName) ?? [String: AnyObject]()
     }
     
-    fileprivate static func JSONObjectForName<T>(_ JSONName: String) -> T?? {
+    static func JSONObjectForName<T>(_ JSONName: String) -> T?? {
         guard let path = Bundle.main.path(forResource: JSONName, ofType: "json") else { return nil }
         guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return nil }
         

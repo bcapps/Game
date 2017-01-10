@@ -10,17 +10,33 @@ import Foundation
 
 struct NameProvider {
     
-    static let DwarfFemaleNames = NSArray.arrayForFileName("RandomDwarfFemaleNames")
-    static let DwarfMaleNames = NSArray.arrayForFileName("RandomDwarfMaleNames")
+    static let DwarfFemaleNames = ObjectProvider.stringJSONArray(forName: "RandomDwarfFemaleNames")
+    static let DwarfMaleNames = ObjectProvider.stringJSONArray(forName: "RandomDwarfMaleNames")
     
-    static let ElfFemaleNames = NSArray.arrayForFileName("RandomElfFemaleNames")
-    static let ElfMaleNames = NSArray.arrayForFileName("RandomElfMaleNames")
+    static let ElfFemaleNames = ObjectProvider.stringJSONArray(forName: "RandomElfFemaleNames")
+    static let ElfMaleNames = ObjectProvider.stringJSONArray(forName: "RandomElfMaleNames")
 
-    static let HumanFemaleNames = NSArray.arrayForFileName("RandomHumanFemaleNames")
-    static let HumanMaleNames = NSArray.arrayForFileName("RandomHumanMaleNames")
+    static let HumanFemaleNames = ObjectProvider.stringJSONArray(forName: "RandomHumanFemaleNames")
+    static let HumanMaleNames = ObjectProvider.stringJSONArray(forName: "RandomHumanMaleNames")
     
-    static let TavernNames = NSArray.arrayForFileName("RandomTavernNames")
-    static let TownNames = NSArray.arrayForFileName("RandomTownNames")
+    static let TavernNames = ObjectProvider.stringJSONArray(forName: "RandomTavernNames")
+    static let TownNames = ObjectProvider.stringJSONArray(forName: "RandomTownNames")
+}
+
+extension ObjectProvider {
+    
+    static func stringJSONArray(forName name: String) -> [String] {
+        let JSON: [String]?? = ObjectProvider.JSONObjectForName(name)
+        
+        return (JSON ?? []) ?? []
+    }
+}
+
+extension Array {
+    
+    func randomObject() -> NSArray.Element? {
+        return (self as NSArray).randomObject()
+    }
 }
 
 extension NSArray {

@@ -73,6 +73,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController, U
         
         if searchable {
             tableView.tableHeaderView = searchController.searchBar
+            
+            definesPresentationContext = true
         }
     }
     
@@ -155,7 +157,7 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController, U
             cell.infoAttributedText = displayableObject.attributedString
             cell.contentInset = self.imageContentInset ?? UIEdgeInsets()
         })
-                
+        
         tableView.dataSource = dataSource
         tableView.reloadData()
     }
