@@ -25,6 +25,7 @@ final class Hero: Codeable, Nameable {
     var spells: [Spell]
     let magicType: MagicType
     let god: God?
+    let campaign: Campaign
     let uniqueID: String
     
     var currentStatusEffects: [StatusEffect] = []
@@ -170,7 +171,7 @@ final class Hero: Codeable, Nameable {
         return skills.flatMap { $0.heroEffectGroup?.statModifiers }.joined().filter { $0.stat == stat.shortName }.map { $0.value }.reduce(0, +)
     }
     
-    init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, uniqueID: String) {
+    init(name: String, gender: Gender, inventory: Inventory, stats: [Stat], race: Race, skills: [Skill], spells: [Spell], magicType: MagicType, god: God?, campaign: Campaign, uniqueID: String) {
         self.name = name
         self.gender = gender
         self.inventory = inventory
@@ -180,6 +181,7 @@ final class Hero: Codeable, Nameable {
         self.spells = spells
         self.magicType = magicType
         self.god = god
+        self.campaign = campaign
         self.uniqueID = uniqueID
     }
 }
@@ -197,6 +199,7 @@ final class HeroCoder: NSObject, Coder {
         case Spells
         case MagicType
         case God
+        case Campaign
         case UniqueID
         case CurrentHealth
         case CurrentStatusEffects
@@ -222,9 +225,16 @@ final class HeroCoder: NSObject, Coder {
         let rawGod = aDecoder.decodeObject(forKey: Keys.God.rawValue) as? GodCoder
         let rawStatusEffects = aDecoder.decodeObject(forKey: Keys.CurrentStatusEffects.rawValue) as? [StatusEffectCoder]
         
+        let campaign: Campaign = {
+            let decodedCampaign = aDecoder.decodeObject(forKey: Keys.Campaign.rawValue) as? CampaignCoder
+            let defaultCampaign = ObjectProvider.campaignForName("Dark Days")
+            
+            return decodedCampaign?.value ?? defaultCampaign ?? Campaign(name: "Default", explanation: "Sample")
+        }()
+        
         guard let name = rawName, let gender = Gender(rawValue: rawGender ?? ""), let stats = rawStats?.objects, let race = rawRace?.value, let skills = rawSkills?.objects, let spells = rawSpells?.objects, let inventory = rawInventory?.value, let magicType = rawMagicType?.value, let uniqueID = rawUniqueID else { return nil }
         
-        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, uniqueID: uniqueID)
+        value = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: rawGod?.value, campaign: campaign, uniqueID: uniqueID)
         value?.currentHealth = aDecoder.decodeInteger(forKey: Keys.CurrentHealth.rawValue) 
         value?.currentStatusEffects = rawStatusEffects?.objects ?? []
         
@@ -246,6 +256,7 @@ final class HeroCoder: NSObject, Coder {
         aCoder.encode(value.uniqueID, forKey: Keys.UniqueID.rawValue)
         aCoder.encode(value.currentHealth, forKey: Keys.CurrentHealth.rawValue)
         aCoder.encode(value.currentStatusEffects.coders, forKey: Keys.CurrentStatusEffects.rawValue)
+        aCoder.encode(CampaignCoder(value: value.campaign), forKey: Keys.Campaign.rawValue)
         
         if let god = value.god {
             aCoder.encode(GodCoder(value: god), forKey: Keys.God.rawValue)

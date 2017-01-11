@@ -73,6 +73,10 @@ final class ObjectProvider {
         return objectForJSONForName("StatusEffects", objectName: name)
     }
     
+    static func campaignForName(_ name: String) -> Campaign? {
+        return objectForJSONForName("Campaigns", objectName: name)
+    }
+    
     static func objectForJSONForName<T: Decodable & Nameable>(_ JSONName: String, objectName: String) -> T? {
         let objects: [T] = objectsForJSON(JSONName)
         

@@ -393,6 +393,12 @@
 		F2A8882C1DDA64E400E5B479 /* StatusesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A888211DDA622000E5B479 /* StatusesCollectionViewController.swift */; };
 		F2A8882D1DDA667000E5B479 /* StatusEffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A888251DDA62BC00E5B479 /* StatusEffectCell.swift */; };
 		F2A8882E1DDA667000E5B479 /* StatusEffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A888251DDA62BC00E5B479 /* StatusEffectCell.swift */; };
+		F2B310551E259A9E00C99F39 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B310541E259A9E00C99F39 /* Campaign.swift */; };
+		F2B310571E259AFB00C99F39 /* Campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B310561E259AFB00C99F39 /* Campaigns.json */; };
+		F2B310581E259AFB00C99F39 /* Campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B310561E259AFB00C99F39 /* Campaigns.json */; };
+		F2B310591E259AFB00C99F39 /* Campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B310561E259AFB00C99F39 /* Campaigns.json */; };
+		F2B3105A1E259B3700C99F39 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B310541E259A9E00C99F39 /* Campaign.swift */; };
+		F2B3105B1E259B3800C99F39 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B310541E259A9E00C99F39 /* Campaign.swift */; };
 		F2B571BC1DA71DBB0026B696 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B571BB1DA71DBB0026B696 /* MapViewController.swift */; };
 		F2B571BE1DA71E1F0026B696 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B571BD1DA71E1F0026B696 /* MapViewController.storyboard */; };
 		F2B571BF1DA71F8E0026B696 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B571BB1DA71DBB0026B696 /* MapViewController.swift */; };
@@ -619,6 +625,8 @@
 		F2A888211DDA622000E5B479 /* StatusesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesCollectionViewController.swift; sourceTree = "<group>"; };
 		F2A888251DDA62BC00E5B479 /* StatusEffectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusEffectCell.swift; sourceTree = "<group>"; };
 		F2A888291DDA630800E5B479 /* StatusesCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatusesCollectionViewController.storyboard; sourceTree = "<group>"; };
+		F2B310541E259A9E00C99F39 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		F2B310561E259AFB00C99F39 /* Campaigns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Campaigns.json; sourceTree = "<group>"; };
 		F2B571BB1DA71DBB0026B696 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F2B571BD1DA71E1F0026B696 /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		F2C7EAFD1CA75AC0007E26BF /* CollectionTypeNotEmptyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeNotEmptyExtension.swift; sourceTree = "<group>"; };
@@ -869,6 +877,7 @@
 				F2350AF91C7ADA5600D6E18E /* Monsters */,
 				F21ECE3B1C7A75E9008041E9 /* Floors */,
 				F21ECDF01C7A537D008041E9 /* Gods */,
+				F2B310541E259A9E00C99F39 /* Campaign.swift */,
 			);
 			name = World;
 			sourceTree = "<group>";
@@ -1292,6 +1301,7 @@
 		F2B310531E2598C900C99F39 /* Campaign Setting */ = {
 			isa = PBXGroup;
 			children = (
+				F2B310561E259AFB00C99F39 /* Campaigns.json */,
 				F2B310501E25943000C99F39 /* Dark Days OG */,
 			);
 			name = "Campaign Setting";
@@ -1463,6 +1473,7 @@
 				F28C2B1D1CD0615E00E106DD /* Merchants.json in Resources */,
 				F2350B961C82444800D6E18E /* Assets.xcassets in Resources */,
 				F29B48511D63C2D800A92DAB /* ItemSets.json in Resources */,
+				F2B310571E259AFB00C99F39 /* Campaigns.json in Resources */,
 				F28C2B411CD0878700E106DD /* RandomHumanMaleNames.json in Resources */,
 				F28C2B441CD0878700E106DD /* RandomTavernNames.json in Resources */,
 				F22270871D6D6208007FEFA0 /* NotoSans.ttf in Resources */,
@@ -1493,6 +1504,7 @@
 				F2473B191C8382E9008FD65B /* Spells.json in Resources */,
 				F28C2B421CD0878700E106DD /* RandomHumanMaleNames.json in Resources */,
 				F28C2B191CC9886E00E106DD /* Quests.json in Resources */,
+				F2B310581E259AFB00C99F39 /* Campaigns.json in Resources */,
 				F28C2B3F1CD0878700E106DD /* RandomHumanFemaleNames.json in Resources */,
 				F2350B971C82444800D6E18E /* Assets.xcassets in Resources */,
 				F28C2B391CD0878700E106DD /* RandomElfFemaleNames.json in Resources */,
@@ -1522,6 +1534,7 @@
 				F25187C01C922BB3003AD636 /* HeroViewController.storyboard in Resources */,
 				F28C2B521CD0888700E106DD /* Names.storyboard in Resources */,
 				F28C2B491CD0878700E106DD /* RandomTownNames.json in Resources */,
+				F2B310591E259AFB00C99F39 /* Campaigns.json in Resources */,
 				F2649E7F1DE7DA8000BD820C /* DiceStepperView.xib in Resources */,
 				F21ECE3F1C7A75F7008041E9 /* Towns.json in Resources */,
 				F2350B911C8231FB00D6E18E /* MagicTypes.json in Resources */,
@@ -1737,6 +1750,7 @@
 				C39ACBF81C9CA8F9004C5A6B /* NameHeroViewController.swift in Sources */,
 				F25187711C92138C003AD636 /* LCKServiceBrowser.m in Sources */,
 				F2350B081C7BCF2B00D6E18E /* ListDataSource.swift in Sources */,
+				F2B310551E259A9E00C99F39 /* Campaign.swift in Sources */,
 				F25187781C921429003AD636 /* PeerListViewController.swift in Sources */,
 				F22788131D6BA93000324167 /* CollectionViewExtensions.swift in Sources */,
 				F20B7D111DDC294A0024E2FC /* MonthDayCell.swift in Sources */,
@@ -1843,6 +1857,7 @@
 				F22270991D6D70E7007FEFA0 /* MonsterTrait.swift in Sources */,
 				F21ECDFE1C7A5CD5008041E9 /* ObjectProviderTests.swift in Sources */,
 				F24F35E41D9D3602002384FC /* ItemSetListViewController.swift in Sources */,
+				F2B3105A1E259B3700C99F39 /* Campaign.swift in Sources */,
 				F21ECE7C1C7A9D67008041E9 /* Coding.swift in Sources */,
 				F28C2B151CC7431C00E106DD /* DamageModifier.swift in Sources */,
 				F20B7D181DDC29FE0024E2FC /* MonthDayCell.swift in Sources */,
@@ -1919,6 +1934,7 @@
 				F26C01FF1CB1B92F00907164 /* DamageAvoidance.swift in Sources */,
 				F26C02031CB1D0A400907164 /* AttackModifier.swift in Sources */,
 				F2350B931C8231FE00D6E18E /* MagicType.swift in Sources */,
+				F2B3105B1E259B3800C99F39 /* Campaign.swift in Sources */,
 				F25187C41C922BB3003AD636 /* HeroCreationViewController.swift in Sources */,
 				F20B7D171DDC29FB0024E2FC /* MonthViewController.swift in Sources */,
 				F22270A01D6D7499007FEFA0 /* MonsterStat.swift in Sources */,

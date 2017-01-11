@@ -65,7 +65,7 @@ final class HeroListViewController: ListViewController<Hero> {
     }
     
     func refreshHeroList() {
-        self.sections = [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)]
+        self.sections = HeroPersistence().allPersistedHeroes().sectionedHeroes
     }
 }
 

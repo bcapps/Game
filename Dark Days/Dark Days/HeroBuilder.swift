@@ -10,6 +10,7 @@ import Foundation
 
 final class HeroBuilder {
     
+    var campaign: Campaign = Campaign(name: "Default", explanation: "Sample")
     var name: String = ""
     var gender: Gender = .Male
     var skill: Skill?
@@ -32,7 +33,7 @@ final class HeroBuilder {
         }
         
         let spells = spellsForGod(god)
-        let hero = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: god, uniqueID: UUID().uuidString)
+        let hero = Hero(name: name, gender: gender, inventory: inventory, stats: stats, race: race, skills: skills, spells: spells, magicType: magicType, god: god, campaign: campaign, uniqueID: UUID().uuidString)
         hero.currentHealth = hero.maximumHealth
         
         return hero

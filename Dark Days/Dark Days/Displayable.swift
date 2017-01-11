@@ -111,6 +111,12 @@ extension Note: ListDisplayingGeneratable {
     }
 }
 
+extension Campaign: ListDisplayingGeneratable {
+    static func displayable(_ campaign: Campaign) -> ListDisplayable {
+        return ListDisplayable(title: campaign.name, information: campaign.explanation, additionalInfoTitle: nil, additionalInfo: nil, subtext: nil, image: nil, accessoryImage: nil)
+    }
+}
+
 extension ItemSet: ListDisplayingGeneratable {
     static func displayable(_ itemSet: ItemSet) -> ListDisplayable {
         

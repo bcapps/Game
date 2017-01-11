@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = UIColor.white
         navigationController = window?.rootViewController as? UINavigationController
         
-        heroListViewController = HeroListViewController(sections: [SectionList(sectionTitle: nil, objects: HeroPersistence().allPersistedHeroes().sortedElementsByName)], delegate: nil)
+        heroListViewController = HeroListViewController(sections: HeroPersistence().allPersistedHeroes().sectionedHeroes, delegate: nil)
                 
         guard let heroListViewController = heroListViewController else { return false }
         navigationController?.pushViewController(heroListViewController, animated: false)
@@ -41,5 +41,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return false
         
+    }
+}
+
+extension Array where Element: Hero {
+    var sectionedHeroes: [SectionList<Hero>] {
+        var sections = [SectionList<Hero>]()
+        let campaigns = ObjectProvider.sortedObjectsForJSON("Campaigns") as [Campaign]
+        
+        for campaign in campaigns {
+            let heroes: [Hero] = self.filter({ $0.campaign == campaign }).sortedElementsByName
+            
+            if campaigns.isNotEmpty {
+                sections.append(SectionList(sectionTitle: campaign.name, objects: heroes))
+            }
+        }
+        
+        return sections
     }
 }

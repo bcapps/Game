@@ -11,6 +11,7 @@ import UIKit
 class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     
     fileprivate enum HeroCreationState: String {
+        case ChooseCampaign
         case NameHero
         case ChooseRace
         case ChooseSkill
@@ -38,15 +39,17 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
                 
         view.backgroundColor = .backgroundColor()
         
-        transitionToNameHero()
+        transitionToChooseCampaignSetting()
     }
     
     @IBAction func backButtonTapped(_ sender: AnyObject) {
         nextButton.title = "Next"
         
         switch currentCreationState {
-            case .NameHero:
+            case .ChooseCampaign:
                 presentingViewController?.dismiss(animated: true, completion: nil)
+            case .NameHero:
+                transitionToChooseCampaignSetting()
             case .ChooseRace:
                 transitionToNameHero()
             case .ChooseSkill:
@@ -71,8 +74,10 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         backButton.title = "Back"
 
         switch currentCreationState {
-                case .NameHero:
-            transitionToRaceList()
+            case .ChooseCampaign:
+                transitionToNameHero()
+            case .NameHero:
+                transitionToRaceList()
             case .ChooseRace:
                 switch heroBuilder.race.raceType {
                     case .Human:
@@ -113,7 +118,9 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
     func didSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) {
         nextButton.isEnabled = true
         
-        if let object = object as? Race {
+        if let object = object as? Campaign {
+            heroBuilder.campaign = object
+        } else if let object = object as? Race {
             heroBuilder.race = object
         } else if let object = object as? Skill {
             heroBuilder.skill = object
@@ -198,8 +205,22 @@ class HeroCreationViewController: UIViewController, ListViewControllerDelegate {
         switchToViewController(magicTypeListViewController)
     }
     
-    fileprivate func transitionToNameHero() {
+    private func transitionToChooseCampaignSetting() {
         backButton.title = "Cancel"
+        
+        currentCreationState = .ChooseCampaign
+        
+        let section = SectionList<Campaign>(sectionTitle: nil, objects: ObjectProvider.objectsForJSON("Campaigns"))
+        let campaignListViewController = ListViewController<Campaign>(sections: [section], delegate: self)
+        
+        title = "Choose Campaign"
+        
+        switchToViewController(campaignListViewController)
+    }
+    
+    fileprivate func transitionToNameHero() {
+        backButton.title = "Choose Campaign"
+
         currentCreationState = .NameHero
         
         guard let nameHero = UIStoryboard.nameHeroViewController() else { return }
