@@ -571,10 +571,6 @@ final class HeroViewController: UIViewController, ListViewControllerDelegate, UI
     func didDeselectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) { }
     
     func canSelectObject<T: ListDisplayingGeneratable>(_ listViewController: ListViewController<T>, object: T) -> Bool {
-        if let item = object as? Item {
-            return item.usable
-        }
-        
         return true
     }
     
