@@ -55,7 +55,8 @@ class ListViewController<T: ListDisplayingGeneratable>: UITableViewController, U
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.barTintColor = .backgroundColor()
-        
+        searchController.dimsBackgroundDuringPresentation = false
+
         return searchController
     }()
     
