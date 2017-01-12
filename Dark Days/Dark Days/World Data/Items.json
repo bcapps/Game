@@ -722,7 +722,7 @@
  }, {
  	"name": "Skeletal Shortbow",
  	"attack": {
- 		"damageDiceNumber": 1,
+ 		"damageDiceNumber": 2,
  		"damageDiceValue": 4,
  		"damageText": "2d4",
  		"damageStat": "STR",
